@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="../transforms/pp2html.xsl"?>
 
-<PP xmlns="https://niap-ccevs.org/cc/v1" name="Protection Profile QQQQ"
+<PP xmlns="https://niap-ccevs.org/cc/v1" name="Collaborative Protection Profile for Network Device"
     xmlns:h="http://www.w3.org/1999/xhtml" boilerplate='yes'>
 
   <!-- <inline-comment color='green'> Hello World QQQQ </inline-comment> -->

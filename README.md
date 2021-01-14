@@ -1,8 +1,3 @@
-Protection Profile Template
-===============
-
-
-
 Collaborative Protection Profile or Extended Package for Network Devices
 ===============
 

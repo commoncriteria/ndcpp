@@ -9,10 +9,10 @@
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
   <PPReference>
     <ReferenceTable>
-      <PPTitle>Protection Profile for QQQQ</PPTitle>
+      <PPTitle>Collaborative Protection Profile for Network Devices</PPTitle>
       <PPVersion>1.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
-      <PPPubDate>2015-08-14</PPPubDate>
+      <PPPubDate>2021-01-14</PPPubDate>
       <Keywords>QQQQ</Keywords>
     </ReferenceTable>
   </PPReference>

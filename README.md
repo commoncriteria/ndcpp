@@ -1,7 +1,7 @@
 Collaborative Protection Profile or Extended Package for Network Devices
 ===============
 
-[![Build Status](https://travis-ci.com/commoncriteria/ndcpp.svg?branch=master)](https://travis-ci.com/commoncriteria/ndcpp)
+![Build](https://github.com/commoncriteria/ndcpp/workflows/Build/badge.svg)
 [![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/ndcpp.svg?maxAge=2592000)](https://github.com/commoncriteria/ndcpp/issues) 
 ![license](https://img.shields.io/badge/license-Unlicensed-blue.svg)
 

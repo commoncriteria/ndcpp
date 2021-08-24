@@ -2,9 +2,9 @@
 <?xml-stylesheet type="text/xsl" href="../transforms/pp2html.xsl"?>
 
 
-<PP xmlns="https://niap-ccevs.org/cc/v1" name="Collaborative Protection Profile for Network Device"
-    xmlns:h="http://www.w3.org/1999/xhtml" boilerplate='yes'>
-
+<PP boilerplate='yes' xmlns="https://niap-ccevs.org/cc/v1" short="NDcPP" target-products="network devices"
+  xmlns:sec="https://niap-ccevs.org/cc/v1/section" xmlns:h="http://www.w3.org/1999/xhtml" >
+	
   <!-- <inline-comment color='green'> Hello World QQQQ </inline-comment> -->
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
   <PPReference>

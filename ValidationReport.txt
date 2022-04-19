@@ -1,1 +1,0 @@
-/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:100:17: error: element "tech-terms" not allowed yet; expected element "section" or an element from another namespace

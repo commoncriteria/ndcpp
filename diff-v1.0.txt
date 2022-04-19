@@ -1469,24 +1469,6 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	::: {#FPT_TUD_EXT.2 .comp}
-										      >	#### FPT\_TUD\_EXT.2 Trusted Update Based on Certificates
-										      >
-										      >	::: {.element}
-										      >	::: {#FPT_TUD_EXT.2.1 .reqid}
-										      >	[FPT\_TUD\_EXT.2.1](#FPT_TUD_EXT.2.1){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall
-										      >
-										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[]{.note}
-										      >	:::
-										      >	:::
-										      >	:::
-										      >	:::
-										      >
 										      >	### 3.18.6 fta {#fta .indexable data-level="3"}
 										      >
 										      >	::: {#FTA_SSL_EXT.1 .comp}
@@ -3508,6 +3490,32 @@
 										      >	::: {.element}
 										      >	::: {#FMT_MTD.1.1/CryptoKeys .reqid}
 										      >	[FMT\_MTD.1.1/CryptoKeys](#FMT_MTD.1.1/CryptoKeys){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	B.5 {#-sel-based .indexable data-level="2"}
+										      >	---
+										      >
+										      >	::: {#FPT_TUD_EXT.2 .comp}
+										      >	#### FPT\_TUD\_EXT.2 Trusted Update Based on Certificates
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_TUD_EXT.2.1 .reqid}
+										      >	[FPT\_TUD\_EXT.2.1](#FPT_TUD_EXT.2.1){.abbr}
 										      >	:::
 										      >
 										      >	::: {.reqdesc}

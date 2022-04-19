@@ -95,6 +95,16 @@
 
   <sec:Introduction> <!-- title="PP Introduction"  -->
   
+  	    <section title="PP Overview" id="s-ppoverview">
+	
+		words
+	</section>
+	
+	<section title="TOE Use Cases" id="s-usecases">
+		Words
+	</section>
+
+
 
     <tech-terms>
       <term abbr='AES' full="Advanced Encryption Standard"/>
@@ -236,15 +246,6 @@
       <term abbr='XOR' full="Exclusive Or"/>
     </tech-terms>    
 	
-	    <section title="PP Overview" id="s-ppoverview">
-	
-		words
-	</section>
-	
-	<section title="TOE Use Cases" id="s-usecases">
-		Words
-	</section>
-
 
 	
 	
@@ -544,6 +545,7 @@ users of the same system.
             <note role="application"></note>
 			<aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		
         <f-component cc-id="fau_gen.2" name="User identity association">
@@ -553,10 +555,11 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 	
-        <f-component cc-id="fau_gen_ext.1" name="Security Audit Generation" status="sel=based">
+        <f-component cc-id="fau_gen_ext.1" name="Security Audit Generation" status="sel-based">
 			<depends on-sel="dummy"/>
           <f-element id="fau-gen-ext-1-1">
             <title> The TOE shall 
@@ -564,6 +567,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
     
 
@@ -574,6 +578,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		
         <f-component cc-id="fau_stg_ext.1" name="Protected Audit Event Storage">
@@ -583,6 +588,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fau_stg_ext.2" iteration="LocSpace" 
@@ -593,6 +599,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fau_stg_ext.3" iteration="LocSpace" 
@@ -603,6 +610,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fau_stg_ext.4" 
@@ -614,6 +622,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fau_stg_ext.5" 
@@ -625,6 +634,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -639,6 +649,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		
 		
@@ -652,6 +663,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_ckm.2" name="Cryptographic Key Establishment (Refinement)">
@@ -661,6 +673,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_ckm.4" name="Cryptographic Key Destruction">
@@ -670,6 +683,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_cop.1" iteration="DataEncryption" 
@@ -680,6 +694,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_cop.1" iteration="SigGen" 
@@ -690,6 +705,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_cop.1" iteration="Hash" 
@@ -700,6 +716,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_cop.1" iteration="KeyedHash" 
@@ -710,6 +727,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_dtlsc_ext.1" name="DTLS Client Support without Authentication" status="sel-based">
@@ -720,6 +738,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -730,6 +749,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		 
         <f-component cc-id="fcs_dtlss_ext.1" name="DTLS Server Support without Authentication" status="sel-based">
@@ -740,6 +760,8 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
+		 </f-component>
 		 
 
         <f-component cc-id="fcs_dtlss_ext.2" name="DTLS Server Support for Mutual Authentication" status="optional">
@@ -749,6 +771,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_https_ext.1" name="HTTPS Protocol" status="sel-based">
@@ -759,6 +782,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_ipsec_ext.1" name="IPsec Protocol" status="sel-based">
@@ -769,6 +793,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_ntp_ext.1" name="NTP Protocol" status="sel-based">
@@ -779,6 +804,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -789,6 +815,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		 
         <f-component cc-id="fcs_sshc_ext.1" name="SSH Client Protocol" status="sel-based">
@@ -799,6 +826,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		 
         <f-component cc-id="fcs_sshs_ext.1" name="SSH Server Protocol" status="sel-based">
@@ -809,6 +837,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_tlsc_ext.1" name="TLS Client Protocol" status="sel-based">
@@ -819,6 +848,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		 
 
@@ -829,6 +859,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fcs_tlss_ext.1" name="TLS Server Protocol" status="sel-based">
@@ -839,6 +870,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -849,6 +881,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 	
@@ -862,6 +895,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 		
         <f-component cc-id="fia_pmg_ext.1" name="Password Management">
@@ -871,6 +905,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fia_uia_ext.1" name="User Identification and Authentication">
@@ -880,6 +915,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fia_uau_ext.2" name="Password-based Authentication Mechanism">
@@ -889,6 +925,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fia_uau.7" name="Protected Authentication Feedback">
@@ -898,6 +935,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fia_x509_ext.1" iteration="ITT" name="Certificate Validation" status="optional">
@@ -907,6 +945,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fia_x509_ext.1" iteration="Rev" name="X.509 Certificate Validation" status="sel-based">
@@ -917,6 +956,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fia_x509_ext.2" name="X.509 Certificate Authentication" status="sel-based">
@@ -927,6 +967,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fia_x509_ext.3" name="X.509 Certificate Requests" status="sel-based">
@@ -937,6 +978,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -953,6 +995,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fmt_mof.1" iteration="Services" name="Management of Security Functions Behaviour" status="sel-based">
@@ -963,6 +1006,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fmt_mof.1" iteration="AutoUpdate" name="Management of Security Functions Behaviour" status="sel-based">
@@ -973,6 +1017,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fmt_mof.1" iteration="Functions" name="Management of Security Functions Behaviour" status="sel-based">
@@ -983,6 +1028,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -994,6 +1040,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fmt_mtd.1" iteration="CryptoKeys" name="Management of TSF Data" status="sel-based">
@@ -1003,6 +1050,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -1014,6 +1062,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fmt_smr.2" name="Restrictions on security roles">
@@ -1023,6 +1072,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 	
 	</sec:fmt>
@@ -1037,6 +1087,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fpt_apw_ext.1" name="Protection of Administrator Passwords">
@@ -1046,6 +1097,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fpt_itt.1" name="Basic internal TSF data transfer protection (Refinement)"
@@ -1056,6 +1108,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fpt_stm_ext.1" name="Reliable Time Stamps">
@@ -1065,6 +1118,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 
@@ -1075,6 +1129,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fpt_tud_ext.1" name="Trusted Update">
@@ -1084,6 +1139,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fpt_tud_ext.2" name="Trusted Update Based on Certificates">
@@ -1094,6 +1150,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 	
 	</sec:fpt>
@@ -1106,6 +1163,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fta_ssl.3" name="TSF-initiated Termination (Refinement)">
@@ -1115,6 +1173,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 	
         <f-component cc-id="fta_ssl.4" name="User-initiated Termination (Refinement)">
@@ -1124,6 +1183,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="fta_tab.1" name="Default TOE Access Banners (Refinement)">
@@ -1133,6 +1193,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 	
@@ -1146,6 +1207,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 	
         <f-component cc-id="ftp_trp.1" iteration="Admin" name="Trusted Path (Refinement)">
@@ -1155,6 +1217,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
         <f-component cc-id="ftp_trp.1" iteration="Join" name="Trusted Path (Refinement)" status="optional">
@@ -1164,6 +1227,7 @@ users of the same system.
             <note role="application"></note>
             <aactivity>Something<TSS>ABC</TSS></aactivity>
 			</f-element>
+			<audit-event/>
 		 </f-component>
 
 

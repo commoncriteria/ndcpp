@@ -94,15 +94,6 @@
 
   <sec:Introduction title="PP Introduction">
   
-    <section title="PP Overview" id="s-ppoverview">
-	
-		words
-	</section>
-	
-	<section title="TOE Use Cases" id="s-usecases">
-		Words
-	</section>
-
 
     <tech-terms>
       <term abbr='AES' full="Advanced Encryption Standard"/>
@@ -244,6 +235,18 @@
       <term abbr='XOR' full="Exclusive Or"/>
     </tech-terms>    
 	
+	    <section title="PP Overview" id="s-ppoverview">
+	
+		words
+	</section>
+	
+	<section title="TOE Use Cases" id="s-usecases">
+		Words
+	</section>
+
+
+	
+	
 	</sec:Introduction>
 
   <sec:Conformance_Claims title="CC Conformance">
@@ -251,18 +254,18 @@
   </sec:Conformance_Claims>
   
   
-  <section title="Introduction to Distributed TOEs">
+  <section title="Introduction to Distributed TOEs" id="s-distributedTOEs">
 	words
-	<section title="Supported Distributed TOE Use Cases">
+	<section title="Supported Distributed TOE Use Cases" id="s-sdtuc">
 		words
 	</section>
-	<section title="Unsupported Distributed TOE Use Cases">
+	<section title="Unsupported Distributed TOE Use Cases" id="s-udtuc">
 		words
 	</section>
-	<section title="Registration of Components of a Distributed TOE">
+	<section title="Registration of Components of a Distributed TOE" id="s-compreg">
 		words
 	</section>
-	<section title="Allocation of Requirementsin Distributed TOEs">
+	<section title="Allocation of Requirementsin Distributed TOEs" id="s-alloc">
 		words
 	</section>
 	</section>	
@@ -468,6 +471,8 @@ users of the same system.
         </SO>
       </SOs>
     </section>
+	
+	
     <section title="Security Objectives for the Operational Environment"
       id="SecurityObjectivesTOEorEnvironment">The following security objectives for the operational
       environment assist the OS in correctly providing its security functionality.
@@ -489,6 +494,8 @@ users of the same system.
             security policy. </description>
         </SOE>
       </SOEs></section>
+	  
+	  
     <section title="Security Objectives Rationale" id="SOR">
       <!-- This section is populated by boilerplates.xsl in transforms. -->
       </section>

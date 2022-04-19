@@ -64,10 +64,10 @@
 										      >	[1Acknowledgements](#s-ack)[2Preface](#s-preface)[2.1Objectives of
 										      >	Document](#s-ood)[2.2Scope of Document](#s-sod)[2.3Intended
 										      >	Readership](#s-ir)[2.4Related Documents](#s-reldoc)[2.5PP
-										      >	Overview](#s-ppoverview)[2.6TOE Use Cases](#s-usecases)[2.7PP
-										      >	Overview](#s-ppoverview)[2.8TOE Use
-										      >	Cases](#s-usecases)[2.9Terms](#glossary)[2.9.1Common Criteria
-										      >	Terms](#cc-terms)[2.9.2Technical Terms](#tech-terms)[3Introduction to
+										      >	Overview](#s-ppoverview)[2.6TOE Use
+										      >	Cases](#s-usecases)[2.7Terms](#glossary)[2.7.1Common Criteria
+										      >	Terms](#cc-terms)[2.7.2Technical Terms](#tech-terms)[2.8PP
+										      >	Overview](#s-ppoverview)[2.9TOE Use Cases](#s-usecases)[3Introduction to
 										      >	Distributed TOEs](#s-distributedTOEs)[3.1Supported Distributed TOE Use
 										      >	Cases](#s-sdtuc)[3.2Unsupported Distributed TOE Use
 										      >	Cases](#s-udtuc)[3.3Registration of Components of a Distributed
@@ -107,12 +107,6 @@
 										      >	C - Entropy Documentation and Assessment](#satisfiedreqs)[Appendix D -
 										      >	Acronyms](#acronyms)[Appendix E - Bibliography](#appendix-bibliography)
 										      >	:::
-										      >
-										      >	2.5 PP Overview {#s-ppoverview .indexable data-level="2"}
-										      >	---------------
-										      >
-										      >	2.6 TOE Use Cases {#s-usecases .indexable data-level="2"}
-										      >	-----------------
 										      >
 										      >	An anti-exploitation feature which loads memory mappings into
 										      >	unpredictable locations. [ASLR](#abbr_ASLR) makes it more difficult for
@@ -174,24 +168,20 @@
 										      >	to that of an administrator. At that time, such a user should be
 										      >	considered an administrator. Blah Blah Blah
 										      >
-										      >	2.7 PP Overview {#s-ppoverview .indexable data-level="2"}
+										      >	2.5 PP Overview {#s-ppoverview .indexable data-level="2"}
 										      >	---------------
 										      >
-										      >	words
-										      >
-										      >	2.8 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	2.6 TOE Use Cases {#s-usecases .indexable data-level="2"}
 										      >	-----------------
 										      >
-										      >	Words
-										      >
 										      >	::: {.no-link}
-										      >	2.9 Terms {#glossary .indexable data-level="2"}
+										      >	2.7 Terms {#glossary .indexable data-level="2"}
 										      >	---------
 										      >
 										      >	The following sections list Common Criteria and technology terms used in
 										      >	this document.
 										      >
-										      >	### 2.9.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
+										      >	### 2.7.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Assurance}                  | Grounds for confidence that a TOE |
@@ -293,7 +283,7 @@
 										      >	| :::                               |                                   |
 										      >	+-----------------------------------+-----------------------------------+
 										      >
-										      >	### 2.9.2 Technical Terms {#tech-terms .indexable data-level="3"}
+										      >	### 2.7.2 Technical Terms {#tech-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Address_Space_Layout_Random | An anti-exploitation feature      |
@@ -450,6 +440,16 @@
 										      >	| :::                               |                                   |
 										      >	+-----------------------------------+-----------------------------------+
 										      >	:::
+										      >
+										      >	2.8 PP Overview {#s-ppoverview .indexable data-level="2"}
+										      >	---------------
+										      >
+										      >	words
+										      >
+										      >	2.9 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	-----------------
+										      >
+										      >	Words
 										      >
 										      >	Conformance Statement
 										      >	:   An [ST](#abbr_ST) must claim exact conformance to this

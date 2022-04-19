@@ -1,2 +1,1 @@
-/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:103:49: error: element "section" not allowed yet; missing required element "tech-terms"
-/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:109:17: error: element "tech-terms" not allowed here; expected the element end-tag, element "section" or an element from another namespace
+/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:100:17: error: element "tech-terms" not allowed yet; expected element "section" or an element from another namespace

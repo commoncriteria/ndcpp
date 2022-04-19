@@ -1,9 +1,15 @@
 Collaborative Protection Profile or Extended Package for Network Devices
 ===============
 
+![Master Badges](https://img.shields.io/badge/Build-master-black.svg)
 ![Build](https://github.com/commoncriteria/ndcpp/workflows/Build/badge.svg)
-[![GitHub issues Open](https://img.shields.io/github/issues/commoncriteria/ndcpp.svg?maxAge=2592000)](https://github.com/commoncriteria/ndcpp/issues) 
-![license](https://img.shields.io/badge/license-Unlicensed-blue.svg)
+![Validate](https://github.com/commoncriteria/ndcpp/workflows/Validate/badge.svg)
+
+![Last QuickBuilt Branch](https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/build-branch-badge.svg)
+[![Validation](https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/validation.svg)](https://github.com/commoncriteria/ndcpp/blob/gh-pages/ValidationReport.txt)
+[![SanityChecks](https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/warnings.svg)](https://github.com/commoncriteria/ndcpp/blob/gh-pages/SanityChecksOutput.md)
+[![SpellCheck](https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/spell-badge.svg)](https://github.com/commoncriteria/ndcpp/blob/gh-pages/SpellCheckReport.txt)
+[![QuickBuild](https://github.com/commoncriteria/ndcpp/actions/workflows/quick_build.yml/badge.svg)](https://commoncriteria.github.io/ndcpp)
 
 This repository hosts the draft version of the Collaborative Protection Profile for Network Devices based on the 
 [Essential Security Requirements (ESR)](https://commoncriteria.github.io/pp/ndcpp/ndcpp-esr.html) for this technology class of 

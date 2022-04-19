@@ -3,147 +3,195 @@
 										      >
 										      >	::: {.center}
 										      >	![NIAP Logo](images/niaplogo.png)\
-										      >	Version: 1.0\
-										      >	2021-01-14\
+										      >	Version: 2.2e\
+										      >	2020-03-23\
 										      >	**National Information Assurance Partnership**\
+										      >	:::
+										      >
+										      >	::: {.foreword}
+										      >	Foreword {#foreword style="text-align: center"}
+										      >	========
+										      >
+										      >	1 Acknowledgements {#s-ack .indexable data-level="1"}
+										      >	==================
+										      >
+										      >	blah
+										      >
+										      >	2 Preface {#s-preface .indexable data-level="1"}
+										      >	=========
+										      >
+										      >	2.1 Objectives of Document {#s-ood .indexable data-level="2"}
+										      >	--------------------------
+										      >
+										      >	Words
+										      >
+										      >	2.2 Scope of Document {#s-sod .indexable data-level="2"}
+										      >	---------------------
+										      >
+										      >	Words
+										      >
+										      >	2.3 Intended Readership {#s-ir .indexable data-level="2"}
+										      >	-----------------------
+										      >
+										      >	Words
+										      >
+										      >	2.4 Related Documents {#s-reldoc .indexable data-level="2"}
+										      >	---------------------
+										      >
+										      >	Words
 										      >	:::
 										      >
 										      >	Revision History {#revision-history style="page-break-before:always;"}
 										      >	----------------
 										      >
 										      >	  Version   Date         Comment
-										      >	  --------- ------------ ----------------------------------------
-										      >	  Round 1   2015-04-23   First draft of version 1.0 for comment
-										      >	  1.0       2015-08-14   Release - first version released
+										      >	  --------- ------------ ------------------------------------------------------------
+										      >	  0.1       2014-09-05   Draft published for Public review
+										      >	  0.2       2014-10-13   Internal draft in response to public review comments, for iT
+										      >	  0.3       2014-10-17   Draft version released to accompany CCDB review of Supportin
+										      >	  0.4       2015-01-26   Incorporated comments received from the CCDB review
+										      >	  1.0       2015-02-27   Released for use
+										      >	  1.1       2016-07-21   Updated draft published for public review
+										      >	  2.0       2017-05-05   Released for use
+										      >	  2.1       2018-09-24   Released for use
+										      >	  2.2       2019-12-20   Released for use
+										      >	  2.2e      2020-03-23   Released for use
 										      >
 										      >	Contents
 										      >	--------
 										      >
 										      >	::: {#toc .toc}
-										      >	[1Introduction](#Introduction)[1.1Overview](#ppoverview)[1.2Terms](#glossary)[1.2.1Co
-										      >	Criteria Terms](#cc-terms)[1.2.2Technical
-										      >	Terms](#tech-terms)[1.3Compliant Targets of
-										      >	Evaluation](#TOEdescription)[1.3.1TOE Boundary](#TOE_Boundary)[1.3.2TOE
-										      >	Platform](#TOE_Platform)[1.4Use Cases](#usecases)[2Conformance
-										      >	Claims](#Conformance_Claims)[3Security Problem
-										      >	Description](#Security_Problem_Description)[3.1Threats](#Threats)[3.2Assumptions](#As
-										      >	Objectives](#Security_Objectives)[4.1Security Objectives for the
-										      >	TOE](#SecurityObjectivesTOE)[4.2Security Objectives for the Operational
-										      >	Environment](#SecurityObjectivesTOEorEnvironment)[4.3Security Objectives
-										      >	Rationale](#SOR)[5Security
-										      >	Requirements](#Security_Requirements)[5.1Security Functional
-										      >	Requirements](#SFRs)[5.1.1FOOO](#FOOO)[5.1.2QQQQ](#QQQQ)[5.1.3Security
-										      >	Management (FMT)](#fmt-2)[5.1.4Security Audit (FAU)](#fau)[5.1.5TOE
-										      >	Security Functional Requirements Rationale](#obj-req-map)[5.2Security
-										      >	Assurance Requirements](#Security_Assurance_Requirements)[5.2.1Class
-										      >	ASE: Security Target](#ase)[5.2.2Class ADV:
-										      >	Development](#adv)[5.2.3Class AGD: Guidance
-										      >	Documentation](#agd)[5.2.4Class ALC: Life-cycle
-										      >	Support](#alc)[5.2.5Class ATE: Tests](#ate)[5.2.6Class AVA:
+										      >	[1Acknowledgements](#s-ack)[2Preface](#s-preface)[2.1Objectives of
+										      >	Document](#s-ood)[2.2Scope of Document](#s-sod)[2.3Intended
+										      >	Readership](#s-ir)[2.4Related Documents](#s-reldoc)[2.5PP
+										      >	Overview](#s-ppoverview)[2.6TOE Use Cases](#s-usecases)[2.7PP
+										      >	Overview](#s-ppoverview)[2.8TOE Use
+										      >	Cases](#s-usecases)[2.9Terms](#glossary)[2.9.1Common Criteria
+										      >	Terms](#cc-terms)[2.9.2Technical Terms](#tech-terms)[3Introduction to
+										      >	Distributed TOEs](#s-distributedTOEs)[3.1Supported Distributed TOE Use
+										      >	Cases](#s-sdtuc)[3.2Unsupported Distributed TOE Use
+										      >	Cases](#s-udtuc)[3.3Registration of Components of a Distributed
+										      >	TOE](#s-compreg)[3.4Allocation of Requirementsin Distributed
+										      >	TOEs](#s-alloc)[3.5Organizational Security
+										      >	Policies](#OSPs)[3.6Organizational Security Policies](#OSPs)[3.7Security
+										      >	Objectives for the TOE](#SecurityObjectivesTOE)[3.8Security Objectives
+										      >	for the Operational
+										      >	Environment](#SecurityObjectivesTOEorEnvironment)[3.9Security Objectives
+										      >	Rationale](#SOR)[3.10Security Objectives for the
+										      >	TOE](#SecurityObjectivesTOE)[3.11Security Objectives for the Operational
+										      >	Environment](#SecurityObjectivesTOEorEnvironment)[3.12Security
+										      >	Objectives Rationale](#SOR)[3.13Conventions](#s-conventions)[3.14SFR
+										      >	Architecture](#s-sfrarch)[3.15Security Functional
+										      >	Requirements](#SFRs)[3.15.1Class ASE: Security Target](#ase)[3.15.2Class
+										      >	ADV: Development](#adv)[3.15.3Class AGD: Guidance
+										      >	Documentation](#agd)[3.15.4Class ALC: Life-cycle
+										      >	Support](#alc)[3.15.5Class ATE: Tests](#ate)[3.15.6Class AVA:
+										      >	Vulnerability Assessment](#ava)[3.16Conventions](#s-conventions)[3.17SFR
+										      >	Architecture](#s-sfrarch)[3.18Security Functional
+										      >	Requirements](#SFRs)[3.18.1fau](#fau)[3.18.2fcs](#fcs)[3.18.3fia](#fia)[3.18.4fmt](#f
+										      >	Security Functional Requirements Rationale](#obj-req-map)[3.18.9Class
+										      >	ASE: Security Target](#ase)[3.18.10Class ADV:
+										      >	Development](#adv)[3.18.11Class AGD: Guidance
+										      >	Documentation](#agd)[3.18.12Class ALC: Life-cycle
+										      >	Support](#alc)[3.18.13Class ATE: Tests](#ate)[3.18.14Class AVA:
+										      >	Vulnerability Assessment](#ava)[3.18.15Class ASE: Security
+										      >	Target](#ase)[3.18.16Class ADV: Development](#adv)[3.18.17Class AGD:
+										      >	Guidance Documentation](#agd)[3.18.18Class ALC: Life-cycle
+										      >	Support](#alc)[3.18.19Class ATE: Tests](#ate)[3.18.20Class AVA:
 										      >	Vulnerability Assessment](#ava)[Appendix A - Optional
 										      >	Requirements](#opt-app)[A.1Strictly Optional Requirements
-										      >	](#optional-reqs)[A.1.1](#-optional)[A.1.2Security Audit
-										      >	(FAU)](#fau-optional)[A.2Objective Requirements
-										      >	](#objective-reqs)[A.2.1](#-objective)[A.3Implementation-dependent
-										      >	Requirements ](#feat-based-reqs)[A.3.1Widget
-										      >	Thing](#a-feature-id)[A.3.1.1](#-impl)[Appendix B - Selection-based
-										      >	Requirements ](#sel-based-reqs)[B.1](#-sel-based)[Appendix C -
-										      >	Inherently Satisfied Requirements](#satisfiedreqs)[Appendix D - Use Case
-										      >	Templates](#use-case-appendix)[D.1Elephant-own
-										      >	device](#appendix-elephant)[Appendix E - Acronyms](#acronyms)[Appendix F
-										      >	- Bibliography](#appendix-bibliography)
+										      >	](#optional-reqs)[A.1.1](#-optional)[A.1.2](#-optional)[A.1.3](#-optional)[A.1.4](#-o
+										      >	Requirements ](#objective-reqs)[A.3Implementation-dependent Requirements
+										      >	](#feat-based-reqs)[Appendix B - Selection-based Requirements
+										      >	](#sel-based-reqs)[B.1](#-sel-based)[B.2](#-sel-based)[B.3](#-sel-based)[B.4](#-sel-b
+										      >	C - Entropy Documentation and Assessment](#satisfiedreqs)[Appendix D -
+										      >	Acronyms](#acronyms)[Appendix E - Bibliography](#appendix-bibliography)
 										      >	:::
 										      >
-										      >	1 Introduction {#Introduction .indexable data-level="1"}
-										      >	==============
+										      >	2.5 PP Overview {#s-ppoverview .indexable data-level="2"}
+										      >	---------------
 										      >
-										      >	1.1 Overview {#ppoverview .indexable data-level="2"}
-										      >	------------
+										      >	2.6 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	-----------------
 										      >
-										      >	The scope of this Protection Profile ([PP](#abbr_PP)) is to describe the
-										      >	security functionality of QQQQ products in terms of [\[CC\]](#bibCC) and
-										      >	to define functional and assurance requirements for such products. An
-										      >	operating system is software that manages computer hardware and software
-										      >	resources, and provides common services for application programs. The
-										      >	hardware it manages may be
+										      >	An anti-exploitation feature which loads memory mappings into
+										      >	unpredictable locations. [ASLR](#abbr_ASLR) makes it more difficult for
+										      >	an attacker to redirect control to code that they have introduced into
+										      >	the address space of a process. An administrator is responsible for
+										      >	management activities, including setting policies that are applied by
+										      >	the enterprise on the operating system. This administrator could be
+										      >	acting remotely through a management server, from which the system
+										      >	receives configuration policies. An administrator can enforce settings
+										      >	on the system which cannot be overridden by non-administrator users.
+										      >	Software that runs on a platform and performs tasks on behalf of the
+										      >	user or owner of the platform, as well as its supporting documentation.
+										      >	A specification of routines, data structures, object classes, and
+										      >	variables that allows an application to make use of services provided by
+										      >	another software component, such as a library. APIs are often provided
+										      >	for a set of libraries included with the platform. Data that establishes
+										      >	the identity of a user, e.g. a cryptographic key or password.
+										      >	Information that is either user or system defined and is used to operate
+										      >	a cryptographic module in processing encryption functions including
+										      >	cryptographic keys and authentication data, such as passwords, the
+										      >	disclosure or modification of which can compromise the security of a
+										      >	cryptographic module or the security of the information protected by the
+										      >	module. Countermeasures that prevent attackers, even those with physical
+										      >	access, from extracting data from non-volatile storage. Common
+										      >	techniques include data encryption and wiping. An anti-exploitation
+										      >	feature of modern operating systems executing on modern computer
+										      >	hardware, which enforces a non-execute permission on pages of memory.
+										      >	[DEP](#abbr_DEP) prevents pages of memory from containing both data and
+										      >	instructions, which makes it more difficult for an attacker to introduce
+										      >	and execute code. An entity that writes [OS](#abbr_OS) software. For the
+										      >	purposes of this document, vendors and developers are the same. A class
+										      >	of [OSes](#abbr_OS) designed to support a wide-variety of workloads
+										      >	consisting of many concurrent applications or services. Typical
+										      >	characteristics for [OSes](#abbr_OS) in this class include support for
+										      >	third-party applications, support for multiple users, and security
+										      >	separation between users and their respective resources. General Purpose
+										      >	Operating Systems also lack the real-time constraint that defines Real
+										      >	Time Operating Systems (RTOS). RTOSes typically power routers, switches,
+										      >	and embedded devices. A software-based firewall implementation running
+										      >	on the [OS](#abbr_OS) for filtering inbound and outbound network traffic
+										      >	to and from processes running on the [OS](#abbr_OS). Software that
+										      >	manages physical and logical resources and provides services for
+										      >	applications. The terms [TOE](#abbr_TOE) and [OS](#abbr_OS) are
+										      >	interchangeable in this document. Any information about an individual
+										      >	maintained by an agency, including, but not limited to, education,
+										      >	financial transactions, medical history, and criminal or employment
+										      >	history and information which can be used to distinguish or trace an
+										      >	individual\'s identity, such as their name, social security number, date
+										      >	and place of birth, mother\'s maiden name, biometric records, etc.,
+										      >	including any other personal information which is linked or linkable to
+										      >	an individual. Sensitive data may include all user or enterprise data or
+										      >	may be specific application data such as [PII](#abbr_PII), emails,
+										      >	messaging, documents, calendar items, and contacts. Sensitive data must
+										      >	minimally include credentials and keys. Sensitive data shall be
+										      >	identified in the [OS](#abbr_OS)\'s [TSS](#abbr_TSS) by the
+										      >	[ST](#abbr_ST) author. A user is subject to configuration policies
+										      >	applied to the operating system by administrators. On some systems under
+										      >	certain configurations, a normal user can temporarily elevate privileges
+										      >	to that of an administrator. At that time, such a user should be
+										      >	considered an administrator. Blah Blah Blah
 										      >
-										      >	-   physical
-										      >	-   virtual
-										      >	-   imaginary
+										      >	2.7 PP Overview {#s-ppoverview .indexable data-level="2"}
+										      >	---------------
 										      >
-										      >	.
+										      >	words
 										      >
-										      >	<div>
+										      >	2.8 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	-----------------
 										      >
-										      >	Something
-										      >
-										      >	</div>
-										      >
-										      >	This is going to show some tests:
-										      >
-										      >	-   Terms with abbrs like [ASLR](#abbr_ASLR), or [API](#abbr_API),
-										      >	    should be found a linked automatically.
-										      >	-   And components can be refered to by their name:
-										      >	    [FQQ\_QQQ.1](#FQQ_QQQ.1)
-										      >	-   And so can requirements: [FQQ\_QQQ.1.1](#FQQ_QQQ.1.1) or by their
-										      >	    unique identifier: [FQQ\_QQQ.1.1](#FQQ_QQQ.1.1)
-										      >	-   Or you can stop them [ASLR]{.no-link}
-										      >	-   This is how you do a picture:
-										      >	    ::: {#figure-fig-logo .figure}
-										      >	    ![](images/niaplogo.png){#fig-logo}\
-										      >	    [Figure [1]{.counter}]{.ctr data-myid="fig-logo"
-										      >	    data-counter-type="ct-figure"}: Niap\'s Logo
-										      >	    :::
-										      >
-										      >	-   And this is how you reference it: [Figure
-										      >	    [1]{.counter}](#fig-logo){.fig-logo-ref}
-										      >	-   This is how you do an equation with an arbitrary counter:
-										      >	      ------------------------------------------------ ------------------------------
-										      >	      \$\$x=\\frac{-b\\pm\\sqrt{b\^{2}-4ac}}{2a}\$\$   ([[1]{.counter}]{.ctr data-myi
-										      >	      ------------------------------------------------ ------------------------------
-										      >
-										      >	-   And this is how you reference it: [Eq.
-										      >	    [1]{.counter}](#quadeq){.quadeq-ref}
-										      >	-   ::: {.dependent}
-										      >	    The following content should be included if:
-										      >	    -   [this](#aaa), is selected from [FQQ\_QQQ.1.1](#FQQ_QQQ.1.1)
-										      >
-										      >	    ::: {.dependent-content}
-										      >	    <div>
-										      >
-										      >	    Some text
-										      >
-										      >	    </div>
-										      >	    :::
-										      >	    :::
-										      >
-										      >	-   ::: {.dependent}
-										      >	    The following content should be included if:
-										      >	    -   the [TOE](#abbr_TOE) implements \"Widget Thing\"
-										      >
-										      >	    ::: {.dependent-content}
-										      >	    <div>
-										      >
-										      >	    Someting dependent on a feature
-										      >
-										      >	    </div>
-										      >	    :::
-										      >	    :::
-										      >
-										      >	-   And here\'s the audit event table for mandatory requirements.\
-										      >	-   Test for an xref to section [Section 3.1 Threats](#Threats){.dynref}
-										      >
-										      >	And this is another sentence (or fragment). I added this sentence and
-										      >	deleted the next one. This uses the plural acronym [OSes](#abbr_OS).
+										      >	Words
 										      >
 										      >	::: {.no-link}
-										      >	1.2 Terms {#glossary .indexable data-level="2"}
+										      >	2.9 Terms {#glossary .indexable data-level="2"}
 										      >	---------
 										      >
 										      >	The following sections list Common Criteria and technology terms used in
 										      >	this document.
 										      >
-										      >	### 1.2.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
+										      >	### 2.9.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Assurance}                  | Grounds for confidence that a TOE |
@@ -245,7 +293,7 @@
 										      >	| :::                               |                                   |
 										      >	+-----------------------------------+-----------------------------------+
 										      >
-										      >	### 1.2.2 Technical Terms {#tech-terms .indexable data-level="3"}
+										      >	### 2.9.2 Technical Terms {#tech-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Address_Space_Layout_Random | An anti-exploitation feature      |
@@ -403,41 +451,6 @@
 										      >	+-----------------------------------+-----------------------------------+
 										      >	:::
 										      >
-										      >	1.3 Compliant Targets of Evaluation {#TOEdescription .indexable data-level="2"}
-										      >	-----------------------------------
-										      >
-										      >	### 1.3.1 TOE Boundary {#TOE_Boundary .indexable data-level="3"}
-										      >
-										      >	::: {#figure-toe .figure}
-										      >	![](images/Toe.png){#toe}\
-										      >	[Figure [2]{.counter}]{.ctr data-myid="toe"
-										      >	data-counter-type="ct-figure"}: General [TOE](#abbr_TOE)
-										      >	:::
-										      >
-										      >	### 1.3.2 TOE Platform {#TOE_Platform .indexable data-level="3"}
-										      >
-										      >	1.4 Use Cases {#usecases .indexable data-level="2"}
-										      >	-------------
-										      >
-										      >	Requirements in this Protection Profile are designed to address the
-										      >	security problems in at least the following use cases. These use cases
-										      >	are intentionally very broad, as many specific use cases exist for an
-										      >	operating system. These use cases may also overlap with one another. An
-										      >	operating system\'s functionality may even be effectively extended by
-										      >	privileged applications installed onto it. However, these are out of
-										      >	scope of this [PP](#abbr_PP).
-										      >
-										      >	 \[USE CASE 1\] Elephant-own device
-										      >
-										      >	:   This is everything we need to describe in words about this use case.
-										      >
-										      >	    For changes to included [SFRs](#abbr_SFR), selections, and
-										      >	    assignments required for this use case, see [D.1 Elephant-own
-										      >	    device](#appendix-elephant){.dynref}.
-										      >
-										      >	2 Conformance Claims {#Conformance_Claims .indexable data-level="1"}
-										      >	====================
-										      >
 										      >	Conformance Statement
 										      >	:   An [ST](#abbr_ST) must claim exact conformance to this
 										      >	    [PP](#abbr_PP), as defined in the [CC](#abbr_CC) and
@@ -455,16 +468,162 @@
 										      >	Package Claim
 										      >	:   This [PP](#abbr_PP) does not claim conformance to any packages.
 										      >
-										      >	3 Security Problem Description {#Security_Problem_Description .indexable data-level="
-										      >	==============================
+										      >	3 Introduction to Distributed TOEs {#s-distributedTOEs .indexable data-level="1"}
+										      >	==================================
 										      >
-										      >	The security problem is described in terms of the threats that the
-										      >	[OS](#abbr_OS) is expected to address, assumptions about the operational
-										      >	environment, and any organizational security policies that the
-										      >	[OS](#abbr_OS) is expected to enforce.
+										      >	words
 										      >
-										      >	3.1 Threats {#Threats .indexable data-level="2"}
-										      >	-----------
+										      >	3.1 Supported Distributed TOE Use Cases {#s-sdtuc .indexable data-level="2"}
+										      >	---------------------------------------
+										      >
+										      >	words
+										      >
+										      >	3.2 Unsupported Distributed TOE Use Cases {#s-udtuc .indexable data-level="2"}
+										      >	-----------------------------------------
+										      >
+										      >	words
+										      >
+										      >	3.3 Registration of Components of a Distributed TOE {#s-compreg .indexable data-level
+										      >	---------------------------------------------------
+										      >
+										      >	words
+										      >
+										      >	3.4 Allocation of Requirementsin Distributed TOEs {#s-alloc .indexable data-level="2"
+										      >	-------------------------------------------------
+										      >
+										      >	words A Network Device has a network infrastructure role that it is
+										      >	designed to provide. In doing so, the Network Device communicates with
+										      >	other Network Devices and other network entities (i.e. entities not
+										      >	defined as Network Devices because they do not have an infrastructure
+										      >	role) over the network. At the same time, it must provide a minimal set
+										      >	of common security functionality expected by all Network Devices. The
+										      >	security problem to be addressed by a compliant Network Device is
+										      >	defined as this set of common security functionality that addresses the
+										      >	threats that are common to Network Devices, as opposed to those that
+										      >	might be targeting the specific functionality of a specific type of
+										      >	Network Device. The set of common security functionality addresses
+										      >	communication with the Network Device, both authorized and unauthorized,
+										      >	the ability to perform valid and secure updates, the ability to audit
+										      >	device activity, the ability to securely store and utilize device and
+										      >	Administrator credentials and data, and the ability to self-test
+										      >	critical device components for failures. An attacker is positioned on a
+										      >	communications channel or elsewhere on the network infrastructure.
+										      >	Attackers may engage in communications with applications and services
+										      >	running on or part of the [OS](#abbr_OS) with the intent of compromise.
+										      >	Engagement may consist of altering existing legitimate communications.
+										      >	The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
+										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for integrity
+										      >	of transmitted data. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)
+										      >	is countered by [O.INTEGRITY](#O.INTEGRITY) as this provides for
+										      >	integrity of software that is installed onto the system from the
+										      >	network. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered
+										      >	by [O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
+										      >	configure the [OS](#abbr_OS) to defend against network attack. The
+										      >	threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
+										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) as this provides a mechanism for
+										      >	the [OS](#abbr_OS) to report behavior that may indicate a network attack
+										      >	has occurred. An attacker is positioned on a communications channel or
+										      >	elsewhere on the network infrastructure. Attackers may monitor and gain
+										      >	access to data exchanged between applications and services that are
+										      >	running on or part of the [OS](#abbr_OS). The threat
+										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
+										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for
+										      >	confidentiality of transmitted data. The threat
+										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
+										      >	[O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
+										      >	configure the [OS](#abbr_OS) to protect the confidentiality of its
+										      >	transmitted data. An attacker may compromise applications running on the
+										      >	[OS](#abbr_OS). The compromised application may provide maliciously
+										      >	formatted input to the [OS](#abbr_OS) through a variety of channels
+										      >	including unprivileged system calls and messaging via the file system.
+										      >	The objective [O.INTEGRITY](#O.INTEGRITY) protects against the use of
+										      >	mechanisms that weaken the [TOE](#abbr_TOE) with regard to attack by
+										      >	other software on the platform. The objective
+										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) protects against local attacks by
+										      >	providing a mechanism to report behavior that may indicate a local
+										      >	attack is occurring or has occurred. An attacker may attempt to access
+										      >	data on the [OS](#abbr_OS) while having a limited amount of time with
+										      >	the physical device. The objective
+										      >	[O.PROTECTED\_STORAGE](#O.PROTECTED_STORAGE) protects against
+										      >	unauthorized attempts to access physical storage used by the
+										      >	[TOE](#abbr_TOE). The [OS](#abbr_OS) relies upon a trustworthy computing
+										      >	platform for its execution. This underlying platform is out of scope of
+										      >	this [PP](#abbr_PP). The operational environment objective
+										      >	[OE.PLATFORM](#OE.PLATFORM) is realized through
+										      >	[A.PLATFORM](#A.PLATFORM). The user of the [OS](#abbr_OS) is not
+										      >	willfully negligent or hostile, and uses the software in compliance with
+										      >	the applied enterprise security policy. At the same time, malicious
+										      >	software could act as the user, so requirements which confine malicious
+										      >	subjects are still in scope. The operational environment objective
+										      >	[OE.PROPER\_USER](#OE.PROPER_USER) is realized through
+										      >	[A.PROPER\_USER](#A.PROPER_USER). The administrator of the
+										      >	[OS](#abbr_OS) is not careless, willfully negligent or hostile, and
+										      >	administers the [OS](#abbr_OS) within compliance of the applied
+										      >	enterprise security policy. The operational environment objective
+										      >	[OE.PROPER\_ADMIN](#OE.PROPER_ADMIN) is realized through
+										      >	[A.PROPER\_ADMIN](#A.PROPER_ADMIN).
+										      >
+										      >	3.5 Organizational Security Policies {#OSPs .indexable data-level="2"}
+										      >	------------------------------------
+										      >
+										      >	A Network Device has a network infrastructure role that it is designed
+										      >	to provide. In doing so, the Network Device communicates with other
+										      >	Network Devices and other network entities (i.e. entities not defined as
+										      >	Network Devices because they do not have an infrastructure role) over
+										      >	the network. At the same time, it must provide a minimal set of common
+										      >	security functionality expected by all Network Devices. The security
+										      >	problem to be addressed by a compliant Network Device is defined as this
+										      >	set of common security functionality that addresses the threats that are
+										      >	common to Network Devices, as opposed to those that might be targeting
+										      >	the specific functionality of a specific type of Network Device. The set
+										      >	of common security functionality addresses communication with the
+										      >	Network Device, both authorized and unauthorized, the ability to perform
+										      >	valid and secure updates, the ability to audit device activity, the
+										      >	ability to securely store and utilize device and Administrator
+										      >	credentials and data, and the ability to self-test critical device
+										      >	components for failures.
+										      >
+										      >	An attacker is positioned on a communications channel or elsewhere on
+										      >	the network infrastructure. Attackers may engage in communications with
+										      >	applications and services running on or part of the [OS](#abbr_OS) with
+										      >	the intent of compromise. Engagement may consist of altering existing
+										      >	legitimate communications. The threat
+										      >	[T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
+										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for integrity
+										      >	of transmitted data. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)
+										      >	is countered by [O.INTEGRITY](#O.INTEGRITY) as this provides for
+										      >	integrity of software that is installed onto the system from the
+										      >	network. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered
+										      >	by [O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
+										      >	configure the [OS](#abbr_OS) to defend against network attack. The
+										      >	threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
+										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) as this provides a mechanism for
+										      >	the [OS](#abbr_OS) to report behavior that may indicate a network attack
+										      >	has occurred. An attacker is positioned on a communications channel or
+										      >	elsewhere on the network infrastructure. Attackers may monitor and gain
+										      >	access to data exchanged between applications and services that are
+										      >	running on or part of the [OS](#abbr_OS). The threat
+										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
+										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for
+										      >	confidentiality of transmitted data. The threat
+										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
+										      >	[O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
+										      >	configure the [OS](#abbr_OS) to protect the confidentiality of its
+										      >	transmitted data. An attacker may compromise applications running on the
+										      >	[OS](#abbr_OS). The compromised application may provide maliciously
+										      >	formatted input to the [OS](#abbr_OS) through a variety of channels
+										      >	including unprivileged system calls and messaging via the file system.
+										      >	The objective [O.INTEGRITY](#O.INTEGRITY) protects against the use of
+										      >	mechanisms that weaken the [TOE](#abbr_TOE) with regard to attack by
+										      >	other software on the platform. The objective
+										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) protects against local attacks by
+										      >	providing a mechanism to report behavior that may indicate a local
+										      >	attack is occurring or has occurred. An attacker may attempt to access
+										      >	data on the [OS](#abbr_OS) while having a limited amount of time with
+										      >	the physical device. The objective
+										      >	[O.PROTECTED\_STORAGE](#O.PROTECTED_STORAGE) protects against
+										      >	unauthorized attempts to access physical storage used by the
+										      >	[TOE](#abbr_TOE).
 										      >
 										      >	T.NETWORK\_ATTACK
 										      >	:   An attacker is positioned on a communications channel or elsewhere
@@ -490,8 +649,22 @@
 										      >	:   An attacker may attempt to access data on the [OS](#abbr_OS) while
 										      >	    having a limited amount of time with the physical device.
 										      >
-										      >	3.2 Assumptions {#Assumptions .indexable data-level="2"}
-										      >	---------------
+										      >	The [OS](#abbr_OS) relies upon a trustworthy computing platform for its
+										      >	execution. This underlying platform is out of scope of this
+										      >	[PP](#abbr_PP). The operational environment objective
+										      >	[OE.PLATFORM](#OE.PLATFORM) is realized through
+										      >	[A.PLATFORM](#A.PLATFORM). The user of the [OS](#abbr_OS) is not
+										      >	willfully negligent or hostile, and uses the software in compliance with
+										      >	the applied enterprise security policy. At the same time, malicious
+										      >	software could act as the user, so requirements which confine malicious
+										      >	subjects are still in scope. The operational environment objective
+										      >	[OE.PROPER\_USER](#OE.PROPER_USER) is realized through
+										      >	[A.PROPER\_USER](#A.PROPER_USER). The administrator of the
+										      >	[OS](#abbr_OS) is not careless, willfully negligent or hostile, and
+										      >	administers the [OS](#abbr_OS) within compliance of the applied
+										      >	enterprise security policy. The operational environment objective
+										      >	[OE.PROPER\_ADMIN](#OE.PROPER_ADMIN) is realized through
+										      >	[A.PROPER\_ADMIN](#A.PROPER_ADMIN).
 										      >
 										      >	A.PLATFORM
 										      >	:   The [OS](#abbr_OS) relies upon a trustworthy computing platform for
@@ -510,11 +683,25 @@
 										      >	    negligent or hostile, and administers the [OS](#abbr_OS) within
 										      >	    compliance of the applied enterprise security policy.
 										      >
-										      >	4 Security Objectives {#Security_Objectives .indexable data-level="1"}
-										      >	=====================
+										      >	3.6 Organizational Security Policies {#OSPs .indexable data-level="2"}
+										      >	------------------------------------
 										      >
-										      >	4.1 Security Objectives for the TOE {#SecurityObjectivesTOE .indexable data-level="2"
+										      >	P.ENTERPRISE
+										      >	:   If the [OS](#abbr_OS) is bound to a directory or management server,
+										      >	    the configuration of the [OS](#abbr_OS) software must be capable of
+										      >	    adhering to the enterprise security policies distributed by them.
+										      >
+										      >	3.7 Security Objectives for the TOE {#SecurityObjectivesTOE .indexable data-level="2"
 										      >	-----------------------------------
+										      >
+										      >	3.8 Security Objectives for the Operational Environment {#SecurityObjectivesTOEorEnvi
+										      >	-------------------------------------------------------
+										      >
+										      >	3.9 Security Objectives Rationale {#SOR .indexable data-level="2"}
+										      >	---------------------------------
+										      >
+										      >	3.10 Security Objectives for the TOE {#SecurityObjectivesTOE .indexable data-level="2
+										      >	------------------------------------
 										      >
 										      >	O.ACCOUNTABILITY
 										      >	:   Conformant [OSes](#abbr_OS) ensure that information exists that
@@ -557,8 +744,8 @@
 										      >	    and sensitive data. Both [CSP](#abbr_CSP) and sensitive data should
 										      >	    not be exposed outside of the platform.
 										      >
-										      >	4.2 Security Objectives for the Operational Environment {#SecurityObjectivesTOEorEnvi
-										      >	-------------------------------------------------------
+										      >	3.11 Security Objectives for the Operational Environment {#SecurityObjectivesTOEorEnv
+										      >	--------------------------------------------------------
 										      >
 										      >	The following security objectives for the operational environment assist
 										      >	the [OS](#abbr_OS) in correctly providing its security functionality.
@@ -580,8 +767,8 @@
 										      >	    negligent or hostile, and administers the [OS](#abbr_OS) within
 										      >	    compliance of the applied enterprise security policy.
 										      >
-										      >	4.3 Security Objectives Rationale {#SOR .indexable,h2 data-level="2"}
-										      >	---------------------------------
+										      >	3.12 Security Objectives Rationale {#SOR .indexable,h2 data-level="2"}
+										      >	----------------------------------
 										      >
 										      >	This section describes how the assumptions, threats, and organizational
 										      >	security policies map to the security objectives.
@@ -681,8 +868,83 @@
 										      >	[OE.PROPER\_ADMIN](#OE.PROPER_ADMIN) is realized through
 										      >	[A.PROPER\_ADMIN](#A.PROPER_ADMIN).
 										      >
-										      >	5 Security Requirements {#Security_Requirements .indexable data-level="1"}
-										      >	=======================
+										      >	[P.ENTERPRISE](#P.ENTERPRISE)
+										      >
+										      >	[O.MANAGEMENT](#O.MANAGEMENT)
+										      >
+										      >	The organizational security policy [P.ENTERPRISE](#P.ENTERPRISE) is
+										      >	enforced through the objective [O.MANAGEMENT](#O.MANAGEMENT) as this
+										      >	objective represents how the enterprise and user assert management over
+										      >	the [OS](#abbr_OS).
+										      >
+										      >	The individual security functional requirements are specified in the
+										      >	sections below. [SFRs](#abbr_SFR) in this section are mandatory
+										      >	[SFRs](#abbr_SFR) that any conformant [TOE](#abbr_TOE) must meet. Based
+										      >	on selections made in these [SFRs](#abbr_SFR) it will also be necessary
+										      >	to include some of the selection-based [SFRs](#abbr_SFR) in Appendix B.
+										      >	Additional optional [SFRs](#abbr_SFR) may also be adopted from those
+										      >	listed in Appendix A. For a distributed [TOE](#abbr_TOE), the
+										      >	[ST](#abbr_ST) author should reference Table 1 for guidance on how each
+										      >	[SFR](#abbr_SFR) should be met. The table details whether
+										      >	[SFRs](#abbr_SFR) should be met by all [TOE](#abbr_TOE) components, by
+										      >	at least one [TOE](#abbr_TOE) component or whether they are dependent
+										      >	upon the feature being implemented by the [TOE](#abbr_TOE) component.
+										      >	The [ST](#abbr_ST) for a distributed [TOE](#abbr_TOE) must include a
+										      >	mapping of [SFRs](#abbr_SFR) to each of the components of the
+										      >	[TOE](#abbr_TOE). (Note that this deliverable is examined as part of the
+										      >	ASE\_TSS.1 and [AVA\_VAN.1](#AVA_VAN.1) Evaluation Activities as
+										      >	described in \[SD, 5.1.2\] and \[SD, 5.6.1.1\] respectively. The
+										      >	Evaluation Activities defined in \[SD\] describe actions that the
+										      >	evaluator will take in order to determine compliance of a particular
+										      >	[TOE](#abbr_TOE) with the [SFRs](#abbr_SFR). The content of these
+										      >	Evaluation Activities will therefore provide more insight into
+										      >	deliverables required from [TOE](#abbr_TOE) Developers.
+										      >
+										      >	3.13 Conventions {#s-conventions .indexable data-level="2"}
+										      >	----------------
+										      >
+										      >	3.14 SFR Architecture {#s-sfrarch .indexable data-level="2"}
+										      >	---------------------
+										      >
+										      >	3.15 Security Functional Requirements {#SFRs .indexable data-level="2"}
+										      >	-------------------------------------
+										      >
+										      >	The Security Objectives in were constructed to address threats
+										      >	identified in . The Security Functional Requirements ([SFRs](#abbr_SFR))
+										      >	in are a formal instantiation of the Security Objectives. The
+										      >	[PP](#abbr_PP) identifies the Security Assurance Requirements
+										      >	([SARs](#abbr_SAR)) to frame the extent to which the evaluator assesses
+										      >	the documentation applicable for the evaluation and performs independent
+										      >	testing. This section lists the set of [SARs](#abbr_SAR) from
+										      >	[CC](#abbr_CC) part 3 that are required in evaluations against this
+										      >	[PP](#abbr_PP). Individual Assurance Activities to be performed are
+										      >	specified both in as well as in this section. The general model for
+										      >	evaluation of OSs against [STs](#abbr_ST) written to conform to this
+										      >	[PP](#abbr_PP) is as follows: After the [ST](#abbr_ST) has been approved
+										      >	for evaluation, the [ITSEF](#abbr_ITSEF) will obtain the [OS](#abbr_OS),
+										      >	supporting environmental [IT](#abbr_IT), and the administrative/user
+										      >	guides for the [OS](#abbr_OS). The [ITSEF](#abbr_ITSEF) is expected to
+										      >	perform actions mandated by the Common Evaluation Methodology
+										      >	([CEM](#abbr_CEM)) for the ASE and ALC [SARs](#abbr_SAR). The
+										      >	[ITSEF](#abbr_ITSEF) also performs the Assurance Activities contained
+										      >	within , which are intended to be an interpretation of the other
+										      >	[CEM](#abbr_CEM) assurance requirements as they apply to the specific
+										      >	technology instantiated in the [OS](#abbr_OS). The Assurance Activities
+										      >	that are captured in also provide clarification as to what the developer
+										      >	needs to provide to demonstrate the [OS](#abbr_OS) is compliant with the
+										      >	[PP](#abbr_PP).
+										      >
+										      >	### 3.15.1 Class ASE: Security Target {#ase .indexable data-level="3"}
+										      >
+										      >	### 3.15.2 Class ADV: Development {#adv .indexable data-level="3"}
+										      >
+										      >	### 3.15.3 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
+										      >
+										      >	### 3.15.4 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
+										      >
+										      >	### 3.15.5 Class ATE: Tests {#ate .indexable data-level="3"}
+										      >
+										      >	### 3.15.6 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
 										      >
 										      >	This chapter describes the security requirements which have to be
 										      >	fulfilled by the product under evaluation. Those requirements comprise
@@ -707,146 +969,50 @@
 										      >	    [SFR](#abbr_SFR) name with a slash and unique identifier suggesting
 										      >	    the purpose of the operation, e.g. \"/EXAMPLE1.\"
 										      >
-										      >	This chapter describes the security requirements which have to be
-										      >	fulfilled by the [OS](#abbr_OS). Those requirements comprise functional
-										      >	components from Part 2 and assurance components from Part 3 of
-										      >	[\[CC\]](#bibCC). The following notations are used:
+										      >	The individual security functional requirements are specified in the
+										      >	sections below. [SFRs](#abbr_SFR) in this section are mandatory
+										      >	[SFRs](#abbr_SFR) that any conformant [TOE](#abbr_TOE) must meet. Based
+										      >	on selections made in these [SFRs](#abbr_SFR) it will also be necessary
+										      >	to include some of the selection-based [SFRs](#abbr_SFR) in Appendix B.
+										      >	Additional optional [SFRs](#abbr_SFR) may also be adopted from those
+										      >	listed in Appendix A.
 										      >
-										      >	-   **Refinement** operation (denoted by **bold text**): is used to add
-										      >	    details to a requirement, and thus further restricts a requirement.
-										      >	-   **Selection** (denoted by *italicized text*): is used to select one
-										      >	    or more options provided by the \[[CC](#abbr_CC)\] in stating a
-										      >	    requirement.
-										      >	-   **Assignment** operation (denoted by [italicized
-										      >	    text]{.assignable-content}): is used to assign a specific value to
-										      >	    an unspecified parameter, such as the length of a password. Showing
-										      >	    the value in square brackets indicates assignment.
-										      >	-   **Iteration** operation: are identified with a number inside
-										      >	    parentheses (e.g. \"(1)\")
+										      >	For a distributed [TOE](#abbr_TOE), the [ST](#abbr_ST) author should
+										      >	reference Table 1 for guidance on how each [SFR](#abbr_SFR) should be
+										      >	met. The table details whether [SFRs](#abbr_SFR) should be met by all
+										      >	[TOE](#abbr_TOE) components, by at least one [TOE](#abbr_TOE) component
+										      >	or whether they are dependent upon the feature being implemented by the
+										      >	[TOE](#abbr_TOE) component. The [ST](#abbr_ST) for a distributed
+										      >	[TOE](#abbr_TOE) must include a mapping of [SFRs](#abbr_SFR) to each of
+										      >	the components of the [TOE](#abbr_TOE). (Note that this deliverable is
+										      >	examined as part of the ASE\_TSS.1 and [AVA\_VAN.1](#AVA_VAN.1)
+										      >	Evaluation Activities as described in \[SD, 5.1.2\] and \[SD, 5.6.1.1\]
+										      >	respectively.
 										      >
-										      >	5.1 Security Functional Requirements {#SFRs .indexable data-level="2"}
-										      >	------------------------------------
+										      >	The Evaluation Activities defined in \[SD\] describe actions that the
+										      >	evaluator will take in order to determine compliance of a particular
+										      >	[TOE](#abbr_TOE) with the [SFRs](#abbr_SFR). The content of these
+										      >	Evaluation Activities will therefore provide more insight into
+										      >	deliverables required from [TOE](#abbr_TOE) Developers.
 										      >
-										      >	### 5.1.1 FOOO {#FOOO .indexable data-level="3"}
+										      >	3.16 Conventions {#s-conventions .indexable data-level="2"}
+										      >	----------------
 										      >
-										      >	::: {#FOO_FOO.1 .comp}
-										      >	#### FOO\_FOO.1 Foo Foo
+										      >	The conventions used in descriptions of the [SFRs](#abbr_SFR) are as
+										      >	follows:
 										      >
-										      >	::: {.element}
-										      >	::: {#FOO_FOO.1.1 .reqid}
-										      >	[FOO\_FOO.1.1](#FOO_FOO.1.1){.abbr}
-										      >	:::
+										      >	3.17 SFR Architecture {#s-sfrarch .indexable data-level="2"}
+										      >	---------------------
 										      >
-										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall consiste of \[**selection**: *soup*,
-										      >	*salad*\] followed by \[**selection**: *pizza*, *spaghetti*,
-										      >	*ratatouille*, *sushi*\].
+										      >	Insert section 6.2 here.
 										      >
-										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[]{.note}
-										      >	:::
-										      >	:::
-										      >	:::
-										      >	:::
+										      >	3.18 Security Functional Requirements {#SFRs .indexable data-level="2"}
+										      >	-------------------------------------
 										      >
-										      >	::: {#FOO_BAR.1 .comp}
-										      >	#### FOO\_BAR.1 Foo Bar
-										      >
-										      >	::: {.element}
-										      >	::: {#FOO_BAR.1.1 .reqid}
-										      >	[FOO\_BAR.1.1](#FOO_BAR.1.1){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall drink \[**selection**: *tea*, *coffee*\].
-										      >
-										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[]{.note}
-										      >	:::
-										      >	:::
-										      >	:::
-										      >	:::
-										      >
-										      >	### 5.1.2 QQQQ {#QQQQ .indexable data-level="3"}
-										      >
-										      >	::: {#FQQ_QQQ.1 .comp}
-										      >	#### FQQ\_QQQ.1 QQQQQ
-										      >
-										      >	::: {.element}
-										      >	::: {#FQQ_QQQ.1.1 .reqid}
-										      >	[FQQ\_QQQ.1.1](#FQQ_QQQ.1.1){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall do either \[**selection**: *this*, *that*\].
-										      >
-										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[]{.note}
-										      >	:::
-										      >	:::
-										      >	:::
-										      >	:::
-										      >
-										      >	### 5.1.3 Security Management (FMT) {#fmt-2 .indexable data-level="3"}
-										      >
-										      >	::: {#FMT_SMF.1/HOST .comp}
-										      >	#### FMT\_SMF.1/HOST Specification of Management Functions (EDR Management of Host Ag
-										      >
-										      >	::: {.element}
-										      >	::: {#FMT_SMF.1.1/HOST .reqid}
-										      >	[FMT\_SMF.1.1/HOST](#FMT_SMF.1.1/HOST){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The EDR shall be capable of performing the following functions that
-										      >	control behavior of the Host Agent:\
-										      >
-										      >	+-------------+-------------+-------------+-------------+-------------+
-										      >	| \#          | Management  | Administrat | SOC Analyst | Read-Only   |
-										      >	|             | Function    | or          |             | User        |
-										      >	+-------------+-------------+-------------+-------------+-------------+
-										      >	| 1           | Configure   | ::: {.toolt | ::: {.toolt | ::: {.toolt |
-										      >	|             | the time    | ipped}      | ipped}      | ipped}      |
-										      >	|             | frame for   | M[Mandatory | O[Optional] | -[N/A]{.too |
-										      >	|             | sending     | ]{.tooltipt | {.tooltipte | ltiptext}   |
-										      >	|             | Host Agent  | ext}        | xt}         | :::         |
-										      >	|             | data to the | :::         | :::         |             |
-										      >	|             | EDR         |             |             |             |
-										      >	|             | \[**assignm |             |             |             |
-										      >	|             | ent**:      |             |             |             |
-										      >	|             | [list of    |             |             |             |
-										      >	|             | configurabl |             |             |             |
-										      >	|             | e           |             |             |             |
-										      >	|             | time        |             |             |             |
-										      >	|             | frames]{.as |             |             |             |
-										      >	|             | signable-co |             |             |             |
-										      >	|             | ntent}\]    |             |             |             |
-										      >	+-------------+-------------+-------------+-------------+-------------+
-										      >	| 2           | Assign a    | ::: {.toolt | ::: {.toolt | ::: {.toolt |
-										      >	|             | label or    | ipped}      | ipped}      | ipped}      |
-										      >	|             | tag to      | M[Mandatory | O[Optional] | -[N/A]{.too |
-										      >	|             | categorize  | ]{.tooltipt | {.tooltipte | ltiptext}   |
-										      >	|             | or group    | ext}        | xt}         | :::         |
-										      >	|             | individual  | :::         | :::         |             |
-										      >	|             | endpoint    |             |             |             |
-										      >	|             | systems     |             |             |             |
-										      >	+-------------+-------------+-------------+-------------+-------------+
-										      >
-										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[This requirement captures all the
-										      >	configuration functionality the EDR provides the administrator to
-										      >	configure the EDR Host Agents.\
-										      >	\
-										      >	Chart legend: X = Mandatory, O = Optional, - = N/A]{.note}
-										      >	:::
-										      >	:::
-										      >	:::
-										      >	:::
-										      >
-										      >	### 5.1.4 Security Audit (FAU) {#fau .indexable data-level="3"}
+										      >	### 3.18.1 fau {#fau .indexable data-level="3"}
 										      >
 										      >	::: {#FAU_GEN.1 .comp}
-										      >	#### FAU\_GEN.1 Audit Data Generation
+										      >	#### FAU\_GEN.1 Audit data generation
 										      >
 										      >	::: {.element}
 										      >	::: {#FAU_GEN.1.1 .reqid}
@@ -854,131 +1020,35 @@
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall be able to generate an audit record of the
-										      >	following auditable events:
-										      >
-										      >	a.  Start-up and shutdown of audit functions
-										      >	b.  All administrative actions
-										      >	c.  \[Specifically defined auditable events in Table 1\]
-										      >	d.  \[**selection**: *additional information defined in Table 2*,
-										      >	    *additional information defined in Table 3*, *additional information
-										      >	    defined in Table 4*, *additional information defined in in Table 5*,
-										      >	    *no other information*\]
-										      >	:::
-										      >	:::
-										      >
-										      >	::: {.element}
-										      >	::: {#FAU_GEN.1.2 .reqid}
-										      >	[FAU\_GEN.1.2](#FAU_GEN.1.2){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall record within each audit record at least the
-										      >	following information:
-										      >
-										      >	a.  Date and time of the event
-										      >	b.  Type of event
-										      >	c.  Subject and object identity (if applicable)
-										      >	d.  The outcome (success or failure) of the event
-										      >	e.  \[Additional information defined in Table 1\]
-										      >	f.  \[**selection**: *additional information defined in Table 2*,
-										      >	    *additional information defined in Table 3*, *additional information
-										      >	    defined in Table 4*, *additional information defined in in Table 5*,
-										      >	    *no other information*\]
+										      >	The [TOE](#abbr_TOE) shall \[**selection**: *Dummy*, *Other*\]
 										      >
 										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[ The [ST](#abbr_ST) author can
-										      >	include other auditable events directly in Table 1; they are not limited
-										      >	to the list presented. The [ST](#abbr_ST) author should update the table
-										      >	in [FAU\_GEN.1.2](#FAU_GEN.1.2) with any additional information
-										      >	generated. "Subject identity" in [FAU\_GEN.1.2](#FAU_GEN.1.2) could be a
-										      >	user id or an identifier specifying a [VM](#abbr_VM), for example.\
-										      >	\
-										      >	If 'additional information defined in Table 3' is selected, it is
-										      >	acceptable to include individual entries from Table 3 without including
-										      >	the entirety of Table 3. Appropriate entries from Tables 2, 4, and 5
-										      >	should be included in the [ST](#abbr_ST) if the associated
-										      >	[SFRs](#abbr_SFR) and selections are included.\
-										      >	\
-										      >	The Table 1 entry for FDP\_VNC\_EXT.1 refers to configuration settings
-										      >	that attach VMs to virtualized network components. Changes to these
-										      >	configurations can be made during [VM](#abbr_VM) execution or when VMs
-										      >	are not running. Audit records must be generated for either case.\
-										      >	\
-										      >	The intent of the audit requirement for FDP\_PPR\_EXT.1 is to log that
-										      >	the [VM](#abbr_VM) is connected to a physical device (when the device
-										      >	becomes part of the [VM](#abbr_VM)'s hardware view), not to log every
-										      >	time that the device is accessed. Generally, this is only once at
-										      >	[VM](#abbr_VM) startup. However, some devices can be connected and
-										      >	disconnected during operation (e.g., virtual [USB](#abbr_USB) devices
-										      >	such as CD-ROMs). All such connection/disconnection events must be
-										      >	logged. ]{.note}
+										      >	[Application Note: ]{.note-header}[]{.note}
 										      >	:::
 										      >	:::
 										      >	:::
 										      >	:::
 										      >
-										      >	::: {#FAU_SAR.1 .comp}
-										      >	#### FAU\_SAR.1 Audit Review
+										      >	::: {#FAU_GEN.2 .comp}
+										      >	#### FAU\_GEN.2 User identity association
 										      >
 										      >	::: {.element}
-										      >	::: {#FAU_SAR.1.1 .reqid}
-										      >	[FAU\_SAR.1.1](#FAU_SAR.1.1){.abbr}
+										      >	::: {#FAU_GEN.2.1 .reqid}
+										      >	[FAU\_GEN.2.1](#FAU_GEN.2.1){.abbr}
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall provide \[administrators\] with the
-										      >	capability to read \[all information\] from the audit records.
-										      >	:::
-										      >	:::
-										      >
-										      >	::: {.element}
-										      >	::: {#FAU_SAR.1.2 .reqid}
-										      >	[FAU\_SAR.1.2](#FAU_SAR.1.2){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall provide the audit records in a manner
-										      >	suitable for the user to interpret the information.
-										      >	:::
-										      >	:::
-										      >	:::
-										      >
-										      >	::: {#FAU_STG.1 .comp}
-										      >	#### FAU\_STG.1 Protected Audit Trail Storage
-										      >
-										      >	::: {.element}
-										      >	::: {#FAU_STG.1.1 .reqid}
-										      >	[FAU\_STG.1.1](#FAU_STG.1.1){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall protect the stored audit records in the audit
-										      >	trail from unauthorized deletion.
-										      >	:::
-										      >	:::
-										      >
-										      >	::: {.element}
-										      >	::: {#FAU_STG.1.2 .reqid}
-										      >	[FAU\_STG.1.2](#FAU_STG.1.2){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall be able to \[prevent\] modifications to the
-										      >	stored audit records in the audit trail.
+										      >	The [TOE](#abbr_TOE) shall
 										      >
 										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[The assurance activity for this
-										      >	[SFR](#abbr_SFR) is not intended to imply that the [TOE](#abbr_TOE) must
-										      >	support an administrator's ability to designate individual audit records
-										      >	for deletion. That level of granularity is not required.]{.note}
+										      >	[Application Note: ]{.note-header}[]{.note}
 										      >	:::
 										      >	:::
 										      >	:::
 										      >	:::
 										      >
 										      >	::: {#FAU_STG_EXT.1 .comp}
-										      >	#### FAU\_STG\_EXT.1 Off-Loading of Audit Data
+										      >	#### FAU\_STG\_EXT.1 Protected Audit Event Storage
 										      >
 										      >	::: {.element}
 										      >	::: {#FAU_STG_EXT.1.1 .reqid}
@@ -986,36 +1056,550 @@
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall be able to transmit the generated audit data
-										      >	to an external [IT](#abbr_IT) entity using a trusted channel as
-										      >	specified in FTP\_ITC\_EXT.1.
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
 										      >	:::
 										      >	:::
 										      >
+										      >	### 3.18.2 fcs {#fcs .indexable data-level="3"}
+										      >
+										      >	::: {#FCS_CKM.1 .comp}
+										      >	#### FCS\_CKM.1 Cryptographic Key Generation (Refinement)
+										      >
 										      >	::: {.element}
-										      >	::: {#FAU_STG_EXT.1.2 .reqid}
-										      >	[FAU\_STG\_EXT.1.2](#FAU_STG_EXT.1.2){.abbr}
+										      >	::: {#FCS_CKM.1.1 .reqid}
+										      >	[FCS\_CKM.1.1](#FCS_CKM.1.1){.abbr}
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall \[**selection**: *drop new audit data*,
-										      >	*overwrite previous audit records according to the following rule:
-										      >	\[**assignment**: [rule for overwriting previous audit
-										      >	records]{.assignable-content}\]*, *\[**assignment**: [other
-										      >	action]{.assignable-content}\]*\] when the local storage space for audit
-										      >	data is full.
+										      >	The [TOE](#abbr_TOE) shall
 										      >
 										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[An external log server, if available,
-										      >	might be used as alternative storage space in case the local storage
-										      >	space is full. An 'other action' could be defined in this case as 'send
-										      >	the new audit data to an external [IT](#abbr_IT) entity'.]{.note}
+										      >	[Application Note: ]{.note-header}[]{.note}
 										      >	:::
 										      >	:::
 										      >	:::
 										      >	:::
 										      >
-										      >	### 5.1.5 TOE Security Functional Requirements Rationale {#obj-req-map .indexable dat
+										      >	::: {#FCS_CKM.2 .comp}
+										      >	#### FCS\_CKM.2 Cryptographic Key Establishment (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_CKM.2.1 .reqid}
+										      >	[FCS\_CKM.2.1](#FCS_CKM.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_CKM.4 .comp}
+										      >	#### FCS\_CKM.4 Cryptographic Key Destruction
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_CKM.4.1 .reqid}
+										      >	[FCS\_CKM.4.1](#FCS_CKM.4.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_COP.1/DataEncryption .comp}
+										      >	#### FCS\_COP.1/DataEncryption Cryptographic Operation (AES Data Encryption/Decryptio
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_COP.1.1/DataEncryption .reqid}
+										      >	[FCS\_COP.1.1/DataEncryption](#FCS_COP.1.1/DataEncryption){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_COP.1/SigGen .comp}
+										      >	#### FCS\_COP.1/SigGen Cryptographic Operation (Signature Generation and Verification
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_COP.1.1/SigGen .reqid}
+										      >	[FCS\_COP.1.1/SigGen](#FCS_COP.1.1/SigGen){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_COP.1/Hash .comp}
+										      >	#### FCS\_COP.1/Hash Cryptographic Operation (Hash Algorithm)
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_COP.1.1/Hash .reqid}
+										      >	[FCS\_COP.1.1/Hash](#FCS_COP.1.1/Hash){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_COP.1/KeyedHash .comp}
+										      >	#### FCS\_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_COP.1.1/KeyedHash .reqid}
+										      >	[FCS\_COP.1.1/KeyedHash](#FCS_COP.1.1/KeyedHash){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_RBG_EXT.1 .comp}
+										      >	#### FCS\_RBG\_EXT.1 Random Bit Generation
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_RBG_EXT.1.1 .reqid}
+										      >	[FCS\_RBG\_EXT.1.1](#FCS_RBG_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 3.18.3 fia {#fia .indexable data-level="3"}
+										      >
+										      >	::: {#FIA_AFL.1 .comp}
+										      >	#### FIA\_AFL.1 Authentication Failure Management (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_AFL.1.1 .reqid}
+										      >	[FIA\_AFL.1.1](#FIA_AFL.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_PMG_EXT.1 .comp}
+										      >	#### FIA\_PMG\_EXT.1 Password Management
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_PMG_EXT.1.1 .reqid}
+										      >	[FIA\_PMG\_EXT.1.1](#FIA_PMG_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_UIA_EXT.1 .comp}
+										      >	#### FIA\_UIA\_EXT.1 User Identification and Authentication
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_UIA_EXT.1.1 .reqid}
+										      >	[FIA\_UIA\_EXT.1.1](#FIA_UIA_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_UAU_EXT.2 .comp}
+										      >	#### FIA\_UAU\_EXT.2 Password-based Authentication Mechanism
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_UAU_EXT.2.1 .reqid}
+										      >	[FIA\_UAU\_EXT.2.1](#FIA_UAU_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_UAU.7 .comp}
+										      >	#### FIA\_UAU.7 Protected Authentication Feedback
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_UAU.7.1 .reqid}
+										      >	[FIA\_UAU.7.1](#FIA_UAU.7.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 3.18.4 fmt {#fmt .indexable data-level="3"}
+										      >
+										      >	::: {#FMT_MOF.1/ManualUpdate .comp}
+										      >	#### FMT\_MOF.1/ManualUpdate Management of Security Functions Behaviour
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MOF.1.1/ManualUpdate .reqid}
+										      >	[FMT\_MOF.1.1/ManualUpdate](#FMT_MOF.1.1/ManualUpdate){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_MTD.1/CoreData .comp}
+										      >	#### FMT\_MTD.1/CoreData Management of TSF Data
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MTD.1.1/CoreData .reqid}
+										      >	[FMT\_MTD.1.1/CoreData](#FMT_MTD.1.1/CoreData){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_SMF.1 .comp}
+										      >	#### FMT\_SMF.1 Specification of Management Functions
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_SMF.1.1 .reqid}
+										      >	[FMT\_SMF.1.1](#FMT_SMF.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_SMR.2 .comp}
+										      >	#### FMT\_SMR.2 Restrictions on security roles
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_SMR.2.1 .reqid}
+										      >	[FMT\_SMR.2.1](#FMT_SMR.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 3.18.5 fpt {#fpt .indexable data-level="3"}
+										      >
+										      >	::: {#FPT_SKP_EXT.1 .comp}
+										      >	#### FPT\_SKP\_EXT.1 Protection of TSF Data (for reading of all pre-shared, symmetric
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_SKP_EXT.1.1 .reqid}
+										      >	[FPT\_SKP\_EXT.1.1](#FPT_SKP_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FPT_APW_EXT.1 .comp}
+										      >	#### FPT\_APW\_EXT.1 Protection of Administrator Passwords
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_APW_EXT.1.1 .reqid}
+										      >	[FPT\_APW\_EXT.1.1](#FPT_APW_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FPT_STM_EXT.1 .comp}
+										      >	#### FPT\_STM\_EXT.1 Reliable Time Stamps
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_STM_EXT.1.1 .reqid}
+										      >	[FPT\_STM\_EXT.1.1](#FPT_STM_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FPT_TST_EXT.1 .comp}
+										      >	#### FPT\_TST\_EXT.1 TSF Testing
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_TST_EXT.1.1 .reqid}
+										      >	[FPT\_TST\_EXT.1.1](#FPT_TST_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FPT_TUD_EXT.1 .comp}
+										      >	#### FPT\_TUD\_EXT.1 Trusted Update
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_TUD_EXT.1.1 .reqid}
+										      >	[FPT\_TUD\_EXT.1.1](#FPT_TUD_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FPT_TUD_EXT.2 .comp}
+										      >	#### FPT\_TUD\_EXT.2 Trusted Update Based on Certificates
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_TUD_EXT.2.1 .reqid}
+										      >	[FPT\_TUD\_EXT.2.1](#FPT_TUD_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 3.18.6 fta {#fta .indexable data-level="3"}
+										      >
+										      >	::: {#FTA_SSL_EXT.1 .comp}
+										      >	#### FTA\_SSL\_EXT.1 TSF-initiated Session Locking
+										      >
+										      >	::: {.element}
+										      >	::: {#FTA_SSL_EXT.1.1 .reqid}
+										      >	[FTA\_SSL\_EXT.1.1](#FTA_SSL_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FTA_SSL.3 .comp}
+										      >	#### FTA\_SSL.3 TSF-initiated Termination (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FTA_SSL.3.1 .reqid}
+										      >	[FTA\_SSL.3.1](#FTA_SSL.3.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FTA_SSL.4 .comp}
+										      >	#### FTA\_SSL.4 User-initiated Termination (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FTA_SSL.4.1 .reqid}
+										      >	[FTA\_SSL.4.1](#FTA_SSL.4.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FTA_TAB.1 .comp}
+										      >	#### FTA\_TAB.1 Default TOE Access Banners (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FTA_TAB.1.1 .reqid}
+										      >	[FTA\_TAB.1.1](#FTA_TAB.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 3.18.7 ftp {#ftp .indexable data-level="3"}
+										      >
+										      >	::: {#FTP_ITC.1 .comp}
+										      >	#### FTP\_ITC.1 Inter-TSF Trusted Channel (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_ITC.1.1 .reqid}
+										      >	[FTP\_ITC.1.1](#FTP_ITC.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FTP_TRP.1/Admin .comp}
+										      >	#### FTP\_TRP.1/Admin Trusted Path (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_TRP.1.1/Admin .reqid}
+										      >	[FTP\_TRP.1.1/Admin](#FTP_TRP.1.1/Admin){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### 3.18.8 TOE Security Functional Requirements Rationale {#obj-req-map .indexable da
 										      >
 										      >	The following rationale provides justification for each security
 										      >	objective for the [TOE](#abbr_TOE), showing that the [SFRs](#abbr_SFR)
@@ -1050,11 +1634,11 @@
 										      >
 										      >	[ASLR](#abbr_ASLR) For reasons
 										      >
-										      >	FPT\_TUD\_EXT.1
+										      >	[FPT\_TUD\_EXT.1](#FPT_TUD_EXT.1)
 										      >
 										      >	For reasons
 										      >
-										      >	FPT\_TUD\_EXT.2
+										      >	[FPT\_TUD\_EXT.2](#FPT_TUD_EXT.2)
 										      >
 										      >	For reasons
 										      >
@@ -1082,7 +1666,7 @@
 										      >
 										      >	For reasons
 										      >
-										      >	FPT\_TST\_EXT.1
+										      >	[FPT\_TST\_EXT.1](#FPT_TST_EXT.1)
 										      >
 										      >	For reasons
 										      >
@@ -1094,7 +1678,7 @@
 										      >
 										      >	For reasons
 										      >
-										      >	FIA\_AFL.1
+										      >	[FIA\_AFL.1](#FIA_AFL.1)
 										      >
 										      >	For reasons
 										      >
@@ -1112,7 +1696,7 @@
 										      >
 										      >	For reasons
 										      >
-										      >	FTA\_TAB.1
+										      >	[FTA\_TAB.1](#FTA_TAB.1)
 										      >
 										      >	For reasons
 										      >
@@ -1122,35 +1706,71 @@
 										      >
 										      >	[O.PROTECTED\_​STORAGE](#O.PROTECTED_STORAGE)\
 										      >
-										      >	FCS\_STO\_EXT.1, FCS\_RBG\_EXT.1, FCS\_COP.1/ENCRYPT, FDP\_ACF\_EXT.1
+										      >	FCS\_STO\_EXT.1, [FCS\_RBG\_EXT.1](#FCS_RBG_EXT.1), FCS\_COP.1/ENCRYPT,
+										      >	FDP\_ACF\_EXT.1
 										      >
 										      >	Rationale for a big chunk
 										      >
 										      >	[O.PROTECTED\_​COMMS](#O.PROTECTED_COMMS)\
 										      >
-										      >	FCS\_RBG\_EXT.1, FCS\_CKM.1, FCS\_CKM.2, FCS\_CKM\_EXT.4,
-										      >	FCS\_COP.1/ENCRYPT, FCS\_COP.1/HASH, FCS\_COP.1/SIGN,
-										      >	FCS\_COP.1/[HMAC](#abbr_HMAC), FDP\_IFC\_EXT.1, FIA\_X509\_EXT.1,
-										      >	FIA\_X509\_EXT.2, FTP\_ITC\_EXT.1
+										      >	[FCS\_RBG\_EXT.1](#FCS_RBG_EXT.1), [FCS\_CKM.1](#FCS_CKM.1),
+										      >	[FCS\_CKM.2](#FCS_CKM.2), FCS\_CKM\_EXT.4, FCS\_COP.1/ENCRYPT,
+										      >	FCS\_COP.1/HASH, FCS\_COP.1/SIGN, FCS\_COP.1/[HMAC](#abbr_HMAC),
+										      >	FDP\_IFC\_EXT.1, FIA\_X509\_EXT.1, [FIA\_X509\_EXT.2](#FIA_X509_EXT.2),
+										      >	FTP\_ITC\_EXT.1
 										      >
 										      >	Rationale for a big chunk
 										      >
-										      >	5.2 Security Assurance Requirements {#Security_Assurance_Requirements .indexable data
-										      >	-----------------------------------
+										      >	The Security Objectives in were constructed to address threats
+										      >	identified in . The Security Functional Requirements ([SFRs](#abbr_SFR))
+										      >	in are a formal instantiation of the Security Objectives. The
+										      >	[PP](#abbr_PP) identifies the Security Assurance Requirements
+										      >	([SARs](#abbr_SAR)) to frame the extent to which the evaluator assesses
+										      >	the documentation applicable for the evaluation and performs independent
+										      >	testing. This section lists the set of [SARs](#abbr_SAR) from
+										      >	[CC](#abbr_CC) part 3 that are required in evaluations against this
+										      >	[PP](#abbr_PP). Individual Assurance Activities to be performed are
+										      >	specified both in as well as in this section. The general model for
+										      >	evaluation of OSs against [STs](#abbr_ST) written to conform to this
+										      >	[PP](#abbr_PP) is as follows: After the [ST](#abbr_ST) has been approved
+										      >	for evaluation, the [ITSEF](#abbr_ITSEF) will obtain the [OS](#abbr_OS),
+										      >	supporting environmental [IT](#abbr_IT), and the administrative/user
+										      >	guides for the [OS](#abbr_OS). The [ITSEF](#abbr_ITSEF) is expected to
+										      >	perform actions mandated by the Common Evaluation Methodology
+										      >	([CEM](#abbr_CEM)) for the ASE and ALC [SARs](#abbr_SAR). The
+										      >	[ITSEF](#abbr_ITSEF) also performs the Assurance Activities contained
+										      >	within , which are intended to be an interpretation of the other
+										      >	[CEM](#abbr_CEM) assurance requirements as they apply to the specific
+										      >	technology instantiated in the [OS](#abbr_OS). The Assurance Activities
+										      >	that are captured in also provide clarification as to what the developer
+										      >	needs to provide to demonstrate the [OS](#abbr_OS) is compliant with the
+										      >	[PP](#abbr_PP).
 										      >
-										      >	The Security Objectives in [Section 4 Security
-										      >	Objectives](#Security_Objectives){.dynref} were constructed to address
-										      >	threats identified in [Section 3.1 Threats](#Threats){.dynref}. The
-										      >	Security Functional Requirements ([SFRs](#abbr_SFR)) in [Section 5.1
-										      >	Security Functional Requirements](#SFRs){.dynref} are a formal
-										      >	instantiation of the Security Objectives. The [PP](#abbr_PP) identifies
-										      >	the Security Assurance Requirements ([SARs](#abbr_SAR)) to frame the
-										      >	extent to which the evaluator assesses the documentation applicable for
-										      >	the evaluation and performs independent testing.\
+										      >	### 3.18.9 Class ASE: Security Target {#ase .indexable data-level="3"}
+										      >
+										      >	### 3.18.10 Class ADV: Development {#adv .indexable data-level="3"}
+										      >
+										      >	### 3.18.11 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
+										      >
+										      >	### 3.18.12 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
+										      >
+										      >	### 3.18.13 Class ATE: Tests {#ate .indexable data-level="3"}
+										      >
+										      >	### 3.18.14 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
+										      >
+										      >	The Security Objectives in [Section](#Security_Objectives){.dynref} were
+										      >	constructed to address threats identified in
+										      >	[Section](#Threats){.dynref} . The Security Functional Requirements
+										      >	([SFRs](#abbr_SFR)) in [Section 3.15 Security Functional
+										      >	Requirements](#SFRs){.dynref} are a formal instantiation of the Security
+										      >	Objectives. The [PP](#abbr_PP) identifies the Security Assurance
+										      >	Requirements ([SARs](#abbr_SAR)) to frame the extent to which the
+										      >	evaluator assesses the documentation applicable for the evaluation and
+										      >	performs independent testing.\
 										      >	This section lists the set of [SARs](#abbr_SAR) from [CC](#abbr_CC) part
 										      >	3 that are required in evaluations against this [PP](#abbr_PP).
 										      >	Individual Assurance Activities to be performed are specified both in
-										      >	[Section 5.1 Security Functional Requirements](#SFRs){.dynref} as well
+										      >	[Section 3.15 Security Functional Requirements](#SFRs){.dynref} as well
 										      >	as in this section.\
 										      >	The general model for evaluation of OSs against [STs](#abbr_ST) written
 										      >	to conform to this [PP](#abbr_PP) is as follows:\
@@ -1160,27 +1780,27 @@
 										      >	[OS](#abbr_OS). The [ITSEF](#abbr_ITSEF) is expected to perform actions
 										      >	mandated by the Common Evaluation Methodology ([CEM](#abbr_CEM)) for the
 										      >	ASE and ALC [SARs](#abbr_SAR). The [ITSEF](#abbr_ITSEF) also performs
-										      >	the Assurance Activities contained within [Section 5.1 Security
+										      >	the Assurance Activities contained within [Section 3.15 Security
 										      >	Functional Requirements](#SFRs){.dynref}, which are intended to be an
 										      >	interpretation of the other [CEM](#abbr_CEM) assurance requirements as
 										      >	they apply to the specific technology instantiated in the
 										      >	[OS](#abbr_OS). The Assurance Activities that are captured in [Section
-										      >	5.1 Security Functional Requirements](#SFRs){.dynref} also provide
+										      >	3.15 Security Functional Requirements](#SFRs){.dynref} also provide
 										      >	clarification as to what the developer needs to provide to demonstrate
 										      >	the [OS](#abbr_OS) is compliant with the [PP](#abbr_PP).
 										      >
-										      >	### 5.2.1 Class ASE: Security Target {#ase .indexable data-level="3"}
+										      >	### 3.18.15 Class ASE: Security Target {#ase .indexable data-level="3"}
 										      >
 										      >	As per ASE activities defined in [\[CEM\]](#bibCEM).
 										      >
-										      >	### 5.2.2 Class ADV: Development {#adv .indexable data-level="3"}
+										      >	### 3.18.16 Class ADV: Development {#adv .indexable data-level="3"}
 										      >
 										      >	The information about the [OS](#abbr_OS) is contained in the guidance
 										      >	documentation available to the end user as well as the [TSS](#abbr_TSS)
 										      >	portion of the [ST](#abbr_ST). The [OS](#abbr_OS) developer must concur
 										      >	with the description of the product that is contained in the
 										      >	[TSS](#abbr_TSS) as it relates to the functional requirements. The
-										      >	Assurance Activities contained in [Section 5.1 Security Functional
+										      >	Assurance Activities contained in [Section 3.15 Security Functional
 										      >	Requirements](#SFRs){.dynref} should provide the [ST](#abbr_ST) authors
 										      >	with sufficient information to determine the appropriate content for the
 										      >	[TSS](#abbr_TSS) section.
@@ -1325,7 +1945,7 @@
 										      >	There are no specific assurance activities associated with these
 										      >	[SARs](#abbr_SAR), except ensuring the information is provided. The
 										      >	functional specification documentation is provided to support the
-										      >	evaluation activities described in [Section 5.1 Security Functional
+										      >	evaluation activities described in [Section 3.15 Security Functional
 										      >	Requirements](#SFRs){.dynref}, and other activities described for AGD,
 										      >	ATE, and AVA [SARs](#abbr_SAR). The requirements on the content of the
 										      >	functional specification information is implicitly assessed by virtue of
@@ -1337,7 +1957,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 5.2.3 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
+										      >	### 3.18.17 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
 										      >
 										      >	The guidance documents will be provided with the [ST](#abbr_ST).
 										      >	Guidance must include a description of how the [IT](#abbr_IT) personnel
@@ -1508,7 +2128,7 @@
 										      >	:::
 										      >
 										      >	Some of the contents of the operational guidance are verified by the
-										      >	assurance activities in [Section 5.1 Security Functional
+										      >	assurance activities in [Section 3.15 Security Functional
 										      >	Requirements](#SFRs){.dynref} and evaluation of the [OS](#abbr_OS)
 										      >	according to the [\[CEM\]](#bibCEM). The following additional
 										      >	information is also required. If cryptographic functions are provided by
@@ -1628,7 +2248,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 5.2.4 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
+										      >	### 3.18.18 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
 										      >
 										      >	At the assurance level provided for OSs conformant to this
 										      >	[PP](#abbr_PP), life-cycle support is limited to end-user-visible
@@ -1932,7 +2552,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 5.2.5 Class ATE: Tests {#ate .indexable data-level="3"}
+										      >	### 3.18.19 Class ATE: Tests {#ate .indexable data-level="3"}
 										      >
 										      >	Testing is specified for functional aspects of the system as well as
 										      >	aspects that take advantage of design or implementation weaknesses. The
@@ -1949,11 +2569,10 @@
 										      >	Testing is performed to confirm the functionality described in the
 										      >	[TSS](#abbr_TSS) as well as the administrative (including configuration
 										      >	and operational) documentation provided. The focus of the testing is to
-										      >	confirm that the requirements specified in [Section 5.1 Security
+										      >	confirm that the requirements specified in [Section 3.15 Security
 										      >	Functional Requirements](#SFRs){.dynref} being met, although some
-										      >	additional testing is specified for [SARs](#abbr_SAR) in [Section 5.2
-										      >	Security Assurance
-										      >	Requirements](#Security_Assurance_Requirements){.dynref}. The Assurance
+										      >	additional testing is specified for [SARs](#abbr_SAR) in
+										      >	[Section](#Security_Assurance_Requirements){.dynref} . The Assurance
 										      >	Activities identify the additional testing activities associated with
 										      >	these components. The evaluator produces a test report documenting the
 										      >	plan for and results of testing, as well as coverage arguments focused
@@ -2071,7 +2690,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 5.2.6 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
+										      >	### 3.18.20 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
 										      >
 										      >	For the first generation of this protection profile, the evaluation lab
 										      >	is expected to survey open sources to discover what vulnerabilities have
@@ -2225,16 +2844,16 @@
 										      >
 										      >	### A.1.1 {#-optional .indexable data-level="3"}
 										      >
-										      >	::: {#FQQ_QQQ.2 .comp}
-										      >	#### FQQ\_QQQ.2 TQQQQQ
+										      >	::: {#FAU_STG.1 .comp}
+										      >	#### FAU\_STG.1 Protected Audit Trail Storage
 										      >
 										      >	::: {.element}
-										      >	::: {#FQQ_QQQ.2.1 .reqid}
-										      >	[FQQ\_QQQ.2.1](#FQQ_QQQ.2.1){.abbr}
+										      >	::: {#FAU_STG.1.1 .reqid}
+										      >	[FAU\_STG.1.1](#FAU_STG.1.1){.abbr}
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall do soemthing.
+										      >	The [TOE](#abbr_TOE) shall
 										      >
 										      >	::: {.appnote}
 										      >	[Application Note: ]{.note-header}[]{.note}
@@ -2243,70 +2862,191 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### A.1.2 Security Audit (FAU) {#fau-optional .indexable data-level="3"}
-										      >
-										      >	::: {#FAU_ARP.1 .comp}
-										      >	#### FAU\_ARP.1 Security Audit Automatic Response
+										      >	::: {#FAU_STG_EXT.2/LocSpace .comp}
+										      >	#### FAU\_STG\_EXT.2/LocSpace Protected Audit Event Storage
 										      >
 										      >	::: {.element}
-										      >	::: {#FAU_ARP.1.1 .reqid}
-										      >	[FAU\_ARP.1.1](#FAU_ARP.1.1){.abbr}
+										      >	::: {#FAU_STG_EXT.2.1/LocSpace .reqid}
+										      >	[FAU\_STG\_EXT.2.1/LocSpace](#FAU_STG_EXT.2.1/LocSpace){.abbr}
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall take \[**assignment**: [list of
-										      >	actions]{.assignable-content}\] upon detection of a potential security
-										      >	violation.
+										      >	The [TOE](#abbr_TOE) shall
 										      >
 										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[In certain cases, it may be useful
-										      >	for Virtualization Systems to perform automated responses to certain
-										      >	security events. An example may include halting a [VM](#abbr_VM) which
-										      >	has taken some action to violate a key system security policy. This may
-										      >	be especially useful with headless endpoints when there is no human user
-										      >	in the loop.\
-										      >	\
-										      >	The potential security violation mentioned in
-										      >	[FAU\_ARP.1.1](#FAU_ARP.1.1) refers to [FAU\_SAA.1](#FAU_SAA.1).
-										      >	]{.note}
+										      >	[Application Note: ]{.note-header}[]{.note}
 										      >	:::
 										      >	:::
 										      >	:::
 										      >	:::
 										      >
-										      >	::: {#FAU_SAA.1 .comp}
-										      >	#### FAU\_SAA.1 Security Audit Analysis
+										      >	::: {#FAU_STG_EXT.3/LocSpace .comp}
+										      >	#### FAU\_STG\_EXT.3/LocSpace Action in Case of Possible Audit Data Loss
 										      >
 										      >	::: {.element}
-										      >	::: {#FAU_SAA.1.1 .reqid}
-										      >	[FAU\_SAA.1.1](#FAU_SAA.1.1){.abbr}
+										      >	::: {#FAU_STG_EXT.3.1/LocSpace .reqid}
+										      >	[FAU\_STG\_EXT.3.1/LocSpace](#FAU_STG_EXT.3.1/LocSpace){.abbr}
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall be able to apply a set of rules in monitoring
-										      >	the audited events and based upon these rules indicate a potential
-										      >	violation of the enforcement of the [SFRs](#abbr_SFR).
-										      >	:::
-										      >	:::
-										      >
-										      >	::: {.element}
-										      >	::: {#FAU_SAA.1.2 .reqid}
-										      >	[FAU\_SAA.1.2](#FAU_SAA.1.2){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TSF](#abbr_TSF) shall enforce the following rules for monitoring
-										      >	audited events:
-										      >
-										      >	a.  accumulation or combination of \[**assignment**: [subset of defined
-										      >	    auditable events]{.assignable-content}\] known to indicate a
-										      >	    potential security violation
-										      >	b.  \[**assignment**: [any other rules]{.assignable-content}\]
+										      >	The [TOE](#abbr_TOE) shall
 										      >
 										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[The potential security violation
-										      >	described in [FAU\_SAA.1](#FAU_SAA.1) can be used as a trigger for
-										      >	automated responses as defined in [FAU\_ARP.1](#FAU_ARP.1).]{.note}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### A.1.2 {#-optional .indexable data-level="3"}
+										      >
+										      >	::: {#FCO_CPC_EXT.1 .comp}
+										      >	#### FCO\_CPC\_EXT.1 Component Registration Channel Definition
+										      >
+										      >	::: {.element}
+										      >	::: {#FCO_CPC_EXT.1.1 .reqid}
+										      >	[FCO\_CPC\_EXT.1.1](#FCO_CPC_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### A.1.3 {#-optional .indexable data-level="3"}
+										      >
+										      >	::: {#FCS_DTLSC_EXT.2 .comp}
+										      >	#### FCS\_DTLSC\_EXT.2 DTLS Client Support for Mutual Authentication
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_DTLSC_EXT.2.1 .reqid}
+										      >	[FCS\_DTLSC\_EXT.2.1](#FCS_DTLSC_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_DTLSS_EXT.2 .comp}
+										      >	#### FCS\_DTLSS\_EXT.2 DTLS Server Support for Mutual Authentication
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_DTLSS_EXT.2.1 .reqid}
+										      >	[FCS\_DTLSS\_EXT.2.1](#FCS_DTLSS_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_TLSC_EXT.2 .comp}
+										      >	#### FCS\_TLSC\_EXT.2 TLS Client Support for Mutual Authentication
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_TLSC_EXT.2.1 .reqid}
+										      >	[FCS\_TLSC\_EXT.2.1](#FCS_TLSC_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_TLSS_EXT.2 .comp}
+										      >	#### FCS\_TLSS\_EXT.2 TLS Server Support for Mutual Authentication
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_TLSS_EXT.2.1 .reqid}
+										      >	[FCS\_TLSS\_EXT.2.1](#FCS_TLSS_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### A.1.4 {#-optional .indexable data-level="3"}
+										      >
+										      >	::: {#FIA_X509_EXT.1/ITT .comp}
+										      >	#### FIA\_X509\_EXT.1/ITT Certificate Validation
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_X509_EXT.1.1/ITT .reqid}
+										      >	[FIA\_X509\_EXT.1.1/ITT](#FIA_X509_EXT.1.1/ITT){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### A.1.5 {#-optional .indexable data-level="3"}
+										      >
+										      >	::: {#FPT_ITT.1 .comp}
+										      >	#### FPT\_ITT.1 Basic internal TSF data transfer protection (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FPT_ITT.1.1 .reqid}
+										      >	[FPT\_ITT.1.1](#FPT_ITT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	### A.1.6 {#-optional .indexable data-level="3"}
+										      >
+										      >	::: {#FTP_TRP.1/Join .comp}
+										      >	#### FTP\_TRP.1/Join Trusted Path (Refinement)
+										      >
+										      >	::: {.element}
+										      >	::: {#FTP_TRP.1.1/Join .reqid}
+										      >	[FTP\_TRP.1.1/Join](#FTP_TRP.1.1/Join){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
 										      >	:::
 										      >	:::
 										      >	:::
@@ -2315,59 +3055,13 @@
 										      >	A.2 Objective Requirements {#objective-reqs .indexable data-level="2"}
 										      >	--------------------------
 										      >
-										      >	### A.2.1 {#-objective .indexable data-level="3"}
-										      >
-										      >	::: {#FQQ_QQQ.3 .comp}
-										      >	#### FQQ\_QQQ.3 BQQQQQ
-										      >
-										      >	::: {.element}
-										      >	::: {#FQQ_QQQ.3.1 .reqid}
-										      >	[FQQ\_QQQ.3.1](#FQQ_QQQ.3.1){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall do \[**assignment**: [guidance on what things
-										      >	should be assignable ]{.assignable-content}\].
-										      >
-										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[Notes. Notes. Notes.]{.note}
-										      >	:::
-										      >	:::
-										      >	:::
-										      >	:::
+										      >	This [PP](#abbr_PP) does not define any Objective requirements.
 										      >
 										      >	A.3 Implementation-dependent Requirements {#feat-based-reqs .indexable data-level="2"
 										      >	-----------------------------------------
 										      >
-										      >	### A.3.1 Widget Thing {#a-feature-id .indexable data-level="3"}
-										      >
-										      >	This is a super description of this certain feature.
-										      >
-										      >	If this is implemented by the [TOE](#abbr_TOE), the following
-										      >	requirements must be included in the [ST](#abbr_ST):
-										      >
-										      >	-   **[FQQ\_QQQ.6](#FQQ_QQQ.6)**
-										      >
-										      >	### A.3.1.1 {#-impl .indexable data-level="4"}
-										      >
-										      >	::: {#FQQ_QQQ.6 .comp}
-										      >	#### FQQ\_QQQ.6 WQQQQQ
-										      >
-										      >	::: {.element}
-										      >	::: {#FQQ_QQQ.6.1 .reqid}
-										      >	[FQQ\_QQQ.6.1](#FQQ_QQQ.6.1){.abbr}
-										      >	:::
-										      >
-										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall do something with regards to some
-										      >	implementation.
-										      >
-										      >	::: {.appnote}
-										      >	[Application Note: ]{.note-header}[]{.note}
-										      >	:::
-										      >	:::
-										      >	:::
-										      >	:::
+										      >	This [PP](#abbr_PP) does not define any Implementation-dependent
+										      >	requirements.
 										      >
 										      >	Appendix B - Selection-based Requirements {#sel-based-reqs .indexable data-level="A"}
 										      >	=========================================
@@ -2382,21 +3076,21 @@
 										      >	B.1 {#-sel-based .indexable data-level="2"}
 										      >	---
 										      >
-										      >	::: {#FQQ_QQQ.4 .comp}
-										      >	#### FQQ\_QQQ.4 UQQQQQ
+										      >	::: {#FAU_GEN_EXT.1 .comp}
+										      >	#### FAU\_GEN\_EXT.1 Security Audit Generation
 										      >
 										      >	::: {.statustag}
 										      >	***The inclusion of this selection-based component depends upon
-										      >	selection in [FQQ\_QQQ.1.1](#FQQ_QQQ.1.1).***
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
 										      >	:::
 										      >
 										      >	::: {.element}
-										      >	::: {#FQQ_QQQ.4.1 .reqid}
-										      >	[FQQ\_QQQ.4.1](#FQQ_QQQ.4.1){.abbr}
+										      >	::: {#FAU_GEN_EXT.1.1 .reqid}
+										      >	[FAU\_GEN\_EXT.1.1](#FAU_GEN_EXT.1.1){.abbr}
 										      >	:::
 										      >
 										      >	::: {.reqdesc}
-										      >	The [TOE](#abbr_TOE) shall do something great.
+										      >	The [TOE](#abbr_TOE) shall
 										      >
 										      >	::: {.appnote}
 										      >	[Application Note: ]{.note-header}[]{.note}
@@ -2405,61 +3099,433 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	Appendix C - Inherently Satisfied Requirements {#satisfiedreqs .indexable data-level=
-										      >	==============================================
+										      >	::: {#FAU_STG_EXT.4 .comp}
+										      >	#### FAU\_STG\_EXT.4 Protected Local Audit Event Storage for Distributed TOEs
 										      >
-										      >	This appendix lists requirements that should be considered satisfied by
-										      >	products successfully evaluated against this Protection Profile.
-										      >	However, these requirements are not featured explicitly as
-										      >	[SFRs](#abbr_SFR) and should not be included in the [ST](#abbr_ST). They
-										      >	are not included as standalone [SFRs](#abbr_SFR) because it would
-										      >	increase the time, cost, and complexity of evaluation. This approach is
-										      >	permitted by [\[CC\]](#bibCC) Part 1, **8.2 Dependencies between
-										      >	components**.\
-										      >	This information benefits systems engineering activities which call for
-										      >	inclusion of particular security controls. Evaluation against the
-										      >	Protection Profile provides evidence that these controls are present and
-										      >	have been evaluated.
-										      >
-										      >	  ---------------------------------------------------------- ------------------------
-										      >	  Requirement                                                Rationale for Satisfacti
-										      >	  FIA\_UAU.1 - Timing of authentication                      implicitly requires that
-										      >	  FIA\_UID.1 - Timing of identification                      implicitly requires that
-										      >	  FMT\_SMR.1 - Security roles                                specifies role-based man
-										      >	  FPT\_STM.1 - Reliable time stamps                          explicitly requires that
-										      >	  FTA\_SSL.1 - [TSF](#abbr_TSF)-initiated session locking    defines requirements for
-										      >	  FTA\_SSL.2 - User-initiated locking                        defines requirements for
-										      >	  [FAU\_STG.1](#FAU_STG.1) - Protected audit trail storage   defines a requirement to
-										      >	  FAU\_GEN.2 - User identity association                     explicitly requires that
-										      >	  [FAU\_SAR.1](#FAU_SAR.1) - Audit review                    requires that audit logs
-										      >	  ---------------------------------------------------------- ------------------------
-										      >
-										      >	Appendix D - Use Case Templates {#use-case-appendix .indexable data-level="A"}
-										      >	===============================
-										      >
-										      >	D.1 Elephant-own device {#appendix-elephant .indexable data-level="2"}
-										      >	-----------------------
-										      >
-										      >	The configuration for *[\[USE CASE 1\] Elephant-own
-										      >	device](#elephant){.dynref}* modifies the base requirements as follows:\
-										      >
-										      >	::: {.uc_from_fel}
-										      >	From [FAU\_GEN.1.1](#FAU_GEN.1.1):
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
 										      >	:::
 										      >
-										      >	::: {.uc_not}
-										      >	Choose something other than:
+										      >	::: {.element}
+										      >	::: {#FAU_STG_EXT.4.1 .reqid}
+										      >	[FAU\_STG\_EXT.4.1](#FAU_STG_EXT.4.1){.abbr}
+										      >	:::
 										      >
-										      >	::: {.uc_not_sel}
-										      >	\* [additional information defined in Table 2](#table2)
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
 										      >	:::
 										      >	:::
 										      >
-										      >	::: {.uc_inc_fcomp}
-										      >	Include [FQQ\_QQQ.2](#FQQ_QQQ.2) in the [ST](#abbr_ST)
+										      >	::: {#FAU_STG_EXT.5 .comp}
+										      >	#### FAU\_STG\_EXT.5 Protected Remote Audit Event Storage for Distributed TOEs
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
 										      >	:::
 										      >
-										      >	Appendix E - Acronyms {#acronyms .indexable data-level="A"}
+										      >	::: {.element}
+										      >	::: {#FAU_STG_EXT.5.1 .reqid}
+										      >	[FAU\_STG\_EXT.5.1](#FAU_STG_EXT.5.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	B.2 {#-sel-based .indexable data-level="2"}
+										      >	---
+										      >
+										      >	::: {#FCS_DTLSC_EXT.1 .comp}
+										      >	#### FCS\_DTLSC\_EXT.1 DTLS Client Support without Authentication
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_DTLSC_EXT.1.1 .reqid}
+										      >	[FCS\_DTLSC\_EXT.1.1](#FCS_DTLSC_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_DTLSS_EXT.1 .comp}
+										      >	#### FCS\_DTLSS\_EXT.1 DTLS Server Support without Authentication
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_DTLSS_EXT.1.1 .reqid}
+										      >	[FCS\_DTLSS\_EXT.1.1](#FCS_DTLSS_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_HTTPS_EXT.1 .comp}
+										      >	#### FCS\_HTTPS\_EXT.1 HTTPS Protocol
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_HTTPS_EXT.1.1 .reqid}
+										      >	[FCS\_HTTPS\_EXT.1.1](#FCS_HTTPS_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_IPSEC_EXT.1 .comp}
+										      >	#### FCS\_IPSEC\_EXT.1 IPsec Protocol
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_IPSEC_EXT.1.1 .reqid}
+										      >	[FCS\_IPSEC\_EXT.1.1](#FCS_IPSEC_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_NTP_EXT.1 .comp}
+										      >	#### FCS\_NTP\_EXT.1 NTP Protocol
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_NTP_EXT.1.1 .reqid}
+										      >	[FCS\_NTP\_EXT.1.1](#FCS_NTP_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_SSHC_EXT.1 .comp}
+										      >	#### FCS\_SSHC\_EXT.1 SSH Client Protocol
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_SSHC_EXT.1.1 .reqid}
+										      >	[FCS\_SSHC\_EXT.1.1](#FCS_SSHC_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_SSHS_EXT.1 .comp}
+										      >	#### FCS\_SSHS\_EXT.1 SSH Server Protocol
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_SSHS_EXT.1.1 .reqid}
+										      >	[FCS\_SSHS\_EXT.1.1](#FCS_SSHS_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_TLSC_EXT.1 .comp}
+										      >	#### FCS\_TLSC\_EXT.1 TLS Client Protocol
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_TLSC_EXT.1.1 .reqid}
+										      >	[FCS\_TLSC\_EXT.1.1](#FCS_TLSC_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FCS_TLSS_EXT.1 .comp}
+										      >	#### FCS\_TLSS\_EXT.1 TLS Server Protocol
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FCS_TLSS_EXT.1.1 .reqid}
+										      >	[FCS\_TLSS\_EXT.1.1](#FCS_TLSS_EXT.1.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	B.3 {#-sel-based .indexable data-level="2"}
+										      >	---
+										      >
+										      >	::: {#FIA_X509_EXT.1/Rev .comp}
+										      >	#### FIA\_X509\_EXT.1/Rev X.509 Certificate Validation
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_X509_EXT.1.1/Rev .reqid}
+										      >	[FIA\_X509\_EXT.1.1/Rev](#FIA_X509_EXT.1.1/Rev){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_X509_EXT.2 .comp}
+										      >	#### FIA\_X509\_EXT.2 X.509 Certificate Authentication
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_X509_EXT.2.1 .reqid}
+										      >	[FIA\_X509\_EXT.2.1](#FIA_X509_EXT.2.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FIA_X509_EXT.3 .comp}
+										      >	#### FIA\_X509\_EXT.3 X.509 Certificate Requests
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FIA_X509_EXT.3.1 .reqid}
+										      >	[FIA\_X509\_EXT.3.1](#FIA_X509_EXT.3.1){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	B.4 {#-sel-based .indexable data-level="2"}
+										      >	---
+										      >
+										      >	::: {#FMT_MOF.1/Services .comp}
+										      >	#### FMT\_MOF.1/Services Management of Security Functions Behaviour
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MOF.1.1/Services .reqid}
+										      >	[FMT\_MOF.1.1/Services](#FMT_MOF.1.1/Services){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_MOF.1/AutoUpdate .comp}
+										      >	#### FMT\_MOF.1/AutoUpdate Management of Security Functions Behaviour
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MOF.1.1/AutoUpdate .reqid}
+										      >	[FMT\_MOF.1.1/AutoUpdate](#FMT_MOF.1.1/AutoUpdate){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_MOF.1/Functions .comp}
+										      >	#### FMT\_MOF.1/Functions Management of Security Functions Behaviour
+										      >
+										      >	::: {.statustag}
+										      >	***The inclusion of this selection-based component depends upon
+										      >	selection in [FAU\_GEN.1.1](#FAU_GEN.1.1).***
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MOF.1.1/Functions .reqid}
+										      >	[FMT\_MOF.1.1/Functions](#FMT_MOF.1.1/Functions){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	::: {#FMT_MTD.1/CryptoKeys .comp}
+										      >	#### FMT\_MTD.1/CryptoKeys Management of TSF Data
+										      >
+										      >	::: {.statustag}
+										      >	:::
+										      >
+										      >	::: {.element}
+										      >	::: {#FMT_MTD.1.1/CryptoKeys .reqid}
+										      >	[FMT\_MTD.1.1/CryptoKeys](#FMT_MTD.1.1/CryptoKeys){.abbr}
+										      >	:::
+										      >
+										      >	::: {.reqdesc}
+										      >	The [TOE](#abbr_TOE) shall
+										      >
+										      >	::: {.appnote}
+										      >	[Application Note: ]{.note-header}[]{.note}
+										      >	:::
+										      >	:::
+										      >	:::
+										      >	:::
+										      >
+										      >	Appendix C - Entropy Documentation and Assessment {#satisfiedreqs .indexable data-lev
+										      >	=================================================
+										      >
+										      >	blah
+										      >
+										      >	Appendix D - Acronyms {#acronyms .indexable data-level="A"}
 										      >	=====================
 										      >
 										      >	  Acronym                                                                      Meanin
@@ -2542,7 +3608,7 @@
 										      >	  [[app](#abbr_app)]{#abbr_app .term}                                          [Appli
 										      >	  [[cPP](#abbr_cPP)]{#abbr_cPP .term data-plural="cPPs"}                       [Colla
 										      >
-										      >	Appendix F - Bibliography {#appendix-bibliography .indexable data-level="A"}
+										      >	Appendix E - Bibliography {#appendix-bibliography .indexable data-level="A"}
 										      >	=========================
 										      >
 										      >	+-----------------------------------+-----------------------------------+

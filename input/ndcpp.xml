@@ -95,15 +95,6 @@
 
   <sec:Introduction> <!-- title="PP Introduction"  -->
   
-  	    <section title="PP Overview" id="s-ppoverview">
-	
-		words
-	</section>
-	
-	<section title="TOE Use Cases" id="s-usecases">
-		Words
-	</section>
-
 
 
     <tech-terms>
@@ -246,6 +237,15 @@
       <term abbr='XOR' full="Exclusive Or"/>
     </tech-terms>    
 	
+  	    <section title="PP Overview" id="s-ppoverview">
+	
+		words
+	</section>
+	
+	<section title="TOE Use Cases" id="s-usecases">
+		Words
+	</section>
+
 
 	
 	

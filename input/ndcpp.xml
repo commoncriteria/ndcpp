@@ -1142,7 +1142,7 @@ users of the same system.
 			<audit-event/>
 		 </f-component>
 
-        <f-component cc-id="fpt_tud_ext.2" name="Trusted Update Based on Certificates">
+        <f-component cc-id="fpt_tud_ext.2" name="Trusted Update Based on Certificates" status="sel-based">
 		<depends on-sel="dummy"/>
           <f-element id="fpt-tud-ext-2-1">
             <title> The TOE shall 

@@ -1,1 +1,2 @@
-/home/runner/work/ndcpp/ndcpp/transforms/schemas/CCProtectionProfile.rng:409:55: error: reference to undefined pattern "html-content"
+/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:103:49: error: element "section" not allowed yet; missing required element "tech-terms"
+/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:109:17: error: element "tech-terms" not allowed here; expected the element end-tag, element "section" or an element from another namespace

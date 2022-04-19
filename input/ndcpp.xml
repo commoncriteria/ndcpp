@@ -3,9 +3,9 @@
 
 
 <PP boilerplate='yes' xmlns="https://niap-ccevs.org/cc/v1" short="ND" target-products="Network Devices"
-  xmlns:sec="https://niap-ccevs.org/cc/v1/section" xmlns:h="http://www.w3.org/1999/xhtml" ><cPP/>
+  xmlns:sec="https://niap-ccevs.org/cc/v1/section" xmlns:h="http://www.w3.org/1999/xhtml" >
+  <cPP/>
 	
-	<cPP/>
 	
   <!-- <inline-comment color='green'> Hello World QQQQ </inline-comment> -->
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
@@ -38,7 +38,7 @@
     <entry>
       <version>0.4</version>
       <date>2015-01-26</date>
-      <subject>Incorporated comments received from the CCDB review<RevisionHistory>
+      <subject>Incorporated comments received from the CCDB review</subject>
     <entry>
       <version>1.0</version>
       <date>2015-02-27</date>
@@ -71,7 +71,7 @@
     </entry>
   </RevisionHistory>
 
-	<section title="Acknowledgements" id=s-ack">
+	<section title="Acknowledgements" id="s-ack">
 		blah
 	</section>
 

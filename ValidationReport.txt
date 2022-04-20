@@ -1,1 +1,0 @@
-/home/runner/work/ndcpp/ndcpp/transforms/schemas/CCProtectionProfile.rng:51:42: error: bad recursive reference to pattern "basic-content-pat"

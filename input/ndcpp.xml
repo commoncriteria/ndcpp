@@ -267,7 +267,7 @@
 	<section title="Registration of Components of a Distributed TOE" id="s-compreg">
 		words
 	</section>
-	<section title="Allocation of Requirementsin Distributed TOEs" id="s-alloc">
+	<section title="Allocation of Requirements in Distributed TOEs" id="s-alloc">
 		words
 	</section>
 	</section>	
@@ -534,7 +534,7 @@ users of the same system.
 
     <section title="Security Functional Requirements" id="SFRs">
 
-      <sec:fau>
+      <section title="Security Audit (FAU)" id="s-fau">
 	  
         <f-component cc-id="fau_gen.1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
@@ -639,9 +639,9 @@ users of the same system.
 
 
 
-	</sec:fau>
+	</section>
 	
-	<sec:fco>
+	<section title="Communication (FCO)" id="s-fco">
         <f-component cc-id="fco_cpc_ext.1" name="Component Registration Channel Definition" status="optional">
           <f-element id="fco-cpc-ext-1-1">
             <title> The TOE shall 
@@ -653,9 +653,10 @@ users of the same system.
 		 </f-component>
 		
 		
-	</sec:fco>
+	</section>
 	
-	<sec:fcs>
+	<section title="Cryptographic Support (FCS)" id="s-fcs">
+		
         <f-component cc-id="fcs_ckm.1" name="Cryptographic Key Generation (Refinement)">
           <f-element id="fcs-ckm-1-1">
             <title> The TOE shall 
@@ -885,9 +886,10 @@ users of the same system.
 		 </f-component>
 
 	
-	</sec:fcs>
+	</section>
 
-	<sec:fia>
+	<section title="Identification and Authentication (FIA)" id="s-fia">
+		
         <f-component cc-id="fia_afl.1" name="Authentication Failure Management (Refinement)">
           <f-element id="fia-afl-1-1">
             <title> The TOE shall 
@@ -983,10 +985,10 @@ users of the same system.
 
 
 	
-	</sec:fia>
+	</section>
 
 
-	<sec:fmt>
+	<section title="Security Management (FMT)" id="s-fmt">
 
         <f-component cc-id="fmt_mof.1" iteration="ManualUpdate" name="Management of Security Functions Behaviour">
           <f-element id="fmt-mof-mu-1">
@@ -1075,11 +1077,12 @@ users of the same system.
 			<audit-event/>
 		 </f-component>
 	
-	</sec:fmt>
+	</section>
 
 
-	<sec:fpt>
-        <f-component cc-id="fpt_skp_ext.1" 
+	<section title="Protection of the TSF (FPT)" id="s-fpt">
+
+		<f-component cc-id="fpt_skp_ext.1" 
 			name="Protection of TSF Data (for reading of all pre-shared, symmetric and private keys)">
           <f-element id="fpt-skp-ext-1-1">
             <title> The TOE shall 
@@ -1153,9 +1156,10 @@ users of the same system.
 			<audit-event/>
 		 </f-component>
 	
-	</sec:fpt>
+	</section>
 
-	<sec:fta>
+	<section title="TOE Access (FTA)" id="s-fta">
+		
         <f-component cc-id="fta_ssl_ext.1" name="TSF-initiated Session Locking">
           <f-element id="fta-ssl-ext-1-1">
             <title> The TOE shall 
@@ -1197,9 +1201,10 @@ users of the same system.
 		 </f-component>
 
 	
-	</sec:fta>
+	</section>
 
-	<sec:ftp>
+	<section title="Trusted Channel (FTP_ITC)" id="s-ftp">
+		
         <f-component cc-id="ftp_itc.1" name="Inter-TSF Trusted Channel (Refinement)">
           <f-element id="ftp-itc-1-1">
             <title> The TOE shall 
@@ -1231,7 +1236,7 @@ users of the same system.
 		 </f-component>
 
 
-	</sec:ftp>
+	</section>
 
     </section>
 	

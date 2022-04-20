@@ -929,7 +929,7 @@ users of the same system.
 		 </f-component>
 
         <f-component cc-id="fia_uau.7" name="Protected Authentication Feedback">
-          <f-element id="fia-uau-7-1">
+          <f-element>
             <title> The TOE shall 
             </title>
             <note role="application"></note>
@@ -939,7 +939,7 @@ users of the same system.
 		 </f-component>
 
         <f-component cc-id="fia_x509_ext.1" iteration="ITT" name="Certificate Validation" status="optional">
-          <f-element id="fia-uau-7-1">
+          <f-element>
             <title> The TOE shall 
             </title>
             <note role="application"></note>

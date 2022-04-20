@@ -65,13 +65,13 @@
 										      >	Document](#s-ood)[2.2Scope of Document](#s-sod)[2.3Intended
 										      >	Readership](#s-ir)[2.4Related Documents](#s-reldoc)[2.5PP
 										      >	Overview](#s-ppoverview)[2.6TOE Use Cases](#s-usecases)[2.7PP
-										      >	Overview](#s-ppoverview)[2.8TOE Use
-										      >	Cases](#s-usecases)[2.9Terms](#glossary)[2.9.1Common Criteria
-										      >	Terms](#cc-terms)[2.9.2Technical Terms](#tech-terms)[3Introduction to
-										      >	Distributed TOEs](#s-distributedTOEs)[3.1Supported Distributed TOE Use
+										      >	Overview](#s-ppoverview)[2.8Terms](#glossary)[2.8.1Common Criteria
+										      >	Terms](#cc-terms)[2.8.2Technical Terms](#tech-terms)[2.9TOE Use
+										      >	Cases](#s-usecases)[3Introduction to Distributed
+										      >	TOEs](#s-distributedTOEs)[3.1Supported Distributed TOE Use
 										      >	Cases](#s-sdtuc)[3.2Unsupported Distributed TOE Use
 										      >	Cases](#s-udtuc)[3.3Registration of Components of a Distributed
-										      >	TOE](#s-compreg)[3.4Allocation of Requirementsin Distributed
+										      >	TOE](#s-compreg)[3.4Allocation of Requirements in Distributed
 										      >	TOEs](#s-alloc)[3.5Organizational Security
 										      >	Policies](#OSPs)[3.6Organizational Security Policies](#OSPs)[3.7Security
 										      >	Objectives for the TOE](#SecurityObjectivesTOE)[3.8Security Objectives
@@ -88,11 +88,15 @@
 										      >	Support](#alc)[3.15.5Class ATE: Tests](#ate)[3.15.6Class AVA:
 										      >	Vulnerability Assessment](#ava)[3.16Conventions](#s-conventions)[3.17SFR
 										      >	Architecture](#s-sfrarch)[3.18Security Functional
-										      >	Requirements](#SFRs)[3.18.1fau](#fau)[3.18.2fcs](#fcs)[3.18.3fia](#fia)[3.18.4fmt](#f
-										      >	Security Functional Requirements Rationale](#obj-req-map)[3.18.9Class
-										      >	ASE: Security Target](#ase)[3.18.10Class ADV:
-										      >	Development](#adv)[3.18.11Class AGD: Guidance
-										      >	Documentation](#agd)[3.18.12Class ALC: Life-cycle
+										      >	Requirements](#SFRs)[3.18.1Security Audit
+										      >	(FAU)](#s-fau)[3.18.2Cryptographic Support
+										      >	(FCS)](#s-fcs)[3.18.3Identification and Authentication
+										      >	(FIA)](#s-fia)[3.18.4Security Management (FMT)](#s-fmt)[3.18.5Protection
+										      >	of the TSF (FPT)](#s-fpt)[3.18.6TOE Access (FTA)](#s-fta)[3.18.7Trusted
+										      >	Channel (FTP\_ITC)](#s-ftp)[3.18.8TOE Security Functional Requirements
+										      >	Rationale](#obj-req-map)[3.18.9Class ASE: Security
+										      >	Target](#ase)[3.18.10Class ADV: Development](#adv)[3.18.11Class AGD:
+										      >	Guidance Documentation](#agd)[3.18.12Class ALC: Life-cycle
 										      >	Support](#alc)[3.18.13Class ATE: Tests](#ate)[3.18.14Class AVA:
 										      >	Vulnerability Assessment](#ava)[3.18.15Class ASE: Security
 										      >	Target](#ase)[3.18.16Class ADV: Development](#adv)[3.18.17Class AGD:
@@ -100,19 +104,27 @@
 										      >	Support](#alc)[3.18.19Class ATE: Tests](#ate)[3.18.20Class AVA:
 										      >	Vulnerability Assessment](#ava)[Appendix A - Optional
 										      >	Requirements](#opt-app)[A.1Strictly Optional Requirements
-										      >	](#optional-reqs)[A.1.1](#-optional)[A.1.2](#-optional)[A.1.3](#-optional)[A.1.4](#-o
-										      >	Requirements ](#objective-reqs)[A.3Implementation-dependent Requirements
+										      >	](#optional-reqs)[A.1.1Security Audit
+										      >	(FAU)](#s-fau-optional)[A.1.2Communication
+										      >	(FCO)](#s-fco-optional)[A.1.3Cryptographic Support
+										      >	(FCS)](#s-fcs-optional)[A.1.4Identification and Authentication
+										      >	(FIA)](#s-fia-optional)[A.1.5Protection of the TSF
+										      >	(FPT)](#s-fpt-optional)[A.1.6Trusted Channel
+										      >	(FTP\_ITC)](#s-ftp-optional)[A.2Objective Requirements
+										      >	](#objective-reqs)[A.3Implementation-dependent Requirements
 										      >	](#feat-based-reqs)[Appendix B - Selection-based Requirements
-										      >	](#sel-based-reqs)[B.1](#-sel-based)[B.2](#-sel-based)[B.3](#-sel-based)[B.4](#-sel-b
-										      >	C - Entropy Documentation and Assessment](#satisfiedreqs)[Appendix D -
-										      >	Acronyms](#acronyms)[Appendix E - Bibliography](#appendix-bibliography)
+										      >	](#sel-based-reqs)[B.1Security Audit
+										      >	(FAU)](#s-fau-sel-based)[B.2Cryptographic Support
+										      >	(FCS)](#s-fcs-sel-based)[B.3Identification and Authentication
+										      >	(FIA)](#s-fia-sel-based)[B.4Security Management
+										      >	(FMT)](#s-fmt-sel-based)[B.5Protection of the TSF
+										      >	(FPT)](#s-fpt-sel-based)[Appendix C - Entropy Documentation and
+										      >	Assessment](#satisfiedreqs)[Appendix D - Acronyms](#acronyms)[Appendix E
+										      >	- Bibliography](#appendix-bibliography)
 										      >	:::
 										      >
 										      >	2.5 PP Overview {#s-ppoverview .indexable data-level="2"}
 										      >	---------------
-										      >
-										      >	2.6 TOE Use Cases {#s-usecases .indexable data-level="2"}
-										      >	-----------------
 										      >
 										      >	An anti-exploitation feature which loads memory mappings into
 										      >	unpredictable locations. [ASLR](#abbr_ASLR) makes it more difficult for
@@ -174,24 +186,22 @@
 										      >	to that of an administrator. At that time, such a user should be
 										      >	considered an administrator. Blah Blah Blah
 										      >
+										      >	2.6 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	-----------------
+										      >
 										      >	2.7 PP Overview {#s-ppoverview .indexable data-level="2"}
 										      >	---------------
 										      >
 										      >	words
 										      >
-										      >	2.8 TOE Use Cases {#s-usecases .indexable data-level="2"}
-										      >	-----------------
-										      >
-										      >	Words
-										      >
 										      >	::: {.no-link}
-										      >	2.9 Terms {#glossary .indexable data-level="2"}
+										      >	2.8 Terms {#glossary .indexable data-level="2"}
 										      >	---------
 										      >
 										      >	The following sections list Common Criteria and technology terms used in
 										      >	this document.
 										      >
-										      >	### 2.9.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
+										      >	### 2.8.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Assurance}                  | Grounds for confidence that a TOE |
@@ -293,7 +303,7 @@
 										      >	| :::                               |                                   |
 										      >	+-----------------------------------+-----------------------------------+
 										      >
-										      >	### 2.9.2 Technical Terms {#tech-terms .indexable data-level="3"}
+										      >	### 2.8.2 Technical Terms {#tech-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Address_Space_Layout_Random | An anti-exploitation feature      |
@@ -451,6 +461,11 @@
 										      >	+-----------------------------------+-----------------------------------+
 										      >	:::
 										      >
+										      >	2.9 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	-----------------
+										      >
+										      >	Words
+										      >
 										      >	Conformance Statement
 										      >	:   An [ST](#abbr_ST) must claim exact conformance to this
 										      >	    [PP](#abbr_PP), as defined in the [CC](#abbr_CC) and
@@ -488,8 +503,8 @@
 										      >
 										      >	words
 										      >
-										      >	3.4 Allocation of Requirementsin Distributed TOEs {#s-alloc .indexable data-level="2"
-										      >	-------------------------------------------------
+										      >	3.4 Allocation of Requirements in Distributed TOEs {#s-alloc .indexable data-level="2
+										      >	--------------------------------------------------
 										      >
 										      >	words A Network Device has a network infrastructure role that it is
 										      >	designed to provide. In doing so, the Network Device communicates with
@@ -1009,7 +1024,7 @@
 										      >	3.18 Security Functional Requirements {#SFRs .indexable data-level="2"}
 										      >	-------------------------------------
 										      >
-										      >	### 3.18.1 fau {#fau .indexable data-level="3"}
+										      >	### 3.18.1 Security Audit (FAU) {#s-fau .indexable data-level="3"}
 										      >
 										      >	::: {#FAU_GEN.1 .comp}
 										      >	#### FAU\_GEN.1 Audit data generation
@@ -1065,7 +1080,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.2 fcs {#fcs .indexable data-level="3"}
+										      >	### 3.18.2 Cryptographic Support (FCS) {#s-fcs .indexable data-level="3"}
 										      >
 										      >	::: {#FCS_CKM.1 .comp}
 										      >	#### FCS\_CKM.1 Cryptographic Key Generation (Refinement)
@@ -1211,7 +1226,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.3 fia {#fia .indexable data-level="3"}
+										      >	### 3.18.3 Identification and Authentication (FIA) {#s-fia .indexable data-level="3"}
 										      >
 										      >	::: {#FIA_AFL.1 .comp}
 										      >	#### FIA\_AFL.1 Authentication Failure Management (Refinement)
@@ -1303,7 +1318,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.4 fmt {#fmt .indexable data-level="3"}
+										      >	### 3.18.4 Security Management (FMT) {#s-fmt .indexable data-level="3"}
 										      >
 										      >	::: {#FMT_MOF.1/ManualUpdate .comp}
 										      >	#### FMT\_MOF.1/ManualUpdate Management of Security Functions Behaviour
@@ -1377,7 +1392,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.5 fpt {#fpt .indexable data-level="3"}
+										      >	### 3.18.5 Protection of the TSF (FPT) {#s-fpt .indexable data-level="3"}
 										      >
 										      >	::: {#FPT_SKP_EXT.1 .comp}
 										      >	#### FPT\_SKP\_EXT.1 Protection of TSF Data (for reading of all pre-shared, symmetric
@@ -1469,7 +1484,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.6 fta {#fta .indexable data-level="3"}
+										      >	### 3.18.6 TOE Access (FTA) {#s-fta .indexable data-level="3"}
 										      >
 										      >	::: {#FTA_SSL_EXT.1 .comp}
 										      >	#### FTA\_SSL\_EXT.1 TSF-initiated Session Locking
@@ -1543,7 +1558,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.7 ftp {#ftp .indexable data-level="3"}
+										      >	### 3.18.7 Trusted Channel (FTP\_ITC) {#s-ftp .indexable data-level="3"}
 										      >
 										      >	::: {#FTP_ITC.1 .comp}
 										      >	#### FTP\_ITC.1 Inter-TSF Trusted Channel (Refinement)
@@ -2824,7 +2839,7 @@
 										      >	A.1 Strictly Optional Requirements {#optional-reqs .indexable data-level="2"}
 										      >	----------------------------------
 										      >
-										      >	### A.1.1 {#-optional .indexable data-level="3"}
+										      >	### A.1.1 Security Audit (FAU) {#s-fau-optional .indexable data-level="3"}
 										      >
 										      >	::: {#FAU_STG.1 .comp}
 										      >	#### FAU\_STG.1 Protected Audit Trail Storage
@@ -2880,7 +2895,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### A.1.2 {#-optional .indexable data-level="3"}
+										      >	### A.1.2 Communication (FCO) {#s-fco-optional .indexable data-level="3"}
 										      >
 										      >	::: {#FCO_CPC_EXT.1 .comp}
 										      >	#### FCO\_CPC\_EXT.1 Component Registration Channel Definition
@@ -2900,7 +2915,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### A.1.3 {#-optional .indexable data-level="3"}
+										      >	### A.1.3 Cryptographic Support (FCS) {#s-fcs-optional .indexable data-level="3"}
 										      >
 										      >	::: {#FCS_DTLSC_EXT.2 .comp}
 										      >	#### FCS\_DTLSC\_EXT.2 DTLS Client Support for Mutual Authentication
@@ -2974,7 +2989,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### A.1.4 {#-optional .indexable data-level="3"}
+										      >	### A.1.4 Identification and Authentication (FIA) {#s-fia-optional .indexable data-le
 										      >
 										      >	::: {#FIA_X509_EXT.1/ITT .comp}
 										      >	#### FIA\_X509\_EXT.1/ITT Certificate Validation
@@ -2994,7 +3009,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### A.1.5 {#-optional .indexable data-level="3"}
+										      >	### A.1.5 Protection of the TSF (FPT) {#s-fpt-optional .indexable data-level="3"}
 										      >
 										      >	::: {#FPT_ITT.1 .comp}
 										      >	#### FPT\_ITT.1 Basic internal TSF data transfer protection (Refinement)
@@ -3014,7 +3029,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### A.1.6 {#-optional .indexable data-level="3"}
+										      >	### A.1.6 Trusted Channel (FTP\_ITC) {#s-ftp-optional .indexable data-level="3"}
 										      >
 										      >	::: {#FTP_TRP.1/Join .comp}
 										      >	#### FTP\_TRP.1/Join Trusted Path (Refinement)
@@ -3055,8 +3070,8 @@
 										      >	the body of the [PP](#abbr_PP): if certain selections are made, then
 										      >	additional requirements below must be included.
 										      >
-										      >	B.1 {#-sel-based .indexable data-level="2"}
-										      >	---
+										      >	B.1 Security Audit (FAU) {#s-fau-sel-based .indexable data-level="2"}
+										      >	------------------------
 										      >
 										      >	::: {#FAU_GEN_EXT.1 .comp}
 										      >	#### FAU\_GEN\_EXT.1 Security Audit Generation
@@ -3127,8 +3142,8 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	B.2 {#-sel-based .indexable data-level="2"}
-										      >	---
+										      >	B.2 Cryptographic Support (FCS) {#s-fcs-sel-based .indexable data-level="2"}
+										      >	-------------------------------
 										      >
 										      >	::: {#FCS_DTLSC_EXT.1 .comp}
 										      >	#### FCS\_DTLSC\_EXT.1 DTLS Client Support without Authentication
@@ -3337,8 +3352,8 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	B.3 {#-sel-based .indexable data-level="2"}
-										      >	---
+										      >	B.3 Identification and Authentication (FIA) {#s-fia-sel-based .indexable data-level="
+										      >	-------------------------------------------
 										      >
 										      >	::: {#FIA_X509_EXT.1/Rev .comp}
 										      >	#### FIA\_X509\_EXT.1/Rev X.509 Certificate Validation
@@ -3409,8 +3424,8 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	B.4 {#-sel-based .indexable data-level="2"}
-										      >	---
+										      >	B.4 Security Management (FMT) {#s-fmt-sel-based .indexable data-level="2"}
+										      >	-----------------------------
 										      >
 										      >	::: {#FMT_MOF.1/Services .comp}
 										      >	#### FMT\_MOF.1/Services Management of Security Functions Behaviour
@@ -3502,8 +3517,8 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	B.5 {#-sel-based .indexable data-level="2"}
-										      >	---
+										      >	B.5 Protection of the TSF (FPT) {#s-fpt-sel-based .indexable data-level="2"}
+										      >	-------------------------------
 										      >
 										      >	::: {#FPT_TUD_EXT.2 .comp}
 										      >	#### FPT\_TUD\_EXT.2 Trusted Update Based on Certificates

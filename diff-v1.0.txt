@@ -63,45 +63,36 @@
 										      >	::: {#toc .toc}
 										      >	[1Acknowledgements](#s-ack)[2Preface](#s-preface)[2.1Objectives of
 										      >	Document](#s-ood)[2.2Scope of Document](#s-sod)[2.3Intended
-										      >	Readership](#s-ir)[2.4Related Documents](#s-reldoc)[2.5PP
-										      >	Overview](#s-ppoverview)[2.6TOE Use Cases](#s-usecases)[2.7PP
-										      >	Overview](#s-ppoverview)[2.8Terms](#glossary)[2.8.1Common Criteria
-										      >	Terms](#cc-terms)[2.8.2Technical Terms](#tech-terms)[2.9TOE Use
-										      >	Cases](#s-usecases)[3Introduction to Distributed
-										      >	TOEs](#s-distributedTOEs)[3.1Supported Distributed TOE Use
-										      >	Cases](#s-sdtuc)[3.2Unsupported Distributed TOE Use
-										      >	Cases](#s-udtuc)[3.3Registration of Components of a Distributed
-										      >	TOE](#s-compreg)[3.4Allocation of Requirements in Distributed
-										      >	TOEs](#s-alloc)[3.5Organizational Security
-										      >	Policies](#OSPs)[3.6Organizational Security Policies](#OSPs)[3.7Security
-										      >	Objectives for the TOE](#SecurityObjectivesTOE)[3.8Security Objectives
-										      >	for the Operational
-										      >	Environment](#SecurityObjectivesTOEorEnvironment)[3.9Security Objectives
-										      >	Rationale](#SOR)[3.10Security Objectives for the
-										      >	TOE](#SecurityObjectivesTOE)[3.11Security Objectives for the Operational
-										      >	Environment](#SecurityObjectivesTOEorEnvironment)[3.12Security
-										      >	Objectives Rationale](#SOR)[3.13Conventions](#s-conventions)[3.14SFR
-										      >	Architecture](#s-sfrarch)[3.15Security Functional
-										      >	Requirements](#SFRs)[3.15.1Class ASE: Security Target](#ase)[3.15.2Class
-										      >	ADV: Development](#adv)[3.15.3Class AGD: Guidance
-										      >	Documentation](#agd)[3.15.4Class ALC: Life-cycle
-										      >	Support](#alc)[3.15.5Class ATE: Tests](#ate)[3.15.6Class AVA:
-										      >	Vulnerability Assessment](#ava)[3.16Conventions](#s-conventions)[3.17SFR
-										      >	Architecture](#s-sfrarch)[3.18Security Functional
-										      >	Requirements](#SFRs)[3.18.1Security Audit
-										      >	(FAU)](#s-fau)[3.18.2Cryptographic Support
-										      >	(FCS)](#s-fcs)[3.18.3Identification and Authentication
-										      >	(FIA)](#s-fia)[3.18.4Security Management (FMT)](#s-fmt)[3.18.5Protection
-										      >	of the TSF (FPT)](#s-fpt)[3.18.6TOE Access (FTA)](#s-fta)[3.18.7Trusted
-										      >	Channel (FTP\_ITC)](#s-ftp)[3.18.8TOE Security Functional Requirements
-										      >	Rationale](#obj-req-map)[3.18.9Class ASE: Security
-										      >	Target](#ase)[3.18.10Class ADV: Development](#adv)[3.18.11Class AGD:
-										      >	Guidance Documentation](#agd)[3.18.12Class ALC: Life-cycle
-										      >	Support](#alc)[3.18.13Class ATE: Tests](#ate)[3.18.14Class AVA:
-										      >	Vulnerability Assessment](#ava)[3.18.15Class ASE: Security
-										      >	Target](#ase)[3.18.16Class ADV: Development](#adv)[3.18.17Class AGD:
-										      >	Guidance Documentation](#agd)[3.18.18Class ALC: Life-cycle
-										      >	Support](#alc)[3.18.19Class ATE: Tests](#ate)[3.18.20Class AVA:
+										      >	Readership](#s-ir)[2.4Related
+										      >	Documents](#s-reldoc)[3Introduction](#Introduction)[3.1PP
+										      >	Overview](#s-ppoverview)[3.2Terms](#glossary)[3.2.1Common Criteria
+										      >	Terms](#cc-terms)[3.2.2Technical Terms](#tech-terms)[3.3TOE Use
+										      >	Cases](#s-usecases)[4Conformance
+										      >	Claims](#Conformance_Claims)[5Introduction to Distributed
+										      >	TOEs](#s-distributedTOEs)[5.1Supported Distributed TOE Use
+										      >	Cases](#s-sdtuc)[5.2Unsupported Distributed TOE Use
+										      >	Cases](#s-udtuc)[5.3Registration of Components of a Distributed
+										      >	TOE](#s-compreg)[5.4Allocation of Requirements in Distributed
+										      >	TOEs](#s-alloc)[6Security Problem
+										      >	Description](#Security_Problem_Description)[6.1Threats](#Threats)[6.2Assumptions](#As
+										      >	Security Policies](#OSPs)[7Security
+										      >	Objectives](#Security_Objectives)[7.1Security Objectives for the
+										      >	TOE](#SecurityObjectivesTOE)[7.2Security Objectives for the Operational
+										      >	Environment](#SecurityObjectivesTOEorEnvironment)[7.3Security Objectives
+										      >	Rationale](#SOR)[8Security
+										      >	Requirements](#Security_Requirements)[8.1Conventions](#s-conventions)[8.2SFR
+										      >	Architecture](#s-sfrarch)[8.3Security Functional
+										      >	Requirements](#SFRs)[8.3.1Security Audit
+										      >	(FAU)](#s-fau)[8.3.2Cryptographic Support
+										      >	(FCS)](#s-fcs)[8.3.3Identification and Authentication
+										      >	(FIA)](#s-fia)[8.3.4Security Management (FMT)](#s-fmt)[8.3.5Protection
+										      >	of the TSF (FPT)](#s-fpt)[8.3.6TOE Access (FTA)](#s-fta)[8.3.7Trusted
+										      >	Channel (FTP\_ITC)](#s-ftp)[8.3.8TOE Security Functional Requirements
+										      >	Rationale](#obj-req-map)[8.4Security Assurance
+										      >	Requirements](#Security_Assurance_Requirements)[8.4.1Class ASE: Security
+										      >	Target](#ase)[8.4.2Class ADV: Development](#adv)[8.4.3Class AGD:
+										      >	Guidance Documentation](#agd)[8.4.4Class ALC: Life-cycle
+										      >	Support](#alc)[8.4.5Class ATE: Tests](#ate)[8.4.6Class AVA:
 										      >	Vulnerability Assessment](#ava)[Appendix A - Optional
 										      >	Requirements](#opt-app)[A.1Strictly Optional Requirements
 										      >	](#optional-reqs)[A.1.1Security Audit
@@ -123,85 +114,22 @@
 										      >	- Bibliography](#appendix-bibliography)
 										      >	:::
 										      >
-										      >	2.5 PP Overview {#s-ppoverview .indexable data-level="2"}
-										      >	---------------
+										      >	3 Introduction {#Introduction .indexable data-level="1"}
+										      >	==============
 										      >
-										      >	An anti-exploitation feature which loads memory mappings into
-										      >	unpredictable locations. [ASLR](#abbr_ASLR) makes it more difficult for
-										      >	an attacker to redirect control to code that they have introduced into
-										      >	the address space of a process. An administrator is responsible for
-										      >	management activities, including setting policies that are applied by
-										      >	the enterprise on the operating system. This administrator could be
-										      >	acting remotely through a management server, from which the system
-										      >	receives configuration policies. An administrator can enforce settings
-										      >	on the system which cannot be overridden by non-administrator users.
-										      >	Software that runs on a platform and performs tasks on behalf of the
-										      >	user or owner of the platform, as well as its supporting documentation.
-										      >	A specification of routines, data structures, object classes, and
-										      >	variables that allows an application to make use of services provided by
-										      >	another software component, such as a library. APIs are often provided
-										      >	for a set of libraries included with the platform. Data that establishes
-										      >	the identity of a user, e.g. a cryptographic key or password.
-										      >	Information that is either user or system defined and is used to operate
-										      >	a cryptographic module in processing encryption functions including
-										      >	cryptographic keys and authentication data, such as passwords, the
-										      >	disclosure or modification of which can compromise the security of a
-										      >	cryptographic module or the security of the information protected by the
-										      >	module. Countermeasures that prevent attackers, even those with physical
-										      >	access, from extracting data from non-volatile storage. Common
-										      >	techniques include data encryption and wiping. An anti-exploitation
-										      >	feature of modern operating systems executing on modern computer
-										      >	hardware, which enforces a non-execute permission on pages of memory.
-										      >	[DEP](#abbr_DEP) prevents pages of memory from containing both data and
-										      >	instructions, which makes it more difficult for an attacker to introduce
-										      >	and execute code. An entity that writes [OS](#abbr_OS) software. For the
-										      >	purposes of this document, vendors and developers are the same. A class
-										      >	of [OSes](#abbr_OS) designed to support a wide-variety of workloads
-										      >	consisting of many concurrent applications or services. Typical
-										      >	characteristics for [OSes](#abbr_OS) in this class include support for
-										      >	third-party applications, support for multiple users, and security
-										      >	separation between users and their respective resources. General Purpose
-										      >	Operating Systems also lack the real-time constraint that defines Real
-										      >	Time Operating Systems (RTOS). RTOSes typically power routers, switches,
-										      >	and embedded devices. A software-based firewall implementation running
-										      >	on the [OS](#abbr_OS) for filtering inbound and outbound network traffic
-										      >	to and from processes running on the [OS](#abbr_OS). Software that
-										      >	manages physical and logical resources and provides services for
-										      >	applications. The terms [TOE](#abbr_TOE) and [OS](#abbr_OS) are
-										      >	interchangeable in this document. Any information about an individual
-										      >	maintained by an agency, including, but not limited to, education,
-										      >	financial transactions, medical history, and criminal or employment
-										      >	history and information which can be used to distinguish or trace an
-										      >	individual\'s identity, such as their name, social security number, date
-										      >	and place of birth, mother\'s maiden name, biometric records, etc.,
-										      >	including any other personal information which is linked or linkable to
-										      >	an individual. Sensitive data may include all user or enterprise data or
-										      >	may be specific application data such as [PII](#abbr_PII), emails,
-										      >	messaging, documents, calendar items, and contacts. Sensitive data must
-										      >	minimally include credentials and keys. Sensitive data shall be
-										      >	identified in the [OS](#abbr_OS)\'s [TSS](#abbr_TSS) by the
-										      >	[ST](#abbr_ST) author. A user is subject to configuration policies
-										      >	applied to the operating system by administrators. On some systems under
-										      >	certain configurations, a normal user can temporarily elevate privileges
-										      >	to that of an administrator. At that time, such a user should be
-										      >	considered an administrator. Blah Blah Blah
-										      >
-										      >	2.6 TOE Use Cases {#s-usecases .indexable data-level="2"}
-										      >	-----------------
-										      >
-										      >	2.7 PP Overview {#s-ppoverview .indexable data-level="2"}
+										      >	3.1 PP Overview {#s-ppoverview .indexable data-level="2"}
 										      >	---------------
 										      >
 										      >	words
 										      >
 										      >	::: {.no-link}
-										      >	2.8 Terms {#glossary .indexable data-level="2"}
+										      >	3.2 Terms {#glossary .indexable data-level="2"}
 										      >	---------
 										      >
 										      >	The following sections list Common Criteria and technology terms used in
 										      >	this document.
 										      >
-										      >	### 2.8.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
+										      >	### 3.2.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Assurance}                  | Grounds for confidence that a TOE |
@@ -303,7 +231,7 @@
 										      >	| :::                               |                                   |
 										      >	+-----------------------------------+-----------------------------------+
 										      >
-										      >	### 2.8.2 Technical Terms {#tech-terms .indexable data-level="3"}
+										      >	### 3.2.2 Technical Terms {#tech-terms .indexable data-level="3"}
 										      >
 										      >	+-----------------------------------+-----------------------------------+
 										      >	| ::: {#Address_Space_Layout_Random | An anti-exploitation feature      |
@@ -461,10 +389,13 @@
 										      >	+-----------------------------------+-----------------------------------+
 										      >	:::
 										      >
-										      >	2.9 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	3.3 TOE Use Cases {#s-usecases .indexable data-level="2"}
 										      >	-----------------
 										      >
 										      >	Words
+										      >
+										      >	4 Conformance Claims {#Conformance_Claims .indexable data-level="1"}
+										      >	====================
 										      >
 										      >	Conformance Statement
 										      >	:   An [ST](#abbr_ST) must claim exact conformance to this
@@ -483,103 +414,33 @@
 										      >	Package Claim
 										      >	:   This [PP](#abbr_PP) does not claim conformance to any packages.
 										      >
-										      >	3 Introduction to Distributed TOEs {#s-distributedTOEs .indexable data-level="1"}
+										      >	5 Introduction to Distributed TOEs {#s-distributedTOEs .indexable data-level="1"}
 										      >	==================================
 										      >
 										      >	words
 										      >
-										      >	3.1 Supported Distributed TOE Use Cases {#s-sdtuc .indexable data-level="2"}
+										      >	5.1 Supported Distributed TOE Use Cases {#s-sdtuc .indexable data-level="2"}
 										      >	---------------------------------------
 										      >
 										      >	words
 										      >
-										      >	3.2 Unsupported Distributed TOE Use Cases {#s-udtuc .indexable data-level="2"}
+										      >	5.2 Unsupported Distributed TOE Use Cases {#s-udtuc .indexable data-level="2"}
 										      >	-----------------------------------------
 										      >
 										      >	words
 										      >
-										      >	3.3 Registration of Components of a Distributed TOE {#s-compreg .indexable data-level
+										      >	5.3 Registration of Components of a Distributed TOE {#s-compreg .indexable data-level
 										      >	---------------------------------------------------
 										      >
 										      >	words
 										      >
-										      >	3.4 Allocation of Requirements in Distributed TOEs {#s-alloc .indexable data-level="2
+										      >	5.4 Allocation of Requirements in Distributed TOEs {#s-alloc .indexable data-level="2
 										      >	--------------------------------------------------
 										      >
-										      >	words A Network Device has a network infrastructure role that it is
-										      >	designed to provide. In doing so, the Network Device communicates with
-										      >	other Network Devices and other network entities (i.e. entities not
-										      >	defined as Network Devices because they do not have an infrastructure
-										      >	role) over the network. At the same time, it must provide a minimal set
-										      >	of common security functionality expected by all Network Devices. The
-										      >	security problem to be addressed by a compliant Network Device is
-										      >	defined as this set of common security functionality that addresses the
-										      >	threats that are common to Network Devices, as opposed to those that
-										      >	might be targeting the specific functionality of a specific type of
-										      >	Network Device. The set of common security functionality addresses
-										      >	communication with the Network Device, both authorized and unauthorized,
-										      >	the ability to perform valid and secure updates, the ability to audit
-										      >	device activity, the ability to securely store and utilize device and
-										      >	Administrator credentials and data, and the ability to self-test
-										      >	critical device components for failures. An attacker is positioned on a
-										      >	communications channel or elsewhere on the network infrastructure.
-										      >	Attackers may engage in communications with applications and services
-										      >	running on or part of the [OS](#abbr_OS) with the intent of compromise.
-										      >	Engagement may consist of altering existing legitimate communications.
-										      >	The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
-										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for integrity
-										      >	of transmitted data. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)
-										      >	is countered by [O.INTEGRITY](#O.INTEGRITY) as this provides for
-										      >	integrity of software that is installed onto the system from the
-										      >	network. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered
-										      >	by [O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
-										      >	configure the [OS](#abbr_OS) to defend against network attack. The
-										      >	threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
-										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) as this provides a mechanism for
-										      >	the [OS](#abbr_OS) to report behavior that may indicate a network attack
-										      >	has occurred. An attacker is positioned on a communications channel or
-										      >	elsewhere on the network infrastructure. Attackers may monitor and gain
-										      >	access to data exchanged between applications and services that are
-										      >	running on or part of the [OS](#abbr_OS). The threat
-										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
-										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for
-										      >	confidentiality of transmitted data. The threat
-										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
-										      >	[O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
-										      >	configure the [OS](#abbr_OS) to protect the confidentiality of its
-										      >	transmitted data. An attacker may compromise applications running on the
-										      >	[OS](#abbr_OS). The compromised application may provide maliciously
-										      >	formatted input to the [OS](#abbr_OS) through a variety of channels
-										      >	including unprivileged system calls and messaging via the file system.
-										      >	The objective [O.INTEGRITY](#O.INTEGRITY) protects against the use of
-										      >	mechanisms that weaken the [TOE](#abbr_TOE) with regard to attack by
-										      >	other software on the platform. The objective
-										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) protects against local attacks by
-										      >	providing a mechanism to report behavior that may indicate a local
-										      >	attack is occurring or has occurred. An attacker may attempt to access
-										      >	data on the [OS](#abbr_OS) while having a limited amount of time with
-										      >	the physical device. The objective
-										      >	[O.PROTECTED\_STORAGE](#O.PROTECTED_STORAGE) protects against
-										      >	unauthorized attempts to access physical storage used by the
-										      >	[TOE](#abbr_TOE). The [OS](#abbr_OS) relies upon a trustworthy computing
-										      >	platform for its execution. This underlying platform is out of scope of
-										      >	this [PP](#abbr_PP). The operational environment objective
-										      >	[OE.PLATFORM](#OE.PLATFORM) is realized through
-										      >	[A.PLATFORM](#A.PLATFORM). The user of the [OS](#abbr_OS) is not
-										      >	willfully negligent or hostile, and uses the software in compliance with
-										      >	the applied enterprise security policy. At the same time, malicious
-										      >	software could act as the user, so requirements which confine malicious
-										      >	subjects are still in scope. The operational environment objective
-										      >	[OE.PROPER\_USER](#OE.PROPER_USER) is realized through
-										      >	[A.PROPER\_USER](#A.PROPER_USER). The administrator of the
-										      >	[OS](#abbr_OS) is not careless, willfully negligent or hostile, and
-										      >	administers the [OS](#abbr_OS) within compliance of the applied
-										      >	enterprise security policy. The operational environment objective
-										      >	[OE.PROPER\_ADMIN](#OE.PROPER_ADMIN) is realized through
-										      >	[A.PROPER\_ADMIN](#A.PROPER_ADMIN).
+										      >	words
 										      >
-										      >	3.5 Organizational Security Policies {#OSPs .indexable data-level="2"}
-										      >	------------------------------------
+										      >	6 Security Problem Description {#Security_Problem_Description .indexable data-level="
+										      >	==============================
 										      >
 										      >	A Network Device has a network infrastructure role that it is designed
 										      >	to provide. In doing so, the Network Device communicates with other
@@ -598,47 +459,8 @@
 										      >	credentials and data, and the ability to self-test critical device
 										      >	components for failures.
 										      >
-										      >	An attacker is positioned on a communications channel or elsewhere on
-										      >	the network infrastructure. Attackers may engage in communications with
-										      >	applications and services running on or part of the [OS](#abbr_OS) with
-										      >	the intent of compromise. Engagement may consist of altering existing
-										      >	legitimate communications. The threat
-										      >	[T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
-										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for integrity
-										      >	of transmitted data. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK)
-										      >	is countered by [O.INTEGRITY](#O.INTEGRITY) as this provides for
-										      >	integrity of software that is installed onto the system from the
-										      >	network. The threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered
-										      >	by [O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
-										      >	configure the [OS](#abbr_OS) to defend against network attack. The
-										      >	threat [T.NETWORK\_ATTACK](#T.NETWORK_ATTACK) is countered by
-										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) as this provides a mechanism for
-										      >	the [OS](#abbr_OS) to report behavior that may indicate a network attack
-										      >	has occurred. An attacker is positioned on a communications channel or
-										      >	elsewhere on the network infrastructure. Attackers may monitor and gain
-										      >	access to data exchanged between applications and services that are
-										      >	running on or part of the [OS](#abbr_OS). The threat
-										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
-										      >	[O.PROTECTED\_COMMS](#O.PROTECTED_COMMS) as this provides for
-										      >	confidentiality of transmitted data. The threat
-										      >	[T.NETWORK\_EAVESDROP](#T.NETWORK_EAVESDROP) is countered by
-										      >	[O.MANAGEMENT](#O.MANAGEMENT) as this provides for the ability to
-										      >	configure the [OS](#abbr_OS) to protect the confidentiality of its
-										      >	transmitted data. An attacker may compromise applications running on the
-										      >	[OS](#abbr_OS). The compromised application may provide maliciously
-										      >	formatted input to the [OS](#abbr_OS) through a variety of channels
-										      >	including unprivileged system calls and messaging via the file system.
-										      >	The objective [O.INTEGRITY](#O.INTEGRITY) protects against the use of
-										      >	mechanisms that weaken the [TOE](#abbr_TOE) with regard to attack by
-										      >	other software on the platform. The objective
-										      >	[O.ACCOUNTABILITY](#O.ACCOUNTABILITY) protects against local attacks by
-										      >	providing a mechanism to report behavior that may indicate a local
-										      >	attack is occurring or has occurred. An attacker may attempt to access
-										      >	data on the [OS](#abbr_OS) while having a limited amount of time with
-										      >	the physical device. The objective
-										      >	[O.PROTECTED\_STORAGE](#O.PROTECTED_STORAGE) protects against
-										      >	unauthorized attempts to access physical storage used by the
-										      >	[TOE](#abbr_TOE).
+										      >	6.1 Threats {#Threats .indexable data-level="2"}
+										      >	-----------
 										      >
 										      >	T.NETWORK\_ATTACK
 										      >	:   An attacker is positioned on a communications channel or elsewhere
@@ -664,22 +486,8 @@
 										      >	:   An attacker may attempt to access data on the [OS](#abbr_OS) while
 										      >	    having a limited amount of time with the physical device.
 										      >
-										      >	The [OS](#abbr_OS) relies upon a trustworthy computing platform for its
-										      >	execution. This underlying platform is out of scope of this
-										      >	[PP](#abbr_PP). The operational environment objective
-										      >	[OE.PLATFORM](#OE.PLATFORM) is realized through
-										      >	[A.PLATFORM](#A.PLATFORM). The user of the [OS](#abbr_OS) is not
-										      >	willfully negligent or hostile, and uses the software in compliance with
-										      >	the applied enterprise security policy. At the same time, malicious
-										      >	software could act as the user, so requirements which confine malicious
-										      >	subjects are still in scope. The operational environment objective
-										      >	[OE.PROPER\_USER](#OE.PROPER_USER) is realized through
-										      >	[A.PROPER\_USER](#A.PROPER_USER). The administrator of the
-										      >	[OS](#abbr_OS) is not careless, willfully negligent or hostile, and
-										      >	administers the [OS](#abbr_OS) within compliance of the applied
-										      >	enterprise security policy. The operational environment objective
-										      >	[OE.PROPER\_ADMIN](#OE.PROPER_ADMIN) is realized through
-										      >	[A.PROPER\_ADMIN](#A.PROPER_ADMIN).
+										      >	6.2 Assumptions {#Assumptions .indexable data-level="2"}
+										      >	---------------
 										      >
 										      >	A.PLATFORM
 										      >	:   The [OS](#abbr_OS) relies upon a trustworthy computing platform for
@@ -698,7 +506,7 @@
 										      >	    negligent or hostile, and administers the [OS](#abbr_OS) within
 										      >	    compliance of the applied enterprise security policy.
 										      >
-										      >	3.6 Organizational Security Policies {#OSPs .indexable data-level="2"}
+										      >	6.3 Organizational Security Policies {#OSPs .indexable data-level="2"}
 										      >	------------------------------------
 										      >
 										      >	P.ENTERPRISE
@@ -706,17 +514,11 @@
 										      >	    the configuration of the [OS](#abbr_OS) software must be capable of
 										      >	    adhering to the enterprise security policies distributed by them.
 										      >
-										      >	3.7 Security Objectives for the TOE {#SecurityObjectivesTOE .indexable data-level="2"
+										      >	7 Security Objectives {#Security_Objectives .indexable data-level="1"}
+										      >	=====================
+										      >
+										      >	7.1 Security Objectives for the TOE {#SecurityObjectivesTOE .indexable data-level="2"
 										      >	-----------------------------------
-										      >
-										      >	3.8 Security Objectives for the Operational Environment {#SecurityObjectivesTOEorEnvi
-										      >	-------------------------------------------------------
-										      >
-										      >	3.9 Security Objectives Rationale {#SOR .indexable data-level="2"}
-										      >	---------------------------------
-										      >
-										      >	3.10 Security Objectives for the TOE {#SecurityObjectivesTOE .indexable data-level="2
-										      >	------------------------------------
 										      >
 										      >	O.ACCOUNTABILITY
 										      >	:   Conformant [OSes](#abbr_OS) ensure that information exists that
@@ -759,8 +561,8 @@
 										      >	    and sensitive data. Both [CSP](#abbr_CSP) and sensitive data should
 										      >	    not be exposed outside of the platform.
 										      >
-										      >	3.11 Security Objectives for the Operational Environment {#SecurityObjectivesTOEorEnv
-										      >	--------------------------------------------------------
+										      >	7.2 Security Objectives for the Operational Environment {#SecurityObjectivesTOEorEnvi
+										      >	-------------------------------------------------------
 										      >
 										      >	The following security objectives for the operational environment assist
 										      >	the [OS](#abbr_OS) in correctly providing its security functionality.
@@ -782,8 +584,8 @@
 										      >	    negligent or hostile, and administers the [OS](#abbr_OS) within
 										      >	    compliance of the applied enterprise security policy.
 										      >
-										      >	3.12 Security Objectives Rationale {#SOR .indexable,h2 data-level="2"}
-										      >	----------------------------------
+										      >	7.3 Security Objectives Rationale {#SOR .indexable,h2 data-level="2"}
+										      >	---------------------------------
 										      >
 										      >	This section describes how the assumptions, threats, and organizational
 										      >	security policies map to the security objectives.
@@ -892,74 +694,8 @@
 										      >	objective represents how the enterprise and user assert management over
 										      >	the [OS](#abbr_OS).
 										      >
-										      >	The individual security functional requirements are specified in the
-										      >	sections below. [SFRs](#abbr_SFR) in this section are mandatory
-										      >	[SFRs](#abbr_SFR) that any conformant [TOE](#abbr_TOE) must meet. Based
-										      >	on selections made in these [SFRs](#abbr_SFR) it will also be necessary
-										      >	to include some of the selection-based [SFRs](#abbr_SFR) in Appendix B.
-										      >	Additional optional [SFRs](#abbr_SFR) may also be adopted from those
-										      >	listed in Appendix A. For a distributed [TOE](#abbr_TOE), the
-										      >	[ST](#abbr_ST) author should reference Table 1 for guidance on how each
-										      >	[SFR](#abbr_SFR) should be met. The table details whether
-										      >	[SFRs](#abbr_SFR) should be met by all [TOE](#abbr_TOE) components, by
-										      >	at least one [TOE](#abbr_TOE) component or whether they are dependent
-										      >	upon the feature being implemented by the [TOE](#abbr_TOE) component.
-										      >	The [ST](#abbr_ST) for a distributed [TOE](#abbr_TOE) must include a
-										      >	mapping of [SFRs](#abbr_SFR) to each of the components of the
-										      >	[TOE](#abbr_TOE). (Note that this deliverable is examined as part of the
-										      >	ASE\_TSS.1 and [AVA\_VAN.1](#AVA_VAN.1) Evaluation Activities as
-										      >	described in \[SD, 5.1.2\] and \[SD, 5.6.1.1\] respectively. The
-										      >	Evaluation Activities defined in \[SD\] describe actions that the
-										      >	evaluator will take in order to determine compliance of a particular
-										      >	[TOE](#abbr_TOE) with the [SFRs](#abbr_SFR). The content of these
-										      >	Evaluation Activities will therefore provide more insight into
-										      >	deliverables required from [TOE](#abbr_TOE) Developers.
-										      >
-										      >	3.13 Conventions {#s-conventions .indexable data-level="2"}
-										      >	----------------
-										      >
-										      >	3.14 SFR Architecture {#s-sfrarch .indexable data-level="2"}
-										      >	---------------------
-										      >
-										      >	3.15 Security Functional Requirements {#SFRs .indexable data-level="2"}
-										      >	-------------------------------------
-										      >
-										      >	The Security Objectives in were constructed to address threats
-										      >	identified in . The Security Functional Requirements ([SFRs](#abbr_SFR))
-										      >	in are a formal instantiation of the Security Objectives. The
-										      >	[PP](#abbr_PP) identifies the Security Assurance Requirements
-										      >	([SARs](#abbr_SAR)) to frame the extent to which the evaluator assesses
-										      >	the documentation applicable for the evaluation and performs independent
-										      >	testing. This section lists the set of [SARs](#abbr_SAR) from
-										      >	[CC](#abbr_CC) part 3 that are required in evaluations against this
-										      >	[PP](#abbr_PP). Individual Assurance Activities to be performed are
-										      >	specified both in as well as in this section. The general model for
-										      >	evaluation of OSs against [STs](#abbr_ST) written to conform to this
-										      >	[PP](#abbr_PP) is as follows: After the [ST](#abbr_ST) has been approved
-										      >	for evaluation, the [ITSEF](#abbr_ITSEF) will obtain the [OS](#abbr_OS),
-										      >	supporting environmental [IT](#abbr_IT), and the administrative/user
-										      >	guides for the [OS](#abbr_OS). The [ITSEF](#abbr_ITSEF) is expected to
-										      >	perform actions mandated by the Common Evaluation Methodology
-										      >	([CEM](#abbr_CEM)) for the ASE and ALC [SARs](#abbr_SAR). The
-										      >	[ITSEF](#abbr_ITSEF) also performs the Assurance Activities contained
-										      >	within , which are intended to be an interpretation of the other
-										      >	[CEM](#abbr_CEM) assurance requirements as they apply to the specific
-										      >	technology instantiated in the [OS](#abbr_OS). The Assurance Activities
-										      >	that are captured in also provide clarification as to what the developer
-										      >	needs to provide to demonstrate the [OS](#abbr_OS) is compliant with the
-										      >	[PP](#abbr_PP).
-										      >
-										      >	### 3.15.1 Class ASE: Security Target {#ase .indexable data-level="3"}
-										      >
-										      >	### 3.15.2 Class ADV: Development {#adv .indexable data-level="3"}
-										      >
-										      >	### 3.15.3 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
-										      >
-										      >	### 3.15.4 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
-										      >
-										      >	### 3.15.5 Class ATE: Tests {#ate .indexable data-level="3"}
-										      >
-										      >	### 3.15.6 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
+										      >	8 Security Requirements {#Security_Requirements .indexable data-level="1"}
+										      >	=======================
 										      >
 										      >	This chapter describes the security requirements which have to be
 										      >	fulfilled by the product under evaluation. Those requirements comprise
@@ -1010,21 +746,21 @@
 										      >	Evaluation Activities will therefore provide more insight into
 										      >	deliverables required from [TOE](#abbr_TOE) Developers.
 										      >
-										      >	3.16 Conventions {#s-conventions .indexable data-level="2"}
-										      >	----------------
+										      >	8.1 Conventions {#s-conventions .indexable data-level="2"}
+										      >	---------------
 										      >
 										      >	The conventions used in descriptions of the [SFRs](#abbr_SFR) are as
 										      >	follows:
 										      >
-										      >	3.17 SFR Architecture {#s-sfrarch .indexable data-level="2"}
-										      >	---------------------
+										      >	8.2 SFR Architecture {#s-sfrarch .indexable data-level="2"}
+										      >	--------------------
 										      >
 										      >	Insert section 6.2 here.
 										      >
-										      >	3.18 Security Functional Requirements {#SFRs .indexable data-level="2"}
-										      >	-------------------------------------
+										      >	8.3 Security Functional Requirements {#SFRs .indexable data-level="2"}
+										      >	------------------------------------
 										      >
-										      >	### 3.18.1 Security Audit (FAU) {#s-fau .indexable data-level="3"}
+										      >	### 8.3.1 Security Audit (FAU) {#s-fau .indexable data-level="3"}
 										      >
 										      >	::: {#FAU_GEN.1 .comp}
 										      >	#### FAU\_GEN.1 Audit data generation
@@ -1080,7 +816,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.2 Cryptographic Support (FCS) {#s-fcs .indexable data-level="3"}
+										      >	### 8.3.2 Cryptographic Support (FCS) {#s-fcs .indexable data-level="3"}
 										      >
 										      >	::: {#FCS_CKM.1 .comp}
 										      >	#### FCS\_CKM.1 Cryptographic Key Generation (Refinement)
@@ -1226,7 +962,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.3 Identification and Authentication (FIA) {#s-fia .indexable data-level="3"}
+										      >	### 8.3.3 Identification and Authentication (FIA) {#s-fia .indexable data-level="3"}
 										      >
 										      >	::: {#FIA_AFL.1 .comp}
 										      >	#### FIA\_AFL.1 Authentication Failure Management (Refinement)
@@ -1318,7 +1054,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.4 Security Management (FMT) {#s-fmt .indexable data-level="3"}
+										      >	### 8.3.4 Security Management (FMT) {#s-fmt .indexable data-level="3"}
 										      >
 										      >	::: {#FMT_MOF.1/ManualUpdate .comp}
 										      >	#### FMT\_MOF.1/ManualUpdate Management of Security Functions Behaviour
@@ -1392,7 +1128,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.5 Protection of the TSF (FPT) {#s-fpt .indexable data-level="3"}
+										      >	### 8.3.5 Protection of the TSF (FPT) {#s-fpt .indexable data-level="3"}
 										      >
 										      >	::: {#FPT_SKP_EXT.1 .comp}
 										      >	#### FPT\_SKP\_EXT.1 Protection of TSF Data (for reading of all pre-shared, symmetric
@@ -1484,7 +1220,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.6 TOE Access (FTA) {#s-fta .indexable data-level="3"}
+										      >	### 8.3.6 TOE Access (FTA) {#s-fta .indexable data-level="3"}
 										      >
 										      >	::: {#FTA_SSL_EXT.1 .comp}
 										      >	#### FTA\_SSL\_EXT.1 TSF-initiated Session Locking
@@ -1558,7 +1294,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.7 Trusted Channel (FTP\_ITC) {#s-ftp .indexable data-level="3"}
+										      >	### 8.3.7 Trusted Channel (FTP\_ITC) {#s-ftp .indexable data-level="3"}
 										      >
 										      >	::: {#FTP_ITC.1 .comp}
 										      >	#### FTP\_ITC.1 Inter-TSF Trusted Channel (Refinement)
@@ -1596,7 +1332,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.8 TOE Security Functional Requirements Rationale {#obj-req-map .indexable da
+										      >	### 8.3.8 TOE Security Functional Requirements Rationale {#obj-req-map .indexable dat
 										      >
 										      >	The following rationale provides justification for each security
 										      >	objective for the [TOE](#abbr_TOE), showing that the [SFRs](#abbr_SFR)
@@ -1718,56 +1454,22 @@
 										      >
 										      >	Rationale for a big chunk
 										      >
-										      >	The Security Objectives in were constructed to address threats
-										      >	identified in . The Security Functional Requirements ([SFRs](#abbr_SFR))
-										      >	in are a formal instantiation of the Security Objectives. The
-										      >	[PP](#abbr_PP) identifies the Security Assurance Requirements
-										      >	([SARs](#abbr_SAR)) to frame the extent to which the evaluator assesses
-										      >	the documentation applicable for the evaluation and performs independent
-										      >	testing. This section lists the set of [SARs](#abbr_SAR) from
-										      >	[CC](#abbr_CC) part 3 that are required in evaluations against this
-										      >	[PP](#abbr_PP). Individual Assurance Activities to be performed are
-										      >	specified both in as well as in this section. The general model for
-										      >	evaluation of OSs against [STs](#abbr_ST) written to conform to this
-										      >	[PP](#abbr_PP) is as follows: After the [ST](#abbr_ST) has been approved
-										      >	for evaluation, the [ITSEF](#abbr_ITSEF) will obtain the [OS](#abbr_OS),
-										      >	supporting environmental [IT](#abbr_IT), and the administrative/user
-										      >	guides for the [OS](#abbr_OS). The [ITSEF](#abbr_ITSEF) is expected to
-										      >	perform actions mandated by the Common Evaluation Methodology
-										      >	([CEM](#abbr_CEM)) for the ASE and ALC [SARs](#abbr_SAR). The
-										      >	[ITSEF](#abbr_ITSEF) also performs the Assurance Activities contained
-										      >	within , which are intended to be an interpretation of the other
-										      >	[CEM](#abbr_CEM) assurance requirements as they apply to the specific
-										      >	technology instantiated in the [OS](#abbr_OS). The Assurance Activities
-										      >	that are captured in also provide clarification as to what the developer
-										      >	needs to provide to demonstrate the [OS](#abbr_OS) is compliant with the
-										      >	[PP](#abbr_PP).
+										      >	8.4 Security Assurance Requirements {#Security_Assurance_Requirements .indexable data
+										      >	-----------------------------------
 										      >
-										      >	### 3.18.9 Class ASE: Security Target {#ase .indexable data-level="3"}
-										      >
-										      >	### 3.18.10 Class ADV: Development {#adv .indexable data-level="3"}
-										      >
-										      >	### 3.18.11 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
-										      >
-										      >	### 3.18.12 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
-										      >
-										      >	### 3.18.13 Class ATE: Tests {#ate .indexable data-level="3"}
-										      >
-										      >	### 3.18.14 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
-										      >
-										      >	The Security Objectives in [Section](#Security_Objectives){.dynref} were
-										      >	constructed to address threats identified in
-										      >	[Section](#Threats){.dynref} . The Security Functional Requirements
-										      >	([SFRs](#abbr_SFR)) in [Section 3.15 Security Functional
-										      >	Requirements](#SFRs){.dynref} are a formal instantiation of the Security
-										      >	Objectives. The [PP](#abbr_PP) identifies the Security Assurance
-										      >	Requirements ([SARs](#abbr_SAR)) to frame the extent to which the
-										      >	evaluator assesses the documentation applicable for the evaluation and
-										      >	performs independent testing.\
+										      >	The Security Objectives in [Section 7 Security
+										      >	Objectives](#Security_Objectives){.dynref} were constructed to address
+										      >	threats identified in [Section 6.1 Threats](#Threats){.dynref}. The
+										      >	Security Functional Requirements ([SFRs](#abbr_SFR)) in [Section 8.3
+										      >	Security Functional Requirements](#SFRs){.dynref} are a formal
+										      >	instantiation of the Security Objectives. The [PP](#abbr_PP) identifies
+										      >	the Security Assurance Requirements ([SARs](#abbr_SAR)) to frame the
+										      >	extent to which the evaluator assesses the documentation applicable for
+										      >	the evaluation and performs independent testing.\
 										      >	This section lists the set of [SARs](#abbr_SAR) from [CC](#abbr_CC) part
 										      >	3 that are required in evaluations against this [PP](#abbr_PP).
 										      >	Individual Assurance Activities to be performed are specified both in
-										      >	[Section 3.15 Security Functional Requirements](#SFRs){.dynref} as well
+										      >	[Section 8.3 Security Functional Requirements](#SFRs){.dynref} as well
 										      >	as in this section.\
 										      >	The general model for evaluation of OSs against [STs](#abbr_ST) written
 										      >	to conform to this [PP](#abbr_PP) is as follows:\
@@ -1777,27 +1479,27 @@
 										      >	[OS](#abbr_OS). The [ITSEF](#abbr_ITSEF) is expected to perform actions
 										      >	mandated by the Common Evaluation Methodology ([CEM](#abbr_CEM)) for the
 										      >	ASE and ALC [SARs](#abbr_SAR). The [ITSEF](#abbr_ITSEF) also performs
-										      >	the Assurance Activities contained within [Section 3.15 Security
+										      >	the Assurance Activities contained within [Section 8.3 Security
 										      >	Functional Requirements](#SFRs){.dynref}, which are intended to be an
 										      >	interpretation of the other [CEM](#abbr_CEM) assurance requirements as
 										      >	they apply to the specific technology instantiated in the
 										      >	[OS](#abbr_OS). The Assurance Activities that are captured in [Section
-										      >	3.15 Security Functional Requirements](#SFRs){.dynref} also provide
+										      >	8.3 Security Functional Requirements](#SFRs){.dynref} also provide
 										      >	clarification as to what the developer needs to provide to demonstrate
 										      >	the [OS](#abbr_OS) is compliant with the [PP](#abbr_PP).
 										      >
-										      >	### 3.18.15 Class ASE: Security Target {#ase .indexable data-level="3"}
+										      >	### 8.4.1 Class ASE: Security Target {#ase .indexable data-level="3"}
 										      >
 										      >	As per ASE activities defined in [\[CEM\]](#bibCEM).
 										      >
-										      >	### 3.18.16 Class ADV: Development {#adv .indexable data-level="3"}
+										      >	### 8.4.2 Class ADV: Development {#adv .indexable data-level="3"}
 										      >
 										      >	The information about the [OS](#abbr_OS) is contained in the guidance
 										      >	documentation available to the end user as well as the [TSS](#abbr_TSS)
 										      >	portion of the [ST](#abbr_ST). The [OS](#abbr_OS) developer must concur
 										      >	with the description of the product that is contained in the
 										      >	[TSS](#abbr_TSS) as it relates to the functional requirements. The
-										      >	Assurance Activities contained in [Section 3.15 Security Functional
+										      >	Assurance Activities contained in [Section 8.3 Security Functional
 										      >	Requirements](#SFRs){.dynref} should provide the [ST](#abbr_ST) authors
 										      >	with sufficient information to determine the appropriate content for the
 										      >	[TSS](#abbr_TSS) section.
@@ -1942,7 +1644,7 @@
 										      >	There are no specific assurance activities associated with these
 										      >	[SARs](#abbr_SAR), except ensuring the information is provided. The
 										      >	functional specification documentation is provided to support the
-										      >	evaluation activities described in [Section 3.15 Security Functional
+										      >	evaluation activities described in [Section 8.3 Security Functional
 										      >	Requirements](#SFRs){.dynref}, and other activities described for AGD,
 										      >	ATE, and AVA [SARs](#abbr_SAR). The requirements on the content of the
 										      >	functional specification information is implicitly assessed by virtue of
@@ -1954,7 +1656,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.17 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
+										      >	### 8.4.3 Class AGD: Guidance Documentation {#agd .indexable data-level="3"}
 										      >
 										      >	The guidance documents will be provided with the [ST](#abbr_ST).
 										      >	Guidance must include a description of how the [IT](#abbr_IT) personnel
@@ -2125,7 +1827,7 @@
 										      >	:::
 										      >
 										      >	Some of the contents of the operational guidance are verified by the
-										      >	assurance activities in [Section 3.15 Security Functional
+										      >	assurance activities in [Section 8.3 Security Functional
 										      >	Requirements](#SFRs){.dynref} and evaluation of the [OS](#abbr_OS)
 										      >	according to the [\[CEM\]](#bibCEM). The following additional
 										      >	information is also required. If cryptographic functions are provided by
@@ -2245,7 +1947,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.18 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
+										      >	### 8.4.4 Class ALC: Life-cycle Support {#alc .indexable data-level="3"}
 										      >
 										      >	At the assurance level provided for OSs conformant to this
 										      >	[PP](#abbr_PP), life-cycle support is limited to end-user-visible
@@ -2549,7 +2251,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.19 Class ATE: Tests {#ate .indexable data-level="3"}
+										      >	### 8.4.5 Class ATE: Tests {#ate .indexable data-level="3"}
 										      >
 										      >	Testing is specified for functional aspects of the system as well as
 										      >	aspects that take advantage of design or implementation weaknesses. The
@@ -2566,10 +2268,11 @@
 										      >	Testing is performed to confirm the functionality described in the
 										      >	[TSS](#abbr_TSS) as well as the administrative (including configuration
 										      >	and operational) documentation provided. The focus of the testing is to
-										      >	confirm that the requirements specified in [Section 3.15 Security
+										      >	confirm that the requirements specified in [Section 8.3 Security
 										      >	Functional Requirements](#SFRs){.dynref} being met, although some
-										      >	additional testing is specified for [SARs](#abbr_SAR) in
-										      >	[Section](#Security_Assurance_Requirements){.dynref} . The Assurance
+										      >	additional testing is specified for [SARs](#abbr_SAR) in [Section 8.4
+										      >	Security Assurance
+										      >	Requirements](#Security_Assurance_Requirements){.dynref}. The Assurance
 										      >	Activities identify the additional testing activities associated with
 										      >	these components. The evaluator produces a test report documenting the
 										      >	plan for and results of testing, as well as coverage arguments focused
@@ -2687,7 +2390,7 @@
 										      >	:::
 										      >	:::
 										      >
-										      >	### 3.18.20 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
+										      >	### 8.4.6 Class AVA: Vulnerability Assessment {#ava .indexable data-level="3"}
 										      >
 										      >	For the first generation of this protection profile, the evaluation lab
 										      >	is expected to survey open sources to discover what vulnerabilities have

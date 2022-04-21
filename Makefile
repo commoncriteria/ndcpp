@@ -3,5 +3,6 @@
 -include User.make
 DIFF_TAGS="v1.0"
 TRANS?=transforms
+RNG_FILE?=transforms/schemas/pp-loose.rng
 include $(TRANS)/Helper.make
 

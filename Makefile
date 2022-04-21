@@ -3,6 +3,6 @@
 -include User.make
 DIFF_TAGS="v1.0"
 TRANS?=transforms
-RNG_FILE?=transforms/schemas/pp-loose.rng
+RNG_FILE?=transforms/schemas/LaxProtectionProfile.rng
 include $(TRANS)/Helper.make
 

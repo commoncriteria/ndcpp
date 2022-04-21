@@ -65,9 +65,7 @@
 										      >	Document](#s-ood)[2.2Scope of Document](#s-sod)[2.3Intended
 										      >	Readership](#s-ir)[2.4Related
 										      >	Documents](#s-reldoc)[3Introduction](#Introduction)[3.1PP
-										      >	Overview](#s-ppoverview)[3.2Terms](#glossary)[3.2.1Common Criteria
-										      >	Terms](#cc-terms)[3.2.2Technical Terms](#tech-terms)[3.3TOE Use
-										      >	Cases](#s-usecases)[4Conformance
+										      >	Overview](#s-ppoverview)[3.2TOE Use Cases](#s-usecases)[4Conformance
 										      >	Claims](#Conformance_Claims)[5Introduction to Distributed
 										      >	TOEs](#s-distributedTOEs)[5.1Supported Distributed TOE Use
 										      >	Cases](#s-sdtuc)[5.2Unsupported Distributed TOE Use
@@ -110,8 +108,10 @@
 										      >	(FIA)](#s-fia-sel-based)[B.4Security Management
 										      >	(FMT)](#s-fmt-sel-based)[B.5Protection of the TSF
 										      >	(FPT)](#s-fpt-sel-based)[Appendix C - Entropy Documentation and
-										      >	Assessment](#satisfiedreqs)[Appendix D - Acronyms](#acronyms)[Appendix E
-										      >	- Bibliography](#appendix-bibliography)
+										      >	Assessment](#satisfiedreqs)[Appendix D -
+										      >	Glossary](#a-glossary)[D.1Terms](#glossary)[D.1.1Common Criteria
+										      >	Terms](#cc-terms)[D.1.2Technical Terms](#tech-terms)[Appendix E -
+										      >	Acronyms](#acronyms)[Appendix F - Bibliography](#appendix-bibliography)
 										      >	:::
 										      >
 										      >	3 Introduction {#Introduction .indexable data-level="1"}
@@ -122,274 +122,7 @@
 										      >
 										      >	words
 										      >
-										      >	::: {.no-link}
-										      >	3.2 Terms {#glossary .indexable data-level="2"}
-										      >	---------
-										      >
-										      >	The following sections list Common Criteria and technology terms used in
-										      >	this document.
-										      >
-										      >	### 3.2.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
-										      >
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Assurance}                  | Grounds for confidence that a TOE |
-										      >	| Assurance                         | meets the SFRs [\[CC\]](#bibCC).  |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Base_Protection_Profile}    | Protection Profile used as a      |
-										      >	| Base Protection Profile (Base-PP) | basis to build a                  |
-										      >	| :::                               | PP-Configuration.                 |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Collaborative_Protection_Pr | A Protection Profile developed by |
-										      >	| ofile}                            | international technical           |
-										      >	| Collaborative Protection Profile  | communities and approved by       |
-										      >	| (cPP)                             | multiple schemes.                 |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Common_Criteria}            | Common Criteria for Information   |
-										      >	| Common Criteria (CC)              | Technology Security Evaluation    |
-										      >	| :::                               | (International Standard ISO/IEC   |
-										      >	|                                   | 15408).                           |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Common_Criteria_Testing_Lab | Within the context of the Common  |
-										      >	| oratory}                          | Criteria Evaluation and           |
-										      >	| Common Criteria Testing           | Validation Scheme (CCEVS), an IT  |
-										      >	| Laboratory                        | security evaluation facility      |
-										      >	| :::                               | accredited by the National        |
-										      >	|                                   | Voluntary Laboratory              |
-										      >	|                                   | Accreditation Program (NVLAP) and |
-										      >	|                                   | approved by the NIAP Validation   |
-										      >	|                                   | Body to conduct Common            |
-										      >	|                                   | Criteria-based evaluations.       |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Common_Evaluation_Methodolo | Common Evaluation Methodology for |
-										      >	| gy}                               | Information Technology Security   |
-										      >	| Common Evaluation Methodology     | Evaluation.                       |
-										      >	| (CEM)                             |                                   |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Distributed_TOE}            | A TOE composed of multiple        |
-										      >	| Distributed TOE                   | components operating as a logical |
-										      >	| :::                               | whole.                            |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Extended_Package}           | A deprecated document form for    |
-										      >	| Extended Package (EP)             | collecting SFRs that implement a  |
-										      >	| :::                               | particular protocol, technology,  |
-										      >	|                                   | or functionality. See Functional  |
-										      >	|                                   | Packages.                         |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Functional_Package}         | A document that collects SFRs for |
-										      >	| Functional Package (FP)           | a particular protocol,            |
-										      >	| :::                               | technology, or functionality.     |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Operational_Environment}    | Hardware and software that are    |
-										      >	| Operational Environment (OE)      | outside the TOE boundary that     |
-										      >	| :::                               | support the TOE functionality and |
-										      >	|                                   | security policy.                  |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Protection_Profile}         | An implementation-independent set |
-										      >	| Protection Profile (PP)           | of security requirements for a    |
-										      >	| :::                               | category of products.             |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Protection_Profile_Configur | A comprehensive set of security   |
-										      >	| ation}                            | requirements for a product type   |
-										      >	| Protection Profile Configuration  | that consists of at least one     |
-										      >	| (PP-Configuration)                | Base-PP and at least one          |
-										      >	| :::                               | PP-Module.                        |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Protection_Profile_Module}  | An implementation-independent     |
-										      >	| Protection Profile Module         | statement of security needs for a |
-										      >	| (PP-Module)                       | TOE type complementary to one or  |
-										      >	| :::                               | more Base-PPs.                    |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Security_Assurance_Requirem | A requirement to assure the       |
-										      >	| ent}                              | security of the TOE.              |
-										      >	| Security Assurance Requirement    |                                   |
-										      >	| (SAR)                             |                                   |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Security_Functional_Require | A requirement for security        |
-										      >	| ment}                             | enforcement by the TOE.           |
-										      >	| Security Functional Requirement   |                                   |
-										      >	| (SFR)                             |                                   |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Security_Target}            | A set of implementation-dependent |
-										      >	| Security Target (ST)              | security requirements for a       |
-										      >	| :::                               | specific product.                 |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Target_of_Evaluation}       | The product under evaluation.     |
-										      >	| Target of Evaluation (TOE)        |                                   |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#TOE_Security_Functionality} | The security functionality of the |
-										      >	| TOE Security Functionality (TSF)  | product under evaluation.         |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#TOE_Summary_Specification}  | A description of how a TOE        |
-										      >	| TOE Summary Specification (TSS)   | satisfies the SFRs in an ST.      |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >
-										      >	### 3.2.2 Technical Terms {#tech-terms .indexable data-level="3"}
-										      >
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Address_Space_Layout_Random | An anti-exploitation feature      |
-										      >	| ization}                          | which loads memory mappings into  |
-										      >	| Address Space Layout              | unpredictable locations. ASLR     |
-										      >	| Randomization (ASLR)              | makes it more difficult for an    |
-										      >	| :::                               | attacker to redirect control to   |
-										      >	|                                   | code that they have introduced    |
-										      >	|                                   | into the address space of a       |
-										      >	|                                   | process.                          |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Administrator}              | An administrator is responsible   |
-										      >	| Administrator                     | for management activities,        |
-										      >	| :::                               | including setting policies that   |
-										      >	|                                   | are applied by the enterprise on  |
-										      >	|                                   | the operating system. This        |
-										      >	|                                   | administrator could be acting     |
-										      >	|                                   | remotely through a management     |
-										      >	|                                   | server, from which the system     |
-										      >	|                                   | receives configuration policies.  |
-										      >	|                                   | An administrator can enforce      |
-										      >	|                                   | settings on the system which      |
-										      >	|                                   | cannot be overridden by           |
-										      >	|                                   | non-administrator users.          |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Application}                | Software that runs on a platform  |
-										      >	| Application (app)                 | and performs tasks on behalf of   |
-										      >	| :::                               | the user or owner of the          |
-										      >	|                                   | platform, as well as its          |
-										      >	|                                   | supporting documentation.         |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Application_Programming_Int | A specification of routines, data |
-										      >	| erface}                           | structures, object classes, and   |
-										      >	| Application Programming Interface | variables that allows an          |
-										      >	| (API)                             | application to make use of        |
-										      >	| :::                               | services provided by another      |
-										      >	|                                   | software component, such as a     |
-										      >	|                                   | library. APIs are often provided  |
-										      >	|                                   | for a set of libraries included   |
-										      >	|                                   | with the platform.                |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Credential}                 | Data that establishes the         |
-										      >	| Credential                        | identity of a user, e.g. a        |
-										      >	| :::                               | cryptographic key or password.    |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Critical_Security_Parameter | Information that is either user   |
-										      >	| s}                                | or system defined and is used to  |
-										      >	| Critical Security Parameters      | operate a cryptographic module in |
-										      >	| (CSP)                             | processing encryption functions   |
-										      >	| :::                               | including cryptographic keys and  |
-										      >	|                                   | authentication data, such as      |
-										      >	|                                   | passwords, the disclosure or      |
-										      >	|                                   | modification of which can         |
-										      >	|                                   | compromise the security of a      |
-										      >	|                                   | cryptographic module or the       |
-										      >	|                                   | security of the information       |
-										      >	|                                   | protected by the module.          |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#DAR_Protection}             | Countermeasures that prevent      |
-										      >	| DAR Protection                    | attackers, even those with        |
-										      >	| :::                               | physical access, from extracting  |
-										      >	|                                   | data from non-volatile storage.   |
-										      >	|                                   | Common techniques include data    |
-										      >	|                                   | encryption and wiping.            |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Data_Execution_Prevention}  | An anti-exploitation feature of   |
-										      >	| Data Execution Prevention (DEP)   | modern operating systems          |
-										      >	| :::                               | executing on modern computer      |
-										      >	|                                   | hardware, which enforces a        |
-										      >	|                                   | non-execute permission on pages   |
-										      >	|                                   | of memory. DEP prevents pages of  |
-										      >	|                                   | memory from containing both data  |
-										      >	|                                   | and instructions, which makes it  |
-										      >	|                                   | more difficult for an attacker to |
-										      >	|                                   | introduce and execute code.       |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Developer}                  | An entity that writes OS          |
-										      >	| Developer                         | software. For the purposes of     |
-										      >	| :::                               | this document, vendors and        |
-										      >	|                                   | developers are the same.          |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#General_Purpose_Operating_S | A class of OSes designed to       |
-										      >	| ystem}                            | support a wide-variety of         |
-										      >	| General Purpose Operating System  | workloads consisting of many      |
-										      >	| :::                               | concurrent applications or        |
-										      >	|                                   | services. Typical characteristics |
-										      >	|                                   | for OSes in this class include    |
-										      >	|                                   | support for third-party           |
-										      >	|                                   | applications, support for         |
-										      >	|                                   | multiple users, and security      |
-										      >	|                                   | separation between users and      |
-										      >	|                                   | their respective resources.       |
-										      >	|                                   | General Purpose Operating Systems |
-										      >	|                                   | also lack the real-time           |
-										      >	|                                   | constraint that defines Real Time |
-										      >	|                                   | Operating Systems (RTOS). RTOSes  |
-										      >	|                                   | typically power routers,          |
-										      >	|                                   | switches, and embedded devices.   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Host-based_Firewall}        | A software-based firewall         |
-										      >	| Host-based Firewall               | implementation running on the OS  |
-										      >	| :::                               | for filtering inbound and         |
-										      >	|                                   | outbound network traffic to and   |
-										      >	|                                   | from processes running on the OS. |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Operating_System}           | Software that manages physical    |
-										      >	| Operating System (OS)             | and logical resources and         |
-										      >	| :::                               | provides services for             |
-										      >	|                                   | applications. The terms *TOE* and |
-										      >	|                                   | *OS* are interchangeable in this  |
-										      >	|                                   | document.                         |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Personally_Identifiable_Inf | Any information about an          |
-										      >	| ormation}                         | individual maintained by an       |
-										      >	| Personally Identifiable           | agency, including, but not        |
-										      >	| Information (PII)                 | limited to, education, financial  |
-										      >	| :::                               | transactions, medical history,    |
-										      >	|                                   | and criminal or employment        |
-										      >	|                                   | history and information which can |
-										      >	|                                   | be used to distinguish or trace   |
-										      >	|                                   | an individual\'s identity, such   |
-										      >	|                                   | as their name, social security    |
-										      >	|                                   | number, date and place of birth,  |
-										      >	|                                   | mother\'s maiden name, biometric  |
-										      >	|                                   | records, etc., including any      |
-										      >	|                                   | other personal information which  |
-										      >	|                                   | is linked or linkable to an       |
-										      >	|                                   | individual.[\[OMB\]](#bibOMB)     |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Sensitive_Data}             | Sensitive data may include all    |
-										      >	| Sensitive Data                    | user or enterprise data or may be |
-										      >	| :::                               | specific application data such as |
-										      >	|                                   | PII, emails, messaging,           |
-										      >	|                                   | documents, calendar items, and    |
-										      >	|                                   | contacts. Sensitive data must     |
-										      >	|                                   | minimally include credentials and |
-										      >	|                                   | keys. Sensitive data shall be     |
-										      >	|                                   | identified in the OS\'s TSS by    |
-										      >	|                                   | the ST author.                    |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#User}                       | A user is subject to              |
-										      >	| User                              | configuration policies applied to |
-										      >	| :::                               | the operating system by           |
-										      >	|                                   | administrators. On some systems   |
-										      >	|                                   | under certain configurations, a   |
-										      >	|                                   | normal user can temporarily       |
-										      >	|                                   | elevate privileges to that of an  |
-										      >	|                                   | administrator. At that time, such |
-										      >	|                                   | a user should be considered an    |
-										      >	|                                   | administrator.                    |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	| ::: {#Virtual_Machine}            | Blah Blah Blah                    |
-										      >	| Virtual Machine (VM)              |                                   |
-										      >	| :::                               |                                   |
-										      >	+-----------------------------------+-----------------------------------+
-										      >	:::
-										      >
-										      >	3.3 TOE Use Cases {#s-usecases .indexable data-level="2"}
+										      >	3.2 TOE Use Cases {#s-usecases .indexable data-level="2"}
 										      >	-----------------
 										      >
 										      >	Words
@@ -3251,7 +2984,277 @@
 										      >
 										      >	blah
 										      >
-										      >	Appendix D - Acronyms {#acronyms .indexable data-level="A"}
+										      >	Appendix D - Glossary {#a-glossary .indexable data-level="A"}
+										      >	=====================
+										      >
+										      >	::: {.no-link}
+										      >	D.1 Terms {#glossary .indexable data-level="2"}
+										      >	---------
+										      >
+										      >	The following sections list Common Criteria and technology terms used in
+										      >	this document.
+										      >
+										      >	### D.1.1 Common Criteria Terms {#cc-terms .indexable data-level="3"}
+										      >
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Assurance}                  | Grounds for confidence that a TOE |
+										      >	| Assurance                         | meets the SFRs [\[CC\]](#bibCC).  |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Base_Protection_Profile}    | Protection Profile used as a      |
+										      >	| Base Protection Profile (Base-PP) | basis to build a                  |
+										      >	| :::                               | PP-Configuration.                 |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Collaborative_Protection_Pr | A Protection Profile developed by |
+										      >	| ofile}                            | international technical           |
+										      >	| Collaborative Protection Profile  | communities and approved by       |
+										      >	| (cPP)                             | multiple schemes.                 |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Common_Criteria}            | Common Criteria for Information   |
+										      >	| Common Criteria (CC)              | Technology Security Evaluation    |
+										      >	| :::                               | (International Standard ISO/IEC   |
+										      >	|                                   | 15408).                           |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Common_Criteria_Testing_Lab | Within the context of the Common  |
+										      >	| oratory}                          | Criteria Evaluation and           |
+										      >	| Common Criteria Testing           | Validation Scheme (CCEVS), an IT  |
+										      >	| Laboratory                        | security evaluation facility      |
+										      >	| :::                               | accredited by the National        |
+										      >	|                                   | Voluntary Laboratory              |
+										      >	|                                   | Accreditation Program (NVLAP) and |
+										      >	|                                   | approved by the NIAP Validation   |
+										      >	|                                   | Body to conduct Common            |
+										      >	|                                   | Criteria-based evaluations.       |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Common_Evaluation_Methodolo | Common Evaluation Methodology for |
+										      >	| gy}                               | Information Technology Security   |
+										      >	| Common Evaluation Methodology     | Evaluation.                       |
+										      >	| (CEM)                             |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Distributed_TOE}            | A TOE composed of multiple        |
+										      >	| Distributed TOE                   | components operating as a logical |
+										      >	| :::                               | whole.                            |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Extended_Package}           | A deprecated document form for    |
+										      >	| Extended Package (EP)             | collecting SFRs that implement a  |
+										      >	| :::                               | particular protocol, technology,  |
+										      >	|                                   | or functionality. See Functional  |
+										      >	|                                   | Packages.                         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Functional_Package}         | A document that collects SFRs for |
+										      >	| Functional Package (FP)           | a particular protocol,            |
+										      >	| :::                               | technology, or functionality.     |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Operational_Environment}    | Hardware and software that are    |
+										      >	| Operational Environment (OE)      | outside the TOE boundary that     |
+										      >	| :::                               | support the TOE functionality and |
+										      >	|                                   | security policy.                  |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Protection_Profile}         | An implementation-independent set |
+										      >	| Protection Profile (PP)           | of security requirements for a    |
+										      >	| :::                               | category of products.             |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Protection_Profile_Configur | A comprehensive set of security   |
+										      >	| ation}                            | requirements for a product type   |
+										      >	| Protection Profile Configuration  | that consists of at least one     |
+										      >	| (PP-Configuration)                | Base-PP and at least one          |
+										      >	| :::                               | PP-Module.                        |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Protection_Profile_Module}  | An implementation-independent     |
+										      >	| Protection Profile Module         | statement of security needs for a |
+										      >	| (PP-Module)                       | TOE type complementary to one or  |
+										      >	| :::                               | more Base-PPs.                    |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Security_Assurance_Requirem | A requirement to assure the       |
+										      >	| ent}                              | security of the TOE.              |
+										      >	| Security Assurance Requirement    |                                   |
+										      >	| (SAR)                             |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Security_Functional_Require | A requirement for security        |
+										      >	| ment}                             | enforcement by the TOE.           |
+										      >	| Security Functional Requirement   |                                   |
+										      >	| (SFR)                             |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Security_Target}            | A set of implementation-dependent |
+										      >	| Security Target (ST)              | security requirements for a       |
+										      >	| :::                               | specific product.                 |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Target_of_Evaluation}       | The product under evaluation.     |
+										      >	| Target of Evaluation (TOE)        |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#TOE_Security_Functionality} | The security functionality of the |
+										      >	| TOE Security Functionality (TSF)  | product under evaluation.         |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#TOE_Summary_Specification}  | A description of how a TOE        |
+										      >	| TOE Summary Specification (TSS)   | satisfies the SFRs in an ST.      |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >
+										      >	### D.1.2 Technical Terms {#tech-terms .indexable data-level="3"}
+										      >
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Address_Space_Layout_Random | An anti-exploitation feature      |
+										      >	| ization}                          | which loads memory mappings into  |
+										      >	| Address Space Layout              | unpredictable locations. ASLR     |
+										      >	| Randomization (ASLR)              | makes it more difficult for an    |
+										      >	| :::                               | attacker to redirect control to   |
+										      >	|                                   | code that they have introduced    |
+										      >	|                                   | into the address space of a       |
+										      >	|                                   | process.                          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Administrator}              | An administrator is responsible   |
+										      >	| Administrator                     | for management activities,        |
+										      >	| :::                               | including setting policies that   |
+										      >	|                                   | are applied by the enterprise on  |
+										      >	|                                   | the operating system. This        |
+										      >	|                                   | administrator could be acting     |
+										      >	|                                   | remotely through a management     |
+										      >	|                                   | server, from which the system     |
+										      >	|                                   | receives configuration policies.  |
+										      >	|                                   | An administrator can enforce      |
+										      >	|                                   | settings on the system which      |
+										      >	|                                   | cannot be overridden by           |
+										      >	|                                   | non-administrator users.          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Application}                | Software that runs on a platform  |
+										      >	| Application (app)                 | and performs tasks on behalf of   |
+										      >	| :::                               | the user or owner of the          |
+										      >	|                                   | platform, as well as its          |
+										      >	|                                   | supporting documentation.         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Application_Programming_Int | A specification of routines, data |
+										      >	| erface}                           | structures, object classes, and   |
+										      >	| Application Programming Interface | variables that allows an          |
+										      >	| (API)                             | application to make use of        |
+										      >	| :::                               | services provided by another      |
+										      >	|                                   | software component, such as a     |
+										      >	|                                   | library. APIs are often provided  |
+										      >	|                                   | for a set of libraries included   |
+										      >	|                                   | with the platform.                |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Credential}                 | Data that establishes the         |
+										      >	| Credential                        | identity of a user, e.g. a        |
+										      >	| :::                               | cryptographic key or password.    |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Critical_Security_Parameter | Information that is either user   |
+										      >	| s}                                | or system defined and is used to  |
+										      >	| Critical Security Parameters      | operate a cryptographic module in |
+										      >	| (CSP)                             | processing encryption functions   |
+										      >	| :::                               | including cryptographic keys and  |
+										      >	|                                   | authentication data, such as      |
+										      >	|                                   | passwords, the disclosure or      |
+										      >	|                                   | modification of which can         |
+										      >	|                                   | compromise the security of a      |
+										      >	|                                   | cryptographic module or the       |
+										      >	|                                   | security of the information       |
+										      >	|                                   | protected by the module.          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#DAR_Protection}             | Countermeasures that prevent      |
+										      >	| DAR Protection                    | attackers, even those with        |
+										      >	| :::                               | physical access, from extracting  |
+										      >	|                                   | data from non-volatile storage.   |
+										      >	|                                   | Common techniques include data    |
+										      >	|                                   | encryption and wiping.            |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Data_Execution_Prevention}  | An anti-exploitation feature of   |
+										      >	| Data Execution Prevention (DEP)   | modern operating systems          |
+										      >	| :::                               | executing on modern computer      |
+										      >	|                                   | hardware, which enforces a        |
+										      >	|                                   | non-execute permission on pages   |
+										      >	|                                   | of memory. DEP prevents pages of  |
+										      >	|                                   | memory from containing both data  |
+										      >	|                                   | and instructions, which makes it  |
+										      >	|                                   | more difficult for an attacker to |
+										      >	|                                   | introduce and execute code.       |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Developer}                  | An entity that writes OS          |
+										      >	| Developer                         | software. For the purposes of     |
+										      >	| :::                               | this document, vendors and        |
+										      >	|                                   | developers are the same.          |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#General_Purpose_Operating_S | A class of OSes designed to       |
+										      >	| ystem}                            | support a wide-variety of         |
+										      >	| General Purpose Operating System  | workloads consisting of many      |
+										      >	| :::                               | concurrent applications or        |
+										      >	|                                   | services. Typical characteristics |
+										      >	|                                   | for OSes in this class include    |
+										      >	|                                   | support for third-party           |
+										      >	|                                   | applications, support for         |
+										      >	|                                   | multiple users, and security      |
+										      >	|                                   | separation between users and      |
+										      >	|                                   | their respective resources.       |
+										      >	|                                   | General Purpose Operating Systems |
+										      >	|                                   | also lack the real-time           |
+										      >	|                                   | constraint that defines Real Time |
+										      >	|                                   | Operating Systems (RTOS). RTOSes  |
+										      >	|                                   | typically power routers,          |
+										      >	|                                   | switches, and embedded devices.   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Host-based_Firewall}        | A software-based firewall         |
+										      >	| Host-based Firewall               | implementation running on the OS  |
+										      >	| :::                               | for filtering inbound and         |
+										      >	|                                   | outbound network traffic to and   |
+										      >	|                                   | from processes running on the OS. |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Operating_System}           | Software that manages physical    |
+										      >	| Operating System (OS)             | and logical resources and         |
+										      >	| :::                               | provides services for             |
+										      >	|                                   | applications. The terms *TOE* and |
+										      >	|                                   | *OS* are interchangeable in this  |
+										      >	|                                   | document.                         |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Personally_Identifiable_Inf | Any information about an          |
+										      >	| ormation}                         | individual maintained by an       |
+										      >	| Personally Identifiable           | agency, including, but not        |
+										      >	| Information (PII)                 | limited to, education, financial  |
+										      >	| :::                               | transactions, medical history,    |
+										      >	|                                   | and criminal or employment        |
+										      >	|                                   | history and information which can |
+										      >	|                                   | be used to distinguish or trace   |
+										      >	|                                   | an individual\'s identity, such   |
+										      >	|                                   | as their name, social security    |
+										      >	|                                   | number, date and place of birth,  |
+										      >	|                                   | mother\'s maiden name, biometric  |
+										      >	|                                   | records, etc., including any      |
+										      >	|                                   | other personal information which  |
+										      >	|                                   | is linked or linkable to an       |
+										      >	|                                   | individual.[\[OMB\]](#bibOMB)     |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Sensitive_Data}             | Sensitive data may include all    |
+										      >	| Sensitive Data                    | user or enterprise data or may be |
+										      >	| :::                               | specific application data such as |
+										      >	|                                   | PII, emails, messaging,           |
+										      >	|                                   | documents, calendar items, and    |
+										      >	|                                   | contacts. Sensitive data must     |
+										      >	|                                   | minimally include credentials and |
+										      >	|                                   | keys. Sensitive data shall be     |
+										      >	|                                   | identified in the OS\'s TSS by    |
+										      >	|                                   | the ST author.                    |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#User}                       | A user is subject to              |
+										      >	| User                              | configuration policies applied to |
+										      >	| :::                               | the operating system by           |
+										      >	|                                   | administrators. On some systems   |
+										      >	|                                   | under certain configurations, a   |
+										      >	|                                   | normal user can temporarily       |
+										      >	|                                   | elevate privileges to that of an  |
+										      >	|                                   | administrator. At that time, such |
+										      >	|                                   | a user should be considered an    |
+										      >	|                                   | administrator.                    |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	| ::: {#Virtual_Machine}            | Blah Blah Blah                    |
+										      >	| Virtual Machine (VM)              |                                   |
+										      >	| :::                               |                                   |
+										      >	+-----------------------------------+-----------------------------------+
+										      >	:::
+										      >
+										      >	Appendix E - Acronyms {#acronyms .indexable data-level="A"}
 										      >	=====================
 										      >
 										      >	  Acronym                                                                      Meanin
@@ -3334,7 +3337,7 @@
 										      >	  [[app](#abbr_app)]{#abbr_app .term}                                          [Appli
 										      >	  [[cPP](#abbr_cPP)]{#abbr_cPP .term data-plural="cPPs"}                       [Colla
 										      >
-										      >	Appendix E - Bibliography {#appendix-bibliography .indexable data-level="A"}
+										      >	Appendix F - Bibliography {#appendix-bibliography .indexable data-level="A"}
 										      >	=========================
 										      >
 										      >	+-----------------------------------+-----------------------------------+

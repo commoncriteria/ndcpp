@@ -1,0 +1,2 @@
+/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:241:14: error: element "SO" incomplete; missing required element "addressed-by"
+/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:248:14: error: element "SO" incomplete; missing required element "addressed-by"

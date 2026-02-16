@@ -615,10 +615,10 @@ function showTarget(id){
 <tr><td></td><td>2023-12-06</td><td>Released for use</td></tr>
 <tr><td>4</td><td>2025-11-25</td><td>Released for use</td></tr>
 </table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#s-ppoverview" style="text-indent:10px">1.4<span>PP Overview</span></a><a href="#s-usecases" style="text-indent:10px">1.5<span>TOE Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#req" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#fau" style="text-indent:20px">5.1.1<span>Security Audit (FAU)</span></a><a href="#fcs" style="text-indent:20px">5.1.2<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">5.1.3<span>Identification and Authentication (FIA)</span></a><a href="#fmt" style="text-indent:20px">5.1.4<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.5<span>Protection of the TSF (FPT)</span></a><a href="#fta" style="text-indent:20px">5.1.6<span>TOE Access (FTA)</span></a><a href="#ftp_itc" style="text-indent:20px">5.1.7<span>Trusted Channel (FTP_ITC)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.8<span>TOE Security Functional Requirements Rationale</span></a><a href="#Security_Assurance_Requirements" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#ase" style="text-indent:20px">5.2.1<span>Class ASE: Security Target</span></a><a href="#adv" style="text-indent:20px">5.2.2<span>Class ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.3<span>Class AGD: Guidance Documentation</span></a><a href="#alc" style="text-indent:20px">5.2.4<span>Class ALC: Life-cycle Support</span></a><a href="#ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
-    </span></a><a href="#fau-optional" style="text-indent:20px">A.1.1<span>Security Audit (FAU)</span></a><a href="#fco-optional" style="text-indent:20px">A.1.2<span>Communication (FCO)</span></a><a href="#fcs-optional" style="text-indent:20px">A.1.3<span>Cryptographic Support (FCS)</span></a><a href="#fia-optional" style="text-indent:20px">A.1.4<span>Identification and Authentication (FIA)</span></a><a href="#fpt-optional" style="text-indent:20px">A.1.5<span>Protection of the TSF (FPT)</span></a><a href="#ftp_itc-optional" style="text-indent:20px">A.1.6<span>Trusted Channel (FTP_ITC)</span></a><a href="#objective-reqs" style="text-indent:10px">A.2<span>Objective  Requirements
+    </span></a><a href="#fau-optional" style="text-indent:20px">A.1.1<span>Security Audit (FAU)</span></a><a href="#fco-optional" style="text-indent:20px">A.1.2<span>Communication (FCO)</span></a><a href="#fcs-optional" style="text-indent:20px">A.1.3<span>Cryptographic Support (FCS)</span></a><a href="#fpt-optional" style="text-indent:20px">A.1.4<span>Protection of the TSF (FPT)</span></a><a href="#ftp_itc-optional" style="text-indent:20px">A.1.5<span>Trusted Channel (FTP_ITC)</span></a><a href="#objective-reqs" style="text-indent:10px">A.2<span>Objective  Requirements
     </span></a><a href="#feat-based-reqs" style="text-indent:10px">A.3<span>Implementation-dependent  Requirements
     </span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix B - <span>Selection-based  Requirements
-    </span></a><a href="#fau-sel-based" style="text-indent:10px">B.1<span>Security Audit (FAU)</span></a><a href="#fcs-sel-based" style="text-indent:10px">B.2<span>Cryptographic Support (FCS)</span></a><a href="#fia-sel-based" style="text-indent:10px">B.3<span>Identification and Authentication (FIA)</span></a><a href="#fmt-sel-based" style="text-indent:10px">B.4<span>Security Management (FMT)</span></a><a href="#fpt-sel-based" style="text-indent:10px">B.5<span>Protection of the TSF (FPT)</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix C - <span>Entropy Documentation and Assessment</span></a><a href="#a-glossary" style="text-indent:0px">Appendix D - <span>Glossary</span></a><a href="#glossary" style="text-indent:10px">D.1<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">D.1.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">D.1.2<span>Technical Terms</span></a><a href="#acronyms" style="text-indent:0px">Appendix E - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix F - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
+    </span></a><a href="#fau-sel-based" style="text-indent:10px">B.1<span>Security Audit (FAU)</span></a><a href="#fcs-sel-based" style="text-indent:10px">B.2<span>Cryptographic Support (FCS)</span></a><a href="#fmt-sel-based" style="text-indent:10px">B.3<span>Security Management (FMT)</span></a><a href="#fpt-sel-based" style="text-indent:10px">B.4<span>Protection of the TSF (FPT)</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix C - <span>Entropy Documentation and Assessment</span></a><a href="#a-glossary" style="text-indent:0px">Appendix D - <span>Glossary</span></a><a href="#glossary" style="text-indent:10px">D.1<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">D.1.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">D.1.2<span>Technical Terms</span></a><a href="#acronyms" style="text-indent:0px">Appendix E - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix F - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
@@ -778,7 +778,18 @@ users of the same system.</dd></dl>
       <h3 id="fau" class="indexable" data-level="3">5.1.1 Security Audit (FAU)</h3>
         
         <div class="comp" id="FAU_GEN.1"><h4>FAU_GEN.1 Audit data generation</h4>
-          <div class="element"><div class="reqid" id="FAU_GEN.1.1"><a href="#FAU_GEN.1.1" class="abbr">FAU_GEN.1.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall  [<b>selection</b>: <i id="dummy">Dummy</i>, <i id="fau_gen.1.1_1">Other</i>]</div></div>
+          <div class="element"><div class="reqid" id="FAU_GEN.1.1"><a href="#FAU_GEN.1.1" class="abbr">FAU_GEN.1.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to generate audit data of the following auditable events:  [<b>selection</b>: <i id="dummy">Dummy</i>, <i id="fau_gen.1.1_1">Other</i>]<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">Words</p>
+            </span></div></div></div>
+          <div class="element"><div class="reqid" id="FAU_GEN.1.2"><a href="#FAU_GEN.1.2" class="abbr">FAU_GEN.1.2</a></div><div class="reqdesc">
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall record within the audit data at least the following information:</p>
+            <div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">Words</p>
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_GEN.1">FAU_GEN.1</a></div>
               Something
@@ -788,7 +799,11 @@ users of the same system.</dd></dl>
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
         
         <div class="comp" id="FAU_GEN.2"><h4>FAU_GEN.2 User identity association</h4>
-          <div class="element"><div class="reqid" id="FAU_GEN.2.1"><a href="#FAU_GEN.2.1" class="abbr">FAU_GEN.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FAU_GEN.2.1"><a href="#FAU_GEN.2.1" class="abbr">FAU_GEN.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">Words</p>
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_GEN.2">FAU_GEN.2</a></div>
               Something
@@ -796,6 +811,8 @@ users of the same system.</dd></dl>
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+        
+        
         
         
         
@@ -824,35 +841,41 @@ users of the same system.</dd></dl>
       
       <h3 id="fcs" class="indexable" data-level="3">5.1.2 Cryptographic Support (FCS)</h3>
         
-        <div class="comp" id="FCS_CKM.1"><h4>FCS_CKM.1 Cryptographic Key Generation (Refinement)</h4>
-          <div class="element"><div class="reqid" id="FCS_CKM.1.1"><a href="#FCS_CKM.1.1" class="abbr">FCS_CKM.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+        <div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation - Asymmetric Key</h4>
+          <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1">FCS_CKM.1</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a></div>
               Something
               
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
         
-        <div class="comp" id="FCS_CKM.2"><h4>FCS_CKM.2 Cryptographic Key Establishment (Refinement)</h4>
-          <div class="element"><div class="reqid" id="FCS_CKM.2.1"><a href="#FCS_CKM.2.1" class="abbr">FCS_CKM.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+        
+        
+        <div class="comp" id="FCS_CKM.6"><h4>FCS_CKM.6 Timing and Event of Cryptographic Key Destruction</h4>
+          <div class="element"><div class="reqid" id="FCS_CKM.6.1"><a href="#FCS_CKM.6.1" class="abbr">FCS_CKM.6.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.2">FCS_CKM.2</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.6">FCS_CKM.6</a></div>
               Something
               
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
         
-        <div class="comp" id="FCS_CKM.4"><h4>FCS_CKM.4 Cryptographic Key Destruction</h4>
-          <div class="element"><div class="reqid" id="FCS_CKM.4.1"><a href="#FCS_CKM.4.1" class="abbr">FCS_CKM.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+        <div class="comp" id="FCS_CKM_EXT.7"><h4>FCS_CKM_EXT.7 Cryptographic Key Agreement</h4>
+          <div class="element"><div class="reqid" id="FCS_CKM_EXT.7.1"><a href="#FCS_CKM_EXT.7.1" class="abbr">FCS_CKM_EXT.7.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.4">FCS_CKM.4</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM_EXT.7">FCS_CKM_EXT.7</a></div>
               Something
               
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+        
+        
+        
+        
         
         <div class="comp" id="FCS_COP.1/DataEncryption"><h4>FCS_COP.1/DataEncryption Cryptographic Operation (AES Data Encryption/Decryption)</h4>
           <div class="element"><div class="reqid" id="FCS_COP.1.1/DataEncryption"><a href="#FCS_COP.1.1/DataEncryption" class="abbr">FCS_COP.1.1/DataEncryption</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -884,7 +907,11 @@ users of the same system.</dd></dl>
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
         
-        <div class="comp" id="FCS_COP.1/SigGen"><h4>FCS_COP.1/SigGen Cryptographic Operation (Signature Generation and Verification)</h4>
+        
+        
+        
+        
+        <div class="comp" id="FCS_COP.1/SigGen"><h4>FCS_COP.1/SigGen Cryptographic Operation - Signature Generation</h4>
           <div class="element"><div class="reqid" id="FCS_COP.1.1/SigGen"><a href="#FCS_COP.1.1/SigGen" class="abbr">FCS_COP.1.1/SigGen</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></div>
@@ -894,6 +921,9 @@ users of the same system.</dd></dl>
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
         
+        <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div>
         
         
         
@@ -903,24 +933,15 @@ users of the same system.</dd></dl>
         
         
         
-        
-        
-        
-        
-        
-        <div class="comp" id="FCS_RBG_EXT.1"><h4>FCS_RBG_EXT.1 Random Bit Generation</h4>
-          <div class="element"><div class="reqid" id="FCS_RBG_EXT.1.1"><a href="#FCS_RBG_EXT.1.1" class="abbr">FCS_RBG_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+        <div class="comp" id="FCS_RBG.1"><h4>FCS_RBG.1 Random Bit Generation</h4>
+          <div class="element"><div class="reqid" id="FCS_RBG.1.1"><a href="#FCS_RBG.1.1" class="abbr">FCS_RBG.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_RBG_EXT.1">FCS_RBG_EXT.1</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_RBG.1">FCS_RBG.1</a></div>
               Something
               
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
-        
-        
-        
-        
         
         
         
@@ -953,20 +974,14 @@ users of the same system.</dd></dl>
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
         
+        <div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4>
+          <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.1"><a href="#FIA_PSK_EXT.1.1" class="abbr">FIA_PSK_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div>
+        
         <div class="comp" id="FIA_UAU.7"><h4>FIA_UAU.7 Protected Authentication Feedback</h4>
           <div class="element"><div class="reqid" id="FIA_UAU.7.1"><a href="#FIA_UAU.7.1" class="abbr">FIA_UAU.7.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_UAU.7">FIA_UAU.7</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
-        
-        <div class="comp" id="FIA_UAU_EXT.2"><h4>FIA_UAU_EXT.2 Password-based Authentication Mechanism</h4>
-          <div class="element"><div class="reqid" id="FIA_UAU_EXT.2.1"><a href="#FIA_UAU_EXT.2.1" class="abbr">FIA_UAU_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_UAU_EXT.2">FIA_UAU_EXT.2</a></div>
               Something
               
               
@@ -982,14 +997,6 @@ users of the same system.</dd></dl>
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
-        
-        
-        
-        
-        
-        
-        
-        
       
       
       <h3 id="fmt" class="indexable" data-level="3">5.1.4 Security Management (FMT)</h3>
@@ -1636,26 +1643,26 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
 If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of these requirements, the vendor must either add the related <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> or disable the functionality for the
 	  evaluated configuration. 
   <h2 id="optional-reqs" class="indexable" data-level="2">A.1 Strictly Optional  Requirements
-    </h2><h3 id="fau-optional" class="indexable" data-level="3">A.1.1 Security Audit (FAU)</h3><div class="comp" id="FAU_STG.1"><h4>FAU_STG.1 Protected Audit Trail Storage</h4>
-          <div class="element"><div class="reqid" id="FAU_STG.1.1"><a href="#FAU_STG.1.1" class="abbr">FAU_STG.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+    </h2><h3 id="fau-optional" class="indexable" data-level="3">A.1.1 Security Audit (FAU)</h3><div class="comp" id="FAU_STG.2"><h4>FAU_STG.2 Protected Audit Data Storage</h4>
+          <div class="element"><div class="reqid" id="FAU_STG.2.1"><a href="#FAU_STG.2.1" class="abbr">FAU_STG.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG.1">FAU_STG.1</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG.2">FAU_STG.2</a></div>
               Something
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.2/LocSpace"><h4>FAU_STG_EXT.2/LocSpace Protected Audit Event Storage</h4>
-          <div class="element"><div class="reqid" id="FAU_STG_EXT.2.1/LocSpace"><a href="#FAU_STG_EXT.2.1/LocSpace" class="abbr">FAU_STG_EXT.2.1/LocSpace</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.2"><h4>FAU_STG_EXT.2 Counting Lost Audit Data</h4>
+          <div class="element"><div class="reqid" id="FAU_STG_EXT.2.1"><a href="#FAU_STG_EXT.2.1" class="abbr">FAU_STG_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG_EXT.2/LocSpace">FAU_STG_EXT.2/LocSpace</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG_EXT.2">FAU_STG_EXT.2</a></div>
               Something
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.3/LocSpace"><h4>FAU_STG_EXT.3/LocSpace Action in Case of Possible Audit Data Loss</h4>
-          <div class="element"><div class="reqid" id="FAU_STG_EXT.3.1/LocSpace"><a href="#FAU_STG_EXT.3.1/LocSpace" class="abbr">FAU_STG_EXT.3.1/LocSpace</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.3"><h4>FAU_STG_EXT.3 Action in Case of Possible Audit Data Loss</h4>
+          <div class="element"><div class="reqid" id="FAU_STG_EXT.3.1"><a href="#FAU_STG_EXT.3.1" class="abbr">FAU_STG_EXT.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG_EXT.3/LocSpace">FAU_STG_EXT.3/LocSpace</a></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG_EXT.3">FAU_STG_EXT.3</a></div>
               Something
               
               
@@ -1668,47 +1675,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.3 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_DTLSC_EXT.2"><h4>FCS_DTLSC_EXT.2 DTLS Client Support for Mutual Authentication</h4>
-          <div class="element"><div class="reqid" id="FCS_DTLSC_EXT.2.1"><a href="#FCS_DTLSC_EXT.2.1" class="abbr">FCS_DTLSC_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_DTLSC_EXT.2">FCS_DTLSC_EXT.2</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_DTLSS_EXT.2"><h4>FCS_DTLSS_EXT.2 DTLS Server Support for Mutual Authentication</h4>
-          <div class="element"><div class="reqid" id="FCS_DTLSS_EXT.2.1"><a href="#FCS_DTLSS_EXT.2.1" class="abbr">FCS_DTLSS_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_DTLSS_EXT.2">FCS_DTLSS_EXT.2</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_TLSC_EXT.2"><h4>FCS_TLSC_EXT.2 TLS Client Support for Mutual Authentication</h4>
-          <div class="element"><div class="reqid" id="FCS_TLSC_EXT.2.1"><a href="#FCS_TLSC_EXT.2.1" class="abbr">FCS_TLSC_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_TLSC_EXT.2">FCS_TLSC_EXT.2</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_TLSS_EXT.2"><h4>FCS_TLSS_EXT.2 TLS Server Support for Mutual Authentication</h4>
-          <div class="element"><div class="reqid" id="FCS_TLSS_EXT.2.1"><a href="#FCS_TLSS_EXT.2.1" class="abbr">FCS_TLSS_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_TLSS_EXT.2">FCS_TLSS_EXT.2</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="fia-optional" class="indexable" data-level="3">A.1.4 Identification and Authentication (FIA)</h3><div class="comp" id="FIA_X509_EXT.1/ITT"><h4>FIA_X509_EXT.1/ITT Certificate Validation</h4>
-          <div class="element"><div class="reqid" id="FIA_X509_EXT.1.1/ITT"><a href="#FIA_X509_EXT.1.1/ITT" class="abbr">FIA_X509_EXT.1.1/ITT</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_X509_EXT.1/ITT">FIA_X509_EXT.1/ITT</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="fpt-optional" class="indexable" data-level="3">A.1.5 Protection of the TSF (FPT)</h3><div class="comp" id="FPT_ITT.1"><h4>FPT_ITT.1 Basic internal TSF data transfer protection (Refinement)</h4>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.3 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_CKM.2"><h4>FCS_CKM.2 Cryptographic Key Distribution</h4>
+          <div class="element"><div class="reqid" id="FCS_CKM.2.1"><a href="#FCS_CKM.2.1" class="abbr">FCS_CKM.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><h3 id="fpt-optional" class="indexable" data-level="3">A.1.4 Protection of the TSF (FPT)</h3><div class="comp" id="FPT_ITT.1"><h4>FPT_ITT.1 Basic internal TSF data transfer protection (Refinement)</h4>
           <div class="element"><div class="reqid" id="FPT_ITT.1.1"><a href="#FPT_ITT.1.1" class="abbr">FPT_ITT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_ITT.1">FPT_ITT.1</a></div>
@@ -1716,7 +1685,7 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="ftp_itc-optional" class="indexable" data-level="3">A.1.6 Trusted Channel (FTP_ITC)</h3><div class="comp" id="FTP_TRP.1/Join"><h4>FTP_TRP.1/Join Trusted Path (Refinement)</h4>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="ftp_itc-optional" class="indexable" data-level="3">A.1.5 Trusted Channel (FTP_ITC)</h3><div class="comp" id="FTP_TRP.1/Join"><h4>FTP_TRP.1/Join Trusted Path (Refinement)</h4>
           <div class="element"><div class="reqid" id="FTP_TRP.1.1/Join"><a href="#FTP_TRP.1.1/Join" class="abbr">FTP_TRP.1.1/Join</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FTP_TRP.1/Join">FTP_TRP.1/Join</a></div>
@@ -1749,7 +1718,10 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.4"><h4>FAU_STG_EXT.4 Protected Local Audit Event Storage for Distributed TOEs</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_SAR.1"><h4>FAU_SAR.1 Audit Review</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FAU_STG_EXT.1">FAU_STG_EXT.1</a></i></b></li></ul></div>
+          
+          <div class="element"><div class="reqid" id="FAU_SAR.1.1"><a href="#FAU_SAR.1.1" class="abbr">FAU_SAR.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FAU_STG_EXT.4"><h4>FAU_STG_EXT.4 Protected Local Audit Event Storage for Distributed TOEs</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
            </i></b></div>
           
@@ -1771,40 +1743,25 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fcs-sel-based" class="indexable" data-level="2">B.2 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_DTLSC_EXT.1"><h4>FCS_DTLSC_EXT.1 DTLS Client Support without Authentication</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fcs-sel-based" class="indexable" data-level="2">B.2 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_COP.1/AEAD"><h4>FCS_COP.1/AEAD Cryptographic Operation - Authenticated Encryption with Associated Data</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_COP.1/DataEncryption">FCS_COP.1/DataEncryption</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_DTLSC_EXT.1.1"><a href="#FCS_DTLSC_EXT.1.1" class="abbr">FCS_DTLSC_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/AEAD"><a href="#FCS_COP.1.1/AEAD" class="abbr">FCS_COP.1.1/AEAD</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_COP.1/CMAC"><h4>FCS_COP.1/CMAC Cryptographic Operation - CMAC</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_NTP_EXT.1">FCS_NTP_EXT.1</a></i></b></li></ul></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_DTLSC_EXT.1">FCS_DTLSC_EXT.1</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_DTLSS_EXT.1"><h4>FCS_DTLSS_EXT.1 DTLS Server Support without Authentication</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/CMAC"><a href="#FCS_COP.1.1/CMAC" class="abbr">FCS_COP.1.1/CMAC</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_COP.1/KeyEncap"><h4>FCS_COP.1/KeyEncap Cryptographic Operation - Key Encapsulation</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_CKM.2">FCS_CKM.2</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_DTLSS_EXT.1.1"><a href="#FCS_DTLSS_EXT.1.1" class="abbr">FCS_DTLSS_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyEncap"><a href="#FCS_COP.1.1/KeyEncap" class="abbr">FCS_COP.1.1/KeyEncap</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_COP.1/KeyWrap"><h4>FCS_COP.1/KeyWrap Cryptographic Operation - Key Wrapping</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_CKM.2">FCS_CKM.2</a></i></b></li></ul></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_DTLSS_EXT.1">FCS_DTLSS_EXT.1</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_HTTPS_EXT.1"><h4>FCS_HTTPS_EXT.1 HTTPS Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyWrap"><a href="#FCS_COP.1.1/KeyWrap" class="abbr">FCS_COP.1.1/KeyWrap</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_COP.1/DataEncryption">FCS_COP.1/DataEncryption</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_HTTPS_EXT.1.1"><a href="#FCS_HTTPS_EXT.1.1" class="abbr">FCS_HTTPS_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/SKC"><a href="#FCS_COP.1.1/SKC" class="abbr">FCS_COP.1.1/SKC</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_COP.1/XOF"><h4>FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></i></b></li></ul></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_HTTPS_EXT.1">FCS_HTTPS_EXT.1</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_IPSEC_EXT.1"><h4>FCS_IPSEC_EXT.1 IPsec Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_IPSEC_EXT.1"><h4>FCS_IPSEC_EXT.1 IPsec Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
            </i></b></div>
           
@@ -1826,84 +1783,19 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_SSHC_EXT.1"><h4>FCS_SSHC_EXT.1 SSH Client Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_RBG.2"><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_SSHC_EXT.1.1"><a href="#FCS_SSHC_EXT.1.1" class="abbr">FCS_SSHC_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.2.1"><a href="#FCS_RBG.2.1" class="abbr">FCS_RBG.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_RBG.3"><h4>FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_SSHC_EXT.1">FCS_SSHC_EXT.1</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_SSHS_EXT.1"><h4>FCS_SSHS_EXT.1 SSH Server Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_RBG.4"><h4>FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_SSHS_EXT.1.1"><a href="#FCS_SSHS_EXT.1.1" class="abbr">FCS_SSHS_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><div class="comp" id="FCS_RBG.5"><h4>FCS_RBG.5 Random Bit Generation (Combining Entropy Sources)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_SSHS_EXT.1">FCS_SSHS_EXT.1</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_TLSC_EXT.1"><h4>FCS_TLSC_EXT.1 TLS Client Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
-          
-          <div class="element"><div class="reqid" id="FCS_TLSC_EXT.1.1"><a href="#FCS_TLSC_EXT.1.1" class="abbr">FCS_TLSC_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_TLSC_EXT.1">FCS_TLSC_EXT.1</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_TLSS_EXT.1"><h4>FCS_TLSS_EXT.1 TLS Server Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
-          
-          <div class="element"><div class="reqid" id="FCS_TLSS_EXT.1.1"><a href="#FCS_TLSS_EXT.1.1" class="abbr">FCS_TLSS_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_TLSS_EXT.1">FCS_TLSS_EXT.1</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fia-sel-based" class="indexable" data-level="2">B.3 Identification and Authentication (FIA)</h2><div class="comp" id="FIA_X509_EXT.1/Rev"><h4>FIA_X509_EXT.1/Rev X.509 Certificate Validation</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
-          
-          <div class="element"><div class="reqid" id="FIA_X509_EXT.1.1/Rev"><a href="#FIA_X509_EXT.1.1/Rev" class="abbr">FIA_X509_EXT.1.1/Rev</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_X509_EXT.1/Rev">FIA_X509_EXT.1/Rev</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FIA_X509_EXT.2"><h4>FIA_X509_EXT.2 X.509 Certificate Authentication</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
-          
-          <div class="element"><div class="reqid" id="FIA_X509_EXT.2.1"><a href="#FIA_X509_EXT.2.1" class="abbr">FIA_X509_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_X509_EXT.2">FIA_X509_EXT.2</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FIA_X509_EXT.3"><h4>FIA_X509_EXT.3 X.509 Certificate Requests</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
-          
-          <div class="element"><div class="reqid" id="FIA_X509_EXT.3.1"><a href="#FIA_X509_EXT.3.1" class="abbr">FIA_X509_EXT.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
-          
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_X509_EXT.3">FIA_X509_EXT.3</a></div>
-              Something
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fmt-sel-based" class="indexable" data-level="2">B.4 Security Management (FMT)</h2><div class="comp" id="FMT_MOF.1/AutoUpdate"><h4>FMT_MOF.1/AutoUpdate Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+        </div><h2 id="fmt-sel-based" class="indexable" data-level="2">B.3 Security Management (FMT)</h2><div class="comp" id="FMT_MOF.1/AutoUpdate"><h4>FMT_MOF.1/AutoUpdate Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
            </i></b></div>
           
@@ -1944,7 +1836,7 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.5 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.4 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
            <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
            </i></b></div>
           

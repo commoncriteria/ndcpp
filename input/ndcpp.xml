@@ -282,7 +282,10 @@ users of the same system.</description>
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TOE shall  <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:  <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
+            <note role="application">
+              <h:p style="text-align: left;">Words</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -290,12 +293,23 @@ users of the same system.</description>
               <Tests/>
             </aactivity>
           </f-element>
+          <f-element id="fau-gen-1e2">
+            <title>
+              <h:p style="text-align: left;">The TSF shall record within the audit data at least the following information:</h:p>
+            </title>
+            <note role="application">
+              <h:p style="text-align: left;">Words</h:p>
+            </note>
+          </f-element>
           <audit-event/>
         </f-component>
         <!-- FAU_GEN.2 User identity association -->
         <f-component cc-id="fau_gen.2" id="fau-gen-2" name="User identity association">
           <f-element id="fau-gen-2-1">
             <title>The TOE shall</title>
+            <note role="application">
+              <h:p style="text-align: left;">Words</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -319,9 +333,16 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FAU_STG.1 Protected Audit Trail Storage -->
-        <f-component cc-id="fau_stg.1" id="fau-stg-1" name="Protected Audit Trail Storage" status="optional">
-          <f-element id="fau-stg-1-1">
+        <!-- FAU_SAR.1 Audit Review -->
+        <f-component cc-id="fau_sar.1" id="fau-sar-1" name="Audit Review" status="sel-based">
+          <depends on-incl="fau-stg-ext-1"/>
+          <f-element id="fau-sar-1-1">
+            <title>The TSF shall</title>
+          </f-element>
+        </f-component>
+        <!-- FAU_STG.2 Protected Audit Data Storage -->
+        <f-component cc-id="fau_stg.2" id="fau-stg-2" name="Protected Audit Data Storage" status="optional">
+          <f-element id="fau-stg-2-1">
             <title>The TOE shall</title>
             <aactivity>
               Something
@@ -345,9 +366,9 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FAU_STG_EXT.2/LocSpace Protected Audit Event Storage -->
-        <f-component cc-id="fau_stg_ext.2" id="fau-stg-ext-2-locspace" name="Protected Audit Event Storage" iteration="LocSpace" status="optional">
-          <f-element id="fau-stg-ext-2-ls-1">
+        <!-- FAU_STG_EXT.2 Counting Lost Audit Data -->
+        <f-component cc-id="fau_stg_ext.2" id="fau-stg-ext-2" name="Counting Lost Audit Data" status="optional">
+          <f-element id="fau-stg-ext-2-1">
             <title>The TOE shall</title>
             <aactivity>
               Something
@@ -358,9 +379,9 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FAU_STG_EXT.3/LocSpace Action in Case of Possible Audit Data Loss -->
-        <f-component cc-id="fau_stg_ext.3" id="fau-stg-ext-3-locspace" name="Action in Case of Possible Audit Data Loss" iteration="LocSpace" status="optional">
-          <f-element id="fau-stg-ext-3-ls-1">
+        <!-- FAU_STG_EXT.3 Action in Case of Possible Audit Data Loss -->
+        <f-component cc-id="fau_stg_ext.3" id="fau-stg-ext-3" name="Action in Case of Possible Audit Data Loss" status="optional">
+          <f-element id="fau-stg-ext-3-1">
             <title>The TOE shall</title>
             <aactivity>
               Something
@@ -418,9 +439,9 @@ users of the same system.</description>
       </section>
       <!-- 5.1.3 Cryptographic Support (FCS) -->
       <section id="fcs" title="Cryptographic Support (FCS)">
-        <!-- FCS_CKM.1 Cryptographic Key Generation (Refinement) -->
-        <f-component cc-id="fcs_ckm.1" id="fcs-ckm-1" name="Cryptographic Key Generation (Refinement)">
-          <f-element id="fcs-ckm-1-1">
+        <!-- FCS_CKM.1/AKG Cryptographic Key Generation - Asymmetric Key -->
+        <f-component cc-id="fcs_ckm.1" id="fcs-ckm-1-akg" name="Cryptographic Key Generation - Asymmetric Key" iteration="AKG">
+          <f-element id="fcs-ckm-1-1-akg">
             <title>The TOE shall</title>
             <aactivity>
               Something
@@ -431,9 +452,15 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FCS_CKM.2 Cryptographic Key Establishment (Refinement) -->
-        <f-component cc-id="fcs_ckm.2" id="fcs-ckm-2" name="Cryptographic Key Establishment (Refinement)">
+        <!-- FCS_CKM.2 Cryptographic Key Distribution -->
+        <f-component cc-id="fcs_ckm.2" id="fcs-ckm-2" name="Cryptographic Key Distribution" status="optional">
           <f-element id="fcs-ckm-2-1">
+            <title>The TSF shall</title>
+          </f-element>
+        </f-component>
+        <!-- FCS_CKM.6 Timing and Event of Cryptographic Key Destruction -->
+        <f-component cc-id="fcs_ckm.6" id="fcs-ckm-6" name="Timing and Event of Cryptographic Key Destruction">
+          <f-element id="fcs-ckm-6-1">
             <title>The TOE shall</title>
             <aactivity>
               Something
@@ -444,9 +471,9 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FCS_CKM.4 Cryptographic Key Destruction -->
-        <f-component cc-id="fcs_ckm.4" id="fcs-ckm-4" name="Cryptographic Key Destruction">
-          <f-element id="fcs-ckm-4-1">
+        <!-- FCS_CKM_EXT.7 Cryptographic Key Agreement -->
+        <f-component cc-id="fcs_ckm_ext.7" id="fcs-ckm-ext-7" name="Cryptographic Key Agreement">
+          <f-element id="fcs-ckm-7-1">
             <title>The TOE shall</title>
             <aactivity>
               Something
@@ -456,6 +483,20 @@ users of the same system.</description>
             </aactivity>
           </f-element>
           <audit-event/>
+        </f-component>
+        <!-- FCS_COP.1/AEAD Cryptographic Operation - Authenticated Encryption with Associated Data -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-aead" name="Cryptographic Operation - Authenticated Encryption with Associated Data" iteration="AEAD" status="sel-based">
+          <depends on-incl="fcs-cop-1-dataencryption"/>
+          <f-element id="gcs-cop-1-1-aead">
+            <title>The TSF shall</title>
+          </f-element>
+        </f-component>
+        <!-- FCS_COP.1/CMAC Cryptographic Operation - CMAC -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-cmac" name="Cryptographic Operation - CMAC" iteration="CMAC" status="sel-based">
+          <depends on-incl="fcs-ntp-ext-1"/>
+          <f-element id="fcs-cop-1-1-cmac">
+            <title>The TSF shall</title>
+          </f-element>
         </f-component>
         <!-- FCS_COP.1/DataEncryption Cryptographic Operation (AES Data Encryption/Decryption) -->
         <f-component cc-id="fcs_cop.1" id="fcs-cop-1-dataencryption" name="Cryptographic Operation (AES Data Encryption/Decryption)" iteration="DataEncryption">
@@ -496,8 +537,22 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FCS_COP.1/SigGen Cryptographic Operation (Signature Generation and Verification) -->
-        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-siggen" name="Cryptographic Operation (Signature Generation and Verification)" iteration="SigGen">
+        <!-- FCS_COP.1/KeyEncap Cryptographic Operation - Key Encapsulation -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-keyencap" name="Cryptographic Operation - Key Encapsulation" iteration="KeyEncap" status="sel-based">
+          <depends on-incl="fcs-ckm-2"/>
+          <f-element id="fcs-cop-1-1-keyencap">
+            <title>The TSF shall</title>
+          </f-element>
+        </f-component>
+        <!-- FCS_COP.1/KeyWrap Cryptographic Operation - Key Wrapping -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-keywrap" name="Cryptographic Operation - Key Wrapping" iteration="KeyWrap" status="sel-based">
+          <depends on-incl="fcs-ckm-2"/>
+          <f-element id="fcs-cop-1-1-keywrap">
+            <title>The TSF shall</title>
+          </f-element>
+        </f-component>
+        <!-- FCS_COP.1/SigGen Cryptographic Operation - Signature Generation -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-siggen" name="Cryptographic Operation - Signature Generation" iteration="SigGen">
           <f-element id="fcs-cop-sg-1">
             <title>The TOE shall</title>
             <aactivity>
@@ -509,73 +564,25 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FCS_DTLSC_EXT.1 DTLS Client Support without Authentication -->
-        <f-component cc-id="fcs_dtlsc_ext.1" id="fcs-dtlsc-ext-1" name="DTLS Client Support without Authentication" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fcs-dtlsc-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
+        <!-- FCS_COP.1/SigVer Cryptographic Operation - Signature Verification -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-sigver" name="Cryptographic Operation - Signature Verification" iteration="SigVer">
+          <f-element id="fcs-cop-1-1-sigver">
+            <title>The TSF shall</title>
           </f-element>
-          <audit-event/>
         </f-component>
-        <!-- FCS_DTLSC_EXT.2 DTLS Client Support for Mutual Authentication -->
-        <f-component cc-id="fcs_dtlsc_ext.2" id="fcs-dtlsc-ext-2" name="DTLS Client Support for Mutual Authentication" status="optional">
-          <f-element id="fcs-dtlsc-ext-2-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
+        <!-- FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-skc" name="Cryptographic Operation - Symmetric Key Cryptography" iteration="SKC" status="sel-based">
+          <depends on-incl="fcs-cop-1-dataencryption"/>
+          <f-element id="fcs-cop-1-1-skc">
+            <title>The TSF shall</title>
           </f-element>
-          <audit-event/>
         </f-component>
-        <!-- FCS_DTLSS_EXT.1 DTLS Server Support without Authentication -->
-        <f-component cc-id="fcs_dtlss_ext.1" id="fcs-dtlss-ext-1" name="DTLS Server Support without Authentication" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fcs-dtlss-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
+        <!-- FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function -->
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-xof" name="Cryptographic Operation - Extendable-Output Function" iteration="XOF" status="sel-based">
+          <depends on-incl="fcs-cop-1-sigver"/>
+          <f-element id="fcs-cop-1-1-xof">
+            <title>The TSF shall</title>
           </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FCS_DTLSS_EXT.2 DTLS Server Support for Mutual Authentication -->
-        <f-component cc-id="fcs_dtlss_ext.2" id="fcs-dtlss-ext-2" name="DTLS Server Support for Mutual Authentication" status="optional">
-          <f-element id="fcs-dtlss-ext-2-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FCS_HTTPS_EXT.1 HTTPS Protocol -->
-        <f-component cc-id="fcs_https_ext.1" id="fcs-https-ext-1" name="HTTPS Protocol" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fcs-https-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
         </f-component>
         <!-- FCS_IPSEC_EXT.1 IPsec Protocol -->
         <f-component cc-id="fcs_ipsec_ext.1" id="fcs-ipsec-ext-1" name="IPsec Protocol" status="sel-based">
@@ -605,9 +612,9 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FCS_RBG_EXT.1 Random Bit Generation -->
-        <f-component cc-id="fcs_rbg_ext.1" id="fcs-rbg-ext-1" name="Random Bit Generation">
-          <f-element id="fcs-rbg-ext-1-1">
+        <!-- FCS_RBG.1 Random Bit Generation -->
+        <f-component cc-id="fcs_rbg.1" id="fcs-rbg-1" name="Random Bit Generation">
+          <f-element id="fcs-rbg-1-1">
             <title>The TOE shall</title>
             <aactivity>
               Something
@@ -618,87 +625,33 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FCS_SSHC_EXT.1 SSH Client Protocol -->
-        <f-component cc-id="fcs_sshc_ext.1" id="fcs-sshc-ext-1" name="SSH Client Protocol" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fcs-sshc-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
+        <!-- FCS_RBG.2 Random Bit Generation (External Seeding) -->
+        <f-component cc-id="fcs_rbg.2" id="fcs-rbg-2" name="Random Bit Generation (External Seeding)" status="sel-based">
+          <depends on-incl="fcs-rbg-1"/>
+          <f-element id="fcs-rbg-2-1">
+            <title>The TSF shall</title>
           </f-element>
-          <audit-event/>
         </f-component>
-        <!-- FCS_SSHS_EXT.1 SSH Server Protocol -->
-        <f-component cc-id="fcs_sshs_ext.1" id="fcs-sshs-ext-1" name="SSH Server Protocol" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fcs-sshs-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
+        <!-- FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source) -->
+        <f-component cc-id="fcs_rbg.3" id="fcs-rbg-3" name="Random Bit Generation (Internal Seeding - Single Source)" status="sel-based">
+          <depends on-incl="fcs-rbg-1"/>
+          <f-element id="fcs-rbg-3-1">
+            <title>The TSF shall</title>
           </f-element>
-          <audit-event/>
         </f-component>
-        <!-- FCS_TLSC_EXT.1 TLS Client Protocol -->
-        <f-component cc-id="fcs_tlsc_ext.1" id="fcs-tlsc-ext-1" name="TLS Client Protocol" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fcs-tlsc-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
+        <!-- FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources) -->
+        <f-component cc-id="fcs_rbg.4" id="fcs-rbg-4" name="Random Bit Generation (Internal Seeding - Multiple Sources)" status="sel-based">
+          <depends on-incl="fcs-rbg-1"/>
+          <f-element id="fcs-rbg-4-1">
+            <title>The TSF shall</title>
           </f-element>
-          <audit-event/>
         </f-component>
-        <!-- FCS_TLSC_EXT.2 TLS Client Support for Mutual Authentication -->
-        <f-component cc-id="fcs_tlsc_ext.2" id="fcs-tlsc-ext-2" name="TLS Client Support for Mutual Authentication" status="optional">
-          <f-element id="fcs-tlsc-ext-2-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
+        <!-- FCS_RBG.5 Random Bit Generation (Combining Entropy Sources) -->
+        <f-component cc-id="fcs_rbg.5" id="fcs-rbg-5" name="Random Bit Generation (Combining Entropy Sources)" status="sel-based">
+          <depends on-incl="fcs-rbg-1"/>
+          <f-element id="fcs-rbg-5-1">
+            <title>The TSF shall</title>
           </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FCS_TLSS_EXT.1 TLS Server Protocol -->
-        <f-component cc-id="fcs_tlss_ext.1" id="fcs-tlss-ext-1" name="TLS Server Protocol" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fcs-tlss-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FCS_TLSS_EXT.2 TLS Server Support for Mutual Authentication -->
-        <f-component cc-id="fcs_tlss_ext.2" id="fcs-tlss-ext-2" name="TLS Server Support for Mutual Authentication" status="optional">
-          <f-element id="fcs-tlss-ext-2-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
         </f-component>
       </section>
       <!-- 5.1.4 Identification and Authentication (FIA) -->
@@ -729,6 +682,12 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
+        <!-- FIA_PSK_EXT.1 Pre-Shared Key Composition -->
+        <f-component cc-id="fia_psk_ext.1" id="fia-psk-ext-1" name="Pre-Shared Key Composition">
+          <f-element id="fia-psk-ext-1-1">
+            <title>The TSF shall</title>
+          </f-element>
+        </f-component>
         <!-- FIA_UAU.7 Protected Authentication Feedback -->
         <f-component cc-id="fia_uau.7" id="fia-uau-7" name="Protected Authentication Feedback">
           <f-element id="fia_uau-7-1">
@@ -742,77 +701,9 @@ users of the same system.</description>
           </f-element>
           <audit-event/>
         </f-component>
-        <!-- FIA_UAU_EXT.2 Password-based Authentication Mechanism -->
-        <f-component cc-id="fia_uau_ext.2" id="fia-uau-ext-2" name="Password-based Authentication Mechanism">
-          <f-element id="fia-uau-ext-2-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
-        </f-component>
         <!-- FIA_UIA_EXT.1 User Identification and Authentication -->
         <f-component cc-id="fia_uia_ext.1" id="fia-uia-ext-1" name="User Identification and Authentication">
           <f-element id="fia-uia-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FIA_X509_EXT.1/ITT Certificate Validation -->
-        <f-component cc-id="fia_x509_ext.1" id="fia-x509-ext-1-itt" name="Certificate Validation" iteration="ITT" status="optional">
-          <f-element id="fia_x509_ext-1-1_ITT">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FIA_X509_EXT.1/Rev X.509 Certificate Validation -->
-        <f-component cc-id="fia_x509_ext.1" id="fia-x509-ext-1-rev" name="X.509 Certificate Validation" iteration="Rev" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fia-x509-ext-1-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FIA_X509_EXT.2 X.509 Certificate Authentication -->
-        <f-component cc-id="fia_x509_ext.2" id="fia-x509-ext-2" name="X.509 Certificate Authentication" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fia-x509-ext-2-1">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
-          <audit-event/>
-        </f-component>
-        <!-- FIA_X509_EXT.3 X.509 Certificate Requests -->
-        <f-component cc-id="fia_x509_ext.3" id="fia-x509-ext-3" name="X.509 Certificate Requests" status="sel-based">
-          <depends on-sel="dummy"/>
-          <f-element id="fia-x509-ext-3-1">
             <title>The TOE shall</title>
             <aactivity>
               Something

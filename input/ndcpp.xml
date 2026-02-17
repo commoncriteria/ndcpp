@@ -282,7 +282,7 @@ users of the same system.</description>
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:  <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:   <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
             <note role="application">
               <h:p style="text-align: left;">Words</h:p>
             </note>
@@ -595,6 +595,45 @@ users of the same system.</description>
               <Guidance/>
               <Tests/>
             </aactivity>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-2">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-3">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-4">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-5">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-6">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-7">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-8">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-9">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-10">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-11">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-12">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-13">
+            <title>The TSF shall</title>
+          </f-element>
+          <f-element id="fcs-ipsec-ext-1-14">
+            <title>The TSF shall</title>
           </f-element>
           <audit-event/>
         </f-component>

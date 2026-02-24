@@ -938,19 +938,5 @@
         |/f-element[1]|
         |/aactivity[1]|
         |/Tests[1]||
-* Error: Detected dangling id-reference to fcs-cop-1-dataencryption from attribute
-        on-incl/PP[1]|
-  |/sec:req[1]|
-    |/sec:SFRs[1]|
-      |/section[3]|
-        |/f-component[5]|
-        |/depends[1]||/on-incl[1]||
-* Error: Detected dangling id-reference to fcs-cop-1-dataencryption from attribute
-        on-incl/PP[1]|
-  |/sec:req[1]|
-    |/sec:SFRs[1]|
-      |/section[3]|
-        |/f-component[14]|
-        |/depends[1]||/on-incl[1]||
 * Warning: Detected 2 tech-term sections in this PP. There should be exactly 1 "tech-term" section.
       

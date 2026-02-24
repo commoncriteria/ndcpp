@@ -282,7 +282,7 @@ users of the same system.</description>
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:   <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:    <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
             <note role="application">
               <h:p style="text-align: left;">Words</h:p>
             </note>
@@ -321,7 +321,6 @@ users of the same system.</description>
         </f-component>
         <!-- FAU_GEN_EXT.1 Security Audit Generation -->
         <f-component cc-id="fau_gen_ext.1" id="fau-gen-ext-1" name="Security Audit Generation" status="sel-based">
-          <depends on-sel="dummy"/>
           <f-element id="fau-gen-ext-1-1">
             <title>The TOE shall</title>
             <aactivity>
@@ -363,6 +362,21 @@ users of the same system.</description>
               <Guidance/>
               <Tests/>
             </aactivity>
+          </f-element>
+          <f-element id="fau-stg-ext-1-2">
+            <title>The TOE shall</title>
+          </f-element>
+          <f-element id="fau-stg-ext-1-3">
+            <title>The TOE shall</title>
+          </f-element>
+          <f-element id="fau-stg-ext-1-4">
+            <title>The TOE shall</title>
+          </f-element>
+          <f-element id="fau-stg-ext-1-5">
+            <title>The TOE shall</title>
+          </f-element>
+          <f-element id="fau-stg-ext-1-6">
+            <title>The TOE shall</title>
           </f-element>
           <audit-event/>
         </f-component>
@@ -434,6 +448,12 @@ users of the same system.</description>
               <Tests/>
             </aactivity>
           </f-element>
+          <f-element id="fco-cpc-ext-1-2">
+            <title>The TOE shall</title>
+          </f-element>
+          <f-element id="fco-cpc-ext-1-3">
+            <title>The TOE shall</title>
+          </f-element>
           <audit-event/>
         </f-component>
       </section>
@@ -485,7 +505,7 @@ users of the same system.</description>
           <audit-event/>
         </f-component>
         <!-- FCS_COP.1/AEAD Cryptographic Operation - Authenticated Encryption with Associated Data -->
-        <f-component cc-id="fcs_cop.1" id="nd-fcs-cop-1-aead" name="Cryptographic Operation - Authenticated Encryption with Associated Data" iteration="AEAD" status="sel-based">
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-aead" name="Cryptographic Operation - Authenticated Encryption with Associated Data" iteration="AEAD" status="sel-based">
           <depends on-incl="fcs-cop-1-dataencryption"/>
           <f-element id="gcs-cop-1-1-aead">
             <title>The TSF shall</title>
@@ -499,7 +519,7 @@ users of the same system.</description>
           </f-element>
         </f-component>
         <!-- FCS_COP.1/DataEncryption Cryptographic Operation (AES Data Encryption/Decryption) -->
-        <f-component cc-id="fcs_cop.1" id="nd-fcs-cop-1-dataencryption" name="Cryptographic Operation (AES Data Encryption/Decryption)" iteration="DataEncryption">
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-dataencryption" name="Cryptographic Operation (AES Data Encryption/Decryption)" iteration="DataEncryption">
           <f-element id="fcs-cop-de-1">
             <title>The TOE shall</title>
             <aactivity>
@@ -585,7 +605,7 @@ users of the same system.</description>
           </f-element>
         </f-component>
         <!-- FCS_IPSEC_EXT.1 IPsec Protocol -->
-        <f-component cc-id="fcs_ipsec_ext.1" id="nd-fcs-ipsec-ext-1" name="IPsec Protocol" status="sel-based">
+        <f-component cc-id="fcs_ipsec_ext.1" id="fcs-ipsec-ext-1" name="IPsec Protocol" status="sel-based">
           <depends on-sel="dummy"/>
           <f-element id="fcs-ipsec-ext-1-1">
             <title>The TOE shall</title>
@@ -825,7 +845,7 @@ users of the same system.</description>
           <audit-event/>
         </f-component>
         <!-- FMT_MTD.1/CryptoKeys Management of TSF Data -->
-        <f-component cc-id="fmt_mtd.1" id="nd-fmt-mtd-1-cryptokeys" name="Management of TSF Data" iteration="CryptoKeys" status="sel-based">
+        <f-component cc-id="fmt_mtd.1" id="fmt-mtd-1-cryptokeys" name="Management of TSF Data" iteration="CryptoKeys" status="sel-based">
           <f-element id="fmt-mtd-ck-1">
             <title>The TOE shall</title>
             <aactivity>
@@ -1026,6 +1046,12 @@ users of the same system.</description>
               <Guidance/>
               <Tests/>
             </aactivity>
+          </f-element>
+          <f-element id="ftp-itc-1-2">
+            <title>The TOE shall</title>
+          </f-element>
+          <f-element id="ftp-itc-1-3">
+            <title>The TOE shall</title>
           </f-element>
           <audit-event/>
         </f-component>

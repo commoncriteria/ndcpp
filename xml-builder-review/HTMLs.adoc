@@ -1,3 +1,4 @@
+* https://commoncriteria.github.io/ndcpp/xml-builder-review/diff-v1.0.html[diff-v1.0.html]
 * https://commoncriteria.github.io/ndcpp/xml-builder-review/ndcpp-release-linkable.html[ndcpp-release-linkable.html]
 * https://commoncriteria.github.io/ndcpp/xml-builder-review/ndcpp-release.html[ndcpp-release.html]
 * https://commoncriteria.github.io/ndcpp/xml-builder-review/ndcpp.html[ndcpp.html]

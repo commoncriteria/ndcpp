@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html><head><title>Collaborative Protection Profile for Network Devices</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
+<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"></meta><meta content="utf-8" http-equiv="encoding"></meta><title>Collaborative Protection Profile for Network Devices</title><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script><script type="text/x-mathjax-config">
             MathJax.Hub.Config({
             extensions: ["tex2jax.js"],
             jax: ["input/TeX", "output/HTML-CSS"],
@@ -92,7 +92,9 @@ function showTarget(id){
     #toc a{
         display: block;
     }
-
+    .td-{
+        display: block;
+    }
     svg{
       width: 100%;
     }
@@ -112,8 +114,12 @@ function showTarget(id){
     .assignable-content{
       font-style: italic;
     }
-    .selection-content{
+    .selectable-content{
       font-style: italic;
+    }
+    .not-selectable-content{
+      font-style: italic;
+      text-decoration: line-through;
     }
     .refinement{
       font-weight: bold;
@@ -142,7 +148,11 @@ function showTarget(id){
        max-width: 15px;
     }
 
-
+    a.defined{
+      color: inherit;
+      text-decoration: inherit;
+    }
+      
     a {
       text-decoration: none;
       word-wrap: break-word;
@@ -247,6 +257,21 @@ function showTarget(id){
        background-color:#F4F4F4;
    }
 
+   table.ecd_heir_dep{
+       width: 100%;
+   }
+   table.ecd_heir_dep tr{
+       background-color: inherit;
+   }
+       
+   table.ecd_heir_dep tr :first-child{
+       white-space: nowrap;
+   }
+   table.ecd_heir_dep tr :last-child{
+       width: 100%;
+   }
+
+       
    .dependent{
        border: 1px solid gray;
        border-radius: 1px
@@ -328,6 +353,10 @@ function showTarget(id){
 	}
 
    
+    .comp .description{
+        padding-bottom: 20px;
+        display: block;
+    }    
    
    
           .figure{
@@ -433,7 +462,7 @@ function showTarget(id){
               margin-left:0%;
               margin-top:1em;
           }
-          .comment-aa{
+          .comment{
               background-color:beige;
               color:green;
           }
@@ -632,6 +661,12 @@ The following sections list Common Criteria and technology terms used in this do
       accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations.
     </td></tr>
 <tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation.</td></tr>
+<tr><td><div id="Direct_Rationale">Direct Rationale</div></td><td>
+		A type of Protection Profile, PP-Module, or Security Target in which the security
+		problem definition (SPD) elements are mapped directly to the SFRs and possibly to the 
+		security objectives for the operational environment. There are no security objectives
+		for the TOE.
+	</td></tr>
 <tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole.</td></tr>
 <tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
 	    or functionality. See Functional Packages.</td></tr>
@@ -651,11 +686,7 @@ The following sections list Common Criteria and technology terms used in this do
     <h2 class="indexable" data-level="2" id="TOEdescription">1.3 Compliant Targets of Evaluation</h2>
     <h2 class="indexable" data-level="2" id="s-ppoverview">1.4 PP Overview</h2>words
     <h2 class="indexable" data-level="2" id="s-usecases">1.5 TOE Use Cases</h2>Words
-  <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1><dl><dt>Conformance Statement</dt><dd>
-          An <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> must claim exact conformance to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, 
-              as defined in the <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr> addenda for Exact Conformance, Selection-based <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>, and 
-              Optional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> (dated May 2017).
-        </dd><dt>CC Conformance Claims</dt><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is conformant to Parts 2 (extended) and 3 (conformant) of Common Criteria Version 3.1, Revision 5.</dd><dt>PP Claim </dt><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not claim conformance to any Protection Profile. </dd><dt>Package Claim</dt><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>  does not claim conformance to any packages.</dd></dl><h1 class="indexable" data-level="1" id="Security_Problem_Description">3 Security Problem Description</h1>
+  <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1><h1 class="indexable" data-level="1" id="Security_Problem_Description">3 Security Problem Description</h1>
     <p>A Network Device has a network infrastructure role that it is designed to provide. In doing so,
 	the Network Device communicates with other Network Devices and other network entities (i.e.
 	entities not defined as Network Devices because they do not have an infrastructure role) over
@@ -670,79 +701,77 @@ The following sections list Common Criteria and technology terms used in this do
 	ability to self-test critical device components for failures.</p>
     
     <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>
-      <dl><dt class="threat,defined" id="T.LIMITED_PHYSICAL_ACCESS">T.LIMITED_PHYSICAL_ACCESS</dt><dd>An attacker may attempt to access data on the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> while having a limited
-            amount of time with the physical device.</dd><dt class="threat,defined" id="T.LOCAL_ATTACK">T.LOCAL_ATTACK</dt><dd>An attacker may compromise applications running on the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr>. The
+      <dl><dt class="threat defined" id="T.LIMITED_PHYSICAL_ACCESS">T.LIMITED_PHYSICAL_ACCESS</dt><dd><span class="description">An attacker may attempt to access data on the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> while having a limited
+            amount of time with the physical device.</span></dd><dt class="threat defined" id="T.LOCAL_ATTACK">T.LOCAL_ATTACK</dt><dd><span class="description">An attacker may compromise applications running on the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr>. The
             compromised application may provide maliciously formatted input to the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> through a
             variety of channels including unprivileged system calls and messaging via the
-            file system.</dd><dt class="threat,defined" id="T.NETWORK_ATTACK">T.NETWORK_ATTACK</dt><dd>An attacker is positioned on a communications channel or elsewhere on the
+            file system.</span></dd><dt class="threat defined" id="T.NETWORK_ATTACK">T.NETWORK_ATTACK</dt><dd><span class="description">An attacker is positioned on a communications channel or elsewhere on the
             network infrastructure. Attackers may engage in communications with applications and
             services running on or part of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> with the intent of compromise. Engagement may
-            consist of altering existing legitimate communications.</dd><dt class="threat,defined" id="T.NETWORK_EAVESDROP">T.NETWORK_EAVESDROP</dt><dd>An attacker is positioned on a communications channel or elsewhere on the
+            consist of altering existing legitimate communications.</span></dd><dt class="threat defined" id="T.NETWORK_EAVESDROP">T.NETWORK_EAVESDROP</dt><dd><span class="description">An attacker is positioned on a communications channel or elsewhere on the
             network infrastructure. Attackers may monitor and gain access to data exchanged between
-            applications and services that are running on or part of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr>.</dd></dl>
+            applications and services that are running on or part of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr>.</span></dd></dl>
     
     
     <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
-      <dl><dt class="assumption,defined" id="A.PLATFORM">A.PLATFORM</dt><dd>The <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> relies upon a trustworthy computing platform for
-            its execution. This underlying platform is out of scope of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</dd><dt class="assumption,defined" id="A.PROPER_ADMIN">A.PROPER_ADMIN</dt><dd>The administrator of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is not careless, willfully negligent or hostile,
-            and administers the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> within compliance of the applied enterprise security policy.</dd><dt class="assumption,defined" id="A.PROPER_USER">A.PROPER_USER</dt><dd>
+      <dl><dt class="assumption defined" id="A.PLATFORM">A.PLATFORM</dt><dd><span class="description">The <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> relies upon a trustworthy computing platform for
+            its execution. This underlying platform is out of scope of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</span></dd><dt class="assumption defined" id="A.PROPER_ADMIN">A.PROPER_ADMIN</dt><dd><span class="description">The administrator of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is not careless, willfully negligent or hostile,
+            and administers the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> within compliance of the applied enterprise security policy.</span></dd><dt class="assumption defined" id="A.PROPER_USER">A.PROPER_USER</dt><dd><span class="description">
             The user of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is not willfully negligent or hostile, and uses the
             software in compliance with the applied enterprise security policy. At the same time,
             malicious software could act
             <i>as</i>
             the user, so requirements which
             confine malicious subjects are still in scope.
-          </dd></dl>
+          </span></dd></dl>
     
     
-    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2>
+    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies.</p>
       
-      This document does not define any additional OSPs.
-    
     
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
     
     <h2 class="indexable" data-level="2" id="Security_Objectives_for_the_TOE">4.1 Security Objectives for the TOE</h2>
-      <dl><dt class="SO,defined" id="O.ACCOUNTABILITY">O.ACCOUNTABILITY</dt><dd>Conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> ensure that information exists that allows
+      <dl><dt class="SO defined" id="O.ACCOUNTABILITY">O.ACCOUNTABILITY</dt><dd><span class="description">Conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> ensure that information exists that allows
             administrators to discover unintentional issues with the configuration and operation of
             the operating system and discover its cause.  Gathering event information and immediately
             transmitting it to another system can also enable incident response in the event
-            of system compromise.</dd><dt class="SO,defined" id="O.INTEGRITY">O.INTEGRITY</dt><dd>Conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> ensure the integrity of their update
+            of system compromise.</span></dd><dt class="SO defined" id="O.INTEGRITY">O.INTEGRITY</dt><dd><span class="description">Conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> ensure the integrity of their update
             packages. <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> are seldom if ever shipped without errors, and the
             ability to deploy patches and updates with integrity is critical to enterprise network
             security. Conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> provide execution environment-based
             mitigations that increase the cost to attackers by adding complexity to the task of
-            compromising systems.</dd><dt class="SO,defined" id="O.MANAGEMENT">O.MANAGEMENT</dt><dd>To facilitate management by users and the enterprise, conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr>
+            compromising systems.</span></dd><dt class="SO defined" id="O.MANAGEMENT">O.MANAGEMENT</dt><dd><span class="description">To facilitate management by users and the enterprise, conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr>
 	    provide consistent and supported interfaces for their
             security-relevant configuration and maintenance. This includes the deployment of
             applications and application updates through the use of platform-supported deployment
             mechanisms and formats, as well as providing mechanisms for configuration and
-            application execution control.</dd><dt class="SO,defined" id="O.PROTECTED_COMMS">O.PROTECTED_COMMS</dt><dd>To address both passive (eavesdropping) and active (packet modification)
+            application execution control.</span></dd><dt class="SO defined" id="O.PROTECTED_COMMS">O.PROTECTED_COMMS</dt><dd><span class="description">To address both passive (eavesdropping) and active (packet modification)
             network attack threats, conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> provide mechanisms to create
             trusted channels for <abbr class="dyn-abbr"><a href="#abbr_CSP">CSP</a></abbr> and sensitive data. Both <abbr class="dyn-abbr"><a href="#abbr_CSP">CSP</a></abbr> and sensitive data
-            should not be exposed outside of the platform.</dd><dt class="SO,defined" id="O.PROTECTED_STORAGE">O.PROTECTED_STORAGE</dt><dd>To address the issue of loss of confidentiality of credentials in the event of
+            should not be exposed outside of the platform.</span></dd><dt class="SO defined" id="O.PROTECTED_STORAGE">O.PROTECTED_STORAGE</dt><dd><span class="description">To address the issue of loss of confidentiality of credentials in the event of
 loss of physical control of the storage medium, conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr>
 provide data-at-rest protection for credentials.
 Conformant <abbr class="dyn-abbr"><a href="#abbr_OS">OSes</a></abbr> also provide access controls which allow users to keep their files private from other
-users of the same system.</dd></dl>
+users of the same system.</span></dd></dl>
     
     
     <h2 class="indexable" data-level="2" id="SecurityObjectivesTOEorEnvironment">4.2 Security Objectives for the Operational Environment</h2>
       The following security objectives for the operational environment assist the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> in correctly providing its security functionality. These track with the assumptions about the environment.
-      <dl><dt class="SOE,defined" id="OE.PLATFORM">OE.PLATFORM</dt><dd>The <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> relies on being installed on trusted
-            hardware.</dd><dt class="SOE,defined" id="OE.PROPER_ADMIN">OE.PROPER_ADMIN</dt><dd>The administrator of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is not careless, willfully
+      <dl><dt class="SOE defined" id="OE.PLATFORM">OE.PLATFORM</dt><dd><span class="description">The <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> relies on being installed on trusted
+            hardware.</span></dd><dt class="SOE defined" id="OE.PROPER_ADMIN">OE.PROPER_ADMIN</dt><dd><span class="description">The administrator of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is not careless, willfully
             negligent or hostile, and administers the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> within compliance of the applied enterprise
-            security policy.</dd><dt class="SOE,defined" id="OE.PROPER_USER">OE.PROPER_USER</dt><dd>The user of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is not willfully negligent or hostile,
+            security policy.</span></dd><dt class="SOE defined" id="OE.PROPER_USER">OE.PROPER_USER</dt><dd><span class="description">The user of the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> is not willfully negligent or hostile,
             and uses the software within compliance of the applied enterprise security policy.
             Standard user accounts are provisioned in accordance with the least privilege model.
             Users requiring higher levels of access should have a separate account dedicated for
-            that use.</dd></dl>
+            that use.</span></dd></dl>
     
     
     <h2 id="" class="indexable,h2" data-level="2">4.3 Security Objectives Rationale</h2>   
-    This section describes how the assumptions, threats, and organizational 
-    security policies map to the security objectives.
-    <table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Threat, Assumption, or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#T.LIMITED_PHYSICAL_ACCESS">T.LIMITED_​PHYSICAL_​ACCESS</a></td><td><a href="#O.PROTECTED_STORAGE">O.PROTECTED_​STORAGE</a></td><td>The objective <a href="#O.PROTECTED_STORAGE">O.PROTECTED_STORAGE</a> protects against unauthorized attempts to              access physical storage used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr><tr class="major-row"><td rowspan="2"><a href="#T.LOCAL_ATTACK">T.LOCAL_​ATTACK</a></td><td><a href="#O.INTEGRITY">O.INTEGRITY</a></td><td>The objective <a href="#O.INTEGRITY">O.INTEGRITY</a> protects against the use of mechanisms that weaken              the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with regard to attack by other software on the              platform.</td></tr><tr><td><a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a></td><td>The objective <a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a> protects against local attacks by providing              a mechanism to report behavior that may indicate a local attack is occurring or              has occurred.</td></tr><tr class="major-row"><td rowspan="4"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a></td><td><a href="#O.PROTECTED_COMMS">O.PROTECTED_​COMMS</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.PROTECTED_COMMS">O.PROTECTED_COMMS</a> as this              provides for integrity of transmitted data.</td></tr><tr><td><a href="#O.INTEGRITY">O.INTEGRITY</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.INTEGRITY">O.INTEGRITY</a> as this provides for              integrity of software that is installed onto the system from the network.</td></tr><tr><td><a href="#O.MANAGEMENT">O.MANAGEMENT</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.MANAGEMENT">O.MANAGEMENT</a> as this provides for              the ability to configure the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> to defend against network attack.</td></tr><tr><td><a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a> as this              provides a mechanism for the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> to report behavior that may indicate a network              attack has occurred.</td></tr><tr class="major-row"><td rowspan="2"><a href="#T.NETWORK_EAVESDROP">T.NETWORK_​EAVESDROP</a></td><td><a href="#O.PROTECTED_COMMS">O.PROTECTED_​COMMS</a></td><td>The threat <a href="#T.NETWORK_EAVESDROP">T.NETWORK_EAVESDROP</a> is countered by <a href="#O.PROTECTED_COMMS">O.PROTECTED_COMMS</a> as this              provides for confidentiality of transmitted data.</td></tr><tr><td><a href="#O.MANAGEMENT">O.MANAGEMENT</a></td><td>The threat <a href="#T.NETWORK_EAVESDROP">T.NETWORK_EAVESDROP</a> is countered by <a href="#O.MANAGEMENT">O.MANAGEMENT</a> as this provides              for the ability to configure the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> to protect the confidentiality of its transmitted              data.</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PLATFORM">A.PLATFORM</a></td><td><a href="#OE.PLATFORM">OE.PLATFORM</a></td><td>The operational environment objective <a href="#OE.PLATFORM">OE.PLATFORM</a> is realized through
+		This section describes how the assumptions, threats, and organizational 
+		security policies map to the security objectives.
+	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Threat, Assumption, or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#T.LIMITED_PHYSICAL_ACCESS">T.LIMITED_​PHYSICAL_​ACCESS</a></td><td><a href="#O.PROTECTED_STORAGE">O.PROTECTED_​STORAGE</a></td><td>The objective <a href="#O.PROTECTED_STORAGE">O.PROTECTED_STORAGE</a> protects against unauthorized attempts to              access physical storage used by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr><tr class="major-row"><td rowspan="2"><a href="#T.LOCAL_ATTACK">T.LOCAL_​ATTACK</a></td><td><a href="#O.INTEGRITY">O.INTEGRITY</a></td><td>The objective <a href="#O.INTEGRITY">O.INTEGRITY</a> protects against the use of mechanisms that weaken              the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with regard to attack by other software on the              platform.</td></tr><tr><td><a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a></td><td>The objective <a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a> protects against local attacks by providing              a mechanism to report behavior that may indicate a local attack is occurring or              has occurred.</td></tr><tr class="major-row"><td rowspan="4"><a href="#T.NETWORK_ATTACK">T.NETWORK_​ATTACK</a></td><td><a href="#O.PROTECTED_COMMS">O.PROTECTED_​COMMS</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.PROTECTED_COMMS">O.PROTECTED_COMMS</a> as this              provides for integrity of transmitted data.</td></tr><tr><td><a href="#O.INTEGRITY">O.INTEGRITY</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.INTEGRITY">O.INTEGRITY</a> as this provides for              integrity of software that is installed onto the system from the network.</td></tr><tr><td><a href="#O.MANAGEMENT">O.MANAGEMENT</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.MANAGEMENT">O.MANAGEMENT</a> as this provides for              the ability to configure the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> to defend against network attack.</td></tr><tr><td><a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a></td><td>The threat <a href="#T.NETWORK_ATTACK">T.NETWORK_ATTACK</a> is countered by <a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a> as this              provides a mechanism for the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> to report behavior that may indicate a network              attack has occurred.</td></tr><tr class="major-row"><td rowspan="2"><a href="#T.NETWORK_EAVESDROP">T.NETWORK_​EAVESDROP</a></td><td><a href="#O.PROTECTED_COMMS">O.PROTECTED_​COMMS</a></td><td>The threat <a href="#T.NETWORK_EAVESDROP">T.NETWORK_EAVESDROP</a> is countered by <a href="#O.PROTECTED_COMMS">O.PROTECTED_COMMS</a> as this              provides for confidentiality of transmitted data.</td></tr><tr><td><a href="#O.MANAGEMENT">O.MANAGEMENT</a></td><td>The threat <a href="#T.NETWORK_EAVESDROP">T.NETWORK_EAVESDROP</a> is countered by <a href="#O.MANAGEMENT">O.MANAGEMENT</a> as this provides              for the ability to configure the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> to protect the confidentiality of its transmitted              data.</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PLATFORM">A.PLATFORM</a></td><td><a href="#OE.PLATFORM">OE.PLATFORM</a></td><td>The operational environment objective <a href="#OE.PLATFORM">OE.PLATFORM</a> is realized through
               <a href="#A.PLATFORM">A.PLATFORM</a>.</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PROPER_ADMIN">A.PROPER_​ADMIN</a></td><td><a href="#OE.PROPER_ADMIN">OE.PROPER_​ADMIN</a></td><td>The operational environment objective <a href="#OE.PROPER_ADMIN">OE.PROPER_ADMIN</a> is realized through
               <a href="#A.PROPER_ADMIN">A.PROPER_ADMIN</a>.</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PROPER_USER">A.PROPER_​USER</a></td><td><a href="#OE.PROPER_USER">OE.PROPER_​USER</a></td><td>The operational environment objective <a href="#OE.PROPER_USER">OE.PROPER_USER</a> is realized through
               <a href="#A.PROPER_USER">A.PROPER_USER</a>.</td></tr></table>
@@ -755,19 +784,18 @@ users of the same system.</dd></dl>
      <ul>
        <li>
          <b>Refinement</b> operation (denoted by <b>bold text</b> or <strike>strikethrough
-         text</strike>): is used to add details to a requirement (including replacing an assignment
-         with a more restrictive selection) or to remove part of the requirement that is made irrelevant
+         text</strike>): Is used to add details to a requirement or to remove part of the requirement that is made irrelevant
          through the completion of another operation, and thus further restricts a requirement.
          </li>
        <li>
-         <b>Selection</b> (denoted by <i>italicized text</i>): is used to select one or more options
+         <b>Selection</b> (denoted by <i>italicized text</i>): Is used to select one or more options
          provided by the [<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>] in stating a requirement.</li>
        <li>
-         <b>Assignment</b> operation (denoted by <span class="assignable-content">italicized text</span>): is used to assign a
+         <b>Assignment</b> operation (denoted by <span class="assignable-content">italicized text</span>): Is used to assign a
          specific value to an unspecified parameter, such as the length of a password. Showing the
          value in square brackets indicates assignment.</li>
        <li>
-         <b>Iteration</b> operation: is indicated by appending the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> name with a slash and unique identifier
+         <b>Iteration</b> operation: Is indicated by appending the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> name with a slash and unique identifier
             suggesting the purpose of the operation, e.g. "/EXAMPLE1."
        </li>
      </ul>
@@ -778,7 +806,7 @@ users of the same system.</dd></dl>
       <h3 id="fau" class="indexable" data-level="3">5.1.1 Security Audit (FAU)</h3>
         
         <div class="comp" id="FAU_GEN.1"><h4>FAU_GEN.1 Audit data generation</h4>
-          <div class="element"><div class="reqid" id="FAU_GEN.1.1"><a href="#FAU_GEN.1.1" class="abbr">FAU_GEN.1.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to generate audit data of the following auditable events:    [<b>selection</b>: <i id="dummy">Dummy</i>, <i id="fau_gen.1.1_1">Other</i>]<div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FAU_GEN.1.1"><a href="#FAU_GEN.1.1" class="abbr">FAU_GEN.1.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to generate audit data of the following auditable events:    [<b>selection</b>: <span class="selectable-content" id="dummy">Dummy</span>, <span class="selectable-content" id="fau_gen.1.1_1">Other</span>]<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">Words</p>
@@ -796,7 +824,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FAU_GEN.2"><h4>FAU_GEN.2 User identity association</h4>
           <div class="element"><div class="reqid" id="FAU_GEN.2.1"><a href="#FAU_GEN.2.1" class="abbr">FAU_GEN.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall<div class="appnote"><span class="note-header">Application
@@ -810,7 +840,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -831,7 +863,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -854,7 +888,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -866,7 +902,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FCS_CKM_EXT.7"><h4>FCS_CKM_EXT.7 Cryptographic Key Agreement</h4>
           <div class="element"><div class="reqid" id="FCS_CKM_EXT.7.1"><a href="#FCS_CKM_EXT.7.1" class="abbr">FCS_CKM_EXT.7.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -876,7 +914,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -890,7 +930,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/Hash"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4>
           <div class="element"><div class="reqid" id="FCS_COP.1.1/Hash"><a href="#FCS_COP.1.1/Hash" class="abbr">FCS_COP.1.1/Hash</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -900,7 +942,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/KeyedHash"><h4>FCS_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)</h4>
           <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyedHash"><a href="#FCS_COP.1.1/KeyedHash" class="abbr">FCS_COP.1.1/KeyedHash</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -910,7 +954,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -924,7 +970,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4>
           <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
@@ -946,7 +994,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -967,7 +1017,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FIA_PMG_EXT.1"><h4>FIA_PMG_EXT.1 Password Management</h4>
           <div class="element"><div class="reqid" id="FIA_PMG_EXT.1.1"><a href="#FIA_PMG_EXT.1.1" class="abbr">FIA_PMG_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -977,7 +1029,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4>
           <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.1"><a href="#FIA_PSK_EXT.1.1" class="abbr">FIA_PSK_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
@@ -991,7 +1045,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FIA_UIA_EXT.1"><h4>FIA_UIA_EXT.1 User Identification and Authentication</h4>
           <div class="element"><div class="reqid" id="FIA_UIA_EXT.1.1"><a href="#FIA_UIA_EXT.1.1" class="abbr">FIA_UIA_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1001,7 +1057,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
       
       
       <h3 id="fmt" class="indexable" data-level="3">5.1.4 Security Management (FMT)</h3>
@@ -1018,7 +1076,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -1030,7 +1090,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -1042,7 +1104,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FMT_SMR.2"><h4>FMT_SMR.2 Restrictions on security roles</h4>
           <div class="element"><div class="reqid" id="FMT_SMR.2.1"><a href="#FMT_SMR.2.1" class="abbr">FMT_SMR.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1052,7 +1116,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
       
       
       <h3 id="fpt" class="indexable" data-level="3">5.1.5 Protection of the TSF (FPT)</h3>
@@ -1065,7 +1131,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
         
@@ -1077,7 +1145,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FPT_STM_EXT.1"><h4>FPT_STM_EXT.1 Reliable Time Stamps</h4>
           <div class="element"><div class="reqid" id="FPT_STM_EXT.1.1"><a href="#FPT_STM_EXT.1.1" class="abbr">FPT_STM_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1087,7 +1157,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FPT_TST_EXT.1"><h4>FPT_TST_EXT.1 TSF Testing</h4>
           <div class="element"><div class="reqid" id="FPT_TST_EXT.1.1"><a href="#FPT_TST_EXT.1.1" class="abbr">FPT_TST_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1097,7 +1169,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FPT_TUD_EXT.1"><h4>FPT_TUD_EXT.1 Trusted Update</h4>
           <div class="element"><div class="reqid" id="FPT_TUD_EXT.1.1"><a href="#FPT_TUD_EXT.1.1" class="abbr">FPT_TUD_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1107,7 +1181,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
       
@@ -1122,7 +1198,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FTA_SSL.4"><h4>FTA_SSL.4 User-initiated Termination (Refinement)</h4>
           <div class="element"><div class="reqid" id="FTA_SSL.4.1"><a href="#FTA_SSL.4.1" class="abbr">FTA_SSL.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1132,7 +1210,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FTA_SSL_EXT.1"><h4>FTA_SSL_EXT.1 TSF-initiated Session Locking</h4>
           <div class="element"><div class="reqid" id="FTA_SSL_EXT.1.1"><a href="#FTA_SSL_EXT.1.1" class="abbr">FTA_SSL_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1142,7 +1222,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FTA_TAB.1"><h4>FTA_TAB.1 Default TOE Access Banners (Refinement)</h4>
           <div class="element"><div class="reqid" id="FTA_TAB.1.1"><a href="#FTA_TAB.1.1" class="abbr">FTA_TAB.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1152,7 +1234,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
       
       
       <h3 id="ftp_itc" class="indexable" data-level="3">5.1.7 Trusted Channel (FTP_ITC)</h3>
@@ -1167,7 +1251,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FTP_TRP.1/Admin"><h4>FTP_TRP.1/Admin Trusted Path (Refinement)</h4>
           <div class="element"><div class="reqid" id="FTP_TRP.1.1/Admin"><a href="#FTP_TRP.1.1/Admin" class="abbr">FTP_TRP.1.1/Admin</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1177,7 +1263,9 @@ users of the same system.</dd></dl>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div>
         
         
       
@@ -1630,25 +1718,21 @@ users of the same system.</dd></dl>
   <h1 id="opt-app" class="indexable" data-level="A">Appendix A -  Optional Requirements</h1>
     As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, the baseline requirements (those that must be
 	  performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are contained in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-    This appendix contains three other types of optional requirements that may be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, but are not required in order
-	  to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-    However, applied modules, packages and/or use cases may refine specific requirements as mandatory. <br/><br/>
+    This appendix contains three other types of optional requirements:<br/><br/>
 
-   The first type (<a href="#optional-reqs" class="dynref">A.1 Strictly Optional  Requirements</a>) are strictly optional requirements that are independent of the
-	  <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implementing any function.
-   If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of these requirements or supports a certain functionality, the vendor is encouraged to include the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
-	  in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, but are not required in order to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.<br/><br/>
+   The first type, defined in Appendix <a href="#optional-reqs" class="dynref">A.1 Strictly Optional  Requirements</a>, are strictly optional requirements.
+   If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> meets any of these requirements the vendor is encouraged to claim the associated <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>
+	  in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, but doing so is not required in order to conform to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.<br/><br/>
 
-  The second type (<a href="#objective-reqs" class="dynref">A.2 Objective  Requirements</a>) are objective requirements that describe security functionality not yet 
-	  widely available in commercial technology.
-   The requirements are not currently mandated in the body of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, but will be included in
-	  the baseline requirements in future versions of this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>. Adoption by vendors is
-	  encouraged and expected as soon as possible.<br/><br/>
+  The second type, defined in Appendix <a href="#objective-reqs" class="dynref">A.2 Objective  Requirements</a>, are objective requirements. These describe security functionality that is not yet 
+	  widely available in commercial technology. 
+   Objective requirements are not currently mandated by this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, but will be mandated in
+	  the future. Adoption by vendors is encouraged, but claiming these <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> is not required in order to conform to this
+	  <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.<br/><br/>
 
-  The third type (<a href="#feat-based-reqs" class="dynref">A.3 Implementation-dependent  Requirements</a>) 
-are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implementing a particular function.
-If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of these requirements, the vendor must either add the related <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> or disable the functionality for the
-	  evaluated configuration. 
+  The third type, defined in Appendix <a href="#feat-based-reqs" class="dynref">A.3 Implementation-dependent  Requirements</a>, are Implementation-dependent requirements.
+	If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements the product features associated with the listed <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>, either the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must be claimed
+	or the product features must be disabled in the evaluated configuration. 
   <h2 id="optional-reqs" class="indexable" data-level="2">A.1 Strictly Optional  Requirements
     </h2><h3 id="fau-optional" class="indexable" data-level="3">A.1.1 Security Audit (FAU)</h3><div class="comp" id="FAU_STG.2"><h4>FAU_STG.2 Protected Audit Data Storage</h4>
           <div class="element"><div class="reqid" id="FAU_STG.2.1"><a href="#FAU_STG.2.1" class="abbr">FAU_STG.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1658,7 +1742,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.2"><h4>FAU_STG_EXT.2 Counting Lost Audit Data</h4>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FAU_STG_EXT.2"><h4>FAU_STG_EXT.2 Counting Lost Audit Data</h4>
           <div class="element"><div class="reqid" id="FAU_STG_EXT.2.1"><a href="#FAU_STG_EXT.2.1" class="abbr">FAU_STG_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG_EXT.2">FAU_STG_EXT.2</a></div>
@@ -1666,7 +1752,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.3"><h4>FAU_STG_EXT.3 Action in Case of Possible Audit Data Loss</h4>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FAU_STG_EXT.3"><h4>FAU_STG_EXT.3 Action in Case of Possible Audit Data Loss</h4>
           <div class="element"><div class="reqid" id="FAU_STG_EXT.3.1"><a href="#FAU_STG_EXT.3.1" class="abbr">FAU_STG_EXT.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_STG_EXT.3">FAU_STG_EXT.3</a></div>
@@ -1674,7 +1762,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="fco-optional" class="indexable" data-level="3">A.1.2 Communication (FCO)</h3><div class="comp" id="FCO_CPC_EXT.1"><h4>FCO_CPC_EXT.1 Component Registration Channel Definition</h4>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><h3 id="fco-optional" class="indexable" data-level="3">A.1.2 Communication (FCO)</h3><div class="comp" id="FCO_CPC_EXT.1"><h4>FCO_CPC_EXT.1 Component Registration Channel Definition</h4>
           <div class="element"><div class="reqid" id="FCO_CPC_EXT.1.1"><a href="#FCO_CPC_EXT.1.1" class="abbr">FCO_CPC_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           <div class="element"><div class="reqid" id="FCO_CPC_EXT.1.2"><a href="#FCO_CPC_EXT.1.2" class="abbr">FCO_CPC_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           <div class="element"><div class="reqid" id="FCO_CPC_EXT.1.3"><a href="#FCO_CPC_EXT.1.3" class="abbr">FCO_CPC_EXT.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1684,7 +1774,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.3 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_CKM.2"><h4>FCS_CKM.2 Cryptographic Key Distribution</h4>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><h3 id="fcs-optional" class="indexable" data-level="3">A.1.3 Cryptographic Support (FCS)</h3><div class="comp" id="FCS_CKM.2"><h4>FCS_CKM.2 Cryptographic Key Distribution</h4>
           <div class="element"><div class="reqid" id="FCS_CKM.2.1"><a href="#FCS_CKM.2.1" class="abbr">FCS_CKM.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
         </div><h3 id="fpt-optional" class="indexable" data-level="3">A.1.4 Protection of the TSF (FPT)</h3><div class="comp" id="FPT_ITT.1"><h4>FPT_ITT.1 Basic internal TSF data transfer protection (Refinement)</h4>
           <div class="element"><div class="reqid" id="FPT_ITT.1.1"><a href="#FPT_ITT.1.1" class="abbr">FPT_ITT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
@@ -1694,7 +1786,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h3 id="ftp_itc-optional" class="indexable" data-level="3">A.1.5 Trusted Channel (FTP_ITC)</h3><div class="comp" id="FTP_TRP.1/Join"><h4>FTP_TRP.1/Join Trusted Path (Refinement)</h4>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><h3 id="ftp_itc-optional" class="indexable" data-level="3">A.1.5 Trusted Channel (FTP_ITC)</h3><div class="comp" id="FTP_TRP.1/Join"><h4>FTP_TRP.1/Join Trusted Path (Refinement)</h4>
           <div class="element"><div class="reqid" id="FTP_TRP.1.1/Join"><a href="#FTP_TRP.1.1/Join" class="abbr">FTP_TRP.1.1/Join</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FTP_TRP.1/Join">FTP_TRP.1/Join</a></div>
@@ -1702,12 +1796,14 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="objective-reqs" class="indexable" data-level="2">A.2 Objective  Requirements
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><h2 id="objective-reqs" class="indexable" data-level="2">A.2 Objective  Requirements
     </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
             Objective requirements.</p><h2 id="feat-based-reqs" class="indexable" data-level="2">A.3 Implementation-dependent  Requirements
     </h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not define any 
             Implementation-dependent requirements.</p><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
-    </h1>
+    </h1><span class="description">
 	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
         the baseline requirements
         (those that must be performed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> or its underlying platform)
@@ -1716,7 +1812,7 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
         the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>:
         if certain selections are made, then additional requirements below must be included.
  	</p>
-		 <h2 id="fau-sel-based" class="indexable" data-level="2">B.1 Security Audit (FAU)</h2><div class="comp" id="FAU_GEN_EXT.1"><h4>FAU_GEN_EXT.1 Security Audit Generation</h4><div class="statustag"></div>
+		 </span><h2 id="fau-sel-based" class="indexable" data-level="2">B.1 Security Audit (FAU)</h2><div class="comp" id="FAU_GEN_EXT.1"><h4>FAU_GEN_EXT.1 Security Audit Generation</h4><div class="statustag"></div>
           <div class="element"><div class="reqid" id="FAU_GEN_EXT.1.1"><a href="#FAU_GEN_EXT.1.1" class="abbr">FAU_GEN_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FAU_GEN_EXT.1">FAU_GEN_EXT.1</a></div>
@@ -1724,12 +1820,12 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_SAR.1"><h4>FAU_SAR.1 Audit Review</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FAU_STG_EXT.1">FAU_STG_EXT.1</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FAU_SAR.1"><h4>FAU_SAR.1 Audit Review</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FAU_STG_EXT.1">FAU_STG_EXT.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FAU_SAR.1.1"><a href="#FAU_SAR.1.1" class="abbr">FAU_SAR.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
-        </div><div class="comp" id="FAU_STG_EXT.4"><h4>FAU_STG_EXT.4 Protected Local Audit Event Storage for Distributed TOEs</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+        </div><div class="comp" id="FAU_STG_EXT.4"><h4>FAU_STG_EXT.4 Protected Local Audit Event Storage for Distributed TOEs</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FAU_STG_EXT.4.1"><a href="#FAU_STG_EXT.4.1" class="abbr">FAU_STG_EXT.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1738,9 +1834,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FAU_STG_EXT.5"><h4>FAU_STG_EXT.5 Protected Remote Audit Event Storage for Distributed TOEs</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FAU_STG_EXT.5"><h4>FAU_STG_EXT.5 Protected Remote Audit Event Storage for Distributed TOEs</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FAU_STG_EXT.5.1"><a href="#FAU_STG_EXT.5.1" class="abbr">FAU_STG_EXT.5.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1749,7 +1845,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fcs-sel-based" class="indexable" data-level="2">B.2 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_COP.1/AEAD"><h4>FCS_COP.1/AEAD Cryptographic Operation - Authenticated Encryption with Associated Data</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_COP.1/DataEncryption">FCS_COP.1/DataEncryption</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><h2 id="fcs-sel-based" class="indexable" data-level="2">B.2 Cryptographic Support (FCS)</h2><div class="comp" id="FCS_COP.1/AEAD"><h4>FCS_COP.1/AEAD Cryptographic Operation - Authenticated Encryption with Associated Data</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_COP.1/DataEncryption">FCS_COP.1/DataEncryption</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FCS_COP.1.1/AEAD"><a href="#FCS_COP.1.1/AEAD" class="abbr">FCS_COP.1.1/AEAD</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
         </div><div class="comp" id="FCS_COP.1/CMAC"><h4>FCS_COP.1/CMAC Cryptographic Operation - CMAC</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_NTP_EXT.1">FCS_NTP_EXT.1</a></i></b></li></ul></div>
@@ -1773,7 +1871,7 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
                   and 
                   
     [<b>selection</b>: 
-    <span class="selection-content">Parameters</span>]
+    <span class="selectable-content">Parameters</span>]
                   that meet the following: 
                   
                   .
@@ -1791,18 +1889,14 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
                   
                 </tr>
 
-                <tr>
-                  <td>Functions =  [<b>selection</b>: <i id="fcs-cop-xo-1-1-3">SHAKE128</i>, <i id="fcs-cop-xo-1-1-4">SHAKE256</i>]</td>
-                </tr>
+                <tr><td>Functions =  [<b>selection</b>: <span class="selectable-content" id="fcs-cop-xo-1-1-3">SHAKE128</span>, <span class="selectable-content" id="fcs-cop-xo-1-1-4">SHAKE256</span>]</td></tr>
 
               </table><div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</p>
             </span></div></div></div>
-        </div><div class="comp" id="FCS_IPSEC_EXT.1"><h4>FCS_IPSEC_EXT.1 IPsec Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+        </div><div class="comp" id="FCS_IPSEC_EXT.1"><h4>FCS_IPSEC_EXT.1 IPsec Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FCS_IPSEC_EXT.1.1"><a href="#FCS_IPSEC_EXT.1.1" class="abbr">FCS_IPSEC_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           <div class="element"><div class="reqid" id="FCS_IPSEC_EXT.1.2"><a href="#FCS_IPSEC_EXT.1.2" class="abbr">FCS_IPSEC_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
@@ -1824,9 +1918,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_NTP_EXT.1"><h4>FCS_NTP_EXT.1 NTP Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FCS_NTP_EXT.1"><h4>FCS_NTP_EXT.1 NTP Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FCS_NTP_EXT.1.1"><a href="#FCS_NTP_EXT.1.1" class="abbr">FCS_NTP_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1835,12 +1929,14 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_RBG.2"><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FCS_RBG.2"><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FCS_RBG.2.1"><a href="#FCS_RBG.2.1" class="abbr">FCS_RBG.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
         </div><div class="comp" id="FCS_RBG.3"><h4>FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using a  [<b>selection</b>: <i id="fcs-rbg-3-1-1"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source</i>, <i id="fcs-rbg-3-1-2"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source</i>]  [<b>assignment</b>: 
+          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using a  [<b>selection</b><b>, choose one of</b>: <span class="selectable-content" id="fcs-rbg-3-1-1"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source</span>, <span class="selectable-content" id="fcs-rbg-3-1-2"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source</span>]  [<b>assignment</b>: 
      <span class="assignable-content">name of entropy source</span>] with  [<b>assignment</b>: 
      <span class="assignable-content">number of bits</span>] bits of min-entropy.<div class="appnote"><span class="note-header">Application
       Note:
@@ -1852,26 +1948,24 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
             </span></div></div></div>
         </div><div class="comp" id="FCS_RBG.4"><h4>FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using  [<b>selection</b>: <i id="fcs-rbg-4-1-1"> [<b>assignment</b>: 
-     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source(s)</i>, <i id="fcs-rbg-4-1-4"> [<b>assignment</b>: 
-     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source(s)</i>].<div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using  [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-4-1-1">[<b>assignment</b>: 
+     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source(s)</span>, <span class="selectable-content" id="fcs-rbg-4-1-4">[<b>assignment</b>: 
+     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source(s)</span>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses two or more internal sources of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. <a href="#FCS_RBG.5">FCS_RBG.5</a> defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</p>
             </span></div></div></div>
         </div><div class="comp" id="FCS_RBG.5"><h4>FCS_RBG.5 Random Bit Generation (Combining Entropy Sources)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <i id="fcs-rbg-5-1-1">hash</i>, <i id="fcs-rbg-5-1-2">concatenate and hash</i>, <i id="fcs-rbg-5-1-3"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></i>, <i id="fcs-rbg-5-1-4">input into a linear feedback shift register</i>, <i id="fcs-rbg-5-1-5">[<b>assignment</b>: 
-     <span class="assignable-content">combining operation</span>]</i>]  [<b>selection</b>: <i id="fcs-rbg-5-1-6">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> entropy source(s)</i>, <i id="fcs-rbg-5-1-7">input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface(s) for obtaining entropy</i>] resulting in a minimum of  [<b>assignment</b>: 
-     <span class="assignable-content">number of bits</span>] bits of min-entropy to create the entropy input into the derivation function as defined in  [<b>selection</b>: <i id="fcs-rbg-5-1-9"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 18031:2011</i>, <i id="fcs-rbg-5-1-10"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A Revision 1</i>].<div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-1">hash</span>, <span class="selectable-content" id="fcs-rbg-5-1-2">concatenate and hash</span>, <span class="selectable-content" id="fcs-rbg-5-1-3"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span>, <span class="selectable-content" id="fcs-rbg-5-1-4">input into a linear feedback shift register</span>, <span class="selectable-content" id="fcs-rbg-5-1-5">[<b>assignment</b>: 
+     <span class="assignable-content">combining operation</span>]</span>]  [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-6">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> entropy source(s)</span>, <span class="selectable-content" id="fcs-rbg-5-1-7">input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface(s) for obtaining entropy</span>] resulting in a minimum of  [<b>assignment</b>: 
+     <span class="assignable-content">number of bits</span>] bits of min-entropy to create the entropy input into the derivation function as defined in  [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-9"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 18031:2011</span>, <span class="selectable-content" id="fcs-rbg-5-1-10"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A Revision 1</span>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> combines two or more sources of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. </p>
               <p style="text-align: left;">One can apply <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90B (or AIS-31) statistical tests against external noise sources since the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>.</p>
             </span></div></div></div>
-        </div><h2 id="fmt-sel-based" class="indexable" data-level="2">B.3 Security Management (FMT)</h2><div class="comp" id="FMT_MOF.1/AutoUpdate"><h4>FMT_MOF.1/AutoUpdate Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+        </div><h2 id="fmt-sel-based" class="indexable" data-level="2">B.3 Security Management (FMT)</h2><div class="comp" id="FMT_MOF.1/AutoUpdate"><h4>FMT_MOF.1/AutoUpdate Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/AutoUpdate"><a href="#FMT_MOF.1.1/AutoUpdate" class="abbr">FMT_MOF.1.1/AutoUpdate</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1880,9 +1974,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FMT_MOF.1/Functions"><h4>FMT_MOF.1/Functions Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FMT_MOF.1/Functions"><h4>FMT_MOF.1/Functions Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/Functions"><a href="#FMT_MOF.1.1/Functions" class="abbr">FMT_MOF.1.1/Functions</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1891,9 +1985,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FMT_MOF.1/Services"><h4>FMT_MOF.1/Services Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FMT_MOF.1/Services"><h4>FMT_MOF.1/Services Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/Services"><a href="#FMT_MOF.1.1/Services" class="abbr">FMT_MOF.1.1/Services</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1902,7 +1996,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FMT_MTD.1/CryptoKeys"><h4>FMT_MTD.1/CryptoKeys Management of TSF Data</h4><div class="statustag"></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FMT_MTD.1/CryptoKeys"><h4>FMT_MTD.1/CryptoKeys Management of TSF Data</h4><div class="statustag"></div>
           <div class="element"><div class="reqid" id="FMT_MTD.1.1/CryptoKeys"><a href="#FMT_MTD.1.1/CryptoKeys" class="abbr">FMT_MTD.1.1/CryptoKeys</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MTD.1/CryptoKeys">FMT_MTD.1/CryptoKeys</a></div>
@@ -1910,9 +2006,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.4 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>.
-           </i></b></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.4 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FAU_GEN.1.1">FAU_GEN.1.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.1"><a href="#FPT_TUD_EXT.2.1" class="abbr">FPT_TUD_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1921,7 +2017,9 @@ If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> fulfills any of
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix C -  Entropy Documentation and Assessment</h1>blah<h1 id="a-glossary" class="indexable" data-level="A">Appendix D -  Glossary</h1>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
+			There are no test activities for this component.<br/></div></div></div></div><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix C -  Entropy Documentation and Assessment</h1>blah<h1 id="a-glossary" class="indexable" data-level="A">Appendix D -  Glossary</h1>
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">D.1 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">D.1.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>
@@ -1934,6 +2032,12 @@ The following sections list Common Criteria and technology terms used in this do
       accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations.
     </td></tr>
 <tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation.</td></tr>
+<tr><td><div id="Direct_Rationale">Direct Rationale</div></td><td>
+		A type of Protection Profile, PP-Module, or Security Target in which the security
+		problem definition (SPD) elements are mapped directly to the SFRs and possibly to the 
+		security objectives for the operational environment. There are no security objectives
+		for the TOE.
+	</td></tr>
 <tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole.</td></tr>
 <tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
 	    or functionality. See Functional Packages.</td></tr>
@@ -2014,9 +2118,11 @@ The following sections list Common Criteria and technology terms used in this do
 	At that time, such a user should be considered an administrator.</td></tr>
 <tr><td><div id="Virtual_Machine">Virtual Machine (VM)</div></td><td>Blah Blah Blah</td></tr>
 </table></div>
-  <h1 id="acronyms" class="indexable" data-level="A">Appendix E -  Acronyms</h1><table><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
+  <h1 id="acronyms" class="indexable" data-level="A">Appendix E -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">4</span></span>: Acronyms
+		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
 <tr><td><span class="term" id="abbr_API"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></span></td><td><span id="long_abbr_API">Application Programming Interface</span></td></tr>
 <tr><td><span class="term" id="abbr_API"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></span></td><td><span id="long_abbr_API">Application Programming Interface</span></td></tr>
+<tr><td><span class="term" id="abbr_app"><abbr class="dyn-abbr"><a href="#abbr_app">app</a></abbr></span></td><td><span id="long_abbr_app">Application</span></td></tr>
 <tr><td><span class="term" id="abbr_ASLR"><abbr class="dyn-abbr"><a href="#abbr_ASLR">ASLR</a></abbr></span></td><td><span id="long_abbr_ASLR">Address Space Layout Randomization</span></td></tr>
 <tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
@@ -2025,6 +2131,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_CMC"><abbr class="dyn-abbr"><a href="#abbr_CMC">CMC</a></abbr></span></td><td><span id="long_abbr_CMC">Certificate Management over <abbr class="dyn-abbr"><a href="#abbr_CMS">CMS</a></abbr></span></td></tr>
 <tr><td><span class="term" id="abbr_CMS"><abbr class="dyn-abbr"><a href="#abbr_CMS">CMS</a></abbr></span></td><td><span id="long_abbr_CMS">Cryptographic Message Syntax</span></td></tr>
 <tr><td><span class="term" id="abbr_CN"><abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr></span></td><td><span id="long_abbr_CN">Common Names</span></td></tr>
+<tr><td><span class="term" id="abbr_cPP" data-plural="cPPs"><abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></span></td><td><span id="long_abbr_cPP">Collaborative Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CRL"><abbr class="dyn-abbr"><a href="#abbr_CRL">CRL</a></abbr></span></td><td><span id="long_abbr_CRL">Certificate Revocation List</span></td></tr>
 <tr><td><span class="term" id="abbr_CSA"><abbr class="dyn-abbr"><a href="#abbr_CSA">CSA</a></abbr></span></td><td><span id="long_abbr_CSA">Computer Security Act</span></td></tr>
 <tr><td><span class="term" id="abbr_CSP"><abbr class="dyn-abbr"><a href="#abbr_CSP">CSP</a></abbr></span></td><td><span id="long_abbr_CSP">Critical Security Parameters</span></td></tr>
@@ -2089,9 +2196,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_VM"><abbr class="dyn-abbr"><a href="#abbr_VM">VM</a></abbr></span></td><td><span id="long_abbr_VM">Virtual Machine</span></td></tr>
 <tr><td><span class="term" id="abbr_XCCDF"><abbr class="dyn-abbr"><a href="#abbr_XCCDF">XCCDF</a></abbr></span></td><td><span id="long_abbr_XCCDF">eXtensible Configuration Checklist Description Format</span></td></tr>
 <tr><td><span class="term" id="abbr_XOR"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span></td><td><span id="long_abbr_XOR">Exclusive Or</span></td></tr>
-<tr><td><span class="term" id="abbr_app"><abbr class="dyn-abbr"><a href="#abbr_app">app</a></abbr></span></td><td><span id="long_abbr_app">Application</span></td></tr>
-<tr><td><span class="term" id="abbr_cPP" data-plural="cPPs"><abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr></span></td><td><span id="long_abbr_cPP">Collaborative Protection Profile</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix F -  Bibliography</h1><table><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td>Common Criteria for Information Technology Security Evaluation - <ul>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix F -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">5</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2017-04-001, Version 3.1 Revision 5,
               April 2017.</li>
@@ -2101,14 +2206,14 @@ The following sections list Common Criteria and technology terms used in this do
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf">Part
                 3: Security Assurance Components</a>, CCMB-2017-04-003, Version 3.1 Revision 5,
               April 2017.</li>
-          </ul></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td>
+          </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">
         <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common
             Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>,
           CCMB-2012-09-004, Version 3.1, Revision 4, September 2012.
-      </td></tr><tr><td><span id="bibCESG">[<abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr>]</span></td><td><abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr> - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
-            User Devices Security and Configuration Guidance</a></td></tr><tr><td><span id="bibCSA">[<abbr class="dyn-abbr"><a href="#abbr_CSA">CSA</a></abbr>]</span></td><td><a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act
-            of 1987</a>, H.R. 145, June 11, 1987. </td></tr><tr><td><span id="bibOMB">[<abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr>]</span></td><td>
+      </span></td></tr><tr><td><span id="bibCESG">[<abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr>]</span></td><td><span class="description"><abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr> - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
+            User Devices Security and Configuration Guidance</a></span></td></tr><tr><td><span id="bibCSA">[<abbr class="dyn-abbr"><a href="#abbr_CSA">CSA</a></abbr>]</span></td><td><span class="description"><a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act
+            of 1987</a>, H.R. 145, June 11, 1987. </span></td></tr><tr><td><span id="bibOMB">[<abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr>]</span></td><td><span class="description">
         <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">Reporting Incidents Involving Personally Identifiable Information and Incorporating the
             Cost for Security in Agency Information Technology Investments</a>, <abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr> M-06-19, July
           12, 2006.
-      </td></tr></table></body></html>
+      </span></td></tr></table></body></html>

@@ -274,15 +274,15 @@ users of the same system.</description>
     <sec:Security_Objectives_Rationale/>
   </sec:Security_Objectives>
   <!-- 5.0 Security Requirements -->
-  <sec:req title="Security Requirements">
+  <sec:Security_Requirements title="Security Requirements">
     <!-- 5.1 Security Functional Requirements-->
-    <sec:SFRs title="Security Functional Requirements">
+    <sec:SFRs title="Security Functional Requirements" id="sfr">
       <!-- 5.1.1 Security Audit (FAU) -->
       <section id="fau" title="Security Audit (FAU)">
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:    <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:     <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
             <note role="application">
               <h:p style="text-align: left;">Words</h:p>
             </note>
@@ -601,23 +601,7 @@ users of the same system.</description>
         <f-component cc-id="fcs_cop.1" id="fcs-cop-1-xof" name="Cryptographic Operation - Extendable-Output Function" iteration="XOF" status="sel-based">
           <depends on-incl="fcs-cop-1-sigver"/>
           <f-element id="fcs-cop-1-1-xof">
-            <title>
-              <selectables>
-                <tabularize id="fcs-cop-xo-1-1-1" title="Allowed choices for FCS_COP.1.1/XOF">
-                  <reqtext>The TSF shall perform extendable-output function in accordance with a specified cryptographic algorithm </reqtext>
-                  <textcol>Cryptographic Algorithm</textcol>
-                  <reqtext>and </reqtext>
-                  <selectcol>Parameters</selectcol>
-                  <reqtext>that meet the following: </reqtext>
-                  <textcol>List of Standards</textcol>
-                  <reqtext>.</reqtext>
-                  <reqtext>The following table provides the allowed choices for completion of the selection operations of FCS_COP.1.1/XOF.</reqtext>
-                </tabularize>
-                <selectable id="fcs-cop-xo-1-1-2">
-                  <col>Functions =  <selectables><selectable id="fcs-cop-xo-1-1-3">SHAKE128</selectable><selectable id="fcs-cop-xo-1-1-4">SHAKE256</selectable></selectables></col>
-                </selectable>
-              </selectables>
-            </title>
+            <title> The TSF shall perform<h:p style="text-align: left;"><h:i>extendable-output function</h:i></h:p> in accordance with a specified cryptographic algorithm  <selectables><selectable id="fcs-cop-1-1-xof-8">cryptographic algorithm</selectable></selectables> and  <selectables><selectable id="fcs-cop-1-1-xof-9">parameters</selectable></selectables> that meet the following:  <selectables><selectable id="fcs-cop-1-1-xof-10">list of standards</selectable></selectables>.The following table provides the allowed choices for completion of the selection operations of FCS_COP.1.1/XOF.<selectables><tabularize id="fcs-cop-1-1-xof-1" title="Allowed choices for FCS_COP.1.1/XOF"><textcol>Cryptographic Algorithm</textcol><selectcol>Parameters</selectcol><textcol>List of Standards</textcol></tabularize><selectable id="fcs-cop-1-1-xof-2"><col>Functions =  <selectables><selectable id="fcs-cop-1-1-xof-5">SHAKE128</selectable><selectable id="fcs-cop-1-1-xof-6">SHAKE256</selectable></selectables> </col></selectable></selectables></title>
             <note role="application">
               <h:p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</h:p>
             </note>
@@ -714,7 +698,7 @@ users of the same system.</description>
         <f-component cc-id="fcs_rbg.3" id="fcs-rbg-3" name="Random Bit Generation (Internal Seeding - Single Source)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-3-1">
-            <title>The TSF shall be able to seed the DRBG using a  <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable> with  <assignable>number of bits</assignable> bits of min-entropy.</title>
+            <title>The TSF shall be able to seed the DRBG using a   <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>  with   <assignable>number of bits</assignable>  bits of min-entropy.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses a single internal source of entropy to initialize or reseed a DRBG that is within the TOE boundary. Seeding a DRBG is the same as initializing a DRBG.</h:p>
               <h:p style="text-align: left;">Hardware-based noise sources are entropy sources whose primary function is noise generation, such as ring oscillators, diodes, and thermal noise. While a TOE may use software to collect the noise from these hardware sources, these are not software-based. </h:p>
@@ -727,7 +711,7 @@ users of the same system.</description>
         <f-component cc-id="fcs_rbg.4" id="fcs-rbg-4" name="Random Bit Generation (Internal Seeding - Multiple Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-4-1">
-            <title>The TSF shall be able to seed the DRBG using  <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
+            <title>The TSF shall be able to seed the DRBG using   <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses two or more internal sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. FCS_RBG.5 defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</h:p>
             </note>
@@ -737,7 +721,7 @@ users of the same system.</description>
         <f-component cc-id="fcs_rbg.5" id="fcs-rbg-5" name="Random Bit Generation (Combining Entropy Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-5-1">
-            <title>TSF shall <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables> resulting in a minimum of  <assignable>number of bits</assignable> bits of min-entropy to create the entropy input into the derivation function as defined in  <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
+            <title>TSF shall  <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>  resulting in a minimum of   <assignable>number of bits</assignable>  bits of min-entropy to create the entropy input into the derivation function as defined in   <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE combines two or more sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. The ST author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a DRBG. </h:p>
               <h:p style="text-align: left;">One can apply NIST SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply NIST SP 800-90B (or AIS-31) statistical tests against external noise sources since the TOE is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the TSS may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the DRBG.</h:p>
@@ -1163,7 +1147,7 @@ users of the same system.</description>
         should provide the ST authors with
         sufficient information to determine the appropriate content for the TSS section.
         <a-component cc-id="adv_fsp.1" name="Basic Functional Specification (ADV_FSP.1)">
-          The
+          <summary>The
           functional specification describes the TSFI. It is not
           necessary to have a formal or complete specification of these interfaces. Additionally,
           because OSs conforming to this PP will necessarily have interfaces to
@@ -1175,7 +1159,7 @@ users of the same system.</description>
           presented in the AGD documentation. No additional “functional specification” documentation
           is necessary to satisfy the assurance activities specified. The interfaces that need to be
           evaluated are characterized through the information needed to perform the assurance
-          activities listed, rather than as an independent, abstract list.
+          activities listed, rather than as an independent, abstract list.</summary>
           <a-element type="D">
             <title>The developer shall provide a functional specification.</title>
           </a-element>
@@ -1364,10 +1348,10 @@ users of the same system.</description>
         practices play in contributing to the overall trustworthiness of a product; rather, it is a
         reflection on the information to be made available for evaluation at this assurance level.
         <a-component cc-id="alc_cmc.1" name="Labeling of the TOE (ALC_CMC.1)">
-          This component is
+          <summary>This component is
           targeted at identifying the OS such that it can be distinguished from
           other products or versions from the same vendor and can be easily specified when being
-          procured by an end user.
+          procured by an end user.</summary>
           <a-element type="D">
             <title>The developer shall provide the OS and a reference for the
               OS.</title>
@@ -1397,9 +1381,9 @@ users of the same system.</description>
           </a-element>
         </a-component>
         <a-component cc-id="alc_cms.1" name="TOE CM Coverage (ALC_CMS.1)">
-          Given the scope of the OS and its associated evaluation 
+          <summary>Given the scope of the OS and its associated evaluation 
 	  evidence requirements, this component’s assurance activities are covered 
-	  by the assurance activities listed for ALC_CMC.1.
+	  by the assurance activities listed for ALC_CMC.1.</summary>
           <a-element type="D">
             <title>The developer shall provide a configuration list for the  OS.</title>
           </a-element>
@@ -1444,14 +1428,14 @@ users of the same system.</description>
           </a-element>
         </a-component>
         <a-component cc-id="alc_tsu_ext.1" name="Timely Security Updates">
-          This component requires the
+          <summary>This component requires the
           OS developer, in conjunction with any other necessary parties, to provide information as
           to how the end-user devices are updated to address security issues in a timely manner. The
           documentation describes the process of providing updates to the public from the time a
           security flaw is reported/discovered, to the time an update is released. This description
           includes the parties involved (e.g., the developer, carriers(s)) and the steps that are
           performed (e.g., developer testing, carrier testing), including worst case time periods,
-          before an update is made available to the public.
+          before an update is made available to the public.</summary>
           <a-element type="D">
             <title>The developer shall provide a description in the TSS of how timely security
               updates are made to the OS.</title>
@@ -1508,20 +1492,22 @@ users of the same system.</description>
         of the primary outputs of the evaluation process is the test report as specified in the
         following requirements.
         <a-component cc-id="ate_ind.1" name="Independent Testing – Conformance (ATE_IND.1)">
-          Testing is performed to confirm the
+          <summary>
+            Testing is performed to confirm the
           functionality described in the TSS as well as the administrative
           (including configuration and operational) documentation provided. The focus of the testing
           is to confirm that the requirements specified in
-          <xref to="SFRs"/>
-          being met,
+            <xref to="SFRs"/>
+            being met,
           although some additional testing is specified for SARs in
-          <xref to="Security_Assurance_Requirements"/>.
+            <xref to="Security_Assurance_Requirements"/>.
 	  The
           Assurance Activities identify the additional testing activities associated with these
           components. The evaluator produces a test report documenting the plan for and results of
           testing, as well as coverage arguments focused on the platform/OS
           combinations that are claiming conformance to this PP. Given the scope of the OS and its associated evaluation evidence requirements, this component’s
           assurance activities are covered by the assurance activities listed for ALC_CMC.1.
+          </summary>
           <a-element type="D">
             <title>The developer shall provide the OS for testing.</title>
           </a-element>
@@ -1638,7 +1624,7 @@ users of the same system.</description>
         </a-component>
       </section>
     </sec:Security_Assurance_Requirements>
-  </sec:req>
+  </sec:Security_Requirements>
   <appendix title="Entropy Documentation and Assessment" id="satisfiedreqs">blah</appendix>
   <appendix title="Objective Requirements" id="objective">This appendix includes requirements that
     specify security functionality which also addresses threats. The requirements are not currently
@@ -1777,7 +1763,7 @@ users of the same system.</description>
     </entry>
     <entry id="bibCESG">
       <tag>CESG</tag>
-      <description>CESG - <h:a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
+      <description>CESG - <h:a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance">End
             User Devices Security and Configuration Guidance</h:a></description>
     </entry>
     <entry id="bibCSA">

@@ -1708,9 +1708,40 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
           <div class="element"><div class="reqid" id="FCS_COP.1.1/SKC"><a href="#FCS_COP.1.1/SKC" class="abbr">FCS_COP.1.1/SKC</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
         </div><div class="comp" id="FCS_COP.1/XOF"><h4>FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br><ul><li><b><i><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">
+              
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform extendable-output function in accordance with a specified cryptographic algorithm 
+                  
+                  and 
+                  
+    [<b>selection</b>: 
+    <span class="selection-content">Parameters</span>]
+                  that meet the following: 
+                  
+                  <a id="period_266" href="#period_266">. </a>                  The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a><a id="period_267" href="#period_267">. </a>                
+            <table><caption><span class="ctr" data-myid="fcs-cop-xo-1-1-1" data-counter-type="ct-Table" id="fcs-cop-xo-1-1-1">Table <span class="counter">3</span></span>: Allowed choices for <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a></caption>
+                <tr>
+                  
+                  <th>Cryptographic Algorithm</th>
+                  
+                  <th>Parameters</th>
+                  
+                  <th>List of Standards</th>
+                  
+                  
+                </tr>
+
+                <tr>
+                  <td>Functions =  [<b>selection</b>: <i id="fcs-cop-xo-1-1-3">SHAKE128</i>, <i id="fcs-cop-xo-1-1-4">SHAKE256</i>]</td>
+                </tr>
+
+              </table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</p>
+            </span></div></div></div>
         </div><div class="comp" id="FCS_IPSEC_EXT.1"><h4>FCS_IPSEC_EXT.1 IPsec Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_266" href="#period_266">. </a>           </i></b></div>
+           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_268" href="#period_268">. </a>           </i></b></div>
           
           <div class="element"><div class="reqid" id="FCS_IPSEC_EXT.1.1"><a href="#FCS_IPSEC_EXT.1.1" class="abbr">FCS_IPSEC_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           <div class="element"><div class="reqid" id="FCS_IPSEC_EXT.1.2"><a href="#FCS_IPSEC_EXT.1.2" class="abbr">FCS_IPSEC_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
@@ -1733,7 +1764,7 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FCS_NTP_EXT.1"><h4>FCS_NTP_EXT.1 NTP Protocol</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_267" href="#period_267">. </a>           </i></b></div>
+           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_269" href="#period_269">. </a>           </i></b></div>
           
           <div class="element"><div class="reqid" id="FCS_NTP_EXT.1.1"><a href="#FCS_NTP_EXT.1.1" class="abbr">FCS_NTP_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1747,15 +1778,37 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
           <div class="element"><div class="reqid" id="FCS_RBG.2.1"><a href="#FCS_RBG.2.1" class="abbr">FCS_RBG.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
         </div><div class="comp" id="FCS_RBG.3"><h4>FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using a  [<b>selection</b>: <i id="fcs-rbg-3-1-1"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source</i>, <i id="fcs-rbg-3-1-2"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source</i>]  [<b>assignment</b>: 
+     <span class="assignable-content">name of entropy source</span>] with  [<b>assignment</b>: 
+     <span class="assignable-content">number of bits</span>] bits of min-entropy<a id="period_270" href="#period_270">. </a><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses a single internal source of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> that is within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary<a id="period_271" href="#period_271">. </a>Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_272" href="#period_272">. </a></p>
+              <p style="text-align: left;">Hardware-based noise sources are entropy sources whose primary function is noise generation, such as ring oscillators, diodes, and thermal noise<a id="period_273" href="#period_273">. </a>While a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may use software to collect the noise from these hardware sources, these are not software-based<a id="period_274" href="#period_274">. </a></p>
+              <p style="text-align: left;">Software-based noise sources generate noise as a byproduct of their normal operation<a id="period_275" href="#period_275">. </a>Examples of software-based noise sources can be user or system-based events such as reading the least significant bits from an event timer, etc<a id="period_276" href="#period_276">. </a></p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> collects enough input from the internal noise source such that the total measured entropy of the input is sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_277" href="#period_277">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author ensures that the assignment is completed with the number of bits of the input sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_278" href="#period_278">. </a></p>
+            </span></div></div></div>
         </div><div class="comp" id="FCS_RBG.4"><h4>FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using  [<b>selection</b>: <i id="fcs-rbg-4-1-1"> [<b>assignment</b>: 
+     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source(s)</i>, <i id="fcs-rbg-4-1-4"> [<b>assignment</b>: 
+     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source(s)</i>]<a id="period_279" href="#period_279">. </a><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses two or more internal sources of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_280" href="#period_280">. </a>Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_281" href="#period_281">. </a><a href="#FCS_RBG.5">FCS_RBG.5</a> defines the mechanism by which these sources are combined to ensure sufficient minimum entropy<a id="period_282" href="#period_282">. </a></p>
+            </span></div></div></div>
         </div><div class="comp" id="FCS_RBG.5"><h4>FCS_RBG.5 Random Bit Generation (Combining Entropy Sources)</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <i id="fcs-rbg-5-1-1">hash</i>, <i id="fcs-rbg-5-1-2">concatenate and hash</i>, <i id="fcs-rbg-5-1-3"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></i>, <i id="fcs-rbg-5-1-4">input into a linear feedback shift register</i>, <i id="fcs-rbg-5-1-5">[<b>assignment</b>: 
+     <span class="assignable-content">combining operation</span>]</i>]  [<b>selection</b>: <i id="fcs-rbg-5-1-6">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> entropy source(s)</i>, <i id="fcs-rbg-5-1-7">input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface(s) for obtaining entropy</i>] resulting in a minimum of  [<b>assignment</b>: 
+     <span class="assignable-content">number of bits</span>] bits of min-entropy to create the entropy input into the derivation function as defined in  [<b>selection</b>: <i id="fcs-rbg-5-1-9"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 18031:2011</i>, <i id="fcs-rbg-5-1-10"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A Revision 1</i>]<a id="period_283" href="#period_283">. </a><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> combines two or more sources of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_284" href="#period_284">. </a>Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_285" href="#period_285">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_286" href="#period_286">. </a></p>
+              <p style="text-align: left;">One can apply <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a<a id="period_287" href="#period_287">. </a>raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually<a id="period_288" href="#period_288">. </a>One should not apply <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90B (or AIS-31) statistical tests against external noise sources since the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is unable to enforce entropy requirements or conditioning requirements against external sources of entropy<a id="period_289" href="#period_289">. </a>However, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr><a id="period_290" href="#period_290">. </a></p>
+            </span></div></div></div>
         </div><h2 id="fmt-sel-based" class="indexable" data-level="2">B.3 Security Management (FMT)</h2><div class="comp" id="FMT_MOF.1/AutoUpdate"><h4>FMT_MOF.1/AutoUpdate Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_268" href="#period_268">. </a>           </i></b></div>
+           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_291" href="#period_291">. </a>           </i></b></div>
           
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/AutoUpdate"><a href="#FMT_MOF.1.1/AutoUpdate" class="abbr">FMT_MOF.1.1/AutoUpdate</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1765,7 +1818,7 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FMT_MOF.1/Functions"><h4>FMT_MOF.1/Functions Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_269" href="#period_269">. </a>           </i></b></div>
+           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_292" href="#period_292">. </a>           </i></b></div>
           
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/Functions"><a href="#FMT_MOF.1.1/Functions" class="abbr">FMT_MOF.1.1/Functions</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1775,7 +1828,7 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><div class="comp" id="FMT_MOF.1/Services"><h4>FMT_MOF.1/Services Management of Security Functions Behaviour</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_270" href="#period_270">. </a>           </i></b></div>
+           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_293" href="#period_293">. </a>           </i></b></div>
           
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/Services"><a href="#FMT_MOF.1.1/Services" class="abbr">FMT_MOF.1.1/Services</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1793,7 +1846,7 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
               
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.4 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_271" href="#period_271">. </a>           </i></b></div>
+           <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a><a id="period_294" href="#period_294">. </a>           </i></b></div>
           
           <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.1"><a href="#FPT_TUD_EXT.2.1" class="abbr">FPT_TUD_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
@@ -1804,82 +1857,82 @@ are dependent on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> i
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix C -  Entropy Documentation and Assessment</h1>blah<h1 id="a-glossary" class="indexable" data-level="A">Appendix D -  Glossary</h1>
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">D.1 Terms</h2>
-The following sections list Common Criteria and technology terms used in this document<a id="period_272" href="#period_272">. </a>    <h3 id="cc-terms" class="indexable" data-level="3">D.1.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a><a id="period_273" href="#period_273">. </a></td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_274" href="#period_274">. </a></td></tr>
+The following sections list Common Criteria and technology terms used in this document<a id="period_295" href="#period_295">. </a>    <h3 id="cc-terms" class="indexable" data-level="3">D.1.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a><a id="period_296" href="#period_296">. </a></td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_297" href="#period_297">. </a></td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
-    international technical communities and approved by multiple schemes<a id="period_275" href="#period_275">. </a></td></tr>
-<tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408)<a id="period_276" href="#period_276">. </a></td></tr>
+    international technical communities and approved by multiple schemes<a id="period_298" href="#period_298">. </a></td></tr>
+<tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408)<a id="period_299" href="#period_299">. </a></td></tr>
 <tr><td><div id="Common_Criteria_Testing_Laboratory">Common Criteria Testing Laboratory</div></td><td>
       Within the context of the Common Criteria Evaluation and Validation Scheme (CCEVS), an IT security evaluation facility
-      accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations<a id="period_277" href="#period_277">. </a>    </td></tr>
-<tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation<a id="period_278" href="#period_278">. </a></td></tr>
-<tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole<a id="period_279" href="#period_279">. </a></td></tr>
+      accredited by the National Voluntary Laboratory Accreditation Program (NVLAP) and approved by the NIAP Validation Body to conduct Common Criteria-based evaluations<a id="period_300" href="#period_300">. </a>    </td></tr>
+<tr><td><div id="Common_Evaluation_Methodology">Common Evaluation Methodology (CEM)</div></td><td>Common Evaluation Methodology for Information Technology Security Evaluation<a id="period_301" href="#period_301">. </a></td></tr>
+<tr><td><div id="Distributed_TOE">Distributed TOE</div></td><td>A TOE composed of multiple components operating as a logical whole<a id="period_302" href="#period_302">. </a></td></tr>
 <tr><td><div id="Extended_Package">Extended Package (EP)</div></td><td>A deprecated document form for collecting SFRs that implement a particular protocol, technology,
-	    or functionality<a id="period_280" href="#period_280">. </a>See Functional Packages<a id="period_281" href="#period_281">. </a></td></tr>
+	    or functionality<a id="period_303" href="#period_303">. </a>See Functional Packages<a id="period_304" href="#period_304">. </a></td></tr>
 <tr><td><div id="Functional_Package">Functional Package (FP)</div></td><td>A document that collects SFRs for a particular protocol, technology,
-	    or functionality<a id="period_282" href="#period_282">. </a></td></tr>
-<tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy<a id="period_283" href="#period_283">. </a></td></tr>
-<tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products<a id="period_284" href="#period_284">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module<a id="period_285" href="#period_285">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs<a id="period_286" href="#period_286">. </a></td></tr>
-<tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE<a id="period_287" href="#period_287">. </a></td></tr>
-<tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE<a id="period_288" href="#period_288">. </a></td></tr>
-<tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product<a id="period_289" href="#period_289">. </a></td></tr>
-<tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation<a id="period_290" href="#period_290">. </a></td></tr>
-<tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation<a id="period_291" href="#period_291">. </a></td></tr>
-<tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST<a id="period_292" href="#period_292">. </a></td></tr>
+	    or functionality<a id="period_305" href="#period_305">. </a></td></tr>
+<tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy<a id="period_306" href="#period_306">. </a></td></tr>
+<tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products<a id="period_307" href="#period_307">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module<a id="period_308" href="#period_308">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs<a id="period_309" href="#period_309">. </a></td></tr>
+<tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE<a id="period_310" href="#period_310">. </a></td></tr>
+<tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE<a id="period_311" href="#period_311">. </a></td></tr>
+<tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product<a id="period_312" href="#period_312">. </a></td></tr>
+<tr><td><div id="Target_of_Evaluation">Target of Evaluation (TOE)</div></td><td>The product under evaluation<a id="period_313" href="#period_313">. </a></td></tr>
+<tr><td><div id="TOE_Security_Functionality">TOE Security Functionality (TSF)</div></td><td>The security functionality of the product under evaluation<a id="period_314" href="#period_314">. </a></td></tr>
+<tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST<a id="period_315" href="#period_315">. </a></td></tr>
 </table><h3 id="tech-terms" class="indexable" data-level="3">D.1.2 Technical Terms</h3><table style="width: 100%"><tr><td><div id="Address_Space_Layout_Randomization">Address Space Layout Randomization (ASLR)</div></td><td>An anti-exploitation feature which loads memory mappings into unpredictable
-	locations<a id="period_293" href="#period_293">. </a>ASLR makes it more difficult for an attacker to redirect control to code
-	that they have introduced into the address space of a process<a id="period_294" href="#period_294">. </a></td></tr>
+	locations<a id="period_316" href="#period_316">. </a>ASLR makes it more difficult for an attacker to redirect control to code
+	that they have introduced into the address space of a process<a id="period_317" href="#period_317">. </a></td></tr>
 <tr><td><div id="Administrator">Administrator</div></td><td>An administrator is responsible for management activities, including setting policies that are 
-	applied by the enterprise on the operating system<a id="period_295" href="#period_295">. </a>	This administrator could be acting remotely through a management server, from which the system
-	receives configuration policies<a id="period_296" href="#period_296">. </a>	An administrator can enforce settings on the system which cannot be overridden by non-administrator users<a id="period_297" href="#period_297">. </a></td></tr>
+	applied by the enterprise on the operating system<a id="period_318" href="#period_318">. </a>	This administrator could be acting remotely through a management server, from which the system
+	receives configuration policies<a id="period_319" href="#period_319">. </a>	An administrator can enforce settings on the system which cannot be overridden by non-administrator users<a id="period_320" href="#period_320">. </a></td></tr>
 <tr><td><div id="Application">Application (app)</div></td><td>Software that runs on a platform and performs tasks on behalf of the user
-	or owner of the platform, as well as its supporting documentation<a id="period_298" href="#period_298">. </a></td></tr>
+	or owner of the platform, as well as its supporting documentation<a id="period_321" href="#period_321">. </a></td></tr>
 <tr><td><div id="Application_Programming_Interface">Application Programming Interface (API)</div></td><td>A specification of routines, data structures, object classes, and variables
 	that allows an application to make use of services provided by another software
-	component, such as a library<a id="period_299" href="#period_299">. </a>APIs are often provided for a set of libraries included
-	with the platform<a id="period_300" href="#period_300">. </a></td></tr>
-<tr><td><div id="Credential">Credential</div></td><td>Data that establishes the identity of a user, e.g<a id="period_301" href="#period_301">. </a>a cryptographic key or
-	password<a id="period_302" href="#period_302">. </a></td></tr>
+	component, such as a library<a id="period_322" href="#period_322">. </a>APIs are often provided for a set of libraries included
+	with the platform<a id="period_323" href="#period_323">. </a></td></tr>
+<tr><td><div id="Credential">Credential</div></td><td>Data that establishes the identity of a user, e.g<a id="period_324" href="#period_324">. </a>a cryptographic key or
+	password<a id="period_325" href="#period_325">. </a></td></tr>
 <tr><td><div id="Critical_Security_Parameters">Critical Security Parameters (CSP)</div></td><td>Information that is either user or system defined and
 	is used to operate a cryptographic module in processing encryption functions including
 	cryptographic keys and authentication data, such as passwords, the disclosure or modification
 	of which can compromise the security of a cryptographic module or the security of the
-	information protected by the module<a id="period_303" href="#period_303">. </a></td></tr>
+	information protected by the module<a id="period_326" href="#period_326">. </a></td></tr>
 <tr><td><div id="DAR_Protection">DAR Protection</div></td><td>Countermeasures that prevent attackers, even those with physical access,
-	from extracting data from non-volatile storage<a id="period_304" href="#period_304">. </a>	Common techniques include data encryption and wiping<a id="period_305" href="#period_305">. </a></td></tr>
+	from extracting data from non-volatile storage<a id="period_327" href="#period_327">. </a>	Common techniques include data encryption and wiping<a id="period_328" href="#period_328">. </a></td></tr>
 <tr><td><div id="Data_Execution_Prevention">Data Execution Prevention (DEP)</div></td><td>An anti-exploitation feature of modern operating systems executing on
-	modern computer hardware, which enforces a non-execute permission on pages of memory<a id="period_306" href="#period_306">. </a>	DEP prevents pages of memory from containing both data and instructions, which makes
-	it more difficult for an attacker to introduce and execute code<a id="period_307" href="#period_307">. </a></td></tr>
-<tr><td><div id="Developer">Developer</div></td><td>An entity that writes OS software<a id="period_308" href="#period_308">. </a>For the purposes of this document,
-	vendors and developers are the same<a id="period_309" href="#period_309">. </a></td></tr>
-<tr><td><div id="General_Purpose_Operating_System">General Purpose Operating System</div></td><td>A class of OSes designed to support a wide-variety of workloads consisting of many concurrent applications or services<a id="period_310" href="#period_310">. </a>	Typical characteristics for OSes in this class include support for third-party applications,
-	support for multiple users, and security separation between users and their respective resources<a id="period_311" href="#period_311">. </a>	General Purpose Operating Systems also lack the real-time constraint that defines Real Time Operating Systems (RTOS)<a id="period_312" href="#period_312">. </a>	RTOSes typically power routers, switches, and embedded devices<a id="period_313" href="#period_313">. </a></td></tr>
+	modern computer hardware, which enforces a non-execute permission on pages of memory<a id="period_329" href="#period_329">. </a>	DEP prevents pages of memory from containing both data and instructions, which makes
+	it more difficult for an attacker to introduce and execute code<a id="period_330" href="#period_330">. </a></td></tr>
+<tr><td><div id="Developer">Developer</div></td><td>An entity that writes OS software<a id="period_331" href="#period_331">. </a>For the purposes of this document,
+	vendors and developers are the same<a id="period_332" href="#period_332">. </a></td></tr>
+<tr><td><div id="General_Purpose_Operating_System">General Purpose Operating System</div></td><td>A class of OSes designed to support a wide-variety of workloads consisting of many concurrent applications or services<a id="period_333" href="#period_333">. </a>	Typical characteristics for OSes in this class include support for third-party applications,
+	support for multiple users, and security separation between users and their respective resources<a id="period_334" href="#period_334">. </a>	General Purpose Operating Systems also lack the real-time constraint that defines Real Time Operating Systems (RTOS)<a id="period_335" href="#period_335">. </a>	RTOSes typically power routers, switches, and embedded devices<a id="period_336" href="#period_336">. </a></td></tr>
 <tr><td><div id="Host-based_Firewall">Host-based Firewall</div></td><td>A software-based firewall implementation running on the OS for filtering inbound and
-	outbound network traffic to and from processes running on the OS<a id="period_314" href="#period_314">. </a></td></tr>
+	outbound network traffic to and from processes running on the OS<a id="period_337" href="#period_337">. </a></td></tr>
 <tr><td><div id="Operating_System">Operating System (OS)</div></td><td>
         Software that manages physical and logical resources and provides services
-	for applications<a id="period_315" href="#period_315">. </a>The terms
+	for applications<a id="period_338" href="#period_338">. </a>The terms
         <i>TOE</i>
         and
         <i>OS</i>
         are interchangeable in this
-	document<a id="period_316" href="#period_316">. </a>      </td></tr>
+	document<a id="period_339" href="#period_339">. </a>      </td></tr>
 <tr><td><div id="Personally_Identifiable_Information">Personally Identifiable Information (PII)</div></td><td>
         Any information about an individual maintained by an agency, including, but
 	not limited to, education, financial transactions, medical history, and criminal or
 	employment history and information which can be used to distinguish or trace an
 	individual's identity, such as their name, social security number, date and place of
 	birth, mother's maiden name, biometric records, etc., including any other personal
-	information which is linked or linkable to an individual<a id="period_317" href="#period_317">. </a>        <a href="#bibOMB">[OMB]</a>
+	information which is linked or linkable to an individual<a id="period_340" href="#period_340">. </a>        <a href="#bibOMB">[OMB]</a>
       </td></tr>
 <tr><td><div id="Sensitive_Data">Sensitive Data</div></td><td>Sensitive data may include all user or enterprise data or may be specific
-	application data such as PII, emails, messaging, documents, calendar items, and contacts<a id="period_318" href="#period_318">. </a>	Sensitive data must minimally include credentials and keys<a id="period_319" href="#period_319">. </a>Sensitive data shall
-	be identified in the OS's TSS by the ST author<a id="period_320" href="#period_320">. </a></td></tr>
+	application data such as PII, emails, messaging, documents, calendar items, and contacts<a id="period_341" href="#period_341">. </a>	Sensitive data must minimally include credentials and keys<a id="period_342" href="#period_342">. </a>Sensitive data shall
+	be identified in the OS's TSS by the ST author<a id="period_343" href="#period_343">. </a></td></tr>
 <tr><td><div id="User">User</div></td><td>A user is subject to configuration policies applied
-	to the operating system by administrators<a id="period_321" href="#period_321">. </a> On some systems under certain
-	configurations, a normal user can temporarily elevate privileges to that of an administrator<a id="period_322" href="#period_322">. </a>	At that time, such a user should be considered an administrator<a id="period_323" href="#period_323">. </a></td></tr>
+	to the operating system by administrators<a id="period_344" href="#period_344">. </a> On some systems under certain
+	configurations, a normal user can temporarily elevate privileges to that of an administrator<a id="period_345" href="#period_345">. </a>	At that time, such a user should be considered an administrator<a id="period_346" href="#period_346">. </a></td></tr>
 <tr><td><div id="Virtual_Machine">Virtual Machine (VM)</div></td><td>Blah Blah Blah</td></tr>
 </table></div>
   <h1 id="acronyms" class="indexable" data-level="A">Appendix E -  Acronyms</h1><table><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
@@ -1962,19 +2015,19 @@ The following sections list Common Criteria and technology terms used in this do
 </table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix F -  Bibliography</h1><table><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td>Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2017-04-001, Version 3.1 Revision 5,
-              April 2017<a id="period_324" href="#period_324">. </a></li>
+              April 2017<a id="period_347" href="#period_347">. </a></li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R5.pdf">Part
                 2: Security Functional Components</a>, CCMB-2017-04-002, Version 3.1 Revision 5,
-              April 2017<a id="period_325" href="#period_325">. </a></li>
+              April 2017<a id="period_348" href="#period_348">. </a></li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf">Part
                 3: Security Assurance Components</a>, CCMB-2017-04-003, Version 3.1 Revision 5,
-              April 2017<a id="period_326" href="#period_326">. </a></li>
+              April 2017<a id="period_349" href="#period_349">. </a></li>
           </ul></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td>
         <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common
             Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>,
-          CCMB-2012-09-004, Version 3.1, Revision 4, September 2012<a id="period_327" href="#period_327">. </a>      </td></tr><tr><td><span id="bibCESG">[<abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr>]</span></td><td><abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr> - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
+          CCMB-2012-09-004, Version 3.1, Revision 4, September 2012<a id="period_350" href="#period_350">. </a>      </td></tr><tr><td><span id="bibCESG">[<abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr>]</span></td><td><abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr> - <a href="https://www.gov.uk/government/collections/end-user-devices-security-guidance"> End
             User Devices Security and Configuration Guidance</a></td></tr><tr><td><span id="bibCSA">[<abbr class="dyn-abbr"><a href="#abbr_CSA">CSA</a></abbr>]</span></td><td><a href="http://csrc.nist.gov/groups/SMA/ispab/documents/csa_87.txt">Computer Security Act
-            of 1987</a>, H.R<a id="period_328" href="#period_328">. </a>145, June 11, 1987<a id="period_329" href="#period_329">. </a></td></tr><tr><td><span id="bibOMB">[<abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr>]</span></td><td>
+            of 1987</a>, H.R<a id="period_351" href="#period_351">. </a>145, June 11, 1987<a id="period_352" href="#period_352">. </a></td></tr><tr><td><span id="bibOMB">[<abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr>]</span></td><td>
         <a href="http://www.whitehouse.gov/sites/default/files/omb/memoranda/fy2006/m06-19.pdf">Reporting Incidents Involving Personally Identifiable Information and Incorporating the
             Cost for Security in Agency Information Technology Investments</a>, <abbr class="dyn-abbr"><a href="#abbr_OMB">OMB</a></abbr> M-06-19, July
-          12, 2006<a id="period_330" href="#period_330">. </a>      </td></tr></table></body></html>
+          12, 2006<a id="period_353" href="#period_353">. </a>      </td></tr></table></body></html>

@@ -1,2 +1,3 @@
 /home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:241:14: error: element "SO" incomplete; missing required element "addressed-by"
 /home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:248:14: error: element "SO" incomplete; missing required element "addressed-by"
+/home/runner/work/ndcpp/ndcpp/input/ndcpp.xml:717:101: error: attribute "choose-one-of" not allowed here; expected attribute "linebreak" or "onlyone"

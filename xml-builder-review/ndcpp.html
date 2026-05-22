@@ -1033,7 +1033,40 @@ users of the same system.</dd></dl>
           .
           </i></b></div>
           
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">
+              
+                  The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform extendable-output function in accordance with a specified cryptographic algorithm 
+                  
+                  and 
+                  
+    [<b>selection</b>: 
+    <span class="selection-content">Parameters</span>]
+                  that meet the following: 
+                  
+                  .
+                  The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a>.
+                
+            <table><caption><span class="ctr" data-myid="fcs-cop-xo-1-1-1" data-counter-type="ct-Table" id="fcs-cop-xo-1-1-1">Table <span class="counter">2</span></span>: Allowed choices for <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a></caption>
+                <tr>
+                  
+                  <th>Cryptographic Algorithm</th>
+                  
+                  <th>Parameters</th>
+                  
+                  <th>List of Standards</th>
+                  
+                  
+                </tr>
+
+                <tr>
+                  <td>Functions =  [<b>selection</b>: <i id="fcs-cop-xo-1-1-3">SHAKE128</i>, <i id="fcs-cop-xo-1-1-4">SHAKE256</i>]</td>
+                </tr>
+
+              </table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</p>
+            </span></div></div></div>
         </div>
         
         <div class="comp" id="FCS_IPSEC_EXT.1"><h4>FCS_IPSEC_EXT.1 IPsec Protocol</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
@@ -1096,21 +1129,43 @@ users of the same system.</dd></dl>
           .
           </i></b></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using a  [<b>selection</b>: <i id="fcs-rbg-3-1-1"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source</i>, <i id="fcs-rbg-3-1-2"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source</i>]  [<b>assignment</b>: 
+     <span class="assignable-content">name of entropy source</span>] with  [<b>assignment</b>: 
+     <span class="assignable-content">number of bits</span>] bits of min-entropy.<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses a single internal source of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> that is within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary. Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>.</p>
+              <p style="text-align: left;">Hardware-based noise sources are entropy sources whose primary function is noise generation, such as ring oscillators, diodes, and thermal noise. While a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may use software to collect the noise from these hardware sources, these are not software-based. </p>
+              <p style="text-align: left;">Software-based noise sources generate noise as a byproduct of their normal operation. Examples of software-based noise sources can be user or system-based events such as reading the least significant bits from an event timer, etc. </p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> collects enough input from the internal noise source such that the total measured entropy of the input is sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author ensures that the assignment is completed with the number of bits of the input sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>.</p>
+            </span></div></div></div>
         </div>
         
         <div class="comp" id="FCS_RBG.4"><h4>FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources)</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
           .
           </i></b></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using  [<b>selection</b>: <i id="fcs-rbg-4-1-1"> [<b>assignment</b>: 
+     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source(s)</i>, <i id="fcs-rbg-4-1-4"> [<b>assignment</b>: 
+     <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source(s)</i>].<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses two or more internal sources of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. <a href="#FCS_RBG.5">FCS_RBG.5</a> defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</p>
+            </span></div></div></div>
         </div>
         
         <div class="comp" id="FCS_RBG.5"><h4>FCS_RBG.5 Random Bit Generation (Combining Entropy Sources)</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
           .
           </i></b></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall [<b>selection</b>: <i id="fcs-rbg-5-1-1">hash</i>, <i id="fcs-rbg-5-1-2">concatenate and hash</i>, <i id="fcs-rbg-5-1-3"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></i>, <i id="fcs-rbg-5-1-4">input into a linear feedback shift register</i>, <i id="fcs-rbg-5-1-5">[<b>assignment</b>: 
+     <span class="assignable-content">combining operation</span>]</i>]  [<b>selection</b>: <i id="fcs-rbg-5-1-6">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> entropy source(s)</i>, <i id="fcs-rbg-5-1-7">input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface(s) for obtaining entropy</i>] resulting in a minimum of  [<b>assignment</b>: 
+     <span class="assignable-content">number of bits</span>] bits of min-entropy to create the entropy input into the derivation function as defined in  [<b>selection</b>: <i id="fcs-rbg-5-1-9"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 18031:2011</i>, <i id="fcs-rbg-5-1-10"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A Revision 1</i>].<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> combines two or more sources of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. </p>
+              <p style="text-align: left;">One can apply <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90B (or AIS-31) statistical tests against external noise sources since the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>.</p>
+            </span></div></div></div>
         </div>
       
       
@@ -1409,7 +1464,7 @@ users of the same system.</dd></dl>
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea">ABC</div><div class="eacategory">Guidance</div><div class="ea"></div><div class="eacategory">Tests</div><div class="ea"></div></div></div></div>
       
     <h3 id="obj-req-map" class="indexable" data-level="3">5.1.9 TOE Security Functional Requirements Rationale</h3><p>The following rationale provides justification for each security objective for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to meet and achieve the security objectives:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">2</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Objective</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="1"><a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a><br/></td><td><a href="#FAU_GEN.1">FAU_GEN.1</a></td><td>'cause <a href="#FAU_GEN.1">FAU_GEN.1</a> is awesome</td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to meet and achieve the security objectives:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">3</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Objective</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="1"><a href="#O.ACCOUNTABILITY">O.ACCOUNTABILITY</a><br/></td><td><a href="#FAU_GEN.1">FAU_GEN.1</a></td><td>'cause <a href="#FAU_GEN.1">FAU_GEN.1</a> is awesome</td></tr>
 <tr class="major-row"><td rowspan="4"><a href="#O.INTEGRITY">O.INTEGRITY</a><br/></td><td><a href="#FIA_AFL.1">FIA_AFL.1</a></td><td>For reasons</td></tr>
 <tr><td><a href="#FPT_TST_EXT.1">FPT_TST_EXT.1</a></td><td>For reasons</td></tr>
 <tr><td><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></td><td>For reasons</td></tr>

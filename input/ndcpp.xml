@@ -85,7 +85,20 @@
     <section title="PP Overview" id="s-ppoverview">words</section>
     <section title="TOE Use Cases" id="s-usecases">Words</section>
   </sec:Introduction>
-  <sec:Conformance_Claims/>
+  <sec:Conformance_Claims>
+    <undefined>
+      <cc-st-conf>exact</cc-st-conf>
+      <cc-pt2-conf>conformant</cc-pt2-conf>
+      <cc-pt3-conf>conformant</cc-pt3-conf>
+      <cc-pp-conf/>
+      <cc-pp-config-with/>
+      <cc-pkg-claim>
+        <AP-cc-ref conf="conformant">Functional Package for Secure Shell Version 2.0</AP-cc-ref>
+        <AP-cc-ref conf="conformant">Functional Package for Transport Layer Security Version 2.1</AP-cc-ref>
+        <AP-cc-ref conf="conformant">Functional Package for X.509 Version 1.0</AP-cc-ref>
+      </cc-pkg-claim>
+    </undefined>
+  </sec:Conformance_Claims>
   <!-- 3.0 Security Problem Definition-->
   <sec:Security_Problem_Description>
     <h:p>A Network Device has a network infrastructure role that it is designed to provide. In doing so,
@@ -106,50 +119,51 @@
         <threat name="T.LIMITED_PHYSICAL_ACCESS">
           <description>An attacker may attempt to access data on the OS while having a limited
             amount of time with the physical device.</description>
-          <objective-refer ref="O.PROTECTED_STORAGE">
-            <rationale>The objective O.PROTECTED_STORAGE protects against unauthorized attempts to              access physical storage used by the TOE.</rationale>
-          </objective-refer>
+          <!-- New mapping to build updated threat mapping table. -->
         </threat>
         <threat name="T.LOCAL_ATTACK">
           <description>An attacker may compromise applications running on the OS. The
             compromised application may provide maliciously formatted input to the OS through a
             variety of channels including unprivileged system calls and messaging via the
             file system.</description>
-          <objective-refer ref="O.INTEGRITY">
-            <rationale>The objective O.INTEGRITY protects against the use of mechanisms that weaken              the TOE with regard to attack by other software on the              platform.</rationale>
-          </objective-refer>
-          <objective-refer ref="O.ACCOUNTABILITY">
-            <rationale>The objective O.ACCOUNTABILITY protects against local attacks by providing              a mechanism to report behavior that may indicate a local attack is occurring or              has occurred.</rationale>
-          </objective-refer>
+          <!-- New mapping to build updated threat mapping table. -->
+          <addressed-by>FAU_GEN.1</addressed-by>
+          <rationale>'cause FAU_GEN.1 is awesome</rationale>
+          <addressed-by>FIA_AFL.1</addressed-by>
+          <rationale>For reasons</rationale>
+          <addressed-by>FPT_TST_EXT.1</addressed-by>
+          <rationale>For reasons</rationale>
+          <addressed-by>FPT_TUD_EXT.1</addressed-by>
+          <rationale>For reasons</rationale>
+          <addressed-by>FPT_TUD_EXT.2 (Selection-based)</addressed-by>
+          <rationale>For reasons</rationale>
         </threat>
         <threat name="T.NETWORK_ATTACK">
           <description>An attacker is positioned on a communications channel or elsewhere on the
             network infrastructure. Attackers may engage in communications with applications and
             services running on or part of the OS with the intent of compromise. Engagement may
             consist of altering existing legitimate communications.</description>
-          <objective-refer ref="O.PROTECTED_COMMS">
-            <rationale>The threat T.NETWORK_ATTACK is countered by O.PROTECTED_COMMS as this              provides for integrity of transmitted data.</rationale>
-          </objective-refer>
-          <objective-refer ref="O.INTEGRITY">
-            <rationale>The threat T.NETWORK_ATTACK is countered by O.INTEGRITY as this provides for              integrity of software that is installed onto the system from the network.</rationale>
-          </objective-refer>
-          <objective-refer ref="O.MANAGEMENT">
-            <rationale>The threat T.NETWORK_ATTACK is countered by O.MANAGEMENT as this provides for              the ability to configure the OS to defend against network attack.</rationale>
-          </objective-refer>
-          <objective-refer ref="O.ACCOUNTABILITY">
-            <rationale>The threat T.NETWORK_ATTACK is countered by O.ACCOUNTABILITY as this              provides a mechanism for the OS to report behavior that may indicate a network              attack has occurred.</rationale>
-          </objective-refer>
+          <!-- New mapping to build updated threat mapping table. -->
+          <addressed-by>FAU_GEN.1</addressed-by>
+          <rationale>'cause FAU_GEN.1 is awesome</rationale>
+          <addressed-by>FIA_AFL.1</addressed-by>
+          <rationale>For reasons</rationale>
+          <addressed-by>FPT_TST_EXT.1</addressed-by>
+          <rationale>For reasons</rationale>
+          <addressed-by>FPT_TUD_EXT.1</addressed-by>
+          <rationale>For reasons</rationale>
+          <addressed-by>FPT_TUD_EXT.2 (Selection-based)</addressed-by>
+          <rationale>For reasons</rationale>
+          <addressed-by>FTA_TAB.1</addressed-by>
+          <rationale>For reasons</rationale>
         </threat>
         <threat name="T.NETWORK_EAVESDROP">
           <description>An attacker is positioned on a communications channel or elsewhere on the
             network infrastructure. Attackers may monitor and gain access to data exchanged between
             applications and services that are running on or part of the OS.</description>
-          <objective-refer ref="O.PROTECTED_COMMS">
-            <rationale>The threat T.NETWORK_EAVESDROP is countered by O.PROTECTED_COMMS as this              provides for confidentiality of transmitted data.</rationale>
-          </objective-refer>
-          <objective-refer ref="O.MANAGEMENT">
-            <rationale>The threat T.NETWORK_EAVESDROP is countered by O.MANAGEMENT as this provides              for the ability to configure the OS to protect the confidentiality of its transmitted              data.</rationale>
-          </objective-refer>
+          <!-- New mapping to build updated threat mapping table. -->
+          <addressed-by>FTA_TAB.1</addressed-by>
+          <rationale>For reasons</rationale>
         </threat>
       </threats>
     </sec:Threats>
@@ -196,58 +210,6 @@
   <!-- 4.0 Security Objectives -->
   <sec:Security_Objectives>
     <!-- 4.1 Security Objectives for the TOE -->
-    <sec:Security_Objectives_for_the_TOE>
-      <SOs>
-        <SO name="O.ACCOUNTABILITY">
-          <description>Conformant OSes ensure that information exists that allows
-            administrators to discover unintentional issues with the configuration and operation of
-            the operating system and discover its cause.  Gathering event information and immediately
-            transmitting it to another system can also enable incident response in the event
-            of system compromise.</description>
-          <addressed-by>FAU_GEN.1</addressed-by>
-          <rationale>'cause FAU_GEN.1 is awesome</rationale>
-        </SO>
-        <SO name="O.INTEGRITY">
-          <description>Conformant OSes ensure the integrity of their update
-            packages. OSes are seldom if ever shipped without errors, and the
-            ability to deploy patches and updates with integrity is critical to enterprise network
-            security. Conformant OSes provide execution environment-based
-            mitigations that increase the cost to attackers by adding complexity to the task of
-            compromising systems.</description>
-          <addressed-by>FIA_AFL.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TST_EXT.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TUD_EXT.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TUD_EXT.2 (Selection-based)</addressed-by>
-          <rationale>For reasons</rationale>
-        </SO>
-        <SO name="O.MANAGEMENT">
-          <description>To facilitate management by users and the enterprise, conformant OSes
-	    provide consistent and supported interfaces for their
-            security-relevant configuration and maintenance. This includes the deployment of
-            applications and application updates through the use of platform-supported deployment
-            mechanisms and formats, as well as providing mechanisms for configuration and
-            application execution control.</description>
-          <addressed-by>FTA_TAB.1</addressed-by>
-          <rationale>For reasons</rationale>
-        </SO>
-        <SO name="O.PROTECTED_COMMS">
-          <description>To address both passive (eavesdropping) and active (packet modification)
-            network attack threats, conformant OSes provide mechanisms to create
-            trusted channels for CSP and sensitive data. Both CSP and sensitive data
-            should not be exposed outside of the platform.</description>
-        </SO>
-        <SO name="O.PROTECTED_STORAGE">
-          <description>To address the issue of loss of confidentiality of credentials in the event of
-loss of physical control of the storage medium, conformant OSes
-provide data-at-rest protection for credentials.
-Conformant OSes also provide access controls which allow users to keep their files private from other
-users of the same system.</description>
-        </SO>
-      </SOs>
-    </sec:Security_Objectives_for_the_TOE>
     <!-- 4.2 Security Objctives for the Operational Environment -->
     <section title="Security Objectives for the Operational Environment" id="SecurityObjectivesTOEorEnvironment">
       The following security objectives for the operational environment assist the OS in correctly providing its security functionality. These track with the assumptions about the environment.
@@ -282,9 +244,21 @@ users of the same system.</description>
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:     <selectables><selectable id="dummy">Dummy</selectable><selectable id="fau_gen.1.1_1">Other</selectable></selectables></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li><h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li><h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p><h:ol><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li><h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li><h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li><h:li><h:p style="text-align: left;"></h:p></h:li></h:ol></h:li></h:ol><selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables> <h:p style="text-align: left;">;</h:p><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
             <note role="application">
-              <h:p style="text-align: left;">Words</h:p>
+              <h:p style="text-align: left;">
+                <h:b>Application Note 1</h:b>
+              </h:p>
+              <h:p style="text-align: left;">If the list of ‘administrative actions’ appears to be incomplete, the assignment in the selection should be used to list additional administrative actions which are audited.</h:p>
+              <h:p style="text-align: left;">The requirement to audit the "Generating/import of, changing, or deleting of cryptographic keys" refers to all types of cryptographic keys which are intended to be used longer than for just one session (i.e., it does not refer to ephemeral keys/session keys). The requirement applies to all named changes independently from how they are invoked. A cryptographic key could be generated automatically during initial start-up without administrator intervention or through administrator intervention. This requirement also applies to the management of cryptographic keys by adding, replacing or removing trust anchors in the TOE’s trust store. In all related cases the changes to cryptographic keys need to be audited together with a unique key name, key reference or unique identifier for the corresponding certificate.</h:p>
+              <h:p style="text-align: left;">The ST author replaces the cross-reference to the table of audit events with an appropriate cross-reference for the ST.</h:p>
+              <h:p style="text-align: left;">For distributed TOEs, each component must generate an audit record for each of the SFRs that it implements. If more than one TOE component is involved when an audit event is triggered, the event has to be audited on each component (e.g., rejection of a connection by one component while attempting to establish a secure communication channel between two components should result in an audit event being generated by both components). This is not limited to error cases but also includes events about successful actions like successful build up/tear down of a secure communication channel between TOE components.</h:p>
+              <h:p style="text-align: left;">
+                <h:b>Application Note 2</h:b>
+              </h:p>
+              <h:p style="text-align: left;">The ST author can include other auditable events directly in the table; they are not limited to the list presented. </h:p>
+              <h:p style="text-align: left;">The audit events that correspond to defined management functions are highly dependent on the FMT_SMF.1 selections. Therefore, there is only a generic requirement specified in Table 2 for FMT_SMF.1 ('All management activities of TSF data.') that is intended to cover all mandatory and selection-based management functions. If, for example, the ‘Ability to enable or disable automatic checking for updates or automatic updates’ is selected as part of FMT_SMF.1, all actions of enabling or disabling automatic checking for updates or automatic updates should be audited. Audit of management functions is intended to record both the issuing and the result of the command/administrative action. The corresponding audit event can be recorded as either a single audit record or multiple audit records. In cases where a management function could conceivably fail, such as updating the TOE, there must exist an audit record indicating the outcome, such as the successful completion of the update process. </h:p>
+              <h:p style="text-align: left;">With respect to FAU_GEN.1.1, FMT_SMF.1 and FMT_MOF.1/Services the term ‘services’ refers to trusted path and trusted channel communications, on demand self-tests, trusted update and Administrator sessions (that exist under the trusted path) (e.g., netconf).</h:p>
             </note>
             <aactivity>
               Something
@@ -296,9 +270,25 @@ users of the same system.</description>
           <f-element id="fau-gen-1e2">
             <title>
               <h:p style="text-align: left;">The TSF shall record within the audit data at least the following information:</h:p>
+              <h:ol>
+                <h:li>
+                  <h:p style="text-align: left;">Date and time of the auditable event, type of event, subject identity <h:s>(if applicable)</h:s>, and the outcome (success or failure) of the event; and</h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">For each auditable event type, based on the auditable event definitions of the functional components included in the <h:b>c</h:b>PP, PP-Module, functional package or ST, <h:i>information specified in column three of Table 2.</h:i></h:p>
+                </h:li>
+              </h:ol>
             </title>
             <note role="application">
-              <h:p style="text-align: left;">Words</h:p>
+              <h:p style="text-align: left;">
+                <h:b>Application Note 3 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">The ST author replaces the cross-reference to the table of audit events with an appropriate cross-reference for the ST. If the TOE does not implement functionality that enables the administrator to configure local audit settings, then item FAU_STG_EXT.1 in Table 2 should be considered ‘trivially satisfied’ and the ST author should include an explanation that the local audit is not configurable in the TSS.</h:p>
+              <h:p style="text-align: left;">The date and time information for any audit event should be recorded as part of each audit record to ensure the timing of the event can be unambiguously determined from the data contained in the audit record. The representation of date and time information recorded for each event needs to allow unambiguous determination of at least day, month and year information for the date and hours, minutes and second information for the time.</h:p>
+              <h:p style="text-align: left;">
+                <h:b>Application Note 4</h:b>
+              </h:p>
+              <h:p style="text-align: left;">Additional audit events will apply to the TOE depending on the optional and selection-based requirements adopted from Annex A, Annex B, PP-Module(s), and functional package(s). For all SFRs included in the ST, the ST must include the relevant additional auditable events specified in Table 10 for optional SFRs, Table 11 for selection-based SFRs, the claimed PP-Module(s), and the claimed functional package(s). All audit events defined in Table 2 have to be included in the ST as they are mandatory.</h:p>
             </note>
           </f-element>
           <audit-event/>
@@ -306,9 +296,12 @@ users of the same system.</description>
         <!-- FAU_GEN.2 User identity association -->
         <f-component cc-id="fau_gen.2" id="fau-gen-2" name="User identity association">
           <f-element id="fau-gen-2-1">
-            <title>The TOE shall</title>
+            <title>For audit events resulting from actions of identified users, the TSF shall be able to associate each auditable event with the identity of the user that caused the event.</title>
             <note role="application">
-              <h:p style="text-align: left;">Words</h:p>
+              <h:p style="text-align: left;">
+                <h:b>Application Note 5</h:b>
+              </h:p>
+              <h:p style="text-align: left;">Where an auditable event is triggered by another component, the component that records the event must associate the event with the identity of the initiating component that caused the event (applies to distributed TOEs only).</h:p>
             </note>
             <aactivity>
               Something
@@ -355,7 +348,15 @@ users of the same system.</description>
         <!-- FAU_STG_EXT.1 Protected Audit Event Storage -->
         <f-component cc-id="fau_stg_ext.1" id="fau-stg-ext-1" name="Protected Audit Event Storage">
           <f-element id="fau-stg-ext-1-1">
-            <title>The TOE shall</title>
+            <title>The TSF shall be able to transmit the generated audit data to an external IT entity using a trusted channel according to FTP_ITC.1.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 6 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">For selecting the option of transmission of generated audit data to an external IT entity the TOE relies on a non-TOE audit server for storage and review of audit records. The storage of these audit records and the ability to allow the Administrator to review these audit records is provided by the operational environment in that case. Since the external audit server is not part of the TOE, there are no requirements on it except the capabilities for FTP_ITC.1 transport for audit data. No requirements are placed upon the format or underlying protocol of the audit data being transferred. The TOE must be capable of being configured to transfer audit data to an external IT entity without Administrator intervention. Manual transfer would not meet the requirements. Transmission could be done in real-time or periodically. If the transmission is not done in real-time then the TSS describes what event stimulates the transmission to be made and what range of frequencies the TOE supports for making transfers of audit data to the audit server, the TSS also suggests typical acceptable frequencies for the transfer. </h:p>
+              <h:p style="text-align: left;">For distributed TOEs, each component must be able to export audit data across a protected channel external (FTP_ITC.1) or intercomponent (FPT_ITT.1 or FTP_ITC.1) as appropriate. At least one component of the TOE must be able to export audit records via FTP_ITC.1 such that all TOE audit records can be exported to an external IT entity. </h:p>
+              <h:p style="text-align: left;">An ‘external IT entity’ (physical or virtualized) is another device or computer on the network in which the TOE no longer has access to the audit records. This can be a physical or virtualized entity.</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -364,19 +365,56 @@ users of the same system.</description>
             </aactivity>
           </f-element>
           <f-element id="fau-stg-ext-1-2">
-            <title>The TOE shall</title>
+            <title>
+              <h:p style="text-align: left;">The TSF shall be able to store generated audit data on the TOE itself. In addition </h:p>
+              <selectables>
+                <selectable id="fau-stg-ext-1-2-1">The TOE shall consist of a single standalone component that stores audit data locally</selectable>
+                <selectable id="fau-stg--ext-1-2-4">The TOE shall be a distributed TOE that stores audit data on the following TOE components: <assignable>identification of TOE components</assignable></selectable>
+                <selectable id="fau-stg-ext-1-2-5">The TOE shall be a distributed TOE with storage of audit data provided externally for the following TOE components: <assignable>list of TOE components that do not store audit data locally and the other TOE components to which they transmit their generated audit data</assignable></selectable>
+              </selectables>
+            </title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 7</h:b>
+              </h:p>
+              <h:p style="text-align: left;">If the TOE is a standalone TOE (i.e., not a distributed TOE) the option 'The TOE should consist of a single standalone component that stores audit data locally' must be selected.</h:p>
+              <h:p style="text-align: left;">If the TOE is a distributed TOE, the option 'The TOE should be a distributed TOE that stores audit data on the following TOE components: [assignment: identification of TOE components]' must be selected and the TOE components which store audit data locally must be listed in the assignment. Since all TOEs are required to provide functions to store audit data locally this option needs to be selected for all distributed TOEs. In addition, FAU_GEN_EXT.1 and FAU_STG_EXT.4 must be claimed in the ST. If the distributed TOE consists only of components which are storing audit data locally, it is sufficient to select only the option 'The TOE should be a distributed TOE that stores audit data on the following TOE components: [assignment: identification of TOE components]' and add FAU_GEN_EXT.1 and FAU_STG_EXT.4. </h:p>
+              <h:p style="text-align: left;">If the TOE is a distributed TOE and some TOE components are not storing audit data locally, the option 'The TOE should be a distributed TOE with storage of audit data provided externally for the following TOE components: [assignment: list of TOE components that do not store audit data locally and the other TOE components to which they transmit their generated audit data]' must be selected in addition to the option 'The TOE should be a distributed TOE that stores audit data on the following TOE components: [assignment: identification of TOE components]'. In that case FAU_STG_EXT.5 must be claimed in the ST in addition to FAU_GEN_EXT.1 and FAU_STG_EXT.4. For the option 'The TOE should be a distributed TOE with storage of audit data provided externally for the following TOE components: [assignment: list of TOE components that do not store audit data locally and the other TOE components to which they transmit their generated audit data]' the TOE components that do not store audit data locally should be mapped to the TOE components to which they transmit their generated audit data. </h:p>
+              <h:p style="text-align: left;">For distributed TOEs, this SFR can be fulfilled either by every TOE component storing its own security audit data locally or by one or more TOE components storing audit data locally and other TOE components which are not storing audit information locally sending security audit data to other TOE components for local storage. For the transfer of security audit data between TOE components a protected channel according to FTP_ITC.1 or FPT_ITT.1 must be used. The TSS describes which TOE components store security audit data locally and which TOE components do not store security audit data locally. For the latter, the TSS describes which other TOE component the audit data is stored locally. </h:p>
+              <h:p style="text-align: left;">For pNDs, ‘on the TOE itself’ or ‘locally’ means on storage inside or directly attached to the ND chassis and accessible by the networking functionality. </h:p>
+              <h:p style="text-align: left;">For vNDs, local storage is any storage accessible by TOE software. In a virtualized environment, ‘local’ storage is under the control of the VS and may be physically located on the local host, but it could also be located on a network drive or storage array.</h:p>
+            </note>
           </f-element>
           <f-element id="fau-stg-ext-1-3">
-            <title>The TOE shall</title>
+            <title>The TSF shall maintain a  <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables> of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
           </f-element>
           <f-element id="fau-stg-ext-1-4">
-            <title>The TOE shall</title>
+            <title>The TSF shall be able to store <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables> audit records locally with a minimum storage size of <assignable>number of records and/or file/buffer size(s)</assignable></title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 8</h:b>
+              </h:p>
+              <h:p style="text-align: left;">Persistent logging is defined as any record(s) that is retained through power off, power failure, or reboot. This requirement allows for the TSF to implement logging either persistent log records or non-persistent log records that may be cleared on reboot of the TOE.</h:p>
+            </note>
           </f-element>
           <f-element id="fau-stg-ext-1-5">
-            <title>The TOE shall</title>
+            <title>The TSF shall <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables> when the local storage space for audit data is full.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 9 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">The ST author may use the "other action" assignment to describe other measurable behaviour (e.g., frequency of log file rotation based on size and/or age of log files). </h:p>
+              <h:p style="text-align: left;">For distributed TOEs, each component is not required to store generated audit data locally, but the overall TOE needs to be able to store audit data locally. Each component must at least provide the ability to temporarily buffer audit information locally to ensure that audit records are preserved in case of network connectivity issues. Buffering audit information locally, does not necessarily involve non-volatile memory: audit information could be buffered in volatile memory. However, the local storage of audit information in the sense of FAU_STG_EXT.1.5 needs to be done in non-volatile memory. For every component which performs local storage of audit information, the behaviour when local storage is exhausted needs to be described. For every component which is buffering audit information instead of storing audit information locally itself, it needs to be described what happens in case the buffer space is exhausted.</h:p>
+            </note>
           </f-element>
           <f-element id="fau-stg-ext-1-6">
-            <title>The TOE shall</title>
+            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 10 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">If "ability to view locally" is selected in FAU_STG_EXT.1.6, then FAU_SAR.1 from Annex B must be included in the ST.</h:p>
+            </note>
           </f-element>
           <audit-event/>
         </f-component>
@@ -1118,105 +1156,47 @@ users of the same system.</description>
       </section>
     </sec:SFRs>
     <!-- 5.2 Security Assurance Requirements -->
-    <sec:Security_Assurance_Requirements title="Security Assurance Requirements">
-      The Security Objectives in
-      <xref to="Security_Objectives"/>
-      were constructed to address threats identified in
-      <xref to="Threats"/>. The Security Functional Requirements (SFRs)
-      in
-      <xref to="SFRs"/>
-      are a formal instantiation of the Security Objectives. The PP
-      identifies the Security Assurance Requirements (SARs) to frame the extent to
-      which the evaluator assesses the documentation applicable for the evaluation and performs
-      independent testing.
-      <h:br/>
-      This section lists the set of SARs from CC part 3
-      that are required in evaluations against this PP. Individual Assurance Activities
-       to be performed are specified both in
-      <xref to="SFRs"/>
-      as well as in this section.
-      <h:br/>
-      The general model for evaluation of OSs against STs written to conform to this PP is as follows:
-      <h:br/>
-      After the
-        ST has been approved for evaluation, the ITSEF will obtain the
-        OS, supporting environmental IT, and the administrative/user guides for
-      the OS. The ITSEF is expected to perform actions mandated by the Common Evaluation
-      Methodology (CEM) for the ASE and ALC SARs. The ITSEF also performs the Assurance Activities
-      contained within
-      <xref to="SFRs"/>, which are intended to be an interpretation of the
-      other CEM assurance requirements as they apply to the specific technology instantiated in the
-      OS. The Assurance Activities that are captured in
-      <xref to="SFRs"/>
-      also provide
-      clarification as to what the developer needs to provide to demonstrate the OS is compliant
-      with the PP.
-      <section title="Class ASE: Security Target" id="ase">
-        As per ASE activities
-        defined in
-        <xref to="bibCEM"/>.
-      </section>
+    <section title="Security Assurance Requirements" id="SARs">
       <section title="Class ADV: Development" id="adv">
-        The information about the OS is contained in the guidance documentation available to the end user as
-        well as the TSS portion of the ST. The OS developer must concur with the description of the product that is
-        contained in the TSS as it relates to the functional requirements. The Assurance Activities
-        contained in
-        <xref to="SFRs"/>
-        should provide the ST authors with
-        sufficient information to determine the appropriate content for the TSS section.
+        The information about the TOE
+        is contained in the guidance documentation available to the end user as
+        well as the TSS portion of the ST. The TOE developer 
+        must concur with the description of the product that is contained in the TSS as it relates 
+        to the functional requirements. The evaluation activities contained in
+        <xref to="SFRs"></xref>
+        should provide the ST authors with sufficient information to 
+        determine the appropriate content for the TSS section.
         <a-component cc-id="adv_fsp.1" name="Basic Functional Specification (ADV_FSP.1)">
-          <summary>The
-          functional specification describes the TSFI. It is not
-          necessary to have a formal or complete specification of these interfaces. Additionally,
-          because OSs conforming to this PP will necessarily have interfaces to
-          the Operational Environment that are not directly invokable by OS
-          users, there is little point specifying that such interfaces be described in and of
-          themselves since only indirect testing of such interfaces may be possible. For this PP,
-          the activities for this family should focus on understanding the interfaces presented in
-          the TSS in response to the functional requirements and the interfaces
-          presented in the AGD documentation. No additional “functional specification” documentation
-          is necessary to satisfy the assurance activities specified. The interfaces that need to be
-          evaluated are characterized through the information needed to perform the assurance
-          activities listed, rather than as an independent, abstract list.</summary>
+          <summary>The functional specification describes the TSFIs. It is not necessary to have a formal or complete specification of these interfaces. Additionally, because TOEs conforming to this PP will necessarily have interfaces to the Operational Environment that are not directly invocable by TOE users, there is little point specifying that such interfaces be described in and of themselves since only indirect testing of such interfaces may be possible. For this PP, the activities for this family should focus on understanding the interfaces presented in the TSS in response to the functional requirements and the interfaces presented in the AGD documentation. No additional “functional specification” documentation is necessary to satisfy the evaluation activities specified. The interfaces that need to be evaluated are characterized through the information needed to perform the assurance activities listed, rather than as an independent, abstract list. </summary>
           <a-element type="D">
             <title>The developer shall provide a functional specification.</title>
           </a-element>
-          <a-element type="C">
+          <a-element type="D">
             <title>The developer shall provide a tracing from the functional specification to the
-              SFRs.</title>
-            <note role="application">As indicated in the introduction to this section, the
-              functional specification is comprised of the information contained in the AGD_OPE and
-              AGD_PRE documentation. The developer may reference a website accessible to application
-              developers and the evaluator. The assurance activities in the functional requirements
-              point to evidence that should exist in the documentation and TSS
-              section; since these are directly associated with the SFRs, the tracing in element
-              ADV_FSP.1.2D is implicitly already done and no additional documentation is
-              necessary.</note>
+					SFRs.</title>
           </a-element>
           <a-element type="C">
             <title>The functional specification shall describe the purpose and method of use for
-              each SFR-enforcing and SFR-supporting TSFI.</title>
+					each SFR-enforcing and SFR-supporting TSFI.</title>
           </a-element>
           <a-element type="C">
             <title>The functional specification shall identify all parameters associated with each
-              SFR-enforcing and SFR-supporting TSFI.</title>
+					SFR-enforcing and SFR-supporting TSFI.</title>
           </a-element>
           <a-element type="C">
             <title>The functional specification shall provide rationale for the implicit
-              categorization of interfaces as SFR-non-interfering.</title>
+					categorization of interfaces as SFR-non-interfering.</title>
           </a-element>
           <a-element type="C">
-            <title>The tracing shall demonstrate that the SFRs trace to 
-		TSFIs 
-		in the functional specification.</title>
+            <title>The tracing shall demonstrate that the SFRs trace to TSFIs in the functional specification.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall confirm that the information provided meets all requirements
-              for content and presentation of evidence.</title>
+					for content and presentation of evidence.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall determine that the functional specification is an accurate
-              and complete instantiation of the SFRs.</title>
+					and complete instantiation of the SFRs.</title>
             <aactivity>
               There are no specific assurance activities associated with these SARs, except
               ensuring the information is provided. The functional specification documentation is
@@ -1231,18 +1211,17 @@ users of the same system.</description>
           </a-element>
         </a-component>
       </section>
-      <section title="Class AGD: Guidance Documentation" id="agd">
+      <section title="Class AGD: Guidance Documents" id="agd">
         The guidance documents will be
-        provided with the ST. Guidance must include a description of how the IT
-        personnel verifies that the Operational Environment can fulfill its role for the security
-        functionality. The documentation should be in an informal style and readable by the IT
-        personnel. Guidance must be provided for every operational environment that the product
-        supports as claimed in the ST. This guidance includes instructions to
-        successfully install the TSF in that environment; and Instructions to
-        manage the security of the TSF as a product and as a component of the
-        larger operational environment. Guidance pertaining to particular security functionality is
-        also provided; requirements on such guidance are contained in the assurance activities
-        specified with each requirement.
+        provided with the ST. Guidance must include a description of how the IT personnel verifies
+        that the Operational Environment can fulfill its role for the security functionality. The
+        documentation should be in an informal style and readable by the IT personnel. Guidance must
+        be provided for every operational environment that the product supports as claimed in the
+        ST. This guidance includes instructions to successfully install the TSF in
+        that environment; and Instructions to manage the security of the TSF as a 
+        product and as a component of the larger operational environment. Guidance pertaining to 
+        particular security functionality is also provided; requirements on such guidance are 
+        contained in the evaluation activities specified with each requirement.
         <a-component cc-id="agd_ope.1" name="Operational User Guidance (AGD_OPE.1)">
           <a-element type="D">
             <title>The developer shall provide operational user guidance.</title>
@@ -1256,19 +1235,19 @@ users of the same system.</description>
           </a-element>
           <a-element type="C">
             <title>The operational user guidance shall describe, for each user role, the
-              user-accessible functions and privileges that should be controlled in a secure
-              processing environment, including appropriate warnings.</title>
+					user-accessible functions and privileges that should be controlled in a secure
+					processing environment, including appropriate warnings.</title>
             <note role="application">User and administrator are to be considered in the definition
               of user role.</note>
           </a-element>
           <a-element type="C">
             <title>The operational user guidance shall describe, for each user role, how to use the
-              available interfaces provided by the OS in a secure manner.</title>
+					available interfaces provided by the TOE in a secure manner.</title>
           </a-element>
           <a-element type="C">
             <title>The operational user guidance shall describe, for each user role, the available
-              functions and interfaces, in particular all security parameters under the control of
-              the user, indicating secure values as appropriate.</title>
+					functions and interfaces, in particular all security parameters under the control of
+					the user, indicating secure values as appropriate.</title>
             <note role="application">This portion of the operational user guidance should be presented
 		in the form of a checklist that can be quickly executed by IT personnel (or end-users, 
 		when necessary) and suitable for use in compliance activities.
@@ -1281,26 +1260,26 @@ users of the same system.</description>
           </a-element>
           <a-element type="C">
             <title>The operational user guidance shall, for each user role, clearly present each
-              type of security-relevant event relative to the user-accessible functions that need to
-              be performed, including changing the security characteristics of entities under the
-              control of the TSF.</title>
+					type of security-relevant event relative to the user-accessible functions that need to
+					be performed, including changing the security characteristics of entities under the
+					control of the TSF.</title>
           </a-element>
           <a-element type="C">
             <title>The operational user guidance shall identify all possible modes of operation of
-              the OS (including operation following failure or operational
-              error), their consequences, and implications for maintaining secure operation.</title>
+					the TOE (including operation following failure or operational
+					error), their consequences, and implications for maintaining secure operation.</title>
           </a-element>
           <a-element type="C">
             <title>The operational user guidance shall, for each user role, describe the security
-              measures to be followed in order to fulfill the security objectives for the
-              operational environment as described in the ST.</title>
+					measures to be followed in order to fulfill the security objectives for the
+					operational environment as described in the ST.</title>
           </a-element>
           <a-element type="C">
             <title>The operational user guidance shall be clear and reasonable.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall confirm that the information provided meets all requirements
-              for content and presentation of evidence.</title>
+					for content and presentation of evidence.</title>
             <aactivity>
               Some of the contents of the operational guidance are verified by the
               assurance activities in
@@ -1327,68 +1306,49 @@ users of the same system.</description>
         </a-component>
         <a-component cc-id="agd_pre.1" name="Preparative Procedures (AGD_PRE.1)">
           <a-element type="D">
-            <title>The developer shall provide the OS, including its preparative
-              procedures.</title>
-            <note role="application">As with the operational guidance, the developer should look to
-              the assurance activities to determine the required content with respect to preparative
-              procedures.</note>
+            <title>The developer shall provide the TOE, including its preparative procedures.</title>
           </a-element>
           <a-element type="C">
             <title>The preparative procedures shall describe all the steps necessary for secure
-              acceptance of the delivered OS in accordance with the developer's
-              delivery procedures.</title>
+					acceptance of the delivered TOE in accordance with the developer's
+					delivery procedures.</title>
           </a-element>
           <a-element type="C">
             <title>The preparative procedures shall describe all the steps necessary for secure
-              installation of the OS and for the secure preparation of the
-              operational environment in accordance with the security objectives for the operational
-              environment as described in the ST.</title>
+					installation of the TOE and for the secure preparation of the
+					operational environment in accordance with the security objectives for the operational
+					environment as described in the ST.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall confirm that the information provided meets all requirements
-              for content and presentation of evidence.</title>
+					for content and presentation of evidence.</title>
           </a-element>
           <a-element type="E">
-            <title>The evaluator shall apply the preparative procedures to confirm that the OS can be prepared securely for operation.</title>
-            <aactivity>As indicated in the introduction above, there are significant expectations
-              with respect to the documentation—especially when configuring the operational
-              environment to support OS functional requirements. The evaluator
-              shall check to ensure that the guidance provided for the OS
-              adequately addresses all platforms claimed for the OS in the ST.</aactivity>
+            <title>The evaluator shall apply the preparative procedures to confirm that the TOE
+					can be prepared securely for operation.</title>
           </a-element>
         </a-component>
       </section>
       <section title="Class ALC: Life-cycle Support" id="alc">
-        At the assurance level provided
-        for OSs conformant to this PP, life-cycle support is limited to end-user-visible aspects of
-        the life-cycle, rather than an examination of the OS vendor’s development and configuration
-        management process. This is not meant to diminish the critical role that a developer’s
-        practices play in contributing to the overall trustworthiness of a product; rather, it is a
-        reflection on the information to be made available for evaluation at this assurance level.
+        At the assurance level provided for TOEs conformant to this PP, life-cycle support is limited
+        to end-user-visible aspects of the life-cycle, rather than an examination of the TOE vendor’s
+        development and configuration management process. This is not meant to diminish the
+        critical role that a developer’s practices play in contributing to the overall trustworthiness of a
+        product; rather, it is a reflection on the information to be made available for evaluation at this
+        assurance level.
         <a-component cc-id="alc_cmc.1" name="Labeling of the TOE (ALC_CMC.1)">
-          <summary>This component is
-          targeted at identifying the OS such that it can be distinguished from
-          other products or versions from the same vendor and can be easily specified when being
-          procured by an end user.</summary>
+          <summary>This component is targeted at identifying the TOE such that it can be distinguished from
+			other products or versions from the same vendor and can be easily specified when being
+			procured by an end user.</summary>
           <a-element type="D">
-            <title>The developer shall provide the OS and a reference for the
-              OS.</title>
+            <title>The developer shall provide the TOE and a reference for the TOE.</title>
           </a-element>
           <a-element type="C">
-            <title>The OS shall be labeled with a unique reference.</title>
-            <note role="application">
-              Unique reference information includes:
-              <h:ul>
-                <h:li>OS Name</h:li>
-                <h:li>OS Version</h:li>
-                <h:li>OS Description</h:li>
-                <h:li>Software Identification (SWID) tags, if available</h:li>
-              </h:ul>
-            </note>
+            <title>The application shall be labeled with a unique reference.</title>
           </a-element>
           <a-element type="E">
-            <title>The evaluator shall confirm that the information provided meets all requirements
-              for content and presentation of evidence.</title>
+            <title>The evaluator shall confirm that the information provided meets all
+					requirements for content and presentation of evidence.</title>
             <aactivity>The evaluator will check the ST to ensure that it contains
               an identifier (such as a product name/version number) that specifically identifies the
               version that meets the requirements of the ST. Further, the
@@ -1399,22 +1359,19 @@ users of the same system.</description>
           </a-element>
         </a-component>
         <a-component cc-id="alc_cms.1" name="TOE CM Coverage (ALC_CMS.1)">
-          <summary>Given the scope of the OS and its associated evaluation 
-	  evidence requirements, this component’s assurance activities are covered 
-	  by the assurance activities listed for ALC_CMC.1.</summary>
           <a-element type="D">
-            <title>The developer shall provide a configuration list for the  OS.</title>
+            <title>The developer shall provide a configuration list for the TOE.</title>
           </a-element>
           <a-element type="C">
-            <title>The configuration list shall include the following: the OS
-              itself; and the evaluation evidence required by the SARs.</title>
+            <title>The configuration list shall include the following: the TOE
+					itself; and the evaluation evidence required by the SARs.</title>
           </a-element>
           <a-element type="C">
             <title>The configuration list shall uniquely identify the configuration items.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall confirm that the information provided meets all requirements
-              for content and presentation of evidence.</title>
+					for content and presentation of evidence.</title>
             <aactivity>
               The "evaluation evidence required by the SARs" in this PP is limited to the
               information in the ST coupled with the guidance provided to
@@ -1445,37 +1402,143 @@ users of the same system.</description>
             </aactivity>
           </a-element>
         </a-component>
-        <a-component cc-id="alc_tsu_ext.1" name="Timely Security Updates">
-          <summary>This component requires the
-          OS developer, in conjunction with any other necessary parties, to provide information as
-          to how the end-user devices are updated to address security issues in a timely manner. The
-          documentation describes the process of providing updates to the public from the time a
-          security flaw is reported/discovered, to the time an update is released. This description
-          includes the parties involved (e.g., the developer, carriers(s)) and the steps that are
-          performed (e.g., developer testing, carrier testing), including worst case time periods,
-          before an update is made available to the public.</summary>
-          <a-element type="D">
-            <title>The developer shall provide a description in the TSS of how timely security
-              updates are made to the OS.</title>
+        <a-component cc-id="alc_flr.1" name="Basic Flaw Remediation (ALC_FLR.1)" status="optional">
+          <a-element type="C">
+            <title>The flaw remediation procedures documentation shall describe the procedures used to track all reported security flaws in each release of the TOE.</title>
           </a-element>
           <a-element type="D">
-            <title>The developer shall provide a description in the TSS of how users are notified
-              when updates change security properties or the configuration of the product.</title>
+            <title>The developer shall document and provide flaw remediation procedures addressed to TOE developers.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
           </a-element>
           <a-element type="C">
-            <title>The description shall include the process for creating and deploying security
-              updates for the OS software.</title>
+            <title>The flaw remediation procedures shall require that a description of the nature and effect of each security flaw be provided, as well as the status of finding a correction to that flaw.</title>
           </a-element>
           <a-element type="C">
-            <title>The description shall include the mechanisms publicly available for reporting
-              security issues pertaining to the OS.</title>
-            <note role="application">The reporting mechanism could include web sites, email addresses, as well as a
-              means to protect the sensitive nature of the report (e.g., public keys that could be
-              used to encrypt the details of a proof-of-concept exploit).</note>
+            <title>The flaw remediation procedures shall require that corrective actions be identified for each of the security flaws.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures documentation shall describe the methods used to provide flaw information, corrections and guidance on corrective actions to TOE users.</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="alc_flr.2" name="Flaw Reporting Procedures (ALC_FLR.2)" status="optional">
+          <a-element type="C">
+            <title>The flaw remediation procedures documentation shall describe the procedures used to track all reported security flaws in each release of the TOE.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall document and provide flaw remediation procedures addressed to TOE developers.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures shall require that a description of the nature and effect of each security flaw be provided, as well as the status of finding a correction to that flaw.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall establish a procedure for accepting and acting upon all reports of security flaws and requests for corrections to those flaws.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures shall require that corrective actions be identified for each of the security flaws.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide flaw remediation guidance addressed to TOE users.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures documentation shall describe the methods used to provide flaw information, corrections and guidance on corrective actions to TOE users.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures shall describe a means by which the developer receives from TOE users reports and enquiries of suspected security flaws in the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The procedures for processing reported security flaws shall ensure that any reported flaws are remediated and the remediation procedures issued to TOE users.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The procedures for processing reported security flaws shall provide safeguards that any corrections to these security flaws do not introduce any new flaws.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation guidance shall describe a means by which TOE users report to the developer any suspected security flaws in the TOE.</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="alc_flr.3" name="Systematic Flaw Remediation (ALC_FLR.3)" status="optional">
+          <a-element type="C">
+            <title>The flaw remediation procedures documentation shall describe the procedures used to track all reported security flaws in each release of the TOE.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall document and provide flaw remediation procedures addressed to TOE developers.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures shall require that a description of the nature and effect of each security flaw be provided, as well as the status of finding a correction to that flaw.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall establish a procedure for accepting and acting upon all reports of security flaws and requests for corrections to those flaws.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures shall require that corrective actions be identified for each of the security flaws.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide flaw remediation guidance addressed to TOE users.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures documentation shall describe the methods used to provide flaw information, corrections and guidance on corrective actions to TOE users.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures shall describe a means by which the developer receives from TOE users reports and enquiries of suspected security flaws in the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation procedures shall include a procedure requiring timely response and the automatic distribution of security flaw reports and the associated corrections to registered users who might be affected by the security flaw.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The procedures for processing reported security flaws shall ensure that any reported flaws are remediated and the remediation procedures issued to TOE users.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The procedures for processing reported security flaws shall provide safeguards that any corrections to these security flaws do not introduce any new flaws.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation guidance shall describe a means by which TOE users report to the developer any suspected security flaws in the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation guidance shall describe a means by which TOE users may register with the developer, to be eligible to receive security flaw reports and corrections.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The flaw remediation guidance shall identify the specific points of contact for all reports and enquiries about security issues involving the TOE.</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="alc_tsu_ext.1" name="Timely Security Updates" status="optional">
+          <summary>This component requires the TOE developer, in conjunction with any other necessary parties,
+			to provide information as to how the end-user devices are updated to address security issues
+			in a timely manner. The documentation describes the process of providing updates to the
+			public from the time a security flaw is reported/discovered, to the time an update is released.
+			This description includes the parties involved (e.g., the developer, carriers(s)) and the steps
+			that are performed (e.g., developer testing, carrier testing), including worst case time periods,
+			before an update is made available to the public.</summary>
+          <a-element type="D">
+            <title>The developer shall provide a description in the TSS of how timely
+					security updates are made to the TOE.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a description in the TSS of how users are notified when 
+					updates change security properties or the configuration of the product.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The description shall include the process for creating and deploying
+				security updates for the TOE software.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The description shall express the time window as the length of time, 
+					in days, between public disclosure of a vulnerability and the public availability
+					of security updates to the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The description shall include the mechanisms publicly available for
+					reporting security issues pertaining to the TOE.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall confirm that the information provided meets all
-              requirements for content and presentation of evidence.</title>
+					requirements for content and presentation of evidence.</title>
             <aactivity>
               The evaluator will verify that the TSS contains a description of the timely
               security update process used by the developer to create and deploy security updates.
@@ -1501,6 +1564,208 @@ users of the same system.</description>
           </a-element>
         </a-component>
       </section>
+      <section title="Class ASE: ST Evaluation" id="ase">
+        As per ASE activities defined in
+        <xref to="bibCEM"></xref>.
+        <a-component cc-id="ase_ccl.1" name="Conformance Claims">
+          <a-element type="C">
+            <title>The conformance claim shall identify the edition of the CC to which the ST and the TOE claim conformance.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a conformance claim.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim shall describe the conformance of the ST to CC Part 2 as either CC Part 2 conformant or CC Part 2 extended.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a conformance claim rationale.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim shall describe the conformance of the ST as either “CC Part 3 conformant” or “CC Part 3 extended”.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim shall be consistent with the extended components definition.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim shall identify a PP-Configuration, or all PPs and security requirement packages to which the ST claims conformance.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim shall describe any conformance of the ST to a package as either package-conformant or package-augmented.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim shall describe any conformance of the ST to a PP as PP-Conformant.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim rationale shall demonstrate that the TOE type is consistent with the TOE type in the PP-Configuration or PPs for which conformance is being claimed.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim rationale shall demonstrate that the statement of the security problem definition is consistent with the statement of the security problem definition in the PP-Configuration, PPs and any functional packages for which conformance is being claimed.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim rationale shall demonstrate that the statement of security objectives is consistent with the statement of security objectives in the PP-Configuration, PPs, and any functional package for which conformance is being claimed.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim rationale shall demonstrate that the statement of security requirements is consistent with the statement of security requirements in the PP-Configuration, PPs, and any functional packages for which conformance is being claimed.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The conformance claim for PP(s) or a PP-Configuration shall be exact, strict, or demonstrable or a list of conformance types.</title>
+          </a-element>
+          <a-element type="C">
+            <title>If the conformance claim identifies a set of Evaluation methods and Evaluation activities derived from CEM work units that shall be used to evaluate the TOE then this set shall include all those that are included in any package, PP, or PP-Module in a PP-Configuration  to which the ST claims conformance, and no others.</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="ase_ecd.1" name="Extended Components Definition">
+          <a-element type="C">
+            <title>The statement of security requirements shall identify all extended security requirements.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a statement of security requirements.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The extended components definition shall define an extended component for each extended security requirement.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide an extended components definition.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that no extended component may be clearly expressed using existing components.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The extended components definition shall describe how each extended component is related to the existing CC components, families, and classes.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The extended components definition shall use the existing CC components, families, classes, and methodology as a model for presentation.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The extended components shall consist of measurable and objective elements such that conformance or nonconformance to these elements may be demonstrated.</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="ase_int.1" name="ST Introduction">
+          <a-element type="C">
+            <title>The ST introduction shall contain an ST reference, a TOE reference, a TOE overview and a TOE description.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide an ST introduction.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The ST reference shall uniquely identify the ST.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the TOE reference, the TOE overview, and the TOE description are consistent with each other.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The TOE reference shall uniquely identify the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The TOE overview shall summarize the usage and major security features of the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The TOE overview shall identify the TOE type.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The TOE overview shall identify any non-TOE hardware/software/firmware required by the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>For a multi-assurance ST, the TOE overview shall describe the TSF organization in terms of the sub-TSFs defined in the PP-Configuration the ST claims conformance to.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The TOE description shall describe the physical scope of the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The TOE description shall describe the logical scope of the TOE.</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="ase_obj.1" name="ST Objectives for the Operational Environment">
+          <a-element type="C">
+            <title>The statement of security objectives shall describe the security objectives for the operational environment.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a statement of security objectives for the operational environment.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The security objectives rationale shall trace each security objective for the operational environment back to threats countered by that security objective, OSPs enforced by that security objective, and assumptions upheld by that security objective.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a security objectives rationale for the operational environment.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The security objectives rationale shall demonstrate that the security objectives for the operational environment uphold all assumptions.</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="ase_req.1" name="Stated Security Requirements">
+          <a-element type="C">
+            <title>The statement of security requirements shall describe the SFRs and the SARs.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a statement of security requirements.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="C">
+            <title>For a single-assurance ST, the statement of security requirements shall define the global set of SARs that apply to the entire TOE. The sets of SARs shall be consistent with the PPs or PP-Configuration to which the ST claims conformance.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a security requirements rationale.</title>
+          </a-element>
+          <a-element type="C">
+            <title>For a multi-assurance ST, the statement of security requirements shall define the global set of SARs that apply to the entire TOE and the sets of SARs that apply to each sub-TSF. The sets of SARs shall be consistent with the multi-assurance PP-Configuration to which the ST claims conformance.</title>
+          </a-element>
+          <a-element type="C">
+            <title>All subjects, objects, operations, security attributes, external entities and other terms that are used in the SFRs and the SARs shall be defined.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The statement of security requirements shall identify all operations on the security requirements.</title>
+          </a-element>
+          <a-element type="C">
+            <title>All operations shall be performed correctly.</title>
+          </a-element>
+          <a-element type="C">
+            <title>Each dependency of the security requirements shall either be satisfied, or the security requirements rationale shall justify the dependency not being satisfied.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The security requirements rationale shall demonstrate that the SFRs (in conjunction with the security objectives for the environment) counter all threats for the TOE.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The security requirements rationale shall demonstrate that the SFRs (in conjunction with the security objectives for the environment) enforce all OSPs.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The security requirements rationale shall explain why the SARs were chosen.</title>
+          </a-element>
+          <a-element type="C">
+            <title>The statement of security requirements shall be internally consistent.</title>
+          </a-element>
+          <a-element type="C">
+            <title>If the ST defines sets of SARs that expand the sets of SARs of the PPs or PP-Configuration it claims conformance to, the security requirements rationale shall include an assurance rationale that justifies the consistency of the extension and provides a rationale for the disposition of any Evaluation methods and Evaluation activities identified in the conformance statement that are affected by the extension of the sets of SARs</title>
+          </a-element>
+        </a-component>
+        <a-component cc-id="ase_tss.1" name="TOE Summary Specification">
+          <a-element type="C">
+            <title>The TOE summary specification shall describe how the TOE meets each SFR.</title>
+          </a-element>
+          <a-element type="D">
+            <title>The developer shall provide a TOE summary specification.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the information provided meets all requirements for content and presentation of evidence.</title>
+          </a-element>
+          <a-element type="E">
+            <title>The evaluator shall confirm that the TOE summary specification is consistent with the TOE overview and the TOE description.</title>
+          </a-element>
+        </a-component>
+      </section>
       <section title="Class ATE: Tests" id="ate">
         Testing is specified for functional aspects of
         the system as well as aspects that take advantage of design or implementation weaknesses.
@@ -1512,37 +1777,33 @@ users of the same system.</description>
         <a-component cc-id="ate_ind.1" name="Independent Testing – Conformance (ATE_IND.1)">
           <summary>
             Testing is performed to confirm the
-          functionality described in the TSS as well as the administrative
-          (including configuration and operational) documentation provided. The focus of the testing
-          is to confirm that the requirements specified in
-            <xref to="SFRs"/>
+			functionality described in the TSS as well as the administrative
+			(including configuration and operational) documentation provided. The focus of the testing
+			is to confirm that the requirements specified in
+            <xref to="SFRs"></xref>
             being met,
-          although some additional testing is specified for SARs in
-            <xref to="Security_Assurance_Requirements"/>.
-	  The
-          Assurance Activities identify the additional testing activities associated with these
-          components. The evaluator produces a test report documenting the plan for and results of
-          testing, as well as coverage arguments focused on the platform/OS
-          combinations that are claiming conformance to this PP. Given the scope of the OS and its associated evaluation evidence requirements, this component’s
-          assurance activities are covered by the assurance activities listed for ALC_CMC.1.
+			although some additional testing is specified for SARs in
+            <xref to="SARs"></xref>. The
+			evaluation activities identify the additional testing activities associated with these
+			components. The evaluator produces a test report documenting the plan for and results of
+			testing, as well as coverage arguments focused on the platform/TOE
+			combinations that are claiming conformance to this PP. Given the scope of the 
+			TOE and its associated evaluation evidence requirements, this 
+			component’s evaluation activities are covered by the evaluation activities listed for ALC_CMC.1.
           </summary>
           <a-element type="D">
-            <title>The developer shall provide the OS for testing.</title>
+            <title>The developer shall provide the TOE for testing.</title>
           </a-element>
           <a-element type="C">
-            <title>The OS shall be suitable for testing.</title>
+            <title>The TOE shall be suitable for testing.</title>
           </a-element>
           <a-element type="E">
-            <title>
-              The evaluator
-              <h:i>shall confirm</h:i>
-              that the information provided meets all
-              requirements for content and presentation of evidence.
-            </title>
+            <title>The evaluator shall confirm that the information provided meets all
+					requirements for content and presentation of evidence.</title>
           </a-element>
           <a-element type="E">
-            <title>The evaluator shall test a subset of the TSF to confirm that
-              the TSF operates as specified.</title>
+            <title>The evaluator shall test a subset of the TSF to confirm
+					that the TSF operates as specified.</title>
             <note role="application">The evaluator will test the OS on the most current fully
               patched version of the platform.</note>
             <aactivity>
@@ -1590,58 +1851,37 @@ users of the same system.</description>
         </a-component>
       </section>
       <section title="Class AVA: Vulnerability Assessment" id="ava">
-        For the first generation of
+        For the current generation of
         this protection profile, the evaluation lab is expected to survey open sources to discover
         what vulnerabilities have been discovered in these types of products. In most cases, these
         vulnerabilities will require sophistication beyond that of a basic attacker. Until
         penetration tools are created and uniformly distributed to the evaluation labs, the
-        evaluator will not be expected to test for these vulnerabilities in the OS. The labs will be expected to comment on the likelihood of these vulnerabilities given
+        evaluator will not be expected to test for these vulnerabilities in the TOE. The labs will be expected to comment on the likelihood of these vulnerabilities given
         the documentation provided by the vendor. This information will be used in the development
         of penetration testing tools and for the development of future protection profiles.
         <a-component cc-id="ava_van.1" name="Vulnerability Survey (AVA_VAN.1)">
           <a-element type="D">
-            <title>The developer shall provide the OS for testing.</title>
+            <title>The developer shall provide the TOE for testing.</title>
           </a-element>
           <a-element type="C">
-            <title>The OS shall be suitable for testing.</title>
+            <title>The TOE shall be suitable for testing.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall confirm that the information provided meets all requirements
-              for content and presentation of evidence.</title>
+					for content and presentation of evidence.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall perform a search of public domain sources to identify
-              potential vulnerabilities in the OS.</title>
-            <note role="application">Public domain sources include the Common Vulnerabilities 
-              and Exposures (CVE) dictionary for publicly-known vulnerabilities.  Public domain
-              sources also include sites which provide free checking of files for viruses.</note>
+					potential vulnerabilities in the TOE.</title>
           </a-element>
           <a-element type="E">
             <title>The evaluator shall conduct penetration testing, based on the identified
-              potential vulnerabilities, to determine that the OS is resistant to
-              attacks performed by an attacker possessing Basic attack potential.</title>
-            <aactivity>
-              The evaluator will generate a report to document their
-              findings with respect to this requirement. This report could physically be part of the
-              overall test report mentioned in ATE_IND, or a separate document. The evaluator
-              performs a search of public information to find vulnerabilities that have been found
-              in similar applications with a particular focus on network protocols the application
-              uses and document formats it parses. 
-              The evaluator documents the sources consulted and
-              the vulnerabilities found in the report.
-              <h:br/>
-              For each vulnerability found, the evaluator
-              either provides a rationale with respect to its non-applicability, or the evaluator
-              formulates a test (using the guidelines provided in ATE_IND) to confirm the
-              vulnerability, if suitable. Suitability is determined by assessing the attack vector
-              needed to take advantage of the vulnerability. If exploiting the vulnerability
-              requires expert skills and an electron microscope, for instance, then a test would not
-              be suitable and an appropriate justification would be formulated.
-            </aactivity>
+					potential vulnerabilities, to determine that the TOE is resistant to
+					attacks performed by an attacker possessing Basic attack potential.</title>
           </a-element>
         </a-component>
       </section>
-    </sec:Security_Assurance_Requirements>
+    </section>
   </sec:Security_Requirements>
   <appendix title="Entropy Documentation and Assessment" id="satisfiedreqs">blah</appendix>
   <appendix title="Objective Requirements" id="objective">This appendix includes requirements that

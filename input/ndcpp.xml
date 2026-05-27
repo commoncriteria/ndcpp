@@ -601,7 +601,25 @@ users of the same system.</description>
         <f-component cc-id="fcs_cop.1" id="fcs-cop-1-xof" name="Cryptographic Operation - Extendable-Output Function" iteration="XOF" status="sel-based">
           <depends on-incl="fcs-cop-1-sigver"/>
           <f-element id="fcs-cop-1-1-xof">
-            <title>The TSF shall perform <h:p style="text-align: left;"><h:i>extendable-output function</h:i></h:p>in accordance with a specified cryptographic algorithm<selectables><tabularize id="fcs-cop-1-1-xof-1" title="Allowable choices for FCS_COP.1/XOF"><textcol>Cryptographic Algorithm</textcol><reqtext>and parameters</reqtext><selectcol>Parameters</selectcol><reqtext>that meet the following:</reqtext><selectcol>List of Standards</selectcol><reqtext>. <h:p/> <h:p/> <xref to="fcs-cop-1-1-xof-1"/>  provides the allowable choices for completion of the selection operations of FCS_COP.1/XOF.</reqtext></tabularize><selectable id="fcs-cop-1-1-xof-2"><col>Functions = <selectables><selectable id="fcs-cop-1-1-xof-3">SHAKE128</selectable><selectable id="fcs-cop-1-1-xof-4">SHAKE256</selectable></selectables> </col><col>NIST FIPS PUB 202 (Section 6.2)</col></selectable></selectables></title>
+            <title>
+              <h:p style="text-align: left;">The TSF shall perform <h:i>extendable-output function</h:i> in accordance with a specified cryptographic algorithm </h:p>
+              <selectables>
+                <tabularize id="fcs-cop-1-1-xof-1" title="Allowed choices for FCS_COP.1.1/XOF">
+                  <selectcol>Cryptographic Algorithm</selectcol>
+                  <reqtext>and </reqtext>
+                  <selectcol>Parameters</selectcol>
+                  <reqtext>that meet the following:</reqtext>
+                  <selectcol>List of Standards</selectcol>
+                  <reqtext>.</reqtext>
+                  <reqtext>The following table provides the allowed choices for completion of the selection operations of FCS_COP.1.1/XOF.</reqtext>
+                </tabularize>
+                <selectable id="fcs-cop-1-1-xof-2">
+                  <col>SHAKE</col>
+                  <col>Functions = [SHAKE128, SHAKE256]</col>
+                  <col>NIST FIPS PUB 202 (Section 6.2)</col>
+                </selectable>
+              </selectables>
+            </title>
             <note role="application">
               <h:p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</h:p>
             </note>

@@ -1813,13 +1813,35 @@ users of the same system<a id="period_55" href="#period_55">. </a></span></dd></
           <div class="element"><div class="reqid" id="FCS_COP.1.1/SKC"><a href="#FCS_COP.1.1/SKC" class="abbr">FCS_COP.1.1/SKC</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
         </div><div class="comp" id="FCS_COP.1/XOF"><h4>FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br><ul><li><b><i><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <p style="text-align: left;"><i>extendable-output function</i></p>in accordance with a specified cryptographic algorithmand parameters
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>extendable-output function</i> in accordance with a specified cryptographic algorithm </p>
+              
+                  
     [<b>selection</b>: 
-    <span class="selectable-content">Parameters</span>]that meet the following:
+    <span class="selectable-content">Cryptographic Algorithm</span>]
+                  and 
+                  
     [<b>selection</b>: 
-    <span class="selectable-content">List of Standards</span>]<a id="period_339" href="#period_339">. </a><p></p> <p></p> <a onclick="showTarget('fcs-cop-1-1-xof-1')" href="#fcs-cop-1-1-xof-1" class="fcs-cop-1-1-xof-1-ref">Table  <span class="counter">3</span></a>  provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/XOF">FCS_COP.1/XOF</a><a id="period_340" href="#period_340">. </a><table><caption><span class="ctr" data-myid="fcs-cop-1-1-xof-1" data-counter-type="ct-Table" id="fcs-cop-1-1-xof-1">Table <span class="counter">3</span></span>: Allowable choices for <a href="#FCS_COP.1/XOF">FCS_COP.1/XOF</a></caption><tr><th>Cryptographic Algorithm</th><th>Parameters</th><th>List of Standards</th></tr>
-<tr><td>Functions = [<b>selection</b>: <span class="selectable-content" id="fcs-cop-1-1-xof-3">SHAKE128</span>, <span class="selectable-content" id="fcs-cop-1-1-xof-4">SHAKE256</span>] </td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 202 (Section 6.2)</td></tr>
-</table><div class="appnote"><span class="note-header">Application
+    <span class="selectable-content">Parameters</span>]
+                  that meet the following:
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">List of Standards</span>]
+                  <a id="period_339" href="#period_339">. </a>                  The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a><a id="period_340" href="#period_340">. </a>                
+            <table><caption><span class="ctr" data-myid="fcs-cop-1-1-xof-1" data-counter-type="ct-Table" id="fcs-cop-1-1-xof-1">Table <span class="counter">3</span></span>: Allowed choices for <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a></caption>
+                <tr>
+                  <th>Cryptographic Algorithm</th>
+                  
+                  <th>Parameters</th>
+                  
+                  <th>List of Standards</th>
+                  
+                  
+                </tr>
+
+                <tr><td>SHAKE</td><td>Functions = [SHAKE128, SHAKE256]</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 202 (Section 6.2)</td></tr>
+
+              </table><div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</p>

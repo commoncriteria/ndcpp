@@ -14,7 +14,6 @@ output/ndcpp-release-linkable.html: SHAKE128
 output/ndcpp-release-linkable.html: SHAKE256
 output/ndcpp-release-linkable.html: SPD
 output/ndcpp-release-linkable.html: XMSS
-output/ndcpp-release-linkable.html: algorithmand
 output/ndcpp-release-linkable.html: iTC
 output/ndcpp-release.html: 2e
 output/ndcpp-release.html: 4C
@@ -32,7 +31,6 @@ output/ndcpp-release.html: SHAKE128
 output/ndcpp-release.html: SHAKE256
 output/ndcpp-release.html: SPD
 output/ndcpp-release.html: XMSS
-output/ndcpp-release.html: algorithmand
 output/ndcpp-release.html: iTC
 output/ndcpp.html: 2e
 output/ndcpp.html: 4C
@@ -50,5 +48,4 @@ output/ndcpp.html: SHAKE128
 output/ndcpp.html: SHAKE256
 output/ndcpp.html: SPD
 output/ndcpp.html: XMSS
-output/ndcpp.html: algorithmand
 output/ndcpp.html: iTC

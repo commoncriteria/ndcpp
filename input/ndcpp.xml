@@ -85,21 +85,9 @@
     <section title="PP Overview" id="s-ppoverview">words</section>
     <section title="TOE Use Cases" id="s-usecases">Words</section>
   </sec:Introduction>
-  <sec:Conformance_Claims>
-    <undefined>
-      <cc-st-conf>exact</cc-st-conf>
-      <cc-pt2-conf>conformant</cc-pt2-conf>
-      <cc-pt3-conf>conformant</cc-pt3-conf>
-      <cc-pp-conf/>
-      <cc-pp-config-with/>
-      <cc-pkg-claim>
-        <AP-cc-ref conf="conformant">Functional Package for Secure Shell Version 2.0</AP-cc-ref>
-        <AP-cc-ref conf="conformant">Functional Package for Transport Layer Security Version 2.1</AP-cc-ref>
-        <AP-cc-ref conf="conformant">Functional Package for X.509 Version 1.0</AP-cc-ref>
-      </cc-pkg-claim>
-    </undefined>
-  </sec:Conformance_Claims>
+  <sec:Conformance_Claims/>
   <!-- 3.0 Security Problem Definition-->
+  <!-- 4.0 Security Objectives -->
   <sec:Security_Problem_Description>
     <h:p>A Network Device has a network infrastructure role that it is designed to provide. In doing so,
 	the Network Device communicates with other Network Devices and other network entities (i.e.
@@ -119,51 +107,23 @@
         <threat name="T.LIMITED_PHYSICAL_ACCESS">
           <description>An attacker may attempt to access data on the OS while having a limited
             amount of time with the physical device.</description>
-          <!-- New mapping to build updated threat mapping table. -->
         </threat>
         <threat name="T.LOCAL_ATTACK">
           <description>An attacker may compromise applications running on the OS. The
             compromised application may provide maliciously formatted input to the OS through a
             variety of channels including unprivileged system calls and messaging via the
             file system.</description>
-          <!-- New mapping to build updated threat mapping table. -->
-          <addressed-by>FAU_GEN.1</addressed-by>
-          <rationale>'cause FAU_GEN.1 is awesome</rationale>
-          <addressed-by>FIA_AFL.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TST_EXT.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TUD_EXT.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TUD_EXT.2 (Selection-based)</addressed-by>
-          <rationale>For reasons</rationale>
         </threat>
         <threat name="T.NETWORK_ATTACK">
           <description>An attacker is positioned on a communications channel or elsewhere on the
             network infrastructure. Attackers may engage in communications with applications and
             services running on or part of the OS with the intent of compromise. Engagement may
             consist of altering existing legitimate communications.</description>
-          <!-- New mapping to build updated threat mapping table. -->
-          <addressed-by>FAU_GEN.1</addressed-by>
-          <rationale>'cause FAU_GEN.1 is awesome</rationale>
-          <addressed-by>FIA_AFL.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TST_EXT.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TUD_EXT.1</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FPT_TUD_EXT.2 (Selection-based)</addressed-by>
-          <rationale>For reasons</rationale>
-          <addressed-by>FTA_TAB.1</addressed-by>
-          <rationale>For reasons</rationale>
         </threat>
         <threat name="T.NETWORK_EAVESDROP">
           <description>An attacker is positioned on a communications channel or elsewhere on the
             network infrastructure. Attackers may monitor and gain access to data exchanged between
             applications and services that are running on or part of the OS.</description>
-          <!-- New mapping to build updated threat mapping table. -->
-          <addressed-by>FTA_TAB.1</addressed-by>
-          <rationale>For reasons</rationale>
         </threat>
       </threats>
     </sec:Threats>
@@ -207,9 +167,11 @@
       <OSPs/>
     </sec:Organizational_Security_Policies>
   </sec:Security_Problem_Description>
-  <!-- 4.0 Security Objectives -->
   <sec:Security_Objectives>
     <!-- 4.1 Security Objectives for the TOE -->
+    <sec:Security_Objectives_for_the_TOE>
+      <SOs/>
+    </sec:Security_Objectives_for_the_TOE>
     <!-- 4.2 Security Objctives for the Operational Environment -->
     <section title="Security Objectives for the Operational Environment" id="SecurityObjectivesTOEorEnvironment">
       The following security objectives for the operational environment assist the OS in correctly providing its security functionality. These track with the assumptions about the environment.
@@ -235,7 +197,6 @@
     <!-- 4.3 Security Objectives Rationale -->
     <sec:Security_Objectives_Rationale/>
   </sec:Security_Objectives>
-  <!-- 5.0 Security Requirements -->
   <sec:Security_Requirements title="Security Requirements">
     <!-- 5.1 Security Functional Requirements-->
     <sec:SFRs title="Security Functional Requirements" id="sfr">
@@ -244,7 +205,7 @@
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li><h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li><h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p><h:ol><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li><h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li><h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li><h:li><h:p style="text-align: left;"></h:p></h:li></h:ol></h:li></h:ol><selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables> <h:p style="text-align: left;">;</h:p><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li> <h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p> <h:ol><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"></h:p></h:li></h:ol></h:li></h:ol> <selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables> <h:p style="text-align: left;">;</h:p><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 1</h:b>
@@ -386,10 +347,10 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-3">
-            <title>The TSF shall maintain a  <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables> of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
+            <title>The TSF shall maintain a   <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables>  of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
           </f-element>
           <f-element id="fau-stg-ext-1-4">
-            <title>The TSF shall be able to store <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables> audit records locally with a minimum storage size of <assignable>number of records and/or file/buffer size(s)</assignable></title>
+            <title>The TSF shall be able to store  <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables>  audit records locally with a minimum storage size of  <assignable>number of records and/or file/buffer size(s)</assignable></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 8</h:b>
@@ -398,7 +359,7 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-5">
-            <title>The TSF shall <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables> when the local storage space for audit data is full.</title>
+            <title>The TSF shall  <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables>  when the local storage space for audit data is full.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 9 </h:b>
@@ -408,7 +369,7 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-6">
-            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
+            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records  <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 10 </h:b>
@@ -416,7 +377,10 @@
               <h:p style="text-align: left;">If "ability to view locally" is selected in FAU_STG_EXT.1.6, then FAU_SAR.1 from Annex B must be included in the ST.</h:p>
             </note>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Configuration of local audit settings.</audit-event-descr>
+            <audit-event-info>Identity of account making changes to the audit configuration.</audit-event-info>
+          </audit-event>
         </f-component>
         <!-- FAU_STG_EXT.2 Counting Lost Audit Data -->
         <f-component cc-id="fau_stg_ext.2" id="fau-stg-ext-2" name="Counting Lost Audit Data" status="optional">
@@ -499,15 +463,6 @@
       <section id="fcs" title="Cryptographic Support (FCS)">
         <!-- FCS_CKM.1/AKG Cryptographic Key Generation - Asymmetric Key -->
         <f-component cc-id="fcs_ckm.1" id="fcs-ckm-1-akg" name="Cryptographic Key Generation - Asymmetric Key" iteration="AKG">
-          <f-element id="fcs-ckm-1-1-akg">
-            <title>The TOE shall</title>
-            <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
-            </aactivity>
-          </f-element>
           <audit-event/>
         </f-component>
         <!-- FCS_CKM.2 Cryptographic Key Distribution -->
@@ -754,7 +709,7 @@
         <f-component cc-id="fcs_rbg.3" id="fcs-rbg-3" name="Random Bit Generation (Internal Seeding - Single Source)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-3-1">
-            <title>The TSF shall be able to seed the DRBG using a   <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>  with   <assignable>number of bits</assignable>  bits of min-entropy.</title>
+            <title>The TSF shall be able to seed the DRBG using a    <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>   with    <assignable>number of bits</assignable>   bits of min-entropy.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses a single internal source of entropy to initialize or reseed a DRBG that is within the TOE boundary. Seeding a DRBG is the same as initializing a DRBG.</h:p>
               <h:p style="text-align: left;">Hardware-based noise sources are entropy sources whose primary function is noise generation, such as ring oscillators, diodes, and thermal noise. While a TOE may use software to collect the noise from these hardware sources, these are not software-based. </h:p>
@@ -767,7 +722,7 @@
         <f-component cc-id="fcs_rbg.4" id="fcs-rbg-4" name="Random Bit Generation (Internal Seeding - Multiple Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-4-1">
-            <title>The TSF shall be able to seed the DRBG using   <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
+            <title>The TSF shall be able to seed the DRBG using    <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses two or more internal sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. FCS_RBG.5 defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</h:p>
             </note>
@@ -777,7 +732,7 @@
         <f-component cc-id="fcs_rbg.5" id="fcs-rbg-5" name="Random Bit Generation (Combining Entropy Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-5-1">
-            <title>TSF shall  <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>  resulting in a minimum of   <assignable>number of bits</assignable>  bits of min-entropy to create the entropy input into the derivation function as defined in   <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
+            <title>TSF shall   <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>   resulting in a minimum of    <assignable>number of bits</assignable>   bits of min-entropy to create the entropy input into the derivation function as defined in    <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE combines two or more sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. The ST author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a DRBG. </h:p>
               <h:p style="text-align: left;">One can apply NIST SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply NIST SP 800-90B (or AIS-31) statistical tests against external noise sources since the TOE is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the TSS may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the DRBG.</h:p>
@@ -843,7 +798,10 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>All use of identification and authentication mechanisms.</audit-event-descr>
+            <audit-event-info>Origin of the attempt (e.g., IP address).</audit-event-info>
+          </audit-event>
         </f-component>
       </section>
       <!-- 5.1.5 Security Management (FMT) -->
@@ -887,7 +845,9 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Any attempt to initiate a manual update.</audit-event-descr>
+          </audit-event>
         </f-component>
         <!-- FMT_MOF.1/Services Management of Security Functions Behaviour -->
         <f-component cc-id="fmt_mof.1" id="fmt-mof-1-services" name="Management of Security Functions Behaviour" iteration="Services" status="sel-based">
@@ -940,7 +900,9 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>All management activities of TSF data.</audit-event-descr>
+          </audit-event>
         </f-component>
         <!-- FMT_SMR.2 Restrictions on security roles -->
         <f-component cc-id="fmt_smr.2" id="fmt-smr-2" name="Restrictions on security roles">
@@ -1008,7 +970,10 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Discontinuous changes to time - either Administrator actuated or changed via an automated process. (Note: No continuous changes to time need to be logged. See also application note on FPT_STM_EXT.1)</audit-event-descr>
+            <audit-event-info>For discontinuous changes to time: The old and new values for the time. Origin of the attempt to change time for success and failure (e.g., IP address).</audit-event-info>
+          </audit-event>
         </f-component>
         <!-- FPT_TST_EXT.1 TSF Testing -->
         <f-component cc-id="fpt_tst_ext.1" id="fpt-tst-ext-1" name="TSF Testing">
@@ -1034,7 +999,9 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Initiation of update; result of the update attempt (success or failure).</audit-event-descr>
+          </audit-event>
         </f-component>
         <!-- FPT_TUD_EXT.2 Trusted Update Based on Certificates -->
         <f-component cc-id="fpt_tud_ext.2" id="fpt-tud-ext-2" name="Trusted Update Based on Certificates" status="sel-based">
@@ -1064,7 +1031,9 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>The termination of a remote session by the session locking mechanism.</audit-event-descr>
+          </audit-event>
         </f-component>
         <!-- FTA_SSL.4 User-initiated Termination (Refinement) -->
         <f-component cc-id="fta_ssl.4" id="fta-ssl-4" name="User-initiated Termination (Refinement)">
@@ -1077,7 +1046,9 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>The termination of an interactive session.</audit-event-descr>
+          </audit-event>
         </f-component>
         <!-- FTA_SSL_EXT.1 TSF-initiated Session Locking -->
         <f-component cc-id="fta_ssl_ext.1" id="fta-ssl-ext-1" name="TSF-initiated Session Locking">
@@ -1125,7 +1096,16 @@
           <f-element id="ftp-itc-1-3">
             <title>The TOE shall</title>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Initiation of the trusted channel.</audit-event-descr>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Termination of the trusted channel.</audit-event-descr>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Failure of the trusted channel functions.</audit-event-descr>
+            <audit-event-info>Reason for failure</audit-event-info>
+          </audit-event>
         </f-component>
         <!-- FTP_TRP.1/Admin Trusted Path (Refinement) -->
         <f-component cc-id="ftp_trp.1" id="ftp-trp-1-admin" name="Trusted Path (Refinement)" iteration="Admin">
@@ -1138,7 +1118,16 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Initiation of the trusted path.</audit-event-descr>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Termination of the trusted path.</audit-event-descr>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Failure of the trusted path functions.</audit-event-descr>
+            <audit-event-info>Reason for failure.</audit-event-info>
+          </audit-event>
         </f-component>
         <!-- FTP_TRP.1/Join Trusted Path (Refinement) -->
         <f-component cc-id="ftp_trp.1" id="ftp-trp-1-join" name="Trusted Path (Refinement)" iteration="Join" status="optional">
@@ -1163,7 +1152,7 @@
         well as the TSS portion of the ST. The TOE developer 
         must concur with the description of the product that is contained in the TSS as it relates 
         to the functional requirements. The evaluation activities contained in
-        <xref to="SFRs"></xref>
+        <xref to="SFRs"/>
         should provide the ST authors with sufficient information to 
         determine the appropriate content for the TSS section.
         <a-component cc-id="adv_fsp.1" name="Basic Functional Specification (ADV_FSP.1)">
@@ -1566,7 +1555,7 @@
       </section>
       <section title="Class ASE: ST Evaluation" id="ase">
         As per ASE activities defined in
-        <xref to="bibCEM"></xref>.
+        <xref to="bibCEM"/>.
         <a-component cc-id="ase_ccl.1" name="Conformance Claims">
           <a-element type="C">
             <title>The conformance claim shall identify the edition of the CC to which the ST and the TOE claim conformance.</title>
@@ -1780,10 +1769,10 @@
 			functionality described in the TSS as well as the administrative
 			(including configuration and operational) documentation provided. The focus of the testing
 			is to confirm that the requirements specified in
-            <xref to="SFRs"></xref>
+            <xref to="SFRs"/>
             being met,
 			although some additional testing is specified for SARs in
-            <xref to="SARs"></xref>. The
+            <xref to="SARs"/>. The
 			evaluation activities identify the additional testing activities associated with these
 			components. The evaluator produces a test report documenting the plan for and results of
 			testing, as well as coverage arguments focused on the platform/TOE
@@ -1883,6 +1872,7 @@
       </section>
     </section>
   </sec:Security_Requirements>
+  <!-- 5.0 Security Requirements -->
   <appendix title="Entropy Documentation and Assessment" id="satisfiedreqs">blah</appendix>
   <appendix title="Objective Requirements" id="objective">This appendix includes requirements that
     specify security functionality which also addresses threats. The requirements are not currently

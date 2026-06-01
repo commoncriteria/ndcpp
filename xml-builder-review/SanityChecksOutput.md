@@ -42,6 +42,10 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[4]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to dummy from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[7]""/depends[1]""/on-sel[1]""
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-35'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-35'.
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[1]""/f-element[1]""/title[1]"The TSF s"/h:ol[1]""/h:li[3]""/h:ol[1]""/h:li[4]""/h:p[1]""
 * Warning: Detected 2 tech-term sections in this PP. There should be exactly 1 "tech-term" section.
       

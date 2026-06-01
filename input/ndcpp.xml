@@ -463,6 +463,85 @@
       <section id="fcs" title="Cryptographic Support (FCS)">
         <!-- FCS_CKM.1/AKG Cryptographic Key Generation - Asymmetric Key -->
         <f-component cc-id="fcs_ckm.1" id="fcs-ckm-1-akg" name="Cryptographic Key Generation - Asymmetric Key" iteration="AKG">
+          <f-element id="fcs-ckm-1-1-akg">
+            <title>
+              <h:p style="text-align: left;">The TSF shall generate <h:b>asymmetric</h:b> cryptographic keys in accordance with a specified cryptographic key generation algorithm: </h:p>
+              <selectables>
+                <tabularize id="fcs-ckm-1-1-akg-71" title="Allowed choices for FCS_CKM.1.1/AKG">
+                  <selectcol>Cryptographic Key Generation Algorithm</selectcol>
+                  <reqtext>and specified cryptographic algorithm parameters</reqtext>
+                  <selectcol>Cryptographic Algorithm Parameters</selectcol>
+                  <reqtext>that meet the following:</reqtext>
+                  <selectcol>List of Standards</selectcol>
+                  <reqtext>.</reqtext>
+                  <reqtext>The following table provides the allowed choices for completion of the selection operations of FCS_CKM.1.1/AKG.</reqtext>
+                </tabularize>
+                <selectable id="RSA">
+                  <col>RSA</col>
+                  <col>Modulus of size <selectables><selectable id="fcs-ckm-1-1-akg-1">2048</selectable><selectable id="fcs-ckm-1-1-akg-2">3072</selectable><selectable id="fcs-ckm-1-1-akg-3">4096</selectable><selectable id="fcs-ckm-1-1-akg-4">6144</selectable><selectable id="fcs-ckm-1-1-akg-5">8192</selectable></selectables> bits</col>
+                  <col>NIST FIPS PUB 186-5 (Section A.1.1)</col>
+                </selectable>
+                <selectable id="ECC-ERB">
+                  <col>ECC-ERB - Extra Random Bits</col>
+                  <col>Elliptic Curve  <selectables><selectable id="fcs-ckm-1-1-akg-6">P-256</selectable><selectable id="fcs-ckm-1-1-akg-7">P-384</selectable><selectable id="fcs-ckm-1-1-akg-8">P-521</selectable></selectables></col>
+                  <col>NIST FIPS PUB 186-5 (Section A.2.1), NIST SP 800-186 (Section 3) [NIST Curves]</col>
+                </selectable>
+                <selectable id="ECC-RS">
+                  <col>ECC-RS - Rejection Sampling</col>
+                  <col>Elliptic Curve <selectables><selectable id="fcs-ckm-91-1-akg">P-256</selectable><selectable id="fcs-ckm-1-1-akg-10">P-384</selectable><selectable id="fcs-ckm-1-1-akg-11">P-521</selectable></selectables></col>
+                  <col>NIST FIPS PUB 186-5 (Section A.2.2), NIST SP 800-186 (Section 3) [NIST Curves]</col>
+                </selectable>
+                <selectable id="FFC-ERB">
+                  <col>FFC-ERB - Extra Random Bits</col>
+                  <col>Static domain parameters approved for  <selectables><selectable id="fcs-ckm-1-1-akg-72">IKE Groups <selectables><selectable id="fcs-ckm-1-1-akg-12">MODP-2048</selectable><selectable id="fcs-ckm-1-1-akg-13">MODP-3072</selectable><selectable id="fcs-ckm-1-1-akg-14">MODP-4096</selectable><selectable id="fcs-ckm-1-1-akg-15">MODP-6144</selectable><selectable id="fcs-ckm-1-1-akg-16">MODP-8192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-73">TLS Groups <selectables><selectable id="fcs-ckm-1-1-akg-17">ffdhe-2048</selectable><selectable id="fcs-ckm-1-1-akg-18">ffdhe-3072</selectable><selectable id="fcs-ckm-1-1-akg-19">ffdhe-4096</selectable><selectable id="fcs-ckm-1-1-akg-20">ffdhe-6144</selectable><selectable id="fcs-ckm-1-1-akg-21">ffdhe-8192</selectable></selectables> </selectable></selectables></col>
+                  <col>NIST SP 800-56A Revision 3 (Section 5.6.1.1.3), <selectables><selectable id="fcs-ckm-1-1-akg-34">RFC 3526 [IKE groups]</selectable><selectable id="fcs-ckm-1-1-akg-35">RFC 7919 [TLS groups]</selectable></selectables></col>
+                </selectable>
+                <selectable id="FCC-RS">
+                  <col>FCC-RS - Extra Random Bits</col>
+                  <col>Static domain parameters approved for  <selectables><selectable id="fcs-ckm-1-1-akg-75">IKE Groups <selectables><selectable id="fcs-ckm-1-1-akg-24">MODP-2048</selectable><selectable id="fcs-ckm-1-1-akg-25">MODP-3072</selectable><selectable id="fcs-ckm-1-1-akg-26">MODP-4096</selectable><selectable id="fcs-ckm-1-1-akg-27">MODP-6144</selectable><selectable id="fcs-ckm-1-1-akg-28">MODP-8192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-76">TLS Groups <selectables><selectable id="fcs-ckm-1-1-akg-29">ffdhe-2048</selectable><selectable id="fcs-ckm-1-1-akg-30">ffdhe-3072</selectable><selectable id="fcs-ckm-1-1-akg-31">ffdhe-4096</selectable><selectable id="fcs-ckm-1-1-akg-32">ffdhe-6144</selectable><selectable id="fcs-ckm-1-1-akg-33">ffdhe-8192</selectable></selectables> </selectable></selectables></col>
+                  <col>NIST SP 800-56A Revision 3 (Section 5.6.1.1.3),  <selectables><selectable id="fcs-ckm-1-1-akg-34">RFC 3526 [IKE groups]</selectable><selectable id="fcs-ckm-1-1-akg-35">RFC 7919 [TLS groups]</selectable></selectables></col>
+                </selectable>
+                <selectable id="LMS">
+                  <col>LMS</col>
+                  <col>private key size <selectables><selectable id="fcs-ckm-1-1-akg-78">192 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-36">SHA-256/192</selectable><selectable id="fcs-ckm-1-1-akg-37">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-79">256 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-38">SHA-256</selectable><selectable id="fcs-ckm-1-1-akg-39">SHAKE256</selectable></selectables> </selectable></selectables> Winternitz parameter =  <selectables><selectable id="fcs-ckm-1-1-akg-40">1</selectable><selectable id="fcs-ckm-1-1-akg-41">2</selectable><selectable id="fcs-ckm-1-1-akg-42">4</selectable><selectable id="fcs-ckm-1-1-akg-43">8</selectable></selectables>,Tree height =  <selectables><selectable id="fcs-ckm-1-1-akg-44">5</selectable><selectable id="fcs-ckm-1-1-akg-45">10</selectable><selectable id="fcs-ckm-1-1-akg-46">15</selectable><selectable id="fcs-ckm-1-1-akg-47">20</selectable><selectable id="fcs-ckm-1-1-akg-48">25</selectable></selectables></col>
+                  <col>RFC 8554 [LMS], NIST SP 800-208 [parameters]</col>
+                </selectable>
+                <selectable id="XMSS">
+                  <col>XMSS</col>
+                  <col>private key size <selectables><selectable id="fcs-ckm-1-1-akg-81">192 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-49">SHA-256/192</selectable><selectable id="fcs-ckm-1-1-akg-50">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-82">256 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-51">SHA-256</selectable><selectable id="fcs-ckm-1-1-akg-52">SHAKE256</selectable></selectables> </selectable></selectables> Tree height =  <selectables><selectable id="fcs-ckm-1-1-akg-53">10</selectable><selectable id="fcs-ckm-1-1-akg-54">16</selectable><selectable id="fcs-ckm-1-1-akg-55">20</selectable></selectables></col>
+                  <col>RFC 8391 [XMSS], NIST SP 800-208 [parameters]</col>
+                </selectable>
+                <selectable id="ML-KEM">
+                  <col>ML-KEM</col>
+                  <col>Parameter set = ML-KEM-1024</col>
+                  <col>NIST FIPS PUB 203</col>
+                </selectable>
+                <selectable id="ML-DSA">
+                  <col>ML-DSA</col>
+                  <col>Parameter set = ML-DSA-87</col>
+                  <col>NIST FIPS PUB 204</col>
+                </selectable>
+              </selectables>
+            </title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 11 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">The ST author selects all key generation algorithms used for key agreement (including generation of ephemeral keys) and device authentication. </h:p>
+              <h:p style="text-align: left;">For RSA the choice of the modulus implies the resulting key sizes of the public and private keys generated using the specified standard methods. </h:p>
+              <h:p style="text-align: left;">When generating ECC keys pairs for key agreement and if “ECDH” is claimed in FCS_CKM_EXT.7, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve. </h:p>
+              <h:p style="text-align: left;">For Finite Field Cryptography (FFC), “FFC-ERB” or “FFC–RS” may be claimed only for generating private and public keys when “DH” is claimed in FCS_CKM_EXT.7. </h:p>
+              <h:p style="text-align: left;">The MODP Diffie-Hellman groups do not necessarily adhere to the protocol restrictions specified as IKE groups. MODP Diffie-Hellman groups may also be used in other protocols such as TLS 1.2. </h:p>
+              <h:p style="text-align: left;">When generating ECC key pairs for digital signature generation and if “ECDSA” is claimed in FCS_COP.1/SigGen, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve.</h:p>
+              <h:p style="text-align: left;">When key generation is used for device authentication, other than non-X.509 SSH authentication algorithm, the public key is expected to be associated with an X.509v3 certificate.</h:p>
+            </note>
+            <aactivity>
+              Something
+              <TSS>ABC</TSS>
+              <Guidance/>
+              <Tests/>
+            </aactivity>
+          </f-element>
           <audit-event/>
         </f-component>
         <!-- FCS_CKM.2 Cryptographic Key Distribution -->

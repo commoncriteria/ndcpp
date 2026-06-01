@@ -347,10 +347,10 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-3">
-            <title>The TSF shall maintain a   <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables>  of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
+            <title>The TSF shall maintain a     <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables>    of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
           </f-element>
           <f-element id="fau-stg-ext-1-4">
-            <title>The TSF shall be able to store  <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables>  audit records locally with a minimum storage size of  <assignable>number of records and/or file/buffer size(s)</assignable></title>
+            <title>The TSF shall be able to store    <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables>    audit records locally with a minimum storage size of    <assignable>number of records and/or file/buffer size(s)</assignable></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 8</h:b>
@@ -359,7 +359,7 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-5">
-            <title>The TSF shall  <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables>  when the local storage space for audit data is full.</title>
+            <title>The TSF shall    <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables>    when the local storage space for audit data is full.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 9 </h:b>
@@ -369,7 +369,7 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-6">
-            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records  <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
+            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records    <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 10 </h:b>
@@ -486,7 +486,7 @@
                 <selectable id="fcs-ckm-1-1-akg-row-2">
                   <col>ECC-ERB</col>
                   <col>ECC-ERB - Extra Random Bits</col>
-                  <col>Elliptic Curve  <selectables><selectable id="fcs-ckm-1-1-akg-6">P-256</selectable><selectable id="fcs-ckm-1-1-akg-7">P-384</selectable><selectable id="fcs-ckm-1-1-akg-8">P-521</selectable></selectables></col>
+                  <col>Elliptic Curve <selectables><selectable id="fcs-ckm-1-1-akg-6">P-256</selectable><selectable id="fcs-ckm-1-1-akg-7">P-384</selectable><selectable id="fcs-ckm-1-1-akg-8">P-521</selectable></selectables></col>
                   <col>NIST FIPS PUB 186-5 (Section A.2.1), NIST SP 800-186 (Section 3) [NIST Curves]</col>
                 </selectable>
                 <selectable id="fcs-ckm-1-1-akg-row-3">
@@ -498,25 +498,25 @@
                 <selectable id="fcs-ckm-1-1-akg-row-4">
                   <col>FFC-ERB</col>
                   <col>FFC-ERB - Extra Random Bits</col>
-                  <col>Static domain parameters approved for  <selectables><selectable id="fcs-ckm-1-1-akg-72">IKE Groups <selectables><selectable id="fcs-ckm-1-1-akg-12">MODP-2048</selectable><selectable id="fcs-ckm-1-1-akg-13">MODP-3072</selectable><selectable id="fcs-ckm-1-1-akg-14">MODP-4096</selectable><selectable id="fcs-ckm-1-1-akg-15">MODP-6144</selectable><selectable id="fcs-ckm-1-1-akg-16">MODP-8192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-73">TLS Groups <selectables><selectable id="fcs-ckm-1-1-akg-17">ffdhe-2048</selectable><selectable id="fcs-ckm-1-1-akg-18">ffdhe-3072</selectable><selectable id="fcs-ckm-1-1-akg-19">ffdhe-4096</selectable><selectable id="fcs-ckm-1-1-akg-20">ffdhe-6144</selectable><selectable id="fcs-ckm-1-1-akg-21">ffdhe-8192</selectable></selectables> </selectable></selectables></col>
+                  <col>Static domain parameters approved for <selectables><selectable id="fcs-ckm-1-1-akg-72">IKE Groups <selectables><selectable id="fcs-ckm-1-1-akg-12">MODP-2048</selectable><selectable id="fcs-ckm-1-1-akg-13">MODP-3072</selectable><selectable id="fcs-ckm-1-1-akg-14">MODP-4096</selectable><selectable id="fcs-ckm-1-1-akg-15">MODP-6144</selectable><selectable id="fcs-ckm-1-1-akg-16">MODP-8192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-73">TLS Groups <selectables><selectable id="fcs-ckm-1-1-akg-17">ffdhe-2048</selectable><selectable id="fcs-ckm-1-1-akg-18">ffdhe-3072</selectable><selectable id="fcs-ckm-1-1-akg-19">ffdhe-4096</selectable><selectable id="fcs-ckm-1-1-akg-20">ffdhe-6144</selectable><selectable id="fcs-ckm-1-1-akg-21">ffdhe-8192</selectable></selectables> </selectable></selectables></col>
                   <col>NIST SP 800-56A Revision 3 (Section 5.6.1.1.3), <selectables><selectable id="fcs-ckm-1-1-akg-34">RFC 3526 [IKE groups]</selectable><selectable id="fcs-ckm-1-1-akg-35">RFC 7919 [TLS groups]</selectable></selectables></col>
                 </selectable>
                 <selectable id="fcs-ckm-1-1-akg-row-5">
                   <col>FCC-RS</col>
                   <col>FCC-RS - Extra Random Bits</col>
-                  <col>Static domain parameters approved for  <selectables><selectable id="fcs-ckm-1-1-akg-75">IKE Groups <selectables><selectable id="fcs-ckm-1-1-akg-24">MODP-2048</selectable><selectable id="fcs-ckm-1-1-akg-25">MODP-3072</selectable><selectable id="fcs-ckm-1-1-akg-26">MODP-4096</selectable><selectable id="fcs-ckm-1-1-akg-27">MODP-6144</selectable><selectable id="fcs-ckm-1-1-akg-28">MODP-8192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-76">TLS Groups <selectables><selectable id="fcs-ckm-1-1-akg-29">ffdhe-2048</selectable><selectable id="fcs-ckm-1-1-akg-30">ffdhe-3072</selectable><selectable id="fcs-ckm-1-1-akg-31">ffdhe-4096</selectable><selectable id="fcs-ckm-1-1-akg-32">ffdhe-6144</selectable><selectable id="fcs-ckm-1-1-akg-33">ffdhe-8192</selectable></selectables> </selectable></selectables></col>
-                  <col>NIST SP 800-56A Revision 3 (Section 5.6.1.1.3),  <selectables><selectable id="fcs-ckm-1-1-akg-34">RFC 3526 [IKE groups]</selectable><selectable id="fcs-ckm-1-1-akg-35">RFC 7919 [TLS groups]</selectable></selectables></col>
+                  <col>Static domain parameters approved for <selectables><selectable id="fcs-ckm-1-1-akg-75">IKE Groups <selectables><selectable id="fcs-ckm-1-1-akg-24">MODP-2048</selectable><selectable id="fcs-ckm-1-1-akg-25">MODP-3072</selectable><selectable id="fcs-ckm-1-1-akg-26">MODP-4096</selectable><selectable id="fcs-ckm-1-1-akg-27">MODP-6144</selectable><selectable id="fcs-ckm-1-1-akg-28">MODP-8192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-76">TLS Groups <selectables><selectable id="fcs-ckm-1-1-akg-29">ffdhe-2048</selectable><selectable id="fcs-ckm-1-1-akg-30">ffdhe-3072</selectable><selectable id="fcs-ckm-1-1-akg-31">ffdhe-4096</selectable><selectable id="fcs-ckm-1-1-akg-32">ffdhe-6144</selectable><selectable id="fcs-ckm-1-1-akg-33">ffdhe-8192</selectable></selectables> </selectable></selectables></col>
+                  <col>NIST SP 800-56A Revision 3 (Section 5.6.1.1.3), <selectables><selectable id="fcs-ckm-1-1-akg-34">RFC 3526 [IKE groups]</selectable><selectable id="fcs-ckm-1-1-akg-35">RFC 7919 [TLS groups]</selectable></selectables></col>
                 </selectable>
                 <selectable id="fcs-ckm-1-1-akg-row-6">
                   <col>LMS</col>
                   <col>LMS</col>
-                  <col>private key size <selectables><selectable id="fcs-ckm-1-1-akg-78">192 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-36">SHA-256/192</selectable><selectable id="fcs-ckm-1-1-akg-37">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-79">256 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-38">SHA-256</selectable><selectable id="fcs-ckm-1-1-akg-39">SHAKE256</selectable></selectables> </selectable></selectables> Winternitz parameter =  <selectables><selectable id="fcs-ckm-1-1-akg-40">1</selectable><selectable id="fcs-ckm-1-1-akg-41">2</selectable><selectable id="fcs-ckm-1-1-akg-42">4</selectable><selectable id="fcs-ckm-1-1-akg-43">8</selectable></selectables>,Tree height =  <selectables><selectable id="fcs-ckm-1-1-akg-44">5</selectable><selectable id="fcs-ckm-1-1-akg-45">10</selectable><selectable id="fcs-ckm-1-1-akg-46">15</selectable><selectable id="fcs-ckm-1-1-akg-47">20</selectable><selectable id="fcs-ckm-1-1-akg-48">25</selectable></selectables></col>
+                  <col>private key size <selectables><selectable id="fcs-ckm-1-1-akg-78">192 bits with <selectables><selectable id="fcs-ckm-1-1-akg-36">SHA-256/192</selectable><selectable id="fcs-ckm-1-1-akg-37">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-79">256 bits with <selectables><selectable id="fcs-ckm-1-1-akg-38">SHA-256</selectable><selectable id="fcs-ckm-1-1-akg-39">SHAKE256</selectable></selectables> </selectable></selectables> Winternitz parameter = <selectables><selectable id="fcs-ckm-1-1-akg-40">1</selectable><selectable id="fcs-ckm-1-1-akg-41">2</selectable><selectable id="fcs-ckm-1-1-akg-42">4</selectable><selectable id="fcs-ckm-1-1-akg-43">8</selectable></selectables>,Tree height = <selectables><selectable id="fcs-ckm-1-1-akg-44">5</selectable><selectable id="fcs-ckm-1-1-akg-45">10</selectable><selectable id="fcs-ckm-1-1-akg-46">15</selectable><selectable id="fcs-ckm-1-1-akg-47">20</selectable><selectable id="fcs-ckm-1-1-akg-48">25</selectable></selectables></col>
                   <col>RFC 8554 [LMS], NIST SP 800-208 [parameters]</col>
                 </selectable>
                 <selectable id="fcs-ckm-1-1-akg-row-7">
                   <col>XMSS</col>
                   <col>XMSS</col>
-                  <col>private key size <selectables><selectable id="fcs-ckm-1-1-akg-81">192 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-49">SHA-256/192</selectable><selectable id="fcs-ckm-1-1-akg-50">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-82">256 bits with  <selectables><selectable id="fcs-ckm-1-1-akg-51">SHA-256</selectable><selectable id="fcs-ckm-1-1-akg-52">SHAKE256</selectable></selectables> </selectable></selectables> Tree height =  <selectables><selectable id="fcs-ckm-1-1-akg-53">10</selectable><selectable id="fcs-ckm-1-1-akg-54">16</selectable><selectable id="fcs-ckm-1-1-akg-55">20</selectable></selectables></col>
+                  <col>private key size <selectables><selectable id="fcs-ckm-1-1-akg-81">192 bits with <selectables><selectable id="fcs-ckm-1-1-akg-49">SHA-256/192</selectable><selectable id="fcs-ckm-1-1-akg-50">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs-ckm-1-1-akg-82">256 bits with <selectables><selectable id="fcs-ckm-1-1-akg-51">SHA-256</selectable><selectable id="fcs-ckm-1-1-akg-52">SHAKE256</selectable></selectables> </selectable></selectables> Tree height = <selectables><selectable id="fcs-ckm-1-1-akg-53">10</selectable><selectable id="fcs-ckm-1-1-akg-54">16</selectable><selectable id="fcs-ckm-1-1-akg-55">20</selectable></selectables></col>
                   <col>RFC 8391 [XMSS], NIST SP 800-208 [parameters]</col>
                 </selectable>
                 <selectable id="fcs-ckm-1-1-akg-row-8">
@@ -562,13 +562,100 @@
         </f-component>
         <!-- FCS_CKM.6 Timing and Event of Cryptographic Key Destruction -->
         <f-component cc-id="fcs_ckm.6" id="fcs-ckm-6" name="Timing and Event of Cryptographic Key Destruction">
-          <f-element id="fcs-ckm-6-1">
-            <title>The TOE shall</title>
+          <f-element id="fcs-ckm-6e1">
+            <title>
+              The TSF shall destroy
+              <h:i>plaintext cryptographic keys (including keying material)</h:i>
+              when
+              <selectables>
+                <selectable id="fcs_ckm.6.1_2">no longer needed</selectable>
+                <selectable id="fcs_ckm.6.1_5">
+                  <assignable>other circumstances for key or keying material destruction</assignable></selectable>
+              </selectables>.
+            </title>
+            <note role="application">
+              <h:p style="text-align: left;">Application Note 12 </h:p>
+              <h:p style="text-align: left;">The TOE will have mechanisms to destroy keys, including intermediate keys and key material, by using an approved method as specified in FCS_CKM.6.2. Examples of keys include intermediate keys, leaf keys, encryption keys, and signing keys. Key material includes seeds, authentication secrets, passwords, PINs, and other secret values used to derive keys. </h:p>
+              <h:p style="text-align: left;">This SFR does not apply to the public component of asymmetric key pairs or to keys that are permitted to remain stored, such as device identification keys.</h:p>
+            </note>
+          </f-element>
+          <f-element id="fcs-ckm-6e2">
+            <title>
+              <h:p style="text-align: left;">The TSF shall destroy <h:b>plaintext</h:b> cryptographic keys and keying material specified by FCS_CKM.6.1 in accordance with a specified cryptographic key destruction method</h:p>
+              <selectables>
+                <selectable id="fcs-ckm-6-2-56">For volatile storage, the destruction shall be executed by a <selectables linebreak="yes"><selectable id="fcs_ckm.6.2_1">single overwrite consisting of <selectables><selectable id="fcs_ckm.6.2_2">a pseudo-random pattern using the TSF’s RBG (as specified in FCS_RBG.1)</selectable><selectable id="fcs_ckm.6.2_3">zeros</selectable><selectable id="fcs_ckm.6.2_4">ones</selectable><selectable id="fcs_ckm.6.2_5">a new value of a key</selectable><selectable id="fcs_ckm.6.2_7"><assignable>some value that does not contain any CSP</assignable></selectable></selectables> </selectable><selectable id="fcs_ckm.6.2_8">removal of power to the memory</selectable><selectable id="fcs_ckm.6.2_9">removal of all references to the key directly followed by a request for garbage collection</selectable></selectables>;</selectable>
+                <selectable id="fcs-ckm-6-2-55">For non-volatile storage <selectables><selectable id="fcs-ckm-6-2-45">that consists of an invocation of an interface provided by a part of the TSF, the destruction shall be executed by: <selectables><selectable id="fcs-ckm-6-2-43">logically addressing the storage location of the key and performing a <selectables><selectable id="fcs-ckm-6-2-10">single</selectable><selectable id="fcs-ckm-6-2-41"> <assignable>number of passes</assignable> -pass</selectable></selectables> overwrite consisting of <selectables><selectable id="fcs-ckm-6-2-12">a pseudo-random pattern using the TSF's RBG (as specified in FCS_RBG.1)</selectable><selectable id="fcs-ckm-6-2-13">zeroes</selectable><selectable id="fcs-ckm-6-2-14">ones</selectable><selectable id="fcs-ckm-6-2-15">a new value of the key</selectable><selectable id="fcs-ckm-6-2-16"><assignable>a static or dynamic value that does not contain any CSP</assignable></selectable></selectables> </selectable><selectable id="fcs-ckm-6-2-17">instructing a part of the TSF to destroy the abstraction that represents the key</selectable></selectables> </selectable><selectable id="fcs-ckm-6-2-48">that employs a wear-leveling algorithm, the destruction shall be executed by a <selectables><selectable id="fcs-ckm-6-2-46-2">single overwrite consisting of <selectables><selectable id="fcs-ckm-6-2-18">zeroes</selectable><selectable id="fcs-ckm-6-2-19">ones</selectable><selectable id="fcs-ckm-6-2-20">pseudo-random pattern</selectable><selectable id="fcs-ckm-6-2-21">a new value of a key of the same size</selectable><selectable id="fcs-ckm-6-2-22"><assignable>some value that does not contain any CSP</assignable></selectable></selectables> </selectable><selectable id="fcs-ckm-6-2-23">block erase</selectable></selectables>;</selectable><selectable id="fcs-ckm-6-2-53">that does not employ a wear-leveling algorithm, the destruction shall be executed by a <selectables><selectable id="fcs-ckm-6-2-51"> <selectables><selectable id="fcs-ckm-6-2-24">single</selectable><selectable id="fcs-ckm-6-2-25"><assignable>ST author defined multi-pass</assignable></selectable></selectables> overwrite consisting of <selectables><selectable id="fcs-ckm-6-2-26">zeros</selectable><selectable id="fcs-ckm-6-2-27">ones</selectable><selectable id="fcs-ckm-6-2-28">pseudo-random pattern</selectable><selectable id="fcs-ckm-6-2-29">a new value of a key of the same size</selectable><selectable id="fcs-ckm-6-2-30"><assignable>some value that does not contain any CSP</assignable></selectable></selectables> followed by a read-verify. If the read-verification of the overwritten data fails, the process shall be repeated up to <assignable>number of times to attempt overwrite</assignable> times, whereupon an error is returned.</selectable><selectable id="fcs-ckm-6-2-32">block erase</selectable></selectables> </selectable></selectables></selectable>
+              </selectables>
+              <h:p style="text-align: left;">] that meets the following: [<h:i>no standard]</h:i>.</h:p>
+            </title>
+            <note role="application">
+              <h:p style="text-align: left;">In the case of volatile memory, the selection “removal of all references to the key directly followed by a request for garbage collection” is used in a situation where the TSF cannot address the specific physical memory locations holding the data to be erased and therefore relies on addressing logical addresses (which frees the relevant physical addresses holding the old data) and then requesting the platform to ensure that the data in the physical addresses is no longer available for reading (i.e., the “garbage collection” referred to in the SFR text).</h:p>
+              <h:p style="text-align: left;">In parts of the selections where keys are identified as being destroyed by “a part of the TSF”, the TSS identifies the relevant part and the interface involved. The interface referenced in the requirement could take different forms for different TOEs, the most likely of which is an application programming interface to an OS kernel. There may be various levels of abstraction visible. For instance, in a given implementation the application may have access to the file system details and may be able to logically address specific memory locations. In another implementation the application may simply have a handle to a resource and can only ask another part of the TSF such as the interpreter or OS to delete the resource.</h:p>
+              <h:p style="text-align: left;">Where different key destruction methods are used for different keys and/or different destruction situations then the different methods and the keys/situations they apply to are described in the TSS (and the ST may use separate iterations of the SFR to aid clarity). The TSS describes all relevant keys used in the implementation of SFRs, including cases where the keys are stored in a non-plaintext form. In the case of non-plaintext storage, the encryption method and relevant key-encrypting-key are identified in the TSS.</h:p>
+              <h:p style="text-align: left;">The selection for destruction of data in non-volatile memory includes block erase as an option, and this option applies only to flash memory. A block erase does not require a read verify, since the mappings of logical addresses to the erased memory locations are erased, as well as the data itself.</h:p>
+              <h:p style="text-align: left;">Some selections allow the assignment of “some value that does not contain any CSP.” This means that the TOE uses some specified data not drawn from an RBG meeting FCS_RBG requirements and not being any of the values listed as other selection options. The point of the phrase “does not contain any CSP” is to ensure that the overwritten data is carefully selected and not taken from a general pool that might contain data that itself requires confidentiality protection.</h:p>
+            </note>
             <aactivity>
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <TSS>
+                The evaluator shall examine the TSS to verify that it:
+                <h:ul>
+                  <h:li>lists all relevant keys and keying material,</h:li>
+                  <h:li>describes the source of any key material,</h:li>
+                  <h:li>documents all memory or storage media types in which the keys or keying material
+							may be found both during use and between uses,</h:li>
+                  <h:li>documents all relevant destruction situations (including the
+							point in time at which the destruction occurs; e.g., factory reset or device wipe
+							function, change of authorization data, change of DEK, completion of use of an
+							intermediate key), and</h:li>
+                  <h:li>describes the destruction method used in each case.</h:li>
+                </h:ul>
+                <h:p/>
+                The evaluator shall confirm that the description of the data and storage locations is
+						consistent with the functions carried out by the TOE. Where keys are stored encrypted or 
+						wrapped under another key then this should be explained in order to allow the evaluator to
+						confirm the consistency of the description of keys with the TOE functions.
+                <h:p/>
+                The evaluator shall verify that the TSS identifies any configurations or
+						circumstances that may not conform to the key destruction requirement, such as delays in the
+						destruction of keys in some configurations or circumstances.
+              </TSS>
+              <Guidance>The evaluator shall verify that the guidance describes any configurable parameters
+						related to the lifecycle of cryptographic keys, including lifetimes or storage 
+						parameters.</Guidance>
+              <Tests>
+                The following tests may require the developer to provide access to a test platform that
+						provides the evaluator with tools that are typically not found on factory products.
+						
+						The evaluator shall perform the following for each of the key destruction circumstances or triggers
+						described in FCS_CKM.6.1.
+                <testlist>
+                  <test>If the key destruction method acts upon keys and keying material held in volatile memory that is subject to overwrite by the TOE (whether or not the plaintext key is subsequently encrypted for storage in volatile or non-volatile memory). <h:p/> The evaluator shall: <h:ol type="1"><h:li>Record the value of the key or keying material.</h:li> <h:li>Cause the TOE to perform normal cryptographic processing with the key
+									from Step #1.</h:li> <h:li>Cause the TOE to dump the appropriate memory into a binary file.</h:li> <h:li>Search the content of the binary file created in Step #3 to locate all
+									instances of the known key value from Step #1.<h:p/>
+									Note that the primary purpose of Step #4 is to demonstrate that appropriate
+									search commands are being used for Steps #8 and #9.</h:li> <h:li>Cause the TOE to destroy the key by triggering the circumstance from FCS_CKM.6.1
+									currently being tested.</h:li> <h:li>Cause the TOE to stop execution but not exit.</h:li> <h:li>Cause the TOE to dump the appropriate memory into a binary file.</h:li> <h:li>Search the contents of the binary file created in Step #7 for instances of the
+									known key value from Step #1.</h:li> <h:li>Break the key value from Step #1 into an evaluator-chosen set of
+									fragments and perform a search using each fragment. (Note that the
+									evaluator shall first confirm with the developer how the key is normally
+									stored, in order to choose fragment sizes that are the same or smaller than
+									any fragmentation of the data that may be implemented by the TOE. The
+									endianness or byte-order should also be taken into account in the search.)</h:li></h:ol>  <h:p/> Steps #1-8 ensure that the complete key does not exist anywhere in volatile memory. If a copy is found, then the test fails. <h:p/> Step #9 ensures that partial key fragments do not remain in memory. If the evaluator finds a 32-or-greater-consecutive-bit fragment, then it fails immediately. Otherwise, there is a chance that it is not within the context of a key (e.g., some random bits that happen to match). If this is the case the test should be repeated with a different key in Step #1. If a fragment is also found in this repeated run, then the test fails unless the developer provides a reasonable explanation for the collision, then the evaluator may give a pass on this test. <h:p/></test>
+                  <h:br/>
+                  <test>If the key destruction method acts upon keys and keying material held in non-volatile memory that is subject to overwrite or erasure by the TOE. <h:ol type="1"><h:li>Record the value of the key or keying material.</h:li> <h:li>Cause the TOE to perform normal cryptographic processing with the key
+									from Step #1.</h:li> <h:li>Search the non-volatile memory the key was stored in for instances of the
+									known key value from Step #1. <h:p/>
+									Note that the primary purpose of Step #3 is to demonstrate that appropriate
+									search commands are being used for Steps #5 and #6.</h:li> <h:li>Cause the TOE to destroy the key by triggering the circumstance from FCS_CKM.6.1
+									currently being tested.</h:li> <h:li>Search the non-volatile memory in which the key was stored for instances
+									of the known key value from Step #1. If a copy is found, then the test fails.</h:li> <h:li>Break the key value from Step #1 into an evaluator-chosen set of
+									fragments and perform a search using each fragment. (Note that the
+									evaluator shall first confirm with the developer how the key is normally
+									stored, in order to choose fragment sizes that are the same or smaller than
+									any fragmentation of the data that may be implemented by the TOE. The
+									endianness or byte-order should also be taken into account in the search).</h:li></h:ol> Step #6 ensures that partial key fragments do not remain in non-volatile memory. If the evaluator finds a 32-or-greater-consecutive-bit fragment, then it fails immediately. Otherwise, there is a chance that it is not within the context of a key (e.g., some random bits that happen to match). If this is the case the test should be repeated with a different key in Step #1. If a fragment is also found in this repeated run, then the test fails unless the developer provides a reasonable explanation for the collision, then the evaluator may give a pass on this test. <h:p/></test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -798,7 +885,7 @@
         <f-component cc-id="fcs_rbg.3" id="fcs-rbg-3" name="Random Bit Generation (Internal Seeding - Single Source)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-3-1">
-            <title>The TSF shall be able to seed the DRBG using a    <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>   with    <assignable>number of bits</assignable>   bits of min-entropy.</title>
+            <title>The TSF shall be able to seed the DRBG using a      <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>     with      <assignable>number of bits</assignable>     bits of min-entropy.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses a single internal source of entropy to initialize or reseed a DRBG that is within the TOE boundary. Seeding a DRBG is the same as initializing a DRBG.</h:p>
               <h:p style="text-align: left;">Hardware-based noise sources are entropy sources whose primary function is noise generation, such as ring oscillators, diodes, and thermal noise. While a TOE may use software to collect the noise from these hardware sources, these are not software-based. </h:p>
@@ -811,7 +898,7 @@
         <f-component cc-id="fcs_rbg.4" id="fcs-rbg-4" name="Random Bit Generation (Internal Seeding - Multiple Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-4-1">
-            <title>The TSF shall be able to seed the DRBG using    <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
+            <title>The TSF shall be able to seed the DRBG using      <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses two or more internal sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. FCS_RBG.5 defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</h:p>
             </note>
@@ -821,7 +908,7 @@
         <f-component cc-id="fcs_rbg.5" id="fcs-rbg-5" name="Random Bit Generation (Combining Entropy Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-5-1">
-            <title>TSF shall   <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>   resulting in a minimum of    <assignable>number of bits</assignable>   bits of min-entropy to create the entropy input into the derivation function as defined in    <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
+            <title>TSF shall     <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>     resulting in a minimum of      <assignable>number of bits</assignable>     bits of min-entropy to create the entropy input into the derivation function as defined in      <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE combines two or more sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. The ST author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a DRBG. </h:p>
               <h:p style="text-align: left;">One can apply NIST SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply NIST SP 800-90B (or AIS-31) statistical tests against external noise sources since the TOE is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the TSS may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the DRBG.</h:p>

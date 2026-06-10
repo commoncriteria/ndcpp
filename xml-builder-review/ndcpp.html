@@ -913,9 +913,9 @@ The following sections list Common Criteria and technology terms used in this do
               <p style="text-align: left;">For pNDs, ‘on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself’ or ‘locally’ means on storage inside or directly attached to the ND chassis and accessible by the networking functionality. </p>
               <p style="text-align: left;">For vNDs, local storage is any storage accessible by <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> software. In a virtualized environment, ‘local’ storage is under the control of the VS and may be physically located on the local host, but it could also be located on a network drive or storage array.</p>
             </span></div></div></div>
-          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.3"><a href="#FAU_STG_EXT.1.3" class="abbr">FAU_STG_EXT.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a     [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-3-1">log file</span>, <span class="selectable-content" id="fau-stg-ext-1-3-2">database</span>, <span class="selectable-content" id="fau-stg-ext-1-3-3">buffer</span>, <span class="selectable-content" id="fau-stg-ext-1-3-4">[<b>assignment</b>: 
-     <span class="assignable-content">other local logging method</span>]</span>]    of audit records in the event that an interruption of communication with the remote audit server occurs.</div></div>
-          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.4"><a href="#FAU_STG_EXT.1.4" class="abbr">FAU_STG_EXT.1.4</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to store    [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-4-1">persistent</span>, <span class="selectable-content" id="fau-stg-ext-1-4-2">non-persistent</span>]    audit records locally with a minimum storage size of    [<b>assignment</b>: 
+          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.3"><a href="#FAU_STG_EXT.1.3" class="abbr">FAU_STG_EXT.1.3</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall maintain a      [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-3-1">log file</span>, <span class="selectable-content" id="fau-stg-ext-1-3-2">database</span>, <span class="selectable-content" id="fau-stg-ext-1-3-3">buffer</span>, <span class="selectable-content" id="fau-stg-ext-1-3-4">[<b>assignment</b>: 
+     <span class="assignable-content">other local logging method</span>]</span>]     of audit records in the event that an interruption of communication with the remote audit server occurs.</div></div>
+          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.4"><a href="#FAU_STG_EXT.1.4" class="abbr">FAU_STG_EXT.1.4</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to store     [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-4-1">persistent</span>, <span class="selectable-content" id="fau-stg-ext-1-4-2">non-persistent</span>]     audit records locally with a minimum storage size of     [<b>assignment</b>: 
      <span class="assignable-content">number of records and/or file/buffer size(s)</span>]<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -924,9 +924,9 @@ The following sections list Common Criteria and technology terms used in this do
               </p>
               <p style="text-align: left;">Persistent logging is defined as any record(s) that is retained through power off, power failure, or reboot. This requirement allows for the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to implement logging either persistent log records or non-persistent log records that may be cleared on reboot of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
             </span></div></div></div>
-          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.5"><a href="#FAU_STG_EXT.1.5" class="abbr">FAU_STG_EXT.1.5</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall    [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-5-1">drop new audit data</span>, <span class="selectable-content" id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: [<b>assignment</b>: 
+          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.5"><a href="#FAU_STG_EXT.1.5" class="abbr">FAU_STG_EXT.1.5</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall     [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-5-1">drop new audit data</span>, <span class="selectable-content" id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: [<b>assignment</b>: 
      <span class="assignable-content">rule for overwriting previous audit records</span>]</span>, <span class="selectable-content" id="fau-stg-ext-1-5-3">[<b>assignment</b>: 
-     <span class="assignable-content">other action</span>]</span>]    when the local storage space for audit data is full.<div class="appnote"><span class="note-header">Application
+     <span class="assignable-content">other action</span>]</span>]     when the local storage space for audit data is full.<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">
@@ -935,7 +935,7 @@ The following sections list Common Criteria and technology terms used in this do
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author may use the "other action" assignment to describe other measurable behaviour (e.g., frequency of log file rotation based on size and/or age of log files). </p>
               <p style="text-align: left;">For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, each component is not required to store generated audit data locally, but the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> needs to be able to store audit data locally. Each component must at least provide the ability to temporarily buffer audit information locally to ensure that audit records are preserved in case of network connectivity issues. Buffering audit information locally, does not necessarily involve non-volatile memory: audit information could be buffered in volatile memory. However, the local storage of audit information in the sense of <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a> needs to be done in non-volatile memory. For every component which performs local storage of audit information, the behaviour when local storage is exhausted needs to be described. For every component which is buffering audit information instead of storing audit information locally itself, it needs to be described what happens in case the buffer space is exhausted.</p>
             </span></div></div></div>
-          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.6"><a href="#FAU_STG_EXT.1.6" class="abbr">FAU_STG_EXT.1.6</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the following mechanisms for administrative access to locally stored audit records    [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-6-1">none</span>, <span class="selectable-content" id="fau-stg-ext-1-6-2">manual export</span>, <span class="selectable-content" id="fau-stg-ext-1-6-3">ability to view locally</span>].<div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FAU_STG_EXT.1.6"><a href="#FAU_STG_EXT.1.6" class="abbr">FAU_STG_EXT.1.6</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the following mechanisms for administrative access to locally stored audit records     [<b>selection</b>: <span class="selectable-content" id="fau-stg-ext-1-6-1">none</span>, <span class="selectable-content" id="fau-stg-ext-1-6-2">manual export</span>, <span class="selectable-content" id="fau-stg-ext-1-6-3">ability to view locally</span>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">
@@ -1201,7 +1201,50 @@ The following sections list Common Criteria and technology terms used in this do
               </div></div></div></div></div>
         
         <div class="comp" id="FCS_CKM_EXT.7"><h4>FCS_CKM_EXT.7 Cryptographic Key Agreement</h4>
-          <div class="element"><div class="reqid" id="FCS_CKM_EXT.7.1"><a href="#FCS_CKM_EXT.7.1" class="abbr">FCS_CKM_EXT.7.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_CKM_EXT.7.1"><a href="#FCS_CKM_EXT.7.1" class="abbr">FCS_CKM_EXT.7.1</a></div><div class="reqdesc">
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall derive shared cryptographic keys with input from multiple parties in accordance with specified cryptographic key agreement algorithms</p>
+              
+                  
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic Key Generation Algorithm</span>]
+                  and specified cryptographic parameters
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic Algorithm Parameters</span>]
+                  that meet the following: 
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">List of Standards</span>]
+                  The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a>.
+                
+            <table><caption><span class="ctr" data-myid="nd-ckm-ext-7-crypto-table" data-counter-type="ct-Table" id="nd-ckm-ext-7-crypto-table">Table <span class="counter">3</span></span>: Allowed choices for <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></caption>
+                <tr>
+                  <th>Identifier</th>
+                  <th>Cryptographic Key Generation Algorithm</th>
+                  
+                  <th>Cryptographic Algorithm Parameters</th>
+                  
+                  <th>List of Standards</th>
+                  
+                </tr>
+
+                <tr><td>DH</td><td>Finite Field Cryptography Diffie-Hellman</td><td>Static domain parameters approved for  [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="ckm7-group-1">IKE Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_1">MODP-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_2">MODP-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_3">MODP-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_4">MODP-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_5">MODP-8192</span>]</span></li><li style=""><span class="selectable-content" id="ckm7-group-2"><abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_6">ffdhe-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_7">ffdhe-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_8">ffdhe-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_9">ffdhe-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_10">ffdhe-8192</span>]</span></li></ul>]</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56A Revision 3 (Section 5.7.1.1), [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_11"><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 3526 [IKE groups]</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_12"><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 7919 [<abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> groups]</span>]</td></tr>
+
+                <tr><td>ECDH</td><td>Elliptic Curve Diffie-Hellman</td><td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_13">P-256</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_14">P-384</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_15">P-521</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56A Revision 3 (Section 5.7.1.2) [ECDH]<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-186 (Section 3.2.1) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]</td></tr>
+
+              </table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">
+                <b>Application Note 14 </b>
+              </p>
+              <p style="text-align: left;">This requirement specifies key transport schemes. Key agreement schemes refer to cases in which two or more parties want to establish a single key between them, and all parties contribute to the entropy of the agreed-upon key. </p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author selects all key agreement schemes used for the selected cryptographic protocols. </p>
+              <p style="text-align: left;">The elliptic curves used for the key agreement scheme correlate with the curves specified in <a href="#FCS_CKM.1.1/AKG">FCS_CKM.1.1/AKG</a>. </p>
+              <p style="text-align: left;">The static domain parameters approved for the finite field-based key agreement scheme are specified by the key generation according to <a href="#FCS_CKM.1.1/AKG">FCS_CKM.1.1/AKG</a>. </p>
+              <p style="text-align: left;">For Key Transport, see <a href="#FCS_CKM.2">FCS_CKM.2</a> in Annex A.</p>
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM_EXT.7">FCS_CKM_EXT.7</a></div>
               Something
@@ -1227,7 +1270,14 @@ The following sections list Common Criteria and technology terms used in this do
         </div>
         
         <div class="comp" id="FCS_COP.1/DataEncryption"><h4>FCS_COP.1/DataEncryption Cryptographic Operation (AES Data Encryption/Decryption)</h4>
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/DataEncryption"><a href="#FCS_COP.1.1/DataEncryption" class="abbr">FCS_COP.1.1/DataEncryption</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/DataEncryption"><a href="#FCS_COP.1.1/DataEncryption" class="abbr">FCS_COP.1.1/DataEncryption</a></div><div class="reqdesc"><p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>encryption/decryption</i> in accordance with a specified cryptographic algorithm <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> <b>operating in</b></p> [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_DATAENCRYPTION_1">CBC mode as defined in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></span>, <span class="selectable-content" id="nd_fcs_cop.1.1_DATAENCRYPTION_2">CTR mode as defined in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></span>, <span class="selectable-content" id="nd_fcs_cop.1.1_DATAENCRYPTION_3">XTS mode as defined in <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></span>, <span class="selectable-content" id="nd_fcs_cop.1.1_DATAENCRYPTION_4">CCM mode as defined in <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a></span>, <span class="selectable-content" id="nd_fcs_cop.1.1_DATAENCRYPTION_5">GCM mode as defined in <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a></span>].<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">
+                <b>Application Note 15</b>
+              </p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author selects the mode or modes in which <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> operates. If CBC mode, CTR mode, or XTS mode is selected then <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a> from Annex B must be included. If CCM mode or GCM mode is selected, then <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a> from Annex B must be included.</p>
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/DataEncryption">FCS_COP.1/DataEncryption</a></div>
               Something
@@ -1239,7 +1289,14 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/Hash"><h4>FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm)</h4>
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/Hash"><a href="#FCS_COP.1.1/Hash" class="abbr">FCS_COP.1.1/Hash</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/Hash"><a href="#FCS_COP.1.1/Hash" class="abbr">FCS_COP.1.1/Hash</a></div><div class="reqdesc"><p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>cryptographic hashing</i> in accordance with a specified cryptographic algorithm</p> [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_1"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_2"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_3"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_4">SHA3-256</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_5">SHA3-384</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_6">SHA3-512</span>] that meets the following: [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_7"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 10118-3:2018 [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>, SHA3]</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_8"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 180-4 [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>]</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_HASH_9"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 202 [SHA3]</span>].<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">
+                <b>Application Note 18 </b>
+              </p>
+              <p style="text-align: left;">The hash function selection should have an output length that is the same or greater than the security strength of the algorithm used for signature generation. For example, the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> should choose <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384 for 3072-bit RSA, 4096-bit RSA, or ECC with P-384; and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512 for ECC with P-521. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author selects the standard based on the algorithms selected. For <a href="#FCS_COP.1.1/Hash">FCS_COP.1.1/Hash</a>, SHA3 hashes may be used only for image signing or boot integrity verification.</p>
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></div>
               Something
@@ -1251,16 +1308,113 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/KeyedHash"><h4>FCS_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)</h4>
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyedHash"><a href="#FCS_COP.1.1/KeyedHash" class="abbr">FCS_COP.1.1/KeyedHash</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/KeyedHash"><a href="#FCS_COP.1.1/KeyedHash" class="abbr">FCS_COP.1.1/KeyedHash</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [<i>keyed hash message authentication</i>] in accordance
+					with a specified cryptographic algorithm
+              
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Keyed Hash Algorithm</span>]
+                  and cryptographic key sizes
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+                  that meet the following:
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+                  .                    <p></p> <p></p> provides the allowable choices for	completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>.                  
+                
+            <table><caption><span class="ctr" data-myid="fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="fcs-cop-keyedhash-sels">Table <span class="counter">4</span></span>: Allowable choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
+                <tr>
+                  <th>Keyed Hash Algorithm</th>
+                  
+                  <th>Cryptographic key sizes</th>
+                  
+                  <th>List of standards</th>
+                  
+                </tr>
+
+                <tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td><td>[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_1">384 (<abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_2">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits</td><td>
+                    [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_3"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 9797-2:2021 (Section 7 "MAC Algorithm 2")</span>, <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_4"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+                  </td></tr>
+
+                <tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td><td>[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_5">512 (<abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_6">384 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>, <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_7">256 (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>)</span>] bits</td><td>
+                    [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_8"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 9797-2:2021 (Section 7 "MAC Algorithm 2")</span>, <span class="selectable-content" id="fcs_cop.1.1_KeyedHash_9"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+                  </td></tr>
+
+                <tr><td><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-256</td><td>256 bits</td><td>
+                    [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_KEYEDHASH_1"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 9797-2:2021 (Section 7 "MAC Algorithm 2")</span>, <span class="selectable-content" id="nd_fcs_cop.1.1_KEYEDHASH_2"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1</span>]
+                  </td></tr>
+
+              </table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">
+                <b>Application Note 19 </b>
+              </p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> minimum key sizes in the table are specified in <abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 9797-2:2021, which requires that the minimum key size be equal to the digest size. The <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> standard specifies no minimum or maximum key sizes, so if <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1 is selected, larger or smaller key sizes may be used. This is indicted by the parenthesized annotations in the Cryptographic Key Sizes column. Select 'implicit' in cases where keyed-hash message authentication is done implicitly (e.g., SSH using <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr> in GCM mode).</p>
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></div>
-              Something
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that the size of the key is sufficient for the desired
+						security strength of the output.</div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator
+						shall perform the following test or witness respective tests executed by the developer. The tests
+						must be executed on a platform that is as close as practically possible to the operational platform
+						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
+						is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences
+						between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.
+                <br/>
+                <b><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr></b>
+                <table border="1">
+                  <tr class="header" bgcolor="#cccccc">
+                    <td valign="top">Keyed Hash Algorithm</td>
+                    <td valign="top">Cryptographic Key Sizes</td>
+                    <td valign="top">List of Standards</td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-384</td>
+                    <td valign="top">[<b>selection:</b> (<abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 384, (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 256] bits</td>
+                    <td valign="top">
+                      [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 9797-2:2021 (Section 7 "MAC Algorithm 2"), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1]
+                    </td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr>-SHA-512</td>
+                    <td valign="top">[<b>selection:</b> (<abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 512, (<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr>) 384, 256] bits</td>
+                    <td valign="top">
+                      [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 9797-2:2021 (Section 7 "MAC Algorithm 2"), <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 198-1]
+                    </td>
+                  </tr>
+                </table>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate keyed hashes using <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> the evaluator shall perform the
+						Algorithm Functional Test for each combination of claimed <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> algorithm the following
+						parameters:
+                <ul>
+                  <li>Hash function [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</li>
+                  <li>Key length [8-65536] bits by 8s</li>
+                  <li>MAC length [32-[digest size of hash function (256, 384, 512)]] bits</li>
+                </ul>
+                <br/>
+                <b>Algorithm Functional Test</b>
+                For each supported Hash function the evaluator shall generate 150 test cases using random input
+						messages of 128 bits, random supported key lengths, random keys, and random supported MAC
+						lengths such that across the 150 test cases:
+                <ul>
+                  <li>The key length includes the minimum, the maximum, a key length equal to the block
+							size, and key lengths that are both larger and smaller than the block size.</li>
+                  <li>The MAC size includes the minimum, the maximum, and two other random values.</li>
+                </ul>
+                The evaluator shall compare the output against results generated by a known-good
+						implementation with the same input.
+              </div></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/KeyEncap"><h4>FCS_COP.1/KeyEncap Cryptographic Operation - Key Encapsulation</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
 	  .
@@ -1277,19 +1431,478 @@ The following sections list Common Criteria and technology terms used in this do
         </div>
         
         <div class="comp" id="FCS_COP.1/SigGen"><h4>FCS_COP.1/SigGen Cryptographic Operation - Signature Generation</h4>
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigGen"><a href="#FCS_COP.1.1/SigGen" class="abbr">FCS_COP.1.1/SigGen</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigGen"><a href="#FCS_COP.1.1/SigGen" class="abbr">FCS_COP.1.1/SigGen</a></div><div class="reqdesc">
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform [<i>digital signature generation</i>] in accordance with a specified 
+					cryptographic algorithm
+              
+                  
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic algorithm</span>]
+                  and cryptographic key sizes
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic key sizes</span>]
+                  that meet the following:
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">List of standards</span>]
+                  .                    <p></p> <p></p> The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a>.                  
+                
+            <table><caption><span class="ctr" data-myid="fcs-cop-siggen-sels" data-counter-type="ct-Table" id="fcs-cop-siggen-sels">Table <span class="counter">5</span></span>: Allowable choices for <a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></caption>
+                <tr>
+                  <th>Identifier</th>
+                  <th>Cryptographic algorithm</th>
+                  
+                  <th>Cryptographic key sizes</th>
+                  
+                  <th>List of standards</th>
+                  
+                </tr>
+
+                <tr><td>RSA-PKCS</td><td>RSASSA-PKCS1-v1_5</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGGEN_1">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_1">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_2">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_3">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_4">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGGEN_2"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_5"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_6"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.2) [PKCS #1 v2.2]<p></p><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</td></tr>
+
+                <tr><td>RSA-PSS</td><td>RSASSA-PSS</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGGEN_3">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_7">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_8">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_9">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_10">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGGEN_4"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_11"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_12"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>], Salt Length (<i>sLen</i>) such that [<b>assignment</b>: 
+     <span class="assignable-content">0 ≤ sLen ≤ hLen (Hash Output Length)</span>] and Mask Generation Function = MGF1</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.1) [PKCS#1 v2.2]<p></p><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]</td></tr>
+
+                <tr><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGGEN_5">P-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_13">P-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_14">P-521</span>], per-message secret number generation [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigGen_15">extra random bits</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_16">rejection sampling</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_17">deterministic</span>] and hash function using [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGGEN_6"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_18"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_19"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td>[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigGen_20"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="fcs_cop.1.1_SigGen_21"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Sections 6.3.1, 6.4.1]</span>] [<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]</td></tr>
+
+                <tr><td>ML-DSA</td><td>ML-DSA Signature Generation</td><td>Parameter set = ML-DSA-87</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.2)</td></tr>
+
+              </table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">
+                <b>Application Note 16</b>
+              </p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should choose the cryptographic algorithms, parameters, and standards implemented to perform digital signature generation. For the algorithm chosen, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make the appropriate assignments/selections to specify the parameters that are implemented for that algorithm.</p>
+            </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></div>
-              Something
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and verify that any hash function is the appropriate security
+						strength for the signing algorithm.
+                <p></p>
+                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that any one-time values such as nonces or masks
+						are constructed and used in accordance with the relevant standards.
+                <p></p>
+                The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has appropriate measures in place to
+						ensure that hash-based signature algorithms do not reuse private keys
+              </div></div><div class="eacategory">Guidance</div><div class="ea">
+			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator
+						shall perform the following test or witness respective tests executed by the developer. The tests
+						must be executed on a platform that is as close as practically possible to the operational platform
+						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
+						is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences
+						between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.
+                <br/>
+                <b>RSA-PKCS Signature Generation </b>
+                <table border="1">
+                  <tr class="header" bgcolor="#cccccc">
+                    <td valign="top">Identifier</td>
+                    <td valign="top">Cryptographic Algorithm Parameters</td>
+                    <td valign="top">Cryptographic Key Sizes</td>
+                    <td valign="top">List of Standards</td>
+                  </tr>
+                  <tr>
+                    <td valign="top">RSA-PKCS </td>
+                    <td valign="top">RSASSA-PKCS1-v1_5</td>
+                    <td valign="top">
+                      Modulus of size [<b>selection:</b>
+                      3072, 4096, 6144, 8192] bits,
+									hash [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]
+                    </td>
+                    <td valign="top">
+                      <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.2) [PKCS #1 v2.2]
+                      <p></p>
+                      <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]
+                    </td>
+                  </tr>
+                </table>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform RSA Digital Signature Generation using PKCS1-v1_5
+						signature type, the evaluator shall perform the Generated Data Test using the following input
+						parameters:
+                <ul>
+                  <li>Modulus size [3072, 4096, 6144, 8192] bits</li>
+                  <li>Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</li>
+                </ul>
+                <br/>
+                <b>Generated Data Test</b>
+                For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to
+						generate three test cases using random data. The evaluator shall compare the results against those
+						from a known-good implementation.
+                <br/>
+                <b>RSA-PSS Signature Generation </b>
+                <table border="1">
+                  <tr class="header" bgcolor="#cccccc">
+                    <td valign="top">Identifier</td>
+                    <td valign="top">Cryptographic Algorithm Parameters</td>
+                    <td valign="top">Cryptographic Key Sizes</td>
+                    <td valign="top">List of Standards</td>
+                  </tr>
+                  <tr>
+                    <td valign="top">RSA-PSS</td>
+                    <td valign="top">RSASSA-PSS</td>
+                    <td valign="top">
+                      Modulus of size [<b>selection:</b>
+                      3072, 4096, 6144, 8192] bits,
+									hash [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512], Salt Length (<i>sLen</i>)
+												such that [<b>assignment:</b>
+                      0 ≤
+                      <i>sLen</i>
+                      ≤
+                      <i>hLen</i>
+                      (Hash Output Length)]
+												and Mask Generation Function = MGF1
+                    </td>
+                    <td valign="top">
+                      <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.2) [PKCS #1 v2.2]
+                      <p></p>
+                      <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]
+                    </td>
+                  </tr>
+                </table>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform RSA Digital Signature Generation using PSS signature type,
+						the evaluator shall perform the Generated Data Test using the following input parameters.
+                <ul>
+                  <li>Modulus size [3072, 4096, 6144, 8192] bits</li>
+                  <li>Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</li>
+                  <li>Salt length [Fixed based on implementation]</li>
+                  <li>Mask function [MGF1]</li>
+                </ul>
+                <br/>
+                <b>Generated Data Test</b>
+                For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to
+						generate three test cases using random data. The evaluator shall compare the results against those
+						from a known-good implementation.
+                <br/>
+                <b><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Signature Generation </b>
+                <table border="1">
+                  <tr class="header" bgcolor="#cccccc">
+                    <td valign="top">Identifier</td>
+                    <td valign="top">Cryptographic Algorithm Parameters</td>
+                    <td valign="top">Cryptographic Key Sizes</td>
+                    <td valign="top">List of Standards</td>
+                  </tr>
+                  <tr>
+                    <td valign="top"><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td>
+                    <td valign="top"><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td>
+                    <td valign="top">
+                      Elliptic Curve [<b>selection:</b>
+                      P-384, P-521], 
+									per-message secret number generation
+									[<b>selection:</b>
+                      extra random bits, rejection sampling, deterministic] 
+									and hash function using [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]
+                    </td>
+                    <td valign="top">
+                      [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 14888-3:2018 (Subclause 6.6),
+									<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Sections 6.3.1, 6.4.1] [<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]
+                      <p></p>
+                      <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]
+                    </td>
+                  </tr>
+                </table>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Digital Signature Generation using extra random
+						bits or rejection sampling for secret number generation, the evaluator shall perform the
+						Algorithm Functional Test using the following input parameters.
+                <ul>
+                  <li>Elliptic Curve [P-384, P-521]</li>
+                  <li>Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</li>
+                </ul>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Digital Signature Generation using deterministic
+						secret number generation, the evaluator shall perform the Algorithm Functional Test using the
+						following input parameters.
+                <ul>
+                  <li>Elliptic Curve [P-384, P-521]</li>
+                  <li>Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</li>
+                </ul>
+                <br/>
+                <b>Algorithm Functional Test</b>
+                For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to
+						generate 10 test cases using random data. The evaluator shall compare the results against those
+						from a known-good implementation.
+                <br/>
+                <b>LMS Signature Generation </b>
+                <table border="1">
+                  <tr class="header" bgcolor="#cccccc">
+                    <td valign="top">Identifier</td>
+                    <td valign="top">Cryptographic Algorithm Parameters</td>
+                    <td valign="top">Cryptographic Key Sizes</td>
+                    <td valign="top">List of Standards</td>
+                  </tr>
+                  <tr>
+                    <td valign="top">LMS</td>
+                    <td valign="top">LMS</td>
+                    <td valign="top">
+                      Private key size = [<b>selection:</b>
+                      192 bits with [<b>selection:</b>
+                      SHA256/192, SHAKE256/192], 
+									256 bits with [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256]], 
+									Winternitz parameter = [<b>selection:</b>
+                      1, 2, 4, 8], 
+									and tree height = [<b>selection:</b>
+                      5, 10, 15, 20, 25]
+                    </td>
+                    <td valign="top">
+                      <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8554 [LMS]
+                      <p></p>
+                      <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
+                    </td>
+                  </tr>
+                </table>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate cryptographic digital signature using LMS, the
+						evaluator shall perform the Algorithm Functional Test using the following input parameters.
+                <ul>
+                  <li>Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192, SHAKE256/192, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256]</li>
+                  <li>Winternitz [1, 2, 4, 8]</li>
+                  <li>Tree height [5, 10, 15, 20, 25]</li>
+                </ul>
+                <br/>
+                <b>Algorithm Functional Test</b>
+                For each supported combination of the above parameters, the evaluator shall generate 10
+						signatures. The evaluator shall verify the correctness of the implementation by comparing values
+						generated by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with those generated by a known good implementation using the same
+						input parameters.
+                <br/>
+                <b>ML-DSA Signature Generation</b>
+                <table border="1">
+                  <tr class="header" bgcolor="#cccccc">
+                    <td valign="top">Identifier</td>
+                    <td valign="top">Cryptographic Algorithm Parameters</td>
+                    <td valign="top">Cryptographic Key Sizes</td>
+                    <td valign="top">List of Standards</td>
+                  </tr>
+                  <tr>
+                    <td valign="top">ML-DSA</td>
+                    <td valign="top">ML-DSA SigGen</td>
+                    <td valign="top">Parameter set = ML-DSA-87</td>
+                    <td valign="top"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 204 (Section 5.2)</td>
+                  </tr>
+                </table>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate digital signatures using ML-DSA, the
+						evaluator shall perform the Algorithm Functional Test using the following input parameters.
+                <ul>
+                  <li>Parameter set [ML-DSA-87]</li>
+                  <li>Seed [32 random bytes] (for non-deterministic signature testing), or</li>
+                  <li>Seed [32 zero bytes] (for deterministic signature testing)</li>
+                  <li>Message to sign [8-65535] bytes</li>
+                  <li><i>Mu</i> value (if generated externally)</li>
+                  <li>Previously generated private key (<i>sk</i>)</li>
+                  <li>Context (for external interface testing)</li>
+                </ul>
+                The random seed is normally generated internally by ML-DSA.Sign(sk, Message, context). This test
+						will actually be testing the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>'s internal key signature function ML-DSA.Sign_internal(sk, M', seed)
+						as described in <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204, unless the test setup allows capturing the seed.
+                <b>Algorithm Functional Test</b>
+                For each combination of supported parameter set and capabilities, the evaluator shall require the
+						implementation under test to generate 15 signatures pairs using 15 different randomly generated
+						32-byte seed values. To determine correctness, the evaluator shall
+						compare the resulting key pairs with those generated using a known-good implementation using
+						the same inputs.
+                <br/>
+                <b>Known Answer Test for Rejection Cases</b>
+                For each supported parameter set, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate signatures using
+						the data below and a deterministic seed of all 0’s. Correctness is determined by
+						comparing the hash of the resulting signature with the hash in the fourth row 
+						for each corresponding test case below.
+						The test values are defined as follows:
+                <ul>
+                  <li><i>Seed</i> is the seed to generate the key pair (<i>pk, sk</i>)</li>
+                  <li><i>Hash of keys</i> is computed by <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256(<i>pk</i>||<i>sk</i>)</li>
+                  <li><i>Message</i> is the message to be signed</li>
+                  <li><i>Hash of sig</i> is computed by <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256(<i>sig</i>)</li>
+                </ul>
+                <b>ML-DSA-87 Test Cases for Rejection Cases</b>
+                <pre>
+		Test case 87-RC-01
+		Seed: 			E4F5AFCF697E0EC3C1BDEB66FAA903221E803902F9C3F716E1056A63D77DC250
+		Hash of Keys: 	61618E8DDA6998072C8EB36974E03880D741CAF0BD523356DFC161E7C9E63934
+		Message: 		F4F1C05004D5B946F69EAFE104C4020519086ADDB9582A20FDE887D13DFC36B1
+		Hash of sig: 	B584E38FA442FC3C81A147D4BDBF058D73C822CAF5CA4C06B0110867F60A8001
+						
+		Test case 87-RC-02
+		Seed: 			8B828D871254D6C57384A8E7025AA3F7160CAD1D2C754499DF3844426062C3DD
+		Hash of Keys: 	BB64481317D6C0DBAD20C0C7EF11078AD54E5D574F4A07652115A95F77C655FA
+		Message: 		0F9409C5A4930C25B83FC5B77FDB5BB49C75372DE724D9C1A77DB700CF0CF154
+		Hash of sig: 	F86B49BE9DEB2B209BDEB4E922E5939E92D38E562C44BB09AFBD67323C345192
+						
+		Test case 87-RC-03
+		Seed: 			E693D282CACB8CE65FD4D108DA7A373F097F0AA9713550BE242AAD5BD3E2E452
+		Hash of Keys: 	B0BEAF56713A69BD4AB2CBEE006FA5001E7B41F3AE541E05F088933AA0CC78DF
+		Message: 		24DABB9D57ADEBD560ED65D9451C5106D437061708F849BA53F3543CDF9AAAE0
+		Hash of sig: 	DBF65CEFF9F96A74AAF6F3AB27B043231BE6AA04FBA2EEC987A24A00BDD6A08E
+						
+		Test case 87-RC-04
+		Seed: 			4002163EB8EED01A8E0919BA8C07D291341EDCAE25B02B9779A2CFFE50561AF0
+		Hash of Keys: 	FED1BE685C20ECB322FC40D41DEE7E0E98D0409FBF989CAE71B8AD2D58AD645E
+		Message: 		EE316BB5EBED53325B4A55571C60657B53E353B51B831F4A0BBB28107EBA4BA8
+		Hash of sig: 	3BE9B5545FDCED92547B3409C83B3312CCB5792A8EC3A4DA63BA692C79BEF17C
+						
+		Test case 87-RC-05
+		Seed: 			9C7AD524F65854C27E565BCEDF8E86D650F13A40D0448F9AE10C05F10F777120
+		Hash of Keys: 	0EA872CA5A4BEA94F4E8EF7ED31800727899A51059FDEE111E5CB15F0233B534
+		Message: 		CE09831294AA96CAF684B9E667947B021C57B24C138EC7D4DA270694C82F2E08
+		Hash of sig: 	3B9526CEE6587F2418BFE603ADB0F7DF0D69EBA31C9F9F005C60C993945EBD33
+						
+		Test case 87-RC-06
+		Seed: 			2EB7676D4A28700DA7772A7A035EB495CAA6F842352A74824EF5FD891BC38B2A
+		Hash of Keys: 	D5B73703A1DDC5BCB0D14AE39B193A25D6ADA6535827973181ADB0BE70435A5B
+		Message: 		C2B3A0AC483A5517682285C205974B2A506946448A8F7D3E1934C155EFDFE922
+		Hash of sig: 	375D598704B722C8A1FEF1626FD7738A532C06329AA4217357460E3B729660F8
+						
+		Test case 87-RC-07
+		Seed: 			E4E80CCE8B26DF1B02B99949851EE2F907FE4F0CC34790352C76D5D91634D073
+		Hash of Keys: 	84B7E61684A12698400B09EA332EA3C4FBCFA47FE37FD6AE725CBC5FA8A99D3F
+		Message: 		89E6AB43C9CB1CC59C3986D53217A558357E62102A26F666F2B64CD1DBB7A536
+		Hash of sig: 	7C4AABD163CAEF8F6EBFDA3E3EEBC0A9604675B0E991ABAFD284F1AE8BA07B2A
+						
+		Test case 87-RC-08
+		Seed: 			5787262B803499223D4E5A8C1EE572E89F7A69B359B3F8505355B0BDEAB95E5C
+		Hash of Keys: 	85AE1DE605A7B479C02730BF4B7DD6D0FD8FFE5C980893CA6DAD00BD8BD1CE68
+		Message: 		D3230C4E061964BBFB17702432D5D36FC1EB3D1068F8CCAA84044776E3B5CC55
+		Hash of sig: 	D3ABE460EE2DD9595F413CFE2780A319E4E4DFD6592995298A7AB0B82A5E2815
+						
+		Test case 87-RC-09
+		Seed: 			CE099B99330537DD153052243FC32ACAD509A126AB982410258858567D410D79
+		Hash of Keys: 	E04A9F15EDF8F078EB336CE624249EF2A8EDF2CDBF6A8276E9F5E92ED9B0BAE8
+		Message: 		0035931762665F561A1B22176567E3B10FDE2441521F77030733A8E39312EEEE
+		Hash of sig: 	3EEF413CB5EB179896ECA172D0DBFB9B251545DC561D61580BD5BBC8B6D734E1
+
+		Test case 87-RC-10
+		Seed: 			FC8F2929878CBD81E1CCC23913F290380120C043A4A8A251AEEBF09705B8E590
+		Hash of Keys: 	7E2ECCA86F532E8E8092FEBB6E0007F92E7909AD2BCBE2E02AB375DAC9969E5E
+		Message: 		D3C28875D2671C0EF23BFDC8869E8ECF8868D3F0561C3134D254F7479D0CE0E5
+		Hash of sig: 	EB69A908EDCC04320A0B61AD57E21B044465F2037698636B64229CF2DB259789
+						</pre>
+                <br/>
+                <b>Known Answer Test for Large Number of Rejection Cases (Total Rejection Count)</b>
+                For each supported parameter set, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate signatures using
+						the data below and a deterministic seed of all 0’s. Correctness is determined by
+						comparing the hash of the resulting signature with the hash in the fourth row
+						of the corresponding test case below.
+                <b>ML-DSA-87 Test Cases for Total Rejection Count</b>
+                <pre>
+		Test case 87-LN-01
+		Seed: 			98B6298051D92BF37293C93C97370747BF527B87B71F6C4264182F45155ADE4C
+		Hash of Keys: 	04A135B5C9B7020332C7B16E7108E8FF7FC1EAE1C23C5FA0B5D5CED0FEEE7424
+		Message: 		D7B0341269259083ABF3C8DC47559A19D57669B4486E0224F376DC43E577A3D8
+		Hash of sig: 	58D72D76EC0FB65BFB9893C4479366B79DD7B8B7577E4291D13514FCC76C26DD
+
+		Test case 87-LN-02
+		Seed: 			DFB5BDD90F58571DCA962426C623F13D046BBE814D183886AC90D143EAD725A7
+		Hash of Keys: 	2B6AB8CFCCCC41F759CAF01932E9413F5DC6D949BC827F739866929683FB155E
+		Message: 		21005DB2B583CC826A9684BFFD0EE00AB97E0479FE4A1D266699337540145778
+		Hash of sig: 	C93EA34E00FFFFC3ECEA072D5FB038A83B5539CAF7B831AEDCFA785E50B3CA5E
+
+		Test case 87-LN-03
+		Seed: 			5AD414E0DD0EF2FE685F342871875FDF06F503717A86C3B3466565ADD2096417
+		Hash of Keys: 	BD9C2D52F3FC78DB17E682DA2E78947ECFC0898333838D60C892700B2B0DDA9F
+		Message: 		29139C279816B25F2D6BB52C8247D163544F7BA332C3CF63359B9E23FBC56515
+		Hash of sig:	DB4BE2DE19FB40437BDB7E9B6578D665DB05B4E88C16907DF4546EBA9BE03AEA
+
+		Test case 87-LN-04
+		Seed: 			484DD2F406A4D15F49A91AD5FC3BDC1D0FF253622EB68F83D6E1C870D0E89E29
+		Hash of Keys: 	A719DC9A77C91C46295555C2353BA0CBEA513DA9A92A5C34D2E949EFF46A12D8
+		Message: 		6AD6E959F0EA60126364FB7C95FA71133F246A9265A11B4965EE78AB0CB5AF0E
+		Hash of sig: 	5050D7A665074EC63D9F3966C1F01A1BFB18F9E83AE0B09F838BC1E2342ED6F4
+
+		Test case 87-LN-05
+		Seed: 			B25C1816F82D59940D5CB829BAC364AAD013C4C16415CE1CF6DCC2F15199B391
+		Hash of Keys: 	ADBB2CD43F222640BD9FF4E61C80E63853E8DC1F759C581B7447C9C166EAA38E
+		Message: 		824E47322895BFFE37B6B4AFC41CF6115C07EEC0C24EB81076C87A1B01AE8617
+		Hash of sig: 	667ADA46073BC69D64DC47BB9A76DD0D78302E7415D87D5E816B05FB95F9E84D
+
+		Test case 87-LN-06
+		Seed: 			B2CE72B3560AF07E06465881F56ADA00262BA708D87B73F39E04E310F3B8A3E9
+		Hash of Keys: 	FD9C4AC53AE803242A62DF933B8E8BAD6CE5207AC4A73683B6D9383B5E70B17A
+		Message: 		A1501CC84C917E0D2D7C27C2AC382220BD8FFFE807DB38E37A9E429EC2781911
+		Hash of sig: 	779553B195E11558EE59EF3942F5F6B446A2144600D1F4F50B300C6C56504760
+
+		Test case 87-LN-07
+		Seed: 			AB01D0E591B7DDCD3C03395AED808FA2763C0A486D44119D621BE0FD0B022B25
+		Hash of Keys: 	93B6ADE34F78A4ADB36B2F6D2C51DB793E659E1243E80488AE1C03B65125D6D7
+		Message: 		8DE8122D89D15FE84A4C34F6B59B2C4B11F33B6A053154D199B634F557FDF5F6
+		Hash of sig: 	0483045999A79B583F403DB96A736F0F0B24E2DFBC4E5CFA9B50E3D910786F07
+
+		Test case 87-LN-08
+		Seed: 			15D60D3693762F82C9AC1DCB0576936651AC81D863842EDB91109C8EE83AE705
+		Hash of Keys: 	2DF544E2E939AA717741C2437288FAEB308DEB8FF37A2652FAE34BAE8B84D779
+		Message: 		F05946A6113905C34163AEF2246FD69016CE24A7BA40F8E7E42EDAC2D0A44605
+		Hash of sig: 	F8383917AF79C8E540D2356AB05F08B465BF32DFEC444B787CE31BF48CC6C3DD
+
+		Test case 87-LN-09
+		Seed: 			21212285BED53B3411705DAF5F3BDDB6F0618EB571B36EE11A74053407A269F5
+		Hash of Keys: 	737061155A9A03F11F9FEBBB940BED4DD54542C4A6212F89A5EB4EC2BE542782
+		Message: 		FFE38246BF3DEFD9CAD15CC17CEA511C067D582E04227B479E32F9197CF91482
+		Hash of sig: 	C4C12C58032052FB2D21F0C6A7388A63154FB85B74287D2859DE6C1C6F7F277B
+
+		Test case 87-LN-10
+		Seed: 			A2744470587C71BA43EC26DC390CE3531978F315993C653E5D3EFD2849D5D9F1
+		Hash of Keys: 	B1BF37BFFB11531B6ADD697870D7DB2E2462D0A97A63F09C1D0038457C6D795A
+		Message: 		9831A830231A160B9847203341A5F30BF3E87A2A482AEEA6886315C92B5C4E4C
+		Hash of sig: 	46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F
+						</pre>
+                <br/>
+                <b>XMSS Signature Generation</b>
+                <table border="1">
+                  <tr class="header" bgcolor="#cccccc">
+                    <td valign="top">Identifier</td>
+                    <td valign="top">Cryptographic Algorithm Parameters</td>
+                    <td valign="top">Cryptographic Key Sizes</td>
+                    <td valign="top">List of Standards</td>
+                  </tr>
+                  <tr>
+                    <td valign="top">XMSS</td>
+                    <td valign="top">XMSS</td>
+                    <td valign="top">
+                      Private key size = [<b>selection:</b>
+                      192 bits with [<b>selection:</b>
+                      SHA256/192, SHAKE256/192], 
+									256 bits with [<b>selection:</b>
+                      <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256]], 
+									and tree height = [<b>selection:</b>
+                      10, 16, 20]
+                    </td>
+                    <td valign="top">
+                      <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8391 [XMSS]
+                      <p></p>
+                      <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]
+                    </td>
+                  </tr>
+                </table>
+                To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate digital signatures using XMSS, the evaluator
+						shall perform the XMSS Key Generation Test using the following input parameters.
+                <ul>
+                  <li>Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192, SHAKE256/192, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256]</li>
+                  <li>Tree height [10, 16, 20]</li>
+                </ul>
+                <br/>
+                <b>XMSS Key Generation Test</b>
+                For each supported combination of the above parameters, the evaluator shall generate 10
+						signatures. The evaluator shall verify the correctness of the implementation by comparing values
+						generated by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with those generated by a known-good implementation using the same
+						input parameters.
+              </div></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4>
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall<div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">
+                <b>Application Note 17 </b>
+              </p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should choose the algorithm implemented to perform verification of digital signatures. For the algorithm chosen, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should make the appropriate assignments/selections to specify the parameters that are implemented for that algorithm. In particular, if <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> is selected as one of the signature algorithms, the key size specified must match the selection for the curve used in the algorithm. If LMS or XMSS is selected, then <a href="#FCS_COP.1/XOF">FCS_COP.1/XOF</a> from Annex B must be included.</p>
+            </span></div></div></div>
         </div>
         
         <div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
@@ -1320,7 +1933,7 @@ The following sections list Common Criteria and technology terms used in this do
                   .
                   The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a>.
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-1-1-xof-1" data-counter-type="ct-Table" id="fcs-cop-1-1-xof-1">Table <span class="counter">3</span></span>: Allowed choices for <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-1-1-xof-1" data-counter-type="ct-Table" id="fcs-cop-1-1-xof-1">Table <span class="counter">6</span></span>: Allowed choices for <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a></caption>
                 <tr>
                   <th>Cryptographic Algorithm</th>
                   
@@ -1406,9 +2019,9 @@ The following sections list Common Criteria and technology terms used in this do
 	  .
       </i></b></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using a      [<b>selection</b><b>, choose one of</b>: <span class="selectable-content" id="fcs-rbg-3-1-1"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source</span>, <span class="selectable-content" id="fcs-rbg-3-1-2"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source</span>]  [<b>assignment</b>: 
-     <span class="assignable-content">name of entropy source</span>]     with      [<b>assignment</b>: 
-     <span class="assignable-content">number of bits</span>]     bits of min-entropy.<div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FCS_RBG.3.1"><a href="#FCS_RBG.3.1" class="abbr">FCS_RBG.3.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using a       [<b>selection</b><b>, choose one of</b>: <span class="selectable-content" id="fcs-rbg-3-1-1"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source</span>, <span class="selectable-content" id="fcs-rbg-3-1-2"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source</span>]  [<b>assignment</b>: 
+     <span class="assignable-content">name of entropy source</span>]      with       [<b>assignment</b>: 
+     <span class="assignable-content">number of bits</span>]      bits of min-entropy.<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses a single internal source of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> that is within the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> boundary. Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>.</p>
@@ -1422,7 +2035,7 @@ The following sections list Common Criteria and technology terms used in this do
 	  .
       </i></b></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using      [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-4-1-1">[<b>assignment</b>: 
+          <div class="element"><div class="reqid" id="FCS_RBG.4.1"><a href="#FCS_RBG.4.1" class="abbr">FCS_RBG.4.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to seed the <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> using       [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-4-1-1">[<b>assignment</b>: 
      <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> software-based entropy source(s)</span>, <span class="selectable-content" id="fcs-rbg-4-1-4">[<b>assignment</b>: 
      <span class="assignable-content">number</span>] <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> hardware-based entropy source(s)</span>].<div class="appnote"><span class="note-header">Application
       Note:
@@ -1435,9 +2048,9 @@ The following sections list Common Criteria and technology terms used in this do
 	  .
       </i></b></div>
           
-          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall     [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-1">hash</span>, <span class="selectable-content" id="fcs-rbg-5-1-2">concatenate and hash</span>, <span class="selectable-content" id="fcs-rbg-5-1-3"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span>, <span class="selectable-content" id="fcs-rbg-5-1-4">input into a linear feedback shift register</span>, <span class="selectable-content" id="fcs-rbg-5-1-5">[<b>assignment</b>: 
-     <span class="assignable-content">combining operation</span>]</span>]  [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-6">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> entropy source(s)</span>, <span class="selectable-content" id="fcs-rbg-5-1-7">input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface(s) for obtaining entropy</span>]     resulting in a minimum of      [<b>assignment</b>: 
-     <span class="assignable-content">number of bits</span>]     bits of min-entropy to create the entropy input into the derivation function as defined in      [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-9"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 18031:2011</span>, <span class="selectable-content" id="fcs-rbg-5-1-10"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A Revision 1</span>].<div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FCS_RBG.5.1"><a href="#FCS_RBG.5.1" class="abbr">FCS_RBG.5.1</a></div><div class="reqdesc"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall      [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-1">hash</span>, <span class="selectable-content" id="fcs-rbg-5-1-2">concatenate and hash</span>, <span class="selectable-content" id="fcs-rbg-5-1-3"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span>, <span class="selectable-content" id="fcs-rbg-5-1-4">input into a linear feedback shift register</span>, <span class="selectable-content" id="fcs-rbg-5-1-5">[<b>assignment</b>: 
+     <span class="assignable-content">combining operation</span>]</span>]  [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-6">output from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> entropy source(s)</span>, <span class="selectable-content" id="fcs-rbg-5-1-7">input from <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> interface(s) for obtaining entropy</span>]      resulting in a minimum of       [<b>assignment</b>: 
+     <span class="assignable-content">number of bits</span>]      bits of min-entropy to create the entropy input into the derivation function as defined in       [<b>selection</b>: <span class="selectable-content" id="fcs-rbg-5-1-9"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 18031:2011</span>, <span class="selectable-content" id="fcs-rbg-5-1-10"><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-90A Revision 1</span>].<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">This requirement is claimed when a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> combines two or more sources of entropy to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. Seeding a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr> is the same as initializing a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a <abbr class="dyn-abbr"><a href="#abbr_DRBG">DRBG</a></abbr>. </p>
@@ -1797,7 +2410,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no test activities for this component.<br/></div></div></div></div>
       
     <h3 id="obj-req-map" class="indexable" data-level="3">5.1.9 TOE Security Functional Requirements Rationale</h3><p>The following rationale provides justification for each security objective for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to meet and achieve the security objectives:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">4</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Objective</th><th>Addressed by</th><th>Rationale</th></tr></table></p>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to meet and achieve the security objectives:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">7</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Objective</th><th>Addressed by</th><th>Rationale</th></tr></table></p>
     
     <h2 class="indexable" data-level="2" id="SARs">5.2 Security Assurance Requirements</h2>
       <h3 class="indexable" data-level="3" id="adv">5.2.1 Class ADV: Development</h3>
@@ -2271,7 +2884,7 @@ The following sections list Common Criteria and technology terms used in this do
 	At that time, such a user should be considered an administrator.</td></tr>
 <tr><td><div id="Virtual_Machine">Virtual Machine (VM)</div></td><td>Blah Blah Blah</td></tr>
 </table></div>
-  <h1 id="acronyms" class="indexable" data-level="A">Appendix D -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">5</span></span>: Acronyms
+  <h1 id="acronyms" class="indexable" data-level="A">Appendix D -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">8</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_AES"><abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr></span></td><td><span id="long_abbr_AES">Advanced Encryption Standard</span></td></tr>
 <tr><td><span class="term" id="abbr_API"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></span></td><td><span id="long_abbr_API">Application Programming Interface</span></td></tr>
 <tr><td><span class="term" id="abbr_API"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></span></td><td><span id="long_abbr_API">Application Programming Interface</span></td></tr>
@@ -2349,7 +2962,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_VM"><abbr class="dyn-abbr"><a href="#abbr_VM">VM</a></abbr></span></td><td><span id="long_abbr_VM">Virtual Machine</span></td></tr>
 <tr><td><span class="term" id="abbr_XCCDF"><abbr class="dyn-abbr"><a href="#abbr_XCCDF">XCCDF</a></abbr></span></td><td><span id="long_abbr_XCCDF">eXtensible Configuration Checklist Description Format</span></td></tr>
 <tr><td><span class="term" id="abbr_XOR"><abbr class="dyn-abbr"><a href="#abbr_XOR">XOR</a></abbr></span></td><td><span id="long_abbr_XOR">Exclusive Or</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix E -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">6</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix E -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">9</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf">Part
                 1: Introduction and General Model</a>, CCMB-2017-04-001, Version 3.1 Revision 5,
               April 2017.</li>

@@ -2096,13 +2096,47 @@
         <!-- FIA_UIA_EXT.1 User Identification and Authentication -->
         <f-component cc-id="fia_uia_ext.1" id="fia-uia-ext-1" name="User Identification and Authentication">
           <f-element id="fia-uia-ext-1-1">
-            <title>The TOE shall</title>
+            <title><h:p style="text-align: left;">The TSF shall allow the following actions prior to requiring the non-TOE entity to initiate the identification and authentication process:</h:p><h:ul><h:li><h:p style="text-align: left;">Display the warning banner in accordance with FTA_TAB.1;</h:p></h:li><h:li><h:p style="text-align: left;"></h:p></h:li></h:ul> <selectables><selectable id="nd_fia_uia_ext.1.1_1">no other actions</selectable><selectable id="nd_fia_uia_ext.1.1_2">automated generation of cryptographic keys</selectable><selectable id="nd_fia_uia_ext.1.1_3"><assignable>list of services, actions performed by the TSF in response to non-TOE requests</assignable></selectable></selectables>.</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
               <Guidance/>
               <Tests/>
             </aactivity>
+          </f-element>
+          <f-element id="nd-fia-uia-ext-1-2">
+            <title>The TSF shall require each administrative user to be successfully identified and authenticated before allowing any other TSF-mediated actions on behalf of that administrative user.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 22</h:b>
+              </h:p>
+              <h:p style="text-align: left;">This requirement applies to Administrators and external IT entities of services available from the TOE directly and not services available by connecting through the TOE. While it should be the case that few or no services are available to external entities prior to identification and authentication, if there are some available (perhaps ICMP echo) these should be listed in the assignment statement; if automated generation of cryptographic keys is supported without administrator authentication, the option "automated generation of cryptographic keys" should be selected; otherwise, the option “no other actions” should be selected.</h:p>
+            </note>
+          </f-element>
+          <f-element id="fia-uia-ext-1-3">
+            <title>The TSF shall provide the following remote authentication mechanisms <selectables><selectable id="nd_fia_uia_ext.1.3_1">Web GUI password</selectable><selectable id="nd_fia_uia_ext.1.3_2">SSH password</selectable><selectable id="nd_fia_uia_ext.1.3_3">SSH public key</selectable><selectable id="nd_fia_uia_ext.1.3_4">X.509 certificate</selectable></selectables> and <selectables><selectable id="nd_fia_uia_ext.1.3_5">no other mechanism</selectable><selectable id="nd_fia_uia_ext.1.3_6">external authentication server</selectable></selectables>. The TSF shall provide the following local authentication mechanisms: <selectables><selectable id="nd_fia_uia_ext.1.3_7">none</selectable><selectable id="nd_fia_uia_ext.1.3_8">password-based</selectable><selectable id="nd_fia_uia_ext.1.3_9"><assignable>other authentication mechanism</assignable></selectable></selectables>.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 23 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">An authentication process consists of two basic steps: identification step (presenting the claimed attribute value (e.g., a user identifier) to the authentication subsystem); verification step (presenting or generating authentication information (e.g., a value signed with a private key) that acts as evidence to prove the binding between the attribute and that for which it is claimed). </h:p>
+              <h:p style="text-align: left;">Remote authentication is when a user associated with the Security Administrator role remotely communicates with the TOE for the purpose of security management over a cryptographic protocol specified in FTP_TRP.1/Admin. Local authentication mechanisms are defined as those that occur at a local administrative interface using a console. If no local authentication mechanism is supported by the TOE, the ST author should select "none" from the final selection. See Application Note 26 for examples of compliant local administrative interfaces. </h:p>
+              <h:p style="text-align: left;">Local administration is defined as administration using a dedicated physical interface that (from the TOE’s point of view) is directly connected to the device(s) the administrator interacts with and therefore falls under the physical protection (OE.PHYSICAL). Any administrator choice to extend a local console so it is remotely accessible (e.g., console server or remote KVM) is outside the scope of the NDcPP. The following are examples of compliant local administrative interfaces: </h:p>
+              <h:p style="text-align: left;">a. RS-232 terminal. </h:p>
+              <h:p style="text-align: left;">b. Peripherals (e.g., keyboard, monitor, mouse). </h:p>
+              <h:p style="text-align: left;">The TOE must support at least one authentication mechanism where the verification step is processed locally, as such “external authentication server” should not be the only available authentication method. </h:p>
+              <h:p style="text-align: left;">The ST author selects the authentication mechanisms necessary to support remote administration. If "Web GUI password" or "SSH password" is selected for remote authentication mechanism the ST author specifies an appropriate cryptographic protocol in FTP_TRP.1/Admin (e.g., "HTTPS" or "SSH") and includes FIA_AFL.1, FIA_PMG_EXT.1, FPT_APW_EXT.1 from Annex B. </h:p>
+              <h:p style="text-align: left;">If integration with an external X.500 Directory is supported and enabled, the "external authentication server" must be selected and an appropriate cryptographic protocol with each "authentication server" must be selected in FTP_ITC.1. Since the identity verification step is performed remotely, FIA_AFL.1, FIA_PMG_EXT.1, FPT_APW_EXT.1 requirements are not enforced by the TOE and therefore are not applicable to the “external authentication server” selection.</h:p>
+            </note>
+          </f-element>
+          <f-element id="nd-fia-uia-ext-1-4">
+            <title>The TSF shall authenticate any administrative user’s claimed identity according to each authentication mechanism specified in FIA_UIA_EXT.1.3.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 24 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">According to the application note for FMT_SMR.2, for distributed TOEs at least one TOE component has to support the authentication of Security Administrators according to FIA_UIA_EXT.1.3 and FIA_UIA_EXT.1.4 but not necessarily all TOE components. In case not all TOE components support this way of authentication for Security Administrators the TSS must describe how Security Administrators are authenticated and identified.</h:p>
+            </note>
           </f-element>
           <audit-event>
             <audit-event-descr>All use of identification and authentication mechanisms.</audit-event-descr>
@@ -2143,7 +2177,15 @@
         <!-- FMT_MOF.1/ManualUpdate Management of Security Functions Behaviour -->
         <f-component cc-id="fmt_mof.1" id="fmt-mof-1-manualupdate" name="Management of Security Functions Behaviour" iteration="ManualUpdate">
           <f-element id="fmt-mof-mu-1">
-            <title>The TOE shall</title>
+            <title>
+              <h:p style="text-align: left;">The TSF shall restrict the ability to <h:u>enable</h:u> the functions<h:i> to perform manual updates</h:i> to <h:i>Security Administrators</h:i>.</h:p>
+            </title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 25</h:b>
+              </h:p>
+              <h:p style="text-align: left;">FMT_MOF.1/ManualUpdate restricts the initiation of manual updates to Security Administrators.</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -2172,7 +2214,15 @@
         <!-- FMT_MTD.1/CoreData Management of TSF Data -->
         <f-component cc-id="fmt_mtd.1" id="fmt-mtd-1-coredata" name="Management of TSF Data" iteration="CoreData">
           <f-element id="fmt-mtd-cd-1">
-            <title>The TOE shall</title>
+            <title>
+              <h:p style="text-align: left;">The TSF shall restrict the ability to <h:u>manage</h:u> the <h:i>TSF data</h:i> to <h:i>Security Administrators</h:i>.</h:p>
+            </title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 26 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">The word ‘manage’ includes but is not limited to create, initialize, view, change default, modify, delete, clear, and append. This SFR includes also the resetting of administrative passwords by the Security Administrator. The identifier ‘CoreData’ has been added here to separate this iteration of FMT_MTD.1 from the optional iteration of FMT_MTD.1 defined in Annex A.4.2.1 (FMT_MTD.1/CryptoKeys).</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -2198,7 +2248,170 @@
         <!-- FMT_SMF.1 Specification of Management Functions -->
         <f-component cc-id="fmt_smf.1" id="fmt-smf-1" name="Specification of Management Functions">
           <f-element id="fmt-smf-1-1">
-            <title>The TOE shall</title>
+            <title>The TOE shallStatus Markers:<h:br/> <h:p style="text-align: left;">M = Mandatory</h:p><h:p style="text-align: left;">O = Optional</h:p><h:br/><management-function-set><manager cid="status">Status</manager>
+          <management-function id="mf-1">
+          <text><h:p style="text-align: left;">Ability to administer the TOE remotely</h:p></text>
+          <M ref="status"/>
+          <app-note><h:p style="text-align: left;">The TOE must provide functionality for remote administration. Local administration is optional. This cPP does not mandate a specific security management function to be available either through the local administration interface, the remote administration interface or both. Remote administrative sessions are specified in FTP_TRP.1/Admin.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-2">
+          <text>Ability to configure the access banner</text>
+          <M ref="status"/>
+          <app-note><h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-3">
+          <text><h:p style="text-align: left;">Ability to configure the remote session inactivity time before session termination</h:p></text>
+          <M ref="status"/>
+          <app-note><h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-4">
+          <text><h:p style="text-align: left;">Ability to update the TOE, and to verify the updates using <h:u>digital signature</h:u> capability prior to installing those updates</h:p></text>
+          <M ref="status"/>
+          <app-note><h:p style="text-align: left;">The option “Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates” includes the relevant management functions from FMT_MOF.1/ManualUpdate and FPT_TUD_EXT.1. Based on selections in FPT_TUD_EXT.1.2, FMT_MOF.1/AutoUpdate must be included if the option “Ability to enable or disable automatic checking for updates or automatic updates” is included in the ST.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-5">
+          <text>Ability to start and stop services</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection "Ability to start and stop services" should be included in the ST if the TOE supports starting and stopping services of the TOE. If this selection is included in the ST, FMT_MOF.1/Services must be claimed in the ST.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-6">
+          <text>Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size)</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection “Ability to configure local audit behaviour” includes the relevant management functions from FMT_MOF.1/Services and FMT_MOF.1/Functions, (for all of these SFRs that are included in the ST) and is intended to cover security relevant configuration options (if any) to the audit behaviour (like changes to the behaviour when the local audit storage space is full). The option "Ability to modify the behaviour of the transmission of audit data to an external IT entity" is intended to cover the management functionalities related to the transmission of local audit information to an external IT entity.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-7">
+          <text>Ability to modify the behaviour of the transmission of audit data to an external IT entity</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The option "Ability to modify the behaviour of the transmission of audit data to an external IT entity" is intended to cover the management functionalities related to the transmission of local audit information to an external IT entity.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-8">
+          <text>Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection "Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1" should be included in the ST if the TOE supports configuration of the list of TOE-provided services which are available before any entity is identified and authenticated. The term 'list' refers to the resulting list of available services as a result of the configuration activities. The configuration activity itself does not necessarily have to be modification of a list but could be any type of activation and deactivation procedure.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-9">
+          <text>Ability to manage the cryptographic keys</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection "Ability to manage the cryptographic keys" should be included in the ST if the TOE supports management of cryptographic keys (e.g., generation of cryptographic keys). If this selection is included in the ST, FMT_MTD.1/CryptoKeys must be claimed in the ST.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-10">
+          <text>Ability to configure the cryptographic functionality</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">For distributed TOEs, that implement a registration channel (as described in FCO_CPC_EXT.1.2), the ST author uses the selection “Ability to configure the cryptographic functionality” in this SFR, and its corresponding mapping in the TSS, to describe the configuration of any cryptographic aspects of the registration channel that can be modified by the operational environment in order to improve the channel security (reference the description of the content of Preparative Procedures in [SD, 3.4.1]).</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-11">
+          <text>Ability to configure thresholds for SSH rekeying</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection "Ability to configure thresholds for SSH rekeying" may only be selected if SSH is selected within FTP_ITC.1, FTP_TRP.1 or FPT_ITT.1. This only applies if the TOE claims conformance to the Functional Package for SSH and the rekey threshold is configurable.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-12">
+          <text>Ability to configure the lifetime for IPsec SAs</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection “Ability to configure lifetime for IPsec SAs” must be included in the ST if the TOE supports secure communication via IPsec and the FCS_IPSEC_EXT.1 requirements are included in the ST. The configuration of the lifetime for IPsec SAs needs to be in line with the selection in FCS_IPSEC_EXT.1.7.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-13">
+          <text>Ability to configure the list of supported (D)TLS ciphers</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection "Ability to configure the list of supported (D)TLS ciphers" must be included in the ST if the TOE implements TLS or DTLS and the supported ciphersuites are configurable. This only applies if the TOE claims conformance to the Functional Package for TLS, and only if such a configuration option exists.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-14">
+          <text>Ability to configure the interaction between TOE components</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">For distributed TOEs, the interaction between TOE components will be configurable (see FCO_CPC_EXT.1). Therefore, the ST author includes the selection "Ability to configure the interaction between TOE components" for distributed TOEs. A simple example would be the change of communication protocol according to FPT_ITT.1. Another example would be changing the management of a TOE component from direct remote administration to remote administration through another TOE component. A more complex use case would be if the realization of an SFR is achieved through two or more TOE components and the responsibilities between the two or more components could be modified.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-15">
+          <text>Ability to enable or disable automatic checking for updates or automatic updates</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">Based on selections in FPT_TUD_EXT.1.2, FMT_MOF.1/AutoUpdate must be included if the option “Ability to enable or disable automatic checking for updates or automatic updates” is included in the ST.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-16">
+          <text>Ability to re-enable an Administrator account</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">If the TOE offers the ability for a remote Administrator account to be disabled in line with FIA_AFL.1, then the ST author must select the option “Ability to re-enable an Administrator account” to allow the account to be re-enabled by a local Administrator.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-17">
+          <text>Ability to set the time which is used for time-stamps</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection “Ability to set the time which is used for time-stamps” should be included in the ST if the TOE allows the Administrator to set the time of the device which is then used in time stamps. This option should not be selected if the TOE does not allow manual time setting but only relies on synchronization with external time sources like NTP servers.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-18">
+          <text>Ability to configure NTP</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection “Ability to configure NTP” should be included in the ST if the TOE uses NTP for timestamp configuration. If selected, FCS_NTP_EXT.1 must be included in the ST as well.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-19">
+          <text>Ability to configure the reference identifier for the peer</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection “Ability to configure the reference identifier for the peer” should be included in the ST if the TOE allows the Administrator to specify the expected identity of a remote peer when establishing secure communications using a protocol included in the ST. For TOEs that support only IP address and FQDN identifier types, configuration of the reference identifier may be the same as configuration of the peer’s name for the purposes of connection.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-20">
+          <text>Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection “Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors" should be included in the ST if the TOE supports management and configuration of the TOE’s trust store. This means the TOE supports X.509v3 certificates for some security functions. This only applies if the TOE claims conformance to the Functional Package for X.509.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-21">
+          <text>Ability to generate Certificate Signing Request (CSR) and process CA certificate response</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The selection "Ability to generate Certificate Signing Request (CSR) and process CA certificate response" must be included in the ST if the TOE implements Certificate Request or Enrollment Request processes. This only applies if the TOE claims conformance to the Functional Package for X.509, and only when FIA_X509_EXT.3 from the functional package is claimed.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-22">
+          <text>Ability to administer the TOE locally</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The TOE must provide functionality for remote administration. Local administration is optional. This cPP does not mandate a specific security management function to be available either through the local administration interface, the remote administration interface or both. Remote administrative sessions are specified in FTP_TRP.1/Admin</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-23">
+          <text>Ability to configure the local session inactivity time before session termination or locking</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-24">
+          <text>Ability to configure the authentication failure parameters for FIA_AFL.1</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">This management function enables administrators to configure parameters related to authentication failure, such as the threshold for unsuccessful login attempts and the actions the TOE takes when that threshold is reached (e.g., account lockout, notification, or timed delays).</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-25">
+          <text>Ability to manage the trusted public keys database</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">If the TOE offers ability for a remote authorised IT entities or authorised remote Administrators to connect via an interface secured with SSH, then the ST author must select the option “Ability to manage the trusted public keys database” to account for management of public key authentication. It is acceptable for this management function to be implemented as part of general TOE management functionality or as a standalone management function.</h:p></app-note>
+          </management-function>
+        
+          <management-function id="mf-26">
+          <text>Ability to manage the public key or certificate used to validate the digital update</text>
+          <O ref="status"/>
+          <app-note><h:p style="text-align: left;">If the TOE offers the ability to modify the public key used to validate the digital update, then the ST author must select the option “Ability to manage the public key or certificate used to validate the digital update”. There is no requirement to implement this as a standalone management function, it is acceptable for this management function to be implemented as part of the trusted update (FPT_TUD_EXT.1) functionality.</h:p></app-note>
+          </management-function>
+        </management-function-set></title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 27</h:b>
+              </h:p>
+              <h:p style="text-align: left;">If the TOE offers the ability for the Security Administrator to configure the audit behaviour, configure the services available prior to identification or authentication, or if any of the cryptographic functionality on the TOE can be configured, or if the ST is describing a distributed TOE, then the ST author makes the appropriate choice or choices in the second selection, otherwise select the option "No other capabilities" (in the latter case the selection may alternatively be left blank in the ST). ["No other capabilities" equates to no optional management functions included in the ST.]</h:p>
+              <h:p style="text-align: left;">With respect to FAU_GEN.1.1, FMT_SMF.1 and FMT_MOF.1/Services the term ‘services’ refers to trusted path and trusted channel communications, on demand self-tests, trusted update and Administrator sessions (that exist under the trusted path) (e.g., netconf).</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -2213,13 +2426,26 @@
         <!-- FMT_SMR.2 Restrictions on security roles -->
         <f-component cc-id="fmt_smr.2" id="fmt-smr-2" name="Restrictions on security roles">
           <f-element id="fmt-smr-2-1">
-            <title>The TOE shall</title>
+            <title>The TSF shall maintain the roles:<h:ul><h:li><h:p style="text-align: left;"><h:i>Security Administrator.</h:i></h:p></h:li></h:ul></title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
               <Guidance/>
               <Tests/>
             </aactivity>
+          </f-element>
+          <f-element id="nd-fmt-smr-2-2">
+            <title>The TSF shall be able to associate users with roles.</title>
+          </f-element>
+          <f-element id="nd-fmt-smr-2-3">
+            <title>The TSF shall ensure that the conditions<h:ul><h:li><h:p style="text-align: left;"><h:i>The Security Administrator role shall be able to administer the TOE remotely</h:i></h:p></h:li></h:ul>are satisfied.</title>
+            <note role="application">
+              <h:p style="text-align: left;">Application Note 28 </h:p>
+              <h:p style="text-align: left;">FMT_SMR.2.3 requires that a Security Administrator be able to administer the TOE through a remote mechanism. See Application Note 23 for the definition of remote administration.</h:p>
+              <h:p style="text-align: left;">For distributed TOEs, not every TOE component is required to implement its own user management to fulfil this SFR. At least one component has to support authentication and identification of Security Administrators according to FIA_UIA_EXT.1. For the other TOE components authentication as Security Administrator can be realized through the use of a trusted channel (either according to FTP_ITC.1 or FPT_ITT.1) from a component that supports the authentication of Security Administrators according to FIA_UIA_EXT.1. The identification of users according to FIA_UIA_EXT.1.2 and the association of users with roles according to FMT_SMR.2.2 is done through the components that support the authentication of Security Administrators according to FIA_UIA_EXT.1.4. TOE components that authenticate Security Administrators through the use of a trusted channel are not required to support local administration of the component. </h:p>
+              <h:p style="text-align: left;">A single user associated with the Security Administrator role does not necessarily have to be able to perform all security management functions defined in FMT_SMF.1 and does not necessarily have to able to perform local administration. All users associated with the Security Administrator role together need to be able to perform all security management functions defined in FMT_SMF.1 (mandatory and selected ones) and need to be able to perform remote administration. </h:p>
+              <h:p style="text-align: left;">This implies that a user that can perform only a single security management function defined in FMT_SMF.1 needs to be regarded as Security Administrator of the TOE.</h:p>
+            </note>
           </f-element>
           <audit-event/>
         </f-component>

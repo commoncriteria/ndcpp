@@ -18,6 +18,7 @@ output/ndcpp-release-linkable.html: CCDB
 output/ndcpp-release-linkable.html: CSR
 output/ndcpp-release-linkable.html: DEK
 output/ndcpp-release-linkable.html: DRBGs
+output/ndcpp-release-linkable.html: DTLSC
 output/ndcpp-release-linkable.html: ERB
 output/ndcpp-release-linkable.html: FFC
 output/ndcpp-release-linkable.html: FQDN
@@ -26,6 +27,7 @@ output/ndcpp-release-linkable.html: HCI
 output/ndcpp-release-linkable.html: ICMP
 output/ndcpp-release-linkable.html: KVM
 output/ndcpp-release-linkable.html: LMS
+output/ndcpp-release-linkable.html: MACsec
 output/ndcpp-release-linkable.html: MGF1
 output/ndcpp-release-linkable.html: NDcPP
 output/ndcpp-release-linkable.html: PINs
@@ -46,6 +48,7 @@ output/ndcpp-release-linkable.html: Winternitz
 output/ndcpp-release-linkable.html: XMSS
 output/ndcpp-release-linkable.html: authorised
 output/ndcpp-release-linkable.html: behaviour
+output/ndcpp-release-linkable.html: enablement
 output/ndcpp-release-linkable.html: endianness
 output/ndcpp-release-linkable.html: enquiries
 output/ndcpp-release-linkable.html: ffdhe
@@ -57,6 +60,7 @@ output/ndcpp-release-linkable.html: invocable
 output/ndcpp-release-linkable.html: lifecycle
 output/ndcpp-release-linkable.html: netconf
 output/ndcpp-release-linkable.html: pNDs
+output/ndcpp-release-linkable.html: recognises
 output/ndcpp-release-linkable.html: rekeying
 output/ndcpp-release-linkable.html: sLen
 output/ndcpp-release-linkable.html: sk
@@ -64,6 +68,7 @@ output/ndcpp-release-linkable.html: synchronise
 output/ndcpp-release-linkable.html: udpates
 output/ndcpp-release-linkable.html: unauthorised
 output/ndcpp-release-linkable.html: uninstantiating
+output/ndcpp-release-linkable.html: utilise
 output/ndcpp-release-linkable.html: v1
 output/ndcpp-release-linkable.html: v2
 output/ndcpp-release-linkable.html: vND
@@ -91,6 +96,7 @@ output/ndcpp-release.html: CSR
 output/ndcpp-release.html: CoreData’
 output/ndcpp-release.html: DEK
 output/ndcpp-release.html: DRBGs
+output/ndcpp-release.html: DTLSC
 output/ndcpp-release.html: ERB
 output/ndcpp-release.html: FFC
 output/ndcpp-release.html: FQDN
@@ -99,6 +105,7 @@ output/ndcpp-release.html: HCI
 output/ndcpp-release.html: ICMP
 output/ndcpp-release.html: KVM
 output/ndcpp-release.html: LMS
+output/ndcpp-release.html: MACsec
 output/ndcpp-release.html: MGF1
 output/ndcpp-release.html: NDcPP
 output/ndcpp-release.html: PINs
@@ -121,6 +128,9 @@ output/ndcpp-release.html: XMSS
 output/ndcpp-release.html: actions’
 output/ndcpp-release.html: authorised
 output/ndcpp-release.html: behaviour
+output/ndcpp-release.html: channel’
+output/ndcpp-release.html: communication’
+output/ndcpp-release.html: enablement
 output/ndcpp-release.html: endianness
 output/ndcpp-release.html: enquiries
 output/ndcpp-release.html: entity’
@@ -135,8 +145,10 @@ output/ndcpp-release.html: lifecycle
 output/ndcpp-release.html: locally’
 output/ndcpp-release.html: local’
 output/ndcpp-release.html: manage’
+output/ndcpp-release.html: mechanisms’
 output/ndcpp-release.html: netconf
 output/ndcpp-release.html: pNDs
+output/ndcpp-release.html: recognises
 output/ndcpp-release.html: rekeying
 output/ndcpp-release.html: sLen
 output/ndcpp-release.html: satisfied’
@@ -148,11 +160,13 @@ output/ndcpp-release.html: udpates
 output/ndcpp-release.html: unauthorised
 output/ndcpp-release.html: uninstantiating
 output/ndcpp-release.html: updates’
+output/ndcpp-release.html: utilise
 output/ndcpp-release.html: v1
 output/ndcpp-release.html: v2
 output/ndcpp-release.html: vND
 output/ndcpp-release.html: vNDs
 output/ndcpp-release.html: virtualized
+output/ndcpp-release.html: ’
 output/ndcpp.html: 0’s
 output/ndcpp.html: 10C
 output/ndcpp.html: 11C
@@ -175,6 +189,7 @@ output/ndcpp.html: CSR
 output/ndcpp.html: CoreData’
 output/ndcpp.html: DEK
 output/ndcpp.html: DRBGs
+output/ndcpp.html: DTLSC
 output/ndcpp.html: ERB
 output/ndcpp.html: FFC
 output/ndcpp.html: FQDN
@@ -183,6 +198,7 @@ output/ndcpp.html: HCI
 output/ndcpp.html: ICMP
 output/ndcpp.html: KVM
 output/ndcpp.html: LMS
+output/ndcpp.html: MACsec
 output/ndcpp.html: MGF1
 output/ndcpp.html: NDcPP
 output/ndcpp.html: PINs
@@ -205,6 +221,9 @@ output/ndcpp.html: XMSS
 output/ndcpp.html: actions’
 output/ndcpp.html: authorised
 output/ndcpp.html: behaviour
+output/ndcpp.html: channel’
+output/ndcpp.html: communication’
+output/ndcpp.html: enablement
 output/ndcpp.html: endianness
 output/ndcpp.html: entity’
 output/ndcpp.html: ffdhe
@@ -218,8 +237,10 @@ output/ndcpp.html: lifecycle
 output/ndcpp.html: locally’
 output/ndcpp.html: local’
 output/ndcpp.html: manage’
+output/ndcpp.html: mechanisms’
 output/ndcpp.html: netconf
 output/ndcpp.html: pNDs
+output/ndcpp.html: recognises
 output/ndcpp.html: rekeying
 output/ndcpp.html: sLen
 output/ndcpp.html: satisfied’
@@ -231,8 +252,10 @@ output/ndcpp.html: udpates
 output/ndcpp.html: unauthorised
 output/ndcpp.html: uninstantiating
 output/ndcpp.html: updates’
+output/ndcpp.html: utilise
 output/ndcpp.html: v1
 output/ndcpp.html: v2
 output/ndcpp.html: vND
 output/ndcpp.html: vNDs
 output/ndcpp.html: virtualized
+output/ndcpp.html: ’

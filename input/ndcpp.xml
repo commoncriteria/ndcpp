@@ -297,13 +297,18 @@
         <!-- FAU_STG.2 Protected Audit Data Storage -->
         <f-component cc-id="fau_stg.2" id="fau-stg-2" name="Protected Audit Data Storage" status="optional">
           <f-element id="fau-stg-2-1">
-            <title>The TOE shall</title>
+            <title>The TSF shall protect the stored audit data in the audit trail from unauthorised deletion.</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
               <Guidance/>
               <Tests/>
             </aactivity>
+          </f-element>
+          <f-element id="nd-fau-stg-2-2">
+            <title>
+              <h:p style="text-align: left;">The TSF shall be able to <h:u>prevent</h:u> unauthorised modifications to the stored audit data in the audit trail.</h:p>
+            </title>
           </f-element>
           <audit-event/>
         </f-component>
@@ -348,10 +353,10 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-3">
-            <title>The TSF shall maintain a        <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables>       of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
+            <title>The TSF shall maintain a          <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables>         of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
           </f-element>
           <f-element id="fau-stg-ext-1-4">
-            <title>The TSF shall be able to store       <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables>       audit records locally with a minimum storage size of       <assignable>number of records and/or file/buffer size(s)</assignable></title>
+            <title>The TSF shall be able to store         <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables>         audit records locally with a minimum storage size of         <assignable>number of records and/or file/buffer size(s)</assignable></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 8</h:b>
@@ -360,7 +365,7 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-5">
-            <title>The TSF shall       <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables>       when the local storage space for audit data is full.</title>
+            <title>The TSF shall         <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables>         when the local storage space for audit data is full.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 9 </h:b>
@@ -370,7 +375,7 @@
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-6">
-            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records       <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
+            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records         <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 10 </h:b>
@@ -386,7 +391,14 @@
         <!-- FAU_STG_EXT.2 Counting Lost Audit Data -->
         <f-component cc-id="fau_stg_ext.2" id="fau-stg-ext-2" name="Counting Lost Audit Data" status="optional">
           <f-element id="fau-stg-ext-2-1">
-            <title>The TOE shall</title>
+            <title>The TSF shall provide information about the number of  <selectables><selectable id="nd_fau_stg_ext.2.1_1">dropped</selectable><selectable id="nd_fau_stg_ext.2.1_2">overwritten</selectable><selectable id="nd_fau_stg_ext.2.1_3"><assignable>other information</assignable></selectable></selectables>  audit records in the case where the local storage has been filled and the TSF takes one of the actions defined in FAU_STG_EXT.1.5.</title>
+            <note role="application">
+              <h:p style="text-align: left;">Application Note 41</h:p>
+              <h:p style="text-align: left;">This option should be chosen if the TOE supports this functionality. </h:p>
+              <h:p style="text-align: left;">In case the local storage for audit records is cleared by the Administrator, the counters associated with the selection in the SFR should be reset to their initial value (most likely to 0). The guidance documentation should contain a warning for the Administrator about the loss of audit data when he clears the local storage for audit records. </h:p>
+              <h:p style="text-align: left;">For distributed TOEs, each component that implements counting of lost audit data has to provide a mechanism for Administrator access to, and management of, this information. </h:p>
+              <h:p style="text-align: left;">If FAU_STG_EXT.2 is added to the ST, the ST has to make clear any situations in which lost audit data is not counted.</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -399,7 +411,17 @@
         <!-- FAU_STG_EXT.3 Action in Case of Possible Audit Data Loss -->
         <f-component cc-id="fau_stg_ext.3" id="fau-stg-ext-3" name="Action in Case of Possible Audit Data Loss" status="optional">
           <f-element id="fau-stg-ext-3-1">
-            <title>The TOE shall</title>
+            <title>The TSF shall generate a warning to inform the Administrator before the audit trail exceeds the local audit trail storage capacity.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 42 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">This option should be chosen if the TOE generates a warning to inform the Administrator before the local storage space for audit data is used up. This SFR only applies to local storage of audit information. </h:p>
+              <h:p style="text-align: left;">It has to be ensured that the warning message required by FAU_STG_EXT.3.1 can be communicated to the Administrator. The communication should be done via the audit log itself because it cannot be guaranteed that an administrative session is active at the time the event occurs. </h:p>
+              <h:p style="text-align: left;">The warning should inform the Administrator when the local space to store audit data is used up and/or the TOE will lose audit data due to insufficient local space. </h:p>
+              <h:p style="text-align: left;">For distributed TOEs, that implement displaying a warning when local storage space for audit data is exhausted, it has to be described which TOE components support this feature (not necessarily all TOE components have to support this feature if selected for the overall TOE). Each component that supports this feature must either generate a warning itself or through another component. </h:p>
+              <h:p style="text-align: left;">If FAU_STG_EXT.3 is added to the ST, the ST has to make clear any situations in which audit records might be “invisibly lost”.</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -407,7 +429,9 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Low storage space for audit data.</audit-event-descr>
+          </audit-event>
         </f-component>
         <!-- FAU_STG_EXT.4 Protected Local Audit Event Storage for Distributed TOEs -->
         <f-component cc-id="fau_stg_ext.4" id="fau-stg-ext-4" name="Protected Local Audit Event Storage for Distributed TOEs" status="sel-based">
@@ -443,7 +467,7 @@
         <!-- FCO_CPC_EXT.1 Component Registration Channel Definition -->
         <f-component cc-id="fco_cpc_ext.1" id="fco-cpc-ext-1" name="Component Registration Channel Definition" status="optional">
           <f-element id="fco-cpc-ext-1-1">
-            <title>The TOE shall</title>
+            <title>The TSF shall require a Security Administrator to enable communications between any pair of TOE components before such communication can take place.</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -452,12 +476,31 @@
             </aactivity>
           </f-element>
           <f-element id="fco-cpc-ext-1-2">
-            <title>The TOE shall</title>
+            <title>The TSF shall implement a registration process in which components establish and use a communications channel that uses <assignable>list of different types of channel given in the form of a selection</assignable> for at least <assignable>type of data for which the channel must be used</assignable>.</title>
           </f-element>
           <f-element id="fco-cpc-ext-1-3">
-            <title>The TOE shall</title>
+            <title>The TSF shall enable a Security Administrator to disable communications between any pair of TOE components.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 46</h:b>
+              </h:p>
+              <h:p style="text-align: left;">This SFR is only applicable if the TOE is distributed and therefore has multiple components that need to communicate via an internal TSF channel. When creating the TSF from the initial pair of components, either of these components may be identified as the TSF for the purposes of satisfying the meaning of ‘TSF’ in this SFR. </h:p>
+              <h:p style="text-align: left;">The intention of this requirement is to ensure that there is a registration process that includes a positive enablement step by an Administrator before components joining a distributed TOE can communicate with the other components of the TOE and before the new component can act as part of the TSF. The registration process may itself involve communication with the joining component: many Network Devices use a bespoke process for this, and the security requirements for the ‘registration communication’ are then defined in FCO_CPC_EXT.1.2. Use of this ‘registration communication’ channel is not deemed inconsistent with the requirement of FCO_CPC_EXT.1.1 (i.e., the registration channel can be used before the enablement step, but only in order to complete the registration process). </h:p>
+              <h:p style="text-align: left;">The channel selection (for the registration channel) in FCO_CPC_EXT.1.2 is essentially a choice between the use of a normal secure channel that is equivalent to a channel used to communicate with external IT entities (FTP_ITC.1) or existing TOE components (FPT_ITT.1), or else a separate type of channel that is specific to registration (FTP_TRP.1/Join). If the TOE does not require a communications channel for registration (e.g., because the registration is achieved entirely by configuration actions by an Administrator at each of the components) then the main selection in FCO_CPC_EXT.1.2 is completed with the ‘No channel’ option.</h:p>
+              <h:p style="text-align: left;">If the ST author selects the FTP_ITC.1/FPT_ITT.1 channel type in the main selection in FCO_CPC_EXT.1.2 then the TSS identifies the relevant SFR iteration that specifies the channel used. If the ST author selects the FTP_TRP.1/Join channel type, then the TOE Summary Specification (possibly with support from the operational guidance) describes details of the channel and the mechanisms that it uses (and describes how the registration process ensures that the channel can only be used by the intended joiner and gatekeeper). Note: The FTP_TRP.1/Join channel type may require support from security measures in the operational environment (see the definition of FTP_TRP.1/Join for details). </h:p>
+              <h:p style="text-align: left;">If the ST author selects the FTP_ITC.1/FPT_ITT.1 channel type in the main selection in FCO_CPC_EXT.1.2 then the ST identifies the registration channel as a separate iteration of FTP_ITC.1 or FPT_ITT.1 and gives the iteration identifier (e.g., “FPT_ITT.1/Join”) in an ST Application Note for FCO_CPC_EXT.1. </h:p>
+              <h:p style="text-align: left;">Note: The channel set up and used for registration may be adopted as a continuing internal communication channel (i.e., between different TOE components) provided that the channel meets the requirements of FTP_ITC.1 or FPT_ITT.1. Otherwise, the registration channel is closed after use, and a separate channel is used for the internal communications. </h:p>
+              <h:p style="text-align: left;">Specific requirements for Preparative Procedures relating to FCO_CPC_EXT.1 are defined in the Evaluation Activities in [SD].</h:p>
+            </note>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Enabling communications between a pair of components.</audit-event-descr>
+            <audit-event-info>Identities of the endpoint pairs enabled.</audit-event-info>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Disabling communications between a pair of components.</audit-event-descr>
+            <audit-event-info>Identities of the endpoint pairs disabled.</audit-event-info>
+          </audit-event>
         </f-component>
       </section>
       <!-- 5.1.3 Cryptographic Support (FCS) -->
@@ -558,7 +601,15 @@
         <!-- FCS_CKM.2 Cryptographic Key Distribution -->
         <f-component cc-id="fcs_ckm.2" id="fcs-ckm-2" name="Cryptographic Key Distribution" status="optional">
           <f-element id="fcs-ckm-2-1">
-            <title>The TSF shall</title>
+            <title><h:p style="text-align: left;">The TSF shall <h:b>perform</h:b> cryptographic <h:b>key establishment</h:b> in accordance with a specified cryptographic key <h:b>establishment</h:b> method:</h:p> <selectables><selectable id="nd_fcs_ckm.2.1_1">key encapsulation</selectable><selectable id="nd_fcs_ckm.2.1_2">key wrapping</selectable><selectable id="nd_fcs_ckm.2.1_3">encrypted channels</selectable></selectables>  that meets the following: none.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 43 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">This requirement specifies key transport schemes. For key agreement see FCS_CKM_EXT.7. Key transport schemes refer to cases in which one party has a key to share with another party. Key encapsulation is used when ML-KEM is used as the method of key establishment. Key wrapping and encrypted channels are used in support of wireless LAN communications. Key wrapping is also used in support of MACsec. </h:p>
+              <h:p style="text-align: left;">If “key encapsulation” is selected, FCS_COP.1/KeyEncap from Annex B must be claimed, which specifies the relevant list of standards. </h:p>
+              <h:p style="text-align: left;">If “key wrapping” is selected, FCS_COP.1/KeyWrap from Annex B must be claimed, which specifies the relevant list of standards.</h:p>
+            </note>
           </f-element>
         </f-component>
         <!-- FCS_CKM.6 Timing and Event of Cryptographic Key Destruction -->
@@ -745,7 +796,7 @@
         <!-- FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm) -->
         <f-component cc-id="fcs_cop.1" id="fcs-cop-1-hash" name="Cryptographic Operation (Hash Algorithm)" iteration="Hash">
           <f-element id="fcs-cop-ha-1">
-            <title><h:p style="text-align: left;">The TSF shall perform <h:i>cryptographic hashing</h:i> in accordance with a specified cryptographic algorithm</h:p> <selectables><selectable id="nd_fcs_cop.1.1_HASH_1">SHA-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_2">SHA-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_3">SHA-512</selectable><selectable id="nd_fcs_cop.1.1_HASH_4">SHA3-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_5">SHA3-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_6">SHA3-512</selectable></selectables>   that meets the following:   <selectables><selectable id="nd_fcs_cop.1.1_HASH_7">ISO/IEC 10118-3:2018 [SHA, SHA3]</selectable><selectable id="nd_fcs_cop.1.1_HASH_8">FIPS PUB 180-4 [SHA]</selectable><selectable id="nd_fcs_cop.1.1_HASH_9">FIPS PUB 202 [SHA3]</selectable></selectables>.</title>
+            <title><h:p style="text-align: left;">The TSF shall perform <h:i>cryptographic hashing</h:i> in accordance with a specified cryptographic algorithm</h:p> <selectables><selectable id="nd_fcs_cop.1.1_HASH_1">SHA-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_2">SHA-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_3">SHA-512</selectable><selectable id="nd_fcs_cop.1.1_HASH_4">SHA3-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_5">SHA3-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_6">SHA3-512</selectable></selectables>     that meets the following:     <selectables><selectable id="nd_fcs_cop.1.1_HASH_7">ISO/IEC 10118-3:2018 [SHA, SHA3]</selectable><selectable id="nd_fcs_cop.1.1_HASH_8">FIPS PUB 180-4 [SHA]</selectable><selectable id="nd_fcs_cop.1.1_HASH_9">FIPS PUB 202 [SHA3]</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 18 </h:b>
@@ -1980,7 +2031,7 @@
             </aactivity>
           </f-element>
           <f-element id="nd-fcs-rbg-1-2">
-            <title>The TSF shall use a  <selectables><selectable id="nd-fcs-rbg-1-2-comp-1">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-2-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd_fcs_rbg.1.2_3">TSF interface for seeding</selectable></selectables>  for initialized seeding.</title>
+            <title>The TSF shall use a    <selectables><selectable id="nd-fcs-rbg-1-2-comp-1">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-2-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd_fcs_rbg.1.2_3">TSF interface for seeding</selectable></selectables>    for initialized seeding.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 20 </h:b>
@@ -1992,7 +2043,7 @@
             </note>
           </f-element>
           <f-element id="nd-fcs-rbg-1-3">
-            <title>The TSF shall update the DRBG state by  <selectables><selectable id="nd_fcs_rbg.1.3_1">reseeding</selectable><selectable id="nd_fcs_rbg.1.3_2">uninstantiating and re-instantiating</selectable></selectables>  using a  <selectables><selectable id="nd-fcs-rbg-1-3-comp-1">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-3">TSF interface for obtaining entropy <assignable>name of the interface</assignable></selectable></selectables>  in the following situations:  <selectables><selectable id="nd_fcs_rbg.1.3_6">never</selectable><selectable id="nd_fcs_rbg.1.3_7">on demand</selectable><selectable id="nd-fcs-rbg-1-3-comp-4">on the condition: <assignable>condition</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-5">after <assignable>time</assignable></selectable></selectables>  in accordance with  <assignable>list of standards</assignable>.</title>
+            <title>The TSF shall update the DRBG state by    <selectables><selectable id="nd_fcs_rbg.1.3_1">reseeding</selectable><selectable id="nd_fcs_rbg.1.3_2">uninstantiating and re-instantiating</selectable></selectables>    using a    <selectables><selectable id="nd-fcs-rbg-1-3-comp-1">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-3">TSF interface for obtaining entropy <assignable>name of the interface</assignable></selectable></selectables>    in the following situations:    <selectables><selectable id="nd_fcs_rbg.1.3_6">never</selectable><selectable id="nd_fcs_rbg.1.3_7">on demand</selectable><selectable id="nd-fcs-rbg-1-3-comp-4">on the condition: <assignable>condition</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-5">after <assignable>time</assignable></selectable></selectables>    in accordance with    <assignable>list of standards</assignable>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 21 </h:b>
@@ -2015,7 +2066,7 @@
         <f-component cc-id="fcs_rbg.3" id="fcs-rbg-3" name="Random Bit Generation (Internal Seeding - Single Source)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-3-1">
-            <title>The TSF shall be able to seed the DRBG using a         <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>        with         <assignable>number of bits</assignable>        bits of min-entropy.</title>
+            <title>The TSF shall be able to seed the DRBG using a           <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>          with           <assignable>number of bits</assignable>          bits of min-entropy.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses a single internal source of entropy to initialize or reseed a DRBG that is within the TOE boundary. Seeding a DRBG is the same as initializing a DRBG.</h:p>
               <h:p style="text-align: left;">Hardware-based noise sources are entropy sources whose primary function is noise generation, such as ring oscillators, diodes, and thermal noise. While a TOE may use software to collect the noise from these hardware sources, these are not software-based. </h:p>
@@ -2028,7 +2079,7 @@
         <f-component cc-id="fcs_rbg.4" id="fcs-rbg-4" name="Random Bit Generation (Internal Seeding - Multiple Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-4-1">
-            <title>The TSF shall be able to seed the DRBG using         <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
+            <title>The TSF shall be able to seed the DRBG using           <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses two or more internal sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. FCS_RBG.5 defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</h:p>
             </note>
@@ -2038,7 +2089,7 @@
         <f-component cc-id="fcs_rbg.5" id="fcs-rbg-5" name="Random Bit Generation (Combining Entropy Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-5-1">
-            <title>TSF shall        <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>        resulting in a minimum of         <assignable>number of bits</assignable>        bits of min-entropy to create the entropy input into the derivation function as defined in         <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
+            <title>TSF shall          <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>          resulting in a minimum of           <assignable>number of bits</assignable>          bits of min-entropy to create the entropy input into the derivation function as defined in           <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">This requirement is claimed when a TOE combines two or more sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. The ST author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a DRBG. </h:p>
               <h:p style="text-align: left;">One can apply NIST SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply NIST SP 800-90B (or AIS-31) statistical tests against external noise sources since the TOE is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the TSS may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the DRBG.</h:p>
@@ -2114,7 +2165,7 @@
             </note>
           </f-element>
           <f-element id="fia-uia-ext-1-3">
-            <title>The TSF shall provide the following remote authentication mechanisms  <selectables><selectable id="nd_fia_uia_ext.1.3_1">Web GUI password</selectable><selectable id="nd_fia_uia_ext.1.3_2">SSH password</selectable><selectable id="nd_fia_uia_ext.1.3_3">SSH public key</selectable><selectable id="nd_fia_uia_ext.1.3_4">X.509 certificate</selectable></selectables>  and  <selectables><selectable id="nd_fia_uia_ext.1.3_5">no other mechanism</selectable><selectable id="nd_fia_uia_ext.1.3_6">external authentication server</selectable></selectables>. The TSF shall provide the following local authentication mechanisms:  <selectables><selectable id="nd_fia_uia_ext.1.3_7">none</selectable><selectable id="nd_fia_uia_ext.1.3_8">password-based</selectable><selectable id="nd_fia_uia_ext.1.3_9"><assignable>other authentication mechanism</assignable></selectable></selectables>.</title>
+            <title>The TSF shall provide the following remote authentication mechanisms    <selectables><selectable id="nd_fia_uia_ext.1.3_1">Web GUI password</selectable><selectable id="nd_fia_uia_ext.1.3_2">SSH password</selectable><selectable id="nd_fia_uia_ext.1.3_3">SSH public key</selectable><selectable id="nd_fia_uia_ext.1.3_4">X.509 certificate</selectable></selectables>    and    <selectables><selectable id="nd_fia_uia_ext.1.3_5">no other mechanism</selectable><selectable id="nd_fia_uia_ext.1.3_6">external authentication server</selectable></selectables>. The TSF shall provide the following local authentication mechanisms:    <selectables><selectable id="nd_fia_uia_ext.1.3_7">none</selectable><selectable id="nd_fia_uia_ext.1.3_8">password-based</selectable><selectable id="nd_fia_uia_ext.1.3_9"><assignable>other authentication mechanism</assignable></selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 23 </h:b>
@@ -2468,7 +2519,17 @@
         <!-- FPT_ITT.1 Basic internal TSF data transfer protection (Refinement) -->
         <f-component cc-id="fpt_itt.1" id="fpt-itt-1" name="Basic internal TSF data transfer protection (Refinement)" status="optional">
           <f-element id="fpt-itt-1-1">
-            <title>The TOE shall</title>
+            <title><h:p style="text-align: left;">The TSF shall protect TSF data from <h:u>disclosure </h:u><h:b><h:u>and detect its modification</h:u></h:b> when it is transmitted between separate parts of the TOE <h:b>through the use of</h:b></h:p> <selectables><selectable id="nd_fpt_itt.1.1_1">IPsec</selectable><selectable id="nd_fpt_itt.1.1_2">SSH as defined in the Functional Package for SSH</selectable><selectable id="nd_fpt_itt.1.1_3">TLS as defined in the Functional Package for TLS</selectable><selectable id="nd_fpt_itt.1.1_4">DTLS as defined in the Functional Package for TLS</selectable><selectable id="nd_fpt_itt.1.1_5">HTTPS</selectable></selectables>.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 44 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">This requirement is only applicable to distributed TOEs and ensures that all communications between components of the distributed TOE are protected through the use of an encrypted communications channel. The data passed in this trusted communication channel are encrypted as defined by the protocol chosen in the selection. The ST author should identify the channels and protocols used by each pair of communicating components in a distributed TOE, iterating this SFR as appropriate. </h:p>
+              <h:p style="text-align: left;">This channel may also be used as the registration channel for the registration process, as described in Section 3.3 and FCO_CPC_EXT.1.2. </h:p>
+              <h:p style="text-align: left;">If "TLS" or "DTLS" is selected, then the TSF is validated against the applicable requirements of the Functional Package for TLS. Additionally, the reference identifier established for the server (FCS_DTLSC_EXT.1.5 or FCS_TLSC_EXT.1.5 in the Functional Package for TLS) may be established through a “gatekeeper” discovery process. The TSS should describe the discovery process and highlight how the reference identifier is supplied to the “joining” component. </h:p>
+              <h:p style="text-align: left;">If "SSH" is selected, then the TSF is validated against the applicable requirements of the Functional Package for SSH. </h:p>
+              <h:p style="text-align: left;">See Section B.4.1 for additional requirements.</h:p>
+            </note>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -2476,7 +2537,18 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <audit-event>
+            <audit-event-descr>Initiation of the trusted channel.</audit-event-descr>
+            <audit-event-info>Identification of the initiator and target of failed trusted channels establishment attempt.</audit-event-info>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Termination of the trusted channel.</audit-event-descr>
+            <audit-event-info>Identification of the initiator and target of failed trusted channels establishment attempt.</audit-event-info>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Failure of the trusted channel functions.</audit-event-descr>
+            <audit-event-info>Identification of the initiator and target of failed trusted channels establishment attempt.</audit-event-info>
+          </audit-event>
         </f-component>
         <!-- FPT_SKP_EXT.1 Protection of TSF Data (for reading of all pre-shared, symmetric and private keys) -->
         <f-component cc-id="fpt_skp_ext.1" id="fpt-skp-ext-1" name="Protection of TSF Data (for reading of all pre-shared, symmetric and private keys)">
@@ -2506,7 +2578,7 @@
             </aactivity>
           </f-element>
           <f-element id="nd-fpt-stm-ext-1-2">
-            <title>The TSF shall <selectables><selectable id="nd_fpt_stm_ext.1.2_1">allow the Security Administrator to set the time</selectable><selectable id="nd_fpt_stm_ext.1.2_2">synchronise time with an NTP server</selectable><selectable id="nd_fpt_stm_ext.1.2_3">obtain time from the underlying virtualization system</selectable></selectables>.</title>
+            <title>The TSF shall   <selectables><selectable id="nd_fpt_stm_ext.1.2_1">allow the Security Administrator to set the time</selectable><selectable id="nd_fpt_stm_ext.1.2_2">synchronise time with an NTP server</selectable><selectable id="nd_fpt_stm_ext.1.2_3">obtain time from the underlying virtualization system</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">Reliable time stamps are expected to be used with other TSF, e.g., for the generation of audit data that enables the Security Administrator to investigate incidents by checking the order of events and determining the actual local time when events occurred. The required level of accuracy is determined by the Administrator. </h:p>
               <h:p style="text-align: left;">The TOE depends on time and date information that may be provided by a local real-time clock managed by the Security Administrator, obtained from one or more NTP servers, or received from the underlying virtualization system. The corresponding option(s) are selected in FPT_STM_EXT.1.2. Automatic synchronization with an NTP server is recommended but not required. When the TOE communicates with an NTP server, the inclusion of FCS_NTP_EXT.1 in the ST is expected. The ST author describes in the TSS how the TOE receives external time and date information and how this information is maintained. For a Case 1 vND, the virtualization system can act as an external time source. For a Case 2 vND, the virtualization system is part of the TOE, so the time is typically set by a Security Administrator or synchronized with an NTP server. </h:p>
@@ -2522,7 +2594,7 @@
         <!-- FPT_TST_EXT.1 TSF Testing -->
         <f-component cc-id="fpt_tst_ext.1" id="fpt-tst-ext-1" name="TSF Testing">
           <f-element id="fpt-tst-ext-1-1">
-            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li><h:p style="text-align: left;">During initial start-up (on power on) to verify the integrity of the TOE firmware and software; </h:p></h:li><h:li><h:p style="text-align: left;">Prior to providing any cryptographic service and</h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables> to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li><h:p style="text-align: left;"></h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables> self-tests <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
+            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li><h:p style="text-align: left;">During initial start-up (on power on) to verify the integrity of the TOE firmware and software; </h:p></h:li> <h:li><h:p style="text-align: left;">Prior to providing any cryptographic service and</h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>   to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li><h:p style="text-align: left;"></h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables>   self-tests   <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 31 </h:b>
@@ -2539,7 +2611,7 @@
             </aactivity>
           </f-element>
           <f-element id="nd-fpt-tst-ext-1-2">
-            <title>The TSF shall respond to <selectables><selectable id="nd_fpt_tst_ext.1.2_1">all failures</selectable><selectable id="nd_fpt_tst_ext.1.2_2"><assignable>list of failures detected by self-tests</assignable></selectable></selectables> by <selectables><selectable id="nd_fpt_tst_ext.1.2_3">entering a maintenance mode</selectable><selectable id="nd_fpt_tst_ext.1.2_4">rebooting</selectable><selectable id="nd_fpt_tst_ext.1.2_5"><assignable>other methods to enter a secure state</assignable></selectable></selectables>.</title>
+            <title>The TSF shall respond to   <selectables><selectable id="nd_fpt_tst_ext.1.2_1">all failures</selectable><selectable id="nd_fpt_tst_ext.1.2_2"><assignable>list of failures detected by self-tests</assignable></selectable></selectables>   by   <selectables><selectable id="nd_fpt_tst_ext.1.2_3">entering a maintenance mode</selectable><selectable id="nd_fpt_tst_ext.1.2_4">rebooting</selectable><selectable id="nd_fpt_tst_ext.1.2_5"><assignable>other methods to enter a secure state</assignable></selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 32 </h:b>
@@ -2577,7 +2649,7 @@
             </note>
           </f-element>
           <f-element id="nd-fpt-tud-ext-1-3">
-            <title><h:p style="text-align: left;">The TSF shall provide means to authenticate firmware/software updates to the TOE using a</h:p> <selectables><selectable id="nd_fpt_tud_ext.1.3_1">X.509 certificate</selectable><selectable id="nd_fpt_tud_ext.1.3_2">digital signature</selectable></selectables> prior to installing those udpates.</title>
+            <title><h:p style="text-align: left;">The TSF shall provide means to authenticate firmware/software updates to the TOE using a</h:p> <selectables><selectable id="nd_fpt_tud_ext.1.3_1">X.509 certificate</selectable><selectable id="nd_fpt_tud_ext.1.3_2">digital signature</selectable></selectables>   prior to installing those udpates.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 35 </h:b>
@@ -2717,10 +2789,10 @@
             </aactivity>
           </f-element>
           <f-element id="ftp-itc-1-2">
-            <title>The TSF shall permit <selectables><selectable id="nd_ftp_itc.1.2_1">the TSF</selectable><selectable id="nd_ftp_itc.1.2_2">another trusted IT product</selectable><selectable id="nd_ftp_itc.1.2_3">the authorised IT entities</selectable></selectables> to initiate communication via the trusted channel.</title>
+            <title>The TSF shall permit   <selectables><selectable id="nd_ftp_itc.1.2_1">the TSF</selectable><selectable id="nd_ftp_itc.1.2_2">another trusted IT product</selectable><selectable id="nd_ftp_itc.1.2_3">the authorised IT entities</selectable></selectables>   to initiate communication via the trusted channel.</title>
           </f-element>
           <f-element id="ftp-itc-1-3">
-            <title>The TSF shall initiate communication via the trusted channel for <assignable>list of services for which the TSF is able to initiate communications</assignable>.</title>
+            <title>The TSF shall initiate communication via the trusted channel for   <assignable>list of services for which the TSF is able to initiate communications</assignable>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 38 </h:b>
@@ -2769,12 +2841,12 @@
           </f-element>
           <f-element id="nd-ftp-trp-1-2-admin">
             <title>
-              <h:p style="text-align: left;">The TSF shall permit <h:u>remote </h:u><h:b><h:u>Administrators</h:u></h:b><h:u> </h:u><h:s><h:u>users</h:u></h:s> to initiate communication via the trusted path.</h:p>
+              <h:p style="text-align: left;">The TSF shall permit <h:u>remote </h:u> <h:b><h:u>Administrators</h:u></h:b> <h:u></h:u> <h:s><h:u>users</h:u></h:s> to initiate communication via the trusted path.</h:p>
             </title>
           </f-element>
           <f-element id="nd-ftp-trp-1-3-admin">
             <title>
-              <h:p style="text-align: left;">The TSF shall require the use of the trusted path for <h:u>initial </h:u><h:b><h:u>Administrator</h:u></h:b><h:u> authentication and all remote administration actions.</h:u></h:p>
+              <h:p style="text-align: left;">The TSF shall require the use of the trusted path for <h:u>initial </h:u> <h:b><h:u>Administrator</h:u></h:b> <h:u> authentication and all remote administration actions.</h:u></h:p>
             </title>
             <note role="application">
               <h:p style="text-align: left;">
@@ -2800,7 +2872,7 @@
         <!-- FTP_TRP.1/Join Trusted Path (Refinement) -->
         <f-component cc-id="ftp_trp.1" id="ftp-trp-1-join" name="Trusted Path (Refinement)" iteration="Join" status="optional">
           <f-element id="ftp-trp-jo-1-1">
-            <title>The TOE shall</title>
+            <title><h:p style="text-align: left;">The TSF shall provide a communication path between itself and <h:b>a joining component</h:b> <h:s>[selection: remote, local] users</h:s> that is logically distinct from other communication paths and provides assured identification of</h:p> <selectables><selectable id="nd_ftp_trp.1.1_JOIN_1">the TSF endpoint</selectable><selectable id="nd_ftp_trp.1.1_JOIN_2">both joining component and TSF endpoint</selectable></selectables> <h:p style="text-align: left;"><h:s>its endpoints</h:s> and protection of the communicated data from <h:u>modification </h:u><h:b><h:u>and</h:u></h:b></h:p> <selectables><selectable id="nd_ftp_trp.1.1_JOIN_3">disclosure</selectable><selectable id="nd_ftp_trp.1.1_JOIN_4">no other mechanisms</selectable></selectables>.</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -2808,7 +2880,34 @@
               <Tests/>
             </aactivity>
           </f-element>
-          <audit-event/>
+          <f-element id="nd-ftp-trp-1-2-join">
+            <title>The TSF shall permit <selectables><selectable id="nd_ftp_trp.1.2_JOIN_1">the TSF</selectable><selectable id="nd_ftp_trp.1.2_JOIN_2">the joining component</selectable></selectables> to initiate communication via the trusted path.</title>
+          </f-element>
+          <f-element id="nd-ftp-trp-1-3-join">
+            <title><h:p style="text-align: left;">The TSF shall require the use of the trusted path for<h:u> joining components to the TSF under environmental constraints identified in</h:u></h:p> <assignable>reference to operational guidance</assignable>.</title>
+            <note role="application">
+              <h:p style="text-align: left;">
+                <h:b>Application Note 45 </h:b>
+              </h:p>
+              <h:p style="text-align: left;">This SFR implements one of the types of channel identified in the main selection for FCO_CPC_EXT.1.2. The “joining component” in FTP_TRP.1/Join is the IT entity that is attempting to join the distributed TOE by using the registration process. </h:p>
+              <h:p style="text-align: left;">The effect of this SFR is to require the ability for components to communicate in a secure manner while the distributed TSF is being created (or when adding components to an existing distributed TSF). When creating the TSF from the initial pair of components, either of these components may be identified as the TSF for the purposes of satisfying the meaning of ‘TSF’ in this SFR. </h:p>
+              <h:p style="text-align: left;">The selection at the end of FTP_TRP.1.1/Join recognises that in some cases confidentiality (i.e., protection of the data from disclosure) may not be provided by the channel. The ST author distinguishes in the TSS whether in this case the TOE relies on the environment to provide confidentiality (as part of the constraints referenced in FTP_TRP.1.3/Join) or whether the registration data exchanged does not require confidentiality (in which case this assertion must be justified). If ‘no other mechanisms’ is selected, the ST author may omit this phrase in the completed SFR text to improve readability. </h:p>
+              <h:p style="text-align: left;">The assignment in FTP_TRP.1.3/Join ensures that the ST highlights any specific details needed to protect the registration environment. </h:p>
+              <h:p style="text-align: left;">Note: When the ST uses FTP_TRP.1/Join for the registration channel then this channel cannot be reused as the normal inter-component communication channel (the latter channel must meet FTP_ITC.1 or FPT_ITT.1). </h:p>
+              <h:p style="text-align: left;">The trusted path used for joining might utilise X.509 certificates; however, there are no required X.509 SFRs associated with this trusted path as there are many ways the security of the joining path could be provided. It is up to the ST author to describe how the security of this trusted path is implemented; whether the security relies on X.509 SFRs, environmental constraints from FTP_TRP.1.3/Join, and/or some other method. </h:p>
+              <h:p style="text-align: left;">See Section B.4.1 for additional requirements. </h:p>
+              <h:p style="text-align: left;">Specific requirements for Preparative Procedures relating to FTP_TRP.1/Join are defined in the Evaluation Activities in [SD].</h:p>
+            </note>
+          </f-element>
+          <audit-event>
+            <audit-event-descr>Initiation of the trusted path.</audit-event-descr>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Termination of the trusted path.</audit-event-descr>
+          </audit-event>
+          <audit-event>
+            <audit-event-descr>Failure of the trusted path functions.</audit-event-descr>
+          </audit-event>
         </f-component>
       </section>
     </sec:SFRs>

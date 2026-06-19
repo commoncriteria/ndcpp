@@ -28,6 +28,8 @@
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[22]""/f-element[1]""
 * Error: f-element FIA_PSK_EXT.1.1  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[3]""/f-element[1]""
+* Error: Detected dangling id-reference to [object Object] from attribute
+        on/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/depends[1]""/on[1]""
 * Error: Detected dangling id-reference to dummy from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[9]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to dummy from attribute

@@ -37,6 +37,8 @@ output/ndcpp-release-linkable.html: ECP
 output/ndcpp-release-linkable.html: ERB
 output/ndcpp-release-linkable.html: FFC
 output/ndcpp-release-linkable.html: FQDN
+output/ndcpp-release-linkable.html: Functions1
+output/ndcpp-release-linkable.html: Functions2
 output/ndcpp-release-linkable.html: GFSBox
 output/ndcpp-release-linkable.html: GPG
 output/ndcpp-release-linkable.html: HCI
@@ -75,6 +77,7 @@ output/ndcpp-release-linkable.html: Winternitz
 output/ndcpp-release-linkable.html: XMSS
 output/ndcpp-release-linkable.html: authorised
 output/ndcpp-release-linkable.html: behaviour
+output/ndcpp-release-linkable.html: crypto
 output/ndcpp-release-linkable.html: enablement
 output/ndcpp-release-linkable.html: endianness
 output/ndcpp-release-linkable.html: enquiries
@@ -91,6 +94,7 @@ output/ndcpp-release-linkable.html: netconf
 output/ndcpp-release-linkable.html: nonrepeating
 output/ndcpp-release-linkable.html: pNDs
 output/ndcpp-release-linkable.html: pseudocode
+output/ndcpp-release-linkable.html: reauthenticate
 output/ndcpp-release-linkable.html: recognises
 output/ndcpp-release-linkable.html: rekeying
 output/ndcpp-release-linkable.html: rekeys
@@ -145,6 +149,7 @@ output/ndcpp-release.html: Behaviour
 output/ndcpp-release.html: CCDB
 output/ndcpp-release.html: CSR
 output/ndcpp-release.html: CoreData’
+output/ndcpp-release.html: CryptoKeys’
 output/ndcpp-release.html: DEK
 output/ndcpp-release.html: DRBGs
 output/ndcpp-release.html: DTLSC
@@ -152,6 +157,8 @@ output/ndcpp-release.html: ECP
 output/ndcpp-release.html: ERB
 output/ndcpp-release.html: FFC
 output/ndcpp-release.html: FQDN
+output/ndcpp-release.html: Functions1
+output/ndcpp-release.html: Functions2
 output/ndcpp-release.html: GFSBox
 output/ndcpp-release.html: GPG
 output/ndcpp-release.html: HCI
@@ -196,6 +203,7 @@ output/ndcpp-release.html: behaviour
 output/ndcpp-release.html: box’
 output/ndcpp-release.html: channel’
 output/ndcpp-release.html: communication’
+output/ndcpp-release.html: crypto
 output/ndcpp-release.html: enablement
 output/ndcpp-release.html: endianness
 output/ndcpp-release.html: enquiries
@@ -218,8 +226,10 @@ output/ndcpp-release.html: mechanisms’
 output/ndcpp-release.html: multicast
 output/ndcpp-release.html: netconf
 output/ndcpp-release.html: nonrepeating
+output/ndcpp-release.html: of’
 output/ndcpp-release.html: pNDs
 output/ndcpp-release.html: pseudocode
+output/ndcpp-release.html: reauthenticate
 output/ndcpp-release.html: recognises
 output/ndcpp-release.html: rekeying
 output/ndcpp-release.html: rekeys
@@ -283,6 +293,7 @@ output/ndcpp.html: Behaviour
 output/ndcpp.html: CCDB
 output/ndcpp.html: CSR
 output/ndcpp.html: CoreData’
+output/ndcpp.html: CryptoKeys’
 output/ndcpp.html: DEK
 output/ndcpp.html: DRBGs
 output/ndcpp.html: DTLSC
@@ -290,6 +301,8 @@ output/ndcpp.html: ECP
 output/ndcpp.html: ERB
 output/ndcpp.html: FFC
 output/ndcpp.html: FQDN
+output/ndcpp.html: Functions1
+output/ndcpp.html: Functions2
 output/ndcpp.html: GFSBox
 output/ndcpp.html: GPG
 output/ndcpp.html: HCI
@@ -334,6 +347,7 @@ output/ndcpp.html: behaviour
 output/ndcpp.html: box’
 output/ndcpp.html: channel’
 output/ndcpp.html: communication’
+output/ndcpp.html: crypto
 output/ndcpp.html: enablement
 output/ndcpp.html: endianness
 output/ndcpp.html: entity’
@@ -355,8 +369,10 @@ output/ndcpp.html: mechanisms’
 output/ndcpp.html: multicast
 output/ndcpp.html: netconf
 output/ndcpp.html: nonrepeating
+output/ndcpp.html: of’
 output/ndcpp.html: pNDs
 output/ndcpp.html: pseudocode
+output/ndcpp.html: reauthenticate
 output/ndcpp.html: recognises
 output/ndcpp.html: rekeying
 output/ndcpp.html: rekeys

@@ -36,12 +36,6 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[16]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to dummy from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[1]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to dummy from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[2]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to dummy from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[4]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to [object Object] from attribute
-        on/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[7]""/f-component[3]""/depends[1]""/on[1]""
 * Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.
 * Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-35'.
 * Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.

@@ -24,8 +24,6 @@
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[22]""/f-element[1]""
 * Error: f-element FIA_PSK_EXT.1.1  appears not to have an associated evaluation activity.:
         /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[3]""/f-element[1]""
-* Error: f-element FIA_PSK_EXT.1.2  appears not to have an associated evaluation activity.:
-        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[3]""/f-element[2]""
 * Error: Detected dangling id-reference to [object Object] from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to dummy from attribute
@@ -34,13 +32,22 @@
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[10]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to dummy from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[16]""/depends[4]""/on-sel[1]""
+* Error: Detected dangling id-reference to [object Object] from attribute
+        on/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[1]""/depends[1]""/on[1]""
 * Error: Detected dangling id-reference to dummy from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[1]""/depends[1]""/on-sel[1]""
+* Error: Detected dangling id-reference to dummy from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[2]""/depends[1]""/on-sel[1]""
+* Error: Detected dangling id-reference to dummy from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[4]""/depends[1]""/on-sel[1]""
+* Error: Detected dangling id-reference to dummy from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[7]""/depends[1]""/on-sel[1]""
+* Error: Detected dangling id-reference to [object Object] from attribute
+        on/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[7]""/f-component[3]""/depends[1]""/on[1]""
 * Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.
 * Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-35'.
 * Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.
 * Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-35'.
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[1]""/f-element[1]""/title[1]"The TSF s"/h:ol[1]""/h:li[3]""/h:ol[1]""/h:li[4]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[3]""/f-element[2]""/aactivity[1]""/TSS[1]"The evalu"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[3]""/f-element[2]""/aactivity[1]""/TSS[1]"The evalu"/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[3]""/f-element[2]""/aactivity[1]""/Tests[1]"The follo"/testlist[1]""/test[1]"If the ke"/h:p[1]""

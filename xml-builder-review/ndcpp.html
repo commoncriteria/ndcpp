@@ -643,7 +643,7 @@ function showTarget(id){
 <tr><td>3</td><td>2023-04-06</td><td>Incorporated comments received. Released for use</td></tr>
 <tr><td></td><td>2023-12-06</td><td>Released for use</td></tr>
 <tr><td>4</td><td>2025-11-25</td><td>Released for use</td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#sec-features" style="text-indent:10px">1.4<span>TOE Features</span></a><a href="#nd-feature-1" style="text-indent:20px">1.4.1<span>Password-based remote administration</span></a><a href="#nd-feature-2" style="text-indent:20px">1.4.2<span>Password-based local authentication</span></a><a href="#nd-feature-3" style="text-indent:20px">1.4.3<span>Password-based authentication</span></a><a href="#nd-feature-4" style="text-indent:20px">1.4.4<span>Pre-shared keys for IPsec</span></a><a href="#nd-feature-5" style="text-indent:20px">1.4.5<span>Admin management of crypto keys</span></a><a href="#nd-feature-6" style="text-indent:20px">1.4.6<span>Local security admin</span></a><a href="#s-ppoverview" style="text-indent:10px">1.5<span>PP Overview</span></a><a href="#s-usecases" style="text-indent:10px">1.6<span>TOE Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#fau" style="text-indent:20px">5.1.1<span>Security Audit (FAU)</span></a><a href="#fco" style="text-indent:20px">5.1.2<span>Communication (FCO)</span></a><a href="#fcs" style="text-indent:20px">5.1.3<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">5.1.4<span>Identification and Authentication (FIA)</span></a><a href="#fmt" style="text-indent:20px">5.1.5<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.6<span>Protection of the TSF (FPT)</span></a><a href="#fta" style="text-indent:20px">5.1.7<span>TOE Access (FTA)</span></a><a href="#ftp_itc" style="text-indent:20px">5.1.8<span>Trusted Channel (FTP_ITC)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.9<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#adv" style="text-indent:20px">5.2.1<span>Class ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.2<span>Class AGD: Guidance Documents</span></a><a href="#alc" style="text-indent:20px">5.2.3<span>Class ALC: Life-cycle Support</span></a><a href="#ase" style="text-indent:20px">5.2.4<span>Class ASE: ST Evaluation</span></a><a href="#ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#impl-reqs" style="text-indent:0px">Appendix A - <span>Implementation-dependent Requirements</span></a><a href="#nd-feature-1" style="text-indent:20px">A.0.1<span>Password-based remote administration</span></a><a href="#nd-feature-2" style="text-indent:20px">A.0.2<span>Password-based local authentication</span></a><a href="#nd-feature-3" style="text-indent:20px">A.0.3<span>Password-based authentication</span></a><a href="#nd-feature-4" style="text-indent:20px">A.0.4<span>Pre-shared keys for IPsec</span></a><a href="#nd-feature-5" style="text-indent:20px">A.0.5<span>Admin management of crypto keys</span></a><a href="#nd-feature-6" style="text-indent:20px">A.0.6<span>Local security admin</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix B - <span>Entropy Documentation and Assessment</span></a><a href="#a-glossary" style="text-indent:0px">Appendix C - <span>Glossary</span></a><a href="#glossary" style="text-indent:10px">C.1<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">C.1.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">C.1.2<span>Technical Terms</span></a><a href="#acronyms" style="text-indent:0px">Appendix D - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix E - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#s-ppoverview" style="text-indent:10px">1.4<span>PP Overview</span></a><a href="#s-usecases" style="text-indent:10px">1.5<span>TOE Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_TOE" style="text-indent:10px">4.1<span>Security Objectives for the TOE</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.2<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.3<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#fau" style="text-indent:20px">5.1.1<span>Security Audit (FAU)</span></a><a href="#fco" style="text-indent:20px">5.1.2<span>Communication (FCO)</span></a><a href="#fcs" style="text-indent:20px">5.1.3<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">5.1.4<span>Identification and Authentication (FIA)</span></a><a href="#fmt" style="text-indent:20px">5.1.5<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.6<span>Protection of the TSF (FPT)</span></a><a href="#fta" style="text-indent:20px">5.1.7<span>TOE Access (FTA)</span></a><a href="#ftp_itc" style="text-indent:20px">5.1.8<span>Trusted Channel (FTP_ITC)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.9<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#adv" style="text-indent:20px">5.2.1<span>Class ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.2<span>Class AGD: Guidance Documents</span></a><a href="#alc" style="text-indent:20px">5.2.3<span>Class ALC: Life-cycle Support</span></a><a href="#ase" style="text-indent:20px">5.2.4<span>Class ASE: ST Evaluation</span></a><a href="#ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#impl-reqs" style="text-indent:0px">Appendix A - <span>Implementation-dependent Requirements</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix B - <span>Entropy Documentation and Assessment</span></a><a href="#a-glossary" style="text-indent:0px">Appendix C - <span>Glossary</span></a><a href="#glossary" style="text-indent:10px">C.1<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">C.1.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">C.1.2<span>Technical Terms</span></a><a href="#acronyms" style="text-indent:0px">Appendix D - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix E - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
@@ -680,25 +680,8 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST.</td></tr>
 </table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"></table></div>
     <h2 class="indexable" data-level="2" id="TOEdescription">1.3 Compliant Targets of Evaluation</h2>
-    <h2 class="indexable" data-level="2" id="sec-features">1.4 TOE Features</h2>
-      <h3 class="indexable" data-level="3" id="nd-feature-1">1.4.1 Password-based remote administration</h3><span class="description">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides remote administration using a password-based authentication mechanism, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_AFL.1">FIA_AFL.1</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-2">1.4.2 Password-based local authentication</h3><span class="description">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides a password-based local authentication mechanism, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_UAU.7">FIA_UAU.7</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-3">1.4.3 Password-based authentication</h3><span class="description">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides a password-based authentication mechanism, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_PMG_EXT.1">FIA_PMG_EXT.1</a></b></li><li><b><a href="#FPT_APW_EXT.1">FPT_APW_EXT.1</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-4">1.4.4 Pre-shared keys for IPsec</h3><span class="description">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may support pre-shared keys for use in the IPsec protocol that conform
-to <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784. If so, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_PSK_EXT.1">FIA_PSK_EXT.1</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-5">1.4.5 Admin management of crypto keys</h3><span class="description">True if cryptographic keys can be managed (e.g.,
-modified, deleted or generated/imported) by the Security Administrator.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FMT_MTD.1/CryptoKeys">FMT_MTD.1/CryptoKeys</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-6">1.4.6 Local security admin</h3><span class="description">True if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides the Security Administrator the ability to administer the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> locally.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FTA_SSL_EXT.1">FTA_SSL_EXT.1</a></b></li></ul></p>
-    
-    <h2 class="indexable" data-level="2" id="s-ppoverview">1.5 PP Overview</h2>words
-    <h2 class="indexable" data-level="2" id="s-usecases">1.6 TOE Use Cases</h2>Words
+    <h2 class="indexable" data-level="2" id="s-ppoverview">1.4 PP Overview</h2>words
+    <h2 class="indexable" data-level="2" id="s-usecases">1.5 TOE Use Cases</h2>Words
   <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1><h1 class="indexable" data-level="1" id="Security_Problem_Description">3 Security Problem Description</h1>
     <p>A Network Device has a network infrastructure role that it is designed to provide. In doing so,
 	the Network Device communicates with other Network Devices and other network entities (i.e.
@@ -798,8 +781,43 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
       <h3 id="fau" class="indexable" data-level="3">5.1.1 Security Audit (FAU)</h3>
         
         <div class="comp" id="FAU_GEN.1"><h4>FAU_GEN.1 Audit data generation</h4>
-          <div class="element"><div class="reqid" id="FAU_GEN.1.1"><a href="#FAU_GEN.1.1" class="abbr">FAU_GEN.1.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to generate audit data of the following auditable events:    <ol><li><p style="text-align: left;">Start-up and shut-down of the audit functions;</p></li> <li><p style="text-align: left;">All auditable events for the <u>not specified</u> level of audit; and</p></li> <li><p style="text-align: left;"><i>All administrative actions comprising:</i></p> <ol><li><p style="text-align: left;"><i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</i></p></li> <li><p style="text-align: left;"><i>Changes to <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</i></p></li> <li><p style="text-align: left;"><i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</i></p></li> <li><p style="text-align: left;"></p></li></ol></li></ol> [<b>selection</b>: <span class="selectable-content" id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</span>, <span class="selectable-content" id="fau-gen-1-1-2">no other actions</span>, <span class="selectable-content" id="fau-gen-1-1-3">[<b>assignment</b>: 
-     <span class="assignable-content">list of other uses of privileges</span>]</span>] <p style="text-align: left;">;</p><ol start="4"><li><p style="text-align: left;"><i>Specifically defined auditable events listed in Table 2.</i></p></li></ol><div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FAU_GEN.1.1"><a href="#FAU_GEN.1.1" class="abbr">FAU_GEN.1.1</a></div><div class="reqdesc">
+              <p>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to generate audit data of the following auditable events:</p>
+              <ol>
+                <li>
+                  <p>Start-up and shut-down of the audit functions;</p>
+                </li>
+                <li>
+                  <p>All auditable events for the <u>not specified</u> level of audit; and</p>
+                </li>
+                <li>
+                  <p>
+                    <i>All administrative actions comprising:</i>
+                  </p>
+                  <ol type="a">
+                    <li>
+                      <p>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</p>
+                    </li>
+                    <li>
+                      <p>Changes to <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</p>
+                    </li>
+                    <li>
+                      <p>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</p>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+              [<b>selection</b>: <span class="selectable-content" id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</span>, <span class="selectable-content" id="fau-gen-1-1-2">no other actions</span>, <span class="selectable-content" id="fau-gen-1-1-3">[<b>assignment</b>: 
+     <span class="assignable-content">list of other uses of privileges</span>]</span>]
+              <p style="text-align: left;">;</p>
+              <ol start="4">
+                <li>
+                  <p style="text-align: left;">
+                    <i>Specifically defined auditable events listed in Table 2.</i>
+                  </p>
+                </li>
+              </ol>
+            <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">
@@ -3505,26 +3523,11 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
         
         <div class="comp" id="FIA_AFL.1"><h4>FIA_AFL.1 Authentication Failure Management (Refinement)</h4><div class="statustag"><i><b>This is an implementation-based component.
                 Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-1">Password-based remote administration</a></li></ul>
+                <ul><li><a href="#[object Object]"></a></li></ul>
                 as described in Appendix A.3: Implementation-based Requirements.
                </b></i></div>
           
-          <div class="element"><div class="reqid" id="FIA_AFL.1.1"><a href="#FIA_AFL.1.1" class="abbr">FIA_AFL.1.1</a></div><div class="reqdesc">
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall detect when <u>an Administrator configurable positive integer within</u></p>
-              [<b>assignment</b>: 
-     <span class="assignable-content">range of acceptable values</span>]
-              <p style="text-align: left;">unsuccessful authentication attempts occur related to <i>Administrators attempting to authenticate remotely using a password.</i></p>
-            </div></div>
-          <div class="element"><div class="reqid" id="FIA_AFL.1.2"><a href="#FIA_AFL.1.2" class="abbr">FIA_AFL.1.2</a></div><div class="reqdesc"><p style="text-align: left;">When the defined number of unsuccessful authentication attempts has been <u>met</u>, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</p> [<b>selection</b>: <span class="selectable-content" id="nd-fia-afl-1-2-compsel-1">prevent the offending Administrator from successfully establishing a remote session using any authentication method that involves a password until [<b>assignment</b>: 
-     <span class="assignable-content">action to unlock</span>] is taken by an Administrator</span>, <span class="selectable-content" id="nd_fia_afl.1.2_2">prevent the offending Administrator from successfully establishing a remote session using any authentication method that involves a password until an Administrator defined time period has elapsed</span>].<div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 74 </b>
-              </p>
-              <p style="text-align: left;">This requirement applies to a defined number of successive unsuccessful remote password-based authentication attempts and does not apply to local Administrative access, since it does not make sense to lock a local Administrator’s account in this fashion. Compliant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> may optionally include cryptographic authentication failures and/or local authentication failures in the number of unsuccessful authentication attempts. This could be addressed by (for example) requiring a separate account for local Administrators or having the authentication mechanism implementation distinguish local and remote login attempts. The ‘action’ taken by a local Administrator is implementation specific and would be defined in the Administrator guidance (for example, lockout reset, or password reset). The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author chooses one or both of the selections for handling of authentication failures depending on how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has implemented this handler. </p>
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ensures that authentication failures by remote Administrators cannot lead to a situation where no Administrator access is available, either permanently or temporarily (e.g., by providing local logon, which is not subject to blocking, or by allowing a reboot to clear the lockout status and restore administrator access). The Operational Guidance describes, and identifies the importance of, any actions that are required in order to ensure that Administrator access will always be maintained, even if remote administration is made permanently or temporarily unavailable due to blocking of accounts as a result of <a href="#FIA_AFL.1">FIA_AFL.1</a>.</p>
-            </span></div></div></div>
+          <div class="element"><div class="reqid" id="FIA_AFL.1.1"><a href="#FIA_AFL.1.1" class="abbr">FIA_AFL.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_AFL.1">FIA_AFL.1</a></div>
               Something
@@ -3535,24 +3538,8 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component.<br/></div></div></div></div>
         
-        <div class="comp" id="FIA_PMG_EXT.1"><h4>FIA_PMG_EXT.1 Password Management</h4><div class="statustag"><i><b>This is an implementation-based component.
-                Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-3">Password-based authentication</a></li></ul>
-                as described in Appendix A.3: Implementation-based Requirements.
-               </b></i></div>
-          
-          <div class="element"><div class="reqid" id="FIA_PMG_EXT.1.1"><a href="#FIA_PMG_EXT.1.1" class="abbr">FIA_PMG_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the following password management capabilities for administrative passwords:<ol><li><p style="text-align: left;">Passwords shall be able to be composed of any combination of upper and lower case letters, numbers and the following special characters:</p></li></ol> [<b>selection</b>: <span class="selectable-content" id="nd_fia_pmg_ext.1.1_1">"!"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_2">"@"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_3">"#"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_4">"$"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_5">"%"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_6">"^"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_7">"&amp;"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_8">"*"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_9">"("</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_10">")"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_11">[<b>assignment</b>: 
-     <span class="assignable-content">other characters</span>]</span>] <ol><li><p style="text-align: left;">Minimum password length shall be <i>configurable to between</i></p></li></ol> [<b>assignment</b>: 
-     <span class="assignable-content">minimum number of characters supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr></span>]  and  [<b>assignment</b>: 
-     <span class="assignable-content">number of characters greater than or equal to 15</span>] <p style="text-align: left;"><i>characters.</i></p><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 76 </b>
-              </p>
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author selects the special characters that are supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. They may optionally list additional special characters supported using the assignment. "Administrative passwords" refers to passwords used by Administrators at the local console, over protocols that support passwords, such as SSH and <abbr class="dyn-abbr"><a href="#abbr_HTTPS">HTTPS</a></abbr>, or to grant configuration data that supports other <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in the Security Target. </p>
-              <p style="text-align: left;">The second assignment should be configured with the largest minimum password length the Security Administrator can configure.</p>
-            </span></div></div></div>
+        <div class="comp" id="FIA_PMG_EXT.1"><h4>FIA_PMG_EXT.1 Password Management</h4>
+          <div class="element"><div class="reqid" id="FIA_PMG_EXT.1.1"><a href="#FIA_PMG_EXT.1.1" class="abbr">FIA_PMG_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_PMG_EXT.1">FIA_PMG_EXT.1</a></div>
               Something
@@ -3563,39 +3550,12 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component.<br/></div></div></div></div>
         
-        <div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4><div class="statustag"><i><b>This is an implementation-based component.
-                Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-4">Pre-shared keys for IPsec</a></li></ul>
-                as described in Appendix A.3: Implementation-based Requirements.
-               </b></i></div>
-          
-          <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.1"><a href="#FIA_PSK_EXT.1.1" class="abbr">FIA_PSK_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to use pre-shared keys that conform to <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784 for IPsec.</div></div>
-          <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.2"><a href="#FIA_PSK_EXT.1.2" class="abbr">FIA_PSK_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to  [<b>selection</b>: <span class="selectable-content" id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</span>, <span class="selectable-content" id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via <a href="#FCS_RBG.1">FCS_RBG.1</a></span>].<div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 77 </b>
-              </p>
-              <p style="text-align: left;">Generated PSKs are expected to be shared between components via an out-of-band mechanism.</p>
-            </span></div></div></div>
+        <div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4>
+          <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.1"><a href="#FIA_PSK_EXT.1.1" class="abbr">FIA_PSK_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall</div></div>
         </div>
         
-        <div class="comp" id="FIA_UAU.7"><h4>FIA_UAU.7 Protected Authentication Feedback</h4><div class="statustag"><i><b>This is an implementation-based component.
-                Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-2">Password-based local authentication</a></li></ul>
-                as described in Appendix A.3: Implementation-based Requirements.
-               </b></i></div>
-          
-          <div class="element"><div class="reqid" id="FIA_UAU.7.1"><a href="#FIA_UAU.7.1" class="abbr">FIA_UAU.7.1</a></div><div class="reqdesc">
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide only <u>obscured feedbac</u>k to the <b>administrative</b> user while the authentication is in progress <b>at the local console</b>.</p>
-            <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 75 </b>
-              </p>
-              <p style="text-align: left;">‘Obscured feedback’ implies the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does not produce a visible display of any authentication data entered by an administrator (such as the echoing of a password), although an obscured indication of progress may be provided (such as an asterisk for each character). It also implies that the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> does not return any information during the authentication process to the administrator that may provide any indication of the authentication data.</p>
-            </span></div></div></div>
+        <div class="comp" id="FIA_UAU.7"><h4>FIA_UAU.7 Protected Authentication Feedback</h4>
+          <div class="element"><div class="reqid" id="FIA_UAU.7.1"><a href="#FIA_UAU.7.1" class="abbr">FIA_UAU.7.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_UAU.7">FIA_UAU.7</a></div>
               Something
@@ -3658,14 +3618,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 	  .
       </i></b></div>
           
-          <div class="element"><div class="reqid" id="FMT_MOF.1.1/AutoUpdate"><a href="#FMT_MOF.1.1/AutoUpdate" class="abbr">FMT_MOF.1.1/AutoUpdate</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<b>selection</b>: <span class="selectable-content" id="nd_fmt_mof.1.1_AUTOUPDATE_3">enable</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_AUTOUPDATE_4">disable</span>] the functions [<b>selection</b>: <span class="selectable-content" id="nd_fmt_mof.1.1_AUTOUPDATE_1">automatic checking for updates</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_AUTOUPDATE_2">automatic update</span>] <p style="text-align: left;">to <i>Security Administrators</i>.</p><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 81 </b>
-              </p>
-              <p style="text-align: left;"><a href="#FMT_MOF.1/AutoUpdate">FMT_MOF.1/AutoUpdate</a> is only applicable and should be included if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports automatic checking for updates and/or automatic updates and allows them to be enabled and disabled. Enable and disable of automatic checking for updates and/or automatic updates is restricted to Security Administrators. The option “automatic update” may only be selected if digital signatures are used to validate the trusted update.</p>
-            </span></div></div></div>
+          <div class="element"><div class="reqid" id="FMT_MOF.1.1/AutoUpdate"><a href="#FMT_MOF.1.1/AutoUpdate" class="abbr">FMT_MOF.1.1/AutoUpdate</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MOF.1/AutoUpdate">FMT_MOF.1/AutoUpdate</a></div>
               Something
@@ -3680,24 +3633,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 	  .
       </i></b></div>
           
-          <div class="element"><div class="reqid" id="FMT_MOF.1.1/Functions"><a href="#FMT_MOF.1.1/Functions" class="abbr">FMT_MOF.1.1/Functions</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to [<b>selection</b>: <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_1">determine the behaviour of</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_2">modify the behaviour of</span>] the functions [<b>selection</b>: <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_3">transmission of audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_4">handling of audit data</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_5">audit functionality when Local Audit Storage Space is full</span>] <p style="text-align: left;">to <i>Security Administrators</i>.</p><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">Application Note 82 </p>
-              <p style="text-align: left;"><a href="#FMT_MOF.1/Functions">FMT_MOF.1/Functions</a> should be chosen if one or more of the following scenarios apply:</p>
-              <ul>
-                <li>
-                  <p style="text-align: left;">If the transmission protocol for transmission of audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity as defined in <a href="#FAU_STG_EXT.1.1">FAU_STG_EXT.1.1</a> is configurable, “transmission of audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity” should be chosen. </p>
-                </li>
-                <li>
-                  <p style="text-align: left;">If the handling of audit data is configurable, “handling of audit data” must be chosen. The term “handling of audit data” refers to any administratively configurable selection or assignments in any FAU_STG_EXT.x <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. </p>
-                </li>
-                <li>
-                  <p style="text-align: left;">If the behaviour of the audit functionality is configurable when Local Audit Storage Space is full, “audit functionality when Local Audit Storage Space is full” must be chosen.</p>
-                </li>
-              </ul>
-              <p style="text-align: left;">The first selection for ‘determine the behaviour of’ and ‘modify the behaviour of’ should be done as appropriate. It might be necessary to have different selections for the first selection depending on the second selection (e.g., “handling of audit data” might require “determine the behaviour of” and “modify the behaviour of” for the first selection on the one hand and “audit functionality when Local Audit Storage Space is full” might require “modify the behaviour of” only). In that case <a href="#FMT_MOF.1/Functions">FMT_MOF.1/Functions</a> should be iterated with increasing number appended (i.e., FMT_MOF.1/Functions1, FMT_MOF.1/Functions2, etc.).</p>
-            </span></div></div></div>
+          <div class="element"><div class="reqid" id="FMT_MOF.1.1/Functions"><a href="#FMT_MOF.1.1/Functions" class="abbr">FMT_MOF.1.1/Functions</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MOF.1/Functions">FMT_MOF.1/Functions</a></div>
               Something
@@ -3732,18 +3668,8 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
         <div class="comp" id="FMT_MOF.1/Services"><h4>FMT_MOF.1/Services Management of Security Functions Behaviour</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
 	  .
       </i></b></div>
-          <div class="element"><div class="reqid" id="FMT_MOF.1.1/Services"><a href="#FMT_MOF.1.1/Services" class="abbr">FMT_MOF.1.1/Services</a></div><div class="reqdesc">
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to <b>start and stop</b> <s>the functions</s> <b>services</b> to <i>Security Administrators</i>.</p>
-            <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 80</b>
-              </p>
-              <p style="text-align: left;"><a href="#FMT_MOF.1/Services">FMT_MOF.1/Services</a> should only be chosen if the Security Administrator has the ability to start and stop services and the corresponding option has been selected in <a href="#FMT_SMF.1">FMT_SMF.1</a>. </p>
-              <p style="text-align: left;">In <a href="#FMT_MOF.1.1/Services">FMT_MOF.1.1/Services</a> 'enable and disable' have been refined to 'start and stop' and 'the functions: [assignment: list of functions]' has been refined to 'services'. </p>
-              <p style="text-align: left;">With respect to <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a>, <a href="#FMT_SMF.1">FMT_SMF.1</a> and <a href="#FMT_MOF.1/Services">FMT_MOF.1/Services</a> the term ‘services’ refers to trusted path and trusted channel communications, on demand self-tests, trusted update and Administrator sessions (that exist under the trusted path) (e.g., netconf).</p>
-            </span></div></div></div>
+          
+          <div class="element"><div class="reqid" id="FMT_MOF.1.1/Services"><a href="#FMT_MOF.1.1/Services" class="abbr">FMT_MOF.1.1/Services</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MOF.1/Services">FMT_MOF.1/Services</a></div>
               Something
@@ -3775,22 +3701,10 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component.<br/></div></div></div></div>
         
-        <div class="comp" id="FMT_MTD.1/CryptoKeys"><h4>FMT_MTD.1/CryptoKeys Management of TSF Data</h4><div class="statustag"><i><b>This is an implementation-based component.
-                Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-5">Admin management of crypto keys</a></li></ul>
-                as described in Appendix A.3: Implementation-based Requirements.
-               </b></i></div>
-          
-          <div class="element"><div class="reqid" id="FMT_MTD.1.1/CryptoKeys"><a href="#FMT_MTD.1.1/CryptoKeys" class="abbr">FMT_MTD.1.1/CryptoKeys</a></div><div class="reqdesc">
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to <i><u>manage</u></i> the <i>cryptographic keys</i> to <i>Security Administrators</i>.</p>
-            <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 83 </b>
-              </p>
-              <p style="text-align: left;"><a href="#FMT_MTD.1.1/CryptoKeys">FMT_MTD.1.1/CryptoKeys</a> restricts management of cryptographic keys to Security Administrators. It should be included if cryptographic keys can be managed (e.g., modified, deleted or generated/imported) by the Security Administrator. The identifier ‘CryptoKeys’ has been added here to separate this iteration of FMT_MTD.1 from the mandatory iteration of FMT_MTD.1 defined in Section 6.6.2.1 (<a href="#FMT_MTD.1/CoreData">FMT_MTD.1/CoreData</a>).</p>
-            </span></div></div></div>
+        <div class="comp" id="FMT_MTD.1/CryptoKeys"><h4>FMT_MTD.1/CryptoKeys Management of TSF Data</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
+	  .
+      </i></b></div>
+          <div class="element"><div class="reqid" id="FMT_MTD.1.1/CryptoKeys"><a href="#FMT_MTD.1.1/CryptoKeys" class="abbr">FMT_MTD.1.1/CryptoKeys</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MTD.1/CryptoKeys">FMT_MTD.1/CryptoKeys</a></div>
               Something
@@ -3873,22 +3787,8 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
       
       <h3 id="fpt" class="indexable" data-level="3">5.1.6 Protection of the TSF (FPT)</h3>
         
-        <div class="comp" id="FPT_APW_EXT.1"><h4>FPT_APW_EXT.1 Protection of Administrator Passwords</h4><div class="statustag"><i><b>This is an implementation-based component.
-                Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-3">Password-based authentication</a></li></ul>
-                as described in Appendix A.3: Implementation-based Requirements.
-               </b></i></div>
-          
-          <div class="element"><div class="reqid" id="FPT_APW_EXT.1.1"><a href="#FPT_APW_EXT.1.1" class="abbr">FPT_APW_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall store administrative passwords in non-plaintext form.</div></div>
-          <div class="element"><div class="reqid" id="FPT_APW_EXT.1.2"><a href="#FPT_APW_EXT.1.2" class="abbr">FPT_APW_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall prevent the reading of plaintext administrative passwords.<div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 78 </b>
-              </p>
-              <p style="text-align: left;">The intent of the requirement is that raw password authentication data of Security Administrators is not stored in the clear, and that no Administrator is able to read the plaintext password of a Security Administrator through “normal” interfaces. An all-powerful Administrator could directly read memory to capture a password but is trusted not to do so. Passwords should be obscured during entry on the local console in accordance with <a href="#FIA_UAU.7">FIA_UAU.7</a>. </p>
-              <p style="text-align: left;">Although this is out-of-scope of this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>, it is strongly advised to protect all authentication data of the device the same way and/or with similar strength as administrative passwords to reduce the risk of attacks like privilege escalation, etc.</p>
-            </span></div></div></div>
+        <div class="comp" id="FPT_APW_EXT.1"><h4>FPT_APW_EXT.1 Protection of Administrator Passwords</h4>
+          <div class="element"><div class="reqid" id="FPT_APW_EXT.1.1"><a href="#FPT_APW_EXT.1.1" class="abbr">FPT_APW_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_APW_EXT.1">FPT_APW_EXT.1</a></div>
               Something
@@ -4038,25 +3938,10 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
-	  <a href="#FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</a>.
+	  .
       </i></b></div>
           
-          
-          <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.1"><a href="#FPT_TUD_EXT.2.1" class="abbr">FPT_TUD_EXT.2.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall check the validity of the code signing certificate before installing each update.</div></div>
-          <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.2"><a href="#FPT_TUD_EXT.2.2" class="abbr">FPT_TUD_EXT.2.2</a></div><div class="reqdesc"> If revocation information is not available for a certificate in the trust chain that is not a trusted certificate designated as a trust anchor, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall  [<b>selection</b>: <span class="selectable-content" id="nd_fpt_tud_ext.2.2_1">not install the update</span>, <span class="selectable-content" id="nd_fpt_tud_ext.2.2_2">allow the Administrator to choose whether to accept the certificate in these cases</span>].</div></div>
-          <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.3"><a href="#FPT_TUD_EXT.2.3" class="abbr">FPT_TUD_EXT.2.3</a></div><div class="reqdesc">If the certificate is deemed invalid because the certificate has expired, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shal  [<b>selection</b>: <span class="selectable-content" id="nd_fpt_tud_ext.2.3_1">allow the Administrator to choose whether to install the update in these cases</span>, <span class="selectable-content" id="nd_fpt_tud_ext.2.3_2">not accept the certificate</span>].</div></div>
-          <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.4"><a href="#FPT_TUD_EXT.2.4" class="abbr">FPT_TUD_EXT.2.4</a></div><div class="reqdesc">
-              <p style="text-align: left;">If the certificate is deemed invalid for reasons other than expiration or revocation information being unavailable, the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall not install the update.</p>
-            <div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 79 </b>
-              </p>
-              <p style="text-align: left;">This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if “X.509 digital signature mechanism” is selected in <a href="#FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</a>. </p>
-              <p style="text-align: left;">Validity is determined in accordance with FIA_X509_EXT.1. in the Functional Package for X.509</p>
-              <p style="text-align: left;">It is acceptable to provide a manual method for an administrator to provide revocation information (e.g., <abbr class="dyn-abbr"><a href="#abbr_CRL">CRL</a></abbr> upload) in addition to retrieving revocation information automatically in accordance with FIA_X509_EXT.1 and FIA_X509_EXT.2 in the Functional Package for X.509. It is expected that current updates are signed using current (not expired) certificates that will be valid at least until the next expected update. However, an administrator may desire to install previous updates that are signed by expired certificates. To indicate support for this practice, the author of the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> selects whether the certificate will be accepted, rejected, or the choice is left to the Administrator to accept or reject the certificate.</p>
-            </span></div></div></div>
+          <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.1"><a href="#FPT_TUD_EXT.2.1" class="abbr">FPT_TUD_EXT.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_TUD_EXT.2">FPT_TUD_EXT.2</a></div>
               Something
@@ -4105,18 +3990,11 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
         
         <div class="comp" id="FTA_SSL_EXT.1"><h4>FTA_SSL_EXT.1 TSF-initiated Session Locking</h4><div class="statustag"><i><b>This is an implementation-based component.
                 Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-6">Local security admin</a></li></ul>
+                <ul><li><a href="#[object Object]"></a></li></ul>
                 as described in Appendix A.3: Implementation-based Requirements.
                </b></i></div>
           
-          <div class="element"><div class="reqid" id="FTA_SSL_EXT.1.1"><a href="#FTA_SSL_EXT.1.1" class="abbr">FTA_SSL_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall, for local interactive sessions, [<b>selection</b>: <span class="selectable-content" id="nd_fta_ssl_ext.1.1_1">lock the session - disable any activity of the Administrator’s data access/display devices other than unlocking the session, and requiring that the Administrator reauthenticate to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> prior to unlocking the session</span>, <span class="selectable-content" id="nd_fta_ssl_ext.1.1_2">terminate the session</span>] after a Security Administrator-specified time period of inactivity.<div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 84 </b>
-              </p>
-              <p style="text-align: left;">An interactive session governed by this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> is a session in which an authenticated state is achieved and then preserved across multiple commands. By contrast, if authentication accompanies each individual command (without preservation of the same authenticated state) then this is not considered an interactive session.</p>
-            </span></div></div></div>
+          <div class="element"><div class="reqid" id="FTA_SSL_EXT.1.1"><a href="#FTA_SSL_EXT.1.1" class="abbr">FTA_SSL_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall</div></div>
           
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FTA_SSL_EXT.1">FTA_SSL_EXT.1</a></div>
@@ -4631,21 +4509,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 		Appendix <a href="#feat-based-reqs" class="dynref"></a> defines requirements that must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>  
 		if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements particular product features. 
 		For this technology type, the following product features require the claiming of additional <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>:
-  <h3 class="indexable" data-level="3" id="nd-feature-1">A.0.1 Password-based remote administration</h3><span class="description">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides remote administration using a password-based authentication mechanism, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_AFL.1">FIA_AFL.1</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-2">A.0.2 Password-based local authentication</h3><span class="description">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides a password-based local authentication mechanism, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_UAU.7">FIA_UAU.7</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-3">A.0.3 Password-based authentication</h3><span class="description">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides a password-based authentication mechanism, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_PMG_EXT.1">FIA_PMG_EXT.1</a></b></li><li><b><a href="#FPT_APW_EXT.1">FPT_APW_EXT.1</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-4">A.0.4 Pre-shared keys for IPsec</h3><span class="description">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may support pre-shared keys for use in the IPsec protocol that conform
-to <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784. If so, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FIA_PSK_EXT.1">FIA_PSK_EXT.1</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-5">A.0.5 Admin management of crypto keys</h3><span class="description">True if cryptographic keys can be managed (e.g.,
-modified, deleted or generated/imported) by the Security Administrator.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FMT_MTD.1/CryptoKeys">FMT_MTD.1/CryptoKeys</a></b></li></ul></p><h3 class="indexable" data-level="3" id="nd-feature-6">A.0.6 Local security admin</h3><span class="description">True if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides the Security Administrator the ability to administer the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> locally.</span><br/><p>
-	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
-            <ul><li><b><a href="#FTA_SSL_EXT.1">FTA_SSL_EXT.1</a></b></li></ul></p><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix B -  Entropy Documentation and Assessment</h1>blah<h1 id="a-glossary" class="indexable" data-level="A">Appendix C -  Glossary</h1>
+  <h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix B -  Entropy Documentation and Assessment</h1>blah<h1 id="a-glossary" class="indexable" data-level="A">Appendix C -  Glossary</h1>
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">C.1 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">C.1.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>

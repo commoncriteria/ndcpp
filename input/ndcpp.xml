@@ -83,30 +83,6 @@
     <sec:Overview title="Overview"/>
     <tech-terms/>
     <section title="Compliant Targets of Evaluation" id="TOEdescription"/>
-    <section title="TOE Features" id="sec-features">
-      <implements>
-        <feature id="nd-feature-1" title="Password-based remote administration">
-          <description>If the TOE provides remote administration using a password-based authentication mechanism, certain SFRs in this PP must be included.</description>
-        </feature>
-        <feature id="nd-feature-2" title="Password-based local authentication">
-          <description>If the TOE provides a password-based local authentication mechanism, certain SFRs in this PP must be included.</description>
-        </feature>
-        <feature id="nd-feature-3" title="Password-based authentication">
-          <description>If the TOE provides a password-based authentication mechanism, certain SFRs in this PP must be included.</description>
-        </feature>
-        <feature id="nd-feature-4" title="Pre-shared keys for IPsec">
-          <description>The TOE may support pre-shared keys for use in the IPsec protocol that conform
-to RFC 8784. If so, certain SFRs in this PP must be included.</description>
-        </feature>
-        <feature id="nd-feature-5" title="Admin management of crypto keys">
-          <description>True if cryptographic keys can be managed (e.g.,
-modified, deleted or generated/imported) by the Security Administrator.</description>
-        </feature>
-        <feature id="nd-feature-6" title="Local security admin">
-          <description>True if the TOE provides the Security Administrator the ability to administer the TOE locally.</description>
-        </feature>
-      </implements>
-    </section>
     <section title="PP Overview" id="s-ppoverview">words</section>
     <section title="TOE Use Cases" id="s-usecases">Words</section>
   </sec:Introduction>
@@ -230,7 +206,47 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li> <h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p> <h:ol><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"></h:p></h:li></h:ol></h:li></h:ol> <selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables> <h:p style="text-align: left;">;</h:p><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
+            <title>
+              <h:p>The TSF shall be able to generate audit data of the following auditable events:</h:p>
+              <h:ol>
+                <h:li>
+                  <h:p>Start-up and shut-down of the audit functions;</h:p>
+                </h:li>
+                <h:li>
+                  <h:p>All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p>
+                </h:li>
+                <h:li>
+                  <h:p>
+                    <h:i>All administrative actions comprising:</h:i>
+                  </h:p>
+                  <h:ol type="a">
+                    <h:li>
+                      <h:p>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:p>
+                    </h:li>
+                    <h:li>
+                      <h:p>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:p>
+                    </h:li>
+                    <h:li>
+                      <h:p>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:p>
+                    </h:li>
+                  </h:ol>
+                </h:li>
+              </h:ol>
+              <selectables>
+                <selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable>
+                <selectable id="fau-gen-1-1-2">no other actions</selectable>
+                <selectable id="fau-gen-1-1-3">
+                  <assignable>list of other uses of privileges</assignable></selectable>
+              </selectables>
+              <h:p style="text-align: left;">;</h:p>
+              <h:ol start="4">
+                <h:li>
+                  <h:p style="text-align: left;">
+                    <h:i>Specifically defined auditable events listed in Table 2.</h:i>
+                  </h:p>
+                </h:li>
+              </h:ol>
+            </title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 1</h:b>
@@ -2956,13 +2972,9 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
       <section id="fia" title="Identification and Authentication (FIA)">
         <!-- FIA_AFL.1 Authentication Failure Management (Refinement) -->
         <f-component cc-id="fia_afl.1" id="fia-afl-1" name="Authentication Failure Management (Refinement)" status="feat-based">
-          <depends on="nd-feature-1"/>
+          <depends on="[object Object]"/>
           <f-element id="fia-afl-1-1">
-            <title>
-              <h:p style="text-align: left;">The TSF shall detect when <h:u>an Administrator configurable positive integer within</h:u></h:p>
-              <assignable>range of acceptable values</assignable>
-              <h:p style="text-align: left;">unsuccessful authentication attempts occur related to <h:i>Administrators attempting to authenticate remotely using a password.</h:i></h:p>
-            </title>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -2970,33 +2982,15 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
               <Tests/>
             </aactivity>
           </f-element>
-          <f-element id="nd-fia-afl-1-2">
-            <title><h:p style="text-align: left;">When the defined number of unsuccessful authentication attempts has been <h:u>met</h:u>, the TSF shall</h:p> <selectables><selectable id="nd-fia-afl-1-2-compsel-1">prevent the offending Administrator from successfully establishing a remote session using any authentication method that involves a password until <assignable>action to unlock</assignable> is taken by an Administrator</selectable><selectable id="nd_fia_afl.1.2_2">prevent the offending Administrator from successfully establishing a remote session using any authentication method that involves a password until an Administrator defined time period has elapsed</selectable></selectables>.</title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 74 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">This requirement applies to a defined number of successive unsuccessful remote password-based authentication attempts and does not apply to local Administrative access, since it does not make sense to lock a local Administrator’s account in this fashion. Compliant TOEs may optionally include cryptographic authentication failures and/or local authentication failures in the number of unsuccessful authentication attempts. This could be addressed by (for example) requiring a separate account for local Administrators or having the authentication mechanism implementation distinguish local and remote login attempts. The ‘action’ taken by a local Administrator is implementation specific and would be defined in the Administrator guidance (for example, lockout reset, or password reset). The ST author chooses one or both of the selections for handling of authentication failures depending on how the TOE has implemented this handler. </h:p>
-              <h:p style="text-align: left;">The TSS describes how the TOE ensures that authentication failures by remote Administrators cannot lead to a situation where no Administrator access is available, either permanently or temporarily (e.g., by providing local logon, which is not subject to blocking, or by allowing a reboot to clear the lockout status and restore administrator access). The Operational Guidance describes, and identifies the importance of, any actions that are required in order to ensure that Administrator access will always be maintained, even if remote administration is made permanently or temporarily unavailable due to blocking of accounts as a result of FIA_AFL.1.</h:p>
-            </note>
-          </f-element>
           <audit-event>
             <audit-event-descr>Unsuccessful login attempts limit is met or exceeded.</audit-event-descr>
             <audit-event-info>Origin of the attempt (e.g., IP address).</audit-event-info>
           </audit-event>
         </f-component>
         <!-- FIA_PMG_EXT.1 Password Management -->
-        <f-component cc-id="fia_pmg_ext.1" id="fia-pmg-ext-1" name="Password Management" status="feat-based">
-          <depends on="nd-feature-3"/>
+        <f-component cc-id="fia_pmg_ext.1" id="fia-pmg-ext-1" name="Password Management">
           <f-element id="fia-pmg-ext-1-1">
-            <title>The TSF shall provide the following password management capabilities for administrative passwords:<h:ol><h:li><h:p style="text-align: left;">Passwords shall be able to be composed of any combination of upper and lower case letters, numbers and the following special characters:</h:p></h:li></h:ol> <selectables><selectable id="nd_fia_pmg_ext.1.1_1">"!"</selectable><selectable id="nd_fia_pmg_ext.1.1_2">"@"</selectable><selectable id="nd_fia_pmg_ext.1.1_3">"#"</selectable><selectable id="nd_fia_pmg_ext.1.1_4">"$"</selectable><selectable id="nd_fia_pmg_ext.1.1_5">"%"</selectable><selectable id="nd_fia_pmg_ext.1.1_6">"^"</selectable><selectable id="nd_fia_pmg_ext.1.1_7">"&amp;"</selectable><selectable id="nd_fia_pmg_ext.1.1_8">"*"</selectable><selectable id="nd_fia_pmg_ext.1.1_9">"("</selectable><selectable id="nd_fia_pmg_ext.1.1_10">")"</selectable><selectable id="nd_fia_pmg_ext.1.1_11"><assignable>other characters</assignable></selectable></selectables> <h:ol><h:li><h:p style="text-align: left;">Minimum password length shall be <h:i>configurable to between</h:i></h:p></h:li></h:ol> <assignable>minimum number of characters supported by the TOE</assignable>  and  <assignable>number of characters greater than or equal to 15</assignable> <h:p style="text-align: left;"><h:i>characters.</h:i></h:p></title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 76 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">The ST author selects the special characters that are supported by the TOE. They may optionally list additional special characters supported using the assignment. "Administrative passwords" refers to passwords used by Administrators at the local console, over protocols that support passwords, such as SSH and HTTPS, or to grant configuration data that supports other SFRs in the Security Target. </h:p>
-              <h:p style="text-align: left;">The second assignment should be configured with the largest minimum password length the Security Administrator can configure.</h:p>
-            </note>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -3007,34 +3001,15 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
           <audit-event/>
         </f-component>
         <!-- FIA_PSK_EXT.1 Pre-Shared Key Composition -->
-        <f-component cc-id="fia_psk_ext.1" id="fia-psk-ext-1" name="Pre-Shared Key Composition" status="feat-based">
-          <depends on="nd-feature-4"/>
+        <f-component cc-id="fia_psk_ext.1" id="fia-psk-ext-1" name="Pre-Shared Key Composition">
           <f-element id="fia-psk-ext-1-1">
-            <title>The TSF shall be able to use pre-shared keys that conform to RFC 8784 for IPsec.</title>
-          </f-element>
-          <f-element id="nd-fia-psk-ext-1-2">
-            <title>The TSF shall be able to  <selectables><selectable id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</selectable><selectable id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via FCS_RBG.1</selectable></selectables>.</title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 77 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">Generated PSKs are expected to be shared between components via an out-of-band mechanism.</h:p>
-            </note>
+            <title>The TSF shall</title>
           </f-element>
         </f-component>
         <!-- FIA_UAU.7 Protected Authentication Feedback -->
-        <f-component cc-id="fia_uau.7" id="fia-uau-7" name="Protected Authentication Feedback" status="feat-based">
-          <depends on="nd-feature-2"/>
+        <f-component cc-id="fia_uau.7" id="fia-uau-7" name="Protected Authentication Feedback">
           <f-element id="fia_uau-7-1">
-            <title>
-              <h:p style="text-align: left;">The TSF shall provide only <h:u>obscured feedbac</h:u>k to the <h:b>administrative</h:b> user while the authentication is in progress <h:b>at the local console</h:b>.</h:p>
-            </title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 75 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">‘Obscured feedback’ implies the TSF does not produce a visible display of any authentication data entered by an administrator (such as the echoing of a password), although an obscured indication of progress may be provided (such as an asterisk for each character). It also implies that the TSF does not return any information during the authentication process to the administrator that may provide any indication of the authentication data.</h:p>
-            </note>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -3101,13 +3076,7 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         <f-component cc-id="fmt_mof.1" id="fmt-mof-1-autoupdate" name="Management of Security Functions Behaviour" iteration="AutoUpdate" status="sel-based">
           <depends on-sel="dummy"/>
           <f-element id="fmt-mof-au-1">
-            <title>The TSF shall restrict the ability to <selectables><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_3">enable</selectable><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_4">disable</selectable></selectables> the functions <selectables><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_1">automatic checking for updates</selectable><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_2">automatic update</selectable></selectables> <h:p style="text-align: left;">to <h:i>Security Administrators</h:i>.</h:p></title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 81 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">FMT_MOF.1/AutoUpdate is only applicable and should be included if the TOE supports automatic checking for updates and/or automatic updates and allows them to be enabled and disabled. Enable and disable of automatic checking for updates and/or automatic updates is restricted to Security Administrators. The option “automatic update” may only be selected if digital signatures are used to validate the trusted update.</h:p>
-            </note>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -3119,25 +3088,9 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         </f-component>
         <!-- FMT_MOF.1/Functions Management of Security Functions Behaviour -->
         <f-component cc-id="fmt_mof.1" id="fmt-mof-1-functions" name="Management of Security Functions Behaviour" iteration="Functions" status="sel-based">
-          <depends on-incl="fau-stg-ext-1"/>
+          <depends on-sel="dummy"/>
           <f-element id="fmt-mof-fn-1">
-            <title>The TSF shall restrict the ability to <selectables><selectable id="nd_fmt_mof.1.1_FUNCTIONS_1">determine the behaviour of</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_2">modify the behaviour of</selectable></selectables> the functions <selectables><selectable id="nd_fmt_mof.1.1_FUNCTIONS_3">transmission of audit data to an external IT entity</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_4">handling of audit data</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_5">audit functionality when Local Audit Storage Space is full</selectable></selectables> <h:p style="text-align: left;">to <h:i>Security Administrators</h:i>.</h:p></title>
-            <note role="application">
-              <h:p style="text-align: left;">Application Note 82 </h:p>
-              <h:p style="text-align: left;">FMT_MOF.1/Functions should be chosen if one or more of the following scenarios apply:</h:p>
-              <h:ul>
-                <h:li>
-                  <h:p style="text-align: left;">If the transmission protocol for transmission of audit data to an external IT entity as defined in FAU_STG_EXT.1.1 is configurable, “transmission of audit data to an external IT entity” should be chosen. </h:p>
-                </h:li>
-                <h:li>
-                  <h:p style="text-align: left;">If the handling of audit data is configurable, “handling of audit data” must be chosen. The term “handling of audit data” refers to any administratively configurable selection or assignments in any FAU_STG_EXT.x SFR. </h:p>
-                </h:li>
-                <h:li>
-                  <h:p style="text-align: left;">If the behaviour of the audit functionality is configurable when Local Audit Storage Space is full, “audit functionality when Local Audit Storage Space is full” must be chosen.</h:p>
-                </h:li>
-              </h:ul>
-              <h:p style="text-align: left;">The first selection for ‘determine the behaviour of’ and ‘modify the behaviour of’ should be done as appropriate. It might be necessary to have different selections for the first selection depending on the second selection (e.g., “handling of audit data” might require “determine the behaviour of” and “modify the behaviour of” for the first selection on the one hand and “audit functionality when Local Audit Storage Space is full” might require “modify the behaviour of” only). In that case FMT_MOF.1/Functions should be iterated with increasing number appended (i.e., FMT_MOF.1/Functions1, FMT_MOF.1/Functions2, etc.).</h:p>
-            </note>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -3172,18 +3125,9 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         </f-component>
         <!-- FMT_MOF.1/Services Management of Security Functions Behaviour -->
         <f-component cc-id="fmt_mof.1" id="fmt-mof-1-services" name="Management of Security Functions Behaviour" iteration="Services" status="sel-based">
+          <depends on-sel="dummy"/>
           <f-element id="fmt-mof-sv-1">
-            <title>
-              <h:p style="text-align: left;">The TSF shall restrict the ability to <h:b>start and stop</h:b> <h:s>the functions</h:s> <h:b>services</h:b> to <h:i>Security Administrators</h:i>.</h:p>
-            </title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 80</h:b>
-              </h:p>
-              <h:p style="text-align: left;">FMT_MOF.1/Services should only be chosen if the Security Administrator has the ability to start and stop services and the corresponding option has been selected in FMT_SMF.1. </h:p>
-              <h:p style="text-align: left;">In FMT_MOF.1.1/Services 'enable and disable' have been refined to 'start and stop' and 'the functions: [assignment: list of functions]' has been refined to 'services'. </h:p>
-              <h:p style="text-align: left;">With respect to FAU_GEN.1.1, FMT_SMF.1 and FMT_MOF.1/Services the term ‘services’ refers to trusted path and trusted channel communications, on demand self-tests, trusted update and Administrator sessions (that exist under the trusted path) (e.g., netconf).</h:p>
-            </note>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -3215,18 +3159,9 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
           <audit-event/>
         </f-component>
         <!-- FMT_MTD.1/CryptoKeys Management of TSF Data -->
-        <f-component cc-id="fmt_mtd.1" id="fmt-mtd-1-cryptokeys" name="Management of TSF Data" iteration="CryptoKeys" status="feat-based">
-          <depends on="nd-feature-5"/>
+        <f-component cc-id="fmt_mtd.1" id="fmt-mtd-1-cryptokeys" name="Management of TSF Data" iteration="CryptoKeys" status="sel-based">
           <f-element id="fmt-mtd-ck-1">
-            <title>
-              <h:p style="text-align: left;">The TSF shall restrict the ability to <h:i><h:u>manage</h:u></h:i> the <h:i>cryptographic keys</h:i> to <h:i>Security Administrators</h:i>.</h:p>
-            </title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 83 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">FMT_MTD.1.1/CryptoKeys restricts management of cryptographic keys to Security Administrators. It should be included if cryptographic keys can be managed (e.g., modified, deleted or generated/imported) by the Security Administrator. The identifier ‘CryptoKeys’ has been added here to separate this iteration of FMT_MTD.1 from the mandatory iteration of FMT_MTD.1 defined in Section 6.6.2.1 (FMT_MTD.1/CoreData).</h:p>
-            </note>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -3444,26 +3379,15 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
       <!-- 5.1.6 Protection of the TSF (FPT) -->
       <section id="fpt" title="Protection of the TSF (FPT)">
         <!-- FPT_APW_EXT.1 Protection of Administrator Passwords -->
-        <f-component cc-id="fpt_apw_ext.1" id="fpt-apw-ext-1" name="Protection of Administrator Passwords" status="feat-based">
-          <depends on="nd-feature-3"/>
+        <f-component cc-id="fpt_apw_ext.1" id="fpt-apw-ext-1" name="Protection of Administrator Passwords">
           <f-element id="fpt-apw-ext-1-1">
-            <title>The TSF shall store administrative passwords in non-plaintext form.</title>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
               <Guidance/>
               <Tests/>
             </aactivity>
-          </f-element>
-          <f-element id="nd-fpt-apw-ext-1-2">
-            <title>The TSF shall prevent the reading of plaintext administrative passwords.</title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 78 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">The intent of the requirement is that raw password authentication data of Security Administrators is not stored in the clear, and that no Administrator is able to read the plaintext password of a Security Administrator through “normal” interfaces. An all-powerful Administrator could directly read memory to capture a password but is trusted not to do so. Passwords should be obscured during entry on the local console in accordance with FIA_UAU.7. </h:p>
-              <h:p style="text-align: left;">Although this is out-of-scope of this cPP, it is strongly advised to protect all authentication data of the device the same way and/or with similar strength as administrative passwords to reduce the risk of attacks like privilege escalation, etc.</h:p>
-            </note>
           </f-element>
           <audit-event/>
         </f-component>
@@ -3621,35 +3545,15 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         </f-component>
         <!-- FPT_TUD_EXT.2 Trusted Update Based on Certificates -->
         <f-component cc-id="fpt_tud_ext.2" id="fpt-tud-ext-2" name="Trusted Update Based on Certificates" status="sel-based">
-          <depends on-incl="fpt-tud-ext-1"/>
-          <depends on-sel="nd_fpt_tud_ext.1.3_1"/>
+          <depends on-sel="dummy"/>
           <f-element id="fpt-tud-ext-2-1">
-            <title> The TSF shall check the validity of the code signing certificate before installing each update.</title>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
               <Guidance/>
               <Tests/>
             </aactivity>
-          </f-element>
-          <f-element id="nd-fpt-tud-ext-2-2">
-            <title> If revocation information is not available for a certificate in the trust chain that is not a trusted certificate designated as a trust anchor, the TSF shall  <selectables><selectable id="nd_fpt_tud_ext.2.2_1">not install the update</selectable><selectable id="nd_fpt_tud_ext.2.2_2">allow the Administrator to choose whether to accept the certificate in these cases</selectable></selectables>.</title>
-          </f-element>
-          <f-element id="nd-fpt-tud-ext-2-3">
-            <title>If the certificate is deemed invalid because the certificate has expired, the TSF shal  <selectables><selectable id="nd_fpt_tud_ext.2.3_1">allow the Administrator to choose whether to install the update in these cases</selectable><selectable id="nd_fpt_tud_ext.2.3_2">not accept the certificate</selectable></selectables>.</title>
-          </f-element>
-          <f-element id="nd-fpt-tud-ext-2-4">
-            <title>
-              <h:p style="text-align: left;">If the certificate is deemed invalid for reasons other than expiration or revocation information being unavailable, the TSF shall not install the update.</h:p>
-            </title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 79 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">This component must be included in the ST if “X.509 digital signature mechanism” is selected in FPT_TUD_EXT.1.3. </h:p>
-              <h:p style="text-align: left;">Validity is determined in accordance with FIA_X509_EXT.1. in the Functional Package for X.509</h:p>
-              <h:p style="text-align: left;">It is acceptable to provide a manual method for an administrator to provide revocation information (e.g., CRL upload) in addition to retrieving revocation information automatically in accordance with FIA_X509_EXT.1 and FIA_X509_EXT.2 in the Functional Package for X.509. It is expected that current updates are signed using current (not expired) certificates that will be valid at least until the next expected update. However, an administrator may desire to install previous updates that are signed by expired certificates. To indicate support for this practice, the author of the ST selects whether the certificate will be accepted, rejected, or the choice is left to the Administrator to accept or reject the certificate.</h:p>
-            </note>
           </f-element>
           <audit-event>
             <audit-event-descr>Failure of update.</audit-event-descr>
@@ -3699,15 +3603,9 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         </f-component>
         <!-- FTA_SSL_EXT.1 TSF-initiated Session Locking -->
         <f-component cc-id="fta_ssl_ext.1" id="fta-ssl-ext-1" name="TSF-initiated Session Locking" status="feat-based">
-          <depends on="nd-feature-6"/>
+          <depends on="[object Object]"/>
           <f-element id="fta-ssl-ext-1-1">
-            <title>The TSF shall, for local interactive sessions, <selectables><selectable id="nd_fta_ssl_ext.1.1_1">lock the session - disable any activity of the Administrator’s data access/display devices other than unlocking the session, and requiring that the Administrator reauthenticate to the TSF prior to unlocking the session</selectable><selectable id="nd_fta_ssl_ext.1.1_2">terminate the session</selectable></selectables> after a Security Administrator-specified time period of inactivity.</title>
-            <note role="application">
-              <h:p style="text-align: left;">
-                <h:b>Application Note 84 </h:b>
-              </h:p>
-              <h:p style="text-align: left;">An interactive session governed by this SFR is a session in which an authenticated state is achieved and then preserved across multiple commands. By contrast, if authentication accompanies each individual command (without preservation of the same authenticated state) then this is not considered an interactive session.</h:p>
-            </note>
+            <title>The TOE shall</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>

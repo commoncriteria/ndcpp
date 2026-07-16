@@ -1003,15 +1003,44 @@ FTP_TRP.1/Admin</rationale>
             </title>
             <note role="application">
               <h:p style="text-align: left;">
-                <h:b>Application Note 11 </h:b>
+                <h:b>Application Note 11</h:b>
               </h:p>
-              <h:p style="text-align: left;">The ST author selects all key generation algorithms used for key agreement (including generation of ephemeral keys) and device authentication. </h:p>
-              <h:p style="text-align: left;">For RSA the choice of the modulus implies the resulting key sizes of the public and private keys generated using the specified standard methods. </h:p>
-              <h:p style="text-align: left;">When generating ECC keys pairs for key agreement and if “ECDH” is claimed in FCS_CKM_EXT.7, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve. </h:p>
-              <h:p style="text-align: left;">For Finite Field Cryptography (FFC), “FFC-ERB” or “FFC–RS” may be claimed only for generating private and public keys when “DH” is claimed in FCS_CKM_EXT.7. </h:p>
-              <h:p style="text-align: left;">The MODP Diffie-Hellman groups do not necessarily adhere to the protocol restrictions specified as IKE groups. MODP Diffie-Hellman groups may also be used in other protocols such as TLS 1.2. </h:p>
+              <h:p style="text-align: left;">The ST author selects all key generation algorithms used for key agreement (including generation of ephemeral keys) and device authentication.</h:p>
+              <h:p style="text-align: left;">For RSA the choice of the modulus implies the resulting key sizes of the public and private keys generated using the specified standard methods.</h:p>
+              <h:p style="text-align: left;">When generating ECC keys pairs for key agreement and if “ECDH” is claimed in FCS_CKM_EXT.7, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve.</h:p>
+              <h:p style="text-align: left;">For Finite Field Cryptography (FFC), “FFC-ERB” or “FFC–RS” may be claimed only for generating private and public keys when “DH” is claimed in FCS_CKM_EXT.7.</h:p>
+              <h:p style="text-align: left;">The MODP Diffie-Hellman groups do not necessarily adhere to the protocol restrictions specified as IKE groups. MODP Diffie-Hellman groups may also be used in other protocols such as TLS 1.2.</h:p>
               <h:p style="text-align: left;">When generating ECC key pairs for digital signature generation and if “ECDSA” is claimed in FCS_COP.1/SigGen, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve.</h:p>
               <h:p style="text-align: left;">When key generation is used for device authentication, other than non-X.509 SSH authentication algorithm, the public key is expected to be associated with an X.509v3 certificate.</h:p>
+              <h:p style="text-align: left;">TEST FOR ADDING A TABLE:</h:p>
+              <h:table style="min-width: 50px;">
+                <tbody>
+                  <h:tr>
+                    <h:th colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">height</h:p>
+                    </h:th>
+                    <h:th colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">number of tests</h:p>
+                    </h:th>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">10</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">5</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">15</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">4</h:p>
+                    </h:td>
+                  </h:tr>
+                </tbody>
+              </h:table>
             </note>
             <aactivity>
               <TSS>
@@ -1024,8 +1053,9 @@ FTP_TRP.1/Admin</rationale>
                 <h:p style="text-align: left;">54. The evaluator shall verify that the Guidance instructs the administrator how to configure the TOE to generate keys for the selected key generation algorithms for all key types and uses identified in the TSS.</h:p>
               </Guidance>
               <Tests>
-                <h:p style="text-align: left;">55. The following tests are conditional based on the selections made in the SFR. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
+                <h:p style="text-align: left;"></h:p>
                 <testlist>
+                  <h:p style="text-align: left;">55. The following tests are conditional based on the selections made in the SFR. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
                   <test>
                     <h:p style="text-align: left;">
                       <h:b>RSA Key Generation </h:b>
@@ -1083,35 +1113,37 @@ FTP_TRP.1/Admin</rationale>
                   </test>
                   <h:br/>
                   <test>
-                    <h:p style="text-align: left;">Testing for Random Probable Primes Method </h:p>
-                    <h:p style="text-align: left;">58. If the TOE generates random probable primes (method 2) then, if possible, the random probable primes method should also be verified against a known good implementation as described above. If verification against a known good implementation is not possible, the evaluator shall have the TSF generate 25 key pairs for each supported key length nlen and verify that all of the following are true. </h:p>
+                    <h:p style="text-align: left;">
+                      <h:b>Testing for Random Probable Primes Method</h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">58. If the TOE generates random probable primes (method 2) then, if possible, the random probable primes method should also be verified against a known good implementation as described above. If verification against a known good implementation is not possible, the evaluator shall have the TSF generate 25 key pairs for each supported key length nlen and verify that all of the following are true.</h:p>
                     <h:ul>
                       <h:li>
-                        <h:p style="text-align: left;">n = p*q </h:p>
+                        <h:p style="text-align: left;">n = p*q</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">p and q are probably prime according to Miller-Rabin tests with error probability &lt;2(-125) </h:p>
+                        <h:p style="text-align: left;">p and q are probably prime according to Miller-Rabin tests with error probability &lt;2(-125)</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">216 &lt; e &lt; 2256 and e is an odd integer </h:p>
+                        <h:p style="text-align: left;">216 &lt; e &lt; 2256 and e is an odd integer</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">GCD(p-1,e) = 1 </h:p>
+                        <h:p style="text-align: left;">GCD(p-1,e) = 1</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">GCD(q-1,e) = 1 </h:p>
+                        <h:p style="text-align: left;">GCD(q-1,e) = 1</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">|p-q| > 2(nlen/2 – 100) </h:p>
+                        <h:p style="text-align: left;">|p-q| > 2(nlen/2 – 100)</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">p ≥ squareroot(2)*( 2(nlen/2 -1) ) </h:p>
+                        <h:p style="text-align: left;">p ≥ squareroot(2)*( 2(nlen/2 -1) )</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">q ≥ squareroot(2)*( 2(nlen/2 -1) ) </h:p>
+                        <h:p style="text-align: left;">q ≥ squareroot(2)*( 2(nlen/2 -1) )</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">2(nlen/2) &lt; d &lt; LCM(p-1,q-1) </h:p>
+                        <h:p style="text-align: left;">2(nlen/2) &lt; d &lt; LCM(p-1,q-1)</h:p>
                       </h:li>
                       <h:li>
                         <h:p style="text-align: left;">e*d = 1 mod LCM(p-1,q-1)</h:p>

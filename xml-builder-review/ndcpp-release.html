@@ -643,7 +643,7 @@ function showTarget(id){
 <tr><td>3</td><td>2023-04-06</td><td>Incorporated comments received. Released for use</td></tr>
 <tr><td></td><td>2023-12-06</td><td>Released for use</td></tr>
 <tr><td>4</td><td>2025-11-25</td><td>Released for use</td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#sec-features" style="text-indent:10px">1.4<span>TOE Features</span></a><a href="#nd-feature-1" style="text-indent:20px">1.4.1<span>Password-based remote administration</span></a><a href="#nd-feature-2" style="text-indent:20px">1.4.2<span>Password-based local authentication</span></a><a href="#nd-feature-3" style="text-indent:20px">1.4.3<span>Password-based authentication</span></a><a href="#nd-feature-4" style="text-indent:20px">1.4.4<span>Pre-shared keys for IPsec</span></a><a href="#nd-feature-5" style="text-indent:20px">1.4.5<span>Admin management of crypto keys</span></a><a href="#nd-feature-6" style="text-indent:20px">1.4.6<span>Local security admin</span></a><a href="#nd-feature-7" style="text-indent:20px">1.4.7<span>Distributed TOE</span></a><a href="#s-ppoverview" style="text-indent:10px">1.5<span>PP Overview</span></a><a href="#s-usecases" style="text-indent:10px">1.6<span>TOE Use Cases</span></a><a href="#_sec_5" style="text-indent:10px">1.7<span>Introduction to Distributed TOEs</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.2<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#fau" style="text-indent:20px">5.1.1<span>Security Audit (FAU)</span></a><a href="#fcs" style="text-indent:20px">5.1.2<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">5.1.3<span>Identification and Authentication (FIA)</span></a><a href="#fmt" style="text-indent:20px">5.1.4<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.5<span>Protection of the TSF (FPT)</span></a><a href="#fta" style="text-indent:20px">5.1.6<span>TOE Access (FTA)</span></a><a href="#ftp_itc" style="text-indent:20px">5.1.7<span>Trusted Channel (FTP_ITC)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.8<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#adv" style="text-indent:20px">5.2.1<span>Class ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.2<span>Class AGD: Guidance Documents</span></a><a href="#alc" style="text-indent:20px">5.2.3<span>Class ALC: Life-cycle Support</span></a><a href="#ase" style="text-indent:20px">5.2.4<span>Class ASE: ST Evaluation</span></a><a href="#ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#sec-features" style="text-indent:10px">1.4<span>TOE Features</span></a><a href="#nd-feature-1" style="text-indent:20px">1.4.1<span>Password-based remote administration</span></a><a href="#nd-feature-2" style="text-indent:20px">1.4.2<span>Password-based local authentication</span></a><a href="#nd-feature-3" style="text-indent:20px">1.4.3<span>Password-based authentication</span></a><a href="#nd-feature-4" style="text-indent:20px">1.4.4<span>Pre-shared keys for IPsec</span></a><a href="#nd-feature-5" style="text-indent:20px">1.4.5<span>Admin management of crypto keys</span></a><a href="#nd-feature-6" style="text-indent:20px">1.4.6<span>Local security admin</span></a><a href="#nd-feature-7" style="text-indent:20px">1.4.7<span>Distributed TOE</span></a><a href="#s-ppoverview" style="text-indent:10px">1.5<span>PP Overview</span></a><a href="#s-usecases" style="text-indent:10px">1.6<span>TOE Use Cases</span></a><a href="#_sec_5" style="text-indent:10px">1.7<span>Introduction to Distributed TOEs</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.2<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#ss-audit-table" style="text-indent:20px">5.1.1<span>Auditable Events for Mandatory SFRs</span></a><a href="#fau" style="text-indent:20px">5.1.2<span>Security Audit (FAU)</span></a><a href="#fcs" style="text-indent:20px">5.1.3<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">5.1.4<span>Identification and Authentication (FIA)</span></a><a href="#fmt" style="text-indent:20px">5.1.5<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.6<span>Protection of the TSF (FPT)</span></a><a href="#fta" style="text-indent:20px">5.1.7<span>TOE Access (FTA)</span></a><a href="#ftp_itc" style="text-indent:20px">5.1.8<span>Trusted Channel (FTP_ITC)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.9<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#adv" style="text-indent:20px">5.2.1<span>Class ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.2<span>Class AGD: Guidance Documents</span></a><a href="#alc" style="text-indent:20px">5.2.3<span>Class ALC: Life-cycle Support</span></a><a href="#ase" style="text-indent:20px">5.2.4<span>Class ASE: ST Evaluation</span></a><a href="#ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
     </span></a><a href="#alc-optional" style="text-indent:20px">A.1.1<span>Class ALC: Life-cycle Support</span></a><a href="#fau-optional" style="text-indent:20px">A.1.2<span>Security Audit (FAU)</span></a><a href="#fco-optional" style="text-indent:20px">A.1.3<span>Communication (FCO)</span></a><a href="#fcs-optional" style="text-indent:20px">A.1.4<span>Cryptographic Support (FCS)</span></a><a href="#fpt-optional" style="text-indent:20px">A.1.5<span>Protection of the TSF (FPT)</span></a><a href="#ftp_itc-optional" style="text-indent:20px">A.1.6<span>Trusted Channel (FTP_ITC)</span></a><a href="#objective-reqs" style="text-indent:10px">A.2<span>Objective  Requirements
     </span></a><a href="#feat-based-reqs" style="text-indent:10px">A.3<span>Implementation-dependent  Requirements
     </span></a><a href="#fia-feat-based" style="text-indent:20px">A.3.1<span>Identification and Authentication (FIA)</span></a><a href="#fmt-feat-based" style="text-indent:20px">A.3.2<span>Security Management (FMT)</span></a><a href="#fpt-feat-based" style="text-indent:20px">A.3.3<span>Protection of the TSF (FPT)</span></a><a href="#fta-feat-based" style="text-indent:20px">A.3.4<span>TOE Access (FTA)</span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix B - <span>Selection-based  Requirements
@@ -878,8 +878,57 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
    
     
     <h2 id="SFRs" class="indexable" data-level="2">5.1 Security Functional Requirements</h2>
+      <h3 class="indexable" data-level="3" id="ss-audit-table">5.1.1 Auditable Events for Mandatory SFRs</h3>
+        <table class="sort_kids_" border="1"><caption data-sortkey="#0"><span class="ctr" data-myid="t-audit-mandatory" data-counter-type="ct-Table" id="t-audit-mandatory">Table <span class="counter">2</span></span>: Auditable Events for Mandatory Requirements</caption><tr data-sortkey="#1"><th>Requirement</th><th>Auditable Events</th><th>Additional Audit Record Contents</th></tr><tr data-sortkey="FAU_GEN.1"><td rowspan="2"><a href="#FAU_GEN.1">FAU_GEN.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FAU_GEN.1#"><td></td></tr><tr data-sortkey="FAU_GEN.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FAU_GEN.2"><td rowspan="2"><a href="#FAU_GEN.2">FAU_GEN.2</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FAU_GEN.2#"><td></td></tr><tr data-sortkey="FAU_GEN.2.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FAU_STG_EXT.1"><td rowspan="2"><a href="#FAU_STG_EXT.1">FAU_STG_EXT.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FAU_STG_EXT.1#"><td></td></tr><tr data-sortkey="FAU_STG_EXT.1.6"><td>Configuration of local audit settings.</td><td>Identity of account making changes to the audit configuration.</td></tr><tr data-sortkey="FCS_CKM.1/AKG"><td rowspan="2"><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_CKM.1/AKG#"><td></td></tr><tr data-sortkey="FCS_CKM.1/AKG.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FCS_CKM.6"><td rowspan="2"><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_CKM.6#"><td></td></tr><tr data-sortkey="FCS_CKM.6.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FCS_CKM_EXT.7"><td rowspan="2"><a href="#FCS_CKM_EXT.7">FCS_CKM_EXT.7</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_CKM_EXT.7#"><td></td></tr><tr data-sortkey="FCS_CKM_EXT.7.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FCS_COP.1/DataEncryption"><td rowspan="2"><a href="#FCS_COP.1/DataEncryption">FCS_COP.1/DataEncryption</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_COP.1/DataEncryption#"><td></td></tr><tr data-sortkey="FCS_COP.1/DataEncryption.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FCS_COP.1/Hash"><td rowspan="2"><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_COP.1/Hash#"><td></td></tr><tr data-sortkey="FCS_COP.1/Hash.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FCS_COP.1/KeyedHash"><td rowspan="2"><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_COP.1/KeyedHash#"><td></td></tr><tr data-sortkey="FCS_COP.1/KeyedHash.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FCS_COP.1/SigGen"><td rowspan="2"><a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_COP.1/SigGen#"><td></td></tr><tr data-sortkey="FCS_COP.1/SigGen.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FCS_RBG.1"><td rowspan="2"><a href="#FCS_RBG.1">FCS_RBG.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FCS_RBG.1#"><td></td></tr><tr data-sortkey="FCS_RBG.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FIA_UIA_EXT.1"><td rowspan="2"><a href="#FIA_UIA_EXT.1">FIA_UIA_EXT.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FIA_UIA_EXT.1#"><td></td></tr><tr data-sortkey="FIA_UIA_EXT.1.4"><td>All use of identification and authentication mechanisms.</td><td>Origin of the attempt (e.g., IP address).</td></tr><tr data-sortkey="FMT_MOF.1/ManualUpdate"><td rowspan="2"><a href="#FMT_MOF.1/ManualUpdate">FMT_MOF.1/ManualUpdate</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FMT_MOF.1/ManualUpdate#"><td></td></tr><tr data-sortkey="FMT_MOF.1/ManualUpdate.1"><td>Any attempt to initiate a manual update.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_MTD.1/CoreData"><td rowspan="2"><a href="#FMT_MTD.1/CoreData">FMT_MTD.1/CoreData</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FMT_MTD.1/CoreData#"><td></td></tr><tr data-sortkey="FMT_MTD.1/CoreData.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FMT_SMF.1"><td rowspan="26"><a href="#FMT_SMF.1">FMT_SMF.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FMT_SMF.1#"><td></td></tr><tr data-sortkey="FMT_SMF.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FMT_SMF.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FMT_SMF.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FMT_SMF.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FMT_SMF.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FMT_SMF.1.32"><td>All management activities of <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.35"><td>Initiation of the trusted channel.</td><td>Identification of the initiator and target of failed trusted channels establishment attempt.</td></tr><tr data-sortkey="FMT_SMF.1.36"><td>Termination of the trusted channel.</td><td>Identification of the initiator and target of failed trusted channels establishment attempt.</td></tr><tr data-sortkey="FMT_SMF.1.37"><td>Failure of the trusted channel functions.</td><td>Identification of the initiator and target of failed trusted channels establishment attempt.</td></tr><tr data-sortkey="FMT_SMF.1.39"><td>Discontinuous changes to time - either Administrator actuated or changed via an automated process. (Note: No continuous changes to time need to be logged. See also application note on <a href="#FPT_STM_EXT.1">FPT_STM_EXT.1</a>)</td><td>For discontinuous changes to time: The old and new values for the time. Origin of the attempt to change time for success and failure (e.g., IP address).</td></tr><tr data-sortkey="FMT_SMF.1.41"><td>Initiation of update; result of the update attempt (success or failure).</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.42"><td>Failure of update.</td><td>Reason for failure (including identifier of invalid certificate).</td></tr><tr data-sortkey="FMT_SMF.1.43"><td>The termination of a remote session by the session locking mechanism.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.44"><td>The termination of an interactive session.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.45"><td>
+              [<b>selection</b><b>, choose one of</b>: <span class="selectable-content" id="_s_595">Any attempts at unlocking of an interactive session.</span>, <span class="selectable-content" id="_s_596">None</span>]
+            </td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.46"><td>
+              [<b>selection</b><b>, choose one of</b>: <span class="selectable-content" id="_s_597">The termination of a local session by the session lock.</span>, <span class="selectable-content" id="_s_598">None</span>]
+            </td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.48"><td>Initiation of the trusted channel.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.49"><td>Termination of the trusted channel.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.50"><td>Failure of the trusted channel functions.</td><td>Reason for failure</td></tr><tr data-sortkey="FMT_SMF.1.51"><td>Initiation of the trusted path.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.52"><td>Termination of the trusted path.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.53"><td>Failure of the trusted path functions.</td><td>Reason for failure.</td></tr><tr data-sortkey="FMT_SMF.1.54"><td>Initiation of the trusted path.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.55"><td>Termination of the trusted path.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMF.1.56"><td>Failure of the trusted path functions.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FMT_SMR.2"><td rowspan="2"><a href="#FMT_SMR.2">FMT_SMR.2</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FMT_SMR.2#"><td></td></tr><tr data-sortkey="FMT_SMR.2.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FPT_SKP_EXT.1"><td rowspan="2"><a href="#FPT_SKP_EXT.1">FPT_SKP_EXT.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FPT_SKP_EXT.1#"><td></td></tr><tr data-sortkey="FPT_SKP_EXT.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FPT_STM_EXT.1"><td rowspan="2"><a href="#FPT_STM_EXT.1">FPT_STM_EXT.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FPT_STM_EXT.1#"><td></td></tr><tr data-sortkey="FPT_STM_EXT.1.2"><td>Discontinuous changes to time - either Administrator actuated or changed via an automated process. (Note: No continuous changes to time need to be logged. See also application note on <a href="#FPT_STM_EXT.1">FPT_STM_EXT.1</a>)</td><td>For discontinuous changes to time: The old and new values for the time. Origin of the attempt to change time for success and failure (e.g., IP address).</td></tr><tr data-sortkey="FPT_TST_EXT.1"><td rowspan="2"><a href="#FPT_TST_EXT.1">FPT_TST_EXT.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FPT_TST_EXT.1#"><td></td></tr><tr data-sortkey="FPT_TST_EXT.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FPT_TUD_EXT.1"><td rowspan="2"><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FPT_TUD_EXT.1#"><td></td></tr><tr data-sortkey="FPT_TUD_EXT.1.3"><td>Initiation of update; result of the update attempt (success or failure).</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FTA_SSL.3"><td rowspan="2"><a href="#FTA_SSL.3">FTA_SSL.3</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FTA_SSL.3#"><td></td></tr><tr data-sortkey="FTA_SSL.3.1"><td>The termination of a remote session by the session locking mechanism.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FTA_SSL.4"><td rowspan="2"><a href="#FTA_SSL.4">FTA_SSL.4</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FTA_SSL.4#"><td></td></tr><tr data-sortkey="FTA_SSL.4.1"><td>The termination of an interactive session.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FTA_TAB.1"><td rowspan="2"><a href="#FTA_TAB.1">FTA_TAB.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FTA_TAB.1#"><td></td></tr><tr data-sortkey="FTA_TAB.1.1"><td>No events specified</td><td>N/A</td></tr><tr data-sortkey="FTP_ITC.1"><td rowspan="4"><a href="#FTP_ITC.1">FTP_ITC.1</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FTP_ITC.1#"><td></td></tr><tr data-sortkey="FTP_ITC.1.3"><td>Initiation of the trusted channel.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FTP_ITC.1.4"><td>Termination of the trusted channel.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FTP_ITC.1.5"><td>Failure of the trusted channel functions.</td><td>Reason for failure</td></tr><tr data-sortkey="FTP_TRP.1/Admin"><td rowspan="4"><a href="#FTP_TRP.1/Admin">FTP_TRP.1/Admin</a></td><td style="display:none"></td></tr><tr style="display:none;" data-sortkey="FTP_TRP.1/Admin#"><td></td></tr><tr data-sortkey="FTP_TRP.1/Admin.3"><td>Initiation of the trusted path.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FTP_TRP.1/Admin.4"><td>Termination of the trusted path.</td><td>
+    No additional information
+  </td></tr><tr data-sortkey="FTP_TRP.1/Admin.5"><td>Failure of the trusted path functions.</td><td>Reason for failure.</td></tr></table>
       
-      <h3 id="fau" class="indexable" data-level="3">5.1.1 Security Audit (FAU)</h3>
+      
+      <h3 id="fau" class="indexable" data-level="3">5.1.2 Security Audit (FAU)</h3>
         
         <div class="comp" id="FAU_GEN.1"><h4>FAU_GEN.1 Audit data generation</h4>
           <div class="element"><div class="reqid" id="FAU_GEN.1.1"><a href="#FAU_GEN.1.1" class="abbr">FAU_GEN.1.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to generate audit data of the following auditable events:    <ol><li><p style="text-align: left;">Start-up and shut-down of the audit functions;</p></li> <li><p style="text-align: left;">All auditable events for the <u>not specified</u> level of audit; and</p></li> <li><p style="text-align: left;"><i>All administrative actions comprising:</i></p> <ol type="a"><li><p style="text-align: left;"><i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</i></p></li> <li><p style="text-align: left;"><i>Changes to <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</i></p></li> <li><p style="text-align: left;"><i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</i></p></li> <li><p style="text-align: left;"></p></li></ol></li></ol> [<b>selection</b>: <span class="selectable-content" id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</span>, <span class="selectable-content" id="fau-gen-1-1-2">no other actions</span>, <span class="selectable-content" id="fau-gen-1-1-3">[<b>assignment</b>: 
@@ -1117,7 +1166,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
       
       
       
-      <h3 id="fcs" class="indexable" data-level="3">5.1.2 Cryptographic Support (FCS)</h3>
+      <h3 id="fcs" class="indexable" data-level="3">5.1.3 Cryptographic Support (FCS)</h3>
         
         <div class="comp" id="FCS_CKM.1/AKG"><h4>FCS_CKM.1/AKG Cryptographic Key Generation - Asymmetric Key</h4>
           <div class="element"><div class="reqid" id="FCS_CKM.1.1/AKG"><a href="#FCS_CKM.1.1/AKG" class="abbr">FCS_CKM.1.1/AKG</a></div><div class="reqdesc">
@@ -1138,7 +1187,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                   .
                   The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_CKM.1.1/AKG">FCS_CKM.1.1/AKG</a>.
                 
-            <table><caption><span class="ctr" data-myid="fcs-ckm-1-1-akg-71" data-counter-type="ct-Table" id="fcs-ckm-1-1-akg-71">Table <span class="counter">2</span></span>: Allowed choices for <a href="#FCS_CKM.1.1/AKG">FCS_CKM.1.1/AKG</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-ckm-1-1-akg-71" data-counter-type="ct-Table" id="fcs-ckm-1-1-akg-71">Table <span class="counter">3</span></span>: Allowed choices for <a href="#FCS_CKM.1.1/AKG">FCS_CKM.1.1/AKG</a></caption>
                 <tr>
                   <th>Identifier</th>
                   <th>Cryptographic Key Generation Algorithm</th>
@@ -1172,44 +1221,15 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
       Note:
     </span><span class="note">
               <p style="text-align: left;">
-                <b>Application Note 11</b>
+                <b>Application Note 11 </b>
               </p>
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author selects all key generation algorithms used for key agreement (including generation of ephemeral keys) and device authentication.</p>
-              <p style="text-align: left;">For RSA the choice of the modulus implies the resulting key sizes of the public and private keys generated using the specified standard methods.</p>
-              <p style="text-align: left;">When generating ECC keys pairs for key agreement and if “ECDH” is claimed in <a href="#FCS_CKM_EXT.7">FCS_CKM_EXT.7</a>, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve.</p>
-              <p style="text-align: left;">For Finite Field Cryptography (FFC), “FFC-ERB” or “FFC–RS” may be claimed only for generating private and public keys when “DH” is claimed in <a href="#FCS_CKM_EXT.7">FCS_CKM_EXT.7</a>.</p>
-              <p style="text-align: left;">The MODP Diffie-Hellman groups do not necessarily adhere to the protocol restrictions specified as IKE groups. MODP Diffie-Hellman groups may also be used in other protocols such as TLS 1.2.</p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author selects all key generation algorithms used for key agreement (including generation of ephemeral keys) and device authentication. </p>
+              <p style="text-align: left;">For RSA the choice of the modulus implies the resulting key sizes of the public and private keys generated using the specified standard methods. </p>
+              <p style="text-align: left;">When generating ECC keys pairs for key agreement and if “ECDH” is claimed in <a href="#FCS_CKM_EXT.7">FCS_CKM_EXT.7</a>, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve. </p>
+              <p style="text-align: left;">For Finite Field Cryptography (FFC), “FFC-ERB” or “FFC–RS” may be claimed only for generating private and public keys when “DH” is claimed in <a href="#FCS_CKM_EXT.7">FCS_CKM_EXT.7</a>. </p>
+              <p style="text-align: left;">The MODP Diffie-Hellman groups do not necessarily adhere to the protocol restrictions specified as IKE groups. MODP Diffie-Hellman groups may also be used in other protocols such as TLS 1.2. </p>
               <p style="text-align: left;">When generating ECC key pairs for digital signature generation and if “ECDSA” is claimed in <a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a>, then “ECC–ERB” or “ECC–RS” must be claimed. The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve.</p>
               <p style="text-align: left;">When key generation is used for device authentication, other than non-X.509 SSH authentication algorithm, the public key is expected to be associated with an X.509v3 certificate.</p>
-              <p style="text-align: left;">TEST FOR ADDING A TABLE:</p>
-              <table style="min-width: 50px;">
-                
-                  <tr>
-                    <th colspan="1" rowspan="1">
-                      <p style="text-align: left;">height</p>
-                    </th>
-                    <th colspan="1" rowspan="1">
-                      <p style="text-align: left;">number of tests</p>
-                    </th>
-                  </tr>
-                  <tr>
-                    <td colspan="1" rowspan="1">
-                      <p style="text-align: left;">10</p>
-                    </td>
-                    <td colspan="1" rowspan="1">
-                      <p style="text-align: left;">5</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="1" rowspan="1">
-                      <p style="text-align: left;">15</p>
-                    </td>
-                    <td colspan="1" rowspan="1">
-                      <p style="text-align: left;">4</p>
-                    </td>
-                  </tr>
-                
-              </table>
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a></div>
@@ -1224,8 +1244,8 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">54. The evaluator shall verify that the Guidance instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate keys for the selected key generation algorithms for all key types and uses identified in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p style="text-align: left;"></p>
-                <span class="testlist-"><p style="text-align: left;">55. The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_CKM.1/AKG:1</a>:
+                55. The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.
+                <span class="testlist-"><br/><br/><br/><br/><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_CKM.1/AKG:1</a>:
       
                     <p style="text-align: left;">
                       <b>RSA Key Generation </b>
@@ -1276,7 +1296,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                   </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FCS_CKM.1/AKG:2</a>:
       
                     <p style="text-align: left;">
-                      <b>Testing for Random Provable Primes and Conditional Methods </b>
+                      <b>Testing for Random Provable Primes and Conditional Methods</b>
                     </p>
                     <p style="text-align: left;">57. To test the key generation method for the random provable primes method and for all the primes with conditions methods (methods 1, 3-5), the evaluator must seed the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> key generation routine with sufficient data to deterministically generate the RSA key pair. For each supported combination of the above input parameters, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 key pairs. The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated by a known good implementation using the same input parameters.</p>
                   </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_CKM.1/AKG:3</a>:
@@ -1287,31 +1307,31 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                     <p style="text-align: left;">58. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> generates random probable primes (method 2) then, if possible, the random probable primes method should also be verified against a known good implementation as described above. If verification against a known good implementation is not possible, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 key pairs for each supported key length nlen and verify that all of the following are true.</p>
                     <ul>
                       <li>
-                        <p style="text-align: left;">n = p*q</p>
+                        <p style="text-align: left;">n = p*q </p>
                       </li>
                       <li>
                         <p style="text-align: left;">p and q are probably prime according to Miller-Rabin tests with error probability &lt;2(-125)</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">216 &lt; e &lt; 2256 and e is an odd integer</p>
+                        <p style="text-align: left;">216 &lt; e &lt; 2256 and e is an odd integer </p>
                       </li>
                       <li>
-                        <p style="text-align: left;">GCD(p-1,e) = 1</p>
+                        <p style="text-align: left;">GCD(p-1,e) = 1 </p>
                       </li>
                       <li>
-                        <p style="text-align: left;">GCD(q-1,e) = 1</p>
+                        <p style="text-align: left;">GCD(q-1,e) = 1 </p>
                       </li>
                       <li>
-                        <p style="text-align: left;">|p-q| &gt; 2(nlen/2 – 100)</p>
+                        <p style="text-align: left;">|p-q| &gt; 2(nlen/2 – 100) </p>
                       </li>
                       <li>
-                        <p style="text-align: left;">p ≥ squareroot(2)*( 2(nlen/2 -1) )</p>
+                        <p style="text-align: left;">p ≥ squareroot(2)*( 2(nlen/2 -1) ) </p>
                       </li>
                       <li>
-                        <p style="text-align: left;">q ≥ squareroot(2)*( 2(nlen/2 -1) )</p>
+                        <p style="text-align: left;">q ≥ squareroot(2)*( 2(nlen/2 -1) ) </p>
                       </li>
                       <li>
-                        <p style="text-align: left;">2(nlen/2) &lt; d &lt; LCM(p-1,q-1)</p>
+                        <p style="text-align: left;">2(nlen/2) &lt; d &lt; LCM(p-1,q-1) </p>
                       </li>
                       <li>
                         <p style="text-align: left;">e*d = 1 mod LCM(p-1,q-1)</p>
@@ -1333,156 +1353,59 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                     </ol>
                   </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FCS_CKM.1/AKG:5</a>:
       
-                    <p style="text-align: left;">
-                      <b>ECC Key Generation Test</b>
-                    </p>
-                    <p style="text-align: left;">60. For each supported combination of the above input parameters the evaluator shall require the implementation under test to generate 10 private/public key pairs (d, Q). The private key, d, shall be generated using a random bit generator as specified in <a href="#FCS_RBG.1">FCS_RBG.1</a>. The private key, d, is used to compute the public key, Q’. The evaluator shall confirm that 0&lt;d&lt;n (where n is the order of the group), and the computed value Q’ is then compared to the generated public/private key pairs’ public key, Q, to confirm that Q is equal to Q’.</p>
-                  </li><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FCS_CKM.1/AKG:6</a>:
-      
-                    <p style="text-align: left;">
-                      <b>ECC Key Validation Test </b>
-                    </p>
-                    <p style="text-align: left;">61. For each supported combination of the above parameters the evaluator shall generate 12 private/public key pairs using the key generation function of a known-good implementation. For each set of 12 public keys, the evaluator shall modify four public key values by shifting x or y out of range by adding the order of the field and modify four other public key values by shifting x or y so that they are still in bounds, but not on the curve. The remaining public key values are left unchanged (i.e., correct). To determine correctness, the evaluator shall submit the public keys to the public key validation (PKV) function of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and shall confirm that the results correspond as expected for the modified and unmodified values.</p>
-                  </li><li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_CKM.1/AKG:7</a>:
-      
-                    <p style="text-align: left;">
-                      <b>Finite Field Cryptography Key Generation </b>
-                    </p>
-                    <p style="text-align: left;">62. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate asymmetric cryptographic keys using finite fields, the evaluator shall perform the Safe Primes Generation Test and the Safe Primes Validation Test using the following input parameter: </p>
-                    <ol type="a">
-                      <li>
-                        <p style="text-align: left;">Fields/Groups [MODP-3072, MODP-4096, MODP-6144, MODP-8192, ffdhe3072, ffdhe4096, ffdhe6144, ffdhe8192]</p>
-                      </li>
-                    </ol>
-                  </li><li class="test-"><a id="_t_14" class="defined" href="#_t_14">Test FCS_CKM.1/AKG:8</a>:
-      
-                    <p style="text-align: left;">
-                      <b>Safe Primes Generation Test </b>
-                    </p>
-                    <p style="text-align: left;">63. For each supported safe primes group, generate 10 key pairs. The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated by a known good implementation using the same input parameters.</p>
-                  </li><li class="test-"><a id="_t_15" class="defined" href="#_t_15">Test FCS_CKM.1/AKG:9</a>:
-      
-                    <p style="text-align: left;">
-                      <b>Safe Primes Validation Test </b>
-                    </p>
-                    <p style="text-align: left;">64. For each supported safe primes group, use a known good implementation to generate 10 key pairs. For each set of 10, the evaluator shall modify three such that they are incorrect. The remaining values are left unmodified (i.e. correct). To determine correctness, the evaluator shall submit the key pairs to the public key validation (PKV) function of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and shall confirm that the results correspond as expected for the modified and unmodified values.</p>
-                  </li><li class="test-"><a id="_t_16" class="defined" href="#_t_16">Test FCS_CKM.1/AKG:10</a>:
-      
-                    <p style="text-align: left;">
-                      <b>LMS Key Generation </b>
-                    </p>
-                    <p style="text-align: left;">65. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate asymmetric cryptographic keys using LMS, the evaluator shall perform the LMS Key Generation Test using the following input parameters: </p>
-                    <ol type="a">
-                      <li>
-                        <p style="text-align: left;">Hash algorithm [SHA-256/192, SHAKE256/192, SHA-256, SHAKE256] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Winternitz [1, 2, 4, 8] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Tree height [5, 10, 15, 20, 25]</p>
-                      </li>
-                    </ol>
-                  </li><li class="test-"><a id="_t_17" class="defined" href="#_t_17">Test FCS_CKM.1/AKG:11</a>:
-      
-                    <p style="text-align: left;">
-                      <b>LMS Key Generation Test </b>
-                    </p>
-                    <p style="text-align: left;">66. For each supported combination of the hash algorithm, Winternitz parameter, and tree height, the evaluator shall generate one public key for each of the test cases. The number of test cases depends on the tree height, as follows:</p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">For height of 5, use 5 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 10, use 4 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 15, use 3 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 20, use 2 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 25, use 1 test case</p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s implementation by comparing the public key generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with that generated by a known good implementation using the same input parameters.</p>
-                  </li><li class="test-"><a id="_t_18" class="defined" href="#_t_18">Test FCS_CKM.1/AKG:12</a>:
-      
-                    <p style="text-align: left;">
-                      <b>ML-KEM Key Generation</b>
-                    </p>
-                    <p style="text-align: left;">67. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate asymmetric cryptographic keys using MLKEM, the evaluator shall perform the Algorithm Functional Test using the following input parameters: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Parameter set [ML-KEM-1024] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Random seed d [32 bytes] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Random seed z [32 bytes]</p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>Algorithm Functional Test </b>
-                    </p>
-                    <p style="text-align: left;">68. For each supported parameter set the evaluator shall require the implementation under test to generate 25 key pairs using 25 different randomly generated pairs of 32-byte seed values (d, z). To determine correctness, the evaluator shall compare the resulting key pairs (ek, dk) with those generated using a known-good implementation using the same inputs.</p>
-                  </li><li class="test-"><a id="_t_19" class="defined" href="#_t_19">Test FCS_CKM.1/AKG:13</a>:
-      
-                    <p style="text-align: left;">
-                      <b>ML-DSA Key Generation </b>
-                    </p>
-                    <p style="text-align: left;">69. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate asymmetric cryptographic keys using MLDSA, the evaluator shall perform the Algorithm Functional Test using the following input parameters: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Parameter set [ML-DSA-87] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Random seed [32 bytes]</p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>Algorithm Functional Test </b>
-                    </p>
-                    <p style="text-align: left;">For each supported parameter set the evaluator shall require the implementation under test to generate 25 key pairs using 25 different randomly generated 32-byte seed values. To determine correctness, the evaluator shall compare the resulting key pairs with those generated using a known-good implementation using the same inputs.</p>
-                  </li><li class="test-"><a id="_t_20" class="defined" href="#_t_20">Test FCS_CKM.1/AKG:14</a>:
-      
-                    <p style="text-align: left;">
-                      <b>XMSS Key Generation </b>
-                    </p>
-                    <p style="text-align: left;">70. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate asymmetric cryptographic keys using XMSS, the evaluator shall perform the XMSS Key Generation Test using the following input parameters: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Hash algorithm [SHA-256/192, SHAKE256/192, SHA-256, SHAKE256] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Tree height [10, 16, 20] (XMSS only)</p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>XMSS Key Generation Test </b>
-                    </p>
-                    <p style="text-align: left;">For each supported combination of hash algorithm and tree height, the evaluator shall generate one public key for each test case. The number of test cases depends on the tree height as specified as follows:</p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">For height of 10, use 5 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 16, use 4 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 20, use 3 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 40, use 2 test cases</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For height of 60, use 1 test case </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>’s implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated by a known good implementation using the same input parameters. </p>
-                    <p style="text-align: left;">Note: The number of test cases is limited due to the extreme amount of time it can take to generate XMSS trees.</p>
+                    <p style="text-align: left;">66. For each supported combination of the hash algorithm, Winternitz parameter, and tree height, the evaluator shall generate one public key for each of the test cases. The number of test cases depends on the tree height.</p>
+                    <table style="min-width: 50px;">
+                      <tbody>
+                        <tr>
+                          <th colspan="1" rowspan="1">
+                            <p style="text-align: left;">Height</p>
+                          </th>
+                          <th colspan="1" rowspan="1">
+                            <p style="text-align: left;">Number of test cases</p>
+                          </th>
+                        </tr>
+                        <tr>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">5</p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">5</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">10</p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">4</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">15</p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">3</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">20</p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">2</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">25</p>
+                          </td>
+                          <td colspan="1" rowspan="1">
+                            <p style="text-align: left;">1</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </li></ul></span>
               </div></div></div></div></div>
         
@@ -1557,7 +1480,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 						
 						The evaluator shall perform the following for each of the key destruction circumstances or triggers
 						described in <a href="#FCS_CKM.6.1">FCS_CKM.6.1</a>.
-                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_21" class="defined" href="#_t_21">Test FCS_CKM.6:1</a>:
+                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_12" class="defined" href="#_t_12">Test FCS_CKM.6:1</a>:
       If the key destruction method acts upon keys and keying material held in volatile memory that is subject to overwrite by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (whether or not the plaintext key is subsequently encrypted for storage in volatile or non-volatile memory). <p></p> The evaluator shall: <ol type="1"><li>Record the value of the key or keying material.</li> <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform normal cryptographic processing with the key
 									from Step #1.</li> <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to dump the appropriate memory into a binary file.</li> <li>Search the content of the binary file created in Step #3 to locate all
 									instances of the known key value from Step #1.<p></p>
@@ -1569,7 +1492,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 									evaluator shall first confirm with the developer how the key is normally
 									stored, in order to choose fragment sizes that are the same or smaller than
 									any fragmentation of the data that may be implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The
-									endianness or byte-order should also be taken into account in the search.)</li></ol>  <p></p> Steps #1-8 ensure that the complete key does not exist anywhere in volatile memory. If a copy is found, then the test fails. <p></p> Step #9 ensures that partial key fragments do not remain in memory. If the evaluator finds a 32-or-greater-consecutive-bit fragment, then it fails immediately. Otherwise, there is a chance that it is not within the context of a key (e.g., some random bits that happen to match). If this is the case the test should be repeated with a different key in Step #1. If a fragment is also found in this repeated run, then the test fails unless the developer provides a reasonable explanation for the collision, then the evaluator may give a pass on this test. <p></p></li><li class="test-"><a id="_t_22" class="defined" href="#_t_22">Test FCS_CKM.6:2</a>:
+									endianness or byte-order should also be taken into account in the search.)</li></ol>  <p></p> Steps #1-8 ensure that the complete key does not exist anywhere in volatile memory. If a copy is found, then the test fails. <p></p> Step #9 ensures that partial key fragments do not remain in memory. If the evaluator finds a 32-or-greater-consecutive-bit fragment, then it fails immediately. Otherwise, there is a chance that it is not within the context of a key (e.g., some random bits that happen to match). If this is the case the test should be repeated with a different key in Step #1. If a fragment is also found in this repeated run, then the test fails unless the developer provides a reasonable explanation for the collision, then the evaluator may give a pass on this test. <p></p></li><li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_CKM.6:2</a>:
       If the key destruction method acts upon keys and keying material held in non-volatile memory that is subject to overwrite or erasure by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. <ol type="1"><li>Record the value of the key or keying material.</li> <li>Cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform normal cryptographic processing with the key
 									from Step #1.</li> <li>Search the non-volatile memory the key was stored in for instances of the
 									known key value from Step #1. <p></p>
@@ -1602,7 +1525,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
     <span class="selectable-content">List of Standards</span>]
                   The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a>.
                 
-            <table><caption><span class="ctr" data-myid="nd-ckm-ext-7-crypto-table" data-counter-type="ct-Table" id="nd-ckm-ext-7-crypto-table">Table <span class="counter">3</span></span>: Allowed choices for <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></caption>
+            <table><caption><span class="ctr" data-myid="nd-ckm-ext-7-crypto-table" data-counter-type="ct-Table" id="nd-ckm-ext-7-crypto-table">Table <span class="counter">4</span></span>: Allowed choices for <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></caption>
                 <tr>
                   <th>Identifier</th>
                   <th>Cryptographic Key Generation Algorithm</th>
@@ -1699,7 +1622,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
     <span class="selectable-content">List of standards</span>]
                   .                    <p></p> <p></p> provides the allowable choices for	completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>.                  
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="fcs-cop-keyedhash-sels">Table <span class="counter">4</span></span>: Allowable choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="fcs-cop-keyedhash-sels">Table <span class="counter">5</span></span>: Allowable choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
                 <tr>
                   <th>Keyed Hash Algorithm</th>
                   
@@ -1813,7 +1736,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
     <span class="selectable-content">List of standards</span>]
                   .                    <p></p> <p></p> The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a>.                  
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-siggen-sels" data-counter-type="ct-Table" id="fcs-cop-siggen-sels">Table <span class="counter">5</span></span>: Allowable choices for <a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-siggen-sels" data-counter-type="ct-Table" id="fcs-cop-siggen-sels">Table <span class="counter">6</span></span>: Allowable choices for <a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></caption>
                 <tr>
                   <th>Identifier</th>
                   <th>Cryptographic algorithm</th>
@@ -2278,7 +2201,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
     <span class="selectable-content">List of standards</span>]
                   .                    <p></p> <p></p> The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a>.                  
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-sigver-sels" data-counter-type="ct-Table" id="fcs-cop-sigver-sels">Table <span class="counter">6</span></span>: Allowable choices for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-sigver-sels" data-counter-type="ct-Table" id="fcs-cop-sigver-sels">Table <span class="counter">7</span></span>: Allowable choices for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -2667,7 +2590,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
     <span class="selectable-content">List of Standards</span>]
                                       after initialization.                    <p></p> <p></p> The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_RBG.1.1">FCS_RBG.1.1</a>.                 
                 
-            <table><caption><span class="ctr" data-myid="fcs-rbg-1-sels" data-counter-type="ct-Table" id="fcs-rbg-1-sels">Table <span class="counter">7</span></span>: Allowable choices for <a href="#FCS_RBG.1.1">FCS_RBG.1.1</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-rbg-1-sels" data-counter-type="ct-Table" id="fcs-rbg-1-sels">Table <span class="counter">8</span></span>: Allowable choices for <a href="#FCS_RBG.1.1">FCS_RBG.1.1</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -2811,7 +2734,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
         
       
       
-      <h3 id="fia" class="indexable" data-level="3">5.1.3 Identification and Authentication (FIA)</h3>
+      <h3 id="fia" class="indexable" data-level="3">5.1.4 Identification and Authentication (FIA)</h3>
         
         
         
@@ -2867,7 +2790,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 			There are no test activities for this component.<br/></div></div></div></div>
       
       
-      <h3 id="fmt" class="indexable" data-level="3">5.1.4 Security Management (FMT)</h3>
+      <h3 id="fmt" class="indexable" data-level="3">5.1.5 Security Management (FMT)</h3>
         
         
         
@@ -3301,7 +3224,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 			There are no test activities for this component.<br/></div></div></div></div>
       
       
-      <h3 id="fpt" class="indexable" data-level="3">5.1.5 Protection of the TSF (FPT)</h3>
+      <h3 id="fpt" class="indexable" data-level="3">5.1.6 Protection of the TSF (FPT)</h3>
         
         
         
@@ -3423,7 +3346,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
         
       
       
-      <h3 id="fta" class="indexable" data-level="3">5.1.6 TOE Access (FTA)</h3>
+      <h3 id="fta" class="indexable" data-level="3">5.1.7 TOE Access (FTA)</h3>
         
         <div class="comp" id="FTA_SSL.3"><h4>FTA_SSL.3 TSF-initiated Termination (Refinement)</h4>
           <div class="element"><div class="reqid" id="FTA_SSL.3.1"><a href="#FTA_SSL.3.1" class="abbr">FTA_SSL.3.1</a></div><div class="reqdesc">
@@ -3482,7 +3405,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 			There are no test activities for this component.<br/></div></div></div></div>
       
       
-      <h3 id="ftp_itc" class="indexable" data-level="3">5.1.7 Trusted Channel (FTP_ITC)</h3>
+      <h3 id="ftp_itc" class="indexable" data-level="3">5.1.8 Trusted Channel (FTP_ITC)</h3>
         
         <div class="comp" id="FTP_ITC.1"><h4>FTP_ITC.1 Inter-TSF Trusted Channel (Refinement)</h4>
           <div class="element"><div class="reqid" id="FTP_ITC.1.1"><a href="#FTP_ITC.1.1" class="abbr">FTP_ITC.1.1</a></div><div class="reqdesc">
@@ -3558,8 +3481,8 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
         
         
       
-    <h3 id="obj-req-map" class="indexable" data-level="3">5.1.8 TOE Security Functional Requirements Rationale</h3><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">8</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="7"><a href="#T.SECURITY_FUNCTIONALITY_COMPROMISE">T.SECURITY_​FUNCTIONALITY_​COMPROMISE</a></td><td><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td></td></tr>
+    <h3 id="obj-req-map" class="indexable" data-level="3">5.1.9 TOE Security Functional Requirements Rationale</h3><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">9</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="7"><a href="#T.SECURITY_FUNCTIONALITY_COMPROMISE">T.SECURITY_​FUNCTIONALITY_​COMPROMISE</a></td><td><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td></td></tr>
 <tr><td><a href="#FIA_PMG_EXT.1">FIA_PMG_EXT.1</a> (Implementation-based)</td><td></td></tr>
 <tr><td><a href="#FIA_UAU.7">FIA_UAU.7</a> (Implementation-based)</td><td></td></tr>
 <tr><td><a href="#FMT_MTD.1/CryptoKeys">FMT_MTD.1/CryptoKeys</a> (Implementation-based)</td><td></td></tr>
@@ -4477,7 +4400,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
     <span class="selectable-content">List of standards</span>]
                   .                    <p></p> <p></p> the following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a>.                  
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-aead-sels" data-counter-type="ct-Table" id="fcs-cop-aead-sels">Table <span class="counter">9</span></span>: Allowed choices for <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-aead-sels" data-counter-type="ct-Table" id="fcs-cop-aead-sels">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -4692,7 +4615,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
     <span class="selectable-content">List of Standards</span>]
                   .  The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.
                 
-            <table><caption><span class="ctr" data-myid="nd-fcs-cop-1-1-keyencap-crypto-table" data-counter-type="ct-Table" id="nd-fcs-cop-1-1-keyencap-crypto-table">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
+            <table><caption><span class="ctr" data-myid="nd-fcs-cop-1-1-keyencap-crypto-table" data-counter-type="ct-Table" id="nd-fcs-cop-1-1-keyencap-crypto-table">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
                 <tr>
                   <th>Identifier</th>
                   <th>Cryptographic Algorithm</th>
@@ -4734,7 +4657,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
     <span class="selectable-content">List of Standards</span>]
                   .                    <p></p> <p></p> The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>.                  
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">12</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -4888,7 +4811,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
     <span class="selectable-content">List of Standards</span>]
                   .                    <p></p> <p></p> The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a>.                  
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-skc-sels" data-counter-type="ct-Table" id="fcs-cop-skc-sels">Table <span class="counter">12</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-skc-sels" data-counter-type="ct-Table" id="fcs-cop-skc-sels">Table <span class="counter">13</span></span>: Allowed choices for <a href="#FCS_COP.1/SKC">FCS_COP.1/SKC</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -5171,7 +5094,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
                   .
                   The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a>.
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-1-1-xof-1" data-counter-type="ct-Table" id="fcs-cop-1-1-xof-1">Table <span class="counter">13</span></span>: Allowed choices for <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-1-1-xof-1" data-counter-type="ct-Table" id="fcs-cop-1-1-xof-1">Table <span class="counter">14</span></span>: Allowed choices for <a href="#FCS_COP.1.1/XOF">FCS_COP.1.1/XOF</a></caption>
                 <tr>
                   <th>Cryptographic Algorithm</th>
                   
@@ -5498,7 +5421,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
               
             <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><h1 id="acronyms" class="indexable" data-level="A">Appendix C -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">14</span></span>: Acronyms
+			There are no test activities for this component.<br/></div></div></div></div><h1 id="acronyms" class="indexable" data-level="A">Appendix C -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">15</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
 <tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
@@ -5516,7 +5439,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
 <tr><td><span class="term" id="abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr></span></td><td><span id="long_abbr_TSF"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Security Functionality</span></td></tr>
 <tr><td><span class="term" id="abbr_TSFI" data-plural="TSFIs"><abbr class="dyn-abbr"><a href="#abbr_TSFI">TSFI</a></abbr></span></td><td><span id="long_abbr_TSFI"><abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> Interface</span></td></tr>
 <tr><td><span class="term" id="abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></span></td><td><span id="long_abbr_TSS"><abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> Summary Specification</span></td></tr>
-</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix D -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">15</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
+</table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix D -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">16</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part 1: 
 				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part 2: 

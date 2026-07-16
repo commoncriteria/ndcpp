@@ -1156,7 +1156,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
       Note:
     </span><span class="note">
               <p style="text-align: left;">
-                <b>Application Note 11 </b>
+                <b>Application Note 11</b>
               </p>
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author selects all key generation algorithms used for key agreement (including generation of ephemeral keys) and device authentication<a id="period_308" href="#period_308">. </a></p>
               <p style="text-align: left;">For RSA the choice of the modulus implies the resulting key sizes of the public and private keys generated using the specified standard methods<a id="period_309" href="#period_309">. </a></p>
@@ -1165,6 +1165,35 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
               <p style="text-align: left;">The MODP Diffie-Hellman groups do not necessarily adhere to the protocol restrictions specified as IKE groups<a id="period_313" href="#period_313">. </a>MODP Diffie-Hellman groups may also be used in other protocols such as TLS 1.2<a id="period_314" href="#period_314">. </a></p>
               <p style="text-align: left;">When generating ECC key pairs for digital signature generation and if &#8220;ECDSA&#8221; is claimed in <a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a>, then &#8220;ECC&#8211;ERB&#8221; or &#8220;ECC&#8211;RS&#8221; must be claimed<a id="period_315" href="#period_315">. </a>The sizes of the private key, which is a scalar, and the public key, which is a point on the elliptic curve, are determined by the choice of the curve<a id="period_316" href="#period_316">. </a></p>
               <p style="text-align: left;">When key generation is used for device authentication, other than non-X.509 SSH authentication algorithm, the public key is expected to be associated with an X.509v3 certificate<a id="period_317" href="#period_317">. </a></p>
+              <p style="text-align: left;">TEST FOR ADDING A TABLE:</p>
+              <table style="min-width: 50px;">
+                
+                  <tr>
+                    <th colspan="1" rowspan="1">
+                      <p style="text-align: left;">height</p>
+                    </th>
+                    <th colspan="1" rowspan="1">
+                      <p style="text-align: left;">number of tests</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <td colspan="1" rowspan="1">
+                      <p style="text-align: left;">10</p>
+                    </td>
+                    <td colspan="1" rowspan="1">
+                      <p style="text-align: left;">5</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="1" rowspan="1">
+                      <p style="text-align: left;">15</p>
+                    </td>
+                    <td colspan="1" rowspan="1">
+                      <p style="text-align: left;">4</p>
+                    </td>
+                  </tr>
+                
+              </table>
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_CKM.1/AKG">FCS_CKM.1/AKG</a></div>
@@ -1179,8 +1208,8 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">54<a id="period_327" href="#period_327">. </a>The evaluator shall verify that the Guidance instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate keys for the selected key generation algorithms for all key types and uses identified in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr><a id="period_328" href="#period_328">. </a></p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <p style="text-align: left;">55<a id="period_329" href="#period_329">. </a>The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_330" href="#period_330">. </a>The evaluator shall perform the following tests or witness respective tests executed by the developer<a id="period_331" href="#period_331">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_332" href="#period_332">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_333" href="#period_333">. </a></p>
-                <span class="testlist-"><br><br><br><br><br><br><br><br><br><br><br><br><br><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_CKM.1/AKG:1</a>:
+                <p style="text-align: left;"></p>
+                <span class="testlist-"><p style="text-align: left;">55<a id="period_329" href="#period_329">. </a>The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_330" href="#period_330">. </a>The evaluator shall perform the following tests or witness respective tests executed by the developer<a id="period_331" href="#period_331">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_332" href="#period_332">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_333" href="#period_333">. </a></p><br><br><br><br><br><br><br><br><br><br><br><br><br><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_CKM.1/AKG:1</a>:
       
                     <p style="text-align: left;">
                       <b>RSA Key Generation </b>
@@ -1236,35 +1265,37 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                     <p style="text-align: left;">57<a id="period_337" href="#period_337">. </a>To test the key generation method for the random provable primes method and for all the primes with conditions methods (methods 1, 3-5), the evaluator must seed the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> key generation routine with sufficient data to deterministically generate the RSA key pair<a id="period_338" href="#period_338">. </a>For each supported combination of the above input parameters, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 key pairs<a id="period_339" href="#period_339">. </a>The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>&#8217;s implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated by a known good implementation using the same input parameters<a id="period_340" href="#period_340">. </a></p>
                   </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_CKM.1/AKG:3</a>:
       
-                    <p style="text-align: left;">Testing for Random Probable Primes Method </p>
+                    <p style="text-align: left;">
+                      <b>Testing for Random Probable Primes Method</b>
+                    </p>
                     <p style="text-align: left;">58<a id="period_341" href="#period_341">. </a>If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> generates random probable primes (method 2) then, if possible, the random probable primes method should also be verified against a known good implementation as described above<a id="period_342" href="#period_342">. </a>If verification against a known good implementation is not possible, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 key pairs for each supported key length nlen and verify that all of the following are true<a id="period_343" href="#period_343">. </a></p>
                     <ul>
                       <li>
-                        <p style="text-align: left;">n = p*q </p>
+                        <p style="text-align: left;">n = p*q</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">p and q are probably prime according to Miller-Rabin tests with error probability &lt;2(-125) </p>
+                        <p style="text-align: left;">p and q are probably prime according to Miller-Rabin tests with error probability &lt;2(-125)</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">216 &lt; e &lt; 2256 and e is an odd integer </p>
+                        <p style="text-align: left;">216 &lt; e &lt; 2256 and e is an odd integer</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">GCD(p-1,e) = 1 </p>
+                        <p style="text-align: left;">GCD(p-1,e) = 1</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">GCD(q-1,e) = 1 </p>
+                        <p style="text-align: left;">GCD(q-1,e) = 1</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">|p-q| &gt; 2(nlen/2 &#8211; 100) </p>
+                        <p style="text-align: left;">|p-q| &gt; 2(nlen/2 &#8211; 100)</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">p &#8805; squareroot(2)*( 2(nlen/2 -1) ) </p>
+                        <p style="text-align: left;">p &#8805; squareroot(2)*( 2(nlen/2 -1) )</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">q &#8805; squareroot(2)*( 2(nlen/2 -1) ) </p>
+                        <p style="text-align: left;">q &#8805; squareroot(2)*( 2(nlen/2 -1) )</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">2(nlen/2) &lt; d &lt; LCM(p-1,q-1) </p>
+                        <p style="text-align: left;">2(nlen/2) &lt; d &lt; LCM(p-1,q-1)</p>
                       </li>
                       <li>
                         <p style="text-align: left;">e*d = 1 mod LCM(p-1,q-1)</p>

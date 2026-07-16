@@ -5,6 +5,7 @@ output/ndcpp-release-linkable.html: 13C
 output/ndcpp-release-linkable.html: 1c
 output/ndcpp-release-linkable.html: 23h
 output/ndcpp-release-linkable.html: 24h
+output/ndcpp-release-linkable.html: 2Security
 output/ndcpp-release-linkable.html: 2e
 output/ndcpp-release-linkable.html: 38A
 output/ndcpp-release-linkable.html: 38B
@@ -135,6 +136,7 @@ output/ndcpp-release.html: 13C
 output/ndcpp-release.html: 1c
 output/ndcpp-release.html: 23h
 output/ndcpp-release.html: 24h
+output/ndcpp-release.html: 2Security
 output/ndcpp-release.html: 2e
 output/ndcpp-release.html: 38A
 output/ndcpp-release.html: 38B
@@ -300,6 +302,7 @@ output/ndcpp.html: 13C
 output/ndcpp.html: 1c
 output/ndcpp.html: 23h
 output/ndcpp.html: 24h
+output/ndcpp.html: 2Security
 output/ndcpp.html: 2e
 output/ndcpp.html: 38A
 output/ndcpp.html: 38B

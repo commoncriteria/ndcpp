@@ -1030,6 +1030,8 @@ FTP_TRP.1/Admin</rationale>
                 55. The following tests are conditional based on the selections made in the SFR. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.
                 <testlist>
                   <test>
+                    <depends on="fcs-ckm-1-1-akg-5"/>
+                    <depends on="fcs-ckm-1-1-akg-12"/>
                     <h:p style="text-align: left;">
                       <h:b>RSA Key Generation </h:b>
                     </h:p>

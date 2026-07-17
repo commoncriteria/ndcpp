@@ -1228,8 +1228,13 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">54<a id="period_374" href="#period_374">. </a>The evaluator shall verify that the Guidance instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate keys for the selected key generation algorithms for all key types and uses identified in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr><a id="period_375" href="#period_375">. </a></p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                55<a id="period_376" href="#period_376">. </a>The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_377" href="#period_377">. </a>The evaluator shall perform the following tests or witness respective tests executed by the developer<a id="period_378" href="#period_378">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_379" href="#period_379">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_380" href="#period_380">. </a>                <span class="testlist-"><br><br><br><br><ul><li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FCS_CKM.1/AKG:1</a>:
-      
+                55<a id="period_376" href="#period_376">. </a>The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_377" href="#period_377">. </a>The evaluator shall perform the following tests or witness respective tests executed by the developer<a id="period_378" href="#period_378">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_379" href="#period_379">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_380" href="#period_380">. </a>                <span class="testlist-"><br><br><br><br><ul><div class="dependent">The following content should be included if:<ul><li><a href="#fcs-ckm-1-1-akg-5">8192</a>
+             is selected from 
+             <a href="#FCS_CKM.1.1/AKG">FCS_CKM.1.1/AKG</a></li><li><a href="#fcs-ckm-1-1-akg-12">MODP-2048</a>
+             is selected from 
+             <a href="#FCS_CKM.1.1/AKG">FCS_CKM.1.1/AKG</a></li></ul><div class="dependent-content"><test>
+                    
+                    
                     <p style="text-align: left;">
                       <b>RSA Key Generation </b>
                     </p>
@@ -1276,13 +1281,13 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                       </li>
                     </ul>
                     <p style="text-align: left;">The evaluator shall verify the ability of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to correctly produce values for the RSA key components, including the public verification exponent e, the private prime factors p and q, the public modulus n, and the calculation of the private signature exponent d<a id="period_383" href="#period_383">. </a></p>
-                  </li><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FCS_CKM.1/AKG:2</a>:
+                  </test></div></div><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FCS_CKM.1/AKG:1</a>:
       
                     <p style="text-align: left;">
                       <b>Testing for Random Provable Primes and Conditional Methods</b>
                     </p>
                     <p style="text-align: left;">57<a id="period_384" href="#period_384">. </a>To test the key generation method for the random provable primes method and for all the primes with conditions methods (methods 1, 3-5), the evaluator must seed the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> key generation routine with sufficient data to deterministically generate the RSA key pair<a id="period_385" href="#period_385">. </a>For each supported combination of the above input parameters, the evaluator shall have the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> generate 25 key pairs<a id="period_386" href="#period_386">. </a>The evaluator shall verify the correctness of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>&#8217;s implementation by comparing values generated by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> with those generated by a known good implementation using the same input parameters<a id="period_387" href="#period_387">. </a></p>
-                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_CKM.1/AKG:3</a>:
+                  </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FCS_CKM.1/AKG:2</a>:
       
                     <p style="text-align: left;">
                       <b>Testing for Random Probable Primes Method</b>
@@ -1320,7 +1325,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                         <p style="text-align: left;">e*d = 1 mod LCM(p-1,q-1)</p>
                       </li>
                     </ul>
-                  </li><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_CKM.1/AKG:4</a>:
+                  </li><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FCS_CKM.1/AKG:3</a>:
       
                     <p style="text-align: left;">
                       <b>Elliptic Curve Key Generation </b>
@@ -1334,7 +1339,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                         <p style="text-align: left;">Key pair generation method [extra random bits, rejection sampling]</p>
                       </li>
                     </ol>
-                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FCS_CKM.1/AKG:5</a>:
+                  </li><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FCS_CKM.1/AKG:4</a>:
       
                     <p style="text-align: left;">66<a id="period_392" href="#period_392">. </a>For each supported combination of the hash algorithm, Winternitz parameter, and tree height, the evaluator shall generate one public key for each of the test cases<a id="period_393" href="#period_393">. </a>The number of test cases depends on the tree height<a id="period_394" href="#period_394">. </a></p>
                     <table style="min-width: 50px;">

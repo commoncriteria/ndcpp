@@ -105,7 +105,7 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         <feature id="nd-feature-6" title="Local security admin">
           <description>True if the TOE provides the Security Administrator the ability to administer the TOE locally.</description>
         </feature>
-		<feature id="nd-feature-7" title="Distributed TOE">
+        <feature id="nd-feature-7" title="Distributed TOE">
           <description>True if the TOE is implemented as a Distributed TOE as described in the Distributed TOE section of this cPP.</description>
         </feature>
       </implements>
@@ -128,7 +128,8 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
     </CClaimsInfo>
   </sec:Conformance_Claims>
   <!-- 3.0 Security Problem Definition-->
-    <sec:Security_Problem_Description>
+  <!-- 4.0 Security Objectives -->
+  <sec:Security_Problem_Description>
     <h:p>A Network Device has a network infrastructure role that it is designed to provide. In doing so,
 	the Network Device communicates with other Network Devices and other network entities (i.e.
 	entities not defined as Network Devices because they do not have an infrastructure role) over
@@ -425,7 +426,6 @@ FTP_TRP.1/Admin</rationale>
       </OSPs>
     </sec:Organizational_Security_Policies>
   </sec:Security_Problem_Description>
-  <!-- 4.0 Security Objectives -->
   <sec:Security_Objectives>
     <!-- 4.1 Security Objectives for the TOE -->
     <!-- 4.2 Security Objctives for the Operational Environment -->
@@ -496,12 +496,15 @@ FTP_TRP.1/Admin</rationale>
   <sec:Security_Requirements title="Security Requirements">
     <!-- 5.1 Security Functional Requirements-->
     <sec:SFRs title="Security Functional Requirements" id="sfr">
+      <section id="ss-audit-table" title="Auditable Events for Mandatory SFRs">
+        <audit-table id="t-audit-mandatory" table="mandatory"/>
+      </section>
       <!-- 5.1.1 Security Audit (FAU) -->
       <section id="fau" title="Security Audit (FAU)">
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li> <h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p> <h:ol><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"></h:p></h:li></h:ol></h:li></h:ol> <selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables> <h:p style="text-align: left;">;</h:p><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li> <h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p> <h:ol type="a"><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"></h:p></h:li></h:ol></h:li></h:ol> <selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables> <h:p style="text-align: left;">;</h:p><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 1</h:b>
@@ -665,10 +668,10 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-3">
-            <title>The TSF shall maintain a                 <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables>                of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
+            <title>The TSF shall maintain a                  <selectables><selectable id="fau-stg-ext-1-3-1">log file</selectable><selectable id="fau-stg-ext-1-3-2">database</selectable><selectable id="fau-stg-ext-1-3-3">buffer</selectable><selectable id="fau-stg-ext-1-3-4"><assignable>other local logging method</assignable></selectable></selectables>                 of audit records in the event that an interruption of communication with the remote audit server occurs.</title>
           </f-element>
           <f-element id="fau-stg-ext-1-4">
-            <title>The TSF shall be able to store                <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables>                audit records locally with a minimum storage size of                <assignable>number of records and/or file/buffer size(s)</assignable></title>
+            <title>The TSF shall be able to store                 <selectables><selectable id="fau-stg-ext-1-4-1">persistent</selectable><selectable id="fau-stg-ext-1-4-2">non-persistent</selectable></selectables>                 audit records locally with a minimum storage size of                 <assignable>number of records and/or file/buffer size(s)</assignable></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 8</h:b>
@@ -677,7 +680,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-5">
-            <title>The TSF shall                <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables>                when the local storage space for audit data is full.</title>
+            <title>The TSF shall                 <selectables><selectable id="fau-stg-ext-1-5-1">drop new audit data</selectable><selectable id="fau-stg-ext-1-5-4">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="fau-stg-ext-1-5-3"><assignable>other action</assignable></selectable></selectables>                 when the local storage space for audit data is full.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 9 </h:b>
@@ -687,7 +690,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fau-stg-ext-1-6">
-            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records                <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
+            <title>The TSF shall provide the following mechanisms for administrative access to locally stored audit records                 <selectables><selectable id="fau-stg-ext-1-6-1">none</selectable><selectable id="fau-stg-ext-1-6-2">manual export</selectable><selectable id="fau-stg-ext-1-6-3">ability to view locally</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 10 </h:b>
@@ -703,7 +706,7 @@ FTP_TRP.1/Admin</rationale>
         <!-- FAU_STG_EXT.2 Counting Lost Audit Data -->
         <f-component cc-id="fau_stg_ext.2" id="fau-stg-ext-2" name="Counting Lost Audit Data" status="optional">
           <f-element id="fau-stg-ext-2-1">
-            <title>The TSF shall provide information about the number of         <selectables><selectable id="nd_fau_stg_ext.2.1_1">dropped</selectable><selectable id="nd_fau_stg_ext.2.1_2">overwritten</selectable><selectable id="nd_fau_stg_ext.2.1_3"><assignable>other information</assignable></selectable></selectables>         audit records in the case where the local storage has been filled and the TSF takes one of the actions defined in FAU_STG_EXT.1.5.</title>
+            <title>The TSF shall provide information about the number of          <selectables><selectable id="nd_fau_stg_ext.2.1_1">dropped</selectable><selectable id="nd_fau_stg_ext.2.1_2">overwritten</selectable><selectable id="nd_fau_stg_ext.2.1_3"><assignable>other information</assignable></selectable></selectables>          audit records in the case where the local storage has been filled and the TSF takes one of the actions defined in FAU_STG_EXT.1.5.</title>
             <note role="application">
               <h:p style="text-align: left;">Application Note 41</h:p>
               <h:p style="text-align: left;">This option should be chosen if the TOE supports this functionality. </h:p>
@@ -749,7 +752,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fau_stg_ext.4" id="fau-stg-ext-4" name="Protected Local Audit Event Storage for Distributed TOEs" status="sel-based">
           <depends on-sel="dummy"/>
           <f-element id="fau-stg-ext-4-1">
-            <title>The TSF of each TOE component which stores security audit data locally shall perform the following actions when the local storage space for audit data is full:     <assignable>table of components and for each component its action chosen according to the following:</assignable>  <selectables><selectable id="nd_fau_stg_ext.4.1_2">drop new audit data</selectable><selectable id="nd-fau-stg-ext-4-1-compsel-1">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="nd_fau_stg_ext.4.1_5"><assignable>other action</assignable></selectable></selectables>.</title>
+            <title>The TSF of each TOE component which stores security audit data locally shall perform the following actions when the local storage space for audit data is full:      <assignable>table of components and for each component its action chosen according to the following:</assignable>  <selectables><selectable id="nd_fau_stg_ext.4.1_2">drop new audit data</selectable><selectable id="nd-fau-stg-ext-4-1-compsel-1">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="nd_fau_stg_ext.4.1_5"><assignable>other action</assignable></selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 49 </h:b>
@@ -771,7 +774,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fau_stg_ext.5" id="fau-stg-ext-5" name="Protected Remote Audit Event Storage for Distributed TOEs" status="sel-based">
           <depends on-sel="dummy"/>
           <f-element id="fau-stg-ext-5-1">
-            <title> Each TOE component which does not store security audit data locally shall be able to buffer security audit data locally until it has been transferred to another TOE component that stores or forwards it. All transfer of audit records between TOE components shall use a protected channel according to     <selectables><selectable id="nd_fau_stg_ext.5.1_1">FPT_ITT.1</selectable><selectable id="nd_fau_stg_ext.5.1_2">FTP_ITC.1</selectable></selectables>.</title>
+            <title> Each TOE component which does not store security audit data locally shall be able to buffer security audit data locally until it has been transferred to another TOE component that stores or forwards it. All transfer of audit records between TOE components shall use a protected channel according to      <selectables><selectable id="nd_fau_stg_ext.5.1_1">FPT_ITT.1</selectable><selectable id="nd_fau_stg_ext.5.1_2">FTP_ITC.1</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 50 </h:b>
@@ -804,7 +807,7 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="fco-cpc-ext-1-2">
-            <title>The TSF shall implement a registration process in which components establish and use a communications channel that uses        <assignable>list of different types of channel given in the form of a selection</assignable>        for at least        <assignable>type of data for which the channel must be used</assignable>.</title>
+            <title>The TSF shall implement a registration process in which components establish and use a communications channel that uses         <assignable>list of different types of channel given in the form of a selection</assignable>         for at least         <assignable>type of data for which the channel must be used</assignable>.</title>
           </f-element>
           <f-element id="fco-cpc-ext-1-3">
             <title>The TSF shall enable a Security Administrator to disable communications between any pair of TOE components.</title>
@@ -929,7 +932,7 @@ FTP_TRP.1/Admin</rationale>
         <!-- FCS_CKM.2 Cryptographic Key Distribution -->
         <f-component cc-id="fcs_ckm.2" id="fcs-ckm-2" name="Cryptographic Key Distribution" status="optional">
           <f-element id="fcs-ckm-2-1">
-            <title><h:p style="text-align: left;">The TSF shall <h:b>perform</h:b> cryptographic <h:b>key establishment</h:b> in accordance with a specified cryptographic key <h:b>establishment</h:b> method:</h:p> <selectables><selectable id="nd_fcs_ckm.2.1_1">key encapsulation</selectable><selectable id="nd_fcs_ckm.2.1_2">key wrapping</selectable><selectable id="nd_fcs_ckm.2.1_3">encrypted channels</selectable></selectables>         that meets the following: none.</title>
+            <title><h:p style="text-align: left;">The TSF shall <h:b>perform</h:b> cryptographic <h:b>key establishment</h:b> in accordance with a specified cryptographic key <h:b>establishment</h:b> method:</h:p> <selectables><selectable id="nd_fcs_ckm.2.1_1">key encapsulation</selectable><selectable id="nd_fcs_ckm.2.1_2">key wrapping</selectable><selectable id="nd_fcs_ckm.2.1_3">encrypted channels</selectable></selectables>          that meets the following: none.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 43 </h:b>
@@ -1326,7 +1329,7 @@ FTP_TRP.1/Admin</rationale>
         <!-- FCS_COP.1/Hash Cryptographic Operation (Hash Algorithm) -->
         <f-component cc-id="fcs_cop.1" id="fcs-cop-1-hash" name="Cryptographic Operation (Hash Algorithm)" iteration="Hash">
           <f-element id="fcs-cop-ha-1">
-            <title><h:p style="text-align: left;">The TSF shall perform <h:i>cryptographic hashing</h:i> in accordance with a specified cryptographic algorithm</h:p> <selectables><selectable id="nd_fcs_cop.1.1_HASH_1">SHA-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_2">SHA-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_3">SHA-512</selectable><selectable id="nd_fcs_cop.1.1_HASH_4">SHA3-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_5">SHA3-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_6">SHA3-512</selectable></selectables>            that meets the following:            <selectables><selectable id="nd_fcs_cop.1.1_HASH_7">ISO/IEC 10118-3:2018 [SHA, SHA3]</selectable><selectable id="nd_fcs_cop.1.1_HASH_8">FIPS PUB 180-4 [SHA]</selectable><selectable id="nd_fcs_cop.1.1_HASH_9">FIPS PUB 202 [SHA3]</selectable></selectables>.</title>
+            <title><h:p style="text-align: left;">The TSF shall perform <h:i>cryptographic hashing</h:i> in accordance with a specified cryptographic algorithm</h:p> <selectables><selectable id="nd_fcs_cop.1.1_HASH_1">SHA-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_2">SHA-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_3">SHA-512</selectable><selectable id="nd_fcs_cop.1.1_HASH_4">SHA3-256</selectable><selectable id="nd_fcs_cop.1.1_HASH_5">SHA3-384</selectable><selectable id="nd_fcs_cop.1.1_HASH_6">SHA3-512</selectable></selectables>             that meets the following:             <selectables><selectable id="nd_fcs_cop.1.1_HASH_7">ISO/IEC 10118-3:2018 [SHA, SHA3]</selectable><selectable id="nd_fcs_cop.1.1_HASH_8">FIPS PUB 180-4 [SHA]</selectable><selectable id="nd_fcs_cop.1.1_HASH_9">FIPS PUB 202 [SHA3]</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 18 </h:b>
@@ -2642,7 +2645,7 @@ FTP_TRP.1/Admin</rationale>
                 </h:b>
                 Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE
 						must process the test cases according to the following algorithm once for each combination of
-						direction and key size:     <h:pre>
+						direction and key size:      <h:pre>
 		Key[0] = Key
 		IV[0] = IV
 		PT[0] = PT
@@ -2663,7 +2666,7 @@ FTP_TRP.1/Admin</rationale>
 			PT[0] = CT[j-1]
 		}
 		</h:pre>	
-		where      <h:pre>AES_KEY_SHUFFLE</h:pre> is defined as:      <h:pre>
+		where       <h:pre>AES_KEY_SHUFFLE</h:pre> is defined as:       <h:pre>
 		If ( keylen = 128 )
 			Key[i+1] = Key[i] xor MSB(CT[j], 128)
 		If ( keylen = 192 )
@@ -2853,7 +2856,7 @@ FTP_TRP.1/Admin</rationale>
             <title>The TSF shall have a nominal, final entry in the SPD that matches anything that is otherwise unmatched and discards it.</title>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-3">
-            <title>The TSF shall implement   <selectables><selectable id="nd_fcs_ipsec_ext.1.3_1">tunnel mode</selectable><selectable id="nd_fcs_ipsec_ext.1.3_2">transport mode</selectable></selectables>.</title>
+            <title>The TSF shall implement    <selectables><selectable id="nd_fcs_ipsec_ext.1.3_1">tunnel mode</selectable><selectable id="nd_fcs_ipsec_ext.1.3_2">transport mode</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 61</h:b>
@@ -2862,7 +2865,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-4">
-            <title>The TSF shall implement the IPsec protocol ESP as defined by RFC 4303 using the cryptographic algorithms   <selectables><selectable id="nd_fcs_ipsec_ext.1.4_1">AES-CBC-128 (RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_2">AES-CBC-192 (RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_3">AES-CBC-256 (RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_4">AES-GCM-128 (RFC 4106)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_5">AES-GCM-192 (RFC 4106)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_6">AES-GCM-256 (RFC 4106)</selectable></selectables>   together with a Secure Hash Algorithm (SHA)-based HMAC   <selectables><selectable id="nd_fcs_ipsec_ext.1.4_7">HMAC-SHA-256</selectable><selectable id="nd_fcs_ipsec_ext.1.4_8">HMAC-SHA-384</selectable><selectable id="nd_fcs_ipsec_ext.1.4_9">HMAC-SHA-512</selectable><selectable id="nd_fcs_ipsec_ext.1.4_10">no HMAC algorithm</selectable></selectables>.</title>
+            <title>The TSF shall implement the IPsec protocol ESP as defined by RFC 4303 using the cryptographic algorithms    <selectables><selectable id="nd_fcs_ipsec_ext.1.4_1">AES-CBC-128 (RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_2">AES-CBC-192 (RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_3">AES-CBC-256 (RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_4">AES-GCM-128 (RFC 4106)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_5">AES-GCM-192 (RFC 4106)</selectable><selectable id="nd_fcs_ipsec_ext.1.4_6">AES-GCM-256 (RFC 4106)</selectable></selectables>    together with a Secure Hash Algorithm (SHA)-based HMAC    <selectables><selectable id="nd_fcs_ipsec_ext.1.4_7">HMAC-SHA-256</selectable><selectable id="nd_fcs_ipsec_ext.1.4_8">HMAC-SHA-384</selectable><selectable id="nd_fcs_ipsec_ext.1.4_9">HMAC-SHA-512</selectable><selectable id="nd_fcs_ipsec_ext.1.4_10">no HMAC algorithm</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 62 </h:b>
@@ -2871,7 +2874,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-5">
-            <title>The TSF shall implement the protocol:   <selectables><selectable id="nd-fcs-ipsec-ext-1-5-compsel-1">IKEv1, using Main Mode for Phase 1 exchanges, as defined in RFCs 2407, 2408, 2409, RFC 4109, <selectables><selectable id="nd_fcs_ipsec_ext.1.5_1">no other RFCs for extended sequence numbers</selectable><selectable id="nd_fcs_ipsec_ext.1.5_2">RFC 4304 for extended sequence numbers</selectable></selectables>, and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_3">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_4">RFC 4868 for hash functions</selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-5-compsel-2">IKEv2 as defined in RFC 7296 <selectables><selectable id="nd_fcs_ipsec_ext.1.5_5">with no support for NAT traversal</selectable><selectable id="nd_fcs_ipsec_ext.1.5_6">with mandatory support for NAT traversal as specified in RFC 7296 (Section 2.23)</selectable></selectables>, and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_7">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_8">RFC 4868 for hash functions</selectable></selectables> </selectable></selectables>.</title>
+            <title>The TSF shall implement the protocol:    <selectables><selectable id="nd-fcs-ipsec-ext-1-5-compsel-1">IKEv1, using Main Mode for Phase 1 exchanges, as defined in RFCs 2407, 2408, 2409, RFC 4109, <selectables><selectable id="nd_fcs_ipsec_ext.1.5_1">no other RFCs for extended sequence numbers</selectable><selectable id="nd_fcs_ipsec_ext.1.5_2">RFC 4304 for extended sequence numbers</selectable></selectables>, and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_3">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_4">RFC 4868 for hash functions</selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-5-compsel-2">IKEv2 as defined in RFC 7296 <selectables><selectable id="nd_fcs_ipsec_ext.1.5_5">with no support for NAT traversal</selectable><selectable id="nd_fcs_ipsec_ext.1.5_6">with mandatory support for NAT traversal as specified in RFC 7296 (Section 2.23)</selectable></selectables>, and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_7">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_8">RFC 4868 for hash functions</selectable></selectables> </selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 63 </h:b>
@@ -2880,7 +2883,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-6">
-            <title>The TSF shall ensure the encrypted payload in the   <selectables><selectable id="nd_fcs_ipsec_ext.1.6_1">IKEv1</selectable><selectable id="nd_fcs_ipsec_ext.1.6_2">IKEv2</selectable></selectables>   protocol uses the cryptographic algorithms   <selectables><selectable id="nd_fcs_ipsec_ext.1.6_3">AES-CBC-128</selectable><selectable id="nd_fcs_ipsec_ext.1.6_4">AES-CBC-192</selectable><selectable id="nd_fcs_ipsec_ext.1.6_5">AES-CBC-256 (specified in RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.6_6">AES-GCM-128</selectable><selectable id="nd_fcs_ipsec_ext.1.6_7">AES-GCM-192</selectable><selectable id="nd_fcs_ipsec_ext.1.6_8">AES-GCM-256 (specified in RFC 5282)</selectable></selectables>.</title>
+            <title>The TSF shall ensure the encrypted payload in the    <selectables><selectable id="nd_fcs_ipsec_ext.1.6_1">IKEv1</selectable><selectable id="nd_fcs_ipsec_ext.1.6_2">IKEv2</selectable></selectables>    protocol uses the cryptographic algorithms    <selectables><selectable id="nd_fcs_ipsec_ext.1.6_3">AES-CBC-128</selectable><selectable id="nd_fcs_ipsec_ext.1.6_4">AES-CBC-192</selectable><selectable id="nd_fcs_ipsec_ext.1.6_5">AES-CBC-256 (specified in RFC 3602)</selectable><selectable id="nd_fcs_ipsec_ext.1.6_6">AES-GCM-128</selectable><selectable id="nd_fcs_ipsec_ext.1.6_7">AES-GCM-192</selectable><selectable id="nd_fcs_ipsec_ext.1.6_8">AES-GCM-256 (specified in RFC 5282)</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 64 </h:b>
@@ -2889,7 +2892,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-7">
-            <title>The TSF shall ensure that   <selectables><selectable id="nd-fcs-ipsec-ext-1-7-compsel-3">IKEv1 Phase 1 SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.7_1">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-7-compsel-1">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-7-compsel-4">IKEv2 SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.7_4">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-7-compsel-2">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable></selectables>.</title>
+            <title>The TSF shall ensure that    <selectables><selectable id="nd-fcs-ipsec-ext-1-7-compsel-3">IKEv1 Phase 1 SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.7_1">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-7-compsel-1">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-7-compsel-4">IKEv2 SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.7_4">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-7-compsel-2">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">Application Note 65 </h:p>
               <h:p style="text-align: left;">The ST author chooses either the IKEv1 requirements or IKEv2 requirements (or both, depending on the selection in FCS_IPSEC_EXT.1.5). The ST author chooses either volume-based lifetimes or time-based lifetimes (or a combination). The range between the minimum and maximum rekeys time must include a rekey time that causes a rekey to occur at or slightly before 24 hours. The exact values supported may vary by TOE implementation. Some TOEs might require the administrators to ensure rekeying prior to the desired time (e.g., configure a time value of 23h 59min to ensure the actual rekey is performed no later than 24h), while other TOEs might automatically ensure rekeying is performed prior to the configured time. </h:p>
@@ -2897,7 +2900,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-8">
-            <title>The TSF shall ensure that  <selectables><selectable id="nd-fcs-ipsec-ext-1-8-compsel-3">IKEv1 Phase 2 SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.8_1">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-8-compsel-1">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-8-compsel-4">IKEv2 Child SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.8_4">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-8-compsel-2">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable></selectables>.</title>
+            <title>The TSF shall ensure that   <selectables><selectable id="nd-fcs-ipsec-ext-1-8-compsel-3">IKEv1 Phase 2 SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.8_1">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-8-compsel-1">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-8-compsel-4">IKEv2 Child SA lifetimes can be configured by a Security Administrator based on <selectables><selectable id="nd_fcs_ipsec_ext.1.8_4">number of bytes</selectable><selectable id="nd-fcs-ipsec-ext-1-8-compsel-2">length of time, where the time values can be configured between <assignable>minimum configurable rekey time</assignable> and <assignable>maximum configurable rekey time</assignable></selectable></selectables> </selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 66 </h:b>
@@ -2907,7 +2910,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-9">
-            <title>The TSF shall generate the secret value x used in the IKE Diffie-Hellman key exchange (“x” in g^x mod p) using the random bit generator specified in FCS_RBG.1, and having a length of at least  <assignable>(one or more) number(s) of bits that is at least twice the security strength of the negotiated Diffie-Hellman group</assignable>  bits.</title>
+            <title>The TSF shall generate the secret value x used in the IKE Diffie-Hellman key exchange (“x” in g^x mod p) using the random bit generator specified in FCS_RBG.1, and having a length of at least   <assignable>(one or more) number(s) of bits that is at least twice the security strength of the negotiated Diffie-Hellman group</assignable>   bits.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 67 </h:b>
@@ -2917,7 +2920,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-10">
-            <title>The TSF shall generate nonces used in  <selectables><selectable id="nd_fcs_ipsec_ext.1.10_1">IKEv1</selectable><selectable id="nd_fcs_ipsec_ext.1.10_2">IKEv2</selectable></selectables>  protocol exchanges of length  <selectables><selectable id="nd_fcs_ipsec_ext.1.10_3">according to the security strength associated with the negotiated Diffie-Hellman group</selectable><selectable id="nd_fcs_ipsec_ext.1.10_4">at least 128 bits in size and at least half the output size of the negotiated pseudorandom function (PRF) hash</selectable></selectables>.</title>
+            <title>The TSF shall generate nonces used in   <selectables><selectable id="nd_fcs_ipsec_ext.1.10_1">IKEv1</selectable><selectable id="nd_fcs_ipsec_ext.1.10_2">IKEv2</selectable></selectables>   protocol exchanges of length   <selectables><selectable id="nd_fcs_ipsec_ext.1.10_3">according to the security strength associated with the negotiated Diffie-Hellman group</selectable><selectable id="nd_fcs_ipsec_ext.1.10_4">at least 128 bits in size and at least half the output size of the negotiated pseudorandom function (PRF) hash</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 68 </h:b>
@@ -2929,7 +2932,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-11">
-            <title>The TSF shall ensure that IKE protocols implement DH Group(s)  <selectables><selectable id="nd-fcs-ipsec-ext-1-11-compsel-1"> <selectables><selectable id="nd_fcs_ipsec_ext.1.11_1">14 (2048-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_2">15 (3072-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_3">16 (4096-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_4">17 (6144-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_5">18 (8192-bit MODP)</selectable></selectables> according to RFC 3526</selectable><selectable id="nd-fcs-ipsec-ext-1-11-compsel-2"> <selectables><selectable id="nd_fcs_ipsec_ext.1.11_6">19 (256-bit Random ECP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_7">20 (384-bit Random ECP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_8">21 (521-bit Random ECP)</selectable></selectables> according to RFC 5114</selectable></selectables>.</title>
+            <title>The TSF shall ensure that IKE protocols implement DH Group(s)   <selectables><selectable id="nd-fcs-ipsec-ext-1-11-compsel-1"> <selectables><selectable id="nd_fcs_ipsec_ext.1.11_1">14 (2048-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_2">15 (3072-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_3">16 (4096-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_4">17 (6144-bit MODP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_5">18 (8192-bit MODP)</selectable></selectables> according to RFC 3526</selectable><selectable id="nd-fcs-ipsec-ext-1-11-compsel-2"> <selectables><selectable id="nd_fcs_ipsec_ext.1.11_6">19 (256-bit Random ECP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_7">20 (384-bit Random ECP)</selectable><selectable id="nd_fcs_ipsec_ext.1.11_8">21 (521-bit Random ECP)</selectable></selectables> according to RFC 5114</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 69</h:b>
@@ -2938,7 +2941,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-12">
-            <title> The TSF shall be able to ensure that the strength of the symmetric algorithm (in terms of the number of bits in the key) negotiated to protect the  <selectables><selectable id="nd_fcs_ipsec_ext.1.12_1">IKEv1 Phase 1</selectable><selectable id="nd_fcs_ipsec_ext.1.12_2">IKEv2 IKE_SA</selectable></selectables>  connection is greater than or equal to the strength of the symmetric algorithm (in terms of the number of bits in the key) negotiated to protect the  <selectables><selectable id="nd_fcs_ipsec_ext.1.12_3">IKEv1 Phase 2</selectable><selectable id="nd_fcs_ipsec_ext.1.12_4">IKEv2 CHILD_SA</selectable></selectables>  connection.</title>
+            <title> The TSF shall be able to ensure that the strength of the symmetric algorithm (in terms of the number of bits in the key) negotiated to protect the   <selectables><selectable id="nd_fcs_ipsec_ext.1.12_1">IKEv1 Phase 1</selectable><selectable id="nd_fcs_ipsec_ext.1.12_2">IKEv2 IKE_SA</selectable></selectables>   connection is greater than or equal to the strength of the symmetric algorithm (in terms of the number of bits in the key) negotiated to protect the   <selectables><selectable id="nd_fcs_ipsec_ext.1.12_3">IKEv1 Phase 2</selectable><selectable id="nd_fcs_ipsec_ext.1.12_4">IKEv2 CHILD_SA</selectable></selectables>   connection.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 70</h:b>
@@ -2947,7 +2950,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-13">
-            <title> The TSF shall ensure that all IKE protocols perform peer authentication using  <selectables><selectable id="nd_fcs_ipsec_ext.1.13_1">RSA</selectable><selectable id="nd_fcs_ipsec_ext.1.13_2">ECDSA</selectable></selectables>  that use X.509v3 certificates that conform to RFC 4945 and  <selectables><selectable id="nd_fcs_ipsec_ext.1.13_3">Pre-shared Keys that conform to RFC 8784</selectable><selectable id="nd_fcs_ipsec_ext.1.13_4">no other method</selectable></selectables>.</title>
+            <title> The TSF shall ensure that all IKE protocols perform peer authentication using   <selectables><selectable id="nd_fcs_ipsec_ext.1.13_1">RSA</selectable><selectable id="nd_fcs_ipsec_ext.1.13_2">ECDSA</selectable></selectables>   that use X.509v3 certificates that conform to RFC 4945 and   <selectables><selectable id="nd_fcs_ipsec_ext.1.13_3">Pre-shared Keys that conform to RFC 8784</selectable><selectable id="nd_fcs_ipsec_ext.1.13_4">no other method</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 71</h:b>
@@ -2957,7 +2960,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-14">
-            <title> The TSF shall only establish a trusted channel if the presented identifier in the received certificate matches the configured reference identifier, where the presented and reference identifiers are of the following fields and types:  <selectables><selectable id="nd_fcs_ipsec_ext.1.14_1">SAN: IP address</selectable><selectable id="nd_fcs_ipsec_ext.1.14_2">SAN: Fully Qualified Domain Name (FQDN)</selectable><selectable id="nd_fcs_ipsec_ext.1.14_3">SAN: user FQDN</selectable><selectable id="nd_fcs_ipsec_ext.1.14_4">CN: IP address</selectable><selectable id="nd_fcs_ipsec_ext.1.14_5">CN: Fully Qualified Domain Name (FQDN)</selectable><selectable id="nd_fcs_ipsec_ext.1.14_6">CN: user FQDN</selectable><selectable id="nd_fcs_ipsec_ext.1.14_7">Distinguished Name (DN)</selectable></selectables>  and  <selectables><selectable id="nd_fcs_ipsec_ext.1.14_8">no other reference identifier type</selectable><selectable id="nd_fcs_ipsec_ext.1.14_9"><assignable>other supported reference identifier types</assignable></selectable></selectables>.</title>
+            <title> The TSF shall only establish a trusted channel if the presented identifier in the received certificate matches the configured reference identifier, where the presented and reference identifiers are of the following fields and types:   <selectables><selectable id="nd_fcs_ipsec_ext.1.14_1">SAN: IP address</selectable><selectable id="nd_fcs_ipsec_ext.1.14_2">SAN: Fully Qualified Domain Name (FQDN)</selectable><selectable id="nd_fcs_ipsec_ext.1.14_3">SAN: user FQDN</selectable><selectable id="nd_fcs_ipsec_ext.1.14_4">CN: IP address</selectable><selectable id="nd_fcs_ipsec_ext.1.14_5">CN: Fully Qualified Domain Name (FQDN)</selectable><selectable id="nd_fcs_ipsec_ext.1.14_6">CN: user FQDN</selectable><selectable id="nd_fcs_ipsec_ext.1.14_7">Distinguished Name (DN)</selectable></selectables>   and   <selectables><selectable id="nd_fcs_ipsec_ext.1.14_8">no other reference identifier type</selectable><selectable id="nd_fcs_ipsec_ext.1.14_9"><assignable>other supported reference identifier types</assignable></selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 72</h:b>
@@ -2977,7 +2980,7 @@ FTP_TRP.1/Admin</rationale>
           <depends on-incl="fpt-stm-ext-1"/>
           <depends on-sel="nd_fpt_stm_ext.1.2_2"/>
           <f-element id="fcs-ntp-ext-1-1">
-            <title>The TSF shall use only the following NTP version(s)    <selectables><selectable id="nd_fcs_ntp_ext.1.1_1">NTP v3 (RFC 1305)</selectable><selectable id="nd_fcs_ntp_ext.1.1_2">NTP v4 (RFC 5905)</selectable></selectables>.</title>
+            <title>The TSF shall use only the following NTP version(s)     <selectables><selectable id="nd_fcs_ntp_ext.1.1_1">NTP v3 (RFC 1305)</selectable><selectable id="nd_fcs_ntp_ext.1.1_2">NTP v4 (RFC 5905)</selectable></selectables>.</title>
             <aactivity>
               Something
               <TSS>ABC</TSS>
@@ -2986,7 +2989,7 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="nd-fcs-ntp-ext-1-2">
-            <title>The TSF shall update its system time using    <selectables><selectable id="nd-fcs-ntp-ext-1-2-compsel-1">Authentication using <selectables><selectable id="nd_fcs_ntp_ext.1.2_1">SHA256</selectable><selectable id="nd_fcs_ntp_ext.1.2_2">SHA384</selectable><selectable id="nd_fcs_ntp_ext.1.2_3">SHA512</selectable><selectable id="nd_fcs_ntp_ext.1.2_4">AES-CMAC-128 (RFC 8573)</selectable><selectable id="nd_fcs_ntp_ext.1.2_5">AES-CBC-128</selectable><selectable id="nd_fcs_ntp_ext.1.2_6">AES-CBC-256</selectable></selectables> as the message digest algorithm(s);</selectable><selectable id="nd-fcs-ntp-ext-1-2-compsel-2"> <selectables><selectable id="nd_fcs_ntp_ext.1.2_7">IPsec</selectable><selectable id="nd_fcs_ntp_ext.1.2_8">DTLS as defined in the Functional Package for TLS</selectable></selectables> to provide trusted communication between itself and an NTP time source.</selectable></selectables>.</title>
+            <title>The TSF shall update its system time using     <selectables><selectable id="nd-fcs-ntp-ext-1-2-compsel-1">Authentication using <selectables><selectable id="nd_fcs_ntp_ext.1.2_1">SHA256</selectable><selectable id="nd_fcs_ntp_ext.1.2_2">SHA384</selectable><selectable id="nd_fcs_ntp_ext.1.2_3">SHA512</selectable><selectable id="nd_fcs_ntp_ext.1.2_4">AES-CMAC-128 (RFC 8573)</selectable><selectable id="nd_fcs_ntp_ext.1.2_5">AES-CBC-128</selectable><selectable id="nd_fcs_ntp_ext.1.2_6">AES-CBC-256</selectable></selectables> as the message digest algorithm(s);</selectable><selectable id="nd-fcs-ntp-ext-1-2-compsel-2"> <selectables><selectable id="nd_fcs_ntp_ext.1.2_7">IPsec</selectable><selectable id="nd_fcs_ntp_ext.1.2_8">DTLS as defined in the Functional Package for TLS</selectable></selectables> to provide trusted communication between itself and an NTP time source.</selectable></selectables>.</title>
           </f-element>
           <f-element id="nd-fcs-ntp-ext-1-3">
             <title>
@@ -3140,7 +3143,7 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="nd-fcs-rbg-1-2">
-            <title>The TSF shall use a           <selectables><selectable id="TSF entropy source">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-2-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd_fcs_rbg.1.2_3">TSF interface for seeding</selectable></selectables>           for initialized seeding.</title>
+            <title>The TSF shall use a            <selectables><selectable id="TSF entropy source">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-2-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd_fcs_rbg.1.2_3">TSF interface for seeding</selectable></selectables>            for initialized seeding.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 20 </h:b>
@@ -3152,7 +3155,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="nd-fcs-rbg-1-3">
-            <title>The TSF shall update the DRBG state by           <selectables><selectable id="nd_fcs_rbg.1.3_1">reseeding</selectable><selectable id="nd_fcs_rbg.1.3_2">uninstantiating and re-instantiating</selectable></selectables>           using a           <selectables><selectable id="nd-fcs-rbg-1-3-comp-1">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-3">TSF interface for obtaining entropy <assignable>name of the interface</assignable></selectable></selectables>           in the following situations:           <selectables><selectable id="nd_fcs_rbg.1.3_6">never</selectable><selectable id="nd_fcs_rbg.1.3_7">on demand</selectable><selectable id="nd-fcs-rbg-1-3-comp-4">on the condition: <assignable>condition</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-5">after <assignable>time</assignable></selectable></selectables>           in accordance with           <assignable>list of standards</assignable>.</title>
+            <title>The TSF shall update the DRBG state by            <selectables><selectable id="nd_fcs_rbg.1.3_1">reseeding</selectable><selectable id="nd_fcs_rbg.1.3_2">uninstantiating and re-instantiating</selectable></selectables>            using a            <selectables><selectable id="nd-fcs-rbg-1-3-comp-1">TSF entropy source <assignable>name of entropy source</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-2">multiple TSF entropy sources <assignable>name of entropy sources</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-3">TSF interface for obtaining entropy <assignable>name of the interface</assignable></selectable></selectables>            in the following situations:            <selectables><selectable id="nd_fcs_rbg.1.3_6">never</selectable><selectable id="nd_fcs_rbg.1.3_7">on demand</selectable><selectable id="nd-fcs-rbg-1-3-comp-4">on the condition: <assignable>condition</assignable></selectable><selectable id="nd-fcs-rbg-1-3-comp-5">after <assignable>time</assignable></selectable></selectables>            in accordance with            <assignable>list of standards</assignable>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 21 </h:b>
@@ -3169,7 +3172,7 @@ FTP_TRP.1/Admin</rationale>
           <depends on-incl="fcs-rbg-1"/>
           <depends on-sel="nd_fcs_rbg.1.2_3"/>
           <f-element id="fcs-rbg-2-1">
-            <title>The TSF shall be able to accept a minimum input of    <assignable>minimum input length greater than zero</assignable>    from a TSF interface for obtaining entropy.</title>
+            <title>The TSF shall be able to accept a minimum input of     <assignable>minimum input length greater than zero</assignable>     from a TSF interface for obtaining entropy.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 55 </h:b>
@@ -3183,7 +3186,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fcs_rbg.3" id="fcs-rbg-3" name="Random Bit Generation (Internal Seeding - Single Source)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-3-1">
-            <title>The TSF shall be able to seed the DRBG using a                  <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>                 with                  <assignable>number of bits</assignable>                 bits of min-entropy.</title>
+            <title>The TSF shall be able to seed the DRBG using a                   <selectables choose-one-of="yes"><selectable id="fcs-rbg-3-1-1" exclusive="yes">TSF software-based entropy source</selectable><selectable id="fcs-rbg-3-1-2" exclusive="yes">TSF hardware-based entropy source</selectable></selectables>  <assignable>name of entropy source</assignable>                  with                   <assignable>number of bits</assignable>                  bits of min-entropy.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 56</h:b>
@@ -3199,7 +3202,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fcs_rbg.4" id="fcs-rbg-4" name="Random Bit Generation (Internal Seeding - Multiple Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-4-1">
-            <title>The TSF shall be able to seed the DRBG using                  <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
+            <title>The TSF shall be able to seed the DRBG using                   <selectables><selectable id="fcs-rbg-4-1-1"> <assignable>number</assignable> TSF software-based entropy source(s)</selectable><selectable id="fcs-rbg-4-1-4"> <assignable>number</assignable> TSF hardware-based entropy source(s)</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 57</h:b>
@@ -3212,7 +3215,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fcs_rbg.5" id="fcs-rbg-5" name="Random Bit Generation (Combining Entropy Sources)" status="sel-based">
           <depends on-incl="fcs-rbg-1"/>
           <f-element id="fcs-rbg-5-1">
-            <title>TSF shall                 <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>                 resulting in a minimum of                  <assignable>number of bits</assignable>                 bits of min-entropy to create the entropy input into the derivation function as defined in                  <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
+            <title>TSF shall                  <selectables><selectable id="fcs-rbg-5-1-1">hash</selectable><selectable id="fcs-rbg-5-1-2">concatenate and hash</selectable><selectable id="fcs-rbg-5-1-3">XOR</selectable><selectable id="fcs-rbg-5-1-4">input into a linear feedback shift register</selectable><selectable id="fcs-rbg-5-1-5"><assignable>combining operation</assignable></selectable></selectables>  <selectables><selectable id="fcs-rbg-5-1-6">output from TSF entropy source(s)</selectable><selectable id="fcs-rbg-5-1-7">input from TSF interface(s) for obtaining entropy</selectable></selectables>                  resulting in a minimum of                   <assignable>number of bits</assignable>                  bits of min-entropy to create the entropy input into the derivation function as defined in                   <selectables><selectable id="fcs-rbg-5-1-9">ISO/IEC 18031:2011</selectable><selectable id="fcs-rbg-5-1-10">NIST SP 800-90A Revision 1</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 58</h:b>
@@ -3260,7 +3263,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fia_pmg_ext.1" id="fia-pmg-ext-1" name="Password Management" status="feat-based">
           <depends on="nd-feature-3"/>
           <f-element id="fia-pmg-ext-1-1">
-            <title>The TSF shall provide the following password management capabilities for administrative passwords:<h:ol><h:li><h:p style="text-align: left;">Passwords shall be able to be composed of any combination of upper and lower case letters, numbers and the following special characters:</h:p></h:li></h:ol> <selectables><selectable id="nd_fia_pmg_ext.1.1_1">"!"</selectable><selectable id="nd_fia_pmg_ext.1.1_2">"@"</selectable><selectable id="nd_fia_pmg_ext.1.1_3">"#"</selectable><selectable id="nd_fia_pmg_ext.1.1_4">"$"</selectable><selectable id="nd_fia_pmg_ext.1.1_5">"%"</selectable><selectable id="nd_fia_pmg_ext.1.1_6">"^"</selectable><selectable id="nd_fia_pmg_ext.1.1_7">"&amp;"</selectable><selectable id="nd_fia_pmg_ext.1.1_8">"*"</selectable><selectable id="nd_fia_pmg_ext.1.1_9">"("</selectable><selectable id="nd_fia_pmg_ext.1.1_10">")"</selectable><selectable id="nd_fia_pmg_ext.1.1_11"><assignable>other characters</assignable></selectable></selectables> <h:ol><h:li><h:p style="text-align: left;">Minimum password length shall be <h:i>configurable to between</h:i></h:p></h:li></h:ol> <assignable>minimum number of characters supported by the TOE</assignable>  and  <assignable>number of characters greater than or equal to 15</assignable> <h:p style="text-align: left;"><h:i>characters.</h:i></h:p></title>
+            <title>The TSF shall provide the following password management capabilities for administrative passwords:<h:ol><h:li><h:p style="text-align: left;">Passwords shall be able to be composed of any combination of upper and lower case letters, numbers and the following special characters:</h:p></h:li></h:ol> <selectables><selectable id="nd_fia_pmg_ext.1.1_1">"!"</selectable><selectable id="nd_fia_pmg_ext.1.1_2">"@"</selectable><selectable id="nd_fia_pmg_ext.1.1_3">"#"</selectable><selectable id="nd_fia_pmg_ext.1.1_4">"$"</selectable><selectable id="nd_fia_pmg_ext.1.1_5">"%"</selectable><selectable id="nd_fia_pmg_ext.1.1_6">"^"</selectable><selectable id="nd_fia_pmg_ext.1.1_7">"&amp;"</selectable><selectable id="nd_fia_pmg_ext.1.1_8">"*"</selectable><selectable id="nd_fia_pmg_ext.1.1_9">"("</selectable><selectable id="nd_fia_pmg_ext.1.1_10">")"</selectable><selectable id="nd_fia_pmg_ext.1.1_11"><assignable>other characters</assignable></selectable></selectables> <h:ol><h:li><h:p style="text-align: left;">Minimum password length shall be <h:i>configurable to between</h:i></h:p></h:li></h:ol> <assignable>minimum number of characters supported by the TOE</assignable>   and   <assignable>number of characters greater than or equal to 15</assignable> <h:p style="text-align: left;"><h:i>characters.</h:i></h:p></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 76 </h:b>
@@ -3284,7 +3287,7 @@ FTP_TRP.1/Admin</rationale>
             <title>The TSF shall be able to use pre-shared keys that conform to RFC 8784 for IPsec.</title>
           </f-element>
           <f-element id="nd-fia-psk-ext-1-2">
-            <title>The TSF shall be able to  <selectables><selectable id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</selectable><selectable id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via FCS_RBG.1</selectable></selectables>.</title>
+            <title>The TSF shall be able to   <selectables><selectable id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</selectable><selectable id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via FCS_RBG.1</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 77 </h:b>
@@ -3336,7 +3339,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="fia-uia-ext-1-3">
-            <title>The TSF shall provide the following remote authentication mechanisms           <selectables><selectable id="nd_fia_uia_ext.1.3_1">Web GUI password</selectable><selectable id="nd_fia_uia_ext.1.3_2">SSH password</selectable><selectable id="nd_fia_uia_ext.1.3_3">SSH public key</selectable><selectable id="nd_fia_uia_ext.1.3_4">X.509 certificate</selectable></selectables>           and           <selectables><selectable id="nd_fia_uia_ext.1.3_5">no other mechanism</selectable><selectable id="nd_fia_uia_ext.1.3_6">external authentication server</selectable></selectables>. The TSF shall provide the following local authentication mechanisms:           <selectables><selectable id="nd_fia_uia_ext.1.3_7">none</selectable><selectable id="nd_fia_uia_ext.1.3_8">password-based</selectable><selectable id="nd_fia_uia_ext.1.3_9"><assignable>other authentication mechanism</assignable></selectable></selectables>.</title>
+            <title>The TSF shall provide the following remote authentication mechanisms            <selectables><selectable id="nd_fia_uia_ext.1.3_1">Web GUI password</selectable><selectable id="nd_fia_uia_ext.1.3_2">SSH password</selectable><selectable id="nd_fia_uia_ext.1.3_3">SSH public key</selectable><selectable id="nd_fia_uia_ext.1.3_4">X.509 certificate</selectable></selectables>            and            <selectables><selectable id="nd_fia_uia_ext.1.3_5">no other mechanism</selectable><selectable id="nd_fia_uia_ext.1.3_6">external authentication server</selectable></selectables>. The TSF shall provide the following local authentication mechanisms:            <selectables><selectable id="nd_fia_uia_ext.1.3_7">none</selectable><selectable id="nd_fia_uia_ext.1.3_8">password-based</selectable><selectable id="nd_fia_uia_ext.1.3_9"><assignable>other authentication mechanism</assignable></selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 23 </h:b>
@@ -3372,7 +3375,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fmt_mof.1" id="fmt-mof-1-autoupdate" name="Management of Security Functions Behaviour" iteration="AutoUpdate" status="sel-based">
           <depends on-sel="dummy"/>
           <f-element id="fmt-mof-au-1">
-            <title>The TSF shall restrict the ability to <selectables><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_3">enable</selectable><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_4">disable</selectable></selectables> the functions <selectables><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_1">automatic checking for updates</selectable><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_2">automatic update</selectable></selectables> <h:p style="text-align: left;">to <h:i>Security Administrators</h:i>.</h:p></title>
+            <title>The TSF shall restrict the ability to  <selectables><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_3">enable</selectable><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_4">disable</selectable></selectables>  the functions  <selectables><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_1">automatic checking for updates</selectable><selectable id="nd_fmt_mof.1.1_AUTOUPDATE_2">automatic update</selectable></selectables> <h:p style="text-align: left;">to <h:i>Security Administrators</h:i>.</h:p></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 81 </h:b>
@@ -3392,7 +3395,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fmt_mof.1" id="fmt-mof-1-functions" name="Management of Security Functions Behaviour" iteration="Functions" status="sel-based">
           <depends on-incl="fau-stg-ext-1"/>
           <f-element id="fmt-mof-fn-1">
-            <title>The TSF shall restrict the ability to <selectables><selectable id="nd_fmt_mof.1.1_FUNCTIONS_1">determine the behaviour of</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_2">modify the behaviour of</selectable></selectables> the functions <selectables><selectable id="nd_fmt_mof.1.1_FUNCTIONS_3">transmission of audit data to an external IT entity</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_4">handling of audit data</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_5">audit functionality when Local Audit Storage Space is full</selectable></selectables> <h:p style="text-align: left;">to <h:i>Security Administrators</h:i>.</h:p></title>
+            <title>The TSF shall restrict the ability to  <selectables><selectable id="nd_fmt_mof.1.1_FUNCTIONS_1">determine the behaviour of</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_2">modify the behaviour of</selectable></selectables>  the functions  <selectables><selectable id="nd_fmt_mof.1.1_FUNCTIONS_3">transmission of audit data to an external IT entity</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_4">handling of audit data</selectable><selectable id="nd_fmt_mof.1.1_FUNCTIONS_5">audit functionality when Local Audit Storage Space is full</selectable></selectables> <h:p style="text-align: left;">to <h:i>Security Administrators</h:i>.</h:p></title>
             <note role="application">
               <h:p style="text-align: left;">Application Note 82 </h:p>
               <h:p style="text-align: left;">FMT_MOF.1/Functions should be chosen if one or more of the following scenarios apply:</h:p>
@@ -3510,168 +3513,240 @@ FTP_TRP.1/Admin</rationale>
         <!-- FMT_SMF.1 Specification of Management Functions -->
         <f-component cc-id="fmt_smf.1" id="fmt-smf-1" name="Specification of Management Functions">
           <f-element id="fmt-smf-1-1">
-            <title>The TSF shall be capable of performing the following management functions:Status Markers:<h:br/><h:p style="text-align: left;">M = Mandatory</h:p><h:p style="text-align: left;">O = Optional</h:p><h:br/><management-function-set><manager cid="STATUS">Status</manager>
-          <management-function id="mf-1">
-          <text><h:p style="text-align: left;">Ability to administer the TOE remotely  </h:p></text>
-          <M ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The TOE must provide functionality for remote administration. Local administration is optional. This cPP does not mandate a specific security management function to be available either through the local administration interface, the remote administration interface or both. Remote administrative sessions are specified in FTP_TRP.1/Admin.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-2">
-          <text>Ability to configure the access banner</text>
-          <M ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-3">
-          <text><h:p style="text-align: left;">Ability to configure the remote session inactivity time before session termination  </h:p></text>
-          <M ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-4">
-          <text><h:p style="text-align: left;">Ability to update the TOE, and to verify the updates using  <h:u>digital signature  </h:u>  capability prior to installing those updates  </h:p></text>
-          <M ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The option “Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates” includes the relevant management functions from FMT_MOF.1/ManualUpdate and FPT_TUD_EXT.1. Based on selections in FPT_TUD_EXT.1.2, FMT_MOF.1/AutoUpdate must be included if the option “Ability to enable or disable automatic checking for updates or automatic updates” is included in the ST.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-5">
-          <text>Ability to start and stop services</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection "Ability to start and stop services" should be included in the ST if the TOE supports starting and stopping services of the TOE. If this selection is included in the ST, FMT_MOF.1/Services must be claimed in the ST.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-6">
-          <text>Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size)</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection “Ability to configure local audit behaviour” includes the relevant management functions from FMT_MOF.1/Services and FMT_MOF.1/Functions, (for all of these SFRs that are included in the ST) and is intended to cover security relevant configuration options (if any) to the audit behaviour (like changes to the behaviour when the local audit storage space is full). The option "Ability to modify the behaviour of the transmission of audit data to an external IT entity" is intended to cover the management functionalities related to the transmission of local audit information to an external IT entity.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-7">
-          <text>Ability to modify the behaviour of the transmission of audit data to an external IT entity</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The option "Ability to modify the behaviour of the transmission of audit data to an external IT entity" is intended to cover the management functionalities related to the transmission of local audit information to an external IT entity.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-8">
-          <text>Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection "Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1" should be included in the ST if the TOE supports configuration of the list of TOE-provided services which are available before any entity is identified and authenticated. The term 'list' refers to the resulting list of available services as a result of the configuration activities. The configuration activity itself does not necessarily have to be modification of a list but could be any type of activation and deactivation procedure.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-9">
-          <text>Ability to manage the cryptographic keys</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection "Ability to manage the cryptographic keys" should be included in the ST if the TOE supports management of cryptographic keys (e.g., generation of cryptographic keys). If this selection is included in the ST, FMT_MTD.1/CryptoKeys must be claimed in the ST.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-10">
-          <text>Ability to configure the cryptographic functionality</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">For distributed TOEs, that implement a registration channel (as described in FCO_CPC_EXT.1.2), the ST author uses the selection “Ability to configure the cryptographic functionality” in this SFR, and its corresponding mapping in the TSS, to describe the configuration of any cryptographic aspects of the registration channel that can be modified by the operational environment in order to improve the channel security (reference the description of the content of Preparative Procedures in [SD, 3.4.1]).</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-11">
-          <text>Ability to configure thresholds for SSH rekeying</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection "Ability to configure thresholds for SSH rekeying" may only be selected if SSH is selected within FTP_ITC.1, FTP_TRP.1 or FPT_ITT.1. This only applies if the TOE claims conformance to the Functional Package for SSH and the rekey threshold is configurable.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-12">
-          <text>Ability to configure the lifetime for IPsec SAs</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection “Ability to configure lifetime for IPsec SAs” must be included in the ST if the TOE supports secure communication via IPsec and the FCS_IPSEC_EXT.1 requirements are included in the ST. The configuration of the lifetime for IPsec SAs needs to be in line with the selection in FCS_IPSEC_EXT.1.7.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-13">
-          <text>Ability to configure the list of supported (D)TLS ciphers</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection "Ability to configure the list of supported (D)TLS ciphers" must be included in the ST if the TOE implements TLS or DTLS and the supported ciphersuites are configurable. This only applies if the TOE claims conformance to the Functional Package for TLS, and only if such a configuration option exists.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-14">
-          <text>Ability to configure the interaction between TOE components</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">For distributed TOEs, the interaction between TOE components will be configurable (see FCO_CPC_EXT.1). Therefore, the ST author includes the selection "Ability to configure the interaction between TOE components" for distributed TOEs. A simple example would be the change of communication protocol according to FPT_ITT.1. Another example would be changing the management of a TOE component from direct remote administration to remote administration through another TOE component. A more complex use case would be if the realization of an SFR is achieved through two or more TOE components and the responsibilities between the two or more components could be modified.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-15">
-          <text>Ability to enable or disable automatic checking for updates or automatic updates</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">Based on selections in FPT_TUD_EXT.1.2, FMT_MOF.1/AutoUpdate must be included if the option “Ability to enable or disable automatic checking for updates or automatic updates” is included in the ST.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-16">
-          <text>Ability to re-enable an Administrator account</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">If the TOE offers the ability for a remote Administrator account to be disabled in line with FIA_AFL.1, then the ST author must select the option “Ability to re-enable an Administrator account” to allow the account to be re-enabled by a local Administrator.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-17">
-          <text>Ability to set the time which is used for time-stamps</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection “Ability to set the time which is used for time-stamps” should be included in the ST if the TOE allows the Administrator to set the time of the device which is then used in time stamps. This option should not be selected if the TOE does not allow manual time setting but only relies on synchronization with external time sources like NTP servers.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-18">
-          <text>Ability to configure NTP</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection “Ability to configure NTP” should be included in the ST if the TOE uses NTP for timestamp configuration. If selected, FCS_NTP_EXT.1 must be included in the ST as well.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-19">
-          <text>Ability to configure the reference identifier for the peer</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection “Ability to configure the reference identifier for the peer” should be included in the ST if the TOE allows the Administrator to specify the expected identity of a remote peer when establishing secure communications using a protocol included in the ST. For TOEs that support only IP address and FQDN identifier types, configuration of the reference identifier may be the same as configuration of the peer’s name for the purposes of connection.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-20">
-          <text>Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection “Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors" should be included in the ST if the TOE supports management and configuration of the TOE’s trust store. This means the TOE supports X.509v3 certificates for some security functions. This only applies if the TOE claims conformance to the Functional Package for X.509.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-21">
-          <text>Ability to generate Certificate Signing Request (CSR) and process CA certificate response</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The selection "Ability to generate Certificate Signing Request (CSR) and process CA certificate response" must be included in the ST if the TOE implements Certificate Request or Enrollment Request processes. This only applies if the TOE claims conformance to the Functional Package for X.509, and only when FIA_X509_EXT.3 from the functional package is claimed.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-22">
-          <text>Ability to administer the TOE locally</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The TOE must provide functionality for remote administration. Local administration is optional. This cPP does not mandate a specific security management function to be available either through the local administration interface, the remote administration interface or both. Remote administrative sessions are specified in FTP_TRP.1/Admin</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-23">
-          <text>Ability to configure the local session inactivity time before session termination or locking</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-24">
-          <text>Ability to configure the authentication failure parameters for FIA_AFL.1</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">This management function enables administrators to configure parameters related to authentication failure, such as the threshold for unsuccessful login attempts and the actions the TOE takes when that threshold is reached (e.g., account lockout, notification, or timed delays).</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-25">
-          <text>Ability to manage the trusted public keys database</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">If the TOE offers ability for a remote authorised IT entities or authorised remote Administrators to connect via an interface secured with SSH, then the ST author must select the option “Ability to manage the trusted public keys database” to account for management of public key authentication. It is acceptable for this management function to be implemented as part of general TOE management functionality or as a standalone management function.</h:p></app-note>
-          </management-function>
-        
-          <management-function id="mf-26">
-          <text>Ability to manage the public key or certificate used to validate the digital update</text>
-          <O ref="STATUS"/>
-          <app-note><h:p style="text-align: left;">If the TOE offers the ability to modify the public key used to validate the digital update, then the ST author must select the option “Ability to manage the public key or certificate used to validate the digital update”. There is no requirement to implement this as a standalone management function, it is acceptable for this management function to be implemented as part of the trusted update (FPT_TUD_EXT.1) functionality.</h:p></app-note>
-          </management-function>
-        </management-function-set></title>
+            <title>The TSF shall be capable of performing the following management functions:<h:ul><h:li><h:p style="text-align: left;">Ability to administer the TOE remotely; </h:p></h:li> <h:li><h:p style="text-align: left;">Ability to configure the access banner; </h:p></h:li> <h:li><h:p style="text-align: left;">Ability to configure the remote session inactivity time before session termination; </h:p></h:li> <h:li><h:p style="text-align: left;">Ability to update the TOE, and to verify the updates using <h:u>digital signature</h:u> capability prior to installing those updates;</h:p></h:li></h:ul> <selectables><selectable id="nd_fmt_smf.1.1_1">Ability to start and stop services</selectable><selectable id="nd_fmt_smf.1.1_2">Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size)</selectable><selectable id="nd_fmt_smf.1.1_3">Ability to modify the behaviour of the transmission of audit data to an external IT entity</selectable><selectable id="nd_fmt_smf.1.1_4">Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1</selectable><selectable id="nd_fmt_smf.1.1_5">Ability to manage the cryptographic keys</selectable><selectable id="nd_fmt_smf.1.1_6">Ability to configure the cryptographic functionality</selectable><selectable id="nd_fmt_smf.1.1_7">Ability to configure thresholds for SSH rekeying</selectable><selectable id="nd_fmt_smf.1.1_8">Ability to configure the lifetime for IPsec SAs</selectable><selectable id="nd_fmt_smf.1.1_9">Ability to configure the list of supported (D)TLS ciphers</selectable><selectable id="nd_fmt_smf.1.1_10">Ability to configure the interaction between TOE components</selectable><selectable id="nd_fmt_smf.1.1_11">Ability to enable or disable automatic checking for updates or automatic updates</selectable><selectable id="nd_fmt_smf.1.1_12">Ability to re-enable an Administrator account</selectable><selectable id="nd_fmt_smf.1.1_13">Ability to set the time which is used for time-stamps</selectable><selectable id="nd_fmt_smf.1.1_14">Ability to configure NTP</selectable><selectable id="nd_fmt_smf.1.1_15">Ability to configure the reference identifier for the peer</selectable><selectable id="nd_fmt_smf.1.1_16">Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors</selectable><selectable id="nd_fmt_smf.1.1_17">Ability to generate Certificate Signing Request (CSR) and process CA certificate response</selectable><selectable id="nd_fmt_smf.1.1_18">Ability to administer the TOE locally</selectable><selectable id="nd_fmt_smf.1.1_19">Ability to configure the local session inactivity time before session termination or locking</selectable><selectable id="nd_fmt_smf.1.1_20">Ability to configure the authentication failure parameters for FIA_AFL.1</selectable><selectable id="nd_fmt_smf.1.1_21">Ability to manage the trusted public keys database</selectable><selectable id="nd_fmt_smf.1.1_22">Ability to manage the public key or certificate used to validate the digital update</selectable><selectable id="nd_fmt_smf.1.1_23">No other capabilities</selectable></selectables> <management-function-set><manager cid="STATUS">Status</manager></management-function-set></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 27</h:b>
               </h:p>
-              <h:p style="text-align: left;">If the TOE offers the ability for the Security Administrator to configure the audit behaviour, configure the services available prior to identification or authentication, or if any of the cryptographic functionality on the TOE can be configured, or if the ST is describing a distributed TOE, then the ST author makes the appropriate choice or choices in the second selection, otherwise select the option "No other capabilities" (in the latter case the selection may alternatively be left blank in the ST). ["No other capabilities" equates to no optional management functions included in the ST.]</h:p>
+              <h:table style="min-width: 50px;">
+                <h:tbody>
+                  <h:tr>
+                    <h:th colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">FMT_SMF.1.1 Management Function</h:p>
+                    </h:th>
+                    <h:th colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Management Function Guidance</h:p>
+                    </h:th>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to administer the TOE remotely</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The TOE must provide functionality for remote administration. Local administration is optional. This cPP does not mandate a specific security management function to be available either through the local administration interface, the remote administration interface or both. Remote administrative sessions are specified in FTP_TRP.1/Admin.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the access banner</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the remote session inactivity time before session termination</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The option “Ability to update the TOE, and to verify the updates using digital signature capability prior to installing those updates” includes the relevant management functions from FMT_MOF.1/ManualUpdate and FPT_TUD_EXT.1. Based on selections in FPT_TUD_EXT.1.2, FMT_MOF.1/AutoUpdate must be included if the option “Ability to enable or disable automatic checking for updates or automatic updates” is included in the ST.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to start and stop services</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection "Ability to start and stop services" should be included in the ST if the TOE supports starting and stopping services of the TOE. If this selection is included in the ST, FMT_MOF.1/Services must be claimed in the ST.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure local audit behaviour (e.g., changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size)</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection “Ability to configure local audit behaviour” includes the relevant management functions from FMT_MOF.1/Services and FMT_MOF.1/Functions, (for all of these SFRs that are included in the ST) and is intended to cover security relevant configuration options (if any) to the audit behaviour (like changes to the behaviour when the local audit storage space is full). The option "Ability to modify the behaviour of the transmission of audit data to an external IT entity" is intended to cover the management functionalities related to the transmission of local audit information to an external IT entity.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to modify the behaviour of the transmission of audit data to an external IT entity</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The option "Ability to modify the behaviour of the transmission of audit data to an external IT entity" is intended to cover the management functionalities related to the transmission of local audit information to an external IT entity.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection "Ability to configure the list of TOEprovided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1" should be included in the ST if the TOE supports configuration of the list of TOE-provided services which are available before any entity is identified and authenticated. The term 'list' refers to the resulting list of available services as a result of the configuration activities. The configuration activity itself does not necessarily have to be modification of a list but could be any type of activation and deactivation procedure.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to manage the cryptographic keys</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection "Ability to manage the cryptographic keys" should be included in the ST if the TOE supports management of cryptographic keys (e.g., generation of cryptographic keys). If this selection is included in the ST, FMT_MTD.1/CryptoKeys must be claimed in the ST.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the cryptographic functionality</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">For distributed TOEs, that implement a registration channel (as described in FCO_CPC_EXT.1.2), the ST author uses the selection “Ability to configure the cryptographic functionality” in this SFR, and its corresponding mapping in the TSS, to describe the configuration of any cryptographic aspects of the registration channel that can be modified by the operational environment in order to improve the channel security (reference the description of the content of Preparative Procedures in [SD, 3.4.1]).</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure thresholds for SSH rekeying</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection "Ability to configure thresholds for SSH rekeying" may only be selected if SSH is selected within FTP_ITC.1, FTP_TRP.1 or FPT_ITT.1. This only applies if the TOE claims conformance to the Functional Package for SSH and the rekey threshold is configurable.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the lifetime for IPsec SAs</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection “Ability to configure lifetime for IPsec SAs” must be included in the ST if the TOE supports secure communication via IPsec and the FCS_IPSEC_EXT.1 requirements are included in the ST. The configuration of the lifetime for IPsec SAs needs to be in line with the selection in FCS_IPSEC_EXT.1.7.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the list of supported (D)TLS ciphers</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection "Ability to configure the list of supported (D)TLS ciphers" must be included in the ST if the TOE implements TLS or DTLS and the supported ciphersuites are configurable. This only applies if the TOE claims conformance to the Functional Package for TLS, and only if such a configuration option exists.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the interaction between TOE components</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">For distributed TOEs, the interaction between TOE components will be configurable (see FCO_CPC_EXT.1). Therefore, the ST author includes the selection "Ability to configure the interaction between TOE components" for distributed TOEs. A simple example would be the change of communication protocol according to FPT_ITT.1. Another example would be changing the management of a TOE component from direct remote administration to remote administration through another TOE component. A more complex use case would be if the realization of an SFR is achieved through two or more TOE components and the responsibilities between the two or more components could be modified.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to enable or disable automatic checking for updates or automatic updates</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Based on selections in FPT_TUD_EXT.1.2, FMT_MOF.1/AutoUpdate must be included if the option “Ability to enable or disable automatic checking for updates or automatic updates” is included in the ST.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to re-enable an Administrator account</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">If the TOE offers the ability for a remote Administrator account to be disabled in line with FIA_AFL.1, then the ST author must select the option “Ability to re-enable an Administrator account” to allow the account to be re-enabled by a local Administrator.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to set the time which is used for time-stamps</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection “Ability to set the time which is used for time-stamps” should be included in the ST if the TOE allows the Administrator to set the time of the device which is then used in time stamps. This option should not be selected if the TOE does not allow manual time setting but only relies on synchronization with external time sources like NTP servers.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure NTP</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection “Ability to configure NTP” should be included in the ST if the TOE uses NTP for timestamp configuration. If selected, FCS_NTP_EXT.1 must be included in the ST as well.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the reference identifier for the peer</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection “Ability to configure the reference identifier for the peer” should be included in the ST if the TOE allows the Administrator to specify the expected identity of a remote peer when establishing secure communications using a protocol included in the ST. For TOEs that support only IP address and FQDN identifier types, configuration of the reference identifier may be the same as configuration of the peer’s name for the purposes of connection.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection “Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors" should be included in the ST if the TOE supports management and configuration of the TOE’s trust store. This means the TOE supports X.509v3 certificates for some security functions. This only applies if the TOE claims conformance to the Functional Package for X.509.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to generate Certificate Signing Request (CSR) and process CA certificate response</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The selection "Ability to generate Certificate Signing Request (CSR) and process CA certificate response" must be included in the ST if the TOE implements Certificate Request or Enrollment Request processes. This only applies if the TOE claims conformance to the Functional Package for X.509, and only when FIA_X509_EXT.3 from the functional package is claimed.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to administer the TOE locally</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The TOE must provide functionality for remote administration. Local administration is optional. This cPP does not mandate a specific security management function to be available either through the local administration interface, the remote administration interface or both. Remote administrative sessions are specified in FTP_TRP.1/Admin.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the local session inactivity time before session termination or locking</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">The TOE must provide functionality to configure the access banner for FTA_TAB.1 and the session inactivity time(s) for FTA_SSL.3 and (if included) FTA_SSL_EXT.1, though an access banner is only required for each interactive (human-computer) interface (HCI), not for any programmatic interface [application programming interface (API), e.g., REST API].</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to configure the authentication failure parameters for FIA_AFL.1</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">This management function enables administrators to configure parameters related to authentication failure, such as the threshold for unsuccessful login attempts and the actions the TOE takes when that threshold is reached (e.g., account lockout, notification, or timed delays).</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to manage the trusted public keys database</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">If the TOE offers ability for a remote authorised IT entities or authorised remote Administrators to connect via an interface secured with SSH, then the ST author must select the option “Ability to manage the trusted public keys database” to account for management of public key authentication. It is acceptable for this management function to be implemented as part of general TOE management functionality or as a standalone management function.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">Ability to manage the public key or certificate used to validate the digital update</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">If the TOE offers the ability to modify the public key used to validate the digital update, then the ST author must select the option “Ability to manage the public key or certificate used to validate the digital update”. There is no requirement to implement this as a standalone management function, it is acceptable for this management function to be implemented as part of the trusted update (FPT_TUD_EXT.1) functionality.</h:p>
+                    </h:td>
+                  </h:tr>
+                  <h:tr>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">No other capabilities</h:p>
+                    </h:td>
+                    <h:td colspan="1" rowspan="1">
+                      <h:p style="text-align: left;">If the TOE offers the ability for the Security Administrator to configure the audit behaviour, configure the services available prior to identification or authentication, or if any of the cryptographic functionality on the TOE can be configured, or if the ST is describing a distributed TOE, then the ST author makes the appropriate choice or choices in the second selection, otherwise select the option "No other capabilities" (in the latter case the selection may alternatively be left blank in the ST).</h:p>
+                    </h:td>
+                  </h:tr>
+                </h:tbody>
+              </h:table>
+              <h:p style="text-align: left;">Table 9: FMT_SMF.1.1 Management Function Guidance</h:p>
               <h:p style="text-align: left;">With respect to FAU_GEN.1.1, FMT_SMF.1 and FMT_MOF.1/Services the term ‘services’ refers to trusted path and trusted channel communications, on demand self-tests, trusted update and Administrator sessions (that exist under the trusted path) (e.g., netconf).</h:p>
             </note>
             <aactivity>
@@ -3800,7 +3875,7 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="nd-fpt-stm-ext-1-2">
-            <title>The TSF shall          <selectables><selectable id="nd_fpt_stm_ext.1.2_1">allow the Security Administrator to set the time</selectable><selectable id="nd_fpt_stm_ext.1.2_2">synchronise time with an NTP server</selectable><selectable id="nd_fpt_stm_ext.1.2_3">obtain time from the underlying virtualization system</selectable></selectables>.</title>
+            <title>The TSF shall           <selectables><selectable id="nd_fpt_stm_ext.1.2_1">allow the Security Administrator to set the time</selectable><selectable id="nd_fpt_stm_ext.1.2_2">synchronise time with an NTP server</selectable><selectable id="nd_fpt_stm_ext.1.2_3">obtain time from the underlying virtualization system</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">Reliable time stamps are expected to be used with other TSF, e.g., for the generation of audit data that enables the Security Administrator to investigate incidents by checking the order of events and determining the actual local time when events occurred. The required level of accuracy is determined by the Administrator. </h:p>
               <h:p style="text-align: left;">The TOE depends on time and date information that may be provided by a local real-time clock managed by the Security Administrator, obtained from one or more NTP servers, or received from the underlying virtualization system. The corresponding option(s) are selected in FPT_STM_EXT.1.2. Automatic synchronization with an NTP server is recommended but not required. When the TOE communicates with an NTP server, the inclusion of FCS_NTP_EXT.1 in the ST is expected. The ST author describes in the TSS how the TOE receives external time and date information and how this information is maintained. For a Case 1 vND, the virtualization system can act as an external time source. For a Case 2 vND, the virtualization system is part of the TOE, so the time is typically set by a Security Administrator or synchronized with an NTP server. </h:p>
@@ -3816,7 +3891,7 @@ FTP_TRP.1/Admin</rationale>
         <!-- FPT_TST_EXT.1 TSF Testing -->
         <f-component cc-id="fpt_tst_ext.1" id="fpt-tst-ext-1" name="TSF Testing">
           <f-element id="fpt-tst-ext-1-1">
-            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li><h:p style="text-align: left;">During initial start-up (on power on) to verify the integrity of the TOE firmware and software; </h:p></h:li> <h:li><h:p style="text-align: left;">Prior to providing any cryptographic service and</h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>          to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li><h:p style="text-align: left;"></h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables>          self-tests          <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
+            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li><h:p style="text-align: left;">During initial start-up (on power on) to verify the integrity of the TOE firmware and software; </h:p></h:li> <h:li><h:p style="text-align: left;">Prior to providing any cryptographic service and</h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>           to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li><h:p style="text-align: left;"></h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables>           self-tests           <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 31 </h:b>
@@ -3833,7 +3908,7 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="nd-fpt-tst-ext-1-2">
-            <title>The TSF shall respond to          <selectables><selectable id="nd_fpt_tst_ext.1.2_1">all failures</selectable><selectable id="nd_fpt_tst_ext.1.2_2"><assignable>list of failures detected by self-tests</assignable></selectable></selectables>          by          <selectables><selectable id="nd_fpt_tst_ext.1.2_3">entering a maintenance mode</selectable><selectable id="nd_fpt_tst_ext.1.2_4">rebooting</selectable><selectable id="nd_fpt_tst_ext.1.2_5"><assignable>other methods to enter a secure state</assignable></selectable></selectables>.</title>
+            <title>The TSF shall respond to           <selectables><selectable id="nd_fpt_tst_ext.1.2_1">all failures</selectable><selectable id="nd_fpt_tst_ext.1.2_2"><assignable>list of failures detected by self-tests</assignable></selectable></selectables>           by           <selectables><selectable id="nd_fpt_tst_ext.1.2_3">entering a maintenance mode</selectable><selectable id="nd_fpt_tst_ext.1.2_4">rebooting</selectable><selectable id="nd_fpt_tst_ext.1.2_5"><assignable>other methods to enter a secure state</assignable></selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 32 </h:b>
@@ -3871,7 +3946,7 @@ FTP_TRP.1/Admin</rationale>
             </note>
           </f-element>
           <f-element id="nd-fpt-tud-ext-1-3">
-            <title><h:p style="text-align: left;">The TSF shall provide means to authenticate firmware/software updates to the TOE using a</h:p> <selectables><selectable id="nd_fpt_tud_ext.1.3_1">X.509 certificate</selectable><selectable id="nd_fpt_tud_ext.1.3_2">digital signature</selectable></selectables>          prior to installing those udpates.</title>
+            <title><h:p style="text-align: left;">The TSF shall provide means to authenticate firmware/software updates to the TOE using a</h:p> <selectables><selectable id="nd_fpt_tud_ext.1.3_1">X.509 certificate</selectable><selectable id="nd_fpt_tud_ext.1.3_2">digital signature</selectable></selectables>           prior to installing those udpates.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 35 </h:b>
@@ -3904,10 +3979,10 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="nd-fpt-tud-ext-2-2">
-            <title> If revocation information is not available for a certificate in the trust chain that is not a trusted certificate designated as a trust anchor, the TSF shall  <selectables><selectable id="nd_fpt_tud_ext.2.2_1">not install the update</selectable><selectable id="nd_fpt_tud_ext.2.2_2">allow the Administrator to choose whether to accept the certificate in these cases</selectable></selectables>.</title>
+            <title> If revocation information is not available for a certificate in the trust chain that is not a trusted certificate designated as a trust anchor, the TSF shall   <selectables><selectable id="nd_fpt_tud_ext.2.2_1">not install the update</selectable><selectable id="nd_fpt_tud_ext.2.2_2">allow the Administrator to choose whether to accept the certificate in these cases</selectable></selectables>.</title>
           </f-element>
           <f-element id="nd-fpt-tud-ext-2-3">
-            <title>If the certificate is deemed invalid because the certificate has expired, the TSF shal  <selectables><selectable id="nd_fpt_tud_ext.2.3_1">allow the Administrator to choose whether to install the update in these cases</selectable><selectable id="nd_fpt_tud_ext.2.3_2">not accept the certificate</selectable></selectables>.</title>
+            <title>If the certificate is deemed invalid because the certificate has expired, the TSF shal   <selectables><selectable id="nd_fpt_tud_ext.2.3_1">allow the Administrator to choose whether to install the update in these cases</selectable><selectable id="nd_fpt_tud_ext.2.3_2">not accept the certificate</selectable></selectables>.</title>
           </f-element>
           <f-element id="nd-fpt-tud-ext-2-4">
             <title>
@@ -3972,7 +4047,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fta_ssl_ext.1" id="fta-ssl-ext-1" name="TSF-initiated Session Locking" status="feat-based">
           <depends on="nd-feature-6"/>
           <f-element id="fta-ssl-ext-1-1">
-            <title>The TSF shall, for local interactive sessions, <selectables><selectable id="nd_fta_ssl_ext.1.1_1">lock the session - disable any activity of the Administrator’s data access/display devices other than unlocking the session, and requiring that the Administrator reauthenticate to the TSF prior to unlocking the session</selectable><selectable id="nd_fta_ssl_ext.1.1_2">terminate the session</selectable></selectables> after a Security Administrator-specified time period of inactivity.</title>
+            <title>The TSF shall, for local interactive sessions,  <selectables><selectable id="nd_fta_ssl_ext.1.1_1">lock the session - disable any activity of the Administrator’s data access/display devices other than unlocking the session, and requiring that the Administrator reauthenticate to the TSF prior to unlocking the session</selectable><selectable id="nd_fta_ssl_ext.1.1_2">terminate the session</selectable></selectables>  after a Security Administrator-specified time period of inactivity.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 84 </h:b>
@@ -4056,10 +4131,10 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="ftp-itc-1-2">
-            <title>The TSF shall permit          <selectables><selectable id="nd_ftp_itc.1.2_1">the TSF</selectable><selectable id="nd_ftp_itc.1.2_2">another trusted IT product</selectable><selectable id="nd_ftp_itc.1.2_3">the authorised IT entities</selectable></selectables>          to initiate communication via the trusted channel.</title>
+            <title>The TSF shall permit           <selectables><selectable id="nd_ftp_itc.1.2_1">the TSF</selectable><selectable id="nd_ftp_itc.1.2_2">another trusted IT product</selectable><selectable id="nd_ftp_itc.1.2_3">the authorised IT entities</selectable></selectables>           to initiate communication via the trusted channel.</title>
           </f-element>
           <f-element id="ftp-itc-1-3">
-            <title>The TSF shall initiate communication via the trusted channel for          <assignable>list of services for which the TSF is able to initiate communications</assignable>.</title>
+            <title>The TSF shall initiate communication via the trusted channel for           <assignable>list of services for which the TSF is able to initiate communications</assignable>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 38 </h:b>
@@ -4148,7 +4223,7 @@ FTP_TRP.1/Admin</rationale>
             </aactivity>
           </f-element>
           <f-element id="nd-ftp-trp-1-2-join">
-            <title>The TSF shall permit        <selectables><selectable id="nd_ftp_trp.1.2_JOIN_1">the TSF</selectable><selectable id="nd_ftp_trp.1.2_JOIN_2">the joining component</selectable></selectables>        to initiate communication via the trusted path.</title>
+            <title>The TSF shall permit         <selectables><selectable id="nd_ftp_trp.1.2_JOIN_1">the TSF</selectable><selectable id="nd_ftp_trp.1.2_JOIN_2">the joining component</selectable></selectables>         to initiate communication via the trusted path.</title>
           </f-element>
           <f-element id="nd-ftp-trp-1-3-join">
             <title><h:p style="text-align: left;">The TSF shall require the use of the trusted path for<h:u> joining components to the TSF under environmental constraints identified in</h:u></h:p> <assignable>reference to operational guidance</assignable>.</title>

@@ -72,6 +72,7 @@ output/ndcpp-release-linkable.html: SPD
 output/ndcpp-release-linkable.html: SPDs
 output/ndcpp-release-linkable.html: Servicesoptional
 output/ndcpp-release-linkable.html: Subclause
+output/ndcpp-release-linkable.html: TOEprovided
 output/ndcpp-release-linkable.html: TSL
 output/ndcpp-release-linkable.html: VMs
 output/ndcpp-release-linkable.html: VarKey
@@ -200,6 +201,7 @@ output/ndcpp-release.html: SPD
 output/ndcpp-release.html: SPDs
 output/ndcpp-release.html: Servicesoptional
 output/ndcpp-release.html: Subclause
+output/ndcpp-release.html: TOEprovided
 output/ndcpp-release.html: TSL
 output/ndcpp-release.html: Update’
 output/ndcpp-release.html: VMs
@@ -353,6 +355,7 @@ output/ndcpp.html: SPD
 output/ndcpp.html: SPDs
 output/ndcpp.html: Servicesoptional
 output/ndcpp.html: Subclause
+output/ndcpp.html: TOEprovided
 output/ndcpp.html: TSL
 output/ndcpp.html: Update’
 output/ndcpp.html: VMs

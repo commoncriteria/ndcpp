@@ -1,0 +1,19 @@
+[cols="1,1,1,1,1,1,1,1"]
+|===
+8+|ndcpp 
+| https://github.com/commoncriteria/ndcpp/tree/builder-review-2[builder-review-2] 
+a| https://commoncriteria.github.io/ndcpp/builder-review-2/ndcpp-release.html[📄]
+a|[link=https://github.com/commoncriteria/ndcpp/blob/gh-pages/builder-review-2/ValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/builder-review-2/validation.svg[Validation]
+a|[link=https://github.com/commoncriteria/ndcpp/blob/gh-pages/builder-review-2/SanityChecksOutput.md]
+image::https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/builder-review-2/warnings.svg[SanityChecks]
+a|[link=https://github.com/commoncriteria/ndcpp/blob/gh-pages/builder-review-2/SpellCheckReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/builder-review-2/spell-badge.svg[SpellCheck]
+a|[link=https://github.com/commoncriteria/ndcpp/blob/gh-pages/builder-review-2/TDValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/builder-review-2/tds.svg[TDs]
+a|image::https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/builder-review-2/transforms.svg[transforms,150]
+a| [link=https://github.com/commoncriteria/ndcpp/blob/gh-pages/builder-review-2/HTMLs.adoc]
+image::https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/builder-review-2/html_count.svg[HTML Count]
+[link=https://github.com/commoncriteria/ndcpp/blob/gh-pages/builder-review-2/PDFs.adoc]
+image::https://raw.githubusercontent.com/commoncriteria/ndcpp/gh-pages/builder-review-2/pdf_count.svg[PDF Count]
+|===

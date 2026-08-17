@@ -1,0 +1,3 @@
+* https://commoncriteria.github.io/ndcpp/builder-review-2/ndcpp.html.pdf[ndcpp.html.pdf]
+* https://commoncriteria.github.io/ndcpp/builder-review-2/ndcpp-release-linkable.html.pdf[ndcpp-release-linkable.html.pdf]
+* https://commoncriteria.github.io/ndcpp/builder-review-2/ndcpp-release.html.pdf[ndcpp-release.html.pdf]

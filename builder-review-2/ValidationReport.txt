@@ -1,0 +1,1 @@
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:33:11: fatal: The string "--" is not permitted within comments.

@@ -1,0 +1,4 @@
+* https://commoncriteria.github.io/ndcpp/builder-review-2/diff-v1.0.html[diff-v1.0.html]
+* https://commoncriteria.github.io/ndcpp/builder-review-2/ndcpp-release-linkable.html[ndcpp-release-linkable.html]
+* https://commoncriteria.github.io/ndcpp/builder-review-2/ndcpp-release.html[ndcpp-release.html]
+* https://commoncriteria.github.io/ndcpp/builder-review-2/ndcpp.html[ndcpp.html]

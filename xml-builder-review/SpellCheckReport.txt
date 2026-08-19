@@ -1,3 +1,4 @@
+output/ndcpp-release-linkable.html: 0e
 output/ndcpp-release-linkable.html: 10C
 output/ndcpp-release-linkable.html: 11C
 output/ndcpp-release-linkable.html: 12C
@@ -136,6 +137,7 @@ output/ndcpp-release-linkable.html: v4
 output/ndcpp-release-linkable.html: vND
 output/ndcpp-release-linkable.html: vNDs
 output/ndcpp-release-linkable.html: virtualized
+output/ndcpp-release.html: 0e
 output/ndcpp-release.html: 0’s
 output/ndcpp-release.html: 10C
 output/ndcpp-release.html: 11C
@@ -311,6 +313,7 @@ output/ndcpp-release.html: vNDs
 output/ndcpp-release.html: virtualized
 output/ndcpp-release.html: x’
 output/ndcpp-release.html: ’
+output/ndcpp.html: 0e
 output/ndcpp.html: 0’s
 output/ndcpp.html: 10C
 output/ndcpp.html: 11C

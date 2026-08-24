@@ -2805,6 +2805,8 @@ FTP_TRP.1/Admin</rationale>
               </Tests>
               <audit-event/>
             </aactivity>
+		  </f-element>
+		</f-component>
             <!-- FCS_COP.1/SigVer Cryptographic Operation - Signature Verification -->
             <f-component cc-id="fcs_cop.1" id="fcs-cop-1-sigver" name="Cryptographic Operation - Signature Verification" iteration="SigVer">
               <f-element id="fcs-cop-1-1-sigver">

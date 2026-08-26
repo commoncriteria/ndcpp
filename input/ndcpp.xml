@@ -3336,7 +3336,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                 </selectable>
               </selectables>
             </title>
-            <aactivity>
+            <aactivity level="component">
               <h:p style="text-align: left;">164. Documentation shall be produced—and the evaluator shall perform the activities—in accordance with Annex D of [NDcPP].</h:p>
               <TSS/>
               <Guidance/>
@@ -3383,7 +3383,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">If "multiple TSF entropy sources" is selected in FCS_RBG.1.2, FCS_RBG.4 and FCS_RBG.5 must be claimed from Annex B. </h:p>
               <h:p style="text-align: left;">If "TSF interface for seeding" is selected in FCS_RBG.1.2, FCS_RBG.2 must be claimed from Annex B.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="element">
               <TSS>
                 <h:p style="text-align: left;">166. There are no additional TSS evaluation activities for this element.</h:p>
               </TSS>
@@ -3405,7 +3405,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">“Uninstantiate” means that the internal state of the DRBG is no longer available for use. In the second selection of FCS_RBG.1.3, “on demand” means that a TOE presents an interface to reseed as a TSFI (e.g., an API call). The interface causes the DRBG to reseed at the request of an authorised user, either with an internal source, an external source, or from input provided through the TSFI (e.g., the API call). </h:p>
               <h:p style="text-align: left;">The list of standards selected in the last assignment should be consistent with the standards selected in FCS_RBG.1.1</h:p>
             </note>
-            <aactivity>
+            <aactivity level="element">
               <TSS>
                 <h:p style="text-align: left;">167. The evaluator shall verify that the TSS identifies how the DRBG state is updated, and the situations under which this may occur.</h:p>
               </TSS>

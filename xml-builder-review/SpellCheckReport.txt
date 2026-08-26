@@ -3,9 +3,11 @@ output/ndcpp-release-linkable.html: 10C
 output/ndcpp-release-linkable.html: 11C
 output/ndcpp-release-linkable.html: 12C
 output/ndcpp-release-linkable.html: 13C
+output/ndcpp-release-linkable.html: 1GB
 output/ndcpp-release-linkable.html: 1c
 output/ndcpp-release-linkable.html: 23h
 output/ndcpp-release-linkable.html: 24h
+output/ndcpp-release-linkable.html: 2GB
 output/ndcpp-release-linkable.html: 2Security
 output/ndcpp-release-linkable.html: 2e
 output/ndcpp-release-linkable.html: 38A
@@ -15,6 +17,7 @@ output/ndcpp-release-linkable.html: 38D
 output/ndcpp-release-linkable.html: 38E
 output/ndcpp-release-linkable.html: 38F
 output/ndcpp-release-linkable.html: 4C
+output/ndcpp-release-linkable.html: 4GB
 output/ndcpp-release-linkable.html: 4ca2
 output/ndcpp-release-linkable.html: 56A
 output/ndcpp-release-linkable.html: 59min
@@ -25,6 +28,7 @@ output/ndcpp-release-linkable.html: 71f55177
 output/ndcpp-release-linkable.html: 7C
 output/ndcpp-release-linkable.html: 7h
 output/ndcpp-release-linkable.html: 8C
+output/ndcpp-release-linkable.html: 8GB
 output/ndcpp-release-linkable.html: 8h
 output/ndcpp-release-linkable.html: 8s
 output/ndcpp-release-linkable.html: 90A
@@ -90,6 +94,8 @@ output/ndcpp-release-linkable.html: Winternitz
 output/ndcpp-release-linkable.html: XMSS
 output/ndcpp-release-linkable.html: ac4d
 output/ndcpp-release-linkable.html: ae73c946de53
+output/ndcpp-release-linkable.html: amongst
+output/ndcpp-release-linkable.html: authorise
 output/ndcpp-release-linkable.html: authorised
 output/ndcpp-release-linkable.html: ba90
 output/ndcpp-release-linkable.html: behaviour
@@ -98,6 +104,7 @@ output/ndcpp-release-linkable.html: crypto
 output/ndcpp-release-linkable.html: ek
 output/ndcpp-release-linkable.html: enablement
 output/ndcpp-release-linkable.html: enquiries
+output/ndcpp-release-linkable.html: failover
 output/ndcpp-release-linkable.html: feedbac
 output/ndcpp-release-linkable.html: ffdhe
 output/ndcpp-release-linkable.html: ffdhe3072
@@ -120,6 +127,7 @@ output/ndcpp-release-linkable.html: netconf
 output/ndcpp-release-linkable.html: nonrepeating
 output/ndcpp-release-linkable.html: pND
 output/ndcpp-release-linkable.html: pNDs
+output/ndcpp-release-linkable.html: preshared
 output/ndcpp-release-linkable.html: pseudocode
 output/ndcpp-release-linkable.html: reauthenticate
 output/ndcpp-release-linkable.html: recognises
@@ -127,6 +135,7 @@ output/ndcpp-release-linkable.html: rekeying
 output/ndcpp-release-linkable.html: rekeys
 output/ndcpp-release-linkable.html: rulesets
 output/ndcpp-release-linkable.html: sLen
+output/ndcpp-release-linkable.html: selftests
 output/ndcpp-release-linkable.html: shal
 output/ndcpp-release-linkable.html: sk
 output/ndcpp-release-linkable.html: subclause
@@ -150,9 +159,11 @@ output/ndcpp-release.html: 10C
 output/ndcpp-release.html: 11C
 output/ndcpp-release.html: 12C
 output/ndcpp-release.html: 13C
+output/ndcpp-release.html: 1GB
 output/ndcpp-release.html: 1c
 output/ndcpp-release.html: 23h
 output/ndcpp-release.html: 24h
+output/ndcpp-release.html: 2GB
 output/ndcpp-release.html: 2Security
 output/ndcpp-release.html: 2e
 output/ndcpp-release.html: 38A
@@ -162,6 +173,7 @@ output/ndcpp-release.html: 38D
 output/ndcpp-release.html: 38E
 output/ndcpp-release.html: 38F
 output/ndcpp-release.html: 4C
+output/ndcpp-release.html: 4GB
 output/ndcpp-release.html: 4ca2
 output/ndcpp-release.html: 56A
 output/ndcpp-release.html: 59min
@@ -172,6 +184,7 @@ output/ndcpp-release.html: 71f55177
 output/ndcpp-release.html: 7C
 output/ndcpp-release.html: 7h
 output/ndcpp-release.html: 8C
+output/ndcpp-release.html: 8GB
 output/ndcpp-release.html: 8h
 output/ndcpp-release.html: 8s
 output/ndcpp-release.html: 90A
@@ -243,7 +256,10 @@ output/ndcpp-release.html: XMSS
 output/ndcpp-release.html: ac4d
 output/ndcpp-release.html: actions’
 output/ndcpp-release.html: action’
+output/ndcpp-release.html: activation’
 output/ndcpp-release.html: ae73c946de53
+output/ndcpp-release.html: amongst
+output/ndcpp-release.html: authorise
 output/ndcpp-release.html: authorised
 output/ndcpp-release.html: ba90
 output/ndcpp-release.html: behaviour
@@ -259,6 +275,7 @@ output/ndcpp-release.html: enablement
 output/ndcpp-release.html: enquiries
 output/ndcpp-release.html: entity’
 output/ndcpp-release.html: evaluator’s
+output/ndcpp-release.html: failover
 output/ndcpp-release.html: failure’
 output/ndcpp-release.html: feedbac
 output/ndcpp-release.html: feedback’
@@ -293,6 +310,7 @@ output/ndcpp-release.html: of’
 output/ndcpp-release.html: pND
 output/ndcpp-release.html: pNDs
 output/ndcpp-release.html: pairs’
+output/ndcpp-release.html: preshared
 output/ndcpp-release.html: pseudocode
 output/ndcpp-release.html: reauthenticate
 output/ndcpp-release.html: recognises
@@ -306,6 +324,7 @@ output/ndcpp-release.html: rule’
 output/ndcpp-release.html: sLen
 output/ndcpp-release.html: satisfied’
 output/ndcpp-release.html: security’
+output/ndcpp-release.html: selftests
 output/ndcpp-release.html: services’
 output/ndcpp-release.html: shal
 output/ndcpp-release.html: signature’
@@ -335,9 +354,11 @@ output/ndcpp.html: 10C
 output/ndcpp.html: 11C
 output/ndcpp.html: 12C
 output/ndcpp.html: 13C
+output/ndcpp.html: 1GB
 output/ndcpp.html: 1c
 output/ndcpp.html: 23h
 output/ndcpp.html: 24h
+output/ndcpp.html: 2GB
 output/ndcpp.html: 2Security
 output/ndcpp.html: 2e
 output/ndcpp.html: 38A
@@ -347,6 +368,7 @@ output/ndcpp.html: 38D
 output/ndcpp.html: 38E
 output/ndcpp.html: 38F
 output/ndcpp.html: 4C
+output/ndcpp.html: 4GB
 output/ndcpp.html: 4ca2
 output/ndcpp.html: 56A
 output/ndcpp.html: 59min
@@ -357,6 +379,7 @@ output/ndcpp.html: 71f55177
 output/ndcpp.html: 7C
 output/ndcpp.html: 7h
 output/ndcpp.html: 8C
+output/ndcpp.html: 8GB
 output/ndcpp.html: 8h
 output/ndcpp.html: 8s
 output/ndcpp.html: 90A
@@ -428,7 +451,10 @@ output/ndcpp.html: XMSS
 output/ndcpp.html: ac4d
 output/ndcpp.html: actions’
 output/ndcpp.html: action’
+output/ndcpp.html: activation’
 output/ndcpp.html: ae73c946de53
+output/ndcpp.html: amongst
+output/ndcpp.html: authorise
 output/ndcpp.html: authorised
 output/ndcpp.html: ba90
 output/ndcpp.html: behaviour
@@ -443,6 +469,7 @@ output/ndcpp.html: ek
 output/ndcpp.html: enablement
 output/ndcpp.html: entity’
 output/ndcpp.html: evaluator’s
+output/ndcpp.html: failover
 output/ndcpp.html: failure’
 output/ndcpp.html: feedbac
 output/ndcpp.html: feedback’
@@ -477,6 +504,7 @@ output/ndcpp.html: of’
 output/ndcpp.html: pND
 output/ndcpp.html: pNDs
 output/ndcpp.html: pairs’
+output/ndcpp.html: preshared
 output/ndcpp.html: pseudocode
 output/ndcpp.html: reauthenticate
 output/ndcpp.html: recognises
@@ -490,6 +518,7 @@ output/ndcpp.html: rule’
 output/ndcpp.html: sLen
 output/ndcpp.html: satisfied’
 output/ndcpp.html: security’
+output/ndcpp.html: selftests
 output/ndcpp.html: services’
 output/ndcpp.html: shal
 output/ndcpp.html: signature’

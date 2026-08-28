@@ -4,6 +4,8 @@ output/ndcpp-release-linkable.html: 11C
 output/ndcpp-release-linkable.html: 12C
 output/ndcpp-release-linkable.html: 13C
 output/ndcpp-release-linkable.html: 1GB
+output/ndcpp-release-linkable.html: 1a
+output/ndcpp-release-linkable.html: 1b
 output/ndcpp-release-linkable.html: 1c
 output/ndcpp-release-linkable.html: 23h
 output/ndcpp-release-linkable.html: 24h
@@ -117,6 +119,7 @@ output/ndcpp-release-linkable.html: iTC
 output/ndcpp-release-linkable.html: interVM
 output/ndcpp-release-linkable.html: intercomponent
 output/ndcpp-release-linkable.html: invocable
+output/ndcpp-release-linkable.html: judgement
 output/ndcpp-release-linkable.html: keyencrypting
 output/ndcpp-release-linkable.html: knowngood
 output/ndcpp-release-linkable.html: levelling
@@ -129,12 +132,17 @@ output/ndcpp-release-linkable.html: pND
 output/ndcpp-release-linkable.html: pNDs
 output/ndcpp-release-linkable.html: preshared
 output/ndcpp-release-linkable.html: pseudocode
+output/ndcpp-release-linkable.html: publicise
 output/ndcpp-release-linkable.html: reauthenticate
+output/ndcpp-release-linkable.html: recognised
 output/ndcpp-release-linkable.html: recognises
+output/ndcpp-release-linkable.html: registeredcomponents
+output/ndcpp-release-linkable.html: reinitiated
 output/ndcpp-release-linkable.html: rekeying
 output/ndcpp-release-linkable.html: rekeys
 output/ndcpp-release-linkable.html: rulesets
 output/ndcpp-release-linkable.html: sLen
+output/ndcpp-release-linkable.html: selfsigned
 output/ndcpp-release-linkable.html: selftests
 output/ndcpp-release-linkable.html: shal
 output/ndcpp-release-linkable.html: sk
@@ -160,6 +168,8 @@ output/ndcpp-release.html: 11C
 output/ndcpp-release.html: 12C
 output/ndcpp-release.html: 13C
 output/ndcpp-release.html: 1GB
+output/ndcpp-release.html: 1a
+output/ndcpp-release.html: 1b
 output/ndcpp-release.html: 1c
 output/ndcpp-release.html: 23h
 output/ndcpp-release.html: 24h
@@ -263,6 +273,7 @@ output/ndcpp-release.html: authorise
 output/ndcpp-release.html: authorised
 output/ndcpp-release.html: ba90
 output/ndcpp-release.html: behaviour
+output/ndcpp-release.html: bits’
 output/ndcpp-release.html: box’
 output/ndcpp-release.html: cPPs
 output/ndcpp-release.html: certificate’
@@ -293,6 +304,7 @@ output/ndcpp-release.html: interface’
 output/ndcpp-release.html: invocable
 output/ndcpp-release.html: issue’
 output/ndcpp-release.html: itself’
+output/ndcpp-release.html: judgement
 output/ndcpp-release.html: keyencrypting
 output/ndcpp-release.html: knowngood
 output/ndcpp-release.html: levelling
@@ -312,11 +324,15 @@ output/ndcpp-release.html: pNDs
 output/ndcpp-release.html: pairs’
 output/ndcpp-release.html: preshared
 output/ndcpp-release.html: pseudocode
+output/ndcpp-release.html: publicise
 output/ndcpp-release.html: reauthenticate
+output/ndcpp-release.html: recognised
 output/ndcpp-release.html: recognises
 output/ndcpp-release.html: records’
 output/ndcpp-release.html: record’
 output/ndcpp-release.html: reference’
+output/ndcpp-release.html: registeredcomponents
+output/ndcpp-release.html: reinitiated
 output/ndcpp-release.html: rekeying
 output/ndcpp-release.html: rekeys
 output/ndcpp-release.html: rulesets
@@ -324,6 +340,7 @@ output/ndcpp-release.html: rule’
 output/ndcpp-release.html: sLen
 output/ndcpp-release.html: satisfied’
 output/ndcpp-release.html: security’
+output/ndcpp-release.html: selfsigned
 output/ndcpp-release.html: selftests
 output/ndcpp-release.html: services’
 output/ndcpp-release.html: shal
@@ -355,6 +372,8 @@ output/ndcpp.html: 11C
 output/ndcpp.html: 12C
 output/ndcpp.html: 13C
 output/ndcpp.html: 1GB
+output/ndcpp.html: 1a
+output/ndcpp.html: 1b
 output/ndcpp.html: 1c
 output/ndcpp.html: 23h
 output/ndcpp.html: 24h
@@ -458,6 +477,7 @@ output/ndcpp.html: authorise
 output/ndcpp.html: authorised
 output/ndcpp.html: ba90
 output/ndcpp.html: behaviour
+output/ndcpp.html: bits’
 output/ndcpp.html: box’
 output/ndcpp.html: cPPs
 output/ndcpp.html: certificate’
@@ -487,6 +507,7 @@ output/ndcpp.html: interface’
 output/ndcpp.html: invocable
 output/ndcpp.html: issue’
 output/ndcpp.html: itself’
+output/ndcpp.html: judgement
 output/ndcpp.html: keyencrypting
 output/ndcpp.html: knowngood
 output/ndcpp.html: levelling
@@ -506,11 +527,15 @@ output/ndcpp.html: pNDs
 output/ndcpp.html: pairs’
 output/ndcpp.html: preshared
 output/ndcpp.html: pseudocode
+output/ndcpp.html: publicise
 output/ndcpp.html: reauthenticate
+output/ndcpp.html: recognised
 output/ndcpp.html: recognises
 output/ndcpp.html: records’
 output/ndcpp.html: record’
 output/ndcpp.html: reference’
+output/ndcpp.html: registeredcomponents
+output/ndcpp.html: reinitiated
 output/ndcpp.html: rekeying
 output/ndcpp.html: rekeys
 output/ndcpp.html: rulesets
@@ -518,6 +543,7 @@ output/ndcpp.html: rule’
 output/ndcpp.html: sLen
 output/ndcpp.html: satisfied’
 output/ndcpp.html: security’
+output/ndcpp.html: selfsigned
 output/ndcpp.html: selftests
 output/ndcpp.html: services’
 output/ndcpp.html: shal

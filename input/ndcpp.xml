@@ -504,7 +504,7 @@ FTP_TRP.1/Admin</rationale>
         <!-- FAU_GEN.1 Audit data generation -->
         <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
           <f-element id="fau-gen-1-1">
-            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li> <h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p> <h:ol type="a"><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"></h:p></h:li></h:ol></h:li></h:ol> <selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables> <h:p style="text-align: left;">;</h:p><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
+            <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li> <h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p> <h:ol type="a"><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li> <h:li> <selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables>;</h:li></h:ol></h:li></h:ol><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 1</h:b>
@@ -690,10 +690,29 @@ FTP_TRP.1/Admin</rationale>
           <f-element id="fau-stg-2-1">
             <title>The TSF shall protect the stored audit data in the audit trail from unauthorised deletion.</title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">256. The evaluator shall examine the TSS to ensure it describes the amount of audit data stored locally and how it is protected against unauthorised modification or deletion. The evaluator shall verify that the TSS describes the conditions that must be met for authorised deletion of audit records.</h:p>
+                <h:p style="text-align: left;">257. For distributed TOEs, the evaluator shall examine the TSS to ensure it describes to which TOE components this SFR applies and how local storage is implemented among the different TOE components (e.g., every TOE component either provides its own local storage, or the data is sent to another TOE component for central local storage of all audit events).</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">258. The evaluator shall examine the guidance documentation to determine if it describes any configuration required for protection of the locally stored audit data against unauthorised modification or deletion.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">259. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall attempt to access the audit trail without authentication as a Security Administrator (either by authentication as a non-administrative user, if supported, or without authentication at all) and attempt to modify and delete the audit records. The evaluator shall verify that these attempts fail. </h:p>
+                    <h:p style="text-align: left;">In the case that no other users than the Security Administrator can be defined, without user authentication the user may not be able to get to the point where the attempt to access the audit trail can be executed. In this case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall access the audit trail as an authenticated Security Administrator and attempt to delete the audit records (if supported by the TOE, and to the extent described in the TSS). The evaluator shall verify that these attempts succeed. The evaluator shall verify that only the records authorised for deletion are deleted.</h:p>
+                    <h:p style="text-align: left;"></h:p>
+                  </test>
+                  <h:p style="text-align: left;">260. For distributed TOEs, the evaluator shall perform test 1 and test 2 for each component that is defined by the TSS to be covered by this SFR.</h:p>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="nd-fau-stg-2-2">
@@ -860,10 +879,27 @@ FTP_TRP.1/Admin</rationale>
               <h:p style="text-align: left;">If FAU_STG_EXT.2 is added to the ST, the ST has to make clear any situations in which lost audit data is not counted.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;">261. This activity should be accomplished in conjunction with the testing of FAU_STG_EXT.1.4 and FAU_STG_EXT.1.5.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">262. The evaluator shall examine the TSS to ensure that it details the possible options the TOE supports for information about the number of audit records that have been dropped, overwritten, etc. when the local storage for audit data is full.</h:p>
+                <h:p style="text-align: left;">263. For distributed TOEs, the evaluator shall examine the TSS to ensure it describes to which TOE components this SFR applies. Since this SFR is optional, it might only apply to some TOE components and not all. This might lead to the situation where all TOE components store their audit information themselves but FAU_STG_EXT.2 is supported only by one of the components.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">264. The evaluator shall also ensure that the guidance documentation describes all possible configuration options and the meaning of the result returned by the TOE for each possible configuration. The description of possible configuration options and explanation of the result shall correspond to those described in the TSS. </h:p>
+                <h:p style="text-align: left;">265. The evaluator shall verify that the guidance documentation contains a warning for the administrator about the loss of audit data when clearing the local storage for audit records.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">266. The evaluator shall verify that the numbers provided by the TOE according to the selection for FAU_STG_EXT.2 are correct when performing the tests for FAU_STG_EXT.1.5.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">267. For distributed TOEs, the evaluator shall verify the correct implementation of counting of lost audit data for all TOE components that are supporting this feature, according to the description in the TSS.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -883,10 +919,26 @@ FTP_TRP.1/Admin</rationale>
               <h:p style="text-align: left;">If FAU_STG_EXT.3 is added to the ST, the ST has to make clear any situations in which audit records might be “invisibly lost”.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;">268. This activity should be accomplished in conjunction with the testing of FAU_STG_EXT.1.4 and FAU_STG_EXT.1.5.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">269. The evaluator shall examine the TSS to ensure that it details how the Security Administrator is warned before the local storage for audit data is full. </h:p>
+                <h:p style="text-align: left;">270. For distributed TOEs, the evaluator shall examine the TSS to ensure it describes to which TOE components this SFR applies and how each TOE component implements this SFR. Since this SFR is optional, it might only apply to some TOE components and not all. This might lead to the situation where all TOE components store their audit information themselves but FAU_STG_EXT.3 is supported only by one of the components. In particular, the evaluator shall verify that the TSS describes for every component supporting this functionality, whether the warning is generated by the component itself or through another component and name the corresponding component in the latter case. The evaluator shall verify that the TSS makes clear any situations in which audit records might be 'invisibly lost'.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">271. The evaluator shall also verify that the guidance documentation describes how the Security Administrator is warned before the local storage for audit data is full and how this warning is displayed or stored (since there is no guarantee that an administrator session is running at the time the warning is issued, it is very likely that it will be stored in the log files). The description in the guidance documentation shall correspond to the description in the TSS.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">272. The evaluator shall verify that a warning is issued by the TOE before the local storage space for audit data is full.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">273. For distributed TOEs, the evaluator shall verify the correct implementation of display warning for local storage space for all TOE components that are supporting this feature according to the description in the TSS. The evaluator shall verify that each component that supports this feature according to the description in the TSS is capable of generating a warning itself or through another component.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event>
@@ -945,10 +997,124 @@ FTP_TRP.1/Admin</rationale>
           <f-element id="fco-cpc-ext-1-1">
             <title>The TSF shall require a Security Administrator to enable communications between any pair of TOE components before such communication can take place.</title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;">290. If the TOE is not a distributed TOE, then no evaluator action is necessary. For a distributed TOE the evaluator carries out the activities below. In carrying out these activities the evaluator shall determine answers to the following questions based on a combination of documentation analysis and testing (possibly also using input from carrying out the Evaluation Activities for the relevant registration channel, such as FTP_TRP.1/Join), and shall report the answers. </h:p>
+              <h:ol type="a">
+                <h:li>
+                  <h:p style="text-align: left;">What stops<h:sup>[5]</h:sup> a TOE component from successfully communicating with other TOE components (in a way that enables it to participate as part of the TOE) before it has been properly authenticated and becomes a functional part of the distributed TOE? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What is the enablement step? (Describe what interface it uses, with a reference to the relevant section and step in the operational guidance). </h:p>
+                  <h:ol type="a">
+                    <h:li>
+                      <h:p style="text-align: left;">i. What stops anybody other than a Security Administrator from carrying out this step? </h:p>
+                    </h:li>
+                    <h:li>
+                      <h:p style="text-align: left;">ii. How does the Security Administrator know that they are enabling the intended TOE component to join? (Identification of the joiner might be part of the enablement action itself or might be part of secure channel establishment, but it must prevent unintended joining of components) </h:p>
+                    </h:li>
+                  </h:ol>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What stops a TOE component from successfully joining if the Security Administrator has not carried out the enablement step; or, equivalently, how does the distributed TOE ensure that an action by an authentic Security Administrator is required before a component can successfully join? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What stops a TOE component from carrying out the registration process over a different, insecure channel? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">If the FTP_TRP.1/Join channel type is selected in FCO_CPC_EXT.1.2 then how does the registration process, and its resulting secure channel, ensure that the transmitted data is protected from disclosure and that it provides detection of modification? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">Where the registration channel does not rely on protection of the registration environment, does the registration channel provide a sufficient level of protection (especially with regard to confidentiality) for the data that passes over it? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">Where the registration channel is subsequently used for normal internal communication between TOE components (i.e. after the joiner has completed registration), do any of the authentication or encryption features of the registration channel result in use of a channel that has weaker protection than the normal FPT_ITT.1 requirements for such a channel? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What is the disablement step? (Describe what interface it uses, with a reference to the relevant section and step in the operational guidance). </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What stops a TOE component from successfully communicating with other TOE components if the Security Administrator has carried out the disablement step?</h:p>
+                </h:li>
+              </h:ol>
+              <TSS>
+                <h:p style="text-align: left;">&lt;should be Distributed TOE-dependent.></h:p>
+                <h:p style="text-align: left;">291. (Note: Section 3.4.1 lists questions for which the evaluator shall determine and report answers through the combination of the TSS, Guidance Documentation, and Tests Evaluation Activities.) </h:p>
+                <h:p style="text-align: left;">292. The evaluator shall examine the TSS to confirm that it: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Describes the method by which a Security Administrator enables and disables communications between pairs of TOE components. </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Describes the relevant details according to the type of channel in the main selection made in FCO_CPC_EXT.1.2: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">First type: the TSS identifies the relevant SFR iteration that specifies the type of channel being used </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Second type: the TSS (with support from the operational guidance if selected in FTP_TRP.1.3/Join) provides details of the channel and the mechanisms that it uses (and describes how the process ensures that the key is unique to the pair of components) – see also the Evaluation Activities for FTP_TRP.1/Join. </h:p>
+                      </h:li>
+                    </h:ul>
+                  </h:li>
+                </h:ol>
+                <h:p style="text-align: left;">293. The evaluator shall verify that if any aspects of the registration channel are identified as not meeting FTP_ITC.1 or FPT_ITT.1, then the ST has also selected the FTP_TRP.1/Join option in the main selection in FCO_CPC_EXT.1.2. If the registration channel is also to be used for other communications then FTP_TRP.1/Join cannot be present in the ST.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">&lt;should be Distributed TOE-dependent.></h:p>
+                <h:p style="text-align: left;">294. (Note: Section 3.4.1 lists questions for which the evaluator shall determine and report answers through the combination of the TSS, Guidance Documentation, and Tests Evaluation Activities.) </h:p>
+                <h:p style="text-align: left;">295. The evaluator shall examine the guidance documentation to confirm that it contains instructions for enabling and disabling communications with any individual component of a distributed TOE. The evaluator shall confirm that the method of disabling is such that all other components will be prevented from communicating with the component that is being removed from the TOE (preventing the remaining components from either attempting to initiate communications with the disabled component, or from responding to communications from the disabled component). </h:p>
+                <h:p style="text-align: left;">296. The evaluator shall examine the guidance documentation to confirm that it includes recovery instructions should a connection between TOE components be unintentionally broken during the registration process. </h:p>
+                <h:p style="text-align: left;">297. If the TOE uses a registration channel for registering components to the TOE (i.e., where the ST author uses the FTP_ITC.1/FPT_ITT.1 or FTP_TRP.1/Join channel types in the main selection for FCO_CPC_EXT.1.2) then the evaluator shall examine the Preparative Procedures to confirm that they: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">describe the security characteristics of the registration channel (e.g., the protocol, keys and authentication data on which it is based) and that they highlight any aspects which do not meet the requirements for a steady-state inter-component channel (as in FTP_ITC.1 or FPT_ITT.1) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">identify any dependencies between the configuration of the registration channel and the security of the subsequent intercomponent communications (e.g., where AES-256 inter-component communications depend on transmitting 256-bit keys between components and therefore rely on the registration channel being configured to use an encryption key of equivalent length) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">identify any aspects of the channel that can be modified by the operational environment in order to improve the channel’s security, and that they describe how this modification can be achieved (e.g., generating a new key pair, or replacing a default public key certificate). </h:p>
+                  </h:li>
+                </h:ol>
+                <h:p style="text-align: left;">298. As background for the examination of the registration channel description, it is noted that the requirements above are intended to ensure that administrators can make an accurate judgement of any risks that arise from the default registration process. Examples would be the use of self-signed certificates (i.e., certificates that are not chained to an external or local Certification Authority), manufacturer-issued certificates (where control over aspects such as revocation, or which devices are issued with recognised certificates, is outside the control of the operational environment), use of generic/non-unique keys (e.g., where the same key is present on more than one instance of a device), or well-known keys (i.e., where the confidentiality of the keys is not intended to be strongly protected – note that this need not mean there is a positive action or intention to publicise the keys). </h:p>
+                <h:p style="text-align: left;">299. In the case of a distributed TOE for which the ST author uses the FTP_TRP.1/Join channel type in the main selection for FCO_CPC_EXT.1.2 and the TOE relies on the operational environment to provide security for some aspects of the registration channel security then there are additional requirements on the Preparative Procedures as described in Section 3.4.1.2.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">300. (Note: Section 3.4.1 lists questions for which the evaluator shall determine and report answers through the combination of the TSS, Guidance Documentation, and Tests Evaluation Activities.)</h:p>
+                <testlist>
+                  <depends on="nd-feature-7"/>
+                  <h:p style="text-align: left;">301. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1a: the evaluator shall confirm that a TOE component that is not currently a member of the distributed TOE cannot communicate with any other component of the TOE until the non-member is enabled by a Security Administrator, for each of the non-equivalent TOE components<h:sup>[6]</h:sup>, that it is required to communicate with (nonequivalent TOE components are as defined in the minimum configuration for the distributed TOE).</h:p>
+                    <h:p style="text-align: left;">Test 1b: the evaluator shall confirm that after enablement, a TOE component can only communicate with the other TOE components that it has been enabled for. This includes testing that the enabled communication is successful for the enabled TOE component pair, and that communication remains unsuccessful with any other TOE component for which communication has not been explicitly enabled. </h:p>
+                    <h:p style="text-align: left;">Some TOEs may set up the registration channel before the enablement step is carried out, but in such a case the separate registeredcomponents channel must not allow communications until after the enablement step has been completed.</h:p>
+                    <h:p style="text-align: left;">302. The evaluator shall repeat Tests 1a and 1b for each different type of enablement process that can be used in the distributed TOE.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall separately disable each TOE component in turn and ensure that the other TOE components cannot then communicate with the disabled component, whether by attempting to initiate communications with the disabled component, or by responding to communication attempts from the disabled component.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 3: The evaluator shall perform the following tests according to those that apply to the values of the main (outer) selection made in the ST for FCO_CPC_EXT.1.2.</h:p>
+                    <testlist>
+                      <h:p style="text-align: left;">If the ST uses the first type of communication channel in the selection list in FCO_CPC_EXT.1.2 then the evaluator shall test the channel via the Evaluation Activities for FTP_ITC.1 or FPT_ITT.1 according to the second selection list in FCO_CPC_EXT.1.2 (which is contained within the first type), therefore the evaluator shall ensure that the test coverage for these SFRs includes their usage in the registration process.</h:p>
+                      <h:p style="text-align: left;">If the ST uses the second type of communication channel in the selection in FCO_CPC_EXT.1.2 then the evaluator shall test the channel via the Evaluation Activities for FTP_TRP.1/Join.</h:p>
+                      <h:p style="text-align: left;">If the ST uses the ‘no channel’ selection, then no test is required.</h:p>
+                    </testlist>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 4: The evaluator shall perform one of the following tests, according to the TOE characteristics identified in its TSS and operational guidance: </h:p>
+                    <testlist>
+                      <h:p style="text-align: left;">If the registration channel is not subsequently used for inter-component communication, and in all cases where the second selection in FCO_CPC_EXT.1.2 is made (i.e., using FTP_TRP.1/Join) then the evaluator shall confirm that the registration channel can no longer be used after the registration process has completed, by attempting to use the channel to communicate with each of the endpoints after registration has completed.</h:p>
+                      <h:p style="text-align: left;">If the registration channel is subsequently used for intercomponent communication then the evaluator shall confirm that any aspects identified in the operational guidance as necessary to meet the requirements for a steady-state intercomponent channel (as in FTP_ITC.1 or FPT_ITT.1) can indeed be carried out (e.g., there might be a requirement to replace the default key pair and/or public key certificate).</h:p>
+                    </testlist>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 5: For each aspect of the security of the registration channel that operational guidance states can be modified by the operational environment in order to improve the channel security (see AGD_PRE.1 refinement item 2 in (see the requirements on Preparative Procedures in 3.4.1.2), the evaluator shall confirm, by following the procedure described in the operational guidance, that this modification can be successfully carried out.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="fco-cpc-ext-1-2">
@@ -1367,6 +1533,18 @@ FTP_TRP.1/Admin</rationale>
               <h:p style="text-align: left;">If “key encapsulation” is selected, FCS_COP.1/KeyEncap from Annex B must be claimed, which specifies the relevant list of standards. </h:p>
               <h:p style="text-align: left;">If “key wrapping” is selected, FCS_COP.1/KeyWrap from Annex B must be claimed, which specifies the relevant list of standards.</h:p>
             </note>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">274. The evaluator shall ensure that the TSS documents that the security strength supported by the selected key distribution methods is sufficient for the security strength of the keys distributed through those methods. </h:p>
+                <h:p style="text-align: left;">275. It is not necessary to identify the services that use each key distribution method here. That information should be documented in the requirements for the individual services and protocols that invoke key distribution.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">276. The evaluator shall verify that the AGD guidance instructs the administrator how to configure the TOE to use the selected key distribution methods.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">277. Specific testing for this component is covered by testing for the claimed components in FCS_COP.1/KeyEncap, FCS_COP.1/KeyWrap, and the applicable key establishment or key derivation mechanisms claimed under FCS_CKM.1/AKG, FCS_CKM.5, FCS_CKM_EXT.8, or FCS_CKM_EXT.3.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_CKM.6 Timing and Event of Cryptographic Key Destruction -->
@@ -1558,7 +1736,7 @@ FTP_TRP.1/Admin</rationale>
                 </selectable>
                 <selectable id="sel-fcs-cop-aead-aes-gcm">
                   <col>AES-GCM</col>
-                  <col>AES in GCM mode with non-repeating IVs using <selectables><selectable id="fcs_cop.1.1_AEAD_5">deterministic</selectable><selectable id="fcs_cop.1.1_AEAD_6">RBG-based</selectable></selectables>, IV construction; the tag must be of length <selectables><selectable id="fcs_cop.1.1_AEAD_7">96</selectable><selectable id="fcs_cop.1.1_AEAD_8">104</selectable><selectable id="fcs_cop.1.1_AEAD_9">112</selectable><selectable id="fcs_cop.1.1_AEAD_10">120</selectable><selectable id="fcs_cop.1.1_AEAD_11">128</selectable></selectables> bits.</col>
+                  <col>AES in GCM mode with non-repeating IVs using <selectables><selectable id="fcs_cop.1.1_AEAD_5">deterministic</selectable><selectable id="fcs_cop.1.1_AEAD_6">RBG-based</selectable></selectables>,IV construction; the tag must be of length <selectables><selectable id="fcs_cop.1.1_AEAD_7">96</selectable><selectable id="fcs_cop.1.1_AEAD_8">104</selectable><selectable id="fcs_cop.1.1_AEAD_9">112</selectable><selectable id="fcs_cop.1.1_AEAD_10">120</selectable><selectable id="fcs_cop.1.1_AEAD_11">128</selectable></selectables> bits.</col>
                   <col><selectables><selectable id="nd_fcs_cop.1.1_AEAD_3">128</selectable><selectable id="nd_fcs_cop.1.1_AEAD_4">256</selectable></selectables> bits</col>
                   <col><selectables><selectable id="fcs_cop.1.1_AEAD_12">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_AEAD_13">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_AEAD_14">ISO/IEC 19772:2020 (Clause 10)</selectable><selectable id="fcs_cop.1.1_AEAD_15">NIST SP 800-38D</selectable></selectables> [GCM]</col>
                 </selectable>
@@ -1793,7 +1971,9 @@ FTP_TRP.1/Admin</rationale>
                 <h:p style="text-align: left;">138. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
                 <testlist>
                   <test>
-                    <h:p style="text-align: left;">SHA-256, SHA-384, SHA-512 </h:p>
+                    <h:p style="text-align: left;">
+                      <h:b>SHA-256, SHA-384, SHA-512</h:b>
+                    </h:p>
                     <h:p style="text-align: left;">139. To test the TOE’s ability to generate hash digests using SHA2 the evaluator shall perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Test for each claimed SHA2 algorithm.</h:p>
                     <testlist><h:p style="text-align: left;"></h:p><h:p style="text-align: left;"><h:b>Algorithm Functional Test </h:b></h:p><h:p style="text-align: left;">140. The evaluator shall generate a number of test cases equal to the block size of the hash (512 for SHA2-256; 1024 for the other SHA2 algorithms). </h:p><h:p style="text-align: left;">141. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported. </h:p><h:p style="text-align: left;">142. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported.</h:p><h:p style="text-align: left;"><h:b>Monte Carlo Test </h:b></h:p><h:p style="text-align: left;">143. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation. </h:p><h:p style="text-align: left;">144. There are two versions of the Monte Carlo test for SHA-1 and SHA-2. Either one is acceptable. For the Standard Monte Carlo test the message hashed is always three times the length of the initial seed. </h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>For j = 0 to 99 
        A = B = C = SEED 
@@ -1826,7 +2006,7 @@ For j = 0 to 99
                       <h:b>SHA3-384, SHA3-512 </h:b>
                     </h:p>
                     <h:p style="text-align: left;">149. To test the TOE’s ability to generate hash digests using SHA3 the evaluator shall perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Tests for each claimed SHA3 algorithm.</h:p>
-                    <testlist><h:p style="text-align: left;"><h:b>Algorithm Functional Test</h:b></h:p><h:p style="text-align: left;">150. Generate a test case consisting of random data for every message length from 0 bits (or the smallest supported message size) to rate bits, where rate equals </h:p><h:ul><h:li><h:p style="text-align: left;">832 for SHA3-384 and </h:p></h:li><h:li><h:p style="text-align: left;">576 for SHA3-512. </h:p></h:li></h:ul><h:p style="text-align: left;">151. Additionally, generate tests cases of random data for messages of every multiple of (rate+1) bits starting at length rate, and continuing until 65535 is exceeded. </h:p><h:p style="text-align: left;">152. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p><h:p style="text-align: left;">Monte Carlo Test </h:p><h:p style="text-align: left;">153. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation. </h:p><h:p style="text-align: left;">154. For this Monte Carlo Test, the hashed message is always the same length as the seed. </h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>MD[0] = SEED 
+                    <testlist><h:p style="text-align: left;"><h:b>Algorithm Functional Test</h:b></h:p><h:p style="text-align: left;">150. Generate a test case consisting of random data for every message length from 0 bits (or the smallest supported message size) to rate bits, where rate equals </h:p><h:ul><h:li><h:p style="text-align: left;">832 for SHA3-384 and </h:p></h:li><h:li><h:p style="text-align: left;">576 for SHA3-512. </h:p></h:li></h:ul><h:p style="text-align: left;">151. Additionally, generate tests cases of random data for messages of every multiple of (rate+1) bits starting at length rate, and continuing until 65535 is exceeded. </h:p><h:p style="text-align: left;">152. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p><h:p style="text-align: left;"><h:b>Monte Carlo Test</h:b></h:p><h:p style="text-align: left;">153. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation.</h:p><h:p style="text-align: left;">154. For this Monte Carlo Test, the hashed message is always the same length as the seed.</h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>MD[0] = SEED 
 INITIAL_SEED_LENGTH = LEN(SEED) 
 For 100 iterations 
        For i = 1 to 1000 
@@ -2015,7 +2195,7 @@ For 100 iterations
                 </selectable>
                 <selectable id="sel-fcs-cop-kw-aes-gcm">
                   <col>AES-GCM</col>
-                  <col>AES in GCM mode with non-repeating IVs using <selectables><selectable id="fcs_cop.1.1_KeyWrap_11">deterministic</selectable><selectable id="fcs_cop.1.1_KeyWrap_12">RBG-based</selectable></selectables>, IV construction; the tag must be of length <selectables><selectable id="fcs_cop.1.1_KeyWrap_13">96</selectable><selectable id="fcs_cop.1.1_KeyWrap_14">104</selectable><selectable id="fcs_cop.1.1_KeyWrap_15">112</selectable><selectable id="fcs_cop.1.1_KeyWrap_16">120</selectable><selectable id="fcs_cop.1.1_KeyWrap_17">128</selectable></selectables> bits.</col>
+                  <col>AES in GCM mode with non-repeating IVs using <selectables><selectable id="fcs_cop.1.1_KeyWrap_11">deterministic</selectable><selectable id="fcs_cop.1.1_KeyWrap_12">RBG-based</selectable></selectables>,IV construction; the tag must be of length <selectables><selectable id="fcs_cop.1.1_KeyWrap_13">96</selectable><selectable id="fcs_cop.1.1_KeyWrap_14">104</selectable><selectable id="fcs_cop.1.1_KeyWrap_15">112</selectable><selectable id="fcs_cop.1.1_KeyWrap_16">120</selectable><selectable id="fcs_cop.1.1_KeyWrap_17">128</selectable></selectables> bits.</col>
                   <col>256 bits</col>
                   <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_18">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_19">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_KeyWrap_20">ISO/IEC 19772:2020 (Clause 10)</selectable><selectable id="fcs_cop.1.1_KeyWrap_21">NIST SP 800-38D</selectable></selectables> [GCM]</col>
                 </selectable>
@@ -2157,13 +2337,13 @@ For 100 iterations
                 <selectable id="sel-fcs-cop-siggen-rsa-pss">
                   <col>RSA-PSS</col>
                   <col>RSASSA-PSS</col>
-                  <col>Modulus of size <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_3">2048</selectable><selectable id="fcs_cop.1.1_SigGen_7">3072</selectable><selectable id="fcs_cop.1.1_SigGen_8">4096</selectable><selectable id="fcs_cop.1.1_SigGen_9">6144</selectable><selectable id="fcs_cop.1.1_SigGen_10">8192</selectable></selectables> bits and hash <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_4">SHA-256</selectable><selectable id="fcs_cop.1.1_SigGen_11">SHA-384</selectable><selectable id="fcs_cop.1.1_SigGen_12">SHA-512</selectable></selectables>, Salt Length (<h:i>sLen</h:i>) such that <assignable>0 ≤ sLen ≤ hLen (Hash Output Length)</assignable> and Mask Generation Function = MGF1</col>
+                  <col>Modulus of size <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_3">2048</selectable><selectable id="fcs_cop.1.1_SigGen_7">3072</selectable><selectable id="fcs_cop.1.1_SigGen_8">4096</selectable><selectable id="fcs_cop.1.1_SigGen_9">6144</selectable><selectable id="fcs_cop.1.1_SigGen_10">8192</selectable></selectables> bits and hash <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_4">SHA-256</selectable><selectable id="fcs_cop.1.1_SigGen_11">SHA-384</selectable><selectable id="fcs_cop.1.1_SigGen_12">SHA-512</selectable></selectables>,Salt Length (<h:i>sLen</h:i>) such that <assignable>0 ≤ sLen ≤ hLen (Hash Output Length)</assignable> and Mask Generation Function = MGF1</col>
                   <col>RFC 8017 (Section 8.1) [PKCS#1 v2.2]<h:p/>FIPS PUB 186-5 (Section 5.4) [RSASSA-PSS]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-siggen-ecdsa">
                   <col>ECDSA</col>
                   <col>ECDSA</col>
-                  <col>Elliptic Curve <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_5">P-256</selectable><selectable id="fcs_cop.1.1_SigGen_13">P-384</selectable><selectable id="fcs_cop.1.1_SigGen_14">P-521</selectable></selectables>, per-message secret number generation <selectables><selectable id="fcs_cop.1.1_SigGen_15">extra random bits</selectable><selectable id="fcs_cop.1.1_SigGen_16">rejection sampling</selectable><selectable id="fcs_cop.1.1_SigGen_17">deterministic</selectable></selectables> and hash function using <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_6">SHA-256</selectable><selectable id="fcs_cop.1.1_SigGen_18">SHA-384</selectable><selectable id="fcs_cop.1.1_SigGen_19">SHA-512</selectable></selectables></col>
+                  <col>Elliptic Curve <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_5">P-256</selectable><selectable id="fcs_cop.1.1_SigGen_13">P-384</selectable><selectable id="fcs_cop.1.1_SigGen_14">P-521</selectable></selectables>,per-message secret number generation <selectables><selectable id="fcs_cop.1.1_SigGen_15">extra random bits</selectable><selectable id="fcs_cop.1.1_SigGen_16">rejection sampling</selectable><selectable id="fcs_cop.1.1_SigGen_17">deterministic</selectable></selectables> and hash function using <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_6">SHA-256</selectable><selectable id="fcs_cop.1.1_SigGen_18">SHA-384</selectable><selectable id="fcs_cop.1.1_SigGen_19">SHA-512</selectable></selectables></col>
                   <col><selectables><selectable id="fcs_cop.1.1_SigGen_20">ISO/IEC 14888-3:2018 (Subclause 6.6)</selectable><selectable id="fcs_cop.1.1_SigGen_21">FIPS PUB 186-5 (Sections 6.3.1, 6.4.1]</selectable></selectables> [ECDSA]<h:p/>NIST SP-800 186 (Section 4) [NIST Curves]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-siggen-mldsa">
@@ -2530,41 +2710,39 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                 <testlist>
                   <test>
                     <h:p style="text-align: left;">
-                      <h:b>RSA-PKCS Signature Verification </h:b>
+                      <h:b>RSA-PKCS Signature Verification</h:b>
                     </h:p>
-                    <h:p style="text-align: left;">117. To test the TOE’s ability to perform RSA Digital Signature Verification using PKCS1-v1,5 signature type, the evaluator shall perform the Generated Data Test using the following input parameters: </h:p>
+                    <h:p style="text-align: left;">117. To test the TOE’s ability to perform RSA Digital Signature Verification using PKCS1-v1,5 signature type, the evaluator shall perform the Generated Data Test using the following input parameters:</h:p>
                     <h:ul>
                       <h:li>
-                        <h:p style="text-align: left;">Modulus size [2048, 3072, 4096, 6144, 8192] bits </h:p>
+                        <h:p style="text-align: left;">Modulus size [2048, 3072, 4096, 6144, 8192] bits</h:p>
                       </h:li>
                       <h:li>
                         <h:p style="text-align: left;">Hash algorithm [SHA-256, SHA-384, SHA-512]</h:p>
                       </h:li>
-                      <h:li>
-                        <h:p style="text-align: left;">
-                          <h:b>Generated Data Test </h:b>
-                        </h:p>
-                      </h:li>
                     </h:ul>
-                    <h:p style="text-align: left;">118. For each supported combination of the above parameters, the evaluator shall cause the TOE to generate six test cases using a random message and its signature such that the test cases are modified as follows: </h:p>
+                    <h:p style="text-align: left;">
+                      <h:b>Generated Data Test</h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">118. For each supported combination of the above parameters, the evaluator shall cause the TOE to generate six test cases using a random message and its signature such that the test cases are modified as follows:</h:p>
                     <h:ul>
                       <h:li>
-                        <h:p style="text-align: left;">One test case is left unmodified </h:p>
+                        <h:p style="text-align: left;">One test case is left unmodified</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">For one test case the Message is modified </h:p>
+                        <h:p style="text-align: left;">For one test case the Message is modified</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">For one test case the Signature is modified </h:p>
+                        <h:p style="text-align: left;">For one test case the Signature is modified</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">For one test case the exponent (e) is modified </h:p>
+                        <h:p style="text-align: left;">For one test case the exponent (e) is modified</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">For one test case the IR is moved </h:p>
+                        <h:p style="text-align: left;">For one test case the IR is moved</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">For one test case the Trailer is moved </h:p>
+                        <h:p style="text-align: left;">For one test case the Trailer is moved</h:p>
                       </h:li>
                     </h:ul>
                     <h:p style="text-align: left;">119. The TOE must correctly verify the unmodified signatures and fail to verify the modified signatures.</h:p>
@@ -3150,7 +3328,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
             </note>
           </f-element>
           <f-element id="fcs-ipsec-ext-1-5">
-            <title>The TSF shall implement the protocol:         <selectables><selectable id="nd-fcs-ipsec-ext-1-5-compsel-1">IKEv1, using Main Mode for Phase 1 exchanges, as defined in RFCs 2407, 2408, 2409, RFC 4109, <selectables><selectable id="nd_fcs_ipsec_ext.1.5_1">no other RFCs for extended sequence numbers</selectable><selectable id="nd_fcs_ipsec_ext.1.5_2">RFC 4304 for extended sequence numbers</selectable></selectables>, and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_3">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_4">RFC 4868 for hash functions</selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-5-compsel-2">IKEv2 as defined in RFC 7296 <selectables><selectable id="nd_fcs_ipsec_ext.1.5_5">with no support for NAT traversal</selectable><selectable id="nd_fcs_ipsec_ext.1.5_6">with mandatory support for NAT traversal as specified in RFC 7296 (Section 2.23)</selectable></selectables>, and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_7">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_8">RFC 4868 for hash functions</selectable></selectables> </selectable></selectables>.</title>
+            <title>The TSF shall implement the protocol:         <selectables><selectable id="nd-fcs-ipsec-ext-1-5-compsel-1">IKEv1, using Main Mode for Phase 1 exchanges, as defined in RFCs 2407, 2408, 2409, RFC 4109, <selectables><selectable id="nd_fcs_ipsec_ext.1.5_1">no other RFCs for extended sequence numbers</selectable><selectable id="nd_fcs_ipsec_ext.1.5_2">RFC 4304 for extended sequence numbers</selectable></selectables>,and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_3">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_4">RFC 4868 for hash functions</selectable></selectables> </selectable><selectable id="nd-fcs-ipsec-ext-1-5-compsel-2">IKEv2 as defined in RFC 7296 <selectables><selectable id="nd_fcs_ipsec_ext.1.5_5">with no support for NAT traversal</selectable><selectable id="nd_fcs_ipsec_ext.1.5_6">with mandatory support for NAT traversal as specified in RFC 7296 (Section 2.23)</selectable></selectables>,and <selectables><selectable id="nd_fcs_ipsec_ext.1.5_7">no other RFCs for hash functions</selectable><selectable id="nd_fcs_ipsec_ext.1.5_8">RFC 4868 for hash functions</selectable></selectables> </selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 63 </h:b>
@@ -3336,7 +3514,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                 </selectable>
               </selectables>
             </title>
-            <aactivity level="component">
+            <aactivity>
               <h:p style="text-align: left;">164. Documentation shall be produced—and the evaluator shall perform the activities—in accordance with Annex D of [NDcPP].</h:p>
               <TSS/>
               <Guidance/>
@@ -3383,7 +3561,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">If "multiple TSF entropy sources" is selected in FCS_RBG.1.2, FCS_RBG.4 and FCS_RBG.5 must be claimed from Annex B. </h:p>
               <h:p style="text-align: left;">If "TSF interface for seeding" is selected in FCS_RBG.1.2, FCS_RBG.2 must be claimed from Annex B.</h:p>
             </note>
-            <aactivity level="element">
+            <aactivity>
               <TSS>
                 <h:p style="text-align: left;">166. There are no additional TSS evaluation activities for this element.</h:p>
               </TSS>
@@ -3405,7 +3583,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">“Uninstantiate” means that the internal state of the DRBG is no longer available for use. In the second selection of FCS_RBG.1.3, “on demand” means that a TOE presents an interface to reseed as a TSFI (e.g., an API call). The interface causes the DRBG to reseed at the request of an authorised user, either with an internal source, an external source, or from input provided through the TSFI (e.g., the API call). </h:p>
               <h:p style="text-align: left;">The list of standards selected in the last assignment should be consistent with the standards selected in FCS_RBG.1.1</h:p>
             </note>
-            <aactivity level="element">
+            <aactivity>
               <TSS>
                 <h:p style="text-align: left;">167. The evaluator shall verify that the TSS identifies how the DRBG state is updated, and the situations under which this may occur.</h:p>
               </TSS>
@@ -3573,7 +3751,15 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
         <!-- FIA_UIA_EXT.1 User Identification and Authentication -->
         <f-component cc-id="fia_uia_ext.1" id="fia-uia-ext-1" name="User Identification and Authentication">
           <f-element id="fia-uia-ext-1-1">
-            <title><h:p style="text-align: left;">The TSF shall allow the following actions prior to requiring the non-TOE entity to initiate the identification and authentication process:</h:p><h:ul><h:li><h:p style="text-align: left;">Display the warning banner in accordance with FTA_TAB.1;</h:p></h:li> <h:li><h:p style="text-align: left;"></h:p></h:li></h:ul> <selectables><selectable id="nd_fia_uia_ext.1.1_1">no other actions</selectable><selectable id="nd_fia_uia_ext.1.1_2">automated generation of cryptographic keys</selectable><selectable id="nd_fia_uia_ext.1.1_3"><assignable>list of services, actions performed by the TSF in response to non-TOE requests</assignable></selectable></selectables>.</title>
+            <title>
+              <h:p style="text-align: left;">The TSF shall allow the following actions prior to requiring the non-TOE entity to initiate the identification and authentication process:</h:p>
+              <h:ul>
+                <h:li>
+                  <h:p style="text-align: left;">Display the warning banner in accordance with FTA_TAB.1;</h:p>
+                </h:li>
+                <h:li> <selectables><selectable id="nd_fia_uia_ext.1.1_1">no other actions</selectable><selectable id="nd_fia_uia_ext.1.1_2">automated generation of cryptographic keys</selectable><selectable id="nd_fia_uia_ext.1.1_3"><assignable>list of services, actions performed by the TSF in response to non-TOE requests</assignable></selectable></selectables>.</h:li>
+              </h:ul>
+            </title>
             <aactivity level="component">
               Something
               <TSS>
@@ -3617,7 +3803,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
             </note>
           </f-element>
           <f-element id="fia-uia-ext-1-3">
-            <title>The TSF shall provide the following remote authentication mechanisms                 <selectables><selectable id="nd_fia_uia_ext.1.3_1">Web GUI password</selectable><selectable id="nd_fia_uia_ext.1.3_2">SSH password</selectable><selectable id="nd_fia_uia_ext.1.3_3">SSH public key</selectable><selectable id="nd_fia_uia_ext.1.3_4">X.509 certificate</selectable></selectables>                 and                 <selectables><selectable id="nd_fia_uia_ext.1.3_5">no other mechanism</selectable><selectable id="nd_fia_uia_ext.1.3_6">external authentication server</selectable></selectables>. The TSF shall provide the following local authentication mechanisms:                 <selectables><selectable id="nd_fia_uia_ext.1.3_7">none</selectable><selectable id="nd_fia_uia_ext.1.3_8">password-based</selectable><selectable id="nd_fia_uia_ext.1.3_9"><assignable>other authentication mechanism</assignable></selectable></selectables>.</title>
+            <title>The TSF shall provide the following remote authentication mechanisms                 <selectables><selectable id="nd_fia_uia_ext.1.3_1">Web GUI password</selectable><selectable id="nd_fia_uia_ext.1.3_2">SSH password</selectable><selectable id="nd_fia_uia_ext.1.3_3">SSH public key</selectable><selectable id="nd_fia_uia_ext.1.3_4">X.509 certificate</selectable></selectables>                 and                 <selectables><selectable id="nd_fia_uia_ext.1.3_5">no other mechanism</selectable><selectable id="nd_fia_uia_ext.1.3_6">external authentication server</selectable></selectables>.The TSF shall provide the following local authentication mechanisms:                 <selectables><selectable id="nd_fia_uia_ext.1.3_7">none</selectable><selectable id="nd_fia_uia_ext.1.3_8">password-based</selectable><selectable id="nd_fia_uia_ext.1.3_9"><assignable>other authentication mechanism</assignable></selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 23 </h:b>
@@ -4099,7 +4285,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
           <f-element id="fmt-smr-2-1">
             <title>The TSF shall maintain the roles:<h:ul><h:li><h:p style="text-align: left;"><h:i>Security Administrator.</h:i></h:p></h:li></h:ul></title>
             <aactivity level="component">
-              Something
+              <h:p style="text-align: left;"></h:p>
               <TSS>
                 <h:p style="text-align: left;">202. The evaluator shall examine the TSS to determine that it details the TOE supported roles and any restrictions of the roles involving administration of the TOE (e.g., if local administrators and remote administrators have different privileges, or if several types of administrators with different privileges are supported by the TOE).</h:p>
               </TSS>
@@ -4181,10 +4367,38 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">See Section B.4.1 for additional requirements.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;">278. If the TOE is not a distributed TOE, then no evaluator action is necessary. For a distributed TOE the evaluator carries out the activities below.</h:p>
+              <TSS>
+                <h:p style="text-align: left;"></h:p>
+                <h:p style="text-align: left;">279. The evaluator shall examine the TSS to determine that, for all communications between components of a distributed TOE, each communications mechanism is identified in terms of the allowed protocols for inter-component communication. The evaluator shall also confirm that all protocols listed in the TSS for these inter-component communications are specified and included in the requirements in the ST.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">280. The evaluator shall confirm that the guidance documentation contains instructions for establishing the relevant allowed communication channels and protocols between each pair of authorised TOE components, and that it contains recovery instructions should a connection be unintentionally broken.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">281. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall ensure that each communications channel established using each protocol between each pair of distributed TOE components is tested during the course of the evaluation, setting up the connections as described in the guidance documentation and verifying that communication is successful.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall verify that for each communication channel established between distributed TOE components, the channel data is not sent in plaintext.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">Test 3: Objective: This test is to ensure that the TOE reacts appropriately to any connection outage or interruption of the route between distributed TOE components. </h:p>
+                    <h:p style="text-align: left;">The evaluator shall ensure that, for each different pair of nonequivalent TOE component types, the connection is physically interrupted for the following durations: i) a duration that exceeds the TOE’s application layer timeout setting, ii) a duration that is shorter than the application layer timeout but is of sufficient length to interrupt the network link layer. </h:p>
+                    <h:p style="text-align: left;">The evaluator shall verify that when physical connectivity is restored between distributed TOE components, either communications are appropriately protected, or the secure channel is terminated and the registration process (as described in the FTP_TRP.1/Join) is reinitiated, with the TOE generating adequate warnings to alert the Security Administrator. </h:p>
+                    <h:p style="text-align: left;">In the case that the TOE is able to detect when the cable is removed from the device, another physical network device (e.g., a core switch) shall be used to interrupt the connection between the components. </h:p>
+                    <h:p style="text-align: left;">For a non-virtualized TOE, the interruption shall not be performed at the virtual node (e.g., virtual switch) and must be physical in nature.</h:p>
+                  </test>
+                </testlist>
+                <h:p style="text-align: left;">282. Further assurance activities are associated with the specific protocols identified in the ST.</h:p>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event>
@@ -4227,7 +4441,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
           <f-element id="fpt-stm-ext-1-1">
             <title>The TSF shall be able to provide reliable time stamps for its own use.</title>
             <aactivity level="component">
-              Something
+              <h:p style="text-align: left;"></h:p>
               <TSS>
                 <h:p style="text-align: left;">209. The evaluator shall examine the TSS to ensure that it lists each security function that makes use of time, and that it provides a description of how the time is maintained and considered reliable in the context of each of the time related functions.</h:p>
                 <h:div>
@@ -4281,7 +4495,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
         <!-- FPT_TST_EXT.1 TSF Testing -->
         <f-component cc-id="fpt_tst_ext.1" id="fpt-tst-ext-1" name="TSF Testing">
           <f-element id="fpt-tst-ext-1-1">
-            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li><h:p style="text-align: left;">During initial start-up (on power on) to verify the integrity of the TOE firmware and software; </h:p></h:li> <h:li><h:p style="text-align: left;">Prior to providing any cryptographic service and</h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>                to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li><h:p style="text-align: left;"></h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables>                self-tests                <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
+            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li><h:p style="text-align: left;">During initial start-up (on power on) to verify the integrity of the TOE firmware and software; </h:p></h:li> <h:li><h:p style="text-align: left;">Prior to providing any cryptographic service and</h:p></h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>                to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables></h:li></h:ul>               self-tests                <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 31 </h:b>
@@ -4765,10 +4979,44 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
           <f-element id="ftp-trp-jo-1-1">
             <title><h:p style="text-align: left;">The TSF shall provide a communication path between itself and <h:b>a joining component</h:b> <h:s>[selection: remote, local] users</h:s> that is logically distinct from other communication paths and provides assured identification of</h:p> <selectables><selectable id="nd_ftp_trp.1.1_JOIN_1">the TSF endpoint</selectable><selectable id="nd_ftp_trp.1.1_JOIN_2">both joining component and TSF endpoint</selectable></selectables> <h:p style="text-align: left;"><h:s>its endpoints</h:s> and protection of the communicated data from <h:u>modification </h:u> <h:b><h:u>and</h:u></h:b></h:p> <selectables><selectable id="nd_ftp_trp.1.1_JOIN_3">disclosure</selectable><selectable id="nd_ftp_trp.1.1_JOIN_4">no other mechanisms</selectable></selectables>.</title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">283. The evaluator shall examine the TSS to determine that the methods of joining components to the TOE are identified, along with how communications with those newly-joined components are protected, including identification of whether the environment is required to provide confidentiality of the communications or whether the registration data exchanged does not require confidentiality. If the TSS asserts that registration data does not require confidentiality protection, then the evaluator shall examine the justification provided to confirm that. </h:p>
+                <h:p style="text-align: left;">284. The evaluator shall also check that all protocols listed in the TSS in support of this process are included in the SFRs in the ST, and that if the ST uses FTP_TRP.1/Join for the registration channel then this channel cannot be reused as the normal inter-component communication channel (the latter channel must meet FTP_ITC.1 or FPT_ITT.1). </h:p>
+                <h:p style="text-align: left;">285. The evaluator shall examine the TSS to confirm that sufficient information is provided to determine the TOE actions in the case that the initial component joining attempt fails.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">286. The evaluator shall examine the guidance documentation to confirm that it contains instructions for establishing and using the enablement and registration channel. The evaluator shall confirm that the guidance documentation clarifies which TOE component initiates the communication. The evaluator shall confirm that the guidance documentation contains recovery instructions should a connection be unintentionally broken during the registration process.</h:p>
+                <h:p style="text-align: left;">287. In the case of a distributed TOE that relies on the operational environment to provide security for some aspects of the registration channel security, there are particular requirements on the Preparative Procedures as listed below. (Reliance on the operational environment in this way is indicated in an ST by a reference to operational guidance in the assignment in FTP_TRP.1.3/Join.) In this case the evaluator shall examine the Preparative Procedures to confirm that they: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Clearly state the strength of the authentication and encryption provided by the registration channel itself and the specific requirements on the environment used for joining TOE components to the distributed TOE (e.g., where the environment is relied upon to prevent interception of sensitive messages, IP spoofing attempts, man-in-the-middle attacks, or race conditions). </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Identify what confidential values are transmitted over the enablement channel (e.g., any keys, their lengths, and their purposes), use of any non-confidential keys (e.g., where a developer uses the same key for more than one device or across all devices of a type or family), and use of any unauthenticated identification data (e.g., IP addresses, selfsigned certificates). </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Highlight any situation in which a secret value/key may be transmitted over a channel that uses a key of lower comparable strength than the transmitted value/key. Comparable strength is defined as the amount of work required to compromise the algorithm or key and is typically expressed as ‘bits’ of security. The ST author and evaluator shall consult NIST 800-57 Table 2 for further guidance on comparable algorithm strength.</h:p>
+                  </h:li>
+                </h:ol>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">288. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall ensure that the communications path for joining components to the TSF is tested for each distinct (nonequivalent) component type[4], setting up the connections as described in the guidance documentation and verifying that communication is successful. In particular the evaluator shall confirm that requirements on environment protection for the registration process are consistent with observations made on the test configuration (for example, a requirement to isolate the TOE components from the Internet during registration might be inconsistent with the need for a TOE component to contact a license server). If no requirements on the registration environment are identified as necessary to protect confidentiality, then the evaluator shall confirm that the key used for registration can be configured (following the instructions in the guidance documentation) to be at least the same length as the key used for the internal TSF channel that is being enabled. The evaluator shall confirm that the key used for the channel is unique to the pair of TOE components (this is done by identifying the relevant key during the registration test: it is not necessary to examine the key value).</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall follow the guidance documentation to ensure that the communication channel can be enabled by a Security Administrator for all the TOE components identified in the guidance documentation as capable of having the Security Administrator initiate the channel.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 3: The evaluator shall ensure that if the guidance documentation states that the channel data is encrypted, then the data observed on the channel is not plaintext.</h:p>
+                  </test>
+                </testlist>
+                <h:p style="text-align: left;">289. Further assurance activities are associated with the specific protocols.</h:p>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="nd-ftp-trp-1-2-join">

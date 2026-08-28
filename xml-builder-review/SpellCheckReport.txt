@@ -46,6 +46,7 @@ output/ndcpp-release-linkable.html: CSPs
 output/ndcpp-release-linkable.html: CSR
 output/ndcpp-release-linkable.html: DRBGs
 output/ndcpp-release-linkable.html: DTLSC
+output/ndcpp-release-linkable.html: Decapsulation
 output/ndcpp-release-linkable.html: ECP
 output/ndcpp-release-linkable.html: ERB
 output/ndcpp-release-linkable.html: FFC
@@ -102,7 +103,9 @@ output/ndcpp-release-linkable.html: authorised
 output/ndcpp-release-linkable.html: ba90
 output/ndcpp-release-linkable.html: behaviour
 output/ndcpp-release-linkable.html: cPPs
+output/ndcpp-release-linkable.html: ciphertexts
 output/ndcpp-release-linkable.html: crypto
+output/ndcpp-release-linkable.html: decapsulation
 output/ndcpp-release-linkable.html: ek
 output/ndcpp-release-linkable.html: enablement
 output/ndcpp-release-linkable.html: enquiries
@@ -127,7 +130,6 @@ output/ndcpp-release-linkable.html: lifecycle
 output/ndcpp-release-linkable.html: misconfiguration
 output/ndcpp-release-linkable.html: multicast
 output/ndcpp-release-linkable.html: netconf
-output/ndcpp-release-linkable.html: nonrepeating
 output/ndcpp-release-linkable.html: pND
 output/ndcpp-release-linkable.html: pNDs
 output/ndcpp-release-linkable.html: preshared
@@ -212,6 +214,7 @@ output/ndcpp-release.html: CoreData’
 output/ndcpp-release.html: CryptoKeys’
 output/ndcpp-release.html: DRBGs
 output/ndcpp-release.html: DTLSC
+output/ndcpp-release.html: Decapsulation
 output/ndcpp-release.html: ECP
 output/ndcpp-release.html: ERB
 output/ndcpp-release.html: FFC
@@ -278,9 +281,11 @@ output/ndcpp-release.html: box’
 output/ndcpp-release.html: cPPs
 output/ndcpp-release.html: certificate’
 output/ndcpp-release.html: channel’
+output/ndcpp-release.html: ciphertexts
 output/ndcpp-release.html: communication’
 output/ndcpp-release.html: crypto
 output/ndcpp-release.html: data’
+output/ndcpp-release.html: decapsulation
 output/ndcpp-release.html: ek
 output/ndcpp-release.html: enablement
 output/ndcpp-release.html: enquiries
@@ -317,7 +322,6 @@ output/ndcpp-release.html: mechanisms’
 output/ndcpp-release.html: misconfiguration
 output/ndcpp-release.html: multicast
 output/ndcpp-release.html: netconf
-output/ndcpp-release.html: nonrepeating
 output/ndcpp-release.html: of’
 output/ndcpp-release.html: pND
 output/ndcpp-release.html: pNDs
@@ -416,6 +420,7 @@ output/ndcpp.html: CoreData’
 output/ndcpp.html: CryptoKeys’
 output/ndcpp.html: DRBGs
 output/ndcpp.html: DTLSC
+output/ndcpp.html: Decapsulation
 output/ndcpp.html: ECP
 output/ndcpp.html: ERB
 output/ndcpp.html: FFC
@@ -482,9 +487,11 @@ output/ndcpp.html: box’
 output/ndcpp.html: cPPs
 output/ndcpp.html: certificate’
 output/ndcpp.html: channel’
+output/ndcpp.html: ciphertexts
 output/ndcpp.html: communication’
 output/ndcpp.html: crypto
 output/ndcpp.html: data’
+output/ndcpp.html: decapsulation
 output/ndcpp.html: ek
 output/ndcpp.html: enablement
 output/ndcpp.html: entity’
@@ -520,7 +527,6 @@ output/ndcpp.html: mechanisms’
 output/ndcpp.html: misconfiguration
 output/ndcpp.html: multicast
 output/ndcpp.html: netconf
-output/ndcpp.html: nonrepeating
 output/ndcpp.html: of’
 output/ndcpp.html: pND
 output/ndcpp.html: pNDs

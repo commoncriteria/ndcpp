@@ -1904,6 +1904,53 @@ FTP_TRP.1/Admin</rationale>
           <depends on-sel="nd_fcs_ntp_ext.1.2_4"/>
           <f-element id="fcs-cop-1-1-cmac">
             <title><h:p style="text-align: left;">The TSF shall perform <h:i>CMAC</h:i> in accordance with a specified cryptographic algorithm <h:i>AES using CMAC mode</h:i> and cryptographic key sizes <h:i>128 bits</h:i> that meet the following:</h:p> <selectables><selectable id="nd_fcs_cop.1.1_CMAC_1">ISO/IEC 9797-1:2011 subclause 7.6 (CMAC) and ISO/IEC 18033-3:2010 subclause 5.2 (AES)</selectable><selectable id="nd_fcs_cop.1.1_CMAC_2">NIST SP 800-38B (CMAC) and NIST FIPS 197 (AES)</selectable></selectables>.</title>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">376. The evaluator shall examine the TSS to determine that it specifies the cryptographic algorithm and 128 bit key size supported by the TOE for CMAC.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">377. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>CMAC Generation Test </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">378. To test the generation capability of AES-CMAC, the evaluator shall provide to the TSF, for each key length-message length-CMAC length tuple (in bytes), a set of eight arbitrary key-plaintext tuples that will result in the generation of a known MAC value when encrypted. The evaluator shall then verify that the correct MAC was generated in each case.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">CMAC Verification Test </h:p>
+                    <h:p style="text-align: left;">379. To test the verification capability of AES-CMAC, the evaluator shall provide to the TSF, for each key length-message length-CMAC length tuple (in bytes), a set of 20 arbitrary key-MAC tuples that will result in the generation of known messages when verified. The evaluator shall then verify that the correct message was generated in each case. </h:p>
+                    <h:p style="text-align: left;">380. The following information should be used by the evaluator to determine the key length-message length-CMAC length tuples that should be tested:</h:p>
+                    <h:p style="text-align: left;">Key length: Values will include the following: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">16 </h:p>
+                      </h:li>
+                    </h:ul>
+                    <h:p style="text-align: left;">Message length: Values will include the following: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">0 (optional) </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Largest value supported by the implementation (no greater than 65536) </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Two values divisible by 16 </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Two values not divisible by 16 </h:p>
+                      </h:li>
+                    </h:ul>
+                    <h:p style="text-align: left;">CMAC length: Smallest value supported by the implementation (no less than 1) </h:p>
+                    <h:p style="text-align: left;">381. 16 Any supported CMAC length between the minimum and maximum values</h:p>
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_COP.1/DataEncryption Cryptographic Operation (AES Data Encryption/Decryption) -->
@@ -3086,8 +3133,10 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                         </h:p>
                         <h:p style="text-align: left;">362. For each combination of direction and claimed key size, the TOE must be tested against 10 test cases consisting of a random IV, random key, and random plaintext/ciphertext. The plaintext/ciphertext starts with a length of 16 bytes and increases by 16 bytes for each test case until reaching 160 bytes.</h:p>
                       </testlist>
-                      <h:p style="text-align: left;">Monte Carlo Tests </h:p>
-                      <h:p style="text-align: left;">363. Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE must process the test cases according to the following algorithm once for each combination of direction and key size: </h:p>
+                      <h:p style="text-align: left;">
+                        <h:b>Monte Carlo Tests</h:b>
+                      </h:p>
+                      <h:p style="text-align: left;">363. Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE must process the test cases according to the following algorithm once for each combination of direction and key size:</h:p>
                       <h:p style="text-align: left;"></h:p>
                       <h:pre><h:code>Key[0] = Key 
 IV[0] = IV 
@@ -3115,8 +3164,8 @@ If ( keylen = 192 )
           Key[i+1] = Key[i] xor (LSB(CT[j-1], 64) || MSB(CT[j], 128)) 
 If ( keylen = 256 ) 
           Key[i+1] = Key[i] xor (MSB(CT[j-1], 128) || MSB(CT[j], 128)) </h:code></h:pre>
-                      <h:p style="text-align: left;">The above pseudocode is for encryption. For decryption, swap all instances of CT and PT. </h:p>
-                      <h:p style="text-align: left;">The initial IV, key, and plaintext/ciphertext should be random. </h:p>
+                      <h:p style="text-align: left;">The above pseudocode is for encryption. For decryption, swap all instances of CT and PT.</h:p>
+                      <h:p style="text-align: left;">The initial IV, key, and plaintext/ciphertext should be random.</h:p>
                       <h:p style="text-align: left;">The evaluator shall test the decrypt functionality using the same test as above, exchanging CT and PT, and replacing AES-CBC-Encrypt with AES-CBC-Decrypt.</h:p>
                     </testlist>
                   </test>
@@ -3213,6 +3262,44 @@ If ( keylen = 256 )
             <note role="application">
               <h:p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</h:p>
             </note>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">397. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">398. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">399. To test SHAKE-128 or SHAKE-256 the evaluator shall collect the input sizes allowed by the implementation, [0-65536] and the output sizes allowed by the implementation, [16-65536] and compare the results against a known good implementation. </h:p>
+                <h:p style="text-align: left;">400. For the variable length inputs, the evaluator shall test the following: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Every message length up to the rate (1600 – 2*{128, 256}) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">About 100 random message lengths greater than the rate</h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">All have an output length of {128, 256} </h:p>
+                  </h:li>
+                </h:ol>
+                <h:p style="text-align: left;">401. For variable length outputs, the evaluator shall test the following: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Minimum output length, </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Maximum output length, </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">510 other random output lengths (for a total of 512 tests) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">All have an input length of {128, 256}</h:p>
+                  </h:li>
+                </h:ol>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_IPSEC_EXT.1 IPsec Protocol -->
@@ -3541,6 +3628,18 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses one or more external sources of entropy to initialize or reseed a DRBG that is outside the TOE boundary. Seeding a DRBG is the same as initializing a DRBG. In the case of a network device this would only occur with a vND where the entropy source is provided by the underlying virtualization System (VS) platform. The ST author ensures that the assignment is completed with the minimum length of the input sufficient to initialize or reseed a DRBG. </h:p>
               <h:p style="text-align: left;">The TSF interface for the purpose of seeding here is the interface used to gather entropy for initializing or reseed.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">381. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF external interface used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">382. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">383. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">384. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source) -->
@@ -3557,6 +3656,18 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">Software-based noise sources generate noise as a byproduct of their normal operation. Examples of software-based noise sources can be user or system-based events such as reading the least significant bits from an event timer, etc.</h:p>
               <h:p style="text-align: left;">The TOE collects enough input from the internal noise source such that the total measured entropy of the input is sufficient to initialize or reseed a DRBG. The ST author ensures that the assignment is completed with the number of bits of the input sufficient to initialize or reseed a DRBG.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">385. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF entropy source used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">386. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">387. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">388. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources) -->
@@ -3570,6 +3681,18 @@ If ( keylen = 256 )
               </h:p>
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses two or more internal sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. FCS_RBG.5 defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">389. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, each TSF entropy source used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">390. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">391. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">392. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_RBG.5 Random Bit Generation (Combining Entropy Sources) -->
@@ -3584,6 +3707,18 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">This requirement is claimed when a TOE combines two or more sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. The ST author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a DRBG.</h:p>
               <h:p style="text-align: left;">One can apply NIST SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply NIST SP 800-90B (or AIS-31) statistical tests against external noise sources since the TOE is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the TSS may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the DRBG.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">393. Using the entropy sources specified in FCS_RBG.4, the evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source’s relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">394. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">395. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">396. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
       </section>

@@ -2211,31 +2211,33 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                     <p style="text-align: left;">378. To test the generation capability of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC, the evaluator shall provide to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, for each key length-message length-CMAC length tuple (in bytes), a set of eight arbitrary key-plaintext tuples that will result in the generation of a known MAC value when encrypted. The evaluator shall then verify that the correct MAC was generated in each case.</p>
                   </li><li class="test-"><a id="_t_44" class="defined" href="#_t_44">Test FCS_COP.1/CMAC:2</a>:
       
-                    <p style="text-align: left;">CMAC Verification Test </p>
-                    <p style="text-align: left;">379. To test the verification capability of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC, the evaluator shall provide to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, for each key length-message length-CMAC length tuple (in bytes), a set of 20 arbitrary key-MAC tuples that will result in the generation of known messages when verified. The evaluator shall then verify that the correct message was generated in each case. </p>
+                    <p style="text-align: left;">
+                      <b>CMAC Verification Test</b>
+                    </p>
+                    <p style="text-align: left;">379. To test the verification capability of <abbr class="dyn-abbr"><a href="#abbr_AES">AES</a></abbr>-CMAC, the evaluator shall provide to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>, for each key length-message length-CMAC length tuple (in bytes), a set of 20 arbitrary key-MAC tuples that will result in the generation of known messages when verified. The evaluator shall then verify that the correct message was generated in each case.</p>
                     <p style="text-align: left;">380. The following information should be used by the evaluator to determine the key length-message length-CMAC length tuples that should be tested:</p>
-                    <p style="text-align: left;">Key length: Values will include the following: </p>
+                    <p style="text-align: left;">Key length: Values will include the following:</p>
                     <ul>
                       <li>
-                        <p style="text-align: left;">16 </p>
+                        <p style="text-align: left;">16</p>
                       </li>
                     </ul>
-                    <p style="text-align: left;">Message length: Values will include the following: </p>
+                    <p style="text-align: left;">Message length: Values will include the following:</p>
                     <ul>
                       <li>
-                        <p style="text-align: left;">0 (optional) </p>
+                        <p style="text-align: left;">0 (optional)</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">Largest value supported by the implementation (no greater than 65536) </p>
+                        <p style="text-align: left;">Largest value supported by the implementation (no greater than 65536)</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">Two values divisible by 16 </p>
+                        <p style="text-align: left;">Two values divisible by 16</p>
                       </li>
                       <li>
-                        <p style="text-align: left;">Two values not divisible by 16 </p>
+                        <p style="text-align: left;">Two values not divisible by 16</p>
                       </li>
                     </ul>
-                    <p style="text-align: left;">CMAC length: Smallest value supported by the implementation (no less than 1) </p>
+                    <p style="text-align: left;">CMAC length: Smallest value supported by the implementation (no less than 1)</p>
                     <p style="text-align: left;">381. 16 Any supported CMAC length between the minimum and maximum values</p>
                   </li></ul></span>
               </div></div></div></div></div>
@@ -2517,7 +2519,9 @@ For 100 iterations
                         </ul>
                       </li>
                     </ul>
-                    <span class="testlist-"><p style="text-align: left;">Encapsulation Test </p><p style="text-align: left;">336. For each supported parameter set the evaluator shall generate 25 test cases consisting of an encapsulation key ek and random value m. For each test case the valuator shall require the implementation under test to generate the corresponding shared secret k and ciphertext c. To determine correctness, the evaluator shall compare the resulting values with those generated using a known-good implementation using the same inputs.</p><p style="text-align: left;">
+                    <span class="testlist-"><p style="text-align: left;">
+                        <b>Encapsulation Test</b>
+                      </p><p style="text-align: left;">336. For each supported parameter set the evaluator shall generate 25 test cases consisting of an encapsulation key ek and random value m. For each test case the valuator shall require the implementation under test to generate the corresponding shared secret k and ciphertext c. To determine correctness, the evaluator shall compare the resulting values with those generated using a known-good implementation using the same inputs.</p><p style="text-align: left;">
                         <b>Encapsulation Key Check (if supported) </b>
                       </p><p style="text-align: left;">337. The evaluator shall generate 10 encapsulation keys such that: </p><ul>
                         <li>
@@ -2535,7 +2539,9 @@ For 100 iterations
                         <li>
                           <p style="text-align: left;">Five of the decapsulation keys are modified such that the concatenated values ek||H(ek) will no longer match by modifying H(ek) to be a different value.</p>
                         </li>
-                      </ul><p style="text-align: left;">340. The evaluator shall invoke the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s Decapsulation Key Check functionality to determine the validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys should be determined invalid.</p><p style="text-align: left;">Decapsulation Test </p><p style="text-align: left;">341. For each supported parameter set the evaluator shall use a single previously generated decapsulation key dk and generate 10 test cases consisting of valid and invalid ciphertexts c. For each test case the evaluator shall require the implementation under test to generate the corresponding shared secret k whether or not the ciphertext is valid. To determine correctness, the evaluator shall compare the resulting values with those generated using a known-good implementation using the same inputs.</p><ul></ul></span>
+                      </ul><p style="text-align: left;">340. The evaluator shall invoke the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s Decapsulation Key Check functionality to determine the validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys should be determined invalid.</p><p style="text-align: left;">
+                        <b>Decapsulation Test</b>
+                      </p><p style="text-align: left;">341. For each supported parameter set the evaluator shall use a single previously generated decapsulation key dk and generate 10 test cases consisting of valid and invalid ciphertexts c. For each test case the evaluator shall require the implementation under test to generate the corresponding shared secret k whether or not the ciphertext is valid. To determine correctness, the evaluator shall compare the resulting values with those generated using a known-good implementation using the same inputs.</p><ul></ul></span>
                   </li></ul></span>
               </div></div></div></div></div>
         
@@ -3642,13 +3648,344 @@ If ( keylen = 256 )
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_IPSEC_EXT.1">FCS_IPSEC_EXT.1</a></div>
-              Something
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div>
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">402. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and determine that it describes what takes place when a packet is processed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, e.g., the algorithm used to process the packet. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how the SPD is implemented and the rules for processing both inbound and outbound packets in terms of the IPsec policy. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the rules that are available and the resulting actions available after matching a rule. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how those rules and actions form the SPD in terms of the BYPASS (e.g., no encryption), DISCARD (e.g., drop the packet), and PROTECT (e.g., encrypt the packet) actions defined in <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 4301. </p>
+                <p style="text-align: left;">403. As noted in Section 4.4.1 of <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 4301, the processing of entries in the SPD is non-trivial and the evaluator shall determine that the description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> is sufficient to determine which rules will be applied given the rule structure implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. For example, if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> allows specification of ranges, conditional rules, etc., the evaluator shall determine that the description of rule processing (for both inbound and outbound packets) is sufficient to determine the action that will be applied, especially in the case where two different rules may apply. This description shall cover both the initial packets (that is, no SA is established on the interface or for that particular packet) as well as packets that are part of an established SA.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">404. None.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">405. The evaluator shall check the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure it states that the VPN can be established to operate in transport mode and/or tunnel mode (as identified in <a href="#FCS_IPSEC_EXT.1.3">FCS_IPSEC_EXT.1.3</a>).</p>
+              </div><div class="ea">
+                <p style="text-align: left;">406. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that the selected algorithms are implemented. In addition, the evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-based <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> algorithm conforms to the algorithms specified in <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a> Cryptographic Operations (for keyed-hash message authentication) and if the <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-based <abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> function truncated output is utilised it must also be described.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">407. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that IKEv1 and/or IKEv2 are implemented. </p>
+                <div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ipsec-ext-1-5-compsel-1">IKEv1, using Main Mode for Phase 1 exchanges, as defined in RFCs 2407, 2408, 2409, RFC 4109, [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_1">no other RFCs for extended sequence numbers</span>, <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_2">RFC 4304 for extended sequence numbers</span>],and [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_3">no other RFCs for hash functions</span>, <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_4">RFC 4868 for hash functions</span>]</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.5">FCS_IPSEC_EXT.1.5</a></li></ul><div class="dependent-content"><div>
+                  
+                  <p style="text-align: left;">408. For IKEv1 implementations, the evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure that, in the description of the IPsec protocol, it states that aggressive mode is not used for IKEv1 Phase 1 exchanges, and that only main mode is used. It may be that this is a configurable option.</p>
+                </div></div></div>
+              </div><div class="ea">
+                <p style="text-align: left;">409. The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the algorithms used for encrypting the IKEv1 and/or IKEv2 payload, and that the algorithms chosen in the selection of the requirement are included in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> discussion.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">410. The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the lifetime configuration method used for limiting the IKEv1 Phase 1 SA lifetime and/or the IKEv2 SA lifetime. The evaluator shall verify that the selection made here corresponds to the selection in <a href="#FCS_IPSEC_EXT.1.7">FCS_IPSEC_EXT.1.7</a>.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">411. The evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies the lifetime configuration method used for limiting the IKEv1 Phase 2 SA lifetime and/or the IKEv2 Child SA lifetime. The evaluator shall verify that the selection made here corresponds to the selection in <a href="#FCS_IPSEC_EXT.1.8">FCS_IPSEC_EXT.1.8</a>.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">412. The evaluator shall check to ensure that, for each DH group supported, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the process for generating "x". The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> indicates that the random number generated that meets the requirements in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is used, and that the length of "x" meets the stipulations in the requirement.</p>
+              </div><div class="ea">
+                <div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.10_3">according to the security strength associated with the negotiated Diffie-Hellman group</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.10">FCS_IPSEC_EXT.1.10</a></li></ul><div class="dependent-content"><div>
+                  
+                  <p style="text-align: left;">413. If the first selection is chosen, the evaluator shall check to ensure that, for each DH group supported, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the process for generating each nonce. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> indicates that the random number generated that meets the requirements in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is used, and that the length of the nonces meet the stipulations in the requirement.</p>
+                </div></div></div>
+                <div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.10_4">at least 128 bits in size and at least half the output size of the negotiated pseudorandom function (PRF) hash</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.10">FCS_IPSEC_EXT.1.10</a></li></ul><div class="dependent-content"><div>
+                  
+                  <p style="text-align: left;">414. If the second selection is chosen, the evaluator shall check to ensure that, for each PRF hash supported, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the process for generating each nonce. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> indicates that the random number generated that meets the requirements in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is used, and that the length of the nonces meet the stipulations in the requirement.</p>
+                </div></div></div>
+              </div><div class="ea">
+                <p style="text-align: left;">415. The evaluator shall check to ensure that the DH groups specified in the requirement are listed as being supported in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>. If there is more than one DH group supported, the evaluator shall check to ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how a particular DH group is specified/negotiated with a peer.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">416. The evaluator shall check that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes the potential strengths (in terms of the number of bits in the symmetric key) of the algorithms that are allowed for the IKE and ESP exchanges. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall also describe the checks that are done when negotiating IKEv1 Phase 2 and/or IKEv2 CHILD_SA suites to ensure that the strength (in terms of the number of bits of key in the symmetric algorithm) of the negotiated algorithm is less than or equal to that of the IKE SA this is protecting the negotiation.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">417. The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> identifies RSA and/or <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> as being used to perform peer authentication. The description must be consistent with the algorithms as specified in <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> Cryptographic Operation - Signature Verification.</p>
+                <div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.13_3">Pre-shared Keys that conform to RFC 8784</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.13">FCS_IPSEC_EXT.1.13</a></li></ul><div class="dependent-content"><div>
+                  
+                  <p style="text-align: left;">418. If pre-shared keys are chosen in the selection, the evaluator shall check to ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how pre-shared keys are established and used in authentication of IPsec connections. The description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall also indicate how pre-shared key establishment is accomplished for <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> that can generate a pre-shared key as well as <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> that simply use a pre-shared key.</p>
+                </div></div></div>
+              </div><div class="ea">
+                <p style="text-align: left;">419. The evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> compares the peer’s presented identifier to the reference identifier. This description shall include which field(s) of the certificate are used as the presented identifier (DN, Common Name, or <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>). If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> simultaneously supports the same identifier type in the <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall describe how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prioritizes the comparisons (e.g., the result of comparison if <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> matches but <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> does not). If the location (e.g., <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>) of non-DN identifier types must explicitly be configured as part of the reference identifier, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall state this. If the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author assigned an additional identifier type, the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> description shall also include a description of that type and the method by which that type is compared to the peer’s presented certificate, including what field(s) are compared and which fields take precedence in the comparison.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">420. The evaluator shall examine the guidance documentation to verify it instructs the Administrator how to construct entries into the SPD that specify a rule for processing a packet. The description includes all three cases – a rule that ensures packets are encrypted/decrypted, dropped, and flow through the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> without being encrypted. The evaluator shall determine that the description in the guidance documentation is consistent with the description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>, and that the level of detail in the guidance documentation is sufficient to allow the administrator to set up the SPD in an unambiguous fashion. This includes a discussion of how ordering of rules impacts the processing of an <abbr class="dyn-abbr"><a href="#abbr_IP">IP</a></abbr> packet.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">421. None.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">422. The evaluator shall confirm that the guidance documentation contains instructions on how to configure the connection in each mode selected.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">423. The evaluator shall check the guidance documentation to ensure it provides instructions on how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the algorithms selected.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">424. The evaluator shall check the guidance documentation to ensure it instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use IKEv1 and/or IKEv2 (as selected), and how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform NAT traversal (if selected). </p>
+                <p style="text-align: left;">425. If the IKEv1 Phase 1 mode requires configuration of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prior to its operation, the evaluator shall check the guidance documentation to ensure that instructions for this configuration are contained within that guidance.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">426. The evaluator shall ensure that the guidance documentation describes the configuration of all selected algorithms in the requirement.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">427. The evaluator shall verify that the values for SA lifetimes can be configured and that the instructions for doing so are located in the guidance documentation. If time-based limits are supported, configuring the limit may lead to a rekey no later than the specified limit. For some implementations, it may be necessary, though, to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with a lower time value to ensure a rekey is performed before the maximum SA lifetime of 24 hours is exceeded (e.g., configure a time value of 23h 45min to ensure the actual rekey is performed no later than 24h). The evaluator shall verify that the guidance documentation allows the Administrator to configure the Phase 1 SA value of 24 hours or provides sufficient instruction about the time value to configure to ensure the rekey is performed no later than the maximum SA lifetime of 24 hours. It is not permitted to configure a value of 24 hours if that leads to an actual rekey after more than 24hours. Currently there are no values mandated for the number of bytes, the evaluator just ensures that this can be configured if selected in the requirement.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">428. The evaluator shall verify that the values for SA lifetimes can be configured and that the instructions for doing so are located in the guidance documentation. If time-based limits are supported, configuring the limit may lead to a rekey no later than the specified limit. For some implementations, it may be necessary, though, to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with a lower time value to ensure a rekey is performed before the maximum SA lifetime of 8 hours is exceeded (e.g., configure a time value of 7h 45min to ensure the actual rekey is performed no later than 8h). The evaluator shall verify that the guidance documentation allows the Administrator to configure the Phase 2 SA value of 8 hours or provides sufficient instruction about the time value to configure to ensure the rekey is performed no later than the maximum SA lifetime of 8 hours. It is not permitted to configure a value of 8 hours if that leads to an actual rekey after more than 8 hours. Currently there are no values mandated for the number of bytes, the evaluator just ensures that this can be configured if selected in the requirement.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">429. None.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">429. None.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">430. The evaluator shall ensure that the guidance documentation describes the configuration of all algorithms selected in the requirement.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">431. None.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">432. The evaluator shall ensure the guidance documentation describes how to set up the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use certificates with RSA and/or <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> signatures and public keys. </p>
+                <p style="text-align: left;">433. The evaluator shall check that the guidance documentation describes how pre-shared keys are to be generated and established. The description in the guidance documentation shall also indicate how pre-shared key establishment is accomplished for <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> that can generate a pre-shared key as well as <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> that simply use a pre-shared key. </p>
+                <p style="text-align: left;">434. The evaluator shall ensure that the guidance documentation describes how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to connect to a trusted CA and ensure a valid certificate for that CA is loaded into the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and marked “trusted”.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">435. The evaluator shall ensure that the operational guidance describes all supported identifiers, explicitly states whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports the <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> extension or not and includes detailed instructions on how to configure the reference identifier(s) used to check the identity of peer(s). If the identifier scheme implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not guarantee unique identifiers, the evaluator shall ensure that the operational guidance provides a set of warnings and/or CA policy recommendations that would result in secure <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> use.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">436. The evaluator shall use the guidance documentation to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform the following tests:</p><br/><ul><li class="test-"><a id="_t_68" class="defined" href="#_t_68">Test FCS_IPSEC_EXT.1:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall configure the SPD such that there is a rule for dropping a packet, encrypting a packet, and allowing a packet to flow in plaintext. The selectors used in the construction of the rule shall be different such that the evaluator can generate a packet and send packets to the gateway with the appropriate fields (fields that are used by the rule - e.g., the <abbr class="dyn-abbr"><a href="#abbr_IP">IP</a></abbr> addresses, TCP/UDP ports) in the packet header. The evaluator shall perform both positive and negative test cases for each type of rule (e.g., a packet that matches the rule and another that does not match the rule). The evaluator shall observe via the audit trail, and packet captures that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> exhibited the expected behaviour: appropriate packets were dropped, allowed to flow without modification, encrypted by the IPsec implementation.</p>
+                  </li><li class="test-"><a id="_t_69" class="defined" href="#_t_69">Test FCS_IPSEC_EXT.1:2</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall devise several tests that cover a variety of scenarios for packet processing. As with Test 1, the evaluator shall ensure both positive and negative test cases are constructed. These scenarios must exercise the range of possibilities for SPD entries and processing modes as outlined in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and guidance documentation. Potential areas to cover include rules with overlapping ranges and conflicting entries, inbound and outbound packets, and packets that establish SAs as well as packets that belong to established SAs. The evaluator shall verify, via the audit trail and packet captures, for each scenario that the expected behaviour is exhibited, and is consistent with both the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and the guidance documentation.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <p style="text-align: left;">437. The assurance activity for this element is performed in conjunction with the activities for <a href="#FCS_IPSEC_EXT.1.1">FCS_IPSEC_EXT.1.1</a>.</p>
+                <span class="testlist-"><p style="text-align: left;">438. The evaluator shall use the guidance documentation to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform the following tests:</p><ul><li class="test-"><a id="_t_70" class="defined" href="#_t_70">Test FCS_IPSEC_EXT.1:3</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall configure the SPD such that there is a rule for dropping a packet, encrypting a packet, and allowing a packet to flow in plaintext. The evaluator may use the SPD that was created for verification of <a href="#FCS_IPSEC_EXT.1.1">FCS_IPSEC_EXT.1.1</a>. The evaluator shall construct a network packet that matches the rule to allow the packet to flow in plaintext and send that packet. The evaluator shall observe that the network packet is passed to the proper destination interface with no modification. The evaluator shall then modify a field in the packet header; such that it no longer matches the evaluator-created entries (there may be a “<abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> created” final entry that discards packets that do not match any previous entries). The evaluator shall send the packet and observe that the packet was dropped.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">439. The evaluator shall perform the following test(s) based on the selections chosen:</p><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.3_1">tunnel mode</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.3">FCS_IPSEC_EXT.1.3</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">Test 1: If tunnel mode is selected, the evaluator shall use the guidance documentation to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to operate in tunnel mode and also configures a VPN peer to operate in tunnel mode. The evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the VPN peer to use any of the allowable cryptographic algorithms, authentication methods, etc. to ensure an allowable SA can be negotiated. The evaluator shall then initiate a connection from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to connect to the VPN peer. The evaluator shall observe (for example, in the audit trail and the captured packets) that a successful connection was established using the tunnel mode.</p>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.3_2">transport mode</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.3">FCS_IPSEC_EXT.1.3</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">Test 2: If transport mode is selected, the evaluator shall use the guidance documentation to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to operate in transport mode and also configures a VPN peer to operate in transport mode. The evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the VPN peer to use any of the allowed cryptographic algorithms, authentication methods, etc. to ensure an allowable SA can be negotiated. The evaluator shall then initiate a connection from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to connect to the VPN peer. The evaluator shall observe (for example, in the audit trail and the captured packets) that a successful connection was established using the transport mode.</p>
+                  </test></div></div></ul></span>
+              </div><div class="ea">
+                <p style="text-align: left;"></p>
+                <span class="testlist-"><ul><li class="test-"><a id="_t_73" class="defined" href="#_t_73">Test FCS_IPSEC_EXT.1:4</a>:
+      
+                    <p style="text-align: left;">440. The evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as indicated in the guidance documentation configuring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use each of the supported algorithms, attempt to establish a connection using ESP, and verify that the attempt succeeds.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">441. Tests are performed in conjunction with the other IPsec evaluation activities.</p><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ipsec-ext-1-5-compsel-1">IKEv1, using Main Mode for Phase 1 exchanges, as defined in RFCs 2407, 2408, 2409, RFC 4109, [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_1">no other RFCs for extended sequence numbers</span>, <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_2">RFC 4304 for extended sequence numbers</span>],and [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_3">no other RFCs for hash functions</span>, <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_4">RFC 4868 for hash functions</span>]</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.5">FCS_IPSEC_EXT.1.5</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">Test 1: If IKEv1 is selected, the evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as indicated in the guidance documentation and attempt to establish a connection using an IKEv1 Phase 1 connection in aggressive mode. This attempt should fail. The evaluator shall then show that main mode exchanges are supported.</p>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ipsec-ext-1-5-compsel-2">IKEv2 as defined in RFC 7296 [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_5">with no support for NAT traversal</span>, <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_6">with mandatory support for NAT traversal as specified in RFC 7296 (Section 2.23)</span>],and [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_7">no other RFCs for hash functions</span>, <span class="selectable-content" id="nd_fcs_ipsec_ext.1.5_8">RFC 4868 for hash functions</span>]</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.5">FCS_IPSEC_EXT.1.5</a></li><li><a href="#nd_fcs_ipsec_ext.1.5_6">with mandatory support for NAT traversal as specified in RFC 7296 (Section 2.23)</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.5">FCS_IPSEC_EXT.1.5</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    <p style="text-align: left;">Test 2: If NAT traversal is selected within the IKEv2 selection, the evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> so that it will perform NAT traversal processing as described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 7296, Section 2.23. The evaluator shall initiate an IPsec connection and determine that the NAT is successfully traversed.</p>
+                  </test></div></div></ul></span>
+              </div><div class="ea">
+                <span class="testlist-"><ul><li class="test-"><a id="_t_76" class="defined" href="#_t_76">Test FCS_IPSEC_EXT.1:5</a>:
+      
+                    <p style="text-align: left;">442. The evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the ciphersuite under test to encrypt the IKEv1 and/or IKEv2 payload and establish a connection with a peer device, which is configured to only accept the payload encrypted using the indicated ciphersuite. The evaluator shall confirm the algorithm was that used in the negotiation.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <p style="text-align: left;">443. When testing this functionality, the evaluator shall ensure that both sides are configured appropriately. From the <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> “A difference between IKEv1 and IKEv2 is that in IKEv1 SA lifetimes were negotiated. In IKEv2, each end of the SA is responsible for enforcing its own lifetime policy on the SA and rekeying the SA when necessary. If the two ends have different lifetime policies, the end with the shorter lifetime will end up always being the one to request the rekeying. If the two ends have the same lifetime policies, it is possible that both will initiate a rekeying at the same time (which will result in redundant SAs). To reduce the probability of this happening, the timing of rekeying requests SHOULD be jittered.”</p>
+                <span class="testlist-"><p style="text-align: left;">444. Each of the following tests shall be performed for each version of IKE selected in the <a href="#FCS_IPSEC_EXT.1.5">FCS_IPSEC_EXT.1.5</a> protocol selection:</p><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.7_1">number of bytes</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.7">FCS_IPSEC_EXT.1.7</a></li><li><a href="#nd_fcs_ipsec_ext.1.7_4">number of bytes</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.7">FCS_IPSEC_EXT.1.7</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    <p style="text-align: left;">Test 1: If ‘number of bytes’ is selected as the SA lifetime measure, the evaluator shall configure a maximum lifetime in terms of the number of bytes allowed following the guidance documentation. The evaluator shall configure a test peer with a byte lifetime that exceeds the lifetime of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall establish a SA between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the test peer, and determine that once the allowed number of bytes through this SA is exceeded, a new SA is negotiated. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> initiates a Phase 1 negotiation.</p>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ipsec-ext-1-7-compsel-2">length of time, where the time values can be configured between [<b>assignment</b>: 
+     <span class="assignable-content">minimum configurable rekey time</span>] and [<b>assignment</b>: 
+     <span class="assignable-content">maximum configurable rekey time</span>]</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.7">FCS_IPSEC_EXT.1.7</a></li><li><a href="#nd-fcs-ipsec-ext-1-7-compsel-4">IKEv2 SA lifetimes can be configured by a Security Administrator based on [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.7_4">number of bytes</span>, <span class="selectable-content" id="nd-fcs-ipsec-ext-1-7-compsel-2">length of time, where the time values can be configured between [<b>assignment</b>: 
+     <span class="assignable-content">minimum configurable rekey time</span>] and [<b>assignment</b>: 
+     <span class="assignable-content">maximum configurable rekey time</span>]</span>]</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.7">FCS_IPSEC_EXT.1.7</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    <p style="text-align: left;">Test 2: If ‘length of time’ is selected as the SA lifetime measure, the evaluator shall configure a maximum lifetime no later than 24 hours for the Phase 1 SA following the guidance documentation. The evaluator shall configure a test peer with a Phase 1 SA lifetime that exceeds the Phase 1 SA lifetime on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall establish a SA between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the test peer, maintain the Phase 1 SA for 24 hours, and determine that a new Phase 1 SA is negotiated on or before 24 hours has elapsed. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> initiates a Phase 1 negotiation.</p>
+                  </test></div></div></ul></span>
+              </div><div class="ea">
+                <p style="text-align: left;">445. When testing this functionality, the evaluator shall ensure that both sides are configured appropriately. From the <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> “A difference between IKEv1 and IKEv2 is that in IKEv1 SA lifetimes were negotiated. In IKEv2, each end of the SA is responsible for enforcing its own lifetime policy on the SA and rekeying the SA when necessary. If the two ends have different lifetime policies, the end with the shorter lifetime will end up always being the one to request the rekeying. If the two ends have the same lifetime policies, it is possible that both will initiate a rekeying at the same time (which will result in redundant SAs). To reduce the probability of this happening, the timing of rekeying requests SHOULD be jittered.”</p>
+                <span class="testlist-"><p style="text-align: left;">446. Each of the following tests shall be performed for each version of IKE selected in the <a href="#FCS_IPSEC_EXT.1.5">FCS_IPSEC_EXT.1.5</a> protocol selection:</p><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.8_1">number of bytes</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.8">FCS_IPSEC_EXT.1.8</a></li><li><a href="#nd_fcs_ipsec_ext.1.8_4">number of bytes</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.8">FCS_IPSEC_EXT.1.8</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    <p style="text-align: left;">Test 1: If ‘number of bytes’ is selected as the SA lifetime measure, the evaluator shall configure a maximum lifetime in terms of the number of bytes allowed following the guidance documentation. The evaluator shall configure a test peer with a byte lifetime that exceeds the lifetime of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall establish a SA between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the test peer, and determine that once the allowed number of bytes through this SA is exceeded, a new SA is negotiated. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> initiates a Phase 2 negotiation.</p>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ipsec-ext-1-8-compsel-2">length of time, where the time values can be configured between [<b>assignment</b>: 
+     <span class="assignable-content">minimum configurable rekey time</span>] and [<b>assignment</b>: 
+     <span class="assignable-content">maximum configurable rekey time</span>]</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.8">FCS_IPSEC_EXT.1.8</a></li><li><a href="#nd-fcs-ipsec-ext-1-8-compsel-4">IKEv2 Child SA lifetimes can be configured by a Security Administrator based on [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ipsec_ext.1.8_4">number of bytes</span>, <span class="selectable-content" id="nd-fcs-ipsec-ext-1-8-compsel-2">length of time, where the time values can be configured between [<b>assignment</b>: 
+     <span class="assignable-content">minimum configurable rekey time</span>] and [<b>assignment</b>: 
+     <span class="assignable-content">maximum configurable rekey time</span>]</span>]</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.8">FCS_IPSEC_EXT.1.8</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    <p style="text-align: left;">Test 2: If ‘length of time’ is selected as the SA lifetime measure, the evaluator shall configure a maximum lifetime no later than 8 hours for the Phase 2 SA following the guidance documentation. The evaluator shall configure a test peer with a Phase 2 SA lifetime that exceeds the Phase 2 SA lifetime on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall establish a SA between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the test peer, maintain the Phase 1 SA for 8 hours, and determine that once a new Phase 2 SA is negotiated when or before 8 hours has lapsed. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> initiates a Phase 2 negotiation.</p>
+                  </test></div></div></ul></span>
+              </div><div class="ea">
+                <p style="text-align: left;">447. None.</p>
+              </div><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">448. The following tests shall be performed.</p><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.10_1">IKEv1</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.10">FCS_IPSEC_EXT.1.10</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">Test 1: If IKEv1 is supported, Configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use IKEv1:</p>
+                    <span class="testlist-">b4dc9e75-c7b8-419a-b2c3-07556e0612e6<p style="text-align: left;">Test 1.a: If “according to the security strength associated with the negotiated Diffie- Hellman group” has been selected, for each supported authentication methods and DH groups, demonstrate the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses phase 1 and phase 2 nonces meeting the strength requirement defined in <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-57 for the appropriate DH group.</p>e522b874-fb49-476d-99b3-5a1f9a69e811<p style="text-align: left;">Test 1.b: If “at least 128-bits in size and at least half the output size of the negotiated pseudorandom function (PRF) hash” has been selected, for each supported authentication method and PRF hash, demonstrate the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses phase 1 and phase 2 nonces suitable for the selected PRF.</p><ul></ul></span>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.10_2">IKEv2</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.10">FCS_IPSEC_EXT.1.10</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">Test 2: If IKEv2 is supported, configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use IKEv2: </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">For each supported DH group, demonstrate the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses IKE_SA_INIT and CREATE_CHILD_SA nonces suitable for the selected PRF.</p>
+                      </li>
+                    </ul>
+                  </test></div></div></ul></span>
+              </div><div class="ea">
+                <span class="testlist-"><ul><li class="test-"><a id="_t_83" class="defined" href="#_t_83">Test FCS_IPSEC_EXT.1:6</a>:
+      
+                    <p style="text-align: left;">449. For each supported DH group, the evaluator shall test to ensure that all supported IKE protocols can be successfully completed using that particular DH group.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">450. The evaluator shall follow the guidance to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to perform the following tests.</p><br/><br/><br/><ul><li class="test-"><a id="_t_84" class="defined" href="#_t_84">Test FCS_IPSEC_EXT.1:7</a>:
+      
+                    <p style="text-align: left;">Test 1: This test shall be performed for each version of IKE supported. The evaluator shall successfully negotiate an IPsec connection using each of the supported algorithms and hash functions identified in the requirements.</p>
+                  </li><li class="test-"><a id="_t_85" class="defined" href="#_t_85">Test FCS_IPSEC_EXT.1:8</a>:
+      
+                    <p style="text-align: left;">Test 2: This test shall be performed for each version of IKE supported. The evaluator shall attempt to establish a SA for ESP that selects an encryption algorithm with more strength than that being used for the IKE SA (i.e., symmetric algorithm with a key size larger than that being used for the IKE SA). Such attempts should fail.</p>
+                  </li><li class="test-"><a id="_t_86" class="defined" href="#_t_86">Test FCS_IPSEC_EXT.1:9</a>:
+      
+                    <p style="text-align: left;">Test 3: This test shall be performed for each version of IKE supported. The evaluator shall attempt to establish an IKE SA using an algorithm that is not one of the supported algorithms and hash functions identified in the requirements. Such an attempt should fail.</p>
+                  </li><li class="test-"><a id="_t_87" class="defined" href="#_t_87">Test FCS_IPSEC_EXT.1:10</a>:
+      
+                    <p style="text-align: left;">Test 4: This test shall be performed for each version of IKE supported. The evaluator shall attempt to establish a SA for ESP (assumes the proper parameters were used to establish the IKE SA) that selects an encryption algorithm that is not identified in <a href="#FCS_IPSEC_EXT.1.4">FCS_IPSEC_EXT.1.4</a>. Such an attempt should fail.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <p style="text-align: left;">451. For efficiency sake, the testing is combined with the testing for FIA_X509_EXT.1 and FIA_X509_EXT.2 from the Functional Package for X.509 (for IPsec connections), and <a href="#FCS_IPSEC_EXT.1.1">FCS_IPSEC_EXT.1.1</a>.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">452. In the context of the tests below, a valid certificate is a certificate that passes FIA_X509_EXT.1 (from the Functional Package for X.509) validation checks but does not necessarily contain an authorised subject.</p>
+                <span class="testlist-"><p style="text-align: left;">453. The evaluator shall perform the following tests:</p><br/><br/><br/><br/><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.14_5">CN: Fully Qualified Domain Name (FQDN)</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_4">CN: IP address</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_6">CN: user FQDN</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    
+                    <p style="text-align: left;">Test 1 [conditional]: For each <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr>/identifier type combination selected, the evaluator shall configure the peer’s reference identifier on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (per the administrative guidance) to match the field in the peer’s presented certificate and shall verify that the IKE authentication succeeds. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prioritizes <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> checking over <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> (through explicit configuration of the field when specifying the reference identifier or prioritization rules), the evaluator shall also configure the <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> so it contains an incorrect identifier of the correct type (e.g., the reference identifier on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is <a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline hover:text-blue-800" href="http://example.com">example.com</a>, the <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr>=<a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline hover:text-blue-800" href="http://example.com">example.com</a>, and the <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>:FQDN=<a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline hover:text-blue-800" href="http://otherdomain.com">otherdomain.com</a>) and verify that IKE authentication succeeds.</p>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.14_2">SAN: Fully Qualified Domain Name (FQDN)</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_1">SAN: IP address</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_3">SAN: user FQDN</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    
+                    <p style="text-align: left;">Test 2 [conditional]: For each <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>/identifier type combination selected, the evaluator shall configure the peer’s reference identifier on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (per the administrative guidance) to match the field in the peer’s presented certificate and shall verify that the IKE authentication succeeds. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prioritizes <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> checking over <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> (through explicit specification of the field when specifying the reference identifier or prioritization rules), the evaluator shall also configure the <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> so it contains an incorrect identifier formatted to be the same type (e.g., the reference identifier on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is <abbr class="dyn-abbr"><a href="#abbr_DNS">DNS</a></abbr>-ID; identify certificate has an identifier in <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> with correct <abbr class="dyn-abbr"><a href="#abbr_DNS">DNS</a></abbr>-ID, <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> with incorrect <abbr class="dyn-abbr"><a href="#abbr_DNS">DNS</a></abbr>-ID (and not a different type of identifier)) and verify that IKE authentication succeeds.</p>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.14_5">CN: Fully Qualified Domain Name (FQDN)</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_4">CN: IP address</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_6">CN: user FQDN</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    
+                    <p style="text-align: left;">Test 3 [conditional]: For each <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr>/identifier type combination selected, the evaluator shall:</p>
+                    <span class="testlist-"><p style="text-align: left;">Create a valid certificate with the <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> so it contains the valid identifier followed by ‘\0’. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prioritizes <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> checking over <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> (through explicit specification of the field when specifying the reference identifier or prioritization rules) for the same identifier type, the evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> so it matches the reference identifier.</p><p style="text-align: left;">Configure the peer’s reference identifier on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (per the administrative guidance) to match the <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> without the ‘\0’ and verify that IKE authentication fails.</p><ul></ul></span>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.14_2">SAN: Fully Qualified Domain Name (FQDN)</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_1">SAN: IP address</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li><li><a href="#nd_fcs_ipsec_ext.1.14_3">SAN: user FQDN</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    
+                    <p style="text-align: left;">Test 4 [conditional]: For each <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>/identifier type combination selected, the evaluator shall:</p>
+                    <span class="testlist-"><p style="text-align: left;">Create a valid certificate with an incorrect identifier in the <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>. The evaluator shall configure a string representation of the correct identifier in the DN. If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> prioritizes <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> checking over <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr> (through explicit specification of the field when specifying the reference identifier or prioritization rules) for the same identifier type, the addition/modification shall be to any non-CN field of the DN. Otherwise, the addition/modification shall be to the <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr>.</p><p style="text-align: left;">Configure the peer’s reference identifier on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (per the administrative guidance) to match the correct identifier (expected in the <abbr class="dyn-abbr"><a href="#abbr_SAN">SAN</a></abbr>) and verify that IKE authentication fails.</p><ul></ul></span>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.14_7">Distinguished Name (DN)</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">Test 5 [conditional]: If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports DN identifier types, the evaluator shall configure the peer’s reference identifier on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (per the administrative guidance) to match the subject DN in the peer’s presented certificate and shall verify that the IKE authentication succeeds.</p>
+                  </test></div></div><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_ipsec_ext.1.14_7">Distinguished Name (DN)</a>
+             is selected from 
+             <a href="#FCS_IPSEC_EXT.1.14">FCS_IPSEC_EXT.1.14</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">Test 6 [conditional]: If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports DN identifier types, to demonstrate a bit-wise comparison of the DN, the evaluator shall create the following valid certificates and verify that the IKE authentication fails when each certificate is presented to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>:</p>
+                    <span class="testlist-"><p style="text-align: left;">Duplicate the <abbr class="dyn-abbr"><a href="#abbr_CN">CN</a></abbr> field, so the otherwise authorised DN contains two identical CNs.</p><p style="text-align: left;">Append ‘\0’ to a non-CN field of an otherwise authorised DN.</p><ul></ul></span>
+                  </test></div></div></ul></span>
+              </div></div></div></div></div>
         
         <div class="comp" id="FCS_NTP_EXT.1"><h4>FCS_NTP_EXT.1 NTP Protocol</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
 	  <a href="#FPT_STM_EXT.1.2">FPT_STM_EXT.1.2</a>.
@@ -4082,16 +4419,16 @@ If ( keylen = 256 )
                 <p style="text-align: left;">181. The evaluator shall examine the guidance documentation to determine that any necessary preparatory steps (e.g., establishing credential material such as pre- shared keys, tunnels, certificates, etc.) to logging in are described. For each supported login method, the evaluator shall ensure the guidance documentation provides clear instructions for successfully logging on. If configuration is necessary to ensure the services provided before login are limited, the evaluator shall determine that the guidance documentation provides sufficient instruction on limiting the allowed services.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">182. The evaluator shall perform the following tests for each method by which administrators access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (local and remote), as well as for each type of credential supported by the login method:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_68" class="defined" href="#_t_68">Test FIA_UIA_EXT.1:1</a>:
+                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_94" class="defined" href="#_t_94">Test FIA_UIA_EXT.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall use the guidance documentation to configure the appropriate credential supported for the login method. For all combinations of supported credentials and login methods, the evaluator shall show that providing correct I&amp;A information results in the ability to access the system, while providing incorrect information results in denial of access.</p>
-                  </li><li class="test-"><a id="_t_69" class="defined" href="#_t_69">Test FIA_UIA_EXT.1:2</a>:
+                  </li><li class="test-"><a id="_t_95" class="defined" href="#_t_95">Test FIA_UIA_EXT.1:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall configure the services allowed (if any) according to the guidance documentation, and then determine the services available to an external remote entity. The evaluator shall determine that the list of services available is limited to those specified in the requirement.</p>
-                  </li><li class="test-"><a id="_t_70" class="defined" href="#_t_70">Test FIA_UIA_EXT.1:3</a>:
+                  </li><li class="test-"><a id="_t_96" class="defined" href="#_t_96">Test FIA_UIA_EXT.1:3</a>:
       
                     <p style="text-align: left;">Test 3: For local access, the evaluator shall determine what services are available to a local administrator prior to logging in, and make sure this list is consistent with the requirement.</p>
-                  </li><li class="test-"><a id="_t_71" class="defined" href="#_t_71">Test FIA_UIA_EXT.1:4</a>:
+                  </li><li class="test-"><a id="_t_97" class="defined" href="#_t_97">Test FIA_UIA_EXT.1:4</a>:
       
                     <p style="text-align: left;">Test 4: For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, where not all <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components support the authentication of Security Administrators according to <a href="#FIA_UIA_EXT.1">FIA_UIA_EXT.1</a>, the evaluator shall test that the components authenticate Security Administrators as described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</p>
                   </li></ul></span>
@@ -4194,10 +4531,10 @@ If ( keylen = 256 )
                 <p style="text-align: left;">188. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the guidance documentation shall describe all steps for how to update all <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components. This shall contain a description of the order in which components need to be updated if the order is relevant to the update process. The guidance documentation shall also provide warnings regarding functions of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components and the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that may cease to operate during the update (if applicable).</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">189. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_72" class="defined" href="#_t_72">Test FMT_MOF.1/ManualUpdate:1</a>:
+                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_98" class="defined" href="#_t_98">Test FMT_MOF.1/ManualUpdate:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall try to perform the update using a legitimate update image without prior authentication as Security Administrator (either by authentication as a user with no administrator privileges or without user authentication at all – depending on the configuration of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>). The attempt to update the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall fail.</p>
-                  </li><li class="test-"><a id="_t_73" class="defined" href="#_t_73">Test FMT_MOF.1/ManualUpdate:2</a>:
+                  </li><li class="test-"><a id="_t_99" class="defined" href="#_t_99">Test FMT_MOF.1/ManualUpdate:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall try to perform the update with prior authentication as Security Administrator using a legitimate update image. This attempt should be successful. This test case is covered by Test 1 for <a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a>.</p>
                   </li></ul></span>
@@ -4781,13 +5118,13 @@ If ( keylen = 256 )
                 <p style="text-align: left;">218. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall ensure that the guidance documentation describes how to determine from an error message returned which <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> component has failed the self-test.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">219. It is expected that at least the following tests are performed:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_80" class="defined" href="#_t_80">Test FPT_TST_EXT.1:1</a>:
+                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_106" class="defined" href="#_t_106">Test FPT_TST_EXT.1:1</a>:
       
                     <p style="text-align: left;">Verification of the integrity of the firmware and executable software of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
-                  </li><li class="test-"><a id="_t_81" class="defined" href="#_t_81">Test FPT_TST_EXT.1:2</a>:
+                  </li><li class="test-"><a id="_t_107" class="defined" href="#_t_107">Test FPT_TST_EXT.1:2</a>:
       
                     <p style="text-align: left;">Verification of the correct operation of the cryptographic functions necessary to fulfil any of the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p>
-                  </li><li class="test-"><a id="_t_82" class="defined" href="#_t_82">Test FPT_TST_EXT.1:3</a>:
+                  </li><li class="test-"><a id="_t_108" class="defined" href="#_t_108">Test FPT_TST_EXT.1:3</a>:
       
                     <p style="text-align: left;">220. Although formal compliance is not mandated, the self-tests performed should aim for a level of confidence comparable to: </p>
                     <p style="text-align: left;">a. [<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 140-2], Section 4.9.1, Software/firmware integrity test for the verification of the integrity of the firmware and executable software. Note that the testing is not restricted to the cryptographic functions of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
@@ -4867,17 +5204,17 @@ If ( keylen = 256 )
                 </div></div></div>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">232. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_84" class="defined" href="#_t_84">Test FPT_TUD_EXT.1:1</a>:
+                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_110" class="defined" href="#_t_110">Test FPT_TUD_EXT.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall perform the version verification activity to determine the current version of the product. If a trusted update can be installed on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with a delayed activation, the evaluator shall also query the most recently installed version (for this test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall be in a state where these two versions match). The evaluator will obtain a legitimate update using procedures described in the guidance documentation and verify that it has been successfully installed on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. For some <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> loading the update onto the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and activation of the update are separate steps (‘activation’ could be performed e.g., by a distinct activation step or by rebooting the device). In that case, the evaluator shall verify after loading the update onto the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> but before activation of the update that the current version of the product did not change but the most recently installed version has changed to the new product version. After the update, the evaluator shall perform the version verification activity again to verify the version correctly corresponds to that of the update and that current version of the product and most recently installed version match again.</p>
-                  </li><li class="test-"><a id="_t_85" class="defined" href="#_t_85">Test FPT_TUD_EXT.1:2</a>:
+                  </li><li class="test-"><a id="_t_111" class="defined" href="#_t_111">Test FPT_TUD_EXT.1:2</a>:
       
                     <p style="text-align: left;">Test 2: If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself verifies a digital signature in order to authorise the installation of an image to update the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following test shall be performed (otherwise the test shall be omitted). The evaluator shall first confirm that no updates are pending and then perform the version verification activity to determine the current version of the product, verifying that it is different from the version claimed in the update(s) to be used in this test. The evaluator shall obtain or produce illegitimate updates as defined below and attempt to install them on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> rejects all of the illegitimate updates. The evaluator shall perform this test using all of the following forms of illegitimate updates: </p>
                     <p style="text-align: left;">i. A modified version (e.g., using a hex editor) of a legitimately signed update </p>
                     <p style="text-align: left;">ii. An image that has not been signed </p>
                     <p style="text-align: left;">iii. An otherwise valid image with a properly formed signature that was signed by an unknown key. The purpose of this test is to verify the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> would only accept images signed by an explicitly trusted key (or a key associated with a trusted certificate). </p>
                     <p style="text-align: left;">iv. The handling of version information of the most recently installed version might differ between different <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> depending on the point in time when an attempted update is rejected. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> handles the most recently installed version information for that case as described in the guidance documentation. After the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has rejected the update, the evaluator shall verify that both the current version and most recently installed version reflect the same version information as prior to the update attempt.</p>
-                  </li><li class="test-"><a id="_t_86" class="defined" href="#_t_86">Test FPT_TUD_EXT.1:3</a>:
+                  </li><li class="test-"><a id="_t_112" class="defined" href="#_t_112">Test FPT_TUD_EXT.1:3</a>:
       
                     <p style="text-align: left;">233. The evaluator shall perform Test 1 and Test 2 for all supported methods (manual updates, automatic checking for updates, automatic updates).</p>
                   </li><div class="dependent">The following content should be included if:<ul><li>
@@ -4946,7 +5283,7 @@ If ( keylen = 256 )
                 <p style="text-align: left;">236. The evaluator shall confirm that the guidance documentation includes instructions for configuring the inactivity time period for remote administrative session termination.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">237. For each method of remote administration, the evaluator shall perform the following test:</p>
-                <span class="testlist-"><ul><li class="test-"><a id="_t_88" class="defined" href="#_t_88">Test FTA_SSL.3:1</a>:
+                <span class="testlist-"><ul><li class="test-"><a id="_t_114" class="defined" href="#_t_114">Test FTA_SSL.3:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure several different values for the inactivity time period referenced in the component. For each period configured, the evaluator shall establish a remote interactive session with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall then observe that the session is terminated after the configured time period.</p>
                   </li></ul></span>
@@ -5031,7 +5368,7 @@ If ( keylen = 256 )
                 <p style="text-align: left;">242. The evaluator shall check the guidance documentation to ensure that it describes how to configure the banner message.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">243. The evaluator shall also perform the following test:</p>
-                <span class="testlist-"><p style="text-align: left;"></p><ul><li class="test-"><a id="_t_91" class="defined" href="#_t_91">Test FTA_TAB.1:1</a>:
+                <span class="testlist-"><p style="text-align: left;"></p><ul><li class="test-"><a id="_t_117" class="defined" href="#_t_117">Test FTA_TAB.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure a notice and consent warning message. The evaluator shall then, for each method of human interactive access specified in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>, establish a session with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall verify that the notice and consent warning message is displayed in each instance.</p>
                   </li></ul></span>
@@ -5080,16 +5417,16 @@ If ( keylen = 256 )
                 <p style="text-align: left;">245. The evaluator shall confirm that the guidance documentation contains instructions for establishing the allowed protocols with each authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, and that it contains recovery instructions should a connection be unintentionally broken.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">246. The developer shall provide to the evaluator application layer configuration settings for all secure communication mechanisms specified by the <a href="#FTP_ITC.1">FTP_ITC.1</a> requirement. This information should be sufficiently detailed to allow the evaluator to determine the application layer timeout settings for each cryptographic protocol. There is no expectation that this information must be recorded in any public-facing document or report.</p>
-                <span class="testlist-"><p style="text-align: left;">247. The evaluator shall perform the following tests:</p><br/><br/><br/><ul><li class="test-"><a id="_t_92" class="defined" href="#_t_92">Test FTP_ITC.1:1</a>:
+                <span class="testlist-"><p style="text-align: left;">247. The evaluator shall perform the following tests:</p><br/><br/><br/><ul><li class="test-"><a id="_t_118" class="defined" href="#_t_118">Test FTP_ITC.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall ensure that communications using each protocol with each authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity is tested during the course of the evaluation, setting up each connection as described in the guidance documentation and ensuring that communication is successful.</p>
-                  </li><li class="test-"><a id="_t_93" class="defined" href="#_t_93">Test FTP_ITC.1:2</a>:
+                  </li><li class="test-"><a id="_t_119" class="defined" href="#_t_119">Test FTP_ITC.1:2</a>:
       
                     <p style="text-align: left;">Test 2: For each protocol that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> can initiate as defined in the requirement, the evaluator shall follow the guidance documentation to ensure that the communication channel can in fact be initiated from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
-                  </li><li class="test-"><a id="_t_94" class="defined" href="#_t_94">Test FTP_ITC.1:3</a>:
+                  </li><li class="test-"><a id="_t_120" class="defined" href="#_t_120">Test FTP_ITC.1:3</a>:
       
                     <p style="text-align: left;">Test 3: The evaluator shall verify that, for each communication channel with an authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, the channel data is not sent in plaintext.</p>
-                  </li><li class="test-"><a id="_t_95" class="defined" href="#_t_95">Test FTP_ITC.1:4</a>:
+                  </li><li class="test-"><a id="_t_121" class="defined" href="#_t_121">Test FTP_ITC.1:4</a>:
       
                     <p style="text-align: left;">Test 4: Objective: The objective of this test is to ensure that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> reacts appropriately to any connection outage or interruption of the route to the external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities. </p>
                     <p style="text-align: left;">The evaluator shall, for each instance where the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> acts as a client using a secure communication mechanism with a distinct <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, interrupt the connection of that <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity for: i) a duration that exceeds the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s application layer timeout setting, ii) a duration shorter than the application layer timeout but of sufficient length to interrupt the network link layer. </p>
@@ -5136,10 +5473,10 @@ If ( keylen = 256 )
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">252. The evaluator shall confirm that the guidance documentation contains instructions for establishing the remote administrative sessions for each supported method.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><p style="text-align: left;">253. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_96" class="defined" href="#_t_96">Test FTP_TRP.1/Admin:1</a>:
+                <span class="testlist-"><p style="text-align: left;">253. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_122" class="defined" href="#_t_122">Test FTP_TRP.1/Admin:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluators shall ensure that communications using each specified (in the guidance documentation) remote administration method are tested during the course of the evaluation, setting up the connections as described in the guidance documentation and verifying that communication is successful.</p>
-                  </li><li class="test-"><a id="_t_97" class="defined" href="#_t_97">Test FTP_TRP.1/Admin:2</a>:
+                  </li><li class="test-"><a id="_t_123" class="defined" href="#_t_123">Test FTP_TRP.1/Admin:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall verify, for each communication channel, the channel data is not sent in plaintext.</p>
                   </li></ul></span>
@@ -5193,13 +5530,13 @@ If ( keylen = 256 )
                   </li>
                 </ol>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><p style="text-align: left;">288. The evaluator shall perform the following tests:</p><br/><br/><ul><li class="test-"><a id="_t_98" class="defined" href="#_t_98">Test FTP_TRP.1/Join:1</a>:
+                <span class="testlist-"><p style="text-align: left;">288. The evaluator shall perform the following tests:</p><br/><br/><ul><li class="test-"><a id="_t_124" class="defined" href="#_t_124">Test FTP_TRP.1/Join:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall ensure that the communications path for joining components to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> is tested for each distinct (nonequivalent) component type[4], setting up the connections as described in the guidance documentation and verifying that communication is successful. In particular the evaluator shall confirm that requirements on environment protection for the registration process are consistent with observations made on the test configuration (for example, a requirement to isolate the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components from the Internet during registration might be inconsistent with the need for a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> component to contact a license server). If no requirements on the registration environment are identified as necessary to protect confidentiality, then the evaluator shall confirm that the key used for registration can be configured (following the instructions in the guidance documentation) to be at least the same length as the key used for the internal <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> channel that is being enabled. The evaluator shall confirm that the key used for the channel is unique to the pair of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components (this is done by identifying the relevant key during the registration test: it is not necessary to examine the key value).</p>
-                  </li><li class="test-"><a id="_t_99" class="defined" href="#_t_99">Test FTP_TRP.1/Join:2</a>:
+                  </li><li class="test-"><a id="_t_125" class="defined" href="#_t_125">Test FTP_TRP.1/Join:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall follow the guidance documentation to ensure that the communication channel can be enabled by a Security Administrator for all the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components identified in the guidance documentation as capable of having the Security Administrator initiate the channel.</p>
-                  </li><li class="test-"><a id="_t_100" class="defined" href="#_t_100">Test FTP_TRP.1/Join:3</a>:
+                  </li><li class="test-"><a id="_t_126" class="defined" href="#_t_126">Test FTP_TRP.1/Join:3</a>:
       
                     <p style="text-align: left;">Test 3: The evaluator shall ensure that if the guidance documentation states that the channel data is encrypted, then the data observed on the channel is not plaintext.</p>
                   </li></ul></span>

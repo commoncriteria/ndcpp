@@ -648,7 +648,7 @@ function showTarget(id){
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (base PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
     international technical communities and approved by multiple schemes.</td></tr>
 <tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408).</td></tr>
@@ -670,8 +670,8 @@ The following sections list Common Criteria and technology terms used in this do
 	    or functionality.</td></tr>
 <tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy.</td></tr>
 <tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products.</td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module.</td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs.</td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one base PP and at least one PP-Module.</td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more base PPs.</td></tr>
 <tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE.</td></tr>
 <tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE.</td></tr>
 <tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product.</td></tr>
@@ -722,9 +722,9 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 				</dd><p></p><dd>There are no <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> or <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules that are allowed in a <abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> 
 					with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</dd><dt>Package Claim</dt><p></p><dd><ul><li>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> does not conform to any 
 						functional packages.</li><li>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is 
-					    Functional Package for Secure Shell Version 2.0 conformant.</li><li>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is 
-					    Functional Package for Transport Layer Security Version 2.1 conformant.</li><li>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is 
-					    Functional Package for X.509 Version 1.0 conformant.</li></ul></dd><p></p><dd>
+					Functional Package for Secure Shell Version 2.0 conformant.</li><li>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is 
+					Functional Package for Transport Layer Security Version 2.1 conformant.</li><li>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> is 
+					Functional Package for X.509 Version 1.0 conformant.</li></ul></dd><p></p><dd>
 		The functional packages to which the <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> conforms may include <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> that are not mandatory 
 		to claim for the sake of conformance. An <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> that claims one or more of these functional 
 		packages may include any non-mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> that are appropriate to claim based on the 
@@ -1090,7 +1090,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">258. The evaluator shall examine the guidance documentation to determine if it describes any configuration required for protection of the locally stored audit data against unauthorised modification or deletion.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><p style="text-align: left;">259. The evaluator shall perform the following tests:</p><br/><p style="text-align: left;">260. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall perform test 1 and test 2 for each component that is defined by the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to be covered by this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</p><ul><li class="test-"><a id="_t_1" class="defined" href="#_t_1">Test FAU_STG.2:1</a>:
+                :<span class="testlist-"><p style="text-align: left;">259. The evaluator shall perform the following tests:</p><br/><p style="text-align: left;">260. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall perform test 1 and test 2 for each component that is defined by the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to be covered by this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</p><ul><li class="test-"><a id="_t_1" class="defined" href="#_t_1">Test FAU_STG.2:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall attempt to access the audit trail without authentication as a Security Administrator (either by authentication as a non-administrative user, if supported, or without authentication at all) and attempt to modify and delete the audit records. The evaluator shall verify that these attempts fail. </p>
                     <p style="text-align: left;">In the case that no other users than the Security Administrator can be defined, without user authentication the user may not be able to get to the point where the attempt to access the audit trail can be executed. In this case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</p>
@@ -1184,7 +1184,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                 <p style="text-align: left;">47. If more than one selection is made for <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a>, the evaluator shall review the Guidance Documentation to ensure it contains instructions on specifying which action is performed when the local storage space is full.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 48. Testing of secure transmission of the audit data externally (<a href="#FTP_ITC.1">FTP_ITC.1</a>) and, where applicable, intercomponent (<a href="#FPT_ITT.1">FPT_ITT.1</a> or <a href="#FTP_ITC.1">FTP_ITC.1</a>) shall be performed according to the assurance activities for the particular protocol(s).
-                <span class="testlist-"><p style="text-align: left;">49. The evaluator shall perform the following additional test for this requirement:</p><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FAU_STG_EXT.1:1</a>:
+                :<span class="testlist-"><p style="text-align: left;">49. The evaluator shall perform the following additional test for this requirement:</p><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FAU_STG_EXT.1:1</a>:
       
                     <p style="text-align: left;">The evaluator shall establish a session between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the audit server according to the configuration guidance provided. The evaluator shall then examine the traffic that passes between the audit server and the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> during several activities of the evaluator’s choice designed to generate audit data to be transferred to the audit server. The evaluator shall observe that these data are not able to be viewed in the clear during this transfer, and that they are successfully received by the audit server. The evaluator shall record the particular software (name, version) used on the audit server during testing. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is capable of transferring audit data to an external audit server automatically without administrator intervention.</p>
                   </li><div class="dependent">The following content should be included if:<ul><li>
@@ -1219,7 +1219,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                         <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> behaves as specified (for the option ‘other action’ in <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a>).</p>
                       </li>
                     </ol>
-                    <span class="testlist-"><p style="text-align: left;"></p> 71f55177-ba90-4ca2-ac4d-ae73c946de53 <ol><li><p style="text-align: left;">The audit data remains unchanged with every new auditable event that should be tracked but that the audit data is recorded again after the local storage for audit data is cleared.</p></li></ol><p style="text-align: left;">The existing audit data is overwritten with every new auditable event that should be tracked according to the specified rule (for the option ‘overwrite previous audit records’ in <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a>)</p><p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> behaves as specified (for the option ‘other action’ in <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a>).</p><ul></ul></span>
+                    :<span class="testlist-"><p style="text-align: left;"></p> 71f55177-ba90-4ca2-ac4d-ae73c946de53 <ol><li><p style="text-align: left;">The audit data remains unchanged with every new auditable event that should be tracked but that the audit data is recorded again after the local storage for audit data is cleared.</p></li></ol><p style="text-align: left;">The existing audit data is overwritten with every new auditable event that should be tracked according to the specified rule (for the option ‘overwrite previous audit records’ in <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a>)</p><p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> behaves as specified (for the option ‘other action’ in <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a>).</p><ul></ul></span>
                   </li><div class="dependent">The following content should be included if:<ul><li>
            the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements 
            
@@ -1263,7 +1263,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                 <p style="text-align: left;">264. The evaluator shall also ensure that the guidance documentation describes all possible configuration options and the meaning of the result returned by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> for each possible configuration. The description of possible configuration options and explanation of the result shall correspond to those described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>. </p>
                 <p style="text-align: left;">265. The evaluator shall verify that the guidance documentation contains a warning for the administrator about the loss of audit data when clearing the local storage for audit records.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FAU_STG_EXT.2:1</a>:
+                :<span class="testlist-"><br/><ul><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FAU_STG_EXT.2:1</a>:
       
                     <p style="text-align: left;">266. The evaluator shall verify that the numbers provided by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> according to the selection for <a href="#FAU_STG_EXT.2">FAU_STG_EXT.2</a> are correct when performing the tests for <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a>.</p>
                   </li><div class="dependent">The following content should be included if:<ul><li>
@@ -1301,7 +1301,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">271. The evaluator shall also verify that the guidance documentation describes how the Security Administrator is warned before the local storage for audit data is full and how this warning is displayed or stored (since there is no guarantee that an administrator session is running at the time the warning is issued, it is very likely that it will be stored in the log files). The description in the guidance documentation shall correspond to the description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FAU_STG_EXT.3:1</a>:
+                :<span class="testlist-"><br/><ul><li class="test-"><a id="_t_11" class="defined" href="#_t_11">Test FAU_STG_EXT.3:1</a>:
       
                     <p style="text-align: left;">272. The evaluator shall verify that a warning is issued by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> before the local storage space for audit data is full.</p>
                   </li><div class="dependent">The following content should be included if:<ul><li>
@@ -1477,7 +1477,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">54. The evaluator shall verify that the Guidance instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate keys for the selected key generation algorithms for all key types and uses identified in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><p style="text-align: left;">55. The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_CKM.1/AKG:1</a>:
+                :<span class="testlist-"><p style="text-align: left;">55. The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.</p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_13" class="defined" href="#_t_13">Test FCS_CKM.1/AKG:1</a>:
       
                     <p style="text-align: left;">
                       <b>RSA Key Generation </b>
@@ -1861,7 +1861,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
                 <p style="text-align: left;">82. The evaluator shall verify that the AGD guidance instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key agreement method(s).</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 83. The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.
-                <span class="testlist-"><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_27" class="defined" href="#_t_27">Test FCS_CKM_EXT.7:1</a>:
+                :<span class="testlist-"><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_27" class="defined" href="#_t_27">Test FCS_CKM_EXT.7:1</a>:
       
                     <p style="text-align: left;">
                       <b>FFC Diffie-Hellman Key Agreement </b>
@@ -2178,13 +2178,13 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">137. The following tests may require the developer to provide access to a test platform that provides the evaluator with tools that are typically not found on factory products. </p>
                 <p style="text-align: left;">138. The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.</p>
-                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_33" class="defined" href="#_t_33">Test FCS_COP.1/Hash:1</a>:
+                :<span class="testlist-"><br/><ul><li class="test-"><a id="_t_33" class="defined" href="#_t_33">Test FCS_COP.1/Hash:1</a>:
       
                     <p style="text-align: left;">
                       <b><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</b>
                     </p>
                     <p style="text-align: left;">139. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate hash digests using SHA2 the evaluator shall perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Test for each claimed SHA2 algorithm.</p>
-                    <span class="testlist-"><p style="text-align: left;"></p><p style="text-align: left;"><b>Algorithm Functional Test </b></p><p style="text-align: left;">140. The evaluator shall generate a number of test cases equal to the block size of the hash (512 for SHA2-256; 1024 for the other SHA2 algorithms). </p><p style="text-align: left;">141. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported. </p><p style="text-align: left;">142. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported.</p><p style="text-align: left;"><b>Monte Carlo Test </b></p><p style="text-align: left;">143. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation. </p><p style="text-align: left;">144. There are two versions of the Monte Carlo test for <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-1 and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-2. Either one is acceptable. For the Standard Monte Carlo test the message hashed is always three times the length of the initial seed. </p><p style="text-align: left;"></p><pre><code>For j = 0 to 99 
+                    :<span class="testlist-"><p style="text-align: left;"></p><p style="text-align: left;"><b>Algorithm Functional Test </b></p><p style="text-align: left;">140. The evaluator shall generate a number of test cases equal to the block size of the hash (512 for SHA2-256; 1024 for the other SHA2 algorithms). </p><p style="text-align: left;">141. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported. </p><p style="text-align: left;">142. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported.</p><p style="text-align: left;"><b>Monte Carlo Test </b></p><p style="text-align: left;">143. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation. </p><p style="text-align: left;">144. There are two versions of the Monte Carlo test for <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-1 and <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-2. Either one is acceptable. For the Standard Monte Carlo test the message hashed is always three times the length of the initial seed. </p><p style="text-align: left;"></p><pre><code>For j = 0 to 99 
        A = B = C = SEED 
        For i = 0 to 999 
                 MSG = A || B || C 
@@ -2214,7 +2214,7 @@ For j = 0 to 99
                       <b>SHA3-384, SHA3-512 </b>
                     </p>
                     <p style="text-align: left;">149. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to generate hash digests using SHA3 the evaluator shall perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Tests for each claimed SHA3 algorithm.</p>
-                    <span class="testlist-"><p style="text-align: left;"><b>Algorithm Functional Test</b></p><p style="text-align: left;">150. Generate a test case consisting of random data for every message length from 0 bits (or the smallest supported message size) to rate bits, where rate equals </p><ul><li><p style="text-align: left;">832 for SHA3-384 and </p></li><li><p style="text-align: left;">576 for SHA3-512. </p></li></ul><p style="text-align: left;">151. Additionally, generate tests cases of random data for messages of every multiple of (rate+1) bits starting at length rate, and continuing until 65535 is exceeded. </p><p style="text-align: left;">152. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</p><p style="text-align: left;"><b>Monte Carlo Test</b></p><p style="text-align: left;">153. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation.</p><p style="text-align: left;">154. For this Monte Carlo Test, the hashed message is always the same length as the seed.</p><p style="text-align: left;"></p><pre><code>MD[0] = SEED 
+                    :<span class="testlist-"><p style="text-align: left;"><b>Algorithm Functional Test</b></p><p style="text-align: left;">150. Generate a test case consisting of random data for every message length from 0 bits (or the smallest supported message size) to rate bits, where rate equals </p><ul><li><p style="text-align: left;">832 for SHA3-384 and </p></li><li><p style="text-align: left;">576 for SHA3-512. </p></li></ul><p style="text-align: left;">151. Additionally, generate tests cases of random data for messages of every multiple of (rate+1) bits starting at length rate, and continuing until 65535 is exceeded. </p><p style="text-align: left;">152. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</p><p style="text-align: left;"><b>Monte Carlo Test</b></p><p style="text-align: left;">153. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation.</p><p style="text-align: left;">154. For this Monte Carlo Test, the hashed message is always the same length as the seed.</p><p style="text-align: left;"></p><pre><code>MD[0] = SEED 
 INITIAL_SEED_LENGTH = LEN(SEED) 
 For 100 iterations 
        For i = 1 to 1000 
@@ -2288,7 +2288,7 @@ For 100 iterations
                 <p style="text-align: left;">159. There are no additional Guidance evaluation activities for this component.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">160. The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described.</p>
-                <span class="testlist-"><ul><li class="test-"><a id="_t_35" class="defined" href="#_t_35">Test FCS_COP.1/KeyedHash:1</a>:
+                :<span class="testlist-"><ul><li class="test-"><a id="_t_35" class="defined" href="#_t_35">Test FCS_COP.1/KeyedHash:1</a>:
       
                     <p style="text-align: left;">
                       <b><abbr class="dyn-abbr"><a href="#abbr_HMAC">HMAC</a></abbr> </b>
@@ -2583,7 +2583,7 @@ For 100 iterations
                 <p style="text-align: left;">97. There are no additional Guidance evaluation activities for this component.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">98. The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described. </p>
-                <span class="testlist-"><p style="text-align: left;"></p><br/><br/><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_36" class="defined" href="#_t_36">Test FCS_COP.1/SigGen:1</a>:
+                :<span class="testlist-"><p style="text-align: left;"></p><br/><br/><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_36" class="defined" href="#_t_36">Test FCS_COP.1/SigGen:1</a>:
       
                     <p style="text-align: left;">
                       <b>RSA-PKCS Signature Generation </b>
@@ -2898,7 +2898,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                     <p style="text-align: left;">The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described. </p>
                   </li>
                 </ol>
-                <span class="testlist-"><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_44" class="defined" href="#_t_44">Test FCS_COP.1/SigVer:1</a>:
+                :<span class="testlist-"><br/><br/><br/><br/><br/><ul><li class="test-"><a id="_t_44" class="defined" href="#_t_44">Test FCS_COP.1/SigVer:1</a>:
       
                     <p style="text-align: left;">
                       <b>RSA-PKCS Signature Verification</b>
@@ -4004,7 +4004,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">181. The evaluator shall examine the guidance documentation to determine that any necessary preparatory steps (e.g., establishing credential material such as pre- shared keys, tunnels, certificates, etc.) to logging in are described. For each supported login method, the evaluator shall ensure the guidance documentation provides clear instructions for successfully logging on. If configuration is necessary to ensure the services provided before login are limited, the evaluator shall determine that the guidance documentation provides sufficient instruction on limiting the allowed services.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">182. The evaluator shall perform the following tests for each method by which administrators access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (local and remote), as well as for each type of credential supported by the login method:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_50" class="defined" href="#_t_50">Test FIA_UIA_EXT.1:1</a>:
+                :<span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_50" class="defined" href="#_t_50">Test FIA_UIA_EXT.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall use the guidance documentation to configure the appropriate credential supported for the login method. For all combinations of supported credentials and login methods, the evaluator shall show that providing correct I&amp;A information results in the ability to access the system, while providing incorrect information results in denial of access.</p>
                   </li><li class="test-"><a id="_t_51" class="defined" href="#_t_51">Test FIA_UIA_EXT.1:2</a>:
@@ -4116,7 +4116,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">188. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the guidance documentation shall describe all steps for how to update all <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components. This shall contain a description of the order in which components need to be updated if the order is relevant to the update process. The guidance documentation shall also provide warnings regarding functions of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components and the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that may cease to operate during the update (if applicable).</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">189. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_54" class="defined" href="#_t_54">Test FMT_MOF.1/ManualUpdate:1</a>:
+                :<span class="testlist-"><br/><ul><li class="test-"><a id="_t_54" class="defined" href="#_t_54">Test FMT_MOF.1/ManualUpdate:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall try to perform the update using a legitimate update image without prior authentication as Security Administrator (either by authentication as a user with no administrator privileges or without user authentication at all – depending on the configuration of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>). The attempt to update the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall fail.</p>
                   </li><li class="test-"><a id="_t_55" class="defined" href="#_t_55">Test FMT_MOF.1/ManualUpdate:2</a>:
@@ -4615,7 +4615,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 </div></div></div>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">213. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fpt_stm_ext.1.2_1">allow the Security Administrator to set the time</a>
+                :<span class="testlist-"><br/><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd_fpt_stm_ext.1.2_1">allow the Security Administrator to set the time</a>
              is selected from 
              <a href="#FPT_STM_EXT.1.2">FPT_STM_EXT.1.2</a></li></ul><div class="dependent-content"><test>
                     
@@ -4672,7 +4672,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">218. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall ensure that the guidance documentation describes how to determine from an error message returned which <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> component has failed the self-test.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">219. It is expected that at least the following tests are performed:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_59" class="defined" href="#_t_59">Test FPT_TST_EXT.1:1</a>:
+                :<span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_59" class="defined" href="#_t_59">Test FPT_TST_EXT.1:1</a>:
       
                     <p style="text-align: left;">Verification of the integrity of the firmware and executable software of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
                   </li><li class="test-"><a id="_t_60" class="defined" href="#_t_60">Test FPT_TST_EXT.1:2</a>:
@@ -4758,7 +4758,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 </div></div></div>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">232. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_63" class="defined" href="#_t_63">Test FPT_TUD_EXT.1:1</a>:
+                :<span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_63" class="defined" href="#_t_63">Test FPT_TUD_EXT.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall perform the version verification activity to determine the current version of the product. If a trusted update can be installed on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with a delayed activation, the evaluator shall also query the most recently installed version (for this test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall be in a state where these two versions match). The evaluator will obtain a legitimate update using procedures described in the guidance documentation and verify that it has been successfully installed on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. For some <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> loading the update onto the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and activation of the update are separate steps (‘activation’ could be performed e.g., by a distinct activation step or by rebooting the device). In that case, the evaluator shall verify after loading the update onto the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> but before activation of the update that the current version of the product did not change but the most recently installed version has changed to the new product version. After the update, the evaluator shall perform the version verification activity again to verify the version correctly corresponds to that of the update and that current version of the product and most recently installed version match again.</p>
                   </li><li class="test-"><a id="_t_64" class="defined" href="#_t_64">Test FPT_TUD_EXT.1:2</a>:
@@ -4837,7 +4837,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">236. The evaluator shall confirm that the guidance documentation includes instructions for configuring the inactivity time period for remote administrative session termination.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">237. For each method of remote administration, the evaluator shall perform the following test:</p>
-                <span class="testlist-"><ul><li class="test-"><a id="_t_67" class="defined" href="#_t_67">Test FTA_SSL.3:1</a>:
+                :<span class="testlist-"><ul><li class="test-"><a id="_t_67" class="defined" href="#_t_67">Test FTA_SSL.3:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure several different values for the inactivity time period referenced in the component. For each period configured, the evaluator shall establish a remote interactive session with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall then observe that the session is terminated after the configured time period.</p>
                   </li></ul></span>
@@ -4857,7 +4857,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">239. The evaluator shall confirm that the guidance documentation states how to terminate a remote interactive session (and if applicable the local administrative session).</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">240. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><ul><div class="dependent">The following content should be included if:<ul><li>
+                :<span class="testlist-"><br/><ul><div class="dependent">The following content should be included if:<ul><li>
            the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements 
            
              "Local security admin"
@@ -4922,7 +4922,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">242. The evaluator shall check the guidance documentation to ensure that it describes how to configure the banner message.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">243. The evaluator shall also perform the following test:</p>
-                <span class="testlist-"><p style="text-align: left;"></p><ul><li class="test-"><a id="_t_70" class="defined" href="#_t_70">Test FTA_TAB.1:1</a>:
+                :<span class="testlist-"><p style="text-align: left;"></p><ul><li class="test-"><a id="_t_70" class="defined" href="#_t_70">Test FTA_TAB.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure a notice and consent warning message. The evaluator shall then, for each method of human interactive access specified in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>, establish a session with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall verify that the notice and consent warning message is displayed in each instance.</p>
                   </li></ul></span>
@@ -4971,7 +4971,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">245. The evaluator shall confirm that the guidance documentation contains instructions for establishing the allowed protocols with each authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, and that it contains recovery instructions should a connection be unintentionally broken.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">246. The developer shall provide to the evaluator application layer configuration settings for all secure communication mechanisms specified by the <a href="#FTP_ITC.1">FTP_ITC.1</a> requirement. This information should be sufficiently detailed to allow the evaluator to determine the application layer timeout settings for each cryptographic protocol. There is no expectation that this information must be recorded in any public-facing document or report.</p>
-                <span class="testlist-"><p style="text-align: left;">247. The evaluator shall perform the following tests:</p><br/><br/><br/><ul><li class="test-"><a id="_t_71" class="defined" href="#_t_71">Test FTP_ITC.1:1</a>:
+                :<span class="testlist-"><p style="text-align: left;">247. The evaluator shall perform the following tests:</p><br/><br/><br/><ul><li class="test-"><a id="_t_71" class="defined" href="#_t_71">Test FTP_ITC.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall ensure that communications using each protocol with each authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity is tested during the course of the evaluation, setting up each connection as described in the guidance documentation and ensuring that communication is successful.</p>
                   </li><li class="test-"><a id="_t_72" class="defined" href="#_t_72">Test FTP_ITC.1:2</a>:
@@ -5027,7 +5027,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">252. The evaluator shall confirm that the guidance documentation contains instructions for establishing the remote administrative sessions for each supported method.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><p style="text-align: left;">253. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_75" class="defined" href="#_t_75">Test FTP_TRP.1/Admin:1</a>:
+                :<span class="testlist-"><p style="text-align: left;">253. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_75" class="defined" href="#_t_75">Test FTP_TRP.1/Admin:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluators shall ensure that communications using each specified (in the guidance documentation) remote administration method are tested during the course of the evaluation, setting up the connections as described in the guidance documentation and verifying that communication is successful.</p>
                   </li><li class="test-"><a id="_t_76" class="defined" href="#_t_76">Test FTP_TRP.1/Admin:2</a>:
@@ -5527,7 +5527,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">C.1 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">C.1.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (base PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration.</td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
     international technical communities and approved by multiple schemes.</td></tr>
 <tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408).</td></tr>
@@ -5549,8 +5549,8 @@ The following sections list Common Criteria and technology terms used in this do
 	    or functionality.</td></tr>
 <tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy.</td></tr>
 <tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products.</td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module.</td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs.</td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one base PP and at least one PP-Module.</td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more base PPs.</td></tr>
 <tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE.</td></tr>
 <tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE.</td></tr>
 <tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product.</td></tr>
@@ -5628,7 +5628,7 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_API"><abbr class="dyn-abbr"><a href="#abbr_API">API</a></abbr></span></td><td><span id="long_abbr_API">Application Programming Interface</span></td></tr>
 <tr><td><span class="term" id="abbr_app"><abbr class="dyn-abbr"><a href="#abbr_app">app</a></abbr></span></td><td><span id="long_abbr_app">Application</span></td></tr>
 <tr><td><span class="term" id="abbr_ASLR"><abbr class="dyn-abbr"><a href="#abbr_ASLR">ASLR</a></abbr></span></td><td><span id="long_abbr_ASLR">Address Space Layout Randomization</span></td></tr>
-<tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
+<tr><td><span class="term" id="abbr_base PP" data-plural="base PPs"><abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr></span></td><td><span id="long_abbr_base PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
 <tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
 <tr><td><span class="term" id="abbr_CESG"><abbr class="dyn-abbr"><a href="#abbr_CESG">CESG</a></abbr></span></td><td><span id="long_abbr_CESG">Communications-Electronics Security Group</span></td></tr>
@@ -5714,7 +5714,10 @@ The following sections list Common Criteria and technology terms used in this do
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022.</li>
-          </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">
+          </ul></span></td></tr><tr><td><span id="bibERRv12">[ERR]</span></td><td><span class="description"><a href="https://www.commoncriteriaportal.org/files/ccfiles/CCMB-2025-001-v1_2-Errata_Interpretation_CC_CEM_2022.pdf">
+              Errata and Interpretation for CC:2022 (Release 1) and CEM:2022 (Release 1), Version 1.2</a>, 
+			  CCMB-2025-02-001, 15 October 2025.
+        </span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">
         <a href="http://www.commoncriteriaportal.org/files/ccfiles/CEMV3.1R4.pdf">Common
             Evaluation Methodology for Information Technology Security - Evaluation Methodology</a>,
           CCMB-2012-09-004, Version 3.1, Revision 4, September 2012.

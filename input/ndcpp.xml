@@ -80,9 +80,16 @@
   </RevisionHistory>
   <pp-preferences/>
   <sec:Introduction>
-    <sec:Overview title="Overview"/>
+    <sec:Overview title="Overview">
+      <h:p style="text-align: left;">This document is not an official version of the NDcPP. It was generated using the User Interface of the XML Builder tool to produce a NIAP XML Schema-compliant version of the NDcPP for use in automation tools. The use of this version of the NDcPP should be done in conjunction with the official published version of the NDcPP. Not all content is included in this version. </h:p>
+    </sec:Overview>
     <tech-terms/>
-    <section title="Compliant Targets of Evaluation" id="TOEdescription"/>
+    <section title="Compliant Targets of Evaluation" id="TOEdescription">
+      <h:p style="text-align: left;">See published NDcPP document.</h:p>
+      <sec:TOE_Boundary>
+        <h:p style="text-align: left;">See published NDcPP document.</h:p>
+      </sec:TOE_Boundary>
+    </section>
     <section title="TOE Features" id="sec-features">
       <implements>
         <feature id="nd-feature-1" title="Password-based remote administration">
@@ -110,8 +117,12 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         </feature>
       </implements>
     </section>
-    <section title="PP Overview" id="s-ppoverview">words</section>
-    <section title="TOE Use Cases" id="s-usecases">Words</section>
+    <section title="PP Overview" id="s-ppoverview">
+      <h:p style="text-align: left;">See published NDcPP document.</h:p>
+    </section>
+    <section title="TOE Use Cases" id="s-usecases">
+      <h:p style="text-align: left;">See published NDcPP document.</h:p>
+    </section>
   </sec:Introduction>
   <sec:Conformance_Claims>
     <CClaimsInfo cc-version="cc-2022r1" cc-approach="direct-rationale">
@@ -125,6 +136,10 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         <AP-cc-ref conf="conformant">Functional Package for Transport Layer Security Version 2.1</AP-cc-ref>
         <AP-cc-ref conf="conformant">Functional Package for X.509 Version 1.0</AP-cc-ref>
       </cc-pkg-claim>
+      <cc-claims-addnl-info>
+        <h:p style="text-align: left;">The PP-Modules that are allowed to specify this cPP as a PP-Module base are specified in the 'Allowed-with' PP-Modules list at <h:a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline hover:text-blue-800" href="https://nditc.github.io/AWL/NDcPP_allowed_with_list.html">https://nditc.github.io/AWL/NDcPP_allowed_with_list.html</h:a>. </h:p>
+        <h:p style="text-align: left;">The supporting document, "Evaluation Activities for Network Device cPP" must be used in conjunction with [CEM] when performing evaluations of an ST specifying this Network Device cPP. The supporting document defines the evaluation methods and activities for this cPP and has been developed in accordance with [CC4]. The supporting document can be found at <h:a target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 underline hover:text-blue-800" href="https://github.com/ND-iTC/Documents">https://github.com/ND-iTC/Documents</h:a>.</h:p>
+      </cc-claims-addnl-info>
     </CClaimsInfo>
   </sec:Conformance_Claims>
   <!-- 3.0 Security Problem Definition-->
@@ -3791,20 +3806,72 @@ If ( keylen = 256 )
           <depends on-sel="nd_fpt_stm_ext.1.2_2"/>
           <f-element id="fcs-ntp-ext-1-1">
             <title>The TSF shall use only the following NTP version(s)          <selectables><selectable id="nd_fcs_ntp_ext.1.1_1">NTP v3 (RFC 1305)</selectable><selectable id="nd_fcs_ntp_ext.1.1_2">NTP v4 (RFC 5905)</selectable></selectables>.</title>
-            <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">454. The evaluator shall examine the TSS to ensure it identifies the version of NTP supported, how it is implemented and what approach the TOE uses to ensure the timestamp it receives from an NTP timeserver (or NTP peer) is from an authenticated source and the integrity of the time has been maintained.</h:p>
+                <h:p style="text-align: left;">455. The TOE must support at least one of the methods or may use multiple methods, as specified in the SFR element 1.2. The evaluator shall ensure that each method selected in the ST is described in the TSS, including the version of NTP supported in element 1.1, the message digest algorithms used to verify the authenticity of the timestamp and/or the protocols used to ensure integrity of the timestamp.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">457. The evaluator shall examine the guidance documentation to ensure it provides the Security Administrator instructions as how to configure the version of NTP supported, how to configure multiple NTP servers for the TOE’s time source and how to configure the TOE to use the method(s) that are selected in the ST.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">461. The version of NTP selected in element 1.1 and specified in the ST shall be verified by observing establishment of a connection to an external NTP server known to be using the specified version(s) of NTP. This may be combined with tests of other aspects of FCS_NTP_EXT.1 as described below.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="nd-fcs-ntp-ext-1-2">
             <title>The TSF shall update its system time using          <selectables><selectable id="nd-fcs-ntp-ext-1-2-compsel-1">Authentication using <selectables><selectable id="nd_fcs_ntp_ext.1.2_1">SHA256</selectable><selectable id="nd_fcs_ntp_ext.1.2_2">SHA384</selectable><selectable id="nd_fcs_ntp_ext.1.2_3">SHA512</selectable><selectable id="nd_fcs_ntp_ext.1.2_4">AES-CMAC-128 (RFC 8573)</selectable><selectable id="nd_fcs_ntp_ext.1.2_5">AES-CBC-128</selectable><selectable id="nd_fcs_ntp_ext.1.2_6">AES-CBC-256</selectable></selectables> as the message digest algorithm(s);</selectable><selectable id="nd-fcs-ntp-ext-1-2-compsel-2"> <selectables><selectable id="nd_fcs_ntp_ext.1.2_7">IPsec</selectable><selectable id="nd_fcs_ntp_ext.1.2_8">DTLS as defined in the Functional Package for TLS</selectable></selectables> to provide trusted communication between itself and an NTP time source.</selectable></selectables>.</title>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">456. None.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">458. For each of the secondary selections made in the ST, the evaluator shall examine the guidance document to ensure it instructs the Security Administrator how to configure the TOE to use the algorithms that support the authenticity of the timestamp and/or how to configure the TOE to use the protocols that ensure the integrity of the timestamp. </h:p>
+                <h:p style="text-align: left;">
+                  <h:i>Assurance Activity Note: </h:i>
+                </h:p>
+                <h:p style="text-align: left;">Each primary selection in the SFR contains selections that specify a cryptographic algorithm or cryptographic protocol. For each of these secondary selections made in the ST, the evaluator shall examine the guidance documentation to ensure that the documentation instructs the Security Administrator how to configure the TOE to use the chosen option(s).</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">462. The cryptographic algorithms selected in element 1.2 and specified in the ST will have been specified in an FCS_COP SFR and tested in the accompanying Evaluation Activity for that SFR. Likewise, the cryptographic protocol selected in in element 1.2 and specified in the ST will have been specified in an FCS SFR and tested in the accompanying Evaluation Activity for that SFR.</h:p>
+                <testlist>
+                  <test>
+                    <depends on="nd-fcs-ntp-ext-1-2-compsel-1"/>
+                    <h:p style="text-align: left;">[conditional] If the message digest algorithm is claimed in element 1.2, the evaluator shall configure the TOE and NTP server so the TOE can synchronize time using a claimed message digest algorithm. The evaluator shall modify the response(s) from the NTP server so the response(s) contains a MAC that was generated by a different message digest algorithm and confirm the TOE does not synchronize to this time source. Other than the invalid MAC, the NTP response(s) must be valid (e.g., key ID, key value used, timestamps). </h:p>
+                    <h:p style="text-align: left;">Note: Since the algorithm is not identified in the server response, this tests an incorrect algorithm and an invalid MAC.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">The evaluator shall use a packet sniffer to capture the network traffic between the TOE and the NTP server. The evaluator shall use the captured network traffic, to verify the NTP version, to observe time change of the TOE and uses the TOE’s audit log to determine that the TOE accepted the NTP server’s timestamp update.</h:p>
+                    <h:p style="text-align: left;">The captured traffic is also used to verify that the appropriate message digest algorithm was used to authenticate the time source and/or the appropriate protocol was used to ensure integrity of the timestamp that was transmitted in the NTP packets.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
           </f-element>
           <f-element id="nd-fcs-ntp-ext-1-3">
             <title>
               <h:p style="text-align: left;">The TSF shall not update NTP timestamp from broadcast and/or multicast addresses.</h:p>
             </title>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">456. None.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">459. The evaluator shall examine the guidance documentation to ensure it provides the Security Administrator instructions as how to configure the TOE to not accept broadcast and multicast NTP packets that would result in the timestamp being updated.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">463. The evaluator shall configure NTP server(s) to support periodic time updates to broadcast and multicast addresses. The evaluator shall confirm the TOE is configured to not accept broadcast and multicast NTP packets that would result in the timestamp being updated. The evaluator shall check that the time stamp is not updated after receipt of the broadcast and multicast packets.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
           </f-element>
           <f-element id="nd-fcs-ntp-ext-1-4">
             <title>The TSF shall support configuration of at least three (3) NTP time sources in the Operational Environment.</title>
@@ -3814,6 +3881,26 @@ If ( keylen = 256 )
               </h:p>
               <h:p style="text-align: left;">The TOE has to support configuration of at least three time sources though it is not mandated that the TOE is configured to always use at least three time sources.</h:p>
             </note>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">456. None.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">460. None.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">464. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall confirm the TOE supports configuration of at least three (3) NTP time sources. The evaluator shall configure at least three NTP servers to support periodic time updates to the TOE. The evaluator shall confirm the TOE is configured to accept NTP packets that would result in the timestamp being updated from each of the NTP servers. The evaluator shall check that the time stamp is updated after receipt of the NTP packets. The purpose of this test to verify that the TOE can be configured to synchronize with multiple NTP servers. It is up to the evaluator to determine that the multisource update of the time information is appropriate and consistent with the behaviour prescribed by the RFC 1305 for NTPv3 and RFC 5905 for NTPv4.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: (The intent of this test is to ensure that the TOE would only accept NTP updates from configured NTP Servers.) The evaluator shall confirm that the TOE would not synchronize to other, not explicitly configured time sources by sending an otherwise valid but unsolicited NTP Server response indicating different time from the TOE’s current system time. This rogue time source needs to be configured in a way (e.g., degrade or disable valid and configured NTP servers) that could plausibly result in unsolicited updates becoming a preferred time source if they are not discarded by the TOE. The TOE is not mandated to respond in a detectable way or audit the occurrence of such unsolicited updates. It is up to the evaluator to craft and transmit unsolicited updates in a way that would be consistent with the behaviour of a correctly-functioning NTP server.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
           </f-element>
           <audit-event>
             <audit-event-descr>Configuration of a new time server</audit-event-descr>
@@ -4072,10 +4159,28 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">unsuccessful authentication attempts occur related to <h:i>Administrators attempting to authenticate remotely using a password.</h:i></h:p>
             </title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">465. The evaluator shall examine the TSS to determine that it contains a description, for each supported method for remote administrative actions, of how successive unsuccessful authentication attempts are detected and tracked. The TSS shall also describe the method by which the remote administrator is prevented from successfully logging on to the TOE, and the actions necessary to restore this ability. </h:p>
+                <h:p style="text-align: left;">466. The evaluator shall examine the TSS to confirm that the TOE ensures that authentication failures by remote administrators cannot lead to a situation where no administrator access is available, either permanently or temporarily (e.g., by providing local logon which is not subject to blocking).</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">467. The evaluator shall examine the guidance documentation to ensure that instructions for configuring the number of successive unsuccessful authentication attempts and time period (if implemented) are provided, and that the process of allowing the remote administrator to once again successfully log on is described for each “action” specified (if that option is chosen). If different actions or mechanisms are implemented depending on the secure protocol employed (e.g., TLS vs. SSH), all must be described. </h:p>
+                <h:p style="text-align: left;">468. The evaluator shall examine the guidance documentation to confirm that it describes, and identifies the importance of, any actions that are required in order to ensure that administrator access will always be maintained, even if remote administration is made permanently or temporarily unavailable due to blocking of accounts as a result of FIA_AFL.1.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">469. The evaluator shall perform the following tests for each method by which remote administrators access the TOE (e.g., any passwords entered as part of establishing the connection protocol or the remote administrator application):</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall use the operational guidance to configure the number of successive unsuccessful authentication attempts allowed by the TOE (and, if the time period selection in FIA_AFL.1.2 is included in the ST, then the evaluator shall also use the operational guidance to configure the time period after which access is reenabled). The evaluator shall test that once the authentication attempts limit is reached, authentication attempts with valid credentials are no longer successful.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: After reaching the limit for unsuccessful authentication attempts as in Test 1 above, the evaluator shall proceed as follows</h:p>
+                    <testlist><h:p style="text-align: left;">If the administrator action selection in FIA_AFL.1.2 is included in the ST, then the evaluator shall confirm by testing that following the operational guidance and performing each action specified in the ST to re-enable the remote administrator’s access results in successful access (when using valid credentials for that administrator).</h:p>ebc79928-efe7-4fbf-93c6-3d25ad2a17c2<h:p style="text-align: left;">If the time period selection in FIA_AFL.1.2 is included in the ST, then the evaluator shall wait for just less than the time period configured in Test 1 and show that an authorisation attempt using valid credentials does not result in successful access. The evaluator shall then wait until just after the time period configured in Test 1 and show that an authorisation attempt using valid credentials results in successful access.</h:p></testlist>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="nd-fia-afl-1-2">
@@ -4106,10 +4211,44 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">The second assignment should be configured with the largest minimum password length the Security Administrator can configure.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">473. The evaluator shall check that the TSS:</h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">lists the supported special character(s) for the composition of administrator passwords. </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">to ensure that the minimum_password_length parameter is configurable by a Security Administrator. </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">lists the range of values supported for the minimum_password_length parameter. The listed range shall include the value of 15.</h:p>
+                  </h:li>
+                </h:ol>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">474. The evaluator shall examine the guidance documentation to determine that it: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">identifies the characters that may be used in passwords and provides guidance to security administrators on the composition of strong passwords, and </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">provides instructions on setting the minimum password length and describes the valid minimum password lengths supported.</h:p>
+                  </h:li>
+                </h:ol>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">475. The evaluator shall perform the following tests.</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall compose passwords that meet the requirements in some way. For each password, the evaluator shall verify that the TOE supports the password. While the evaluator is not required (nor is it feasible) to test all possible compositions of passwords, the evaluator shall ensure that all characters, and a minimum length listed in the requirement are supported and justify the subset of those characters chosen for testing.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall compose passwords that do not meet the requirements in some way. For each password, the evaluator shall verify that the TOE does not support the password. While the evaluator is not required (nor is it feasible) to test all possible compositions of passwords, the evaluator shall ensure that the TOE enforces the allowed characters and the minimum length listed in the requirement and justify the subset of those characters chosen for testing.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -4119,6 +4258,24 @@ If ( keylen = 256 )
           <depends on="nd-feature-4"/>
           <f-element id="fia-psk-ext-1-1">
             <title>The TSF shall be able to use pre-shared keys that conform to RFC 8784 for IPsec.</title>
+            <aactivity>
+              <TSS>
+                <h:div>
+                  <depends on="nd_fia_psk_ext.1.2_2"/>
+                  <h:p style="text-align: left;">476. If "generate" is selected, the evaluator shall confirm that this process uses the RBG specified in FCS_RBG.1 and the output matches the size required in FIA_PSK_EXT.1.2.</h:p>
+                </h:div>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per RFC 8784.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">478. The evaluator shall attempt to establish a connection and confirm that the connection requires the selected factors in the PSK to establish the connection in alignment with table 1 from RFC 8784.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
           </f-element>
           <f-element id="nd-fia-psk-ext-1-2">
             <title>The TSF shall be able to        <selectables><selectable id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</selectable><selectable id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via FCS_RBG.1</selectable></selectables>.</title>
@@ -4144,10 +4301,21 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">‘Obscured feedback’ implies the TSF does not produce a visible display of any authentication data entered by an administrator (such as the echoing of a password), although an obscured indication of progress may be provided (such as an asterisk for each character). It also implies that the TSF does not return any information during the authentication process to the administrator that may provide any indication of the authentication data.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">470. None</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">471. The evaluator shall examine the guidance documentation to determine that any necessary preparatory steps to ensure authentication data is not revealed while entering for each local login allowed.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">472. The evaluator shall perform the following test for each method of local login allowed:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall locally authenticate to the TOE. While making this attempt, the evaluator shall verify that at most obscured feedback is provided while entering the authentication information.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -4267,10 +4435,27 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">FMT_MOF.1/AutoUpdate is only applicable and should be included if the TOE supports automatic checking for updates and/or automatic updates and allows them to be enabled and disabled. Enable and disable of automatic checking for updates and/or automatic updates is restricted to Security Administrators. The option “automatic update” may only be selected if digital signatures are used to validate the trusted update.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">492. For distributed TOEs, see Section 2.4.1.1. </h:p>
+                <h:p style="text-align: left;">493. For non-distributed TOEs, the evaluator shall ensure the TSS describes how checking for automatic updates or automated updates (whichever is supported by the TOE) are performed to include required configuration settings to enable and disable automated checking or automated updates.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">494. For distributed TOEs, see Section 2.4.1.2. </h:p>
+                <h:p style="text-align: left;">495. For non-distributed TOEs, the evaluator shall also ensure the TSS describes how checking for automatic updates or automated updates (whichever is supported by the TOE) are performed to include required configuration settings to enable and disable automated checking or automated updates (whichever is supported by the TOE).</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">496. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall try to enable and disable automatic checking for updates or automatic updates (whichever is supported by the TOE) without prior authentication as Security Administrator (by authenticating as a user with no administrator privileges or without user authentication). The attempt to enable/disable automatic checking for updates should fail. = When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to enable/disable automatic checking for updates can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall try to enable and disable automatic checking for updates or automatic updates (whichever is supported by the TOE) with prior authentication as Security Administrator. The attempt to enable/disable automatic checking for updates should be successful.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -4297,10 +4482,83 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">The first selection for ‘determine the behaviour of’ and ‘modify the behaviour of’ should be done as appropriate. It might be necessary to have different selections for the first selection depending on the second selection (e.g., “handling of audit data” might require “determine the behaviour of” and “modify the behaviour of” for the first selection on the one hand and “audit functionality when Local Audit Storage Space is full” might require “modify the behaviour of” only). In that case FMT_MOF.1/Functions should be iterated with increasing number appended (i.e., FMT_MOF.1/Functions1, FMT_MOF.1/Functions2, etc.).</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">497. For distributed TOEs, see Section 2.4.1.1. </h:p>
+                <h:p style="text-align: left;">498. For non-distributed TOEs, the evaluator shall ensure that the TSS, for each administrative function identified, details how the Security Administrator determines or modifies the behaviour of (whichever is supported by the TOE) transmitting audit data to an external IT entity, handling of audit data, and audit functionality when Local Audit Storage Space is full (whichever is supported by the TOE).</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">499. For distributed TOEs, see Section 2.4.1.2. </h:p>
+                <h:p style="text-align: left;">500. For non-distributed TOEs, the evaluator shall also ensure the Guidance Documentation describes how the Security Administrator determines or modifies the behaviour of (whichever is supported by the TOE) transmitting audit data to an external IT entity, handling of audit data, and audit functionality when Local Audit Storage Space is full (whichever is supported by the TOE) are performed to include required configuration settings.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <depends on="nd_fmt_mof.1.1_FUNCTIONS_3"/>
+                  <depends on="nd_fmt_mof.1.1_FUNCTIONS_2"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If ‘transmission of audit data to external IT entity’ is selected from the second selection together with 'modify the behaviour of' in the first selection</h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">501. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall try to modify all security related parameters for configuration of the transmission protocol for transmission of audit data to an external IT entity without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). Attempts to modify parameters without prior authentication must fail.</h:p>
+                    <h:p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to modify the security related parameters can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall try to modify all security related parameters for configuration of the transmission protocol for transmission of audit data to an external IT entity with prior authentication as Security Administrator. The effects of the modifications should be confirmed.</h:p>
+                    <h:p style="text-align: left;">The evaluator does not have to test all possible values of the security related parameters for configuration of the transmission protocol for transmission of audit data to an external IT entity but at least one allowed value per parameter.</h:p>
+                  </test>
+                </testlist>
+                <testlist>
+                  <depends on="nd_fmt_mof.1.1_FUNCTIONS_4"/>
+                  <depends on="nd_fmt_mof.1.1_FUNCTIONS_2"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If 'handling of audit data' is selected from the second selection together with 'modify the behaviour of' in the first selection</h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">502. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall try to modify all security related parameters for configuration of the handling of audit data without prior authentication as Security Administrator (by authentication as a user with no administrator privileges, or without user authentication at all). Attempts to modify parameters without prior authentication must fail. </h:p>
+                    <h:p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator. The term ‘handling of audit data’ refers to the different options for selection and assignments in SFRs FAU_STG_EXT.1.4, FAU_STG_EXT.1.5 and FAU_STG_EXT.2.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall try to modify all security related parameters for configuration of the handling of audit data with prior authentication as Security Administrator. The effects of the modifications shall be confirmed. The term ‘handling of audit data’ refers to the different options for selection and assignments in SFRs FAU_STG_EXT.1.4, FAU_STG_EXT.1.5 and FAU_STG_EXT.2. </h:p>
+                    <h:p style="text-align: left;">The evaluator does not necessarily have to test all possible values of the security related parameters for configuration of the handling of audit data, but at least one allowed value per parameter must be tested.</h:p>
+                  </test>
+                </testlist>
+                <testlist>
+                  <depends on="nd_fmt_mof.1.1_FUNCTIONS_5"/>
+                  <depends on="nd_fmt_mof.1.1_FUNCTIONS_2"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If 'audit functionality when Local Audit Storage Space is full' is selected from the second selection together with 'modify the behaviour of' in the first selection </h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">503. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall try to modify the behaviour when Local Audit Storage Space is full without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). This attempt should fail. </h:p>
+                    <h:p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall try to modify the behaviour when Local Audit Storage Space is full with prior authentication as Security Administrator. This attempt should be successful. The effect of the change shall be verified. </h:p>
+                    <h:p style="text-align: left;">The evaluator does not necessarily have to test all possible values for the behaviour when Local Audit Storage Space is full but at least one change between allowed values for the behaviour must be tested.</h:p>
+                  </test>
+                </testlist>
+                <testlist>
+                  <depends on="nd_fmt_mof.1.1_FUNCTIONS_1"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If in the first selection 'determine the behaviour of' has been chosen together with for any of the options in the second selection </h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">504. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall try to determine the behaviour of all options chosen from the second selection without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). This can be done in one test or in separate tests. The attempt(s) to determine the behaviour of the selected functions without administrator authentication shall fail.</h:p>
+                    <h:p style="text-align: left;">When there is an implementation where other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall try to determine the behaviour of all options chosen from the second selection with prior authentication as Security Administrator. This can be done in one test or in separate tests. The attempt(s) to determine the behaviour of the selected functions with Security Administrator authentication shall be successful.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -4359,10 +4617,28 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">With respect to FAU_GEN.1.1, FMT_SMF.1 and FMT_MOF.1/Services the term ‘services’ refers to trusted path and trusted channel communications, on demand self-tests, trusted update and Administrator sessions (that exist under the trusted path) (e.g., netconf).</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">487. For distributed TOEs, see Section 2.4.1.1. </h:p>
+                <h:p style="text-align: left;">488. For non-distributed TOEs, the evaluator shall verify that the TSS lists the services that the Security Administrator is able to start and stop and how that operation is performed.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">489. For distributed TOEs, see Section 2.4.1.2. </h:p>
+                <h:p style="text-align: left;">490. For non-distributed TOEs, the evaluator shall also verify that the Guidance Documentation describes how the TSS lists the services that the Security Administrator is able to start and stop and how that operation is performed.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">491. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall try to enable and disable at least one of the services as defined in the Application Notes for FAU_GEN.1.1 (whichever is supported by the TOE) without prior authentication as Security Administrator (either by authenticating as a user with no administrator privileges, if possible, or without prior authentication at all). The attempt to enable/disable this service/these services should fail.</h:p>
+                    <h:p style="text-align: left;">When there is an implementation where no other users other than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to enable/disable this service/these services can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall try to enable and disable at least one of the services as defined in the Application Notes for FAU_GEN.1.1 (whichever is supported by the TOE) with prior authentication as Security Administrator. The attempt to enable/disable this service/these services should be successful.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -4410,10 +4686,28 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">FMT_MTD.1.1/CryptoKeys restricts management of cryptographic keys to Security Administrators. It should be included if cryptographic keys can be managed (e.g., modified, deleted or generated/imported) by the Security Administrator. The identifier ‘CryptoKeys’ has been added here to separate this iteration of FMT_MTD.1 from the mandatory iteration of FMT_MTD.1 defined in Section 6.6.2.1 (FMT_MTD.1/CoreData).</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">505. For distributed TOEs, see Section 2.4.1.1. </h:p>
+                <h:p style="text-align: left;">506. For non-distributed TOEs, the evaluator shall ensure the TSS lists the keys the Security Administrator is able to manage to include the options available (e.g., generating keys, importing keys, modifying keys or deleting keys) and names the operations that are performed.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">507. For distributed TOEs, see Section 2.4.1.2. </h:p>
+                <h:p style="text-align: left;">508. For non-distributed TOEs, the evaluator shall also ensure the Guidance Documentation describes how the operations are performed on the keys the Security Administrator is able to manage.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">509. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall try to perform at least one of the related actions (modify, delete, generate/import) without prior authentication as Security Administrator (either by authentication as a non-administrative user, if supported, or without authentication at all). Attempts to perform related actions without prior authentication should fail.</h:p>
+                    <h:p style="text-align: left;">When there is an implementation where other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall try to perform at least one of the related actions with prior authentication as Security Administrator. This attempt should be successful.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -4738,10 +5032,16 @@ If ( keylen = 256 )
           <f-element id="fpt-apw-ext-1-1">
             <title>The TSF shall store administrative passwords in non-plaintext form.</title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">479. The evaluator shall examine the TSS to determine that it details all authentication data that are subject to this requirement, and the method used to obscure the plaintext password data when stored. The TSS shall also detail passwords are stored in such a way that they are unable to be viewed through an interface designed specifically for that purpose, as outlined in the application note.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">480. None</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">481. None</h:p>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="nd-fpt-apw-ext-1-2">
@@ -5052,10 +5352,31 @@ If ( keylen = 256 )
           <f-element id="fpt-tud-ext-2-1">
             <title> The TSF shall check the validity of the code signing certificate before installing each update.</title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">482. The evaluator shall verify that the TSS contains a description of how the certificates are contained on the device. The evaluator also ensures that the TSS (or guidance documentation) describes how the certificates are installed/updated/selected, if necessary.</h:p>
+                <h:p style="text-align: left;">483. The evaluator shall verify that the TSS describes how the TOE reacts if X.509v3 certificates are used for trusted updates and the Security Administrator attempts to perform the trusted update using an expired certificate.</h:p>
+                <h:p style="text-align: left;">484. The TSS shall describe the point at which revocation checking is performed and describe whether the Security Administrator can manually provide revocation information. It is expected that revocation checking is performed when a certificate is used when performing trusted updates. It is not sufficient to verify the status of a X.509v3 certificate only when it is loaded onto the device.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">485. The evaluator shall verify that the guidance documentation describes how the TOE reacts if X.509v3 certificates are used for trusted updates and the administrator attempts to perform the trusted update using an expired certificate. The evaluator shall verify any Security Administrator actions related to revocation checking, both accepting or rejecting certificates and manually providing revocation information. The description shall correspond to the description in the TSS.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">486. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall verify that the update mechanism includes a certificate validation according to FIA_X509_EXT.1 (in the Functional Package for X.509) and a check for the Code Signing purpose in the extendedKeyUsage.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall digitally sign the update with an invalid certificate and verify that update installation fails. The evaluator shall digitally sign the application with a certificate that does not have the Code Signing purpose and verify that application installation fails. The evaluator shall repeat the test using a valid certificate and a certificate that contains the Code Signing purpose and verify that the application installation succeeds. The evaluator shall use a previously valid but expired certificate and verifies that the TOE reacts as described in the TSS and the guidance documentation. Testing for this element is performed in conjunction with the assurance activities for FPT_TUD_EXT.1.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 3: The evaluator shall demonstrate that checking the validity of a certificate is performed at the time a certificate is used when performing trusted updates. It is not sufficient to verify the status of a X.509v3 certificate only when it is loaded onto the device.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="nd-fpt-tud-ext-2-2">
@@ -5163,10 +5484,21 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">An interactive session governed by this SFR is a session in which an authenticated state is achieved and then preserved across multiple commands. By contrast, if authentication accompanies each individual command (without preservation of the same authenticated state) then this is not considered an interactive session.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">510. The evaluator shall examine the TSS to determine that it details whether local administrative session locking or termination is supported and the related inactivity time period settings.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">511. The evaluator shall confirm that the guidance documentation states whether local administrative session locking or termination is supported and instructions for configuring the inactivity time period.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">512. The evaluator shall perform the following test:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure several different values for the inactivity time period referenced in the component. For each period configured, the evaluator shall establish a local interactive session with the TOE. The evaluator shall then verify that the session is either locked or terminated after the configured time period. If locking was selected from the component, the evaluator shall then verify that reauthentication is needed when trying to unlock the session.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event>

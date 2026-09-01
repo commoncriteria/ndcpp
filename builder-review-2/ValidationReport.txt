@@ -1,1 +1,3 @@
-/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:31:11: fatal: The string "--" is not permitted within comments.
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:139:30: error: multiple definitions of "sar-content" without "combine" attribute
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:318:29: error: multiple definitions of "a-elements" without "combine" attribute
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:357:39: error: multiple definitions of "a-component-pattern" without "combine" attribute

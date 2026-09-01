@@ -643,12 +643,14 @@ function showTarget(id){
 <tr><td>3.0</td><td>2023-04-06</td><td>Incorporated comments received. Released for use</td></tr>
 <tr><td>3.0e</td><td>2023-12-06</td><td>Released for use</td></tr>
 <tr><td>4.0</td><td>2025-11-25</td><td>Released for use</td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#sec-features" style="text-indent:10px">1.4<span>TOE Features</span></a><a href="#nd-feature-1" style="text-indent:20px">1.4.1<span>Password-based remote administration</span></a><a href="#nd-feature-2" style="text-indent:20px">1.4.2<span>Password-based local authentication</span></a><a href="#nd-feature-3" style="text-indent:20px">1.4.3<span>Password-based authentication</span></a><a href="#nd-feature-4" style="text-indent:20px">1.4.4<span>Pre-shared keys for IPsec</span></a><a href="#nd-feature-5" style="text-indent:20px">1.4.5<span>Admin management of crypto keys</span></a><a href="#nd-feature-6" style="text-indent:20px">1.4.6<span>Local security admin</span></a><a href="#nd-feature-7" style="text-indent:20px">1.4.7<span>Distributed TOE</span></a><a href="#s-ppoverview" style="text-indent:10px">1.5<span>PP Overview</span></a><a href="#s-usecases" style="text-indent:10px">1.6<span>TOE Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.2<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#ss-audit-table" style="text-indent:20px">5.1.1<span>Auditable Events for Mandatory SFRs</span></a><a href="#fau" style="text-indent:20px">5.1.2<span>Security Audit (FAU)</span></a><a href="#fcs" style="text-indent:20px">5.1.3<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">5.1.4<span>Identification and Authentication (FIA)</span></a><a href="#fmt" style="text-indent:20px">5.1.5<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.6<span>Protection of the TSF (FPT)</span></a><a href="#fta" style="text-indent:20px">5.1.7<span>TOE Access (FTA)</span></a><a href="#ftp_itc" style="text-indent:20px">5.1.8<span>Trusted Channel (FTP_ITC)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.9<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#adv" style="text-indent:20px">5.2.1<span>Class ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.2<span>Class AGD: Guidance Documents</span></a><a href="#alc" style="text-indent:20px">5.2.3<span>Class ALC: Life-cycle Support</span></a><a href="#ase" style="text-indent:20px">5.2.4<span>Class ASE: ST Evaluation</span></a><a href="#ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#Overview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOE_Boundary" style="text-indent:20px">1.3.1<span>TOE Boundary</span></a><a href="#sec-features" style="text-indent:10px">1.4<span>TOE Features</span></a><a href="#nd-feature-1" style="text-indent:20px">1.4.1<span>Password-based remote administration</span></a><a href="#nd-feature-2" style="text-indent:20px">1.4.2<span>Password-based local authentication</span></a><a href="#nd-feature-3" style="text-indent:20px">1.4.3<span>Password-based authentication</span></a><a href="#nd-feature-4" style="text-indent:20px">1.4.4<span>Pre-shared keys for IPsec</span></a><a href="#nd-feature-5" style="text-indent:20px">1.4.5<span>Admin management of crypto keys</span></a><a href="#nd-feature-6" style="text-indent:20px">1.4.6<span>Local security admin</span></a><a href="#nd-feature-7" style="text-indent:20px">1.4.7<span>Distributed TOE</span></a><a href="#s-ppoverview" style="text-indent:10px">1.5<span>PP Overview</span></a><a href="#s-usecases" style="text-indent:10px">1.6<span>TOE Use Cases</span></a><a href="#Conformance_Claims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Description" style="text-indent:0px">3<span>Security Problem Description</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#SecurityObjectivesTOEorEnvironment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#" style="text-indent:10px">4.2<span>Security Objectives Rationale</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#SFRs" style="text-indent:10px">5.1<span>Security Functional Requirements</span></a><a href="#ss-audit-table" style="text-indent:20px">5.1.1<span>Auditable Events for Mandatory SFRs</span></a><a href="#fau" style="text-indent:20px">5.1.2<span>Security Audit (FAU)</span></a><a href="#fcs" style="text-indent:20px">5.1.3<span>Cryptographic Support (FCS)</span></a><a href="#fia" style="text-indent:20px">5.1.4<span>Identification and Authentication (FIA)</span></a><a href="#fmt" style="text-indent:20px">5.1.5<span>Security Management (FMT)</span></a><a href="#fpt" style="text-indent:20px">5.1.6<span>Protection of the TSF (FPT)</span></a><a href="#fta" style="text-indent:20px">5.1.7<span>TOE Access (FTA)</span></a><a href="#ftp_itc" style="text-indent:20px">5.1.8<span>Trusted Channel (FTP_ITC)</span></a><a href="#obj-req-map" style="text-indent:20px">5.1.9<span>TOE Security Functional Requirements Rationale</span></a><a href="#SARs" style="text-indent:10px">5.2<span>Security Assurance Requirements</span></a><a href="#adv" style="text-indent:20px">5.2.1<span>Class ADV: Development</span></a><a href="#agd" style="text-indent:20px">5.2.2<span>Class AGD: Guidance Documents</span></a><a href="#alc" style="text-indent:20px">5.2.3<span>Class ALC: Life-cycle Support</span></a><a href="#ase" style="text-indent:20px">5.2.4<span>Class ASE: ST Evaluation</span></a><a href="#ate" style="text-indent:20px">5.2.5<span>Class ATE: Tests</span></a><a href="#ava" style="text-indent:20px">5.2.6<span>Class AVA: Vulnerability Assessment</span></a><a href="#opt-app" style="text-indent:0px">Appendix A - <span>Optional Requirements</span></a><a href="#optional-reqs" style="text-indent:10px">A.1<span>Strictly Optional  Requirements
     </span></a><a href="#alc-optional" style="text-indent:20px">A.1.1<span>Class ALC: Life-cycle Support</span></a><a href="#fau-optional" style="text-indent:20px">A.1.2<span>Security Audit (FAU)</span></a><a href="#fco-optional" style="text-indent:20px">A.1.3<span>Communication (FCO)</span></a><a href="#fcs-optional" style="text-indent:20px">A.1.4<span>Cryptographic Support (FCS)</span></a><a href="#fpt-optional" style="text-indent:20px">A.1.5<span>Protection of the TSF (FPT)</span></a><a href="#ftp_itc-optional" style="text-indent:20px">A.1.6<span>Trusted Channel (FTP_ITC)</span></a><a href="#objective-reqs" style="text-indent:10px">A.2<span>Objective  Requirements
     </span></a><a href="#feat-based-reqs" style="text-indent:10px">A.3<span>Implementation-dependent  Requirements
     </span></a><a href="#fia-feat-based" style="text-indent:20px">A.3.1<span>Identification and Authentication (FIA)</span></a><a href="#fmt-feat-based" style="text-indent:20px">A.3.2<span>Security Management (FMT)</span></a><a href="#fpt-feat-based" style="text-indent:20px">A.3.3<span>Protection of the TSF (FPT)</span></a><a href="#fta-feat-based" style="text-indent:20px">A.3.4<span>TOE Access (FTA)</span></a><a href="#sel-based-reqs" style="text-indent:0px">Appendix B - <span>Selection-based  Requirements
     </span></a><a href="#fau-sel-based" style="text-indent:10px">B.1<span>Security Audit (FAU)</span></a><a href="#fcs-sel-based" style="text-indent:10px">B.2<span>Cryptographic Support (FCS)</span></a><a href="#fmt-sel-based" style="text-indent:10px">B.3<span>Security Management (FMT)</span></a><a href="#fpt-sel-based" style="text-indent:10px">B.4<span>Protection of the TSF (FPT)</span></a><a href="#satisfiedreqs" style="text-indent:0px">Appendix C - <span>Entropy Documentation and Assessment</span></a><a href="#a-glossary" style="text-indent:0px">Appendix D - <span>Glossary</span></a><a href="#glossary" style="text-indent:10px">D.1<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">D.1.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">D.1.2<span>Technical Terms</span></a><a href="#acronyms" style="text-indent:0px">Appendix E - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix F - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="Overview">1.1 Overview</h2>
+      <p style="text-align: left;">This document is not an official version of the NDcPP. It was generated using the User Interface of the XML Builder tool to produce a <abbr class="dyn-abbr"><a href="#abbr_NIAP">NIAP</a></abbr> XML Schema-compliant version of the NDcPP for use in automation tools. The use of this version of the NDcPP should be done in conjunction with the official published version of the NDcPP. Not all content is included in this version. </p>
+    
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>
@@ -684,6 +686,11 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><div id="TOE_Summary_Specification">TOE Summary Specification (TSS)</div></td><td>A description of how a TOE satisfies the SFRs in an ST.</td></tr>
 </table><h3 id="tech-terms" class="indexable" data-level="3">1.2.2 Technical Terms</h3><table style="width: 100%"></table></div>
     <h2 class="indexable" data-level="2" id="TOEdescription">1.3 Compliant Targets of Evaluation</h2>
+      <p style="text-align: left;">See published NDcPP document.</p>
+      <h3 class="indexable" data-level="3" id="TOE_Boundary">1.3.1 TOE Boundary</h3>
+        <p style="text-align: left;">See published NDcPP document.</p>
+      
+    
     <h2 class="indexable" data-level="2" id="sec-features">1.4 TOE Features</h2>
       <h3 class="indexable" data-level="3" id="nd-feature-1">1.4.1 Password-based remote administration</h3><span class="description">If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> provides remote administration using a password-based authentication mechanism, certain <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> must be included.</span><br/><p>
 	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
@@ -703,8 +710,12 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
             <ul></ul></p>
     
-    <h2 class="indexable" data-level="2" id="s-ppoverview">1.5 PP Overview</h2>words
-    <h2 class="indexable" data-level="2" id="s-usecases">1.6 TOE Use Cases</h2>Words
+    <h2 class="indexable" data-level="2" id="s-ppoverview">1.5 PP Overview</h2>
+      <p style="text-align: left;">See published NDcPP document.</p>
+    
+    <h2 class="indexable" data-level="2" id="s-usecases">1.6 TOE Use Cases</h2>
+      <p style="text-align: left;">See published NDcPP document.</p>
+    
   <h1 class="indexable" data-level="1" id="Conformance_Claims">2 Conformance Claims</h1>
     <dl><dt>Conformance Statement</dt><p></p><dd>An <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> must claim exact conformance 
 		 to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.</dd><p></p><dd>The evaluation methods used for evaluating the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> are a combination of the workunits 
@@ -734,7 +745,10 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
 		packages may include any non-mandatory <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> that are appropriate to claim based on the 
 		capabilities of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> and on any triggers for their inclusion based inherently on the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> 
 		selections made. 
-	</dd></dl>
+	</dd><dt>Additional Information</dt><p></p><dd>
+        The <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules that are allowed to specify this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> as a <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> base are specified in the 'Allowed-with' <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules list at https://nditc.github.io/AWL/NDcPP_allowed_with_list.html. 
+        The supporting document, "Evaluation Activities for Network Device <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>" must be used in conjunction with [<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>] when performing evaluations of an <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> specifying this Network Device <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr>. The supporting document defines the evaluation methods and activities for this <abbr class="dyn-abbr"><a href="#abbr_cPP">cPP</a></abbr> and has been developed in accordance with [CC4]. The supporting document can be found at https://github.com/ND-iTC/Documents.
+      </dd></dl>
   <h1 class="indexable" data-level="1" id="Security_Problem_Description">3 Security Problem Description</h1>
     <p>A Network Device has a network infrastructure role that it is designed to provide. In doing so,
 	the Network Device communicates with other Network Devices and other network entities (i.e.
@@ -2722,16 +2736,16 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">181. The evaluator shall examine the guidance documentation to determine that any necessary preparatory steps (e.g., establishing credential material such as pre- shared keys, tunnels, certificates, etc.) to logging in are described. For each supported login method, the evaluator shall ensure the guidance documentation provides clear instructions for successfully logging on. If configuration is necessary to ensure the services provided before login are limited, the evaluator shall determine that the guidance documentation provides sufficient instruction on limiting the allowed services.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">182. The evaluator shall perform the following tests for each method by which administrators access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (local and remote), as well as for each type of credential supported by the login method:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_94" class="defined" href="#_t_94">Test FIA_UIA_EXT.1:1</a>:
+                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_106" class="defined" href="#_t_106">Test FIA_UIA_EXT.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall use the guidance documentation to configure the appropriate credential supported for the login method. For all combinations of supported credentials and login methods, the evaluator shall show that providing correct I&amp;A information results in the ability to access the system, while providing incorrect information results in denial of access.</p>
-                  </li><li class="test-"><a id="_t_95" class="defined" href="#_t_95">Test FIA_UIA_EXT.1:2</a>:
+                  </li><li class="test-"><a id="_t_107" class="defined" href="#_t_107">Test FIA_UIA_EXT.1:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall configure the services allowed (if any) according to the guidance documentation, and then determine the services available to an external remote entity. The evaluator shall determine that the list of services available is limited to those specified in the requirement.</p>
-                  </li><li class="test-"><a id="_t_96" class="defined" href="#_t_96">Test FIA_UIA_EXT.1:3</a>:
+                  </li><li class="test-"><a id="_t_108" class="defined" href="#_t_108">Test FIA_UIA_EXT.1:3</a>:
       
                     <p style="text-align: left;">Test 3: For local access, the evaluator shall determine what services are available to a local administrator prior to logging in, and make sure this list is consistent with the requirement.</p>
-                  </li><li class="test-"><a id="_t_97" class="defined" href="#_t_97">Test FIA_UIA_EXT.1:4</a>:
+                  </li><li class="test-"><a id="_t_109" class="defined" href="#_t_109">Test FIA_UIA_EXT.1:4</a>:
       
                     <p style="text-align: left;">Test 4: For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, where not all <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components support the authentication of Security Administrators according to <a href="#FIA_UIA_EXT.1">FIA_UIA_EXT.1</a>, the evaluator shall test that the components authenticate Security Administrators as described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</p>
                   </li></ul></span>
@@ -2784,10 +2798,10 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">188. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the guidance documentation shall describe all steps for how to update all <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components. This shall contain a description of the order in which components need to be updated if the order is relevant to the update process. The guidance documentation shall also provide warnings regarding functions of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components and the overall <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> that may cease to operate during the update (if applicable).</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">189. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_98" class="defined" href="#_t_98">Test FMT_MOF.1/ManualUpdate:1</a>:
+                <span class="testlist-"><br/><ul><li class="test-"><a id="_t_120" class="defined" href="#_t_120">Test FMT_MOF.1/ManualUpdate:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall try to perform the update using a legitimate update image without prior authentication as Security Administrator (either by authentication as a user with no administrator privileges or without user authentication at all – depending on the configuration of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>). The attempt to update the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall fail.</p>
-                  </li><li class="test-"><a id="_t_99" class="defined" href="#_t_99">Test FMT_MOF.1/ManualUpdate:2</a>:
+                  </li><li class="test-"><a id="_t_121" class="defined" href="#_t_121">Test FMT_MOF.1/ManualUpdate:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall try to perform the update with prior authentication as Security Administrator using a legitimate update image. This attempt should be successful. This test case is covered by Test 1 for <a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a>.</p>
                   </li></ul></span>
@@ -3246,13 +3260,13 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">218. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall ensure that the guidance documentation describes how to determine from an error message returned which <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> component has failed the self-test.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">219. It is expected that at least the following tests are performed:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_106" class="defined" href="#_t_106">Test FPT_TST_EXT.1:1</a>:
+                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_132" class="defined" href="#_t_132">Test FPT_TST_EXT.1:1</a>:
       
                     <p style="text-align: left;">Verification of the integrity of the firmware and executable software of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
-                  </li><li class="test-"><a id="_t_107" class="defined" href="#_t_107">Test FPT_TST_EXT.1:2</a>:
+                  </li><li class="test-"><a id="_t_133" class="defined" href="#_t_133">Test FPT_TST_EXT.1:2</a>:
       
                     <p style="text-align: left;">Verification of the correct operation of the cryptographic functions necessary to fulfil any of the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p>
-                  </li><li class="test-"><a id="_t_108" class="defined" href="#_t_108">Test FPT_TST_EXT.1:3</a>:
+                  </li><li class="test-"><a id="_t_134" class="defined" href="#_t_134">Test FPT_TST_EXT.1:3</a>:
       
                     <p style="text-align: left;">220. Although formal compliance is not mandated, the self-tests performed should aim for a level of confidence comparable to: </p>
                     <p style="text-align: left;">a. [<abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 140-2], Section 4.9.1, Software/firmware integrity test for the verification of the integrity of the firmware and executable software. Note that the testing is not restricted to the cryptographic functions of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
@@ -3332,17 +3346,17 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 </div></div></div>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">232. The evaluator shall perform the following tests:</p>
-                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_110" class="defined" href="#_t_110">Test FPT_TUD_EXT.1:1</a>:
+                <span class="testlist-"><br/><br/><br/><ul><li class="test-"><a id="_t_136" class="defined" href="#_t_136">Test FPT_TUD_EXT.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall perform the version verification activity to determine the current version of the product. If a trusted update can be installed on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> with a delayed activation, the evaluator shall also query the most recently installed version (for this test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> shall be in a state where these two versions match). The evaluator will obtain a legitimate update using procedures described in the guidance documentation and verify that it has been successfully installed on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. For some <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> loading the update onto the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and activation of the update are separate steps (‘activation’ could be performed e.g., by a distinct activation step or by rebooting the device). In that case, the evaluator shall verify after loading the update onto the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> but before activation of the update that the current version of the product did not change but the most recently installed version has changed to the new product version. After the update, the evaluator shall perform the version verification activity again to verify the version correctly corresponds to that of the update and that current version of the product and most recently installed version match again.</p>
-                  </li><li class="test-"><a id="_t_111" class="defined" href="#_t_111">Test FPT_TUD_EXT.1:2</a>:
+                  </li><li class="test-"><a id="_t_137" class="defined" href="#_t_137">Test FPT_TUD_EXT.1:2</a>:
       
                     <p style="text-align: left;">Test 2: If the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself verifies a digital signature in order to authorise the installation of an image to update the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following test shall be performed (otherwise the test shall be omitted). The evaluator shall first confirm that no updates are pending and then perform the version verification activity to determine the current version of the product, verifying that it is different from the version claimed in the update(s) to be used in this test. The evaluator shall obtain or produce illegitimate updates as defined below and attempt to install them on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> rejects all of the illegitimate updates. The evaluator shall perform this test using all of the following forms of illegitimate updates: </p>
                     <p style="text-align: left;">i. A modified version (e.g., using a hex editor) of a legitimately signed update </p>
                     <p style="text-align: left;">ii. An image that has not been signed </p>
                     <p style="text-align: left;">iii. An otherwise valid image with a properly formed signature that was signed by an unknown key. The purpose of this test is to verify the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> would only accept images signed by an explicitly trusted key (or a key associated with a trusted certificate). </p>
                     <p style="text-align: left;">iv. The handling of version information of the most recently installed version might differ between different <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> depending on the point in time when an attempted update is rejected. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> handles the most recently installed version information for that case as described in the guidance documentation. After the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> has rejected the update, the evaluator shall verify that both the current version and most recently installed version reflect the same version information as prior to the update attempt.</p>
-                  </li><li class="test-"><a id="_t_112" class="defined" href="#_t_112">Test FPT_TUD_EXT.1:3</a>:
+                  </li><li class="test-"><a id="_t_138" class="defined" href="#_t_138">Test FPT_TUD_EXT.1:3</a>:
       
                     <p style="text-align: left;">233. The evaluator shall perform Test 1 and Test 2 for all supported methods (manual updates, automatic checking for updates, automatic updates).</p>
                   </li><div class="dependent">The following content should be included if:<ul><li>
@@ -3383,7 +3397,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">236. The evaluator shall confirm that the guidance documentation includes instructions for configuring the inactivity time period for remote administrative session termination.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">237. For each method of remote administration, the evaluator shall perform the following test:</p>
-                <span class="testlist-"><ul><li class="test-"><a id="_t_114" class="defined" href="#_t_114">Test FTA_SSL.3:1</a>:
+                <span class="testlist-"><ul><li class="test-"><a id="_t_143" class="defined" href="#_t_143">Test FTA_SSL.3:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure several different values for the inactivity time period referenced in the component. For each period configured, the evaluator shall establish a remote interactive session with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall then observe that the session is terminated after the configured time period.</p>
                   </li></ul></span>
@@ -3445,7 +3459,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">242. The evaluator shall check the guidance documentation to ensure that it describes how to configure the banner message.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">243. The evaluator shall also perform the following test:</p>
-                <span class="testlist-"><p style="text-align: left;"></p><ul><li class="test-"><a id="_t_117" class="defined" href="#_t_117">Test FTA_TAB.1:1</a>:
+                <span class="testlist-"><p style="text-align: left;"></p><ul><li class="test-"><a id="_t_147" class="defined" href="#_t_147">Test FTA_TAB.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure a notice and consent warning message. The evaluator shall then, for each method of human interactive access specified in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>, establish a session with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall verify that the notice and consent warning message is displayed in each instance.</p>
                   </li></ul></span>
@@ -3494,16 +3508,16 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                 <p style="text-align: left;">245. The evaluator shall confirm that the guidance documentation contains instructions for establishing the allowed protocols with each authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, and that it contains recovery instructions should a connection be unintentionally broken.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">246. The developer shall provide to the evaluator application layer configuration settings for all secure communication mechanisms specified by the <a href="#FTP_ITC.1">FTP_ITC.1</a> requirement. This information should be sufficiently detailed to allow the evaluator to determine the application layer timeout settings for each cryptographic protocol. There is no expectation that this information must be recorded in any public-facing document or report.</p>
-                <span class="testlist-"><p style="text-align: left;">247. The evaluator shall perform the following tests:</p><br/><br/><br/><ul><li class="test-"><a id="_t_118" class="defined" href="#_t_118">Test FTP_ITC.1:1</a>:
+                <span class="testlist-"><p style="text-align: left;">247. The evaluator shall perform the following tests:</p><br/><br/><br/><ul><li class="test-"><a id="_t_148" class="defined" href="#_t_148">Test FTP_ITC.1:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall ensure that communications using each protocol with each authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity is tested during the course of the evaluation, setting up each connection as described in the guidance documentation and ensuring that communication is successful.</p>
-                  </li><li class="test-"><a id="_t_119" class="defined" href="#_t_119">Test FTP_ITC.1:2</a>:
+                  </li><li class="test-"><a id="_t_149" class="defined" href="#_t_149">Test FTP_ITC.1:2</a>:
       
                     <p style="text-align: left;">Test 2: For each protocol that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> can initiate as defined in the requirement, the evaluator shall follow the guidance documentation to ensure that the communication channel can in fact be initiated from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</p>
-                  </li><li class="test-"><a id="_t_120" class="defined" href="#_t_120">Test FTP_ITC.1:3</a>:
+                  </li><li class="test-"><a id="_t_150" class="defined" href="#_t_150">Test FTP_ITC.1:3</a>:
       
                     <p style="text-align: left;">Test 3: The evaluator shall verify that, for each communication channel with an authorised <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, the channel data is not sent in plaintext.</p>
-                  </li><li class="test-"><a id="_t_121" class="defined" href="#_t_121">Test FTP_ITC.1:4</a>:
+                  </li><li class="test-"><a id="_t_151" class="defined" href="#_t_151">Test FTP_ITC.1:4</a>:
       
                     <p style="text-align: left;">Test 4: Objective: The objective of this test is to ensure that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> reacts appropriately to any connection outage or interruption of the route to the external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entities. </p>
                     <p style="text-align: left;">The evaluator shall, for each instance where the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> acts as a client using a secure communication mechanism with a distinct <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, interrupt the connection of that <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity for: i) a duration that exceeds the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s application layer timeout setting, ii) a duration shorter than the application layer timeout but of sufficient length to interrupt the network link layer. </p>
@@ -3550,10 +3564,10 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">252. The evaluator shall confirm that the guidance documentation contains instructions for establishing the remote administrative sessions for each supported method.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><p style="text-align: left;">253. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_122" class="defined" href="#_t_122">Test FTP_TRP.1/Admin:1</a>:
+                <span class="testlist-"><p style="text-align: left;">253. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_152" class="defined" href="#_t_152">Test FTP_TRP.1/Admin:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluators shall ensure that communications using each specified (in the guidance documentation) remote administration method are tested during the course of the evaluation, setting up the connections as described in the guidance documentation and verifying that communication is successful.</p>
-                  </li><li class="test-"><a id="_t_123" class="defined" href="#_t_123">Test FTP_TRP.1/Admin:2</a>:
+                  </li><li class="test-"><a id="_t_153" class="defined" href="#_t_153">Test FTP_TRP.1/Admin:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall verify, for each communication channel, the channel data is not sent in plaintext.</p>
                   </li></ul></span>
@@ -4438,13 +4452,13 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
                   </li>
                 </ol>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><p style="text-align: left;">288. The evaluator shall perform the following tests:</p><br/><br/><ul><li class="test-"><a id="_t_124" class="defined" href="#_t_124">Test FTP_TRP.1/Join:1</a>:
+                <span class="testlist-"><p style="text-align: left;">288. The evaluator shall perform the following tests:</p><br/><br/><ul><li class="test-"><a id="_t_154" class="defined" href="#_t_154">Test FTP_TRP.1/Join:1</a>:
       
                     <p style="text-align: left;">Test 1: The evaluator shall ensure that the communications path for joining components to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> is tested for each distinct (nonequivalent) component type[4], setting up the connections as described in the guidance documentation and verifying that communication is successful. In particular the evaluator shall confirm that requirements on environment protection for the registration process are consistent with observations made on the test configuration (for example, a requirement to isolate the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components from the Internet during registration might be inconsistent with the need for a <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> component to contact a license server). If no requirements on the registration environment are identified as necessary to protect confidentiality, then the evaluator shall confirm that the key used for registration can be configured (following the instructions in the guidance documentation) to be at least the same length as the key used for the internal <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> channel that is being enabled. The evaluator shall confirm that the key used for the channel is unique to the pair of <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components (this is done by identifying the relevant key during the registration test: it is not necessary to examine the key value).</p>
-                  </li><li class="test-"><a id="_t_125" class="defined" href="#_t_125">Test FTP_TRP.1/Join:2</a>:
+                  </li><li class="test-"><a id="_t_155" class="defined" href="#_t_155">Test FTP_TRP.1/Join:2</a>:
       
                     <p style="text-align: left;">Test 2: The evaluator shall follow the guidance documentation to ensure that the communication channel can be enabled by a Security Administrator for all the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components identified in the guidance documentation as capable of having the Security Administrator initiate the channel.</p>
-                  </li><li class="test-"><a id="_t_126" class="defined" href="#_t_126">Test FTP_TRP.1/Join:3</a>:
+                  </li><li class="test-"><a id="_t_156" class="defined" href="#_t_156">Test FTP_TRP.1/Join:3</a>:
       
                     <p style="text-align: left;">Test 3: The evaluator shall ensure that if the guidance documentation states that the channel data is encrypted, then the data observed on the channel is not plaintext.</p>
                   </li></ul></span>
@@ -4472,13 +4486,26 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_AFL.1">FIA_AFL.1</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FIA_PMG_EXT.1"><h4>FIA_PMG_EXT.1 Password Management</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-3">Password-based authentication</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">465. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to determine that it contains a description, for each supported method for remote administrative actions, of how successive unsuccessful authentication attempts are detected and tracked. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall also describe the method by which the remote administrator is prevented from successfully logging on to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, and the actions necessary to restore this ability. </p>
+                <p style="text-align: left;">466. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to confirm that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ensures that authentication failures by remote administrators cannot lead to a situation where no administrator access is available, either permanently or temporarily (e.g., by providing local logon which is not subject to blocking).</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">467. The evaluator shall examine the guidance documentation to ensure that instructions for configuring the number of successive unsuccessful authentication attempts and time period (if implemented) are provided, and that the process of allowing the remote administrator to once again successfully log on is described for each “action” specified (if that option is chosen). If different actions or mechanisms are implemented depending on the secure protocol employed (e.g., <abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> vs. SSH), all must be described. </p>
+                <p style="text-align: left;">468. The evaluator shall examine the guidance documentation to confirm that it describes, and identifies the importance of, any actions that are required in order to ensure that administrator access will always be maintained, even if remote administration is made permanently or temporarily unavailable due to blocking of accounts as a result of <a href="#FIA_AFL.1">FIA_AFL.1</a>.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">469. The evaluator shall perform the following tests for each method by which remote administrators access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (e.g., any passwords entered as part of establishing the connection protocol or the remote administrator application):</p><br/><ul><li class="test-"><a id="_t_100" class="defined" href="#_t_100">Test FIA_AFL.1:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall use the operational guidance to configure the number of successive unsuccessful authentication attempts allowed by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> (and, if the time period selection in <a href="#FIA_AFL.1.2">FIA_AFL.1.2</a> is included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, then the evaluator shall also use the operational guidance to configure the time period after which access is reenabled). The evaluator shall test that once the authentication attempts limit is reached, authentication attempts with valid credentials are no longer successful.</p>
+                  </li><li class="test-"><a id="_t_101" class="defined" href="#_t_101">Test FIA_AFL.1:2</a>:
+      
+                    <p style="text-align: left;">Test 2: After reaching the limit for unsuccessful authentication attempts as in Test 1 above, the evaluator shall proceed as follows</p>
+                    <span class="testlist-"><p style="text-align: left;">If the administrator action selection in <a href="#FIA_AFL.1.2">FIA_AFL.1.2</a> is included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, then the evaluator shall confirm by testing that following the operational guidance and performing each action specified in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> to re-enable the remote administrator’s access results in successful access (when using valid credentials for that administrator).</p>ebc79928-efe7-4fbf-93c6-3d25ad2a17c2<p style="text-align: left;">If the time period selection in <a href="#FIA_AFL.1.2">FIA_AFL.1.2</a> is included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, then the evaluator shall wait for just less than the time period configured in Test 1 and show that an authorisation attempt using valid credentials does not result in successful access. The evaluator shall then wait until just after the time period configured in Test 1 and show that an authorisation attempt using valid credentials results in successful access.</p><ul></ul></span>
+                  </li></ul></span>
+              </div></div></div></div></div><div class="comp" id="FIA_PMG_EXT.1"><h4>FIA_PMG_EXT.1 Password Management</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-3">Password-based authentication</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FIA_PMG_EXT.1.1"><a href="#FIA_PMG_EXT.1.1" class="abbr">FIA_PMG_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide the following password management capabilities for administrative passwords:<ol><li><p style="text-align: left;">Passwords shall be able to be composed of any combination of upper and lower case letters, numbers and the following special characters:</p></li></ol> [<b>selection</b>: <span class="selectable-content" id="nd_fia_pmg_ext.1.1_1">"!"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_2">"@"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_3">"#"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_4">"$"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_5">"%"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_6">"^"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_7">"&amp;"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_8">"*"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_9">"("</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_10">")"</span>, <span class="selectable-content" id="nd_fia_pmg_ext.1.1_11">[<b>assignment</b>: 
      <span class="assignable-content">other characters</span>]</span>] <ol><li><p style="text-align: left;">Minimum password length shall be <i>configurable to between</i></p></li></ol> [<b>assignment</b>: 
@@ -4494,13 +4521,42 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_PMG_EXT.1">FIA_PMG_EXT.1</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-4">Pre-shared keys for IPsec</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">473. The evaluator shall check that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>:</p>
+                <ol type="a">
+                  <li>
+                    <p style="text-align: left;">lists the supported special character(s) for the composition of administrator passwords. </p>
+                  </li>
+                  <li>
+                    <p style="text-align: left;">to ensure that the minimum_password_length parameter is configurable by a Security Administrator. </p>
+                  </li>
+                  <li>
+                    <p style="text-align: left;">lists the range of values supported for the minimum_password_length parameter. The listed range shall include the value of 15.</p>
+                  </li>
+                </ol>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">474. The evaluator shall examine the guidance documentation to determine that it: </p>
+                <ol type="a">
+                  <li>
+                    <p style="text-align: left;">identifies the characters that may be used in passwords and provides guidance to security administrators on the composition of strong passwords, and </p>
+                  </li>
+                  <li>
+                    <p style="text-align: left;">provides instructions on setting the minimum password length and describes the valid minimum password lengths supported.</p>
+                  </li>
+                </ol>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">475. The evaluator shall perform the following tests.</p><br/><ul><li class="test-"><a id="_t_102" class="defined" href="#_t_102">Test FIA_PMG_EXT.1:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall compose passwords that meet the requirements in some way. For each password, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports the password. While the evaluator is not required (nor is it feasible) to test all possible compositions of passwords, the evaluator shall ensure that all characters, and a minimum length listed in the requirement are supported and justify the subset of those characters chosen for testing.</p>
+                  </li><li class="test-"><a id="_t_103" class="defined" href="#_t_103">Test FIA_PMG_EXT.1:2</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall compose passwords that do not meet the requirements in some way. For each password, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not support the password. While the evaluator is not required (nor is it feasible) to test all possible compositions of passwords, the evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> enforces the allowed characters and the minimum length listed in the requirement and justify the subset of those characters chosen for testing.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-4">Pre-shared keys for IPsec</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.1"><a href="#FIA_PSK_EXT.1.1" class="abbr">FIA_PSK_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to use pre-shared keys that conform to <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784 for IPsec.</div></div>
           <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.2"><a href="#FIA_PSK_EXT.1.2" class="abbr">FIA_PSK_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to        [<b>selection</b>: <span class="selectable-content" id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</span>, <span class="selectable-content" id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via <a href="#FCS_RBG.1">FCS_RBG.1</a></span>].<div class="appnote"><span class="note-header">Application
@@ -4511,7 +4567,25 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
               </p>
               <p style="text-align: left;">Generated PSKs are expected to be shared between components via an out-of-band mechanism.</p>
             </span></div></div></div>
-        </div><div class="comp" id="FIA_UAU.7"><h4>FIA_UAU.7 Protected Authentication Feedback</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-2">Password-based local authentication</a></i></b></li></ul></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_PSK_EXT.1">FIA_PSK_EXT.1</a></div>
+              
+              
+              
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <div class="dependent">The following content should be included if:<ul><li><a href="#nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via FCS_RBG.1</a>
+             is selected from 
+             <a href="#FIA_PSK_EXT.1.2">FIA_PSK_EXT.1.2</a></li></ul><div class="dependent-content"><div>
+                  
+                  <p style="text-align: left;">476. If "generate" is selected, the evaluator shall confirm that this process uses the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> specified in <a href="#FCS_RBG.1">FCS_RBG.1</a> and the output matches the size required in <a href="#FIA_PSK_EXT.1.2">FIA_PSK_EXT.1.2</a>.</p>
+                </div></div></div>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><ul><li class="test-"><a id="_t_104" class="defined" href="#_t_104">Test FIA_PSK_EXT.1:1</a>:
+      
+                    <p style="text-align: left;">478. The evaluator shall attempt to establish a connection and confirm that the connection requires the selected factors in the PSK to establish the connection in alignment with table 1 from <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><div class="comp" id="FIA_UAU.7"><h4>FIA_UAU.7 Protected Authentication Feedback</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-2">Password-based local authentication</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FIA_UAU.7.1"><a href="#FIA_UAU.7.1" class="abbr">FIA_UAU.7.1</a></div><div class="reqdesc">
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide only <u>obscured feedbac</u>k to the <b>administrative</b> user while the authentication is in progress <b>at the local console</b>.</p>
@@ -4525,13 +4599,20 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FIA_UAU.7">FIA_UAU.7</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><h3 id="fmt-feat-based" class="indexable" data-level="3">A.3.2 Security Management (FMT)</h3><div class="comp" id="FMT_MTD.1/CryptoKeys"><h4>FMT_MTD.1/CryptoKeys Management of TSF Data</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-5">Admin management of crypto keys</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">470. None</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">471. The evaluator shall examine the guidance documentation to determine that any necessary preparatory steps to ensure authentication data is not revealed while entering for each local login allowed.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">472. The evaluator shall perform the following test for each method of local login allowed:</p><ul><li class="test-"><a id="_t_105" class="defined" href="#_t_105">Test FIA_UAU.7:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall locally authenticate to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. While making this attempt, the evaluator shall verify that at most obscured feedback is provided while entering the authentication information.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><h3 id="fmt-feat-based" class="indexable" data-level="3">A.3.2 Security Management (FMT)</h3><div class="comp" id="FMT_MTD.1/CryptoKeys"><h4>FMT_MTD.1/CryptoKeys Management of TSF Data</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-5">Admin management of crypto keys</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FMT_MTD.1.1/CryptoKeys"><a href="#FMT_MTD.1.1/CryptoKeys" class="abbr">FMT_MTD.1.1/CryptoKeys</a></div><div class="reqdesc">
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to <i><u>manage</u></i> the <i>cryptographic keys</i> to <i>Security Administrators</i>.</p>
@@ -4545,13 +4626,26 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MTD.1/CryptoKeys">FMT_MTD.1/CryptoKeys</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><h3 id="fpt-feat-based" class="indexable" data-level="3">A.3.3 Protection of the TSF (FPT)</h3><div class="comp" id="FPT_APW_EXT.1"><h4>FPT_APW_EXT.1 Protection of Administrator Passwords</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-3">Password-based authentication</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">505. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.1. </p>
+                <p style="text-align: left;">506. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> lists the keys the Security Administrator is able to manage to include the options available (e.g., generating keys, importing keys, modifying keys or deleting keys) and names the operations that are performed.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">507. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.2. </p>
+                <p style="text-align: left;">508. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall also ensure the Guidance Documentation describes how the operations are performed on the keys the Security Administrator is able to manage.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">509. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_124" class="defined" href="#_t_124">Test FMT_MTD.1/CryptoKeys:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall try to perform at least one of the related actions (modify, delete, generate/import) without prior authentication as Security Administrator (either by authentication as a non-administrative user, if supported, or without authentication at all). Attempts to perform related actions without prior authentication should fail.</p>
+                    <p style="text-align: left;">When there is an implementation where other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</p>
+                  </li><li class="test-"><a id="_t_125" class="defined" href="#_t_125">Test FMT_MTD.1/CryptoKeys:2</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall try to perform at least one of the related actions with prior authentication as Security Administrator. This attempt should be successful.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><h3 id="fpt-feat-based" class="indexable" data-level="3">A.3.3 Protection of the TSF (FPT)</h3><div class="comp" id="FPT_APW_EXT.1"><h4>FPT_APW_EXT.1 Protection of Administrator Passwords</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-3">Password-based authentication</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FPT_APW_EXT.1.1"><a href="#FPT_APW_EXT.1.1" class="abbr">FPT_APW_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall store administrative passwords in non-plaintext form.</div></div>
           <div class="element"><div class="reqid" id="FPT_APW_EXT.1.2"><a href="#FPT_APW_EXT.1.2" class="abbr">FPT_APW_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall prevent the reading of plaintext administrative passwords.<div class="appnote"><span class="note-header">Application
@@ -4565,13 +4659,17 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_APW_EXT.1">FPT_APW_EXT.1</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><h3 id="fta-feat-based" class="indexable" data-level="3">A.3.4 TOE Access (FTA)</h3><div class="comp" id="FTA_SSL_EXT.1"><h4>FTA_SSL_EXT.1 TSF-initiated Session Locking</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-6">Local security admin</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">479. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to determine that it details all authentication data that are subject to this requirement, and the method used to obscure the plaintext password data when stored. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall also detail passwords are stored in such a way that they are unable to be viewed through an interface designed specifically for that purpose, as outlined in the application note.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">480. None</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">481. None</p>
+              </div></div></div></div></div><h3 id="fta-feat-based" class="indexable" data-level="3">A.3.4 TOE Access (FTA)</h3><div class="comp" id="FTA_SSL_EXT.1"><h4>FTA_SSL_EXT.1 TSF-initiated Session Locking</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-6">Local security admin</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FTA_SSL_EXT.1.1"><a href="#FTA_SSL_EXT.1.1" class="abbr">FTA_SSL_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall, for local interactive sessions,       [<b>selection</b>: <span class="selectable-content" id="nd_fta_ssl_ext.1.1_1">lock the session - disable any activity of the Administrator’s data access/display devices other than unlocking the session, and requiring that the Administrator reauthenticate to the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> prior to unlocking the session</span>, <span class="selectable-content" id="nd_fta_ssl_ext.1.1_2">terminate the session</span>]       after a Security Administrator-specified time period of inactivity.<div class="appnote"><span class="note-header">Application
       Note:
@@ -4584,13 +4682,20 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
           
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FTA_SSL_EXT.1">FTA_SSL_EXT.1</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">510. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to determine that it details whether local administrative session locking or termination is supported and the related inactivity time period settings.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">511. The evaluator shall confirm that the guidance documentation states whether local administrative session locking or termination is supported and instructions for configuring the inactivity time period.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">512. The evaluator shall perform the following test:</p><ul><li class="test-"><a id="_t_146" class="defined" href="#_t_146">Test FTA_SSL_EXT.1:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure several different values for the inactivity time period referenced in the component. For each period configured, the evaluator shall establish a local interactive session with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall then verify that the session is either locked or terminated after the configured time period. If locking was selected from the component, the evaluator shall then verify that reauthentication is needed when trying to unlock the session.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><h1 id="sel-based-reqs" class="indexable" data-level="A">Appendix B -  Selection-based  Requirements
     </h1><span class="description">
 	<p>As indicated in the introduction to this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>,
         the baseline requirements
@@ -5823,13 +5928,74 @@ If ( keylen = 256 )
           
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_NTP_EXT.1">FCS_NTP_EXT.1</a></div>
-              Something
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FCS_RBG.2"><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_RBG.1.2">FCS_RBG.1.2</a></i></b></li></ul><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
+            
+              
+              
+              
+            
+              
+              
+              
+            
+              
+              
+              
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">454. The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to ensure it identifies the version of NTP supported, how it is implemented and what approach the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> uses to ensure the timestamp it receives from an NTP timeserver (or NTP peer) is from an authenticated source and the integrity of the time has been maintained.</p>
+                <p style="text-align: left;">455. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must support at least one of the methods or may use multiple methods, as specified in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> element 1.2. The evaluator shall ensure that each method selected in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> is described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>, including the version of NTP supported in element 1.1, the message digest algorithms used to verify the authenticity of the timestamp and/or the protocols used to ensure integrity of the timestamp.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">456. None.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">456. None.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">456. None.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">457. The evaluator shall examine the guidance documentation to ensure it provides the Security Administrator instructions as how to configure the version of NTP supported, how to configure multiple NTP servers for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s time source and how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the method(s) that are selected in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">458. For each of the secondary selections made in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, the evaluator shall examine the guidance document to ensure it instructs the Security Administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the algorithms that support the authenticity of the timestamp and/or how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the protocols that ensure the integrity of the timestamp. </p>
+                <p style="text-align: left;">
+                  <i>Assurance Activity Note: </i>
+                </p>
+                <p style="text-align: left;">Each primary selection in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> contains selections that specify a cryptographic algorithm or cryptographic protocol. For each of these secondary selections made in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, the evaluator shall examine the guidance documentation to ensure that the documentation instructs the Security Administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the chosen option(s).</p>
+              </div><div class="ea">
+                <p style="text-align: left;">459. The evaluator shall examine the guidance documentation to ensure it provides the Security Administrator instructions as how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to not accept broadcast and multicast NTP packets that would result in the timestamp being updated.</p>
+              </div><div class="ea">
+                <p style="text-align: left;">460. None.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><ul><li class="test-"><a id="_t_94" class="defined" href="#_t_94">Test FCS_NTP_EXT.1:1</a>:
+      
+                    <p style="text-align: left;">461. The version of NTP selected in element 1.1 and specified in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> shall be verified by observing establishment of a connection to an external NTP server known to be using the specified version(s) of NTP. This may be combined with tests of other aspects of <a href="#FCS_NTP_EXT.1">FCS_NTP_EXT.1</a> as described below.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <p style="text-align: left;">462. The cryptographic algorithms selected in element 1.2 and specified in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> will have been specified in an FCS_COP <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> and tested in the accompanying Evaluation Activity for that <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. Likewise, the cryptographic protocol selected in in element 1.2 and specified in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> will have been specified in an FCS <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> and tested in the accompanying Evaluation Activity for that <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>.</p>
+                <span class="testlist-"><br/><ul><div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ntp-ext-1-2-compsel-1">Authentication using [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ntp_ext.1.2_1">SHA256</span>, <span class="selectable-content" id="nd_fcs_ntp_ext.1.2_2">SHA384</span>, <span class="selectable-content" id="nd_fcs_ntp_ext.1.2_3">SHA512</span>, <span class="selectable-content" id="nd_fcs_ntp_ext.1.2_4">AES-CMAC-128 (RFC 8573)</span>, <span class="selectable-content" id="nd_fcs_ntp_ext.1.2_5">AES-CBC-128</span>, <span class="selectable-content" id="nd_fcs_ntp_ext.1.2_6">AES-CBC-256</span>] as the message digest algorithm(s);</a>
+             is selected from 
+             <a href="#FCS_NTP_EXT.1.2">FCS_NTP_EXT.1.2</a></li></ul><div class="dependent-content"><test>
+                    
+                    <p style="text-align: left;">[conditional] If the message digest algorithm is claimed in element 1.2, the evaluator shall configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and NTP server so the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> can synchronize time using a claimed message digest algorithm. The evaluator shall modify the response(s) from the NTP server so the response(s) contains a MAC that was generated by a different message digest algorithm and confirm the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not synchronize to this time source. Other than the invalid MAC, the NTP response(s) must be valid (e.g., key ID, key value used, timestamps). </p>
+                    <p style="text-align: left;">Note: Since the algorithm is not identified in the server response, this tests an incorrect algorithm and an invalid MAC.</p>
+                  </test></div></div><li class="test-"><a id="_t_96" class="defined" href="#_t_96">Test FCS_NTP_EXT.1:2</a>:
+      
+                    <p style="text-align: left;">The evaluator shall use a packet sniffer to capture the network traffic between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the NTP server. The evaluator shall use the captured network traffic, to verify the NTP version, to observe time change of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and uses the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s audit log to determine that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> accepted the NTP server’s timestamp update.</p>
+                    <p style="text-align: left;">The captured traffic is also used to verify that the appropriate message digest algorithm was used to authenticate the time source and/or the appropriate protocol was used to ensure integrity of the timestamp that was transmitted in the NTP packets.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <span class="testlist-"><ul><li class="test-"><a id="_t_97" class="defined" href="#_t_97">Test FCS_NTP_EXT.1:3</a>:
+      
+                    <p style="text-align: left;">463. The evaluator shall configure NTP server(s) to support periodic time updates to broadcast and multicast addresses. The evaluator shall confirm the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is configured to not accept broadcast and multicast NTP packets that would result in the timestamp being updated. The evaluator shall check that the time stamp is not updated after receipt of the broadcast and multicast packets.</p>
+                  </li></ul></span>
+              </div><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">464. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_98" class="defined" href="#_t_98">Test FCS_NTP_EXT.1:4</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall confirm the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> supports configuration of at least three (3) NTP time sources. The evaluator shall configure at least three NTP servers to support periodic time updates to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The evaluator shall confirm the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is configured to accept NTP packets that would result in the timestamp being updated from each of the NTP servers. The evaluator shall check that the time stamp is updated after receipt of the NTP packets. The purpose of this test to verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> can be configured to synchronize with multiple NTP servers. It is up to the evaluator to determine that the multisource update of the time information is appropriate and consistent with the behaviour prescribed by the <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 1305 for NTPv3 and <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 5905 for NTPv4.</p>
+                  </li><li class="test-"><a id="_t_99" class="defined" href="#_t_99">Test FCS_NTP_EXT.1:5</a>:
+      
+                    <p style="text-align: left;">Test 2: (The intent of this test is to ensure that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> would only accept NTP updates from configured NTP Servers.) The evaluator shall confirm that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> would not synchronize to other, not explicitly configured time sources by sending an otherwise valid but unsolicited NTP Server response indicating different time from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s current system time. This rogue time source needs to be configured in a way (e.g., degrade or disable valid and configured NTP servers) that could plausibly result in unsolicited updates becoming a preferred time source if they are not discarded by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is not mandated to respond in a detectable way or audit the occurrence of such unsolicited updates. It is up to the evaluator to craft and transmit unsolicited updates in a way that would be consistent with the behaviour of a correctly-functioning NTP server.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><div class="comp" id="FCS_RBG.2"><h4>FCS_RBG.2 Random Bit Generation (External Seeding)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_RBG.1.2">FCS_RBG.1.2</a></i></b></li></ul><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_RBG.1">FCS_RBG.1</a></i></b></li></ul></div>
           
           
           <div class="element"><div class="reqid" id="FCS_RBG.2.1"><a href="#FCS_RBG.2.1" class="abbr">FCS_RBG.2.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to accept a minimum input of          [<b>assignment</b>: 
@@ -5938,13 +6104,25 @@ If ( keylen = 256 )
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MOF.1/AutoUpdate">FMT_MOF.1/AutoUpdate</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FMT_MOF.1/Functions"><h4>FMT_MOF.1/Functions Management of Security Functions Behaviour</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FAU_STG_EXT.1">FAU_STG_EXT.1</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">492. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.1. </p>
+                <p style="text-align: left;">493. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how checking for automatic updates or automated updates (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are performed to include required configuration settings to enable and disable automated checking or automated updates.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">494. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.2. </p>
+                <p style="text-align: left;">495. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall also ensure the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how checking for automatic updates or automated updates (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are performed to include required configuration settings to enable and disable automated checking or automated updates (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>).</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">496. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_110" class="defined" href="#_t_110">Test FMT_MOF.1/AutoUpdate:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall try to enable and disable automatic checking for updates or automatic updates (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) without prior authentication as Security Administrator (by authenticating as a user with no administrator privileges or without user authentication). The attempt to enable/disable automatic checking for updates should fail. = When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to enable/disable automatic checking for updates can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</p>
+                  </li><li class="test-"><a id="_t_111" class="defined" href="#_t_111">Test FMT_MOF.1/AutoUpdate:2</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall try to enable and disable automatic checking for updates or automatic updates (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) with prior authentication as Security Administrator. The attempt to enable/disable automatic checking for updates should be successful.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><div class="comp" id="FMT_MOF.1/Functions"><h4>FMT_MOF.1/Functions Management of Security Functions Behaviour</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FAU_STG_EXT.1">FAU_STG_EXT.1</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/Functions"><a href="#FMT_MOF.1.1/Functions" class="abbr">FMT_MOF.1.1/Functions</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to       [<b>selection</b>: <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_1">determine the behaviour of</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_2">modify the behaviour of</span>]       the functions       [<b>selection</b>: <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_3">transmission of audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_4">handling of audit data</span>, <span class="selectable-content" id="nd_fmt_mof.1.1_FUNCTIONS_5">audit functionality when Local Audit Storage Space is full</span>] <p style="text-align: left;">to <i>Security Administrators</i>.</p><div class="appnote"><span class="note-header">Application
       Note:
@@ -5966,13 +6144,61 @@ If ( keylen = 256 )
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MOF.1/Functions">FMT_MOF.1/Functions</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><div class="comp" id="FMT_MOF.1/Services"><h4>FMT_MOF.1/Services Management of Security Functions Behaviour</h4><div class="statustag"></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">497. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.1. </p>
+                <p style="text-align: left;">498. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>, for each administrative function identified, details how the Security Administrator determines or modifies the behaviour of (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) transmitting audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, handling of audit data, and audit functionality when Local Audit Storage Space is full (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>).</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">499. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.2. </p>
+                <p style="text-align: left;">500. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall also ensure the Guidance Documentation describes how the Security Administrator determines or modifies the behaviour of (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) transmitting audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity, handling of audit data, and audit functionality when Local Audit Storage Space is full (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) are performed to include required configuration settings.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">
+                    <b>If ‘transmission of audit data to external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity’ is selected from the second selection together with 'modify the behaviour of' in the first selection</b>
+                  </p><p style="text-align: left;">501. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_112" class="defined" href="#_t_112">Test FMT_MOF.1/Functions:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall try to modify all security related parameters for configuration of the transmission protocol for transmission of audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). Attempts to modify parameters without prior authentication must fail.</p>
+                    <p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to modify the security related parameters can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</p>
+                  </li><li class="test-"><a id="_t_113" class="defined" href="#_t_113">Test FMT_MOF.1/Functions:2</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall try to modify all security related parameters for configuration of the transmission protocol for transmission of audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity with prior authentication as Security Administrator. The effects of the modifications should be confirmed.</p>
+                    <p style="text-align: left;">The evaluator does not have to test all possible values of the security related parameters for configuration of the transmission protocol for transmission of audit data to an external <abbr class="dyn-abbr"><a href="#abbr_IT">IT</a></abbr> entity but at least one allowed value per parameter.</p>
+                  </li></ul></span>
+                <span class="testlist-"><p style="text-align: left;">
+                    <b>If 'handling of audit data' is selected from the second selection together with 'modify the behaviour of' in the first selection</b>
+                  </p><p style="text-align: left;">502. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_114" class="defined" href="#_t_114">Test FMT_MOF.1/Functions:3</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall try to modify all security related parameters for configuration of the handling of audit data without prior authentication as Security Administrator (by authentication as a user with no administrator privileges, or without user authentication at all). Attempts to modify parameters without prior authentication must fail. </p>
+                    <p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator. The term ‘handling of audit data’ refers to the different options for selection and assignments in <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> <a href="#FAU_STG_EXT.1.4">FAU_STG_EXT.1.4</a>, <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a> and <a href="#FAU_STG_EXT.2">FAU_STG_EXT.2</a>.</p>
+                  </li><li class="test-"><a id="_t_115" class="defined" href="#_t_115">Test FMT_MOF.1/Functions:4</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall try to modify all security related parameters for configuration of the handling of audit data with prior authentication as Security Administrator. The effects of the modifications shall be confirmed. The term ‘handling of audit data’ refers to the different options for selection and assignments in <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> <a href="#FAU_STG_EXT.1.4">FAU_STG_EXT.1.4</a>, <a href="#FAU_STG_EXT.1.5">FAU_STG_EXT.1.5</a> and <a href="#FAU_STG_EXT.2">FAU_STG_EXT.2</a>. </p>
+                    <p style="text-align: left;">The evaluator does not necessarily have to test all possible values of the security related parameters for configuration of the handling of audit data, but at least one allowed value per parameter must be tested.</p>
+                  </li></ul></span>
+                <span class="testlist-"><p style="text-align: left;">
+                    <b>If 'audit functionality when Local Audit Storage Space is full' is selected from the second selection together with 'modify the behaviour of' in the first selection </b>
+                  </p><p style="text-align: left;">503. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_116" class="defined" href="#_t_116">Test FMT_MOF.1/Functions:5</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall try to modify the behaviour when Local Audit Storage Space is full without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). This attempt should fail. </p>
+                    <p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</p>
+                  </li><li class="test-"><a id="_t_117" class="defined" href="#_t_117">Test FMT_MOF.1/Functions:6</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall try to modify the behaviour when Local Audit Storage Space is full with prior authentication as Security Administrator. This attempt should be successful. The effect of the change shall be verified. </p>
+                    <p style="text-align: left;">The evaluator does not necessarily have to test all possible values for the behaviour when Local Audit Storage Space is full but at least one change between allowed values for the behaviour must be tested.</p>
+                  </li></ul></span>
+                <span class="testlist-"><p style="text-align: left;">
+                    <b>If in the first selection 'determine the behaviour of' has been chosen together with for any of the options in the second selection </b>
+                  </p><p style="text-align: left;">504. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_118" class="defined" href="#_t_118">Test FMT_MOF.1/Functions:7</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall try to determine the behaviour of all options chosen from the second selection without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). This can be done in one test or in separate tests. The attempt(s) to determine the behaviour of the selected functions without administrator authentication shall fail.</p>
+                    <p style="text-align: left;">When there is an implementation where other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</p>
+                  </li><li class="test-"><a id="_t_119" class="defined" href="#_t_119">Test FMT_MOF.1/Functions:8</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall try to determine the behaviour of all options chosen from the second selection with prior authentication as Security Administrator. This can be done in one test or in separate tests. The attempt(s) to determine the behaviour of the selected functions with Security Administrator authentication shall be successful.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><div class="comp" id="FMT_MOF.1/Services"><h4>FMT_MOF.1/Services Management of Security Functions Behaviour</h4><div class="statustag"></div>
           <div class="element"><div class="reqid" id="FMT_MOF.1.1/Services"><a href="#FMT_MOF.1.1/Services" class="abbr">FMT_MOF.1.1/Services</a></div><div class="reqdesc">
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall restrict the ability to <b>start and stop</b> <s>the functions</s> <b>services</b> to <i>Security Administrators</i>.</p>
             <div class="appnote"><span class="note-header">Application
@@ -5987,13 +6213,26 @@ If ( keylen = 256 )
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FMT_MOF.1/Services">FMT_MOF.1/Services</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.4 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</a></i></b></li></ul><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></i></b></li></ul></div>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">487. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.1. </p>
+                <p style="text-align: left;">488. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> lists the services that the Security Administrator is able to start and stop and how that operation is performed.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">489. For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, see Section 2.4.1.2. </p>
+                <p style="text-align: left;">490. For non-distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the evaluator shall also verify that the Guidance Documentation describes how the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> lists the services that the Security Administrator is able to start and stop and how that operation is performed.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">491. The evaluator shall perform the following tests:</p><br/><ul><li class="test-"><a id="_t_122" class="defined" href="#_t_122">Test FMT_MOF.1/Services:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall try to enable and disable at least one of the services as defined in the Application Notes for <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a> (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) without prior authentication as Security Administrator (either by authenticating as a user with no administrator privileges, if possible, or without prior authentication at all). The attempt to enable/disable this service/these services should fail.</p>
+                    <p style="text-align: left;">When there is an implementation where no other users other than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to enable/disable this service/these services can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</p>
+                  </li><li class="test-"><a id="_t_123" class="defined" href="#_t_123">Test FMT_MOF.1/Services:2</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall try to enable and disable at least one of the services as defined in the Application Notes for <a href="#FAU_GEN.1.1">FAU_GEN.1.1</a> (whichever is supported by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>) with prior authentication as Security Administrator. The attempt to enable/disable this service/these services should be successful.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><h2 id="fpt-sel-based" class="indexable" data-level="2">B.4 Protection of the TSF (FPT)</h2><div class="comp" id="FPT_TUD_EXT.2"><h4>FPT_TUD_EXT.2 Trusted Update Based on Certificates</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FPT_TUD_EXT.1.3">FPT_TUD_EXT.1.3</a></i></b></li></ul><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a></i></b></li></ul></div>
           
           
           <div class="element"><div class="reqid" id="FPT_TUD_EXT.2.1"><a href="#FPT_TUD_EXT.2.1" class="abbr">FPT_TUD_EXT.2.1</a></div><div class="reqdesc"> The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall check the validity of the code signing certificate before installing each update.</div></div>
@@ -6013,13 +6252,28 @@ If ( keylen = 256 )
             </span></div></div></div>
           
         <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FPT_TUD_EXT.2">FPT_TUD_EXT.2</a></div>
-              Something
+              <p style="text-align: left;"></p>
               
               
               
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">ABC</div></div><div class="eacategory">Guidance</div><div class="ea">
-			There are no additional Guidance evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></div></div></div><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix C -  Entropy Documentation and Assessment</h1>blah<h1 id="a-glossary" class="indexable" data-level="A">Appendix D -  Glossary</h1>
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <p style="text-align: left;">482. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> contains a description of how the certificates are contained on the device. The evaluator also ensures that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> (or guidance documentation) describes how the certificates are installed/updated/selected, if necessary.</p>
+                <p style="text-align: left;">483. The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> reacts if X.509v3 certificates are used for trusted updates and the Security Administrator attempts to perform the trusted update using an expired certificate.</p>
+                <p style="text-align: left;">484. The <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> shall describe the point at which revocation checking is performed and describe whether the Security Administrator can manually provide revocation information. It is expected that revocation checking is performed when a certificate is used when performing trusted updates. It is not sufficient to verify the status of a X.509v3 certificate only when it is loaded onto the device.</p>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">485. The evaluator shall verify that the guidance documentation describes how the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> reacts if X.509v3 certificates are used for trusted updates and the administrator attempts to perform the trusted update using an expired certificate. The evaluator shall verify any Security Administrator actions related to revocation checking, both accepting or rejecting certificates and manually providing revocation information. The description shall correspond to the description in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr>.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <span class="testlist-"><p style="text-align: left;">486. The evaluator shall perform the following tests:</p><br/><br/><ul><li class="test-"><a id="_t_140" class="defined" href="#_t_140">Test FPT_TUD_EXT.2:1</a>:
+      
+                    <p style="text-align: left;">Test 1: The evaluator shall verify that the update mechanism includes a certificate validation according to FIA_X509_EXT.1 (in the Functional Package for X.509) and a check for the Code Signing purpose in the extendedKeyUsage.</p>
+                  </li><li class="test-"><a id="_t_141" class="defined" href="#_t_141">Test FPT_TUD_EXT.2:2</a>:
+      
+                    <p style="text-align: left;">Test 2: The evaluator shall digitally sign the update with an invalid certificate and verify that update installation fails. The evaluator shall digitally sign the application with a certificate that does not have the Code Signing purpose and verify that application installation fails. The evaluator shall repeat the test using a valid certificate and a certificate that contains the Code Signing purpose and verify that the application installation succeeds. The evaluator shall use a previously valid but expired certificate and verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> reacts as described in the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> and the guidance documentation. Testing for this element is performed in conjunction with the assurance activities for <a href="#FPT_TUD_EXT.1">FPT_TUD_EXT.1</a>.</p>
+                  </li><li class="test-"><a id="_t_142" class="defined" href="#_t_142">Test FPT_TUD_EXT.2:3</a>:
+      
+                    <p style="text-align: left;">Test 3: The evaluator shall demonstrate that checking the validity of a certificate is performed at the time a certificate is used when performing trusted updates. It is not sufficient to verify the status of a X.509v3 certificate only when it is loaded onto the device.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><h1 id="satisfiedreqs" class="indexable" data-level="A">Appendix C -  Entropy Documentation and Assessment</h1>blah<h1 id="a-glossary" class="indexable" data-level="A">Appendix D -  Glossary</h1>
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">D.1 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document.
     <h3 id="cc-terms" class="indexable" data-level="3">D.1.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a>.</td></tr>

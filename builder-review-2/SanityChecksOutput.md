@@ -1,176 +1,111 @@
-* Error: Detected multiple elements with an id of 'fdp_dec_ext.1.1_1'.
-* Error: Detected multiple elements with an id of 'fdp_dec_ext.1.1_1'.
-* Error: Detected multiple elements with an id of 'fdp_dec_ext.1.2_1'.
-* Error: Detected multiple elements with an id of 'fdp_dec_ext.1.2_1'.
-* Error: Detected multiple elements with an id of 'fmt_smf.1.1_2'.
-* Error: Detected multiple elements with an id of 'fmt_smf.1.1_2'.
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Introduction[1]""/section[1]""/h:p[1]"The requi"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Introduction[1]""/section[1]""/sec:TOE_Boundary[1]""/h:p[1]"The appli"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"The ST sh"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"The ST sh"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[2]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/f-element[1]""/title[1]"."/h:p[1]"The appli"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/f-element[1]""/note[1]""/h:p[1]"The ST au"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/f-element[1]""/note[1]""/h:p[1]"The ST au"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/f-element[1]""/note[1]""/h:p[1]"The ST au"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/f-element[1]""/note[1]""/h:p[1]"The ST au"/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[3]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[4]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[5]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[6]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[7]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[7]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[8]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[8]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[9]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[9]""/f-element[1]""/note[1]""/h:p[1]"This is d"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[12]""/f-element[2]""/note[1]""/h:p[1]"This shou"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[12]""/f-element[2]""/note[1]""/h:p[1]"This shou"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[13]""/f-element[2]""/note[1]""/h:p[1]"For the s"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[13]""/f-element[2]""/note[1]""/h:p[1]"For the s"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[13]""/f-element[2]""/note[1]""/h:p[1]"For the s"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[18]""/f-element[1]""/note[1]""/h:p[1]"The selec"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[18]""/f-element[1]""/note[1]""/h:p[1]"The selec"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[18]""/f-element[1]""/note[1]""/h:p[1]"The selec"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[18]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If ""/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[18]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If ""/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[18]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If ""/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If salts "/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If salts "/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[19]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If salts "/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[19]""/f-element[3]""/note[1]""/h:p[1]"This requ"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[20]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[20]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[1]""/f-component[20]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"If ""/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If any se"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If any se"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If any se"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If any se"/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"If any se"/h:p[5]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[1]""/f-element[1]""/aactivity[1]""/Guidance[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[2]""/f-element[1]""/note[1]""/h:p[1]"Configura"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[2]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[2]""/f-element[1]""/aactivity[1]""/Tests[1]"If ""/testlist[1]""/test[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[3]""/f-component[2]""/f-element[1]""/aactivity[1]""/Tests[1]"If ""/testlist[2]""/test[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[1]""/f-element[4]""/note[1]""/h:p[1]"The purpo"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[1]""/f-element[4]""/note[1]""/h:p[1]"The purpo"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[1]""/f-element[5]""/aactivity[1]""/Tests[1]"The evalu"/testlist[3]""/test[1]""/h:p[1]", the eva"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[3]""/f-element[1]""/note[1]""/h:p[1]"The IANA "/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[3]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[5]""/f-element[1]""/note[1]""/h:p[1]"The use o"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[7]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[8]""/f-element[3]""/note[1]""/h:p[1]"This requ"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[9]""/f-element[3]""/note[1]""/h:p[1]"The speci"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[5]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[6]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[7]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[8]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[9]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[10]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/note[1]""/h:p[1]"Encryptio"/h:p[11]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[5]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[6]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]"The evalu"/h:p[7]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/h:p[1]"The PP id"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/h:p[1]"The PP id"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/h:p[1]"The PP id"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[3]"The guida"/a-component[1]""/a-element[9]""/aactivity[1]""/h:p[1]"Some of t"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[3]"The guida"/a-component[1]""/a-element[9]""/aactivity[1]""/h:p[1]"Some of t"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[3]"The guida"/a-component[1]""/a-element[9]""/aactivity[1]""/h:p[1]"Some of t"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[4]"At the as"/a-component[6]""/a-element[6]""/aactivity[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[4]"At the as"/a-component[6]""/a-element[6]""/aactivity[1]""/h:p[1]"The evalu"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[5]"Testing i"/a-component[1]""/a-element[4]""/aactivity[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[5]"Testing i"/a-component[1]""/a-element[4]""/aactivity[1]""/h:p[1]"The evalu"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[5]"Testing i"/a-component[1]""/a-element[4]""/aactivity[1]""/h:p[1]"The evalu"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[6]"For the c"/a-component[1]""/a-element[5]""/aactivity[1]""/h:p[1]"The evalu"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/section[1]""/section[6]"For the c"/a-component[1]""/a-element[5]""/aactivity[1]""/h:p[1]"The evalu"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/h:p[1]"This appe"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[1]""/h:p[1]"Documenta"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[1]""/h:p[1]"Documenta"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[1]""/h:p[1]"Documenta"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[2]""/h:p[1]"There sho"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[2]""/h:p[1]"There sho"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[2]""/h:p[1]"There sho"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[2]""/h:p[1]"There sho"/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[1]""/section[2]""/h:p[1]"There sho"/h:p[5]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[1]"The equiv"/h:p[1]"The purpo"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[1]"The equiv"/h:p[1]"The purpo"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[1]"The equiv"/h:p[1]"The purpo"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[1]"The equiv"/h:p[1]"The purpo"/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[2]""/h:p[1]"There are"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[2]""/h:p[1]"There are"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[2]""/h:p[1]"There are"/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[2]""/h:p[1]"There are"/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[2]""/h:p[1]"There are"/h:p[5]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[2]""/h:p[1]"There are"/h:p[6]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[3]""/h:p[1]"Product M"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[3]""/h:p[1]"Product M"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[4]""/h:p[1]"In cases "/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[5]""/h:p[1]"Platform "/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[5]""/h:p[1]"Platform "/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[5]""/section[1]""/h:p[1]"If an app"/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[5]""/section[1]""/h:p[1]"If an app"/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[2]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[3]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[4]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[5]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[6]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[7]""
-* Warning: Detected an empty _p_ element./PP[1]""/appendix[2]""/section[6]""/h:p[1]"In order "/h:p[8]""
-Unable to make an xref for |include-pkg| /PP[1]""/include-pkg[1]""
-Unable to make an xref for |include-pkg| /PP[1]""/include-pkg[1]""
- Failed to find a reference to req.
- Failed to find a reference to req.
- Failed to find a reference to req.
- Failed to find a reference to bibCEM.
- Failed to find a reference to bibCEM.
- Failed to find a reference to bibCEM.
-* Warning: Since FCS_CKM_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FCS_HTTPS_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FCS_HTTPS_EXT.2.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FCS_RBG_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FDP_DAR_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FDP_DEC_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FDP_DEC_EXT.1.2 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FDP_NET_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FMT_CFG_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FMT_MEC_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPR_ANO_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_AEX_EXT.1.2 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_API_EXT.2.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_TUD_EXT.1.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_TUD_EXT.1.2 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_TUD_EXT.1.3 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_TUD_EXT.1.5 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_TUD_EXT.2.1 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
-* Warning: Since FPT_TUD_EXT.2.3 has an 'id' attribute in a descendant node in the title, you probably need to define an alternative 'ext-comp-def-title'.
-                       
+* Error: f-element FAU_SAR.1.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[4]""/f-element[1]""
+* Error: f-element FAU_SAR.1.2  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[4]""/f-element[2]""
+* Error: f-element FCS_CKM.2.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[2]""/f-element[1]""
+* Error: f-element FCS_COP.1.1/CMAC  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[6]""/f-element[1]""
+* Error: f-element FCS_COP.1.1/KeyEncap  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[10]""/f-element[1]""
+* Error: f-element FCS_COP.1.1/XOF  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[15]""/f-element[1]""
+* Error: f-element FCS_RBG.2.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[19]""/f-element[1]""
+* Error: f-element FCS_RBG.3.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[20]""/f-element[1]""
+* Error: f-element FCS_RBG.4.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[21]""/f-element[1]""
+* Error: f-element FCS_RBG.5.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[22]""/f-element[1]""
+* Error: f-element FIA_PSK_EXT.1.1  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[3]""/f-element[1]""
+* Error: f-element FIA_PSK_EXT.1.2  appears not to have an associated evaluation activity.:
+        /PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[5]""/f-component[3]""/f-element[2]""
+* Error: Detected dangling id-reference to [object Object] from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[3]""/depends[1]""/on-sel[1]""
+* Error: Detected dangling id-reference to dummy from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[9]""/depends[1]""/on-sel[1]""
+* Error: Detected dangling id-reference to dummy from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[10]""/depends[1]""/on-sel[1]""
+* Error: Detected dangling id-reference to dummy from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[16]""/depends[4]""/on-sel[1]""
+* Error: Detected dangling id-reference to dummy from attribute
+        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/depends[1]""/on-sel[1]""
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-35'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-34'.
+* Error: Detected multiple elements with an id of 'fcs-ckm-1-1-akg-35'.
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[2]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/aactivity[1]""/Tests[1]""/testlist[1]""/test[2]""/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/Tests[1]"48. Testi"/testlist[1]""/test[4]""/testlist[1]"71f55177-"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[4]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/selectable[1]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/selectable[2]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/aactivity[1]""/TSS[1]"The evalu"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/aactivity[1]""/TSS[1]"The evalu"/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:table[1]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:table[2]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[7]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[8]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[8]""/f-element[1]""/aactivity[1]""/Tests[1]""/testlist[1]""/test[1]""/testlist[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[8]""/f-element[1]""/aactivity[1]""/Tests[1]""/testlist[1]""/test[1]""/testlist[1]""/h:p[9]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[8]""/f-element[1]""/aactivity[1]""/Tests[1]""/testlist[1]""/test[2]""/testlist[1]""/h:p[8]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[9]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"."/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[9]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"."/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/title[1]""/selectables[1]""/selectable[1]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/title[1]""/selectables[1]""/selectable[2]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/title[1]""/selectables[1]""/selectable[3]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/title[1]""/selectables[1]""/selectable[4]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/aactivity[1]""/TSS[1]"The evalu"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/aactivity[1]""/Tests[1]"For tests"/h:table[1]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[11]""/f-element[1]""/aactivity[1]""/Tests[1]"For tests"/h:table[2]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[12]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"."/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[12]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"."/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[12]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[1]""/col[4]"RFC 8017 "/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[12]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[2]""/col[4]"RFC 8017 "/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[12]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[3]""/col[4]"[ECDSA]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[12]""/f-element[1]""/aactivity[1]""/Tests[1]""/testlist[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[1]""/col[4]"RFC 8017 "/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[2]""/col[4]"RFC 8017 "/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[3]""/col[4]"[ECDSA]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[4]""/col[3]"Private k"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[4]""/col[3]"Private k"/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[4]""/col[4]"RFC 8554 "/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[5]""/col[3]"Private k"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[13]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/selectable[5]""/col[4]"RFC 8391 "/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/title[1]""/selectables[1]""/selectable[1]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/title[1]""/selectables[1]""/selectable[2]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/title[1]""/selectables[1]""/selectable[3]""/col[4]"[AES]"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/aactivity[1]""/TSS[1]"The evalu"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:table[1]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:table[2]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[14]""/f-element[1]""/aactivity[1]""/Tests[1]"The follo"/h:table[3]""/h:tr[2]""/h:td[4]"["/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[18]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"after ini"/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[18]""/f-element[1]""/title[1]"The TSF s"/selectables[1]""/tabularize[1]""/reqtext[3]"after ini"/h:p[2]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[18]""/f-element[1]""/aactivity[2]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[3]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[5]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[8]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[7]""/f-component[3]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[7]""/f-component[4]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[7]""/f-component[5]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[7]""/f-component[6]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[8]""/f-component[1]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[8]""/f-component[2]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[8]""/f-component[4]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[8]""/f-component[4]""/f-element[1]""/aactivity[1]""/Tests[1]""/testlist[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[9]""/f-component[1]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[9]""/f-component[2]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected 2 tech-term sections in this PP. There should be exactly 1 "tech-term" section.
+      

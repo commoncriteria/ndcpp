@@ -662,8 +662,10 @@ FTP_TRP.1/Admin</rationale>
               <h:p style="text-align: left;">The TOE must be able to generate audit records for each TOE component. Some TOE components of a distributed TOE might not implement the complete TSF of the overall TOE but only a subset of the TSF. The audit records for each TOE component need to cover all security relevant audit events according to the subset of the TSF implemented by this particular TOE component but not necessarily all security relevant audit events according to the TSF of the overall TOE. If a security-relevant event can occur on multiple TOE components, it needs to cause generation of an audit record uniquely identifying the component associated with the event. The ST author should identify for each TOE component which of the overall required audit events defined in FAU_GEN.1.1 are logged. The ST author may decide to do this by providing a corresponding table. The information provided needs to be in agreement with Table 1. The overall TOE needs to cover all auditable events listed in Table 2 (and Table 10, Table 11, the claimed PP-Module(s), and the claimed functional package(s) as applicable to the overall TOE).</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
+              <h:p style="text-align: left;">306. For distributed TOEs, the requirements on TSS, Guidance Documentation and Tests regarding FAU_GEN_EXT.1 are already covered by the corresponding requirements for FAU_GEN.1.</h:p>
+              <TSS>
+                <h:p style="text-align: left;"></h:p>
+              </TSS>
               <Guidance/>
               <Tests/>
             </aactivity>
@@ -678,6 +680,17 @@ FTP_TRP.1/Admin</rationale>
             <title>
               <h:p style="text-align: left;">The TSF shall provide the <h:i>Security Administrator</h:i> with the capability to read <h:i>all audited events and record contents</h:i> from the audit data</h:p>
             </title>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">303. There are no TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">304. The evaluator shall review the AGD for the procedure on how to review the audit records.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">305. The evaluator shall verify that the audit records provide all of the information specified in FAU_GEN.1 and that this information is suitable for human interpretation. The evaluation activity for this requirement is performed in conjunction with the evaluation activity for FAU_GEN.1.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
           <f-element id="nd-fau-sar-1-2">
             <title>
@@ -792,7 +805,21 @@ FTP_TRP.1/Admin</rationale>
                         <h:p style="text-align: left;">The TOE behaves as specified (for the option ‘other action’ in FAU_STG_EXT.1.5).</h:p>
                       </h:li>
                     </h:ol>
-                    <testlist><h:p style="text-align: left;"></h:p> 71f55177-ba90-4ca2-ac4d-ae73c946de53 <h:ol><h:li><h:p style="text-align: left;">The audit data remains unchanged with every new auditable event that should be tracked but that the audit data is recorded again after the local storage for audit data is cleared.</h:p></h:li></h:ol>  <h:p style="text-align: left;">The existing audit data is overwritten with every new auditable event that should be tracked according to the specified rule (for the option ‘overwrite previous audit records’ in FAU_STG_EXT.1.5)</h:p>  <h:p style="text-align: left;">The TOE behaves as specified (for the option ‘other action’ in FAU_STG_EXT.1.5).</h:p></testlist>
+                    <testlist>
+                      <h:p>testing 123</h:p>
+                      <test>
+                        <h:p>testing111</h:p>
+                      </test>
+                      <h:p style="text-align: left;"></h:p>
+                      71f55177-ba90-4ca2-ac4d-ae73c946de53
+                      <h:ol>
+                        <h:li>
+                          <h:p style="text-align: left;">The audit data remains unchanged with every new auditable event that should be tracked but that the audit data is recorded again after the local storage for audit data is cleared.</h:p>
+                        </h:li>
+                      </h:ol>
+                      <h:p style="text-align: left;">The existing audit data is overwritten with every new auditable event that should be tracked according to the specified rule (for the option ‘overwrite previous audit records’ in FAU_STG_EXT.1.5)</h:p>
+                      <h:p style="text-align: left;">The TOE behaves as specified (for the option ‘other action’ in FAU_STG_EXT.1.5).</h:p>
+                    </testlist>
                   </test>
                   <h:br/>
                   <test>
@@ -959,10 +986,32 @@ FTP_TRP.1/Admin</rationale>
               <h:p style="text-align: left;">TOE components are not required to monitor or audit connectivity or network outages between TOE components. This aspect is covered by the assumption A.COMPONENTS_RUNNING</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">307. The evaluator shall examine the TSS to confirm that it describes which TOE components store their security audit events locally and which send their security audit events to other TOE components for local storage. For the latter, the target TOE component(s) which store security audit events for other TOE components shall be identified. For every sending TOE component, the corresponding receiving TOE component(s) need to be identified. For every transfer of audit information between TOE components it shall be described how the data is secured during transfer according to FTP_ITC.1 or FPT_ITT.1.</h:p>
+                <h:p style="text-align: left;">For each TOE component which does not store audit events locally by itself, the evaluator shall confirm that the TSS describes how the audit information is buffered before sending to another TOE component for local storage.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">309. The evaluator shall examine the guidance documentation to ensure that it describes how the link between different TOE components is established if audit data is exchanged between TOE components for local storage. The guidance documentation shall describe all possible configuration options for local storage of audit data and provide all instructions how to perform the related configuration of the TOE components.</h:p>
+                <h:p style="text-align: left;">310. The evaluator shall also ensure that the guidance documentation describes for every TOE component which does not store audit information locally how audit information is buffered before transmission to other TOE components.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">311. For at least one of each type of distributed TOE components (sensors, central nodes, etc.), the following tests shall be performed using distributed TOEs.</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: For each type of TOE component, the evaluator shall perform a representative subset of auditable actions and ensure that these actions cause the generation of appropriately formed audit records. Generation of such records can be observed directly on the distributed TOE component (if there is an appropriate interface), or indirectly after transmission to a central audit log storage location.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: For each type of TOE component that, in the evaluated configuration, is capable of transmitting audit information to the external audit server (as specified in FTP_ITC.1), the evaluator shall configure a trusted channel and confirm that audit records generated as a result of actions taken by the evaluator are securely transmitted to the external audit server. It is sufficient to observe negotiation and establishment of the secure channel with the TOE component and the subsequent transmission of encrypted data to confirm this functionality. Alternatively, the following steps shall be performed: The evaluator shall induce audit record transmission, then review the packet capture around the time of transmission and verify that no audit data has been transmitted in the clear.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 3: For each type of TOE component that, in the evaluated configuration, is capable of transmitting audit information to another TOE component (as specified in FTP_ITT.1 or FTP_ITC.1, respectively), the evaluator shall configure a secure channel and confirm that audit records generated as a result of actions taken by the evaluator have been securely transmitted. It is sufficient to observe negotiation and establishment of the secure channel with the TOE component and the subsequent transmission of encrypted data to confirm this functionality. Alternatively, the following steps shall be performed: The evaluator shall induce audit record transmission, then review the packet capture around the time of transmission and verify that no audit data is transmitted in the clear.</h:p>
+                  </test>
+                  <h:p style="text-align: left;">312. While performing these tests, the evaluator shall verify that the TOE behaviour observed during testing is consistent with the descriptions provided in the TSS and the Guidance Documentation. Depending on the TOE configuration, there might be a large number of different possible configurations. In such cases, it is acceptable to perform subset testing, accompanied by an equivalency argument describing the evaluator’s sampling methodology.</h:p>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event/>
@@ -997,10 +1046,134 @@ FTP_TRP.1/Admin</rationale>
           <f-element id="fco-cpc-ext-1-1">
             <title>The TSF shall require a Security Administrator to enable communications between any pair of TOE components before such communication can take place.</title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;">290. If the TOE is not a distributed TOE, then no evaluator action is necessary. For a distributed TOE the evaluator carries out the activities below. In carrying out these activities the evaluator shall determine answers to the following questions based on a combination of documentation analysis and testing (possibly also using input from carrying out the Evaluation Activities for the relevant registration channel, such as FTP_TRP.1/Join), and shall report the answers. </h:p>
+              <h:ol type="a">
+                <h:li>
+                  <h:p style="text-align: left;">What stops<h:sup>[5]</h:sup> a TOE component from successfully communicating with other TOE components (in a way that enables it to participate as part of the TOE) before it has been properly authenticated and becomes a functional part of the distributed TOE? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What is the enablement step? (Describe what interface it uses, with a reference to the relevant section and step in the operational guidance). </h:p>
+                  <h:ol type="a">
+                    <h:li>
+                      <h:p style="text-align: left;">i. What stops anybody other than a Security Administrator from carrying out this step? </h:p>
+                    </h:li>
+                    <h:li>
+                      <h:p style="text-align: left;">ii. How does the Security Administrator know that they are enabling the intended TOE component to join? (Identification of the joiner might be part of the enablement action itself or might be part of secure channel establishment, but it must prevent unintended joining of components) </h:p>
+                    </h:li>
+                  </h:ol>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What stops a TOE component from successfully joining if the Security Administrator has not carried out the enablement step; or, equivalently, how does the distributed TOE ensure that an action by an authentic Security Administrator is required before a component can successfully join? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What stops a TOE component from carrying out the registration process over a different, insecure channel? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">If the FTP_TRP.1/Join channel type is selected in FCO_CPC_EXT.1.2 then how does the registration process, and its resulting secure channel, ensure that the transmitted data is protected from disclosure and that it provides detection of modification? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">Where the registration channel does not rely on protection of the registration environment, does the registration channel provide a sufficient level of protection (especially with regard to confidentiality) for the data that passes over it? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">Where the registration channel is subsequently used for normal internal communication between TOE components (i.e. after the joiner has completed registration), do any of the authentication or encryption features of the registration channel result in use of a channel that has weaker protection than the normal FPT_ITT.1 requirements for such a channel? </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What is the disablement step? (Describe what interface it uses, with a reference to the relevant section and step in the operational guidance). </h:p>
+                </h:li>
+                <h:li>
+                  <h:p style="text-align: left;">What stops a TOE component from successfully communicating with other TOE components if the Security Administrator has carried out the disablement step?</h:p>
+                </h:li>
+              </h:ol>
+              <TSS>
+                <h:p style="text-align: left;">&lt;should be Distributed TOE-dependent.></h:p>
+                <h:p style="text-align: left;">291. (Note: Section 3.4.1 lists questions for which the evaluator shall determine and report answers through the combination of the TSS, Guidance Documentation, and Tests Evaluation Activities.) </h:p>
+                <h:p style="text-align: left;">292. The evaluator shall examine the TSS to confirm that it: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Describes the method by which a Security Administrator enables and disables communications between pairs of TOE components. </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Describes the relevant details according to the type of channel in the main selection made in FCO_CPC_EXT.1.2: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">First type: the TSS identifies the relevant SFR iteration that specifies the type of channel being used </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Second type: the TSS (with support from the operational guidance if selected in FTP_TRP.1.3/Join) provides details of the channel and the mechanisms that it uses (and describes how the process ensures that the key is unique to the pair of components) – see also the Evaluation Activities for FTP_TRP.1/Join. </h:p>
+                      </h:li>
+                    </h:ul>
+                  </h:li>
+                </h:ol>
+                <h:p style="text-align: left;">293. The evaluator shall verify that if any aspects of the registration channel are identified as not meeting FTP_ITC.1 or FPT_ITT.1, then the ST has also selected the FTP_TRP.1/Join option in the main selection in FCO_CPC_EXT.1.2. If the registration channel is also to be used for other communications then FTP_TRP.1/Join cannot be present in the ST.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">&lt;should be Distributed TOE-dependent.></h:p>
+                <h:p style="text-align: left;">294. (Note: Section 3.4.1 lists questions for which the evaluator shall determine and report answers through the combination of the TSS, Guidance Documentation, and Tests Evaluation Activities.) </h:p>
+                <h:p style="text-align: left;">295. The evaluator shall examine the guidance documentation to confirm that it contains instructions for enabling and disabling communications with any individual component of a distributed TOE. The evaluator shall confirm that the method of disabling is such that all other components will be prevented from communicating with the component that is being removed from the TOE (preventing the remaining components from either attempting to initiate communications with the disabled component, or from responding to communications from the disabled component). </h:p>
+                <h:p style="text-align: left;">296. The evaluator shall examine the guidance documentation to confirm that it includes recovery instructions should a connection between TOE components be unintentionally broken during the registration process. </h:p>
+                <h:p style="text-align: left;">297. If the TOE uses a registration channel for registering components to the TOE (i.e., where the ST author uses the FTP_ITC.1/FPT_ITT.1 or FTP_TRP.1/Join channel types in the main selection for FCO_CPC_EXT.1.2) then the evaluator shall examine the Preparative Procedures to confirm that they: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">describe the security characteristics of the registration channel (e.g., the protocol, keys and authentication data on which it is based) and that they highlight any aspects which do not meet the requirements for a steady-state inter-component channel (as in FTP_ITC.1 or FPT_ITT.1) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">identify any dependencies between the configuration of the registration channel and the security of the subsequent intercomponent communications (e.g., where AES-256 inter-component communications depend on transmitting 256-bit keys between components and therefore rely on the registration channel being configured to use an encryption key of equivalent length) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">identify any aspects of the channel that can be modified by the operational environment in order to improve the channel’s security, and that they describe how this modification can be achieved (e.g., generating a new key pair, or replacing a default public key certificate). </h:p>
+                  </h:li>
+                </h:ol>
+                <h:p style="text-align: left;">298. As background for the examination of the registration channel description, it is noted that the requirements above are intended to ensure that administrators can make an accurate judgement of any risks that arise from the default registration process. Examples would be the use of self-signed certificates (i.e., certificates that are not chained to an external or local Certification Authority), manufacturer-issued certificates (where control over aspects such as revocation, or which devices are issued with recognised certificates, is outside the control of the operational environment), use of generic/non-unique keys (e.g., where the same key is present on more than one instance of a device), or well-known keys (i.e., where the confidentiality of the keys is not intended to be strongly protected – note that this need not mean there is a positive action or intention to publicise the keys). </h:p>
+                <h:p style="text-align: left;">299. In the case of a distributed TOE for which the ST author uses the FTP_TRP.1/Join channel type in the main selection for FCO_CPC_EXT.1.2 and the TOE relies on the operational environment to provide security for some aspects of the registration channel security then there are additional requirements on the Preparative Procedures as described in Section 3.4.1.2.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">300. (Note: Section 3.4.1 lists questions for which the evaluator shall determine and report answers through the combination of the TSS, Guidance Documentation, and Tests Evaluation Activities.)</h:p>
+                <testlist>
+                  <depends on="nd-feature-7"/>
+                  <h:p style="text-align: left;">301. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1a: the evaluator shall confirm that a TOE component that is not currently a member of the distributed TOE cannot communicate with any other component of the TOE until the non-member is enabled by a Security Administrator, for each of the non-equivalent TOE components<h:sup>[6]</h:sup>, that it is required to communicate with (nonequivalent TOE components are as defined in the minimum configuration for the distributed TOE).</h:p>
+                    <h:p style="text-align: left;">Test 1b: the evaluator shall confirm that after enablement, a TOE component can only communicate with the other TOE components that it has been enabled for. This includes testing that the enabled communication is successful for the enabled TOE component pair, and that communication remains unsuccessful with any other TOE component for which communication has not been explicitly enabled. </h:p>
+                    <h:p style="text-align: left;">Some TOEs may set up the registration channel before the enablement step is carried out, but in such a case the separate registeredcomponents channel must not allow communications until after the enablement step has been completed.</h:p>
+                    <h:p style="text-align: left;">302. The evaluator shall repeat Tests 1a and 1b for each different type of enablement process that can be used in the distributed TOE.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall separately disable each TOE component in turn and ensure that the other TOE components cannot then communicate with the disabled component, whether by attempting to initiate communications with the disabled component, or by responding to communication attempts from the disabled component.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 3: The evaluator shall perform the following tests according to those that apply to the values of the main (outer) selection made in the ST for FCO_CPC_EXT.1.2.</h:p>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">If the ST uses the first type of communication channel in the selection list in FCO_CPC_EXT.1.2 then the evaluator shall test the channel via the Evaluation Activities for FTP_ITC.1 or FPT_ITT.1 according to the second selection list in FCO_CPC_EXT.1.2 (which is contained within the first type), therefore the evaluator shall ensure that the test coverage for these SFRs includes their usage in the registration process.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">If the ST uses the second type of communication channel in the selection in FCO_CPC_EXT.1.2 then the evaluator shall test the channel via the Evaluation Activities for FTP_TRP.1/Join.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">If the ST uses the ‘no channel’ selection, then no test is required.</h:p>
+                      </test>
+                    </testlist>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 4: The evaluator shall perform one of the following tests, according to the TOE characteristics identified in its TSS and operational guidance: </h:p>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">If the registration channel is not subsequently used for inter-component communication, and in all cases where the second selection in FCO_CPC_EXT.1.2 is made (i.e., using FTP_TRP.1/Join) then the evaluator shall confirm that the registration channel can no longer be used after the registration process has completed, by attempting to use the channel to communicate with each of the endpoints after registration has completed.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">If the registration channel is subsequently used for intercomponent communication then the evaluator shall confirm that any aspects identified in the operational guidance as necessary to meet the requirements for a steady-state intercomponent channel (as in FTP_ITC.1 or FPT_ITT.1) can indeed be carried out (e.g., there might be a requirement to replace the default key pair and/or public key certificate).</h:p>
+                      </test>
+                    </testlist>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 5: For each aspect of the security of the registration channel that operational guidance states can be modified by the operational environment in order to improve the channel security (see AGD_PRE.1 refinement item 2 in (see the requirements on Preparative Procedures in 3.4.1.2), the evaluator shall confirm, by following the procedure described in the operational guidance, that this modification can be successfully carried out.</h:p>
+                  </test>
+                </testlist>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="fco-cpc-ext-1-2">
@@ -1419,6 +1592,18 @@ FTP_TRP.1/Admin</rationale>
               <h:p style="text-align: left;">If “key encapsulation” is selected, FCS_COP.1/KeyEncap from Annex B must be claimed, which specifies the relevant list of standards. </h:p>
               <h:p style="text-align: left;">If “key wrapping” is selected, FCS_COP.1/KeyWrap from Annex B must be claimed, which specifies the relevant list of standards.</h:p>
             </note>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">274. The evaluator shall ensure that the TSS documents that the security strength supported by the selected key distribution methods is sufficient for the security strength of the keys distributed through those methods. </h:p>
+                <h:p style="text-align: left;">275. It is not necessary to identify the services that use each key distribution method here. That information should be documented in the requirements for the individual services and protocols that invoke key distribution.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">276. The evaluator shall verify that the AGD guidance instructs the administrator how to configure the TOE to use the selected key distribution methods.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">277. Specific testing for this component is covered by testing for the claimed components in FCS_COP.1/KeyEncap, FCS_COP.1/KeyWrap, and the applicable key establishment or key derivation mechanisms claimed under FCS_CKM.1/AKG, FCS_CKM.5, FCS_CKM_EXT.8, or FCS_CKM_EXT.3.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_CKM.6 Timing and Event of Cryptographic Key Destruction -->
@@ -1624,169 +1809,127 @@ FTP_TRP.1/Admin</rationale>
             </note>
             <aactivity level="component">
               <TSS>
-                The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
-						nonces, and tags in conformance with the relevant specifications.
-                <h:p/>
-                If a CCM mode algorithm is selected, then the evaluator shall examine the TOE summary
-						specification to confirm that it describes how the nonce is generated and that the same nonce is
-						never reused to encrypt different plaintext pairs under the same key.
-                <h:p/>
-                If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary
-						specification to confirm that it describes how the IV is generated and that the same IV is never
-						reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm
-						that for each invocation of GCM, the length of the plaintext is at most (2
-                <h:sup>32</h:sup>)-2 blocks.
+                <h:p style="text-align: left;">313. The evaluator shall examine the TSS to ensure that it describes the construction of any IVs, nonces, and tags in conformance with the relevant specifications. </h:p>
+                <h:p style="text-align: left;">314. If a CCM mode algorithm is selected, then the evaluator shall examine the TOE summary specification to confirm that it describes how the nonce is generated and that the same nonce is never reused to encrypt different plaintext pairs under the same key. </h:p>
+                <h:p style="text-align: left;">315. If a GCM mode algorithm is selected, then the evaluator shall examine the TOE summary specification to confirm that it describes how the IV is generated and that the same IV is never reused to encrypt different plaintext pairs under the same key. The evaluator shall also confirm that for each invocation of GCM, the length of the plaintext is at most (2<h:sup>32</h:sup>)-2 blocks</h:p>
               </TSS>
-              <Guidance/>
+              <Guidance>
+                <h:p style="text-align: left;">316. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
               <Tests>
-                The following tests may require the developer to provide access to a test platform that
-						provides the evaluator with tools that are typically not found on factory products.
-						The following tests are conditional based on the selections made in the SFR. The
-						evaluator shall perform the following test or witness respective tests executed by
-						the developer. The tests must be executed on a platform that is as close as practically
-						possible to the operational platform (but which may be instrumented in terms of,
-						for example, use of a debug mode). Where the test is not carried out on the TOE
-						itself, the test platform shall be identified and the differences between test
-						environment and TOE execution environment shall be described.
-                <h:br/>
-                <h:b>AES-CCM</h:b>
-                <h:table border="1">
-                  <h:tr class="header" bgcolor="#cccccc">
-                    <h:td valign="top">Identifier</h:td>
-                    <h:td valign="top">Cryptographic Algorithm</h:td>
-                    <h:td valign="top">Cryptographic Key Sizes</h:td>
-                    <h:td valign="top">List of Standards</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td valign="top">AES-CCM </h:td>
-                    <h:td valign="top">AES in CCM mode with nonrepeating nonce, minimum size
-									of 64 bits</h:td>
-                    <h:td valign="top">256 bits</h:td>
-                    <h:td valign="top">
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 18033-3:2010 (Subclause 5.2),
-									FIPS PUB 197] [AES]
-                      <h:p/>
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 19772:2020 (Clause 7), NIST SP 800-38C] [CCM]
-                    </h:td>
-                  </h:tr>
-                </h:table>
-                To test the TOE’s implementation of AES-CCM authenticated encryption functionality the
-						evaluator shall perform the Algorithm Functional Tests described below using the following
-						input parameters:
-                <h:ul>
-                  <h:li>Key Size [256] bits</h:li>
-                  <h:li>Associated data size [0-65536] bits in increments of 8</h:li>
-                  <h:li>Payload size [0-256] bits in increments of 8</h:li>
-                  <h:li>IV/Nonce size [64-104] bits in increments of 8</h:li>
-                  <h:li>Tag size [32-128] bits in increments of 16</h:li>
-                </h:ul>
-                <h:br/>
-                <h:b>Algorithm Functional Tests</h:b>
-                Unless otherwise specified, the following tests should use random data, a tag size of 128 bits,
-						IV/Nonce size of 104 bits, payload size of 256 bits, and associated data size of 256 bits. If any of
-						these values are not supported, any supported value may be used. The evaluator shall compare
-						the output from each test case against results generated by a known-good implementation with
-						the same input parameters.
-                <h:br/>
-                <h:b>
-                  <h:i>Variable Associated Data Test</h:i>
-                </h:b>
-                For each claimed key size, and for each supported associated data size from 0 through 256 bits in
-						increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data.
-						In addition, for each key size, the TOE must be tested by encrypting 10 cases with associated
-						data lengths of 65536 bits, if supported.
-                <h:br/>
-                <h:b>
-                  <h:i>Variable Payload Test</h:i>
-                </h:b>
-                For each claimed key size, and for each supported payload size from 0 through 256 bits in
-						increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data.
-                <h:br/>
-                <h:b>
-                  <h:i>Variable Nonce Test</h:i>
-                </h:b>
-                For each claimed key size, and for each supported IV/Nonce size from 64 through 104 bits in
-						increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data.
-                <h:br/>
-                <h:b>
-                  <h:i>Variable Tag Test</h:i>
-                </h:b>
-                For each claimed key size, and for each supported tag size from 32 through 128 bits in
-						increments of 16 bits, the TOE must be tested by encrypting 10 test cases using all random data.
-                <h:br/>
-                <h:b>
-                  <h:i>Decryption Verification Test</h:i>
-                </h:b>
-                For each claimed key size, for each supported associated data size from 0 through 256 bits in
-						increments of 8 bits, for each supported payload size from 0 through 256 bits in increments of 8
-						bits, for each supported IV/Nonce size from 64 through 104 bits in increments of 8 bits, and for
-						each supported tag size from 32 through 128 bits in increments of 16 bits, the TOE must be
-						tested by decrypting 10 test cases using all random data.
-                <h:br/>
-                <h:b>AES-GCM</h:b>
-                <h:table border="1">
-                  <h:tr class="header" bgcolor="#cccccc">
-                    <h:td valign="top">Identifier</h:td>
-                    <h:td valign="top">Cryptographic Algorithm</h:td>
-                    <h:td valign="top">Cryptographic Key Sizes</h:td>
-                    <h:td valign="top">List of Standards</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td valign="top">AES-GCM </h:td>
-                    <h:td valign="top">
-                      AES in GCM mode with nonrepeating IVs using 
-									[<h:b>selection:</h:b>
-                      deterministic, DRBG-based] IV construction; 
-									the tag must be of length [<h:b>selection:</h:b>
-                      96, 104, 112, 120, or 128] bits.
-                    </h:td>
-                    <h:td valign="top">256 bits</h:td>
-                    <h:td valign="top">
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 18033-3:2010 (Subclause 5.2),
-									FIPS PUB 197] [AES]
-                      <h:p/>
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 19772:2020 (Clause 10), NIST SP 800-38D] [GCM]
-                    </h:td>
-                  </h:tr>
-                </h:table>
-                To test the TOE’s implementation of AES-GCM authenticated encryption functionality the
-						evaluator shall perform the Encryption Algorithm Functional Tests and Decryption Algorithm
-						Functional Tests as described below using the following input parameters.
-                <h:ul>
-                  <h:li>Key Size [256] bits</h:li>
-                  <h:li>Associated data size [0-65536] bits</h:li>
-                  <h:li>Payload size [0-65536] bits</h:li>
-                  <h:li>IV size [96] bits</h:li>
-                  <h:li>Tag size [96, 104, 112, 120, 128] bits</h:li>
-                </h:ul>
-                <h:br/>
-                <h:b>Encryption Algorithm Functional Tests</h:b>
-                The evaluator shall generate 15 test cases using random data for each combination of
-						the above parameters as follows:
-                <h:ul>
-                  <h:li>Each claimed key size,</h:li>
-                  <h:li>Each supported tag size,</h:li>
-                  <h:li>Four supported non-zero payload sizes, such that two are multiples of 128 bits
-							and two are not multiples of 128 bits,</h:li>
-                  <h:li>Four supported non-zero associated data sizes, such that two are multiples of 
-							128 bits and two are not multiples of 128 bits, and</h:li>
-                  <h:li>An associated data size of zero, if supported.</h:li>
-                </h:ul>
-                Note that the IV size is always 96 bits.
-						The evaluator shall compare the output from each test case against results generated by a known-
-						good implementation with the same input parameters.
-                <h:br/>
-                <h:b>
-                  <h:i>Decryption Algorithm Functional Tests</h:i>
-                </h:b>
-                The evaluator shall test the authenticated decrypt functionality of AES-GCM by supplying 15
-						test cases for the supported combinations of the parameters as described above. For each
-						parameter combination the evaluator shall introduce an error into either the ciphertext or the Tag
-						such that approximately half of the cases are correct and half the cases contain errors.
+                <h:p style="text-align: left;">317. The following tests may require the developer to provide access to a test platform that provides the evaluator with tools that are typically not found on factory products. </h:p>
+                <h:p style="text-align: left;">318. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>AES-CCM</h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">319. To test the TOE’s implementation of AES-CCM authenticated encryption functionality the evaluator shall perform the Algorithm Functional Tests described below using the following input parameters: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">Key Size [128, 256] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Associated data size [0-65536] bits in increments of 8 </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Payload size [0-256] bits in increments of 8 </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">IV/Nonce size [64-104] bits in increments of 8 </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Tag size [32-128] bits in increments of 16 </h:p>
+                      </h:li>
+                    </h:ul>
+                    <h:p style="text-align: left;">
+                      <h:b>Algorithm Functional Test </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">320. Unless otherwise specified, the following tests should use random data, a tag size of 128 bits, IV/Nonce size of 104 bits, payload size of 256 bits, and associated data size of 256 bits. If any of these values are not supported, any supported value may be used. The evaluator shall compare the output from each test case against results generated by a known-good implementation with the same input parameters.</h:p>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Variable Associated Data Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">321. For each claimed key size, and for each supported associated data size from 0 through 256 bits in increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data. In addition, for each key size, the TOE must be tested by encrypting 10 cases with associated data lengths of 65536 bits, if supported.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Variable Payload Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">322. For each claimed key size, and for each supported payload size from 0 through 256 bits in increments of 8 bits, the TOE must be tested by encrypting 10 test cases using all random data.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Variable Tag Test</h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">323. For each claimed key size, and for each supported tag size from 32 through 128 bits in increments of 16 bits, the TOE must be tested by encrypting 10 test cases using all random data.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Decryption Verification Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">324. For each claimed key size, for each supported associated data size from 0 through 256 bits in increments of 8 bits, for each supported payload size from 0 through 256 bits in increments of 8 bits, for each supported IV/Nonce size from 64 through 104 bits in increments of 8 bits, and for each supported tag size from 32 through 128 bits in increments of 16 bits, the TOE must be tested by decrypting 10 test cases using all random data.</h:p>
+                      </test>
+                    </testlist>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">AES-GCM </h:p>
+                    <h:p style="text-align: left;">325. To test the TOE’s implementation of AES-GCM authenticated encryption functionality the evaluator shall perform the Encryption Algorithm Functional Tests and Decryption Algorithm Functional Tests as described below using the following input parameters: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">Key Size [128, 256] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Associated data size [0-65536] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Payload size [0-65536] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">IV size [96] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Tag size [96, 104, 112, 120, 128] bits</h:p>
+                      </h:li>
+                    </h:ul>
+                    <testlist>
+                      <h:p style="text-align: left;"></h:p>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Encryption Algorithm Functional Tests </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">326. The evaluator shall generate 15 test cases using random data for each combination of the above parameters as follows: </h:p>
+                        <h:ul>
+                          <h:li>
+                            <h:p style="text-align: left;">Each claimed key size, </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Each supported tag size, </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Four supported non-zero payload sizes, such that two are multiples of 128 bits and two are not multiples of 128 bits, </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Four supported non-zero associated data sizes, such that two are multiples of 128 bits and two are not multiples of 128 bits, and </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">An associated data size of zero, if supported. </h:p>
+                          </h:li>
+                        </h:ul>
+                        <h:p style="text-align: left;">327. Note that the IV size is always 96 bits. </h:p>
+                        <h:p style="text-align: left;">328. The evaluator shall compare the output from each test case against results generated by a known- good implementation with the same input parameters.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Decryption Algorithm Functional Tests </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">329. The evaluator shall test the authenticated decrypt functionality of AES-GCM by supplying 15 test cases for the supported combinations of the parameters as described above. For each parameter combination the evaluator shall introduce an error into either the Ciphertext or the Tag such that approximately half of the cases are correct and half the cases contain errors.</h:p>
+                      </test>
+                    </testlist>
+                  </test>
+                </testlist>
               </Tests>
             </aactivity>
           </f-element>
@@ -1797,6 +1940,53 @@ FTP_TRP.1/Admin</rationale>
           <depends on-sel="nd_fcs_ntp_ext.1.2_4"/>
           <f-element id="fcs-cop-1-1-cmac">
             <title><h:p style="text-align: left;">The TSF shall perform <h:i>CMAC</h:i> in accordance with a specified cryptographic algorithm <h:i>AES using CMAC mode</h:i> and cryptographic key sizes <h:i>128 bits</h:i> that meet the following:</h:p> <selectables><selectable id="nd_fcs_cop.1.1_CMAC_1">ISO/IEC 9797-1:2011 subclause 7.6 (CMAC) and ISO/IEC 18033-3:2010 subclause 5.2 (AES)</selectable><selectable id="nd_fcs_cop.1.1_CMAC_2">NIST SP 800-38B (CMAC) and NIST FIPS 197 (AES)</selectable></selectables>.</title>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">376. The evaluator shall examine the TSS to determine that it specifies the cryptographic algorithm and 128 bit key size supported by the TOE for CMAC.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">377. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>CMAC Generation Test </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">378. To test the generation capability of AES-CMAC, the evaluator shall provide to the TSF, for each key length-message length-CMAC length tuple (in bytes), a set of eight arbitrary key-plaintext tuples that will result in the generation of a known MAC value when encrypted. The evaluator shall then verify that the correct MAC was generated in each case.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">CMAC Verification Test </h:p>
+                    <h:p style="text-align: left;">379. To test the verification capability of AES-CMAC, the evaluator shall provide to the TSF, for each key length-message length-CMAC length tuple (in bytes), a set of 20 arbitrary key-MAC tuples that will result in the generation of known messages when verified. The evaluator shall then verify that the correct message was generated in each case. </h:p>
+                    <h:p style="text-align: left;">380. The following information should be used by the evaluator to determine the key length-message length-CMAC length tuples that should be tested:</h:p>
+                    <h:p style="text-align: left;">Key length: Values will include the following: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">16 </h:p>
+                      </h:li>
+                    </h:ul>
+                    <h:p style="text-align: left;">Message length: Values will include the following: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">0 (optional) </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Largest value supported by the implementation (no greater than 65536) </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Two values divisible by 16 </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Two values not divisible by 16 </h:p>
+                      </h:li>
+                    </h:ul>
+                    <h:p style="text-align: left;">CMAC length: Smallest value supported by the implementation (no less than 1) </h:p>
+                    <h:p style="text-align: left;">381. 16 Any supported CMAC length between the minimum and maximum values</h:p>
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_COP.1/DataEncryption Cryptographic Operation (AES Data Encryption/Decryption) -->
@@ -1849,7 +2039,17 @@ FTP_TRP.1/Admin</rationale>
                       <h:b>SHA-256, SHA-384, SHA-512</h:b>
                     </h:p>
                     <h:p style="text-align: left;">139. To test the TOE’s ability to generate hash digests using SHA2 the evaluator shall perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Test for each claimed SHA2 algorithm.</h:p>
-                    <testlist><h:p style="text-align: left;"></h:p><h:p style="text-align: left;"><h:b>Algorithm Functional Test </h:b></h:p><h:p style="text-align: left;">140. The evaluator shall generate a number of test cases equal to the block size of the hash (512 for SHA2-256; 1024 for the other SHA2 algorithms). </h:p><h:p style="text-align: left;">141. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported. </h:p><h:p style="text-align: left;">142. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported.</h:p><h:p style="text-align: left;"><h:b>Monte Carlo Test </h:b></h:p><h:p style="text-align: left;">143. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation. </h:p><h:p style="text-align: left;">144. There are two versions of the Monte Carlo test for SHA-1 and SHA-2. Either one is acceptable. For the Standard Monte Carlo test the message hashed is always three times the length of the initial seed. </h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>For j = 0 to 99 
+                    <testlist>
+                      <h:p style="text-align: left;"></h:p>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Algorithm Functional Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">140. The evaluator shall generate a number of test cases equal to the block size of the hash (512 for SHA2-256; 1024 for the other SHA2 algorithms). </h:p>
+                        <h:p style="text-align: left;">141. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported. </h:p>
+                        <h:p style="text-align: left;">142. Each test case is to consist of random data of a random length between 0 and 65536 bits, or the largest size supported.</h:p>
+                      </test>
+                      <test><h:p style="text-align: left;"><h:b>Monte Carlo Test </h:b></h:p><h:p style="text-align: left;">143. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation. </h:p><h:p style="text-align: left;">144. There are two versions of the Monte Carlo test for SHA-1 and SHA-2. Either one is acceptable. For the Standard Monte Carlo test the message hashed is always three times the length of the initial seed. </h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>For j = 0 to 99 
        A = B = C = SEED 
        For i = 0 to 999 
                 MSG = A || B || C 
@@ -1872,7 +2072,15 @@ For j = 0 to 99
                 B = C 
                 C = MD 
         Output MD 
-        SEED = MD </h:code></h:pre><h:p style="text-align: left;">146. The evaluator shall compare the output against results generated by a known-good implementation with the same input</h:p><h:p style="text-align: left;"><h:b>Large Data Test </h:b></h:p><h:p style="text-align: left;">147. The implementation must be tested against one test case each on large data messages of 1GB, 2GB, 4GB, and 8GB of data as supported. The data need not be random. It may, for example, consist of a repeated pattern of 64 bits. </h:p><h:p style="text-align: left;">148. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p></testlist>
+        SEED = MD </h:code></h:pre><h:p style="text-align: left;">146. The evaluator shall compare the output against results generated by a known-good implementation with the same input</h:p></test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Large Data Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">147. The implementation must be tested against one test case each on large data messages of 1GB, 2GB, 4GB, and 8GB of data as supported. The data need not be random. It may, for example, consist of a repeated pattern of 64 bits. </h:p>
+                        <h:p style="text-align: left;">148. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p>
+                      </test>
+                    </testlist>
                   </test>
                   <h:br/>
                   <test>
@@ -1880,7 +2088,24 @@ For j = 0 to 99
                       <h:b>SHA3-384, SHA3-512 </h:b>
                     </h:p>
                     <h:p style="text-align: left;">149. To test the TOE’s ability to generate hash digests using SHA3 the evaluator shall perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Tests for each claimed SHA3 algorithm.</h:p>
-                    <testlist><h:p style="text-align: left;"><h:b>Algorithm Functional Test</h:b></h:p><h:p style="text-align: left;">150. Generate a test case consisting of random data for every message length from 0 bits (or the smallest supported message size) to rate bits, where rate equals </h:p><h:ul><h:li><h:p style="text-align: left;">832 for SHA3-384 and </h:p></h:li><h:li><h:p style="text-align: left;">576 for SHA3-512. </h:p></h:li></h:ul><h:p style="text-align: left;">151. Additionally, generate tests cases of random data for messages of every multiple of (rate+1) bits starting at length rate, and continuing until 65535 is exceeded. </h:p><h:p style="text-align: left;">152. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p><h:p style="text-align: left;"><h:b>Monte Carlo Test</h:b></h:p><h:p style="text-align: left;">153. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation.</h:p><h:p style="text-align: left;">154. For this Monte Carlo Test, the hashed message is always the same length as the seed.</h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>MD[0] = SEED 
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Algorithm Functional Test</h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">150. Generate a test case consisting of random data for every message length from 0 bits (or the smallest supported message size) to rate bits, where rate equals </h:p>
+                        <h:ul>
+                          <h:li>
+                            <h:p style="text-align: left;">832 for SHA3-384 and </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">576 for SHA3-512. </h:p>
+                          </h:li>
+                        </h:ul>
+                        <h:p style="text-align: left;">151. Additionally, generate tests cases of random data for messages of every multiple of (rate+1) bits starting at length rate, and continuing until 65535 is exceeded. </h:p>
+                        <h:p style="text-align: left;">152. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p>
+                      </test>
+                      <test><h:p style="text-align: left;"><h:b>Monte Carlo Test</h:b></h:p><h:p style="text-align: left;">153. Monte Carlo tests begin with a single seed and run 100 iterations of the chained computation.</h:p><h:p style="text-align: left;">154. For this Monte Carlo Test, the hashed message is always the same length as the seed.</h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>MD[0] = SEED 
 INITIAL_SEED_LENGTH = LEN(SEED) 
 For 100 iterations 
        For i = 1 to 1000 
@@ -1891,7 +2116,15 @@ For 100 iterations
                         MSG = MSG || INITIAL_SEED_LENGTH - LEN(MSG) 0 bits 
                 MD[i] = SHA3(MSG) 
         MD[0] = MD[1000] 
-        Output MD[0] </h:code></h:pre><h:p style="text-align: left;">155. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p><h:p style="text-align: left;"><h:b>Large Data Test </h:b></h:p><h:p style="text-align: left;">156. The implementation must be tested against one test case each on large data messages of 1GB, 2GB, 4GB, and 8GB of data as supported. The data need not be random. It may, for example, consist of a repeated pattern of 64 bits. </h:p><h:p style="text-align: left;">157. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p></testlist>
+        Output MD[0] </h:code></h:pre><h:p style="text-align: left;">155. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p></test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Large Data Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">156. The implementation must be tested against one test case each on large data messages of 1GB, 2GB, 4GB, and 8GB of data as supported. The data need not be random. It may, for example, consist of a repeated pattern of 64 bits. </h:p>
+                        <h:p style="text-align: left;">157. The evaluator shall compare the output against results generated by a known-good implementation with the same input.</h:p>
+                      </test>
+                    </testlist>
                   </test>
                 </testlist>
               </Tests>
@@ -2029,6 +2262,97 @@ For 100 iterations
               </h:p>
               <h:p style="text-align: left;">The only anticipated use of key encapsulation is the use of ML-KEM as part of key establishment for trusted communication.</h:p>
             </note>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">330. The evaluator shall ensure that the TSS documents that the selection of the key size is sufficient for the security strength of the key encapsulated. </h:p>
+                <h:p style="text-align: left;">331. The evaluator shall examine the TSS to verify that any one-time values such as nonces or masks are constructed and used in accordance with the relevant standards.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">332. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">333. The following tests may require the developer to provide access to a test platform that provides the evaluator with tools that are typically not found on factory products. </h:p>
+                <h:p style="text-align: left;">334. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>ML-KEM Key Encapsulation</h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">335. To test the TOE’s implementation of ML-KEM key encapsulation/decapsulation, the evaluator shall perform the Encapsulation Test and the Decapsulation Test using the following input parameters: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">Encapsulation Parameters: </h:p>
+                        <h:ul>
+                          <h:li>
+                            <h:p style="text-align: left;">Parameter set [ML-KEM-1024] </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Previously generated encapsulation key (ek) </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Random value (m) [32 bytes] </h:p>
+                          </h:li>
+                        </h:ul>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Decapsulation Parameters: </h:p>
+                        <h:ul>
+                          <h:li>
+                            <h:p style="text-align: left;">Parameter set [ML-KEM-1024] </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Previously generated decapsulation key (dk) </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Previously generated ciphertext (c) [32 bytes]</h:p>
+                          </h:li>
+                        </h:ul>
+                      </h:li>
+                    </h:ul>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">Encapsulation Test </h:p>
+                        <h:p style="text-align: left;">336. For each supported parameter set the evaluator shall generate 25 test cases consisting of an encapsulation key ek and random value m. For each test case the valuator shall require the implementation under test to generate the corresponding shared secret k and ciphertext c. To determine correctness, the evaluator shall compare the resulting values with those generated using a known-good implementation using the same inputs.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Encapsulation Key Check (if supported) </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">337. The evaluator shall generate 10 encapsulation keys such that: </h:p>
+                        <h:ul>
+                          <h:li>
+                            <h:p style="text-align: left;">Five of the encapsulation keys are valid, and </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Five of the encapsulation keys are modified such that a value in the noisy linear system is encoded into the key as a value greater than Q. </h:p>
+                          </h:li>
+                        </h:ul>
+                        <h:p style="text-align: left;">338. The evaluator shall invoke the TOE’s Encapsulation Key Check functionality to determine the validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys should be determined invalid.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Decapsulation Key Check (if supported) </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">339. The evaluator shall generate 10 decapsulation keys such that: </h:p>
+                        <h:ul>
+                          <h:li>
+                            <h:p style="text-align: left;">Five of the decapsulation keys are valid, and </h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p style="text-align: left;">Five of the decapsulation keys are modified such that the concatenated values ek||H(ek) will no longer match by modifying H(ek) to be a different value.</h:p>
+                          </h:li>
+                        </h:ul>
+                        <h:p style="text-align: left;">340. The evaluator shall invoke the TOE’s Decapsulation Key Check functionality to determine the validity of the 10 keys. The unmodified keys should be determined valid, and the modified keys should be determined invalid.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">Decapsulation Test </h:p>
+                        <h:p style="text-align: left;">341. For each supported parameter set the evaluator shall use a single previously generated decapsulation key dk and generate 10 test cases consisting of valid and invalid ciphertexts c. For each test case the evaluator shall require the implementation under test to generate the corresponding shared secret k whether or not the ciphertext is valid. To determine correctness, the evaluator shall compare the resulting values with those generated using a known-good implementation using the same inputs.</h:p>
+                      </test>
+                    </testlist>
+                  </test>
+                </testlist>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_COP.1/KeyWrap Cryptographic Operation - Key Wrapping -->
@@ -2083,105 +2407,64 @@ For 100 iterations
             </note>
             <aactivity level="component">
               <TSS>
-                The evaluator shall ensure that the TSS documents that the selection of the key size is
-						sufficient for the security strength of the key wrapped.
-                <h:p/>
-                The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
-						nonces, and MACs in conformance with the relevant specifications.
+                <h:p style="text-align: left;">342. The evaluator shall ensure that the TSS documents that the selection of the key size is sufficient for the security strength of the key wrapped. </h:p>
+                <h:p style="text-align: left;">343. The evaluator shall examine the TSS to ensure that it describes the construction of any IVs, nonces, and MACs in conformance with the relevant specifications.</h:p>
               </TSS>
-              <Guidance/>
+              <Guidance>
+                <h:p style="text-align: left;">344. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
               <Tests>
-                For tests of AES-GCM and AES-CCM, see testing for FCS_COP.1/AEAD.
-						The following tests are conditional based on the selections made in the SFR. The evaluator
-						shall perform the following test or witness respective tests executed by the developer. The tests
-						must be executed on a platform that is as close as practically possible to the operational platform
-						(but which may be instrumented in terms of, for example, use of a debug mode). Where the test
-						is not carried out on the TOE itself, the test platform shall be identified and the differences
-						between test environment and TOE execution environment shall be described.
-                <h:br/>
-                <h:b>AES-KW</h:b>
-                <h:table border="1">
-                  <h:tr class="header" bgcolor="#cccccc">
-                    <h:td valign="top">Identifier</h:td>
-                    <h:td valign="top">Cryptographic Algorithm</h:td>
-                    <h:td valign="top">Cryptographic Key Sizes</h:td>
-                    <h:td valign="top">List of Standards</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td valign="top">AES-KW</h:td>
-                    <h:td valign="top">AES in KW mode</h:td>
-                    <h:td valign="top">256 bits</h:td>
-                    <h:td valign="top">
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 18033-3:2010 (Subclause 5.2),
-														FIPS PUB 197] [AES]
-                      <h:p/>
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 19772:2020 (clause 6), 
-														NIST SP 800-38F (Section 6.2)] [KW mode]
-                    </h:td>
-                  </h:tr>
-                </h:table>
-                To test the TOE’s ability to wrap keys using AES in Key Wrap mode the evaluator shall perform
-						the Algorithm Functional Tests using the following input parameters.
-                <h:ul>
-                  <h:li>Key size [256] bits</h:li>
-                  <h:li>Keyword cipher type [cipher, inverse]</h:li>
-                  <h:li>Payload sizes [128-4096] bits by 64s</h:li>
-                </h:ul>
-                <h:br/>
-                <h:b>Algorithm Functional Test</h:b>
-                The evaluator shall generate 100 encryption test cases using random data for each combination
-						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
-						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
-						divisible by 128.
-						The results shall be compared with those generated by a known-good implementation using the
-						same inputs.
-						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
-						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
-						determine correctness, the evaluator shall confirm that the results correspond as expected for
-						both the modified and unmodified values.
-                <h:br/>
-                <h:b>AES-KWP</h:b>
-                <h:table border="1">
-                  <h:tr class="header" bgcolor="#cccccc">
-                    <h:td valign="top">Identifier</h:td>
-                    <h:td valign="top">Cryptographic Algorithm</h:td>
-                    <h:td valign="top">Cryptographic Key Sizes</h:td>
-                    <h:td valign="top">List of Standards</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td valign="top">AES-KWP</h:td>
-                    <h:td valign="top">AES in KWP mode</h:td>
-                    <h:td valign="top">256 bits</h:td>
-                    <h:td valign="top">
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 18033-3:2010 (Subclause 5.2),
-														FIPS PUB 197] [AES]
-                      <h:p/>
-                      NIST SP 800-38F (Section 6.3) [KWP mode]
-                    </h:td>
-                  </h:tr>
-                </h:table>
-                To test the TOE’s ability to wrap keys using AES in Key Wrap with Padding mode with padding
-						the evaluator shall perform the Algorithm Functional Tests using the following input parameters.
-                <h:ul>
-                  <h:li>Key size [256] bits</h:li>
-                  <h:li>Keyword cipher type [cipher, inverse]</h:li>
-                  <h:li>Payload sizes [8-4096] bits by 8s</h:li>
-                </h:ul>
-                <h:br/>
-                <h:b>Algorithm Functional Test</h:b>
-                The evaluator shall generate 100 encryption test cases using random data for each combination
-						of claimed key size, keyword cipher type, and six supported payload sizes such that the payload
-						sizes include the minimum, the maximum, two that are divisible by 128, and two that are not
-						divisible by 128.
-						The results shall be compared with those generated by a known-good implementation using the
-						same inputs.
-						The evaluator shall generate 100 decryption test cases using the same parameters as above, but
-						with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To
-						determine correctness, the evaluator shall confirm that the results correspond as expected for
-						both the modified and unmodified values.
+                <h:p style="text-align: left;">345. For tests of AES-GCM and AES-CCM, see testing for FCS_COP.1/AEAD. </h:p>
+                <h:p style="text-align: left;">346. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>AES-KW</h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">347. To test the TOE’s ability to wrap keys using AES in Key Wrap mode the evaluator shall perform the Algorithm Functional Tests using the following input parameters: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">Key size [256] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Keyword cipher type [cipher, inverse] </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Payload sizes [128-4096] bits by 64s </h:p>
+                      </h:li>
+                    </h:ul>
+                    <h:p style="text-align: left;">
+                      <h:b>Algorithm Functional Test </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">348. The evaluator shall generate 100 encryption test cases using random data for each combination of claimed key size, keyword cipher type, and six supported payload sizes such that the payload sizes include the minimum, the maximum, two that are divisible by 128, and two that are not divisible by 128. </h:p>
+                    <h:p style="text-align: left;">349. The results shall be compared with those generated by a known-good implementation using the same inputs. </h:p>
+                    <h:p style="text-align: left;">350. The evaluator shall generate 100 decryption test cases using the same parameters as above, but with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To determine correctness, the evaluator shall confirm that the results correspond as expected for both the modified and unmodified values.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>AES-KWP </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">351. To test the TOE’s ability to wrap keys using AES in Key Wrap with Padding mode with padding the evaluator shall perform the Algorithm Functional Tests using the following input parameters: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">Key size [256] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Keyword cipher type [cipher, inverse] </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Payload sizes [8-4096] bits by 8s </h:p>
+                      </h:li>
+                    </h:ul>
+                    <h:p style="text-align: left;">
+                      <h:b>Algorithm Functional Test</h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">352. The evaluator shall generate 100 encryption test cases using random data for each combination of claimed key size, keyword cipher type, and six supported payload sizes such that the payload sizes include the minimum, the maximum, two that are divisible by 128, and two that are not divisible by 128. </h:p>
+                    <h:p style="text-align: left;">353. The results shall be compared with those generated by a known-good implementation using the same inputs. </h:p>
+                    <h:p style="text-align: left;">354. The evaluator shall generate 100 decryption test cases using the same parameters as above, but with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To determine correctness, the evaluator shall confirm that the results correspond as expected for both the modified and unmodified values.</h:p>
+                  </test>
+                </testlist>
               </Tests>
             </aactivity>
           </f-element>
@@ -2898,234 +3181,156 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
             </note>
             <aactivity level="component">
               <TSS>
-                The evaluator shall examine the TSS to ensure that it describes the construction of any IVs,
-						tweak values, and counters in conformance with the relevant specifications.
-                <h:p/>
-                If XTS-AES is claimed then the evaluator shall examine the TSS to verify that the TOE creates
-						full-length keys by methods that ensure that the two key halves are distinct.
+                <h:p style="text-align: left;">355. The evaluator shall examine the TSS to ensure that it describes the construction of any IVs, tweak values, and counters in conformance with the relevant specifications. </h:p>
+                <h:p style="text-align: left;">356. If XTS-AES is claimed then the evaluator shall examine the TSS to verify that the TOE creates full-length keys by methods that ensure that the two key halves are different and independent. </h:p>
+                <h:p style="text-align: left;">357. The evaluator shall examine the TSS to ensure it identifies the key size(s) and mode(s) supported by the TOE for data AES encryption/decryption.</h:p>
               </TSS>
-              <Guidance/>
+              <Guidance>
+                <h:p style="text-align: left;">358. The evaluator shall verify that the AGD guidance instructs the administrator on how to configure the TOE to use the selected mode(s) and key size(s) for AES encryption/decryption.</h:p>
+              </Guidance>
               <Tests>
-                The following tests require the developer to provide access to a test platform that
-						provides the evaluator with tools that are typically not found on factory products.
-						The following tests are conditional based on the selections made in the SFR. The
-						evaluator shall perform the following test or witness respective tests executed by
-						the developer. The tests must be executed on a platform that is as close as practically
-						possible to the operational platform (but which may be instrumented in terms of,
-						for example, use of a debug mode). Where the test is not carried out on the TOE
-						itself, the test platform shall be identified and the differences between test
-						environment and TOE execution environment shall be described.
-                <h:br/>
-                <h:b>AES-CBC</h:b>
-                <h:table border="1">
-                  <h:tr class="header" bgcolor="#cccccc">
-                    <h:td valign="top">Identifier</h:td>
-                    <h:td valign="top">Cryptographic Algorithm</h:td>
-                    <h:td valign="top">Cryptographic Key Sizes</h:td>
-                    <h:td valign="top">List of Standards</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td valign="top">AES-CBC</h:td>
-                    <h:td valign="top">AES in CBC mode with non-repeating and unpredictable IVs</h:td>
-                    <h:td valign="top">256 bits</h:td>
-                    <h:td valign="top">
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 18033-3:2010 (Subclause 5.2),
-										FIPS PUB 197] [AES]
-                      <h:p/>
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 10116:2017 (Clause 7), 
-										NIST SP 800-38A] [CBC]
-                    </h:td>
-                  </h:tr>
-                </h:table>
-                To test the TOE’s ability to encrypt/decrypt data using AES in CBC mode, the evaluator 
-						shall perform Algorithm Functional Tests and Monte Carlo Tests using the following
-						input parameters:
-                <h:ul>
-                  <h:li>Key size [256] bits</h:li>
-                  <h:li>Direction [encryption, decryption]</h:li>
-                </h:ul>
-                <h:br/>
-                <h:b>Algorithm Functional Tests</h:b>
-                Algorithm Functional Tests are designed to verify the correct operation of the logical
-						components of the algorithm implementation under normal operation using different block sizes.
-						For AES-CBC, there are two types of AFTs:
-                <h:br/>
-                <h:b>
-                  <h:i>Known-Answer Tests</h:i>
-                </h:b>
-                For each combination of direction and claimed key size, the TOE must be tested using the
-						GFSBox, KeySbox, VarTxt, and VarKey test cases listed in Appendixes B through E of
-                <h:i>The
-						Advanced Encryption Standard Algorithm Validation Suite (AESAVS)</h:i>, NIST, 15 November 2002.
-                <h:br/>
-                <h:b>
-                  <h:i>Multi-Block Message Tests</h:i>
-                </h:b>
-                For each combination of direction and claimed key size, the TOE must be tested against 10 test
-						cases consisting of a random IV, random key, and random plaintext/ciphertext. The
-						plaintext/ciphertext starts with a length of 16 bytes and increases by 16 bytes for each test case
-						until reaching 160 bytes.
-                <h:br/>
-                <h:b>
-                  <h:i>Monte Carlo Tests</h:i>
-                </h:b>
-                Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE
-						must process the test cases according to the following algorithm once for each combination of
-						direction and key size:           <h:pre>
-		Key[0] = Key
-		IV[0] = IV
-		PT[0] = PT
-		for i = 0 to 99 {
-			Output Key[i], IV[i], PT[0]
-			for j = 0 to 999 {
-				if (j == 0) {
-					CT[j] = AES-CBC-Encrypt(Key[i], IV[i], PT[j])
-					PT[j+1] = IV[i]
-				} else {
-					CT[j] = AES-CBC-Encrypt(Key[i], PT[j])
-					PT[j+1] = CT[j-1]
-				}
-			}
-			Output CT[j]
-			AES_KEY_SHUFFLE(Key, CT)
-			IV[i+1] = CT[j]
-			PT[0] = CT[j-1]
-		}
-		</h:pre>	
-		where            <h:pre>AES_KEY_SHUFFLE</h:pre> is defined as:            <h:pre>
-		If ( keylen = 128 )
-			Key[i+1] = Key[i] xor MSB(CT[j], 128)
-		If ( keylen = 192 )
-			Key[i+1] = Key[i] xor (LSB(CT[j-1], 64) || MSB(CT[j], 128))
-		If ( keylen = 256 )
-			Key[i+1] = Key[i] xor (MSB(CT[j-1], 128) || MSB(CT[j], 128))
-		</h:pre>
-						The above pseudocode is for encryption. For decryption, swap all instances of CT and PT.
-						The initial IV, key, and plaintext/ciphertext should be random.
-						The evaluator shall test the decrypt functionality using the same test as above,
-						exchanging CT and PT, and replacing AES-CBC-Encrypt with AES-CBC-Decrypt.
-                <h:br/>
-                <h:b>XTS-AES</h:b>
-                <h:table border="1">
-                  <h:tr class="header" bgcolor="#cccccc">
-                    <h:td valign="top">Identifier</h:td>
-                    <h:td valign="top">Cryptographic Algorithm</h:td>
-                    <h:td valign="top">Cryptographic Key Sizes</h:td>
-                    <h:td valign="top">List of Standards</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td valign="top">XTS-AES</h:td>
-                    <h:td valign="top">AES in XTS mode with unique tweak values that are consecutive
-									non-negative integers starting at an arbitrary non-negative integer</h:td>
-                    <h:td valign="top">512 bits</h:td>
-                    <h:td valign="top">
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 18033-3:2010 (Subclause 5.2),
-										FIPS PUB 197] [AES]
-                      <h:p/>
-                      [<h:b>selection:</h:b>
-                      IEEE Std. 1619-2018, 
-										NIST SP 800-38E] [XTS]
-                    </h:td>
-                  </h:tr>
-                </h:table>
-                To test the TOE’s ability to encrypt/decrypt data using AES in XTS mode, the evaluator shall
-						perform the Single Data Unit Test and the Multiple Data Unit Test using the following input
-						parameters:
-                <h:ul>
-                  <h:li>Direction [encryption, decryption]</h:li>
-                  <h:li>Key size [512] bits</h:li>
-                  <h:li>Tweak value format [128-bit hex string, data unit sequence number]</h:li>
-                </h:ul>
-                <h:br/>
-                <h:b>Single Data Unit Test</h:b>
-                For each combination of claimed key size, direction, and supported tweak value format, the
-						evaluator shall generate 50 test cases consisting of random payload data. The payload data size is
-						determined randomly for each test case from supported values within the range [128-65536] bits.
-						The payload size and data unit size must be equal.
-                <h:br/>
-                <h:b>Multiple Data Unit Test</h:b>
-                For each combination of claimed key size, direction, and supported tweak value format, the
-						evaluator shall generate 50 test cases consisting of random payload data. The payload data size is
-						determined randomly for each test case from supported values within the range [128-65536] bits.
-						Likewise, the data unit size is determined randomly for each test case from supported values
-						within the range [128-65535] bits. The payload size and data unit size must not be equal.
-						The evaluator shall verify the correctness of the TSF’s implementation by comparing values
-						generated by the TSF with those generated by a known good implementation using the same
-						input parameters.
-                <h:br/>
-                <h:b>AES-CTR</h:b>
-                <h:table border="1">
-                  <h:tr class="header" bgcolor="#cccccc">
-                    <h:td valign="top">Identifier</h:td>
-                    <h:td valign="top">Cryptographic Algorithm</h:td>
-                    <h:td valign="top">Cryptographic Key Sizes</h:td>
-                    <h:td valign="top">List of Standards</h:td>
-                  </h:tr>
-                  <h:tr>
-                    <h:td valign="top">AES-CTR</h:td>
-                    <h:td valign="top">AES in Counter Mode with a non-repeating initial counter and
-									with no repeated use of counter values across multiple messages with the 
-									same secret key.</h:td>
-                    <h:td valign="top">256 bits</h:td>
-                    <h:td valign="top">
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 18033-3:2010 (Subclause 5.2),
-										FIPS PUB 197] [AES]
-                      <h:p/>
-                      [<h:b>selection:</h:b>
-                      ISO/IEC 10116:2017 (Clause 10), 
-										NIST SP 800-38A] [CTR]
-                    </h:td>
-                  </h:tr>
-                </h:table>
-                To test the TOE’s ability to encrypt/decrypt data using AES in CTR mode, the evaluator shall
-						perform the Algorithm Functional Test and the Counter Test using the following input
-						parameters:
-                <h:ul>
-                  <h:li>Direction [encryption, decryption]</h:li>
-                  <h:li>Key size [256] bits</h:li>
-                </h:ul>
-                <h:br/>
-                <h:b>Algorithm Functional Tests</h:b>
-                Algorithm Functional Tests are designed to verify the correct operation of the logical
-						components of the algorithm implementation under normal operation using different block sizes.
-						For AES-CTR, there are three types of AFTs:
-                <h:br/>
-                <h:b>
-                  <h:i>Known-Answer Tests</h:i>
-                </h:b>
-                For each combination of direction and claimed key size, the TOE must be tested using the
-						GFSBox, KeySbox, VarTxt, and VarKey test cases listed in Appendixes B through E of
-                <h:i>The
-						Advanced Encryption Standard Algorithm Validation Suite (AESAVS)</h:i>, NIST, 15 November 2002.
-                <h:br/>
-                <h:b>
-                  <h:i>Single Block Message Tests</h:i>
-                </h:b>
-                For each combination of direction and claimed key, the evaluator shall generate 10 test cases
-						with a data size of 128 bits.
-                <h:br/>
-                <h:b>
-                  <h:i>Partial Block Message Tests</h:i>
-                </h:b>
-                Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE
-						must process the test cases according to the following algorithm once for each combination of
-						direction and key size:
-						For each combination of direction and claimed key, the evaluator shall generate five test cases
-						such that the data size is not a multiple of 128 bits.
-						The evaluator shall verify the correctness of the TSF’s implementation by comparing values
-						generated by the TSF with those generated by a known good implementation using the same
-						input parameters.
-                <h:br/>
-                <h:b>
-                  <h:i>Counter Test</h:i>
-                </h:b>
-                The evaluator shall generate a single message of 1000 blocks (128000 bits) and either encrypt or
-						decrypt it. Back-compute the IVs used. Verify that they are unique and increasing (encryption) or
-						decreasing (decryption).
+                <h:p style="text-align: left;"></h:p>
+                <testlist>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>AES-CBC </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">359. To test the TOE’s ability to encrypt/decrypt data using AES in CBC mode, the evaluator shall perform Algorithm Functional Tests and Monte Carlo Tests using the following input parameters: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">Key size [128, 256] bits </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Direction [encryption, decryption]</h:p>
+                      </h:li>
+                    </h:ul>
+                    <testlist>
+                      <h:p style="text-align: left;"></h:p>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Algorithm Functional Test</h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">360. Algorithm Functional Tests are designed to verify the correct operation of the logical components of the algorithm implementation under normal operation using different block sizes. For AES-CBC, there are two types of AFTs:</h:p>
+                        <testlist>
+                          <test>
+                            <h:p style="text-align: left;">
+                              <h:b>Known-Answer Tests</h:b>
+                            </h:p>
+                            <h:p style="text-align: left;">361. For each combination of direction and claimed key size, the TOE must be tested using the GFSBox, KeySbox, VarTxt, and VarKey test cases listed in Appendixes B through E of The Advanced Encryption Standard Algorithm Validation Suite (AESAVS), NIST, 15 November 2002.</h:p>
+                          </test>
+                          <test>
+                            <h:p style="text-align: left;">
+                              <h:b>Multi-Block Message Tests</h:b>
+                            </h:p>
+                            <h:p style="text-align: left;">362. For each combination of direction and claimed key size, the TOE must be tested against 10 test cases consisting of a random IV, random key, and random plaintext/ciphertext. The plaintext/ciphertext starts with a length of 16 bytes and increases by 16 bytes for each test case until reaching 160 bytes.</h:p>
+                          </test>
+                        </testlist>
+                      </test>
+                      <test><h:p style="text-align: left;"><h:b>Monte Carlo Tests</h:b></h:p><h:p style="text-align: left;">363. Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE must process the test cases according to the following algorithm once for each combination of direction and key size:</h:p><h:p style="text-align: left;"></h:p><h:pre><h:code>Key[0] = Key 
+IV[0] = IV 
+PT[0] = PT 
+for i = 0 to 99 { 
+        Output Key[i], IV[i], PT[0] 
+        for j = 0 to 999 { 
+                  if (j == 0) { 
+                             CT[j] = AES-CBC-Encrypt(Key[i], IV[i], PT[j]) 
+                             PT[j+1] = IV[i] 
+                  } else { 
+                             CT[j] = AES-CBC-Encrypt(Key[i], PT[j]) 
+                             PT[j+1] = CT[j-1] 
+                  } 
+         } 
+         Output CT[j] 
+         AES_KEY_SHUFFLE(Key, CT) 
+         IV[i+1] = CT[j] 
+         PT[0] = CT[j-1] 
+} 
+where AES_KEY_SHUFFLE is defined as: 
+If ( keylen = 128 ) 
+          Key[i+1] = Key[i] xor MSB(CT[j], 128) 
+If ( keylen = 192 ) 
+          Key[i+1] = Key[i] xor (LSB(CT[j-1], 64) || MSB(CT[j], 128)) 
+If ( keylen = 256 ) 
+          Key[i+1] = Key[i] xor (MSB(CT[j-1], 128) || MSB(CT[j], 128)) </h:code></h:pre><h:p style="text-align: left;">The above pseudocode is for encryption. For decryption, swap all instances of CT and PT.</h:p><h:p style="text-align: left;">The initial IV, key, and plaintext/ciphertext should be random.</h:p><h:p style="text-align: left;">The evaluator shall test the decrypt functionality using the same test as above, exchanging CT and PT, and replacing AES-CBC-Encrypt with AES-CBC-Decrypt.</h:p></test>
+                    </testlist>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>XTS-AES </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">364. To test the TOE’s ability to encrypt/decrypt data using AES in XTS mode, the evaluator shall perform the Single Data Unit Test and the Multiple Data Unit Test using the following input parameters: </h:p>
+                    <h:p style="text-align: left;">o Direction [encryption, decryption] </h:p>
+                    <h:p style="text-align: left;">o Key size [512] bits </h:p>
+                    <h:p style="text-align: left;">o Tweak value format [128-bit hex string, data unit sequence number]</h:p>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Single Data Unit Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">365. For each combination of claimed key size, direction, and supported tweak value format, the evaluator shall generate 50 test cases consisting of random payload data. The payload data size is determined randomly for each test case from supported values within the range [128-65536] bits. The payload size and data unit size must be equal.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Multiple Data Unit Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">366. For each combination of claimed key size, direction, and supported tweak value format, the evaluator shall generate 50 test cases consisting of random payload data. The payload data size is determined randomly for each test case from supported values within the range [128-65536] bits. Likewise, the data unit size is determined randomly for each test case from supported values within the range [128-65535] bits. The payload size and data unit size must not be equal. </h:p>
+                        <h:p style="text-align: left;">367. The evaluator shall verify the correctness of the TSF’s implementation by comparing values generated by the TSF with those generated by a known good implementation using the same input parameters.</h:p>
+                      </test>
+                    </testlist>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">
+                      <h:b>AES-CTR </h:b>
+                    </h:p>
+                    <h:p style="text-align: left;">368. To test the TOE’s ability to encrypt/decrypt data using AES in CTR mode, the evaluator shall perform the Algorithm Functional Test and the Counter Test using the following input parameters: </h:p>
+                    <h:ul>
+                      <h:li>
+                        <h:p style="text-align: left;">Direction [encryption, decryption] </h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p style="text-align: left;">Key size [128, 256] bits</h:p>
+                      </h:li>
+                    </h:ul>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Algorithm Functional Tests </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">369. Algorithm Functional Tests are designed to verify the correct operation of the logical components of the algorithm implementation under normal operation using different block sizes. For AES-CTR, there are three types of AFTs:</h:p>
+                        <testlist>
+                          <test>
+                            <h:p style="text-align: left;">
+                              <h:b>Known-Answer Tests </h:b>
+                            </h:p>
+                            <h:p style="text-align: left;">370. For each combination of direction and claimed key size, the TOE must be tested using the GFSBox, KeySbox, VarTxt, and VarKey test cases listed in Appendixes B through E of The Advanced Encryption Standard Algorithm Validation Suite (AESAVS), NIST, 15 November 2002.</h:p>
+                          </test>
+                          <test>
+                            <h:p style="text-align: left;">
+                              <h:b>Single Block Message Tests </h:b>
+                            </h:p>
+                            <h:p style="text-align: left;">371. For each combination of direction and claimed key, the evaluator shall generate 10 test cases with a data size of 128 bits.</h:p>
+                          </test>
+                          <test>
+                            <h:p style="text-align: left;">
+                              <h:b>Partial Block Message Tests </h:b>
+                            </h:p>
+                            <h:p style="text-align: left;">372. Monte Carlo tests are intended to test the implementation under strenuous conditions. The TOE must process the test cases according to the following algorithm once for each combination of direction and key size:</h:p>
+                            <h:p style="text-align: left;">373. For each combination of direction and claimed key, the evaluator shall generate five test cases such that the data size is not a multiple of 128 bits. </h:p>
+                            <h:p style="text-align: left;">374. The evaluator shall verify the correctness of the TSF’s implementation by comparing values generated by the TSF with those generated by a known good implementation using the same input parameters.</h:p>
+                          </test>
+                        </testlist>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Counter Test </h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">375. The evaluator shall generate a single message of 1000 blocks (128000 bits) and either encrypt or decrypt it. Back-compute the IVs used. Verify that they are unique and increasing (encryption) or decreasing (decryption).</h:p>
+                      </test>
+                    </testlist>
+                  </test>
+                </testlist>
               </Tests>
             </aactivity>
           </f-element>
@@ -3156,6 +3361,44 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
             <note role="application">
               <h:p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</h:p>
             </note>
+            <aactivity>
+              <TSS>
+                <h:p style="text-align: left;">397. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">398. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">399. To test SHAKE-128 or SHAKE-256 the evaluator shall collect the input sizes allowed by the implementation, [0-65536] and the output sizes allowed by the implementation, [16-65536] and compare the results against a known good implementation. </h:p>
+                <h:p style="text-align: left;">400. For the variable length inputs, the evaluator shall test the following: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Every message length up to the rate (1600 – 2*{128, 256}) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">About 100 random message lengths greater than the rate</h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">All have an output length of {128, 256} </h:p>
+                  </h:li>
+                </h:ol>
+                <h:p style="text-align: left;">401. For variable length outputs, the evaluator shall test the following: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Minimum output length, </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Maximum output length, </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">510 other random output lengths (for a total of 512 tests) </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">All have an input length of {128, 256}</h:p>
+                  </h:li>
+                </h:ol>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_IPSEC_EXT.1 IPsec Protocol -->
@@ -3388,7 +3631,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                 </selectable>
               </selectables>
             </title>
-            <aactivity level="component">
+            <aactivity>
               <h:p style="text-align: left;">164. Documentation shall be produced—and the evaluator shall perform the activities—in accordance with Annex D of [NDcPP].</h:p>
               <TSS/>
               <Guidance/>
@@ -3435,7 +3678,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">If "multiple TSF entropy sources" is selected in FCS_RBG.1.2, FCS_RBG.4 and FCS_RBG.5 must be claimed from Annex B. </h:p>
               <h:p style="text-align: left;">If "TSF interface for seeding" is selected in FCS_RBG.1.2, FCS_RBG.2 must be claimed from Annex B.</h:p>
             </note>
-            <aactivity level="element">
+            <aactivity>
               <TSS>
                 <h:p style="text-align: left;">166. There are no additional TSS evaluation activities for this element.</h:p>
               </TSS>
@@ -3457,7 +3700,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">“Uninstantiate” means that the internal state of the DRBG is no longer available for use. In the second selection of FCS_RBG.1.3, “on demand” means that a TOE presents an interface to reseed as a TSFI (e.g., an API call). The interface causes the DRBG to reseed at the request of an authorised user, either with an internal source, an external source, or from input provided through the TSFI (e.g., the API call). </h:p>
               <h:p style="text-align: left;">The list of standards selected in the last assignment should be consistent with the standards selected in FCS_RBG.1.1</h:p>
             </note>
-            <aactivity level="element">
+            <aactivity>
               <TSS>
                 <h:p style="text-align: left;">167. The evaluator shall verify that the TSS identifies how the DRBG state is updated, and the situations under which this may occur.</h:p>
               </TSS>
@@ -3484,6 +3727,18 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses one or more external sources of entropy to initialize or reseed a DRBG that is outside the TOE boundary. Seeding a DRBG is the same as initializing a DRBG. In the case of a network device this would only occur with a vND where the entropy source is provided by the underlying virtualization System (VS) platform. The ST author ensures that the assignment is completed with the minimum length of the input sufficient to initialize or reseed a DRBG. </h:p>
               <h:p style="text-align: left;">The TSF interface for the purpose of seeding here is the interface used to gather entropy for initializing or reseed.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">381. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF external interface used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">382. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">383. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">384. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_RBG.3 Random Bit Generation (Internal Seeding - Single Source) -->
@@ -3500,6 +3755,18 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">Software-based noise sources generate noise as a byproduct of their normal operation. Examples of software-based noise sources can be user or system-based events such as reading the least significant bits from an event timer, etc.</h:p>
               <h:p style="text-align: left;">The TOE collects enough input from the internal noise source such that the total measured entropy of the input is sufficient to initialize or reseed a DRBG. The ST author ensures that the assignment is completed with the number of bits of the input sufficient to initialize or reseed a DRBG.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">385. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF entropy source used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">386. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">387. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">388. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_RBG.4 Random Bit Generation (Internal Seeding - Multiple Sources) -->
@@ -3513,6 +3780,18 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               </h:p>
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses two or more internal sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. FCS_RBG.5 defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">389. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, each TSF entropy source used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">390. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">391. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">392. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
         <!-- FCS_RBG.5 Random Bit Generation (Combining Entropy Sources) -->
@@ -3527,6 +3806,18 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">This requirement is claimed when a TOE combines two or more sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. The ST author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a DRBG.</h:p>
               <h:p style="text-align: left;">One can apply NIST SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply NIST SP 800-90B (or AIS-31) statistical tests against external noise sources since the TOE is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the TSS may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the DRBG.</h:p>
             </note>
+            <aactivity>
+              <h:p style="text-align: left;">393. Using the entropy sources specified in FCS_RBG.4, the evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source’s relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
+              <TSS>
+                <h:p style="text-align: left;">394. There are no additional TSS evaluation activities for this component.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">395. There are no additional Guidance evaluation activities for this component.</h:p>
+              </Guidance>
+              <Tests>
+                <h:p style="text-align: left;">396. There are no test activities for this component.</h:p>
+              </Tests>
+            </aactivity>
           </f-element>
         </f-component>
       </section>
@@ -4241,10 +4532,38 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
               <h:p style="text-align: left;">See Section B.4.1 for additional requirements.</h:p>
             </note>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;">278. If the TOE is not a distributed TOE, then no evaluator action is necessary. For a distributed TOE the evaluator carries out the activities below.</h:p>
+              <TSS>
+                <h:p style="text-align: left;"></h:p>
+                <h:p style="text-align: left;">279. The evaluator shall examine the TSS to determine that, for all communications between components of a distributed TOE, each communications mechanism is identified in terms of the allowed protocols for inter-component communication. The evaluator shall also confirm that all protocols listed in the TSS for these inter-component communications are specified and included in the requirements in the ST.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">280. The evaluator shall confirm that the guidance documentation contains instructions for establishing the relevant allowed communication channels and protocols between each pair of authorised TOE components, and that it contains recovery instructions should a connection be unintentionally broken.</h:p>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">281. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall ensure that each communications channel established using each protocol between each pair of distributed TOE components is tested during the course of the evaluation, setting up the connections as described in the guidance documentation and verifying that communication is successful.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall verify that for each communication channel established between distributed TOE components, the channel data is not sent in plaintext.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <depends on="nd-feature-7"/>
+                    <h:p style="text-align: left;">Test 3: Objective: This test is to ensure that the TOE reacts appropriately to any connection outage or interruption of the route between distributed TOE components. </h:p>
+                    <h:p style="text-align: left;">The evaluator shall ensure that, for each different pair of nonequivalent TOE component types, the connection is physically interrupted for the following durations: i) a duration that exceeds the TOE’s application layer timeout setting, ii) a duration that is shorter than the application layer timeout but is of sufficient length to interrupt the network link layer. </h:p>
+                    <h:p style="text-align: left;">The evaluator shall verify that when physical connectivity is restored between distributed TOE components, either communications are appropriately protected, or the secure channel is terminated and the registration process (as described in the FTP_TRP.1/Join) is reinitiated, with the TOE generating adequate warnings to alert the Security Administrator. </h:p>
+                    <h:p style="text-align: left;">In the case that the TOE is able to detect when the cable is removed from the device, another physical network device (e.g., a core switch) shall be used to interrupt the connection between the components. </h:p>
+                    <h:p style="text-align: left;">For a non-virtualized TOE, the interruption shall not be performed at the virtual node (e.g., virtual switch) and must be physical in nature.</h:p>
+                  </test>
+                </testlist>
+                <h:p style="text-align: left;">282. Further assurance activities are associated with the specific protocols identified in the ST.</h:p>
+              </Tests>
             </aactivity>
           </f-element>
           <audit-event>
@@ -4825,10 +5144,44 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
           <f-element id="ftp-trp-jo-1-1">
             <title><h:p style="text-align: left;">The TSF shall provide a communication path between itself and <h:b>a joining component</h:b> <h:s>[selection: remote, local] users</h:s> that is logically distinct from other communication paths and provides assured identification of</h:p> <selectables><selectable id="nd_ftp_trp.1.1_JOIN_1">the TSF endpoint</selectable><selectable id="nd_ftp_trp.1.1_JOIN_2">both joining component and TSF endpoint</selectable></selectables> <h:p style="text-align: left;"><h:s>its endpoints</h:s> and protection of the communicated data from <h:u>modification </h:u> <h:b><h:u>and</h:u></h:b></h:p> <selectables><selectable id="nd_ftp_trp.1.1_JOIN_3">disclosure</selectable><selectable id="nd_ftp_trp.1.1_JOIN_4">no other mechanisms</selectable></selectables>.</title>
             <aactivity level="component">
-              Something
-              <TSS>ABC</TSS>
-              <Guidance/>
-              <Tests/>
+              <h:p style="text-align: left;"></h:p>
+              <TSS>
+                <h:p style="text-align: left;">283. The evaluator shall examine the TSS to determine that the methods of joining components to the TOE are identified, along with how communications with those newly-joined components are protected, including identification of whether the environment is required to provide confidentiality of the communications or whether the registration data exchanged does not require confidentiality. If the TSS asserts that registration data does not require confidentiality protection, then the evaluator shall examine the justification provided to confirm that. </h:p>
+                <h:p style="text-align: left;">284. The evaluator shall also check that all protocols listed in the TSS in support of this process are included in the SFRs in the ST, and that if the ST uses FTP_TRP.1/Join for the registration channel then this channel cannot be reused as the normal inter-component communication channel (the latter channel must meet FTP_ITC.1 or FPT_ITT.1). </h:p>
+                <h:p style="text-align: left;">285. The evaluator shall examine the TSS to confirm that sufficient information is provided to determine the TOE actions in the case that the initial component joining attempt fails.</h:p>
+              </TSS>
+              <Guidance>
+                <h:p style="text-align: left;">286. The evaluator shall examine the guidance documentation to confirm that it contains instructions for establishing and using the enablement and registration channel. The evaluator shall confirm that the guidance documentation clarifies which TOE component initiates the communication. The evaluator shall confirm that the guidance documentation contains recovery instructions should a connection be unintentionally broken during the registration process.</h:p>
+                <h:p style="text-align: left;">287. In the case of a distributed TOE that relies on the operational environment to provide security for some aspects of the registration channel security, there are particular requirements on the Preparative Procedures as listed below. (Reliance on the operational environment in this way is indicated in an ST by a reference to operational guidance in the assignment in FTP_TRP.1.3/Join.) In this case the evaluator shall examine the Preparative Procedures to confirm that they: </h:p>
+                <h:ol type="a">
+                  <h:li>
+                    <h:p style="text-align: left;">Clearly state the strength of the authentication and encryption provided by the registration channel itself and the specific requirements on the environment used for joining TOE components to the distributed TOE (e.g., where the environment is relied upon to prevent interception of sensitive messages, IP spoofing attempts, man-in-the-middle attacks, or race conditions). </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Identify what confidential values are transmitted over the enablement channel (e.g., any keys, their lengths, and their purposes), use of any non-confidential keys (e.g., where a developer uses the same key for more than one device or across all devices of a type or family), and use of any unauthenticated identification data (e.g., IP addresses, selfsigned certificates). </h:p>
+                  </h:li>
+                  <h:li>
+                    <h:p style="text-align: left;">Highlight any situation in which a secret value/key may be transmitted over a channel that uses a key of lower comparable strength than the transmitted value/key. Comparable strength is defined as the amount of work required to compromise the algorithm or key and is typically expressed as ‘bits’ of security. The ST author and evaluator shall consult NIST 800-57 Table 2 for further guidance on comparable algorithm strength.</h:p>
+                  </h:li>
+                </h:ol>
+              </Guidance>
+              <Tests>
+                <testlist>
+                  <h:p style="text-align: left;">288. The evaluator shall perform the following tests:</h:p>
+                  <test>
+                    <h:p style="text-align: left;">Test 1: The evaluator shall ensure that the communications path for joining components to the TSF is tested for each distinct (nonequivalent) component type[4], setting up the connections as described in the guidance documentation and verifying that communication is successful. In particular the evaluator shall confirm that requirements on environment protection for the registration process are consistent with observations made on the test configuration (for example, a requirement to isolate the TOE components from the Internet during registration might be inconsistent with the need for a TOE component to contact a license server). If no requirements on the registration environment are identified as necessary to protect confidentiality, then the evaluator shall confirm that the key used for registration can be configured (following the instructions in the guidance documentation) to be at least the same length as the key used for the internal TSF channel that is being enabled. The evaluator shall confirm that the key used for the channel is unique to the pair of TOE components (this is done by identifying the relevant key during the registration test: it is not necessary to examine the key value).</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 2: The evaluator shall follow the guidance documentation to ensure that the communication channel can be enabled by a Security Administrator for all the TOE components identified in the guidance documentation as capable of having the Security Administrator initiate the channel.</h:p>
+                  </test>
+                  <h:br/>
+                  <test>
+                    <h:p style="text-align: left;">Test 3: The evaluator shall ensure that if the guidance documentation states that the channel data is encrypted, then the data observed on the channel is not plaintext.</h:p>
+                  </test>
+                </testlist>
+                <h:p style="text-align: left;">289. Further assurance activities are associated with the specific protocols.</h:p>
+              </Tests>
             </aactivity>
           </f-element>
           <f-element id="nd-ftp-trp-1-2-join">

@@ -217,13 +217,13 @@ FTP_TRP.1/Admin</rationale>
             <h:p style="text-align: left;">Threat agents may attempt to access, change, and/or modify the security functionality of the Network Device without Administrator awareness. This could result in the attacker finding an avenue (e.g., misconfiguration, flaw in the product) to compromise the device and the Administrator would have no knowledge that the device has been compromised.</h:p>
           </description>
           <!-- New mapping to build updated threat mapping table. -->
-          <addressed-by>FAU_GEN.1</addressed-by>
+          <addressed-by>FAU_GEN.1 (Selection-based)</addressed-by>
           <rationale></rationale>
           <addressed-by>FAU_GEN.2</addressed-by>
           <rationale></rationale>
           <addressed-by>FAU_SAR.1 (Selection-based)</addressed-by>
           <rationale></rationale>
-          <addressed-by>FAU_STG_EXT.1</addressed-by>
+          <addressed-by>FAU_STG_EXT.1 (Selection-based)</addressed-by>
           <rationale></rationale>
           <addressed-by>FAU_STG_EXT.4 (Selection-based)</addressed-by>
           <rationale></rationale>
@@ -502,7 +502,7 @@ FTP_TRP.1/Admin</rationale>
       <!-- 5.1.1 Security Audit (FAU) -->
       <section id="fau" title="Security Audit (FAU)">
         <!-- FAU_GEN.1 Audit data generation -->
-        <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation">
+        <f-component cc-id="fau_gen.1" id="fau-gen-1" name="Audit data generation" status="sel-based">
           <f-element id="fau-gen-1-1">
             <title> The TSF shall be able to generate audit data of the following auditable events:    <h:ol><h:li><h:p style="text-align: left;">Start-up and shut-down of the audit functions;</h:p></h:li> <h:li><h:p style="text-align: left;">All auditable events for the <h:u>not specified</h:u> level of audit; and</h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>All administrative actions comprising:</h:i></h:p> <h:ol type="a"><h:li><h:p style="text-align: left;"><h:i>Administrative login and logout (name of Administrator account shall be logged if individual accounts are required for Administrators).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Changes to TSF data related to configuration changes (in addition to the information that a change occurred it shall be logged what has been changed).</h:i></h:p></h:li> <h:li><h:p style="text-align: left;"><h:i>Generating/import of, changing, or deleting of cryptographic keys (in addition to the action itself a unique key name or key reference shall be logged).</h:i></h:p></h:li> <h:li> <selectables><selectable id="fau-gen-1-1-1">Resetting passwords (name of related Administrator account shall be logged)</selectable><selectable id="fau-gen-1-1-2">no other actions</selectable><selectable id="fau-gen-1-1-3"><assignable>list of other uses of privileges</assignable></selectable></selectables>;</h:li></h:ol></h:li></h:ol><h:ol start="4"><h:li><h:p style="text-align: left;"><h:i>Specifically defined auditable events listed in Table 2.</h:i></h:p></h:li></h:ol></title>
             <note role="application">
@@ -680,7 +680,7 @@ FTP_TRP.1/Admin</rationale>
             <title>
               <h:p style="text-align: left;">The TSF shall provide the <h:i>Security Administrator</h:i> with the capability to read <h:i>all audited events and record contents</h:i> from the audit data</h:p>
             </title>
-            <aactivity>
+            <aactivity level="component">
               <TSS>
                 <h:p style="text-align: left;">303. There are no TSS evaluation activities for this component.</h:p>
               </TSS>
@@ -736,7 +736,7 @@ FTP_TRP.1/Admin</rationale>
           <audit-event/>
         </f-component>
         <!-- FAU_STG_EXT.1 Protected Audit Event Storage -->
-        <f-component cc-id="fau_stg_ext.1" id="fau-stg-ext-1" name="Protected Audit Event Storage">
+        <f-component cc-id="fau_stg_ext.1" id="fau-stg-ext-1" name="Protected Audit Event Storage" status="sel-based">
           <f-element id="fau-stg-ext-1-1">
             <title>The TSF shall be able to transmit the generated audit data to an external IT entity using a trusted channel according to FTP_ITC.1.</title>
             <note role="application">
@@ -805,21 +805,7 @@ FTP_TRP.1/Admin</rationale>
                         <h:p style="text-align: left;">The TOE behaves as specified (for the option ‘other action’ in FAU_STG_EXT.1.5).</h:p>
                       </h:li>
                     </h:ol>
-                    <testlist>
-                      <h:p>testing 123</h:p>
-                      <test>
-                        <h:p>testing111</h:p>
-                      </test>
-                      <h:p style="text-align: left;"></h:p>
-                      71f55177-ba90-4ca2-ac4d-ae73c946de53
-                      <h:ol>
-                        <h:li>
-                          <h:p style="text-align: left;">The audit data remains unchanged with every new auditable event that should be tracked but that the audit data is recorded again after the local storage for audit data is cleared.</h:p>
-                        </h:li>
-                      </h:ol>
-                      <h:p style="text-align: left;">The existing audit data is overwritten with every new auditable event that should be tracked according to the specified rule (for the option ‘overwrite previous audit records’ in FAU_STG_EXT.1.5)</h:p>
-                      <h:p style="text-align: left;">The TOE behaves as specified (for the option ‘other action’ in FAU_STG_EXT.1.5).</h:p>
-                    </testlist>
+                    <testlist><h:p style="text-align: left;"></h:p> 71f55177-ba90-4ca2-ac4d-ae73c946de53 <h:ol><h:li><h:p style="text-align: left;">The audit data remains unchanged with every new auditable event that should be tracked but that the audit data is recorded again after the local storage for audit data is cleared.</h:p></h:li></h:ol>  <h:p style="text-align: left;">The existing audit data is overwritten with every new auditable event that should be tracked according to the specified rule (for the option ‘overwrite previous audit records’ in FAU_STG_EXT.1.5)</h:p>  <h:p style="text-align: left;">The TOE behaves as specified (for the option ‘other action’ in FAU_STG_EXT.1.5).</h:p></testlist>
                   </test>
                   <h:br/>
                   <test>
@@ -976,7 +962,7 @@ FTP_TRP.1/Admin</rationale>
         <f-component cc-id="fau_stg_ext.4" id="fau-stg-ext-4" name="Protected Local Audit Event Storage for Distributed TOEs" status="sel-based">
           <depends on-sel="dummy"/>
           <f-element id="fau-stg-ext-4-1">
-            <title>The TSF of each TOE component which stores security audit data locally shall perform the following actions when the local storage space for audit data is full:           <assignable>table of components and for each component its action chosen according to the following:</assignable>  <selectables><selectable id="nd_fau_stg_ext.4.1_2">drop new audit data</selectable><selectable id="nd-fau-stg-ext-4-1-compsel-1">overwrite previous audit records according to the following rule: <assignable>rule for overwriting previous audit records</assignable></selectable><selectable id="nd_fau_stg_ext.4.1_5"><assignable>other action</assignable></selectable></selectables>.</title>
+            <title>The TSF of each TOE component which stores security audit data locally shall perform the following actions when the local storage space for audit data is full:           <assignable>table of components and for each component its action chosen according to the following:</assignable>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 49 </h:b>
@@ -1592,7 +1578,7 @@ FTP_TRP.1/Admin</rationale>
               <h:p style="text-align: left;">If “key encapsulation” is selected, FCS_COP.1/KeyEncap from Annex B must be claimed, which specifies the relevant list of standards. </h:p>
               <h:p style="text-align: left;">If “key wrapping” is selected, FCS_COP.1/KeyWrap from Annex B must be claimed, which specifies the relevant list of standards.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="component">
               <TSS>
                 <h:p style="text-align: left;">274. The evaluator shall ensure that the TSS documents that the security strength supported by the selected key distribution methods is sufficient for the security strength of the keys distributed through those methods. </h:p>
                 <h:p style="text-align: left;">275. It is not necessary to identify the services that use each key distribution method here. That information should be documented in the requirements for the individual services and protocols that invoke key distribution.</h:p>
@@ -1940,7 +1926,7 @@ FTP_TRP.1/Admin</rationale>
           <depends on-sel="nd_fcs_ntp_ext.1.2_4"/>
           <f-element id="fcs-cop-1-1-cmac">
             <title><h:p style="text-align: left;">The TSF shall perform <h:i>CMAC</h:i> in accordance with a specified cryptographic algorithm <h:i>AES using CMAC mode</h:i> and cryptographic key sizes <h:i>128 bits</h:i> that meet the following:</h:p> <selectables><selectable id="nd_fcs_cop.1.1_CMAC_1">ISO/IEC 9797-1:2011 subclause 7.6 (CMAC) and ISO/IEC 18033-3:2010 subclause 5.2 (AES)</selectable><selectable id="nd_fcs_cop.1.1_CMAC_2">NIST SP 800-38B (CMAC) and NIST FIPS 197 (AES)</selectable></selectables>.</title>
-            <aactivity>
+            <aactivity level="component">
               <TSS>
                 <h:p style="text-align: left;">376. The evaluator shall examine the TSS to determine that it specifies the cryptographic algorithm and 128 bit key size supported by the TOE for CMAC.</h:p>
               </TSS>
@@ -2262,7 +2248,7 @@ For 100 iterations
               </h:p>
               <h:p style="text-align: left;">The only anticipated use of key encapsulation is the use of ML-KEM as part of key establishment for trusted communication.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="component">
               <TSS>
                 <h:p style="text-align: left;">330. The evaluator shall ensure that the TSS documents that the selection of the key size is sufficient for the security strength of the key encapsulated. </h:p>
                 <h:p style="text-align: left;">331. The evaluator shall examine the TSS to verify that any one-time values such as nonces or masks are constructed and used in accordance with the relevant standards.</h:p>
@@ -3361,7 +3347,7 @@ If ( keylen = 256 )
             <note role="application">
               <h:p style="text-align: left;">Since LMS and XMSS use both SHAKE128 and SHAKE256 internally, claiming and testing of both Functions is mandatory</h:p>
             </note>
-            <aactivity>
+            <aactivity level="element">
               <TSS>
                 <h:p style="text-align: left;">397. There are no additional TSS evaluation activities for this component.</h:p>
               </TSS>
@@ -3631,7 +3617,7 @@ If ( keylen = 256 )
                 </selectable>
               </selectables>
             </title>
-            <aactivity>
+            <aactivity level="component">
               <h:p style="text-align: left;">164. Documentation shall be produced—and the evaluator shall perform the activities—in accordance with Annex D of [NDcPP].</h:p>
               <TSS/>
               <Guidance/>
@@ -3678,7 +3664,7 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">If "multiple TSF entropy sources" is selected in FCS_RBG.1.2, FCS_RBG.4 and FCS_RBG.5 must be claimed from Annex B. </h:p>
               <h:p style="text-align: left;">If "TSF interface for seeding" is selected in FCS_RBG.1.2, FCS_RBG.2 must be claimed from Annex B.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="element">
               <TSS>
                 <h:p style="text-align: left;">166. There are no additional TSS evaluation activities for this element.</h:p>
               </TSS>
@@ -3700,7 +3686,7 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">“Uninstantiate” means that the internal state of the DRBG is no longer available for use. In the second selection of FCS_RBG.1.3, “on demand” means that a TOE presents an interface to reseed as a TSFI (e.g., an API call). The interface causes the DRBG to reseed at the request of an authorised user, either with an internal source, an external source, or from input provided through the TSFI (e.g., the API call). </h:p>
               <h:p style="text-align: left;">The list of standards selected in the last assignment should be consistent with the standards selected in FCS_RBG.1.1</h:p>
             </note>
-            <aactivity>
+            <aactivity level="element">
               <TSS>
                 <h:p style="text-align: left;">167. The evaluator shall verify that the TSS identifies how the DRBG state is updated, and the situations under which this may occur.</h:p>
               </TSS>
@@ -3727,7 +3713,7 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses one or more external sources of entropy to initialize or reseed a DRBG that is outside the TOE boundary. Seeding a DRBG is the same as initializing a DRBG. In the case of a network device this would only occur with a vND where the entropy source is provided by the underlying virtualization System (VS) platform. The ST author ensures that the assignment is completed with the minimum length of the input sufficient to initialize or reseed a DRBG. </h:p>
               <h:p style="text-align: left;">The TSF interface for the purpose of seeding here is the interface used to gather entropy for initializing or reseed.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="component">
               <h:p style="text-align: left;">381. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF external interface used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
               <TSS>
                 <h:p style="text-align: left;">382. There are no additional TSS evaluation activities for this component.</h:p>
@@ -3755,7 +3741,7 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">Software-based noise sources generate noise as a byproduct of their normal operation. Examples of software-based noise sources can be user or system-based events such as reading the least significant bits from an event timer, etc.</h:p>
               <h:p style="text-align: left;">The TOE collects enough input from the internal noise source such that the total measured entropy of the input is sufficient to initialize or reseed a DRBG. The ST author ensures that the assignment is completed with the number of bits of the input sufficient to initialize or reseed a DRBG.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="component">
               <h:p style="text-align: left;">385. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, the TSF entropy source used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data such that it can be determined that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
               <TSS>
                 <h:p style="text-align: left;">386. There are no additional TSS evaluation activities for this component.</h:p>
@@ -3780,7 +3766,7 @@ If ( keylen = 256 )
               </h:p>
               <h:p style="text-align: left;">This requirement is claimed when a TOE uses two or more internal sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. FCS_RBG.5 defines the mechanism by which these sources are combined to ensure sufficient minimum entropy.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="component">
               <h:p style="text-align: left;">389. The evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it identifies, for each DRBG function implemented by the TOE, each TSF entropy source used to seed the TOE’s DRBG. The evaluator shall verify that this includes the amount of sampled data and the min-entropy rate of the sampled data from each data source.</h:p>
               <TSS>
                 <h:p style="text-align: left;">390. There are no additional TSS evaluation activities for this component.</h:p>
@@ -3806,7 +3792,7 @@ If ( keylen = 256 )
               <h:p style="text-align: left;">This requirement is claimed when a TOE combines two or more sources of entropy to initialize or reseed a DRBG. Seeding a DRBG is the same as initializing a DRBG. The ST author ensures that the assignment is completed with the number of bits of the combined entropy sufficient to initialize or reseed a DRBG.</h:p>
               <h:p style="text-align: left;">One can apply NIST SP 800-90B (or AIS-31) statistical tests against internal noise sources (a.k.a. raw entropy) to confirm the min-entropy of the noise sources either in aggregate or individually. One should not apply NIST SP 800-90B (or AIS-31) statistical tests against external noise sources since the TOE is unable to enforce entropy requirements or conditioning requirements against external sources of entropy. However, the TSS may include estimates for min-entropy from external sources that contribute to the overall entropy requirements for the DRBG.</h:p>
             </note>
-            <aactivity>
+            <aactivity level="component">
               <h:p style="text-align: left;">393. Using the entropy sources specified in FCS_RBG.4, the evaluator shall examine the entropy documentation required by FCS_RBG.1 to verify that it describes the method by which the various entropy sources are combined into a single seed. This should include an estimation of the rate at which each noise source outputs data and whether this is dependent on any system-specific factors so that each source’s relative contribution to the overall entropy is understood. The evaluator shall verify that the resulting combination of sampled data and the min-entropy rate of the sampled data is described in sufficient detail to determine that sufficient entropy can be made available for the highest strength keys that the TSF can generate (e.g., 256 bits). If the seed data cannot be assumed to have full entropy (e.g., the min-entropy of the sampled bits is less than 1), the evaluator shall ensure that the entropy documentation describes the method by which the TOE estimates the amount of entropy that has been accumulated to ensure that sufficient data is collected and any conditioning that the TSF applies to the output data to create a seed of sufficient size with full entropy.</h:p>
               <TSS>
                 <h:p style="text-align: left;">394. There are no additional TSS evaluation activities for this component.</h:p>
@@ -5238,6 +5224,49 @@ If ( keylen = 256 )
           <a-element type="C">
             <title>The functional specification shall describe the purpose and method of use for
 					each SFR-enforcing and SFR-supporting TSFI.</title>
+            <aactivity>
+              <TSS/>
+              <Guidance>
+                <h:table style="min-width: 75px">
+                  <h:tbody>
+                    <h:tr>
+                      <h:th colspan="1" rowspan="1">
+                        <h:p>ggrt</h:p>
+                      </h:th>
+                      <h:th colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:th>
+                      <h:th colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:th>
+                    </h:tr>
+                    <h:tr>
+                      <h:td colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:td>
+                      <h:td colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:td>
+                      <h:td colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:td>
+                    </h:tr>
+                    <h:tr>
+                      <h:td colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:td>
+                      <h:td colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:td>
+                      <h:td colspan="1" rowspan="1">
+                        <h:p/>
+                      </h:td>
+                    </h:tr>
+                  </h:tbody>
+                </h:table>
+              </Guidance>
+              <Tests/>
+            </aactivity>
           </a-element>
           <a-element type="C">
             <title>The functional specification shall identify all parameters associated with each

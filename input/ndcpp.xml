@@ -112,7 +112,7 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         <feature id="nd-feature-6" title="Local security admin">
           <description>True if the TOE provides the Security Administrator the ability to administer the TOE locally.</description>
         </feature>
-        <feature id="" title="Distributed TOE">
+        <feature id="nd-feature-7" title="Distributed TOE">
           <description>True if the TOE is implemented as a Distributed TOE as described in the Distributed TOE section of this cPP.</description>
         </feature>
       </implements>
@@ -791,6 +791,7 @@ FTP_TRP.1/Admin</rationale>
                   </test>
                   <h:br/>
                   <test>
+                    <depends on="nd-feature-7"/>
                     <h:p style="text-align: left;">Test 2: For distributed TOEs, Test 1 defined above shall be applicable to all TOE components that forward audit data to an external audit server.</h:p>
                     <h:p style="text-align: left;"></h:p>
                   </test>
@@ -847,7 +848,7 @@ FTP_TRP.1/Admin</rationale>
           <f-element id="fau-stg-ext-1-2">
             <title>
               <h:p style="text-align: left;">The TSF shall be able to store generated audit data on the TOE itself. In addition </h:p>
-              <selectables>
+              <selectables linebreak="yes">
                 <selectable id="fau-stg-ext-1-2-1">The TOE shall consist of a single standalone component that stores audit data locally</selectable>
                 <selectable id="fau-stg--ext-1-2-4">The TOE shall be a distributed TOE that stores audit data on the following TOE components: <assignable>identification of TOE components</assignable></selectable>
                 <selectable id="fau-stg-ext-1-2-5">The TOE shall be a distributed TOE with storage of audit data provided externally for the following TOE components: <assignable>list of TOE components that do not store audit data locally and the other TOE components to which they transmit their generated audit data</assignable></selectable>
@@ -1418,20 +1419,20 @@ FTP_TRP.1/Admin</rationale>
                         <h:p style="text-align: left;">Key pair generation method [extra random bits, rejection sampling]</h:p>
                       </h:li>
                     </h:ol>
-                  </test>
-                  <h:br/>
-                  <test>
-                    <h:p style="text-align: left;">
-                      <h:b>ECC Key Generation Test</h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">60. For each supported combination of the above input parameters the evaluator shall require the implementation under test to generate 10 private/public key pairs (d, Q). The private key, d, shall be generated using a random bit generator as specified in FCS_RBG.1. The private key, d, is used to compute the public key, Q’. The evaluator shall confirm that 0&lt;d&lt;n (where n is the order of the group), and the computed value Q’ is then compared to the generated public/private key pairs’ public key, Q, to confirm that Q is equal to Q’.</h:p>
-                  </test>
-                  <h:br/>
-                  <test>
-                    <h:p style="text-align: left;">
-                      <h:b>ECC Key Validation Test </h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">61. For each supported combination of the above parameters the evaluator shall generate 12 private/public key pairs using the key generation function of a known-good implementation. For each set of 12 public keys, the evaluator shall modify four public key values by shifting x or y out of range by adding the order of the field and modify four other public key values by shifting x or y so that they are still in bounds, but not on the curve. The remaining public key values are left unchanged (i.e., correct). To determine correctness, the evaluator shall submit the public keys to the public key validation (PKV) function of the TOE and shall confirm that the results correspond as expected for the modified and unmodified values.</h:p>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>ECC Key Generation Test</h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">60. For each supported combination of the above input parameters the evaluator shall require the implementation under test to generate 10 private/public key pairs (d, Q). The private key, d, shall be generated using a random bit generator as specified in FCS_RBG.1. The private key, d, is used to compute the public key, Q’. The evaluator shall confirm that 0&lt;d&lt;n (where n is the order of the group), and the computed value Q’ is then compared to the generated public/private key pairs’ public key, Q, to confirm that Q is equal to Q’.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>ECC Key Validation Test</h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">61. For each supported combination of the above parameters the evaluator shall generate 12 private/public key pairs using the key generation function of a known-good implementation. For each set of 12 public keys, the evaluator shall modify four public key values by shifting x or y out of range by adding the order of the field and modify four other public key values by shifting x or y so that they are still in bounds, but not on the curve. The remaining public key values are left unchanged (i.e., correct). To determine correctness, the evaluator shall submit the public keys to the public key validation (PKV) function of the TOE and shall confirm that the results correspond as expected for the modified and unmodified values.</h:p>
+                      </test>
+                    </testlist>
                   </test>
                   <h:br/>
                   <test>
@@ -1444,43 +1445,40 @@ FTP_TRP.1/Admin</rationale>
                         <h:p style="text-align: left;">Fields/Groups [MODP-3072, MODP-4096, MODP-6144, MODP-8192, ffdhe3072, ffdhe4096, ffdhe6144, ffdhe8192]</h:p>
                       </h:li>
                     </h:ol>
+                    <testlist>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Safe Primes Generation Test</h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">63. For each supported safe primes group, generate 10 key pairs. The evaluator shall verify the correctness of the TSF’s implementation by comparing values generated by the TSF with those generated by a known good implementation using the same input parameters.</h:p>
+                      </test>
+                      <test>
+                        <h:p style="text-align: left;">
+                          <h:b>Safe Primes Validation Test</h:b>
+                        </h:p>
+                        <h:p style="text-align: left;">64. For each supported safe primes group, use a known good implementation to generate 10 key pairs. For each set of 10, the evaluator shall modify three such that they are incorrect. The remaining values are left unmodified (i.e. correct). To determine correctness, the evaluator shall submit the key pairs to the public key validation (PKV) function of the TOE and shall confirm that the results correspond as expected for the modified and unmodified values.</h:p>
+                      </test>
+                    </testlist>
                   </test>
                   <h:br/>
                   <test>
                     <h:p style="text-align: left;">
-                      <h:b>Safe Primes Generation Test </h:b>
+                      <h:b>LMS Key Generation</h:b>
                     </h:p>
-                    <h:p style="text-align: left;">63. For each supported safe primes group, generate 10 key pairs. The evaluator shall verify the correctness of the TSF’s implementation by comparing values generated by the TSF with those generated by a known good implementation using the same input parameters.</h:p>
-                  </test>
-                  <h:br/>
-                  <test>
-                    <h:p style="text-align: left;">
-                      <h:b>Safe Primes Validation Test </h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">64. For each supported safe primes group, use a known good implementation to generate 10 key pairs. For each set of 10, the evaluator shall modify three such that they are incorrect. The remaining values are left unmodified (i.e. correct). To determine correctness, the evaluator shall submit the key pairs to the public key validation (PKV) function of the TOE and shall confirm that the results correspond as expected for the modified and unmodified values.</h:p>
-                  </test>
-                  <h:br/>
-                  <test>
-                    <h:p style="text-align: left;">
-                      <h:b>LMS Key Generation </h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">65. To test the TOE’s ability to generate asymmetric cryptographic keys using LMS, the evaluator shall perform the LMS Key Generation Test using the following input parameters: </h:p>
+                    <h:p style="text-align: left;">65. To test the TOE’s ability to generate asymmetric cryptographic keys using LMS, the evaluator shall perform the LMS Key Generation Test using the following input parameters:</h:p>
                     <h:ol type="a">
                       <h:li>
-                        <h:p style="text-align: left;">Hash algorithm [SHA-256/192, SHAKE256/192, SHA-256, SHAKE256] </h:p>
+                        <h:p style="text-align: left;">Hash algorithm [SHA-256/192, SHAKE256/192, SHA-256, SHAKE256]</h:p>
                       </h:li>
                       <h:li>
-                        <h:p style="text-align: left;">Winternitz [1, 2, 4, 8] </h:p>
+                        <h:p style="text-align: left;">Winternitz [1, 2, 4, 8]</h:p>
                       </h:li>
                       <h:li>
                         <h:p style="text-align: left;">Tree height [5, 10, 15, 20, 25]</h:p>
                       </h:li>
                     </h:ol>
-                  </test>
-                  <h:br/>
-                  <test>
                     <h:p style="text-align: left;">
-                      <h:b>LMS Key Generation Test </h:b>
+                      <h:b>LMS Key Generation Test</h:b>
                     </h:p>
                     <h:p style="text-align: left;">66. For each supported combination of the hash algorithm, Winternitz parameter, and tree height, the evaluator shall generate one public key for each of the test cases. The number of test cases depends on the tree height, as follows:</h:p>
                     <h:ul>

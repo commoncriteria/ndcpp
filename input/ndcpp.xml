@@ -112,7 +112,7 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         <feature id="nd-feature-6" title="Local security admin">
           <description>True if the TOE provides the Security Administrator the ability to administer the TOE locally.</description>
         </feature>
-        <feature id="nd-feature-7" title="Distributed TOE">
+        <feature id="" title="Distributed TOE">
           <description>True if the TOE is implemented as a Distributed TOE as described in the Distributed TOE section of this cPP.</description>
         </feature>
       </implements>
@@ -791,7 +791,6 @@ FTP_TRP.1/Admin</rationale>
                   </test>
                   <h:br/>
                   <test>
-                    <depends on="nd-feature-7"/>
                     <h:p style="text-align: left;">Test 2: For distributed TOEs, Test 1 defined above shall be applicable to all TOE components that forward audit data to an external audit server.</h:p>
                     <h:p style="text-align: left;"></h:p>
                   </test>

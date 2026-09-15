@@ -797,8 +797,9 @@ FTP_TRP.1/Admin</rationale>
                   </test>
                   <h:br/>
                   <test>
-                    <h:p style="text-align: left;">Test 3: The evaluator shall perform operations that generate audit data and verify that this data is stored locally. The evaluator shall then make note of whether the TSS claims persistent or non-persistent logging and perform one of the following actions:</h:p>
-                    <testlist>
+					<testlist>
+                    <testlist-intro>Test 3: The evaluator shall perform operations that generate audit data and verify that this data is stored locally. The evaluator shall then make note of whether the TSS claims persistent or non-persistent logging and perform one of the following actions:
+					</testlist-intro>
                       <test>
                         <depends on="fau-stg-ext-1-4-1"/>
                         <h:p style="text-align: left;">If persistent logging is selected, the evaluator shall perform a power cycle of the TOE and ensure that following power on operations the log events generated are still maintained within the local audit storage.</h:p>

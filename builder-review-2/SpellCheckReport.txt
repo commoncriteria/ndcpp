@@ -107,7 +107,10 @@ output/ndcpp-release-linkable.html: behaviour
 output/ndcpp-release-linkable.html: cPPs
 output/ndcpp-release-linkable.html: ciphertexts
 output/ndcpp-release-linkable.html: crypto
+output/ndcpp-release-linkable.html: da
 output/ndcpp-release-linkable.html: decapsulation
+output/ndcpp-release-linkable.html: dw
+output/ndcpp-release-linkable.html: edw
 output/ndcpp-release-linkable.html: ek
 output/ndcpp-release-linkable.html: enablement
 output/ndcpp-release-linkable.html: enquiries
@@ -119,6 +122,7 @@ output/ndcpp-release-linkable.html: ffdhe4096
 output/ndcpp-release-linkable.html: ffdhe6144
 output/ndcpp-release-linkable.html: ffdhe8192
 output/ndcpp-release-linkable.html: fulfil
+output/ndcpp-release-linkable.html: fwe
 output/ndcpp-release-linkable.html: hLen
 output/ndcpp-release-linkable.html: href
 output/ndcpp-release-linkable.html: iTC
@@ -298,8 +302,11 @@ output/ndcpp-release.html: channel’
 output/ndcpp-release.html: ciphertexts
 output/ndcpp-release.html: communication’
 output/ndcpp-release.html: crypto
+output/ndcpp-release.html: da
 output/ndcpp-release.html: data’
 output/ndcpp-release.html: decapsulation
+output/ndcpp-release.html: dw
+output/ndcpp-release.html: edw
 output/ndcpp-release.html: ek
 output/ndcpp-release.html: enablement
 output/ndcpp-release.html: enquiries
@@ -315,6 +322,7 @@ output/ndcpp-release.html: ffdhe4096
 output/ndcpp-release.html: ffdhe6144
 output/ndcpp-release.html: ffdhe8192
 output/ndcpp-release.html: fulfil
+output/ndcpp-release.html: fwe
 output/ndcpp-release.html: hLen
 output/ndcpp-release.html: iTC
 output/ndcpp-release.html: interVM
@@ -516,8 +524,11 @@ output/ndcpp.html: channel’
 output/ndcpp.html: ciphertexts
 output/ndcpp.html: communication’
 output/ndcpp.html: crypto
+output/ndcpp.html: da
 output/ndcpp.html: data’
 output/ndcpp.html: decapsulation
+output/ndcpp.html: dw
+output/ndcpp.html: edw
 output/ndcpp.html: ek
 output/ndcpp.html: enablement
 output/ndcpp.html: entity’
@@ -532,6 +543,7 @@ output/ndcpp.html: ffdhe4096
 output/ndcpp.html: ffdhe6144
 output/ndcpp.html: ffdhe8192
 output/ndcpp.html: fulfil
+output/ndcpp.html: fwe
 output/ndcpp.html: hLen
 output/ndcpp.html: iTC
 output/ndcpp.html: interVM

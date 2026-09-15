@@ -160,6 +160,7 @@ output/ndcpp-release-linkable.html: subclause
 output/ndcpp-release-linkable.html: subcommands
 output/ndcpp-release-linkable.html: synchronise
 output/ndcpp-release-linkable.html: testing123
+output/ndcpp-release-linkable.html: testlist
 output/ndcpp-release-linkable.html: tunnelling
 output/ndcpp-release-linkable.html: udpates
 output/ndcpp-release-linkable.html: unauthorised
@@ -372,6 +373,7 @@ output/ndcpp-release.html: subclause
 output/ndcpp-release.html: subcommands
 output/ndcpp-release.html: synchronise
 output/ndcpp-release.html: testing123
+output/ndcpp-release.html: testlist
 output/ndcpp-release.html: time’
 output/ndcpp-release.html: traditional’
 output/ndcpp-release.html: tunnelling
@@ -588,6 +590,7 @@ output/ndcpp.html: subclause
 output/ndcpp.html: subcommands
 output/ndcpp.html: synchronise
 output/ndcpp.html: testing123
+output/ndcpp.html: testlist
 output/ndcpp.html: time’
 output/ndcpp.html: traditional’
 output/ndcpp.html: tunnelling

@@ -1,3 +1,4 @@
-/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:140:30: error: multiple definitions of "sar-content" without "combine" attribute
-/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:319:29: error: multiple definitions of "a-elements" without "combine" attribute
-/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:358:39: error: multiple definitions of "a-component-pattern" without "combine" attribute
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:142:30: error: multiple definitions of "sar-content" without "combine" attribute
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:321:29: error: multiple definitions of "a-elements" without "combine" attribute
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:360:39: error: multiple definitions of "a-component-pattern" without "combine" attribute
+/home/runner/work/ndcpp/ndcpp/transforms/schemas/LaxProtectionProfile.rng:25:33: error: reference to undefined pattern "Introduction"

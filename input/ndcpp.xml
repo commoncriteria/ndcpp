@@ -837,6 +837,7 @@ FTP_TRP.1/Admin</rationale>
                     <h:p style="text-align: left;">Note: The intent of the test is to ensure that the local audit TSF (as specified by FAU_STG_EXT.1.3) operates independently from the ability to transmit the generated audit data to an external audit server (as specified in FAU_STG_EXT.1.1). There are no specific requirements on the interruption of the connection between the TOE and the external audit server (as for FTP_ITC.1).</h:p>
                     <h:p style="text-align: left;"></h:p>
                   </test>
+                  <h:p>testlist conclusion text</h:p>
                 </testlist>
               </Tests>
             </aactivity>

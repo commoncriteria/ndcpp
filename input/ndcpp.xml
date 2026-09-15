@@ -723,9 +723,7 @@ FTP_TRP.1/Admin</rationale>
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">259. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">259. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall attempt to access the audit trail without authentication as a Security Administrator (either by authentication as a non-administrative user, if supported, or without authentication at all) and attempt to modify and delete the audit records. The evaluator shall verify that these attempts fail. </h:p>
                     <h:p style="text-align: left;">In the case that no other users than the Security Administrator can be defined, without user authentication the user may not be able to get to the point where the attempt to access the audit trail can be executed. In this case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
@@ -735,9 +733,7 @@ FTP_TRP.1/Admin</rationale>
                     <h:p style="text-align: left;">Test 2: The evaluator shall access the audit trail as an authenticated Security Administrator and attempt to delete the audit records (if supported by the TOE, and to the extent described in the TSS). The evaluator shall verify that these attempts succeed. The evaluator shall verify that only the records authorised for deletion are deleted.</h:p>
                     <h:p style="text-align: left;"></h:p>
                   </test>
-                  <testlist-outro>
-                    <h:p style="text-align: left;">260. For distributed TOEs, the evaluator shall perform test 1 and test 2 for each component that is defined by the TSS to be covered by this SFR.</h:p>
-                  </testlist-outro>
+                  <h:p style="text-align: left;">260. For distributed TOEs, the evaluator shall perform test 1 and test 2 for each component that is defined by the TSS to be covered by this SFR.</h:p>
                 </testlist>
               </Tests>
             </aactivity>
@@ -764,30 +760,46 @@ FTP_TRP.1/Admin</rationale>
             <aactivity level="component">
               <h:p style="text-align: left;"></h:p>
               <TSS>
-                <h:p style="text-align: left;">34. The evaluator shall examine the TSS to ensure it describes the means by which the audit data are transferred to the external audit server, and how the trusted channel is provided. </h:p>
-                <h:p style="text-align: left;">35. The evaluator shall examine the TSS to ensure it describes whether the TOE is a standalone TOE that stores audit data locally or a distributed TOE that stores audit data locally on each TOE component or a distributed TOE that contains TOE components that cannot store audit data locally on themselves but need to transfer audit data to other TOE components that can store audit data locally. The evaluator shall examine the TSS to ensure that for distributed TOEs it contains a list of TOE components that store audit data locally. The evaluator shall examine the TSS to ensure that for distributed TOEs that contain components which do not store audit data locally but transmit their generated audit data to other components it contains a mapping between the transmitting and storing TOE components. </h:p>
-                <h:p style="text-align: left;">36. The evaluator shall examine the TSS to ensure that it details whether the transmission of audit data to an external IT entity can be done in real-time, periodically, or both. In the case where the TOE is capable of performing transmission periodically, the evaluator shall verify that the TSS provides details about what event stimulates the transmission to be made as well as the possible acceptable frequency for the transfer of audit data. </h:p>
-                <h:p style="text-align: left;">37. For distributed TOEs, the evaluator shall examine the TSS to ensure it describes to which TOE components this SFR applies and how audit data transfer to the external audit server is implemented among the different TOE components (e.g., every TOE component does its own transfer or the data is sent to another TOE component for central transfer of all audit events to the external audit server). </h:p>
-                <h:p style="text-align: left;">38. The evaluator shall examine the TSS to ensure it describes the amount of audit data that can be stored locally and how these records are protected against unauthorised modification or deletion. </h:p>
-                <h:p style="text-align: left;">39. The evaluator shall examine the TSS to ensure it describes the method implemented for local logging, including format (e.g., buffer, log file, database) and whether the logs are persistent or non-persistent. </h:p>
-                <h:p style="text-align: left;">40. The evaluator shall examine the TSS to ensure it describes the conditions that must be met for authorised deletion of audit records. </h:p>
-                <h:p style="text-align: left;">41. The evaluator shall examine the TSS to ensure it details the behaviour of the TOE when the storage space for audit data is full. When the option ‘overwrite previous audit record’ is selected this description should include an outline of the rule for overwriting audit data. If ‘other actions’ are chosen such as sending the new audit data to an external IT entity, then the related behaviour of the TOE shall also be detailed in the TSS.</h:p>
-                <h:p style="text-align: left;">42. For distributed TOEs, the evaluator shall examine the TSS to ensure it describes which TOE components are storing audit information locally and which components are buffering audit information and forwarding the information to another TOE component for local storage. For every component the TSS shall describe the behaviour when local storage space or buffer space is exhausted.</h:p>
+                <h:p><comment><h:p>this is a comment</h:p></comment><h:p/>34. The evaluator shall examine the TSS to ensure it describes the means by which the audit data are transferred to the external audit server, and how the trusted channel is provided.<h:p/><comment><h:p>this is also a comment</h:p></comment><h:p/>35. The evaluator shall examine the TSS to ensure it describes whether the TOE is a standalone TOE that stores audit data locally or a distributed TOE that stores audit data locally on each TOE component or a distributed TOE that contains TOE components that cannot store audit data locally on themselves but need to transfer audit data to other TOE components that can store audit data locally. The evaluator shall examine the TSS to ensure that for distributed TOEs it contains a list of TOE components that store audit data locally. The evaluator shall examine the TSS to ensure that for distributed TOEs that contain components which do not store audit data locally but transmit their generated audit data to other components it contains a mapping between the transmitting and storing TOE components.<h:p/>36. The evaluator shall examine the TSS to ensure that it details whether the transmission of audit data to an external IT entity can be done in real-time, periodically, or both. In the case where the TOE is capable of performing transmission periodically, the evaluator shall verify that the TSS provides details about what event stimulates the transmission to be made as well as the possible acceptable frequency for the transfer of audit data.<h:p/>37. For distributed TOEs, the evaluator shall examine the TSS to ensure it describes to which TOE components this SFR applies and how audit data transfer to the external audit server is implemented among the different TOE components (e.g., every TOE component does its own transfer or the data is sent to another TOE component for central transfer of all audit events to the external audit server).<h:p/>38. The evaluator shall examine the TSS to ensure it describes the amount of audit data that can be stored locally and how these records are protected against unauthorised modification or deletion.<h:p/>39. The evaluator shall examine the TSS to ensure it describes the method implemented for local logging, including format (e.g., buffer, log file, database) and whether the logs are persistent or non-persistent.<h:p/>40. The evaluator shall examine the TSS to ensure it describes the conditions that must be met for authorised deletion of audit records.<h:p/>41. The evaluator shall examine the TSS to ensure it details the behaviour of the TOE when the storage space for audit data is full. When the option ‘overwrite previous audit record’ is selected this description should include an outline of the rule for overwriting audit data. If ‘other actions’ are chosen such as sending the new audit data to an external IT entity, then the related behaviour of the TOE shall also be detailed in the TSS.<h:p/>42. For distributed TOEs, the evaluator shall examine the TSS to ensure it describes which TOE components are storing audit information locally and which components are buffering audit information and forwarding the information to another TOE component for local storage. For every component the TSS shall describe the behaviour when local storage space or buffer space is exhausted.</h:p>
               </TSS>
               <Guidance>
-                <h:p style="text-align: left;">43. The evaluator shall also examine the guidance documentation to ensure it describes how to establish the trusted channel to the audit server, as well as describe any requirements on the audit server (particular audit server protocol, version of the protocol required, etc.), as well as configuration of the TOE needed to communicate with the audit server. </h:p>
-                <h:p style="text-align: left;">44. The evaluator shall also examine the guidance documentation to ensure it describes the relationship between the local audit data and the audit data that are sent to the audit log server. For example, when an audit event is generated, is it simultaneously sent to the external server and the local store, or is the local store used as a buffer and “cleared” periodically by sending the data to the audit server. </h:p>
-                <h:p style="text-align: left;">45. The evaluator shall examine the guidance documentation to ensure it describes any configuration required for protection of the locally stored audit data against unauthorised modification or deletion. </h:p>
-                <h:p style="text-align: left;">46. If the storage size is configurable, the evaluator shall review the Guidance Documentation to ensure it contains instructions on specifying the required parameters. </h:p>
-                <h:p style="text-align: left;">47. If more than one selection is made for FAU_STG_EXT.1.5, the evaluator shall review the Guidance Documentation to ensure it contains instructions on specifying which action is performed when the local storage space is full.</h:p>
+                <h:p>43. The evaluator shall also examine the guidance documentation to ensure it describes how to establish the trusted channel to the audit server, as well as describe any requirements on the audit server (particular audit server protocol, version of the protocol required, etc.), as well as configuration of the TOE needed to communicate with the audit server.<h:p/>44. The evaluator shall also examine the guidance documentation to ensure it describes the relationship between the local audit data and the audit data that are sent to the audit log server. For example, when an audit event is generated, is it simultaneously sent to the external server and the local store, or is the local store used as a buffer and “cleared” periodically by sending the data to the audit server.<h:p/>45. The evaluator shall examine the guidance documentation to ensure it describes any configuration required for protection of the locally stored audit data against unauthorised modification or deletion.<h:p/>46. If the storage size is configurable, the evaluator shall review the Guidance Documentation to ensure it contains instructions on specifying the required parameters.<h:p/>47. If more than one selection is made for FAU_STG_EXT.1.5, the evaluator shall review the Guidance Documentation to ensure it contains instructions on specifying which action is performed when the local storage space is full.<h:p/><h:p/></h:p>
+                <h:ol>
+                  <h:li>
+                    <h:p>da</h:p>
+                    <h:ol type="a">
+                      <h:li>
+                        <h:p>edw</h:p>
+                      </h:li>
+                      <h:li>
+                        <h:p>dw</h:p>
+                        <h:ol type="a">
+                          <h:li>
+                            <h:p>fwe</h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p>fwe</h:p>
+                          </h:li>
+                          <h:li>
+                            <h:p/>
+                          </h:li>
+                        </h:ol>
+                      </h:li>
+                      <h:li>
+                        <h:p>da</h:p>
+                      </h:li>
+                    </h:ol>
+                  </h:li>
+                  <h:li>
+                    <h:p>fwe</h:p>
+                  </h:li>
+                </h:ol>
               </Guidance>
               <Tests>
-                48. Testing of secure transmission of the audit data externally (FTP_ITC.1) and, where applicable, intercomponent (FPT_ITT.1 or FTP_ITC.1) shall be performed according to the assurance activities for the particular protocol(s).
+                <h:p>48. Testing of secure transmission of the audit data externally (FTP_ITC.1) and, where applicable, intercomponent (FPT_ITT.1 or FTP_ITC.1) shall be performed according to the assurance activities for the particular protocol(s).<h:p/></h:p>
                 <testlist>
                   <depends on="fau-stg-ext-1-2-1"/>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">49. The evaluator shall perform the following additional test for this requirement:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">49. The evaluator shall perform the following additional test for this requirement:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall establish a session between the TOE and the audit server according to the configuration guidance provided. The evaluator shall then examine the traffic that passes between the audit server and the TOE during several activities of the evaluator’s choice designed to generate audit data to be transferred to the audit server. The evaluator shall observe that these data are not able to be viewed in the clear during this transfer, and that they are successfully received by the audit server. The evaluator shall record the particular software (name, version) used on the audit server during testing. The evaluator shall verify that the TOE is capable of transferring audit data to an external audit server automatically without administrator intervention.</h:p>
                   </test>
@@ -809,9 +821,7 @@ FTP_TRP.1/Admin</rationale>
                         <h:p>test xx</h:p>
                         <h:p style="text-align: left;">If non-persistent logging is selected, the evaluator shall perform a power cycle of the TOE and ensure that following power on operations the log events generated are no longer present within the local audit storage.</h:p>
                       </test>
-                      <testlist-outro>
-                        <h:p>nested testlist conclusion text</h:p>
-                      </testlist-outro>
+                      <h:p>nested testlist conclusion text</h:p>
                     </testlist>
                     <h:p>testing123</h:p>
                   </test>
@@ -830,9 +840,7 @@ FTP_TRP.1/Admin</rationale>
                       <test>
                         <h:p style="text-align: left;">The TOE behaves as specified (for the option ‘other action’ in FAU_STG_EXT.1.5).</h:p>
                       </test>
-                      <testlist-outro>
-                        <h:p style="text-align: left;"></h:p>
-                      </testlist-outro>
+                      <h:p style="text-align: left;"></h:p>
                     </testlist>
                   </test>
                   <h:br/>
@@ -846,9 +854,7 @@ FTP_TRP.1/Admin</rationale>
                     <h:p style="text-align: left;">Note: The intent of the test is to ensure that the local audit TSF (as specified by FAU_STG_EXT.1.3) operates independently from the ability to transmit the generated audit data to an external audit server (as specified in FAU_STG_EXT.1.1). There are no specific requirements on the interruption of the connection between the TOE and the external audit server (as for FTP_ITC.1).</h:p>
                     <h:p style="text-align: left;"></h:p>
                   </test>
-                  <testlist-outro>
-                    <h:p>testlist conclusion text</h:p>
-                  </testlist-outro>
+                  <h:p>testlist conclusion text</h:p>
                 </testlist>
               </Tests>
             </aactivity>
@@ -1013,9 +1019,7 @@ FTP_TRP.1/Admin</rationale>
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">311. For at least one of each type of distributed TOE components (sensors, central nodes, etc.), the following tests shall be performed using distributed TOEs.</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">311. For at least one of each type of distributed TOE components (sensors, central nodes, etc.), the following tests shall be performed using distributed TOEs.</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: For each type of TOE component, the evaluator shall perform a representative subset of auditable actions and ensure that these actions cause the generation of appropriately formed audit records. Generation of such records can be observed directly on the distributed TOE component (if there is an appropriate interface), or indirectly after transmission to a central audit log storage location.</h:p>
                   </test>
@@ -1027,9 +1031,7 @@ FTP_TRP.1/Admin</rationale>
                   <test>
                     <h:p style="text-align: left;">Test 3: For each type of TOE component that, in the evaluated configuration, is capable of transmitting audit information to another TOE component (as specified in FTP_ITT.1 or FTP_ITC.1, respectively), the evaluator shall configure a secure channel and confirm that audit records generated as a result of actions taken by the evaluator have been securely transmitted. It is sufficient to observe negotiation and establishment of the secure channel with the TOE component and the subsequent transmission of encrypted data to confirm this functionality. Alternatively, the following steps shall be performed: The evaluator shall induce audit record transmission, then review the packet capture around the time of transmission and verify that no audit data is transmitted in the clear.</h:p>
                   </test>
-                  <testlist-outro>
-                    <h:p style="text-align: left;">312. While performing these tests, the evaluator shall verify that the TOE behaviour observed during testing is consistent with the descriptions provided in the TSS and the Guidance Documentation. Depending on the TOE configuration, there might be a large number of different possible configurations. In such cases, it is acceptable to perform subset testing, accompanied by an equivalency argument describing the evaluator’s sampling methodology.</h:p>
-                  </testlist-outro>
+                  <h:p style="text-align: left;">312. While performing these tests, the evaluator shall verify that the TOE behaviour observed during testing is consistent with the descriptions provided in the TSS and the Guidance Documentation. Depending on the TOE configuration, there might be a large number of different possible configurations. In such cases, it is acceptable to perform subset testing, accompanied by an equivalency argument describing the evaluator’s sampling methodology.</h:p>
                 </testlist>
               </Tests>
             </aactivity>
@@ -1149,10 +1151,8 @@ FTP_TRP.1/Admin</rationale>
               <Tests>
                 300. (Note: Section 3.4.1 lists questions for which the evaluator shall determine and report answers through the combination of the TSS, Guidance Documentation, and Tests Evaluation Activities.)
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">301. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
                   <depends on="nd-feature-7"/>
+                  <h:p style="text-align: left;">301. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1a: the evaluator shall confirm that a TOE component that is not currently a member of the distributed TOE cannot communicate with any other component of the TOE until the non-member is enabled by a Security Administrator, for each of the non-equivalent TOE components<h:sup>[6]</h:sup>, that it is required to communicate with (nonequivalent TOE components are as defined in the minimum configuration for the distributed TOE).</h:p>
                     <h:p style="text-align: left;">Test 1b: the evaluator shall confirm that after enablement, a TOE component can only communicate with the other TOE components that it has been enabled for. This includes testing that the enabled communication is successful for the enabled TOE component pair, and that communication remains unsuccessful with any other TOE component for which communication has not been explicitly enabled. </h:p>
@@ -1324,9 +1324,7 @@ FTP_TRP.1/Admin</rationale>
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">55. The following tests are conditional based on the selections made in the SFR. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">55. The following tests are conditional based on the selections made in the SFR. The evaluator shall perform the following tests or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
                   <test>
                     <h:p style="text-align: left;">
                       <h:b>RSA Key Generation </h:b>
@@ -1916,9 +1914,7 @@ FTP_TRP.1/Admin</rationale>
                       </h:li>
                     </h:ul>
                     <testlist>
-                      <testlist-intro>
-                        <h:p style="text-align: left;"></h:p>
-                      </testlist-intro>
+                      <h:p style="text-align: left;"></h:p>
                       <test>
                         <h:p style="text-align: left;">
                           <h:b>Encryption Algorithm Functional Tests </h:b>
@@ -2064,9 +2060,7 @@ FTP_TRP.1/Admin</rationale>
                     </h:p>
                     <h:p style="text-align: left;">139. To test the TOE’s ability to generate hash digests using SHA2 the evaluator shall perform the Algorithm Functional Test, Monte Carlo Test, and Large Data Test for each claimed SHA2 algorithm.</h:p>
                     <testlist>
-                      <testlist-intro>
-                        <h:p style="text-align: left;"></h:p>
-                      </testlist-intro>
+                      <h:p style="text-align: left;"></h:p>
                       <test>
                         <h:p style="text-align: left;">
                           <h:b>Algorithm Functional Test </h:b>
@@ -2558,9 +2552,7 @@ For 100 iterations
               <Tests>
                 98. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;"></h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;"></h:p>
                   <test>
                     <h:p style="text-align: left;">
                       <h:b>RSA-PKCS Signature Generation </h:b>
@@ -3234,9 +3226,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                       </h:li>
                     </h:ul>
                     <testlist>
-                      <testlist-intro>
-                        <h:p style="text-align: left;"></h:p>
-                      </testlist-intro>
+                      <h:p style="text-align: left;"></h:p>
                       <test>
                         <h:p style="text-align: left;">
                           <h:b>Algorithm Functional Test</h:b>
@@ -3453,9 +3443,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">436. The evaluator shall use the guidance documentation to configure the TOE to perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">436. The evaluator shall use the guidance documentation to configure the TOE to perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall configure the SPD such that there is a rule for dropping a packet, encrypting a packet, and allowing a packet to flow in plaintext. The selectors used in the construction of the rule shall be different such that the evaluator can generate a packet and send packets to the gateway with the appropriate fields (fields that are used by the rule - e.g., the IP addresses, TCP/UDP ports) in the packet header. The evaluator shall perform both positive and negative test cases for each type of rule (e.g., a packet that matches the rule and another that does not match the rule). The evaluator shall observe via the audit trail, and packet captures that the TOE exhibited the expected behaviour: appropriate packets were dropped, allowed to flow without modification, encrypted by the IPsec implementation.</h:p>
                   </test>
@@ -3479,9 +3467,7 @@ If ( keylen = 256 )
               <Tests>
                 437. The assurance activity for this element is performed in conjunction with the activities for FCS_IPSEC_EXT.1.1.
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">438. The evaluator shall use the guidance documentation to configure the TOE to perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">438. The evaluator shall use the guidance documentation to configure the TOE to perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall configure the SPD such that there is a rule for dropping a packet, encrypting a packet, and allowing a packet to flow in plaintext. The evaluator may use the SPD that was created for verification of FCS_IPSEC_EXT.1.1. The evaluator shall construct a network packet that matches the rule to allow the packet to flow in plaintext and send that packet. The evaluator shall observe that the network packet is passed to the proper destination interface with no modification. The evaluator shall then modify a field in the packet header; such that it no longer matches the evaluator-created entries (there may be a “TOE created” final entry that discards packets that do not match any previous entries). The evaluator shall send the packet and observe that the packet was dropped.</h:p>
                   </test>
@@ -3506,9 +3492,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">439. The evaluator shall perform the following test(s) based on the selections chosen:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">439. The evaluator shall perform the following test(s) based on the selections chosen:</h:p>
                   <test>
                     <depends on="nd_fcs_ipsec_ext.1.3_1"/>
                     <h:p style="text-align: left;">Test 1: If tunnel mode is selected, the evaluator shall use the guidance documentation to configure the TOE to operate in tunnel mode and also configures a VPN peer to operate in tunnel mode. The evaluator shall configure the TOE and the VPN peer to use any of the allowable cryptographic algorithms, authentication methods, etc. to ensure an allowable SA can be negotiated. The evaluator shall then initiate a connection from the TOE to connect to the VPN peer. The evaluator shall observe (for example, in the audit trail and the captured packets) that a successful connection was established using the tunnel mode.</h:p>
@@ -3568,9 +3552,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">441. Tests are performed in conjunction with the other IPsec evaluation activities.</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">441. Tests are performed in conjunction with the other IPsec evaluation activities.</h:p>
                   <test>
                     <depends on="nd-fcs-ipsec-ext-1-5-compsel-1"/>
                     <h:p style="text-align: left;">Test 1: If IKEv1 is selected, the evaluator shall configure the TOE as indicated in the guidance documentation and attempt to establish a connection using an IKEv1 Phase 1 connection in aggressive mode. This attempt should fail. The evaluator shall then show that main mode exchanges are supported.</h:p>
@@ -3626,9 +3608,7 @@ If ( keylen = 256 )
               <Tests>
                 443. When testing this functionality, the evaluator shall ensure that both sides are configured appropriately. From the RFC “A difference between IKEv1 and IKEv2 is that in IKEv1 SA lifetimes were negotiated. In IKEv2, each end of the SA is responsible for enforcing its own lifetime policy on the SA and rekeying the SA when necessary. If the two ends have different lifetime policies, the end with the shorter lifetime will end up always being the one to request the rekeying. If the two ends have the same lifetime policies, it is possible that both will initiate a rekeying at the same time (which will result in redundant SAs). To reduce the probability of this happening, the timing of rekeying requests SHOULD be jittered.”
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">444. Each of the following tests shall be performed for each version of IKE selected in the FCS_IPSEC_EXT.1.5 protocol selection:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">444. Each of the following tests shall be performed for each version of IKE selected in the FCS_IPSEC_EXT.1.5 protocol selection:</h:p>
                   <test>
                     <depends on="nd_fcs_ipsec_ext.1.7_1"/>
                     <depends on="nd_fcs_ipsec_ext.1.7_4"/>
@@ -3663,9 +3643,7 @@ If ( keylen = 256 )
               <Tests>
                 445. When testing this functionality, the evaluator shall ensure that both sides are configured appropriately. From the RFC “A difference between IKEv1 and IKEv2 is that in IKEv1 SA lifetimes were negotiated. In IKEv2, each end of the SA is responsible for enforcing its own lifetime policy on the SA and rekeying the SA when necessary. If the two ends have different lifetime policies, the end with the shorter lifetime will end up always being the one to request the rekeying. If the two ends have the same lifetime policies, it is possible that both will initiate a rekeying at the same time (which will result in redundant SAs). To reduce the probability of this happening, the timing of rekeying requests SHOULD be jittered.”
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">446. Each of the following tests shall be performed for each version of IKE selected in the FCS_IPSEC_EXT.1.5 protocol selection:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">446. Each of the following tests shall be performed for each version of IKE selected in the FCS_IPSEC_EXT.1.5 protocol selection:</h:p>
                   <test>
                     <depends on="nd_fcs_ipsec_ext.1.8_1"/>
                     <depends on="nd_fcs_ipsec_ext.1.8_4"/>
@@ -3727,9 +3705,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">448. The following tests shall be performed.</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">448. The following tests shall be performed.</h:p>
                   <test>
                     <depends on="nd_fcs_ipsec_ext.1.10_1"/>
                     <h:p style="text-align: left;">Test 1: If IKEv1 is supported, Configure the TOE to use IKEv1:</h:p>
@@ -3799,9 +3775,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">450. The evaluator shall follow the guidance to configure the TOE to perform the following tests.</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">450. The evaluator shall follow the guidance to configure the TOE to perform the following tests.</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: This test shall be performed for each version of IKE supported. The evaluator shall successfully negotiate an IPsec connection using each of the supported algorithms and hash functions identified in the requirements.</h:p>
                   </test>
@@ -3866,9 +3840,7 @@ If ( keylen = 256 )
               <Tests>
                 452. In the context of the tests below, a valid certificate is a certificate that passes FIA_X509_EXT.1 (from the Functional Package for X.509) validation checks but does not necessarily contain an authorised subject.
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">453. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">453. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <depends on="nd_fcs_ipsec_ext.1.14_5"/>
                     <depends on="nd_fcs_ipsec_ext.1.14_4"/>
@@ -4030,9 +4002,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">464. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">464. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall confirm the TOE supports configuration of at least three (3) NTP time sources. The evaluator shall configure at least three NTP servers to support periodic time updates to the TOE. The evaluator shall confirm the TOE is configured to accept NTP packets that would result in the timestamp being updated from each of the NTP servers. The evaluator shall check that the time stamp is updated after receipt of the NTP packets. The purpose of this test to verify that the TOE can be configured to synchronize with multiple NTP servers. It is up to the evaluator to determine that the multisource update of the time information is appropriate and consistent with the behaviour prescribed by the RFC 1305 for NTPv3 and RFC 5905 for NTPv4.</h:p>
                   </test>
@@ -4282,9 +4252,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">469. The evaluator shall perform the following tests for each method by which remote administrators access the TOE (e.g., any passwords entered as part of establishing the connection protocol or the remote administrator application):</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">469. The evaluator shall perform the following tests for each method by which remote administrators access the TOE (e.g., any passwords entered as part of establishing the connection protocol or the remote administrator application):</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall use the operational guidance to configure the number of successive unsuccessful authentication attempts allowed by the TOE (and, if the time period selection in FIA_AFL.1.2 is included in the ST, then the evaluator shall also use the operational guidance to configure the time period after which access is reenabled). The evaluator shall test that once the authentication attempts limit is reached, authentication attempts with valid credentials are no longer successful.</h:p>
                   </test>
@@ -4361,9 +4329,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">475. The evaluator shall perform the following tests.</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">475. The evaluator shall perform the following tests.</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall compose passwords that meet the requirements in some way. For each password, the evaluator shall verify that the TOE supports the password. While the evaluator is not required (nor is it feasible) to test all possible compositions of passwords, the evaluator shall ensure that all characters, and a minimum length listed in the requirement are supported and justify the subset of those characters chosen for testing.</h:p>
                   </test>
@@ -4435,9 +4401,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">472. The evaluator shall perform the following test for each method of local login allowed:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">472. The evaluator shall perform the following test for each method of local login allowed:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall locally authenticate to the TOE. While making this attempt, the evaluator shall verify that at most obscured feedback is provided while entering the authentication information.</h:p>
                   </test>
@@ -4573,9 +4537,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">496. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">496. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall try to enable and disable automatic checking for updates or automatic updates (whichever is supported by the TOE) without prior authentication as Security Administrator (by authenticating as a user with no administrator privileges or without user authentication). The attempt to enable/disable automatic checking for updates should fail. = When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to enable/disable automatic checking for updates can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
                   </test>
@@ -4627,14 +4589,12 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">
-                      <h:b>If ‘transmission of audit data to external IT entity’ is selected from the second selection together with 'modify the behaviour of' in the first selection</h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">501. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
                   <depends on="nd_fmt_mof.1.1_FUNCTIONS_3"/>
                   <depends on="nd_fmt_mof.1.1_FUNCTIONS_2"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If ‘transmission of audit data to external IT entity’ is selected from the second selection together with 'modify the behaviour of' in the first selection</h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">501. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall try to modify all security related parameters for configuration of the transmission protocol for transmission of audit data to an external IT entity without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). Attempts to modify parameters without prior authentication must fail.</h:p>
                     <h:p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to modify the security related parameters can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
@@ -4646,14 +4606,12 @@ If ( keylen = 256 )
                   </test>
                 </testlist>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">
-                      <h:b>If 'handling of audit data' is selected from the second selection together with 'modify the behaviour of' in the first selection</h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">502. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
                   <depends on="nd_fmt_mof.1.1_FUNCTIONS_4"/>
                   <depends on="nd_fmt_mof.1.1_FUNCTIONS_2"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If 'handling of audit data' is selected from the second selection together with 'modify the behaviour of' in the first selection</h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">502. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall try to modify all security related parameters for configuration of the handling of audit data without prior authentication as Security Administrator (by authentication as a user with no administrator privileges, or without user authentication at all). Attempts to modify parameters without prior authentication must fail. </h:p>
                     <h:p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator. The term ‘handling of audit data’ refers to the different options for selection and assignments in SFRs FAU_STG_EXT.1.4, FAU_STG_EXT.1.5 and FAU_STG_EXT.2.</h:p>
@@ -4665,14 +4623,12 @@ If ( keylen = 256 )
                   </test>
                 </testlist>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">
-                      <h:b>If 'audit functionality when Local Audit Storage Space is full' is selected from the second selection together with 'modify the behaviour of' in the first selection </h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">503. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
                   <depends on="nd_fmt_mof.1.1_FUNCTIONS_5"/>
                   <depends on="nd_fmt_mof.1.1_FUNCTIONS_2"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If 'audit functionality when Local Audit Storage Space is full' is selected from the second selection together with 'modify the behaviour of' in the first selection </h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">503. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall try to modify the behaviour when Local Audit Storage Space is full without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). This attempt should fail. </h:p>
                     <h:p style="text-align: left;">When there is an implementation where no other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
@@ -4684,13 +4640,11 @@ If ( keylen = 256 )
                   </test>
                 </testlist>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">
-                      <h:b>If in the first selection 'determine the behaviour of' has been chosen together with for any of the options in the second selection </h:b>
-                    </h:p>
-                    <h:p style="text-align: left;">504. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
                   <depends on="nd_fmt_mof.1.1_FUNCTIONS_1"/>
+                  <h:p style="text-align: left;">
+                    <h:b>If in the first selection 'determine the behaviour of' has been chosen together with for any of the options in the second selection </h:b>
+                  </h:p>
+                  <h:p style="text-align: left;">504. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall try to determine the behaviour of all options chosen from the second selection without prior authentication as Security Administrator (by authentication as a user with no administrator privileges or without user authentication at all). This can be done in one test or in separate tests. The attempt(s) to determine the behaviour of the selected functions without administrator authentication shall fail.</h:p>
                     <h:p style="text-align: left;">When there is an implementation where other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
@@ -4770,9 +4724,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">491. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">491. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall try to enable and disable at least one of the services as defined in the Application Notes for FAU_GEN.1.1 (whichever is supported by the TOE) without prior authentication as Security Administrator (either by authenticating as a user with no administrator privileges, if possible, or without prior authentication at all). The attempt to enable/disable this service/these services should fail.</h:p>
                     <h:p style="text-align: left;">When there is an implementation where no other users other than the Security Administrator can be defined, the user might not be able to get to the point where the attempt to enable/disable this service/these services can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
@@ -4839,9 +4791,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">509. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">509. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall try to perform at least one of the related actions (modify, delete, generate/import) without prior authentication as Security Administrator (either by authentication as a non-administrative user, if supported, or without authentication at all). Attempts to perform related actions without prior authentication should fail.</h:p>
                     <h:p style="text-align: left;">When there is an implementation where other users than the Security Administrator can be defined, the user might not be able to get to the point where the attempt can be executed without user authentication. In that case it shall be demonstrated that access control mechanisms prevent execution up to the step that can be reached without authentication as Security Administrator.</h:p>
@@ -5206,9 +5156,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">281. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">281. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <depends on="nd-feature-7"/>
                     <h:p style="text-align: left;">Test 1: The evaluator shall ensure that each communications channel established using each protocol between each pair of distributed TOE components is tested during the course of the evaluation, setting up the connections as described in the guidance documentation and verifying that communication is successful.</h:p>
@@ -5488,9 +5436,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">486. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">486. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall verify that the update mechanism includes a certificate validation according to FIA_X509_EXT.1 (in the Functional Package for X.509) and a check for the Code Signing purpose in the extendedKeyUsage.</h:p>
                   </test>
@@ -5620,9 +5566,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">512. The evaluator shall perform the following test:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">512. The evaluator shall perform the following test:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure several different values for the inactivity time period referenced in the component. For each period configured, the evaluator shall establish a local interactive session with the TOE. The evaluator shall then verify that the session is either locked or terminated after the configured time period. If locking was selected from the component, the evaluator shall then verify that reauthentication is needed when trying to unlock the session.</h:p>
                   </test>
@@ -5670,9 +5614,7 @@ If ( keylen = 256 )
               <Tests>
                 243. The evaluator shall also perform the following test:
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;"></h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;"></h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall follow the guidance documentation to configure a notice and consent warning message. The evaluator shall then, for each method of human interactive access specified in the TSS, establish a session with the TOE. The evaluator shall verify that the notice and consent warning message is displayed in each instance.</h:p>
                   </test>
@@ -5717,9 +5659,7 @@ If ( keylen = 256 )
               <Tests>
                 246. The developer shall provide to the evaluator application layer configuration settings for all secure communication mechanisms specified by the FTP_ITC.1 requirement. This information should be sufficiently detailed to allow the evaluator to determine the application layer timeout settings for each cryptographic protocol. There is no expectation that this information must be recorded in any public-facing document or report.
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">247. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">247. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall ensure that communications using each protocol with each authorised IT entity is tested during the course of the evaluation, setting up each connection as described in the guidance documentation and ensuring that communication is successful.</h:p>
                   </test>
@@ -5797,9 +5737,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">253. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">253. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluators shall ensure that communications using each specified (in the guidance documentation) remote administration method are tested during the course of the evaluation, setting up the connections as described in the guidance documentation and verifying that communication is successful.</h:p>
                   </test>
@@ -5870,9 +5808,7 @@ If ( keylen = 256 )
               </Guidance>
               <Tests>
                 <testlist>
-                  <testlist-intro>
-                    <h:p style="text-align: left;">288. The evaluator shall perform the following tests:</h:p>
-                  </testlist-intro>
+                  <h:p style="text-align: left;">288. The evaluator shall perform the following tests:</h:p>
                   <test>
                     <h:p style="text-align: left;">Test 1: The evaluator shall ensure that the communications path for joining components to the TSF is tested for each distinct (nonequivalent) component type[4], setting up the connections as described in the guidance documentation and verifying that communication is successful. In particular the evaluator shall confirm that requirements on environment protection for the registration process are consistent with observations made on the test configuration (for example, a requirement to isolate the TOE components from the Internet during registration might be inconsistent with the need for a TOE component to contact a license server). If no requirements on the registration environment are identified as necessary to protect confidentiality, then the evaluator shall confirm that the key used for registration can be configured (following the instructions in the guidance documentation) to be at least the same length as the key used for the internal TSF channel that is being enabled. The evaluator shall confirm that the key used for the channel is unique to the pair of TOE components (this is done by identifying the relevant key during the registration test: it is not necessary to examine the key value).</h:p>
                   </test>

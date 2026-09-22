@@ -807,7 +807,6 @@ FTP_TRP.1/Admin</rationale>
                       </test>
                     </testlist>
                   </test>
-                  <h:br/>
                   <test>
                     <h:p style="text-align: left;">The evaluator shall perform operations that generate audit data until the local storage space is exceeded and verifies that the TOE complies with the behaviour defined in FAU_STG_EXT.1.5. Depending on the configuration this means that the evaluator shall check the content of the audit data when the audit data is just filled to the maximum and then verifies that:</h:p>
                     <testlist>
@@ -825,13 +824,11 @@ FTP_TRP.1/Admin</rationale>
                       <h:p style="text-align: left;"></h:p>
                     </testlist>
                   </test>
-                  <h:br/>
                   <test>
                     <depends on="nd-feature-7"/>
                     <h:p style="text-align: left;">Test 5: For distributed TOEs, for the local storage according to FAU_STG_EXT.1.4, Test 1 specified above shall be applied to all TOE components that store audit data locally. For all TOE components that store audit data locally and comply with FAU_STG_EXT.2, Test 2 specified above shall be applied. The evaluator shall verify that the transfer of audit data to an external audit server is implemented.</h:p>
                     <h:p style="text-align: left;"></h:p>
                   </test>
-                  <h:br/>
                   <test>
                     <depends on="fau-stg-ext-1-6-2"/>
                     <depends on="fau-stg-ext-1-6-3"/>

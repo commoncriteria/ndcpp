@@ -17,7 +17,6 @@
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/aactivity[1]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/aactivity[1]""/Tests[1]""/testlist[1]""/test[2]""/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/Tests[1]"48. Testi"/testlist[1]""/test[2]""/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/Tests[1]"48. Testi"/testlist[1]""/test[4]""/testlist[1]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/Tests[1]"48. Testi"/testlist[1]""/test[5]""/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/Tests[1]"48. Testi"/testlist[1]""/test[6]""/h:p[3]""

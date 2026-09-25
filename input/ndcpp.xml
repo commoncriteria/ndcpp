@@ -5425,7 +5425,7 @@ If ( keylen = 256 )
         <!-- FPT_TUD_EXT.1 Trusted Update -->
         <f-component cc-id="fpt_tud_ext.1" id="fpt-tud-ext-1" name="Trusted Update">
           <f-element id="fpt-tud-ext-1-1">
-            <title><h:p style="text-align: left;">The TSF shall provide <h:i>Security Administrators</h:i> the ability to query the currently executing version of the TOE firmware/software and</h:p> <selectables><selectable id="nd_fpt_tud_ext.1.1_1">the most recently installed version of the TOE firmware/software</selectable><selectable id="nd_fpt_tud_ext.1.1_2">no other TOE firmware/software version</selectable></selectables>.</title>
+            <title>The TSF shall provide <h:i>Security Administrators</h:i> the ability to query the currently executing version of the TOE firmware/software and <selectables><selectable id="nd_fpt_tud_ext.1.1_1">the most recently installed version of the TOE firmware/software</selectable><selectable id="nd_fpt_tud_ext.1.1_2">no other TOE firmware/software version</selectable></selectables>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 33 </h:b>

@@ -160,7 +160,6 @@ output/ndcpp-release-linkable.html: subclause
 output/ndcpp-release-linkable.html: subcommands
 output/ndcpp-release-linkable.html: synchronise
 output/ndcpp-release-linkable.html: tunnelling
-output/ndcpp-release-linkable.html: udpates
 output/ndcpp-release-linkable.html: unauthorised
 output/ndcpp-release-linkable.html: uninstantiating
 output/ndcpp-release-linkable.html: utilise
@@ -373,7 +372,6 @@ output/ndcpp-release.html: synchronise
 output/ndcpp-release.html: time’
 output/ndcpp-release.html: traditional’
 output/ndcpp-release.html: tunnelling
-output/ndcpp-release.html: udpates
 output/ndcpp-release.html: unauthorised
 output/ndcpp-release.html: uninstantiating
 output/ndcpp-release.html: updates’
@@ -588,7 +586,6 @@ output/ndcpp.html: synchronise
 output/ndcpp.html: time’
 output/ndcpp.html: traditional’
 output/ndcpp.html: tunnelling
-output/ndcpp.html: udpates
 output/ndcpp.html: unauthorised
 output/ndcpp.html: uninstantiating
 output/ndcpp.html: updates’

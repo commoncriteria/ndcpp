@@ -1,9 +1,3 @@
-* Error: Detected dangling id-reference to [object Object] from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[3]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to dummy from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[9]""/depends[1]""/on-sel[1]""
-* Error: Detected dangling id-reference to dummy from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[10]""/depends[1]""/on-sel[1]""
 * Error: Detected dangling id-reference to dummy from attribute
         on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[16]""/depends[4]""/on-sel[1]""
 * Error: Detected dangling id-reference to dummy from attribute
@@ -19,9 +13,8 @@
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/Tests[1]"48. Testi"/testlist[1]""/test[5]""/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[6]""/f-element[1]""/aactivity[1]""/Tests[1]"48. Testi"/testlist[1]""/test[6]""/h:p[3]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[9]""/f-element[1]""/aactivity[1]""/h:p[1]""
+* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[10]""/f-element[1]""/aactivity[1]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[4]""/f-element[1]""/aactivity[1]""/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[1]""
-* Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/tabularize[1]""/reqtext[4]"."/h:p[2]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/selectable[1]""/col[4]"[AES]"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/title[1]""/selectables[1]""/selectable[2]""/col[4]"[AES]"/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[5]""/f-element[1]""/aactivity[1]""/Tests[1]"317. The "/testlist[1]""/test[2]""/testlist[1]""/testlist-intro[1]""/h:p[1]""

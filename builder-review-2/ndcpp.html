@@ -3225,7 +3225,9 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                   </li></ul></span>
               </div></div></div></div></div>
         
-        <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4>
+        <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
+	  .
+      </i></b></div>
           <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>digital signature verification</i> in accordance with a specified cryptographic algorithm</p>
               
@@ -3733,8 +3735,9 @@ If ( keylen = 256 )
               </div></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/XOF"><h4>FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function</h4><div class="statustag"><b><i>This is a selection-based component. Its inclusion depends upon selection from
-	  .
+	  <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a>.
       </i></b></div>
+          
           
           <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>extendable-output function</i> in accordance with a specified cryptographic algorithm </p>
@@ -4742,10 +4745,9 @@ If ( keylen = 256 )
         
         <div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4><div class="statustag"><i><b>This is an implementation-based component.
                 Its inclusion in depends on whether the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements one or more of the following features:
-                <ul><li><a href="#nd-feature-4">Pre-shared keys for IPsec</a></li><li><a href="#nd_fia_psk_ext.1.2_2"></a></li></ul>
+                <ul><li><a href="#nd-feature-4">Pre-shared keys for IPsec</a></li></ul>
                 as described in Appendix A.3: Implementation-based Requirements.
                </b></i></div>
-          
           
           <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.1"><a href="#FIA_PSK_EXT.1.1" class="abbr">FIA_PSK_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to use pre-shared keys that conform to <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784 for IPsec.</div></div>
           <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.2"><a href="#FIA_PSK_EXT.1.2" class="abbr">FIA_PSK_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to             [<b>selection</b>: <span class="selectable-content" id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</span>, <span class="selectable-content" id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via <a href="#FCS_RBG.1">FCS_RBG.1</a></span>].<div class="appnote"><span class="note-header">Application
@@ -4768,7 +4770,7 @@ If ( keylen = 256 )
                   <p style="text-align: left;">476. If "generate" is selected, the evaluator shall confirm that this process uses the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> specified in <a href="#FCS_RBG.1">FCS_RBG.1</a> and the output matches the size required in <a href="#FIA_PSK_EXT.1.2">FIA_PSK_EXT.1.2</a>.</p>
                 </div></div></div>
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                <p style="text-align: left;">477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784.</p>
+                <p>477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 :<span class="testlist-"><ul><li class="test-"><a id="_t_154" class="defined" href="#_t_154">Test FIA_PSK_EXT.1:1</a>:
       
@@ -6248,7 +6250,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
 <tr><td><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></td><td></td></tr>
 <tr><td><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></td><td></td></tr>
 <tr><td><a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></td><td></td></tr>
-<tr><td><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></td><td></td></tr>
+<tr><td><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> (Selection-based)</td><td></td></tr>
 <tr><td><a href="#FCS_RBG.1">FCS_RBG.1</a></td><td></td></tr>
 <tr><td><a href="#FMT_SMF.1">FMT_SMF.1</a></td><td></td></tr>
 </table></p>

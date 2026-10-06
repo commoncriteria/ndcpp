@@ -2315,321 +2315,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                   </li></ul></span>
               </div></div></div></div></div>
         
-        <div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4>
-          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>digital signature verification</i> in accordance with a specified cryptographic algorithm</p>
-              
-                  
-                  
-                  
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic Algorithm</span>]
-                  and cryptographic key sizes
-                  
-    [<b>selection</b>: 
-    <span class="selectable-content">Cryptographic Key Sizes</span>]
-                  that meet the following:
-                  
-    [<b>selection</b>: 
-    <span class="selectable-content">List of Standards</span>]
-                  .                    <p></p> <p></p> The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a>.                  
-                
-            <table><caption><span class="ctr" data-myid="fcs-cop-sigver-sels" data-counter-type="ct-Table" id="fcs-cop-sigver-sels">Table <span class="counter">7</span></span>: Allowable choices for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></caption>
-                <tr>
-                  <th>Identifier</th>
-                  
-                  <th>Cryptographic Algorithm</th>
-                  
-                  <th>Cryptographic Key Sizes</th>
-                  
-                  <th>List of Standards</th>
-                  
-                </tr>
-
-                <tr><td>RSA-PKCS</td><td>RSASSA-PKCS1-v1_5</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_1">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_1">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_2">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_3">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_4">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_2"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_5"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_6"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.2) [PKCS #1 v2.2],<p></p><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</td></tr>
-
-                <tr><td>RSA-PSS</td><td>RSASSA-PSS</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_3">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_7">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_8">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_9">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_10">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_4"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_11"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_12"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.1) [PKCS#1 v2.2],<p></p><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]</td></tr>
-
-                <tr><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_5">P-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_13">P-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_14">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_6"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_15"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_16"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td>[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_17"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_18"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 6.4.2)</span>] [<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]</td></tr>
-
-                <tr><td>LMS</td><td>LMS</td><td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_19">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_20"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_21">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_22">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_23"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_24">SHAKE256</span>]</span></li></ul>] <p></p>Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_25">1</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_26">2</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_27">4</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_28">8</span>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_29">5</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_30">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_31">15</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_32">20</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_33">25</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8554 [LMS],<p></p><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]</td></tr>
-
-                <tr><td>XMSS</td><td>XMSS</td><td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_34">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_35"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_36">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_37">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_38"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_39">SHAKE256</span>]</span></li></ul>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_40">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_41">16</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_42">20</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8391 [XMSS],<p></p><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]</td></tr>
-
-                <tr><td>ML-DSA</td><td>ML-DSA</td><td>Parameter set = ML-DSA-87</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.3)</td></tr>
-
-              </table><div class="appnote"><span class="note-header">Application
-      Note:
-    </span><span class="note">
-              <p style="text-align: left;">
-                <b>Application Note 17</b>
-              </p>
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should choose the algorithm implemented to perform verification of digital signatures. For the algorithm chosen, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should make the appropriate assignments/selections to specify the parameters that are implemented for that algorithm. In particular, if <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> is selected as one of the signature algorithms, the key size specified must match the selection for the curve used in the algorithm. </p>
-              <p style="text-align: left;">If LMS or XMSS is selected, then <a href="#FCS_COP.1/XOF">FCS_COP.1/XOF</a> from Annex B must be included.</p>
-            </span></div></div></div>
-        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></div>
-              
-              
-              
-            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
-                <ol start="114">
-                  <li>
-                    <p style="text-align: left;">The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that any one-time values such as nonces or masks are constructed and used in accordance with the relevant standards.</p>
-                  </li>
-                </ol>
-              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                <p style="text-align: left;">115. There are no additional Guidance evaluation activities for this component.</p>
-              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <ol start="116">
-                  <li>
-                    <p style="text-align: left;">The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described. </p>
-                  </li>
-                </ol>
-                :<span class="testlist-"><ul><li class="test-"><a id="_t_88" class="defined" href="#_t_88">Test FCS_COP.1/SigVer:1</a>:
-      
-                    <p style="text-align: left;">
-                      <b>RSA-PKCS Signature Verification</b>
-                    </p>
-                    <p style="text-align: left;">117. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform RSA Digital Signature Verification using PKCS1-v1,5 signature type, the evaluator shall perform the Generated Data Test using the following input parameters:</p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Modulus size [2048, 3072, 4096, 6144, 8192] bits</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>Generated Data Test</b>
-                    </p>
-                    <p style="text-align: left;">118. For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate six test cases using a random message and its signature such that the test cases are modified as follows:</p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">One test case is left unmodified</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the Message is modified</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the Signature is modified</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the exponent (e) is modified</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the IR is moved</p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the Trailer is moved</p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">119. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
-                  </li><li class="test-"><a id="_t_89" class="defined" href="#_t_89">Test FCS_COP.1/SigVer:2</a>:
-      
-                    <p style="text-align: left;">
-                      <b>RSA-PSS Signature Verification </b>
-                    </p>
-                    <p style="text-align: left;">120. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform RSA Digital Signature Verification using PSS signature type, the evaluator shall perform the Generated Data Test using the following input parameters: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Modulus size [2048, 3072, 4096, 6144, 8192] bits </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Salt length [Fixed based on implementation] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Mask function [MGF1] </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>Generated Data Test </b>
-                    </p>
-                    <p style="text-align: left;">121. For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate six test cases using random data such that the test cases are modified as follows: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">One test case is left unmodified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the Message is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the Signature is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the exponent (e) is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the IR is moved </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case the Trailer is moved</p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">122. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
-                  </li><li class="test-"><a id="_t_90" class="defined" href="#_t_90">Test FCS_COP.1/SigVer:3</a>:
-      
-                    <p style="text-align: left;">
-                      <b><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Signature Verification </b>
-                    </p>
-                    <p style="text-align: left;">123. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Digital Signature Verification, the evaluator shall perform the Algorithm Functional Test using the following input parameters: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Elliptic Curve [P-256, P-384, P-521] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512] </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>Algorithm Functional Test </b>
-                    </p>
-                    <p style="text-align: left;">124. For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate test cases consisting of messages and signatures such that the 21 test cases are modified as follows: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Three test cases are left unmodified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the Message is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the key is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the r value is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the s value is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the value r is zeroed </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the value s is zeroed </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">125. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
-                  </li><li class="test-"><a id="_t_91" class="defined" href="#_t_91">Test FCS_COP.1/SigVer:4</a>:
-      
-                    <p style="text-align: left;">
-                      <b>LMS Signature Verification </b>
-                    </p>
-                    <p style="text-align: left;">126. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to verify cryptographic digital signature using LMS, the evaluator shall perform the Algorithm Functional Test using the following input parameters </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192, SHAKE256/192, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Winternitz[1, 2, 4, 8] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Tree height [5, 10, 15, 20, 25] </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>Algorithm Functional Test</b>
-                    </p>
-                    <p style="text-align: left;">127. For each supported combination of the above parameters, the evaluator shall generate 4 test cases consisting of signed messages and keys, such that </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">One test case is unmodified (i.e. correct) </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case modify the message, i.e. the message is different </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case modify the signature, i.e. signature is different </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case modify the signature header so that it is a valid header for a different LMS parameter set. </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">128. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified test case and fail to verify the modified test cases.</p>
-                  </li><li class="test-"><a id="_t_92" class="defined" href="#_t_92">Test FCS_COP.1/SigVer:5</a>:
-      
-                    <p style="text-align: left;">
-                      <b>XMSS Signature Verification </b>
-                    </p>
-                    <p style="text-align: left;">129. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to verify digital signatures using XMSS or XMSS MT, the evaluator shall perform the XMSS digital signature verification test using the following input parameters: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192, SHAKE256/192, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Tree height [10, 16, 20] </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>XMSS Digital Signature Verification Test </b>
-                    </p>
-                    <p style="text-align: left;">130. For each supported combination of the above parameters, the evaluator shall generate four test cases consisting of signed messages and keys, such that </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">One test case is unmodified (i.e. correct) </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case modify the message, i.e. the message is different </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case modify the signature, i.e. signature is different </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For one test case modify the signature header so that it is a valid header for a different XMSS parameter set </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">131. The evaluator shall verify the correctness of the implementation by verifying that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> correctly verifies the unmodified test case and fails to verify the modified test cases</p>
-                  </li><li class="test-"><a id="_t_93" class="defined" href="#_t_93">Test FCS_COP.1/SigVer:6</a>:
-      
-                    <p style="text-align: left;">
-                      <b>ML-DSA Signature Verification </b>
-                    </p>
-                    <p style="text-align: left;">132. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to validate digital signatures using ML-DSA, the evaluator shall perform the Algorithm Functional Test using the following input parameters:</p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Parameter set [ML-DSA-87] </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Previously generated signed Message [8-65535] bytes </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Mu value (if generated externally) </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Context (for external interface testing) </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Previously generated Public key (pk) </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">Previously generated Signature </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">
-                      <b>Algorithm Functional Test </b>
-                    </p>
-                    <p style="text-align: left;">133. For each combination of supported parameter set and capabilities, the evaluator shall require the implementation under test to validate 15 signatures. Each group of 15 test cases is modified as follows: </p>
-                    <ul>
-                      <li>
-                        <p style="text-align: left;">Three test cases are left unmodified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the Signed message is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the component of the signature that commits the signer to the message is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the component of the signature that allows the verifier to construct the vector z is modified </p>
-                      </li>
-                      <li>
-                        <p style="text-align: left;">For three test cases the component of the signature that allows the verifier to construct the hint array is modified </p>
-                      </li>
-                    </ul>
-                    <p style="text-align: left;">134. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
-                  </li></ul></span>
-              </div></div></div></div></div>
+        
         
         
         
@@ -2654,7 +2340,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
     <span class="selectable-content">List of Standards</span>]
                                       after initialization.                    <p></p> <p></p> The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_RBG.1.1">FCS_RBG.1.1</a>.                 
                 
-            <table><caption><span class="ctr" data-myid="fcs-rbg-1-sels" data-counter-type="ct-Table" id="fcs-rbg-1-sels">Table <span class="counter">8</span></span>: Allowable choices for <a href="#FCS_RBG.1.1">FCS_RBG.1.1</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-rbg-1-sels" data-counter-type="ct-Table" id="fcs-rbg-1-sels">Table <span class="counter">7</span></span>: Allowable choices for <a href="#FCS_RBG.1.1">FCS_RBG.1.1</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -3689,7 +3375,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
         
       
     <h3 id="obj-req-map" class="indexable" data-level="3">5.1.9 TOE Security Functional Requirements Rationale</h3><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
-    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">9</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="7"><a href="#T.SECURITY_FUNCTIONALITY_COMPROMISE">T.SECURITY_​FUNCTIONALITY_​COMPROMISE</a></td><td><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td></td></tr>
+    showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">8</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="7"><a href="#T.SECURITY_FUNCTIONALITY_COMPROMISE">T.SECURITY_​FUNCTIONALITY_​COMPROMISE</a></td><td><a href="#FCS_CKM.6">FCS_CKM.6</a></td><td></td></tr>
 <tr><td><a href="#FIA_PMG_EXT.1">FIA_PMG_EXT.1</a> (Implementation-based)</td><td></td></tr>
 <tr><td><a href="#FIA_UAU.7">FIA_UAU.7</a> (Implementation-based)</td><td></td></tr>
 <tr><td><a href="#FMT_MTD.1/CryptoKeys">FMT_MTD.1/CryptoKeys</a> (Implementation-based)</td><td></td></tr>
@@ -3748,7 +3434,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
 <tr><td><a href="#FCS_COP.1/Hash">FCS_COP.1/Hash</a></td><td></td></tr>
 <tr><td><a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></td><td></td></tr>
 <tr><td><a href="#FCS_COP.1/SigGen">FCS_COP.1/SigGen</a></td><td></td></tr>
-<tr><td><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></td><td></td></tr>
+<tr><td><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a> (Selection-based)</td><td></td></tr>
 <tr><td><a href="#FCS_RBG.1">FCS_RBG.1</a></td><td></td></tr>
 <tr><td><a href="#FMT_SMF.1">FMT_SMF.1</a></td><td></td></tr>
 </table></p>
@@ -4871,8 +4557,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
       
                     <p style="text-align: left;">Test 2: The evaluator shall compose passwords that do not meet the requirements in some way. For each password, the evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not support the password. While the evaluator is not required (nor is it feasible) to test all possible compositions of passwords, the evaluator shall ensure that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> enforces the allowed characters and the minimum length listed in the requirement and justify the subset of those characters chosen for testing.</p>
                   </li></ul></span>
-              </div></div></div></div></div><div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-4">Pre-shared keys for IPsec</a></i></b></li></ul></div><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#fia-psk-ext-1">FIA_PSK_EXT.1</a></i></b></li></ul></div>
-          
+              </div></div></div></div></div><div class="comp" id="FIA_PSK_EXT.1"><h4>FIA_PSK_EXT.1 Pre-Shared Key Composition</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-4">Pre-shared keys for IPsec</a></i></b></li></ul></div>
           
           <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.1"><a href="#FIA_PSK_EXT.1.1" class="abbr">FIA_PSK_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to use pre-shared keys that conform to <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784 for IPsec.</div></div>
           <div class="element"><div class="reqid" id="FIA_PSK_EXT.1.2"><a href="#FIA_PSK_EXT.1.2" class="abbr">FIA_PSK_EXT.1.2</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall be able to             [<b>selection</b>: <span class="selectable-content" id="nd_fia_psk_ext.1.2_1">accept externally generated pre-shared keys</span>, <span class="selectable-content" id="nd_fia_psk_ext.1.2_2">generate 256 bit-based pre-shared keys via <a href="#FCS_RBG.1">FCS_RBG.1</a></span>].<div class="appnote"><span class="note-header">Application
@@ -4895,7 +4580,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
                   <p style="text-align: left;">476. If "generate" is selected, the evaluator shall confirm that this process uses the <abbr class="dyn-abbr"><a href="#abbr_RBG">RBG</a></abbr> specified in <a href="#FCS_RBG.1">FCS_RBG.1</a> and the output matches the size required in <a href="#FIA_PSK_EXT.1.2">FIA_PSK_EXT.1.2</a>.</p>
                 </div></div></div>
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
-                <p style="text-align: left;">477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784.</p>
+                <p>477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per <abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8784.</p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 :<span class="testlist-"><ul><li class="test-"><a id="_t_154" class="defined" href="#_t_154">Test FIA_PSK_EXT.1:1</a>:
       
@@ -5065,7 +4750,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
                     <p style="text-align: left;">. The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a>.</p>
                   
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-aead-sels" data-counter-type="ct-Table" id="fcs-cop-aead-sels">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-aead-sels" data-counter-type="ct-Table" id="fcs-cop-aead-sels">Table <span class="counter">9</span></span>: Allowed choices for <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -5279,7 +4964,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
     <span class="selectable-content">List of Standards</span>]
                   .  The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.
                 
-            <table><caption><span class="ctr" data-myid="nd-fcs-cop-1-1-keyencap-crypto-table" data-counter-type="ct-Table" id="nd-fcs-cop-1-1-keyencap-crypto-table">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
+            <table><caption><span class="ctr" data-myid="nd-fcs-cop-1-1-keyencap-crypto-table" data-counter-type="ct-Table" id="nd-fcs-cop-1-1-keyencap-crypto-table">Table <span class="counter">10</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
                 <tr>
                   <th>Identifier</th>
                   <th>Cryptographic Algorithm</th>
@@ -5411,7 +5096,7 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
     <span class="selectable-content">List of Standards</span>]
                   .                    <p></p> <p></p> The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a>.                  
                 
-            <table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">12</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
+            <table><caption><span class="ctr" data-myid="fcs-cop-kw-sels" data-counter-type="ct-Table" id="fcs-cop-kw-sels">Table <span class="counter">11</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyWrap">FCS_COP.1/KeyWrap</a></caption>
                 <tr>
                   <th>Identifier</th>
                   
@@ -5496,6 +5181,320 @@ FTP_TRP.1/AdminThe secure channel used for remote Administrator connections is s
                     <p style="text-align: left;">352. The evaluator shall generate 100 encryption test cases using random data for each combination of claimed key size, keyword cipher type, and six supported payload sizes such that the payload sizes include the minimum, the maximum, two that are divisible by 128, and two that are not divisible by 128. </p>
                     <p style="text-align: left;">353. The results shall be compared with those generated by a known-good implementation using the same inputs. </p>
                     <p style="text-align: left;">354. The evaluator shall generate 100 decryption test cases using the same parameters as above, but with 20 of each 100 test cases having modified ciphertext to produce an incorrect result. To determine correctness, the evaluator shall confirm that the results correspond as expected for both the modified and unmodified values.</p>
+                  </li></ul></span>
+              </div></div></div></div></div><div class="comp" id="FCS_COP.1/SigVer"><h4>FCS_COP.1/SigVer Cryptographic Operation - Signature Verification</h4><div class="statustag"></div>
+          <div class="element"><div class="reqid" id="FCS_COP.1.1/SigVer"><a href="#FCS_COP.1.1/SigVer" class="abbr">FCS_COP.1.1/SigVer</a></div><div class="reqdesc">
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>digital signature verification</i> in accordance with a specified cryptographic algorithm</p>
+              
+                  
+                  
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic Algorithm</span>]
+                  and cryptographic key sizes
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">Cryptographic Key Sizes</span>]
+                  that meet the following:
+                  
+    [<b>selection</b>: 
+    <span class="selectable-content">List of Standards</span>]
+                  .                    <p></p> <p></p> The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a>.                  
+                
+            <table><caption><span class="ctr" data-myid="fcs-cop-sigver-sels" data-counter-type="ct-Table" id="fcs-cop-sigver-sels">Table <span class="counter">12</span></span>: Allowable choices for <a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></caption>
+                <tr>
+                  <th>Identifier</th>
+                  
+                  <th>Cryptographic Algorithm</th>
+                  
+                  <th>Cryptographic Key Sizes</th>
+                  
+                  <th>List of Standards</th>
+                  
+                </tr>
+
+                <tr><td>RSA-PKCS</td><td>RSASSA-PKCS1-v1_5</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_1">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_1">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_2">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_3">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_4">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_2"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_5"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_6"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.2) [PKCS #1 v2.2],<p></p><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</td></tr>
+
+                <tr><td>RSA-PSS</td><td>RSASSA-PSS</td><td>Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_3">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_7">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_8">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_9">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_10">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_4"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_11"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_12"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8017 (Section 8.1) [PKCS#1 v2.2],<p></p><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 5.4) [RSASSA-PSS]</td></tr>
+
+                <tr><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr></td><td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_5">P-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_13">P-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_14">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_6"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_15"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_16"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</span>]</td><td>[<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_17"><abbr class="dyn-abbr"><a href="#abbr_ISO">ISO</a></abbr>/IEC 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_18"><abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> PUB 186-5 (Section 6.4.2)</span>] [<abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr>]<p></p><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP-800 186 (Section 4) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]</td></tr>
+
+                <tr><td>LMS</td><td>LMS</td><td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_19">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_20"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_21">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_22">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_23"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_24">SHAKE256</span>]</span></li></ul>] <p></p>Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_25">1</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_26">2</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_27">4</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_28">8</span>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_29">5</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_30">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_31">15</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_32">20</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_33">25</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8554 [LMS],<p></p><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]</td></tr>
+
+                <tr><td>XMSS</td><td>XMSS</td><td>Private key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_34">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_35"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_36">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_37">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_38"><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_39">SHAKE256</span>]</span></li></ul>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_40">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_41">16</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_42">20</span>]</td><td><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 8391 [XMSS],<p></p><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-208 [parameters]</td></tr>
+
+                <tr><td>ML-DSA</td><td>ML-DSA</td><td>Parameter set = ML-DSA-87</td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_FIPS">FIPS</a></abbr> 204 (Section 5.3)</td></tr>
+
+              </table><div class="appnote"><span class="note-header">Application
+      Note:
+    </span><span class="note">
+              <p style="text-align: left;">
+                <b>Application Note 17</b>
+              </p>
+              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should choose the algorithm implemented to perform verification of digital signatures. For the algorithm chosen, the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> Author should make the appropriate assignments/selections to specify the parameters that are implemented for that algorithm. In particular, if <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> is selected as one of the signature algorithms, the key size specified must match the selection for the curve used in the algorithm. </p>
+              <p style="text-align: left;">If LMS or XMSS is selected, then <a href="#FCS_COP.1/XOF">FCS_COP.1/XOF</a> from Annex B must be included.</p>
+            </span></div></div></div>
+        <div class="activity_pane hide"><div class="activity_pane_header"><a onclick="toggle(this);return false;" href="#"><span class="activity_pane_label"> Evaluation Activities </span><span class="toggler"></span></a></div><div class="activity_pane_body"><div class="component-activity-header"><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></div>
+              
+              
+              
+            <div class="eacategory"><abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr></div><div class="ea"><div class="ea">
+                <ol start="114">
+                  <li>
+                    <p style="text-align: left;">The evaluator shall examine the <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> to verify that any one-time values such as nonces or masks are constructed and used in accordance with the relevant standards.</p>
+                  </li>
+                </ol>
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                <p style="text-align: left;">115. There are no additional Guidance evaluation activities for this component.</p>
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                <ol start="116">
+                  <li>
+                    <p style="text-align: left;">The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described. </p>
+                  </li>
+                </ol>
+                :<span class="testlist-"><ul><li class="test-"><a id="_t_88" class="defined" href="#_t_88">Test FCS_COP.1/SigVer:1</a>:
+      
+                    <p style="text-align: left;">
+                      <b>RSA-PKCS Signature Verification</b>
+                    </p>
+                    <p style="text-align: left;">117. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform RSA Digital Signature Verification using PKCS1-v1,5 signature type, the evaluator shall perform the Generated Data Test using the following input parameters:</p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Modulus size [2048, 3072, 4096, 6144, 8192] bits</p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512]</p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">
+                      <b>Generated Data Test</b>
+                    </p>
+                    <p style="text-align: left;">118. For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate six test cases using a random message and its signature such that the test cases are modified as follows:</p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">One test case is left unmodified</p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the Message is modified</p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the Signature is modified</p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the exponent (e) is modified</p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the IR is moved</p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the Trailer is moved</p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">119. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
+                  </li><li class="test-"><a id="_t_89" class="defined" href="#_t_89">Test FCS_COP.1/SigVer:2</a>:
+      
+                    <p style="text-align: left;">
+                      <b>RSA-PSS Signature Verification </b>
+                    </p>
+                    <p style="text-align: left;">120. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform RSA Digital Signature Verification using PSS signature type, the evaluator shall perform the Generated Data Test using the following input parameters: </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Modulus size [2048, 3072, 4096, 6144, 8192] bits </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512] </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Salt length [Fixed based on implementation] </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Mask function [MGF1] </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">
+                      <b>Generated Data Test </b>
+                    </p>
+                    <p style="text-align: left;">121. For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate six test cases using random data such that the test cases are modified as follows: </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">One test case is left unmodified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the Message is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the Signature is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the exponent (e) is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the IR is moved </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case the Trailer is moved</p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">122. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
+                  </li><li class="test-"><a id="_t_90" class="defined" href="#_t_90">Test FCS_COP.1/SigVer:3</a>:
+      
+                    <p style="text-align: left;">
+                      <b><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Signature Verification </b>
+                    </p>
+                    <p style="text-align: left;">123. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to perform <abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Digital Signature Verification, the evaluator shall perform the Algorithm Functional Test using the following input parameters: </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Elliptic Curve [P-256, P-384, P-521] </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512] </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">
+                      <b>Algorithm Functional Test </b>
+                    </p>
+                    <p style="text-align: left;">124. For each supported combination of the above parameters, the evaluator shall cause the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to generate test cases consisting of messages and signatures such that the 21 test cases are modified as follows: </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Three test cases are left unmodified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the Message is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the key is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the r value is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the s value is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the value r is zeroed </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the value s is zeroed </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">125. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
+                  </li><li class="test-"><a id="_t_91" class="defined" href="#_t_91">Test FCS_COP.1/SigVer:4</a>:
+      
+                    <p style="text-align: left;">
+                      <b>LMS Signature Verification </b>
+                    </p>
+                    <p style="text-align: left;">126. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to verify cryptographic digital signature using LMS, the evaluator shall perform the Algorithm Functional Test using the following input parameters </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192, SHAKE256/192, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256] </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Winternitz[1, 2, 4, 8] </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Tree height [5, 10, 15, 20, 25] </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">
+                      <b>Algorithm Functional Test</b>
+                    </p>
+                    <p style="text-align: left;">127. For each supported combination of the above parameters, the evaluator shall generate 4 test cases consisting of signed messages and keys, such that </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">One test case is unmodified (i.e. correct) </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case modify the message, i.e. the message is different </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case modify the signature, i.e. signature is different </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case modify the signature header so that it is a valid header for a different LMS parameter set. </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">128. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified test case and fail to verify the modified test cases.</p>
+                  </li><li class="test-"><a id="_t_92" class="defined" href="#_t_92">Test FCS_COP.1/SigVer:5</a>:
+      
+                    <p style="text-align: left;">
+                      <b>XMSS Signature Verification </b>
+                    </p>
+                    <p style="text-align: left;">129. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to verify digital signatures using XMSS or XMSS MT, the evaluator shall perform the XMSS digital signature verification test using the following input parameters: </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Hash algorithm [<abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256/192, SHAKE256/192, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, SHAKE256] </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Tree height [10, 16, 20] </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">
+                      <b>XMSS Digital Signature Verification Test </b>
+                    </p>
+                    <p style="text-align: left;">130. For each supported combination of the above parameters, the evaluator shall generate four test cases consisting of signed messages and keys, such that </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">One test case is unmodified (i.e. correct) </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case modify the message, i.e. the message is different </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case modify the signature, i.e. signature is different </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For one test case modify the signature header so that it is a valid header for a different XMSS parameter set </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">131. The evaluator shall verify the correctness of the implementation by verifying that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> correctly verifies the unmodified test case and fails to verify the modified test cases</p>
+                  </li><li class="test-"><a id="_t_93" class="defined" href="#_t_93">Test FCS_COP.1/SigVer:6</a>:
+      
+                    <p style="text-align: left;">
+                      <b>ML-DSA Signature Verification </b>
+                    </p>
+                    <p style="text-align: left;">132. To test the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>’s ability to validate digital signatures using ML-DSA, the evaluator shall perform the Algorithm Functional Test using the following input parameters:</p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Parameter set [ML-DSA-87] </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Previously generated signed Message [8-65535] bytes </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Mu value (if generated externally) </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Context (for external interface testing) </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Previously generated Public key (pk) </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">Previously generated Signature </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">
+                      <b>Algorithm Functional Test </b>
+                    </p>
+                    <p style="text-align: left;">133. For each combination of supported parameter set and capabilities, the evaluator shall require the implementation under test to validate 15 signatures. Each group of 15 test cases is modified as follows: </p>
+                    <ul>
+                      <li>
+                        <p style="text-align: left;">Three test cases are left unmodified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the Signed message is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the component of the signature that commits the signer to the message is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the component of the signature that allows the verifier to construct the vector z is modified </p>
+                      </li>
+                      <li>
+                        <p style="text-align: left;">For three test cases the component of the signature that allows the verifier to construct the hint array is modified </p>
+                      </li>
+                    </ul>
+                    <p style="text-align: left;">134. The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures.</p>
                   </li></ul></span>
               </div></div></div></div></div><div class="comp" id="FCS_COP.1/SKC"><h4>FCS_COP.1/SKC Cryptographic Operation - Symmetric Key Cryptography</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_COP.1.1/DataEncryption">FCS_COP.1.1/DataEncryption</a></i></b></li></ul></div>
           
@@ -5684,7 +5683,8 @@ If ( keylen = 256 )
                         <p style="text-align: left;">375. The evaluator shall generate a single message of 1000 blocks (128000 bits) and either encrypt or decrypt it. Back-compute the IVs used. Verify that they are unique and increasing (encryption) or decreasing (decryption).</p>
                       </li></ul></span>
                   </li></ul></span>
-              </div></div></div></div></div><div class="comp" id="FCS_COP.1/XOF"><h4>FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function</h4><div class="statustag"><p></p><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if any of the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are included:</i></b><br/><ul><li><b><i><a href="#FCS_COP.1/SigVer">FCS_COP.1/SigVer</a></i></b></li></ul></div>
+              </div></div></div></div></div><div class="comp" id="FCS_COP.1/XOF"><h4>FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></i></b></li></ul></div>
+          
           
           <div class="element"><div class="reqid" id="FCS_COP.1.1/XOF"><a href="#FCS_COP.1.1/XOF" class="abbr">FCS_COP.1.1/XOF</a></div><div class="reqdesc">
               <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall perform <i>extendable-output function</i> in accordance with a specified cryptographic algorithm </p>

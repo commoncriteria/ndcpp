@@ -321,7 +321,7 @@ FTP_TRP.1/Admin</rationale>
           <rationale></rationale>
           <addressed-by>FCS_COP.1/SigGen</addressed-by>
           <rationale></rationale>
-          <addressed-by>FCS_COP.1/SigVer</addressed-by>
+          <addressed-by>FCS_COP.1/SigVer (Selection-based)</addressed-by>
           <rationale></rationale>
           <addressed-by>FCS_RBG.1</addressed-by>
           <rationale></rationale>
@@ -2872,7 +2872,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
           <audit-event/>
         </f-component>
         <!-- FCS_COP.1/SigVer Cryptographic Operation - Signature Verification -->
-        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-sigver" name="Cryptographic Operation - Signature Verification" iteration="SigVer">
+        <f-component cc-id="fcs_cop.1" id="fcs-cop-1-sigver" name="Cryptographic Operation - Signature Verification" iteration="SigVer" status="sel-based">
           <f-element id="fcs-cop-1-1-sigver">
             <title>
               <h:p style="text-align: left;">The TSF shall perform <h:i>digital signature verification</h:i> in accordance with a specified cryptographic algorithm</h:p>
@@ -3403,7 +3403,8 @@ If ( keylen = 256 )
         </f-component>
         <!-- FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function -->
         <f-component cc-id="fcs_cop.1" id="fcs-cop-1-xof" name="Cryptographic Operation - Extendable-Output Function" iteration="XOF" status="sel-based">
-          <depends on-incl="fcs-cop-1-sigver"/>
+          <depends on-sel="sel-fcs-cop-sigver-xmss"/>
+          <depends on-sel="sel-fcs-cop-sigver-lms"/>
           <f-element id="fcs-cop-1-1-xof">
             <title>
               <h:p style="text-align: left;">The TSF shall perform <h:i>extendable-output function</h:i> in accordance with a specified cryptographic algorithm </h:p>
@@ -4398,7 +4399,6 @@ If ( keylen = 256 )
         <!-- FIA_PSK_EXT.1 Pre-Shared Key Composition -->
         <f-component cc-id="fia_psk_ext.1" id="fia-psk-ext-1" name="Pre-Shared Key Composition" status="feat-based">
           <depends on="nd-feature-4"/>
-          <depends on="nd_fia_psk_ext.1.2_2"/>
           <f-element id="fia-psk-ext-1-1">
             <title>The TSF shall be able to use pre-shared keys that conform to RFC 8784 for IPsec.</title>
             <aactivity level="component">
@@ -4409,7 +4409,7 @@ If ( keylen = 256 )
                 </h:div>
               </TSS>
               <Guidance>
-                <h:p style="text-align: left;">477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per RFC 8784.</h:p>
+                <h:p>477. The evaluator shall examine the operational guidance to determine that it provides guidance to administrators on how to configure the mandatory_or_not flag per RFC 8784.</h:p>
               </Guidance>
               <Tests>
                 <testlist>

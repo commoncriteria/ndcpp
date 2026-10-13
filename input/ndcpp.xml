@@ -78,7 +78,9 @@
       <subject>Released for use</subject>
     </entry>
   </RevisionHistory>
-  <pp-preferences/>
+  <pp-preferences>
+  <audit-events-in-sfrs/>
+</pp-preferences>
   <sec:Introduction>
     <sec:Overview title="Overview">
       <h:p style="text-align: left;">This document is not an official version of the NDcPP. It was generated using the User Interface of the XML Builder tool to produce a NIAP XML Schema-compliant version of the NDcPP for use in automation tools. The use of this version of the NDcPP should be done in conjunction with the official published version of the NDcPP. Not all content is included in this version. </h:p>

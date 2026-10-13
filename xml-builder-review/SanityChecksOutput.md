@@ -1,7 +1,3 @@
-* Error: Detected dangling id-reference to dummy from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[4]""/f-component[16]""/depends[4]""/on-sel[1]""
-* Error: Detected dangling id-reference to dummy from attribute
-        on-sel/PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[6]""/f-component[1]""/depends[2]""/on-sel[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[2]""/f-element[1]""/aactivity[1]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[3]""/f-element[1]""/aactivity[1]""/TSS[1]""/h:p[1]""
 * Warning: Detected an empty _p_ element./PP[1]""/sec:Security_Requirements[1]""/sec:SFRs[1]""/section[2]""/f-component[5]""/f-element[1]""/aactivity[1]""/h:p[1]""

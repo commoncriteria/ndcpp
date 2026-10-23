@@ -825,7 +825,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
     <h2 class="indexable" data-level="2" id="SecurityObjectivesTOEorEnvironment">4.1 Security Objectives for the Operational Environment</h2>
       The following security objectives for the operational environment assist the <abbr class="dyn-abbr"><a href="#abbr_OS">OS</a></abbr> in correctly providing its security functionality<a id="period_124" href="#period_124">. </a>These track with the assumptions about the environment<a id="period_125" href="#period_125">. </a>      <dl><dt class="SOE defined" id="OE.ADMIN_CREDENTIALS_SECURE">OE.ADMIN_CREDENTIALS_SECURE</dt><dd><span class="description">
             <p style="text-align: left;">The Administrator&#8217;s credentials (private keys) used to access the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must be protected on any other platform on which they reside<a id="period_126" href="#period_126">. </a></p>
-          </span></dd><dt class="SOE defined" id="OE.COMPONENTS_RUNNING (applies to distributed TOEs only)">OE.COMPONENTS_RUNNING (applies to distributed TOEs only)</dt><dd><span class="description">
+          </span></dd><dt class="SOE defined" id="OE.COMPONENTS_RUNNING">OE.COMPONENTS_RUNNING</dt><dd><span class="description">
             <p style="text-align: left;">For distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr>, the Security Administrator ensures that the availability of every <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> component is checked as appropriate to reduce the risk of an undetected attack on (or failure of) one or more <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> components<a id="period_127" href="#period_127">. </a>The Security Administrator also ensures that it is checked as appropriate for every <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> component that the audit functionality is running properly<a id="period_128" href="#period_128">. </a></p>
           </span></dd><dt class="SOE defined" id="OE.NO_GENERAL_PURPOSE">OE.NO_GENERAL_PURPOSE</dt><dd><span class="description">
             <p style="text-align: left;">There are no general-purpose computing capabilities (e.g., compilers or user applications) available on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, other than those services necessary for the operation, administration and support of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr><a id="period_129" href="#period_129">. </a>Note: For vNDs the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> includes only the contents of its own <abbr class="dyn-abbr"><a href="#abbr_VM">VM</a></abbr>, and does not include other VMs or the VS<a id="period_130" href="#period_130">. </a></p>
@@ -840,7 +840,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
             <p style="text-align: left;">For <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> supporting X.509v3 certificate-based authentication, the Security Administrator is assumed to monitor the revocation status of all certificates in the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>&#8217;s trust store and to remove any certificate from the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>&#8217;s trust store in case such certificate can no longer be trusted<a id="period_138" href="#period_138">. </a></p>
           </span></dd><dt class="SOE defined" id="OE.UPDATES">OE.UPDATES</dt><dd><span class="description">
             <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware and software are updated by an Administrator on a regular basis in response to the release of product updates due to known vulnerabilities<a id="period_139" href="#period_139">. </a></p>
-          </span></dd><dt class="SOE defined" id="OE.VM_CONFIGURATION (applies to vNDs only)">OE.VM_CONFIGURATION (applies to vNDs only)</dt><dd><span class="description">
+          </span></dd><dt class="SOE defined" id="OE.VM_CONFIGURATION ">OE.VM_CONFIGURATION </dt><dd><span class="description">
             <p style="text-align: left;">For vNDs, the Security Administrator ensures that the VS and VMs are configured to </p>
             <ul>
               <li>
@@ -857,7 +857,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
     
     <h2 id="" class="indexable,h2" data-level="2">4.2 Security Objectives Rationale</h2>   
 		This section describes how the assumptions and organizational 
-		security policies map to operational environment security objectives<a id="period_144" href="#period_144">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.ADMIN_CREDENTIALS_SECURE">A.ADMIN_&#8203;CREDENTIALS_&#8203;SECURE</a></td><td><a href="#OE.ADMIN_CREDENTIALS_SECURE">OE.ADMIN_&#8203;CREDENTIALS_&#8203;SECURE</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.COMPONENTS_RUNNING">A.COMPONENTS_&#8203;RUNNING</a></td><td><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>.COMPONENTS_&#8203;RUNNING (applies to distributed <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> only)</td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.LIMITED_FUNCTIONALITY">A.LIMITED_&#8203;FUNCTIONALITY</a></td><td><a href="#OE.NO_GENERAL_PURPOSE">OE.NO_&#8203;GENERAL_&#8203;PURPOSE</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.NO_THRU_TRAFFIC_PROTECTION">A.NO_&#8203;THRU_&#8203;TRAFFIC_&#8203;PROTECTION</a></td><td><a href="#OE.NO_THRU_TRAFFIC_PROTECTION">OE.NO_&#8203;THRU_&#8203;TRAFFIC_&#8203;PROTECTION</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PHYSICAL_PROTECTION">A.PHYSICAL_&#8203;PROTECTION</a></td><td><a href="#OE.PHYSICAL">OE.PHYSICAL</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.REGULAR_UPDATES">A.REGULAR_&#8203;UPDATES</a></td><td><a href="#OE.UPDATES">OE.UPDATES</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.RESIDUAL_INFORMATION">A.RESIDUAL_&#8203;INFORMATION</a></td><td><a href="#OE.RESIDUAL_INFORMATION">OE.RESIDUAL_&#8203;INFORMATION</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.TRUSTED_ADMINISTRATOR">A.TRUSTED_&#8203;ADMINISTRATOR</a></td><td><a href="#OE.TRUSTED_ADMIN">OE.TRUSTED_&#8203;ADMIN</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_CORRECT_CONFIGURATION">A.VS_&#8203;CORRECT_&#8203;CONFIGURATION</a></td><td><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>.VM_&#8203;CONFIGURATION (applies to vNDs only)</td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_ISOLATION">A.VS_&#8203;ISOLATION</a></td><td><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>.VM_&#8203;CONFIGURATION (applies to vNDs only)</td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_REGULAR_UPDATES">A.VS_&#8203;REGULAR_&#8203;UPDATES</a></td><td><a href="#OE.UPDATES">OE.UPDATES</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_TRUSTED_ADMINISTRATOR">A.VS_&#8203;TRUSTED_&#8203;ADMINISTRATOR</a></td><td><a href="#OE.TRUSTED_ADMIN">OE.TRUSTED_&#8203;ADMIN</a></td><td></td></tr></table>
+		security policies map to operational environment security objectives<a id="period_144" href="#period_144">. </a>	<table><caption><span class="ctr" data-myid="t-sec-obj-rat" data-counter-type="ct-Table" id="t-sec-obj-rat">Table <span class="counter">1</span></span>: Security Objectives Rationale</caption><tr class="header"><td>Assumption or OSP</td><td>Security Objectives</td><td>Rationale</td></tr><tr class="major-row"><td rowspan="1"><a href="#A.ADMIN_CREDENTIALS_SECURE">A.ADMIN_&#8203;CREDENTIALS_&#8203;SECURE</a></td><td><a href="#OE.ADMIN_CREDENTIALS_SECURE">OE.ADMIN_&#8203;CREDENTIALS_&#8203;SECURE</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.COMPONENTS_RUNNING">A.COMPONENTS_&#8203;RUNNING</a></td><td><a href="#OE.COMPONENTS_RUNNING">OE.COMPONENTS_&#8203;RUNNING</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.LIMITED_FUNCTIONALITY">A.LIMITED_&#8203;FUNCTIONALITY</a></td><td><a href="#OE.NO_GENERAL_PURPOSE">OE.NO_&#8203;GENERAL_&#8203;PURPOSE</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.NO_THRU_TRAFFIC_PROTECTION">A.NO_&#8203;THRU_&#8203;TRAFFIC_&#8203;PROTECTION</a></td><td><a href="#OE.NO_THRU_TRAFFIC_PROTECTION">OE.NO_&#8203;THRU_&#8203;TRAFFIC_&#8203;PROTECTION</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.PHYSICAL_PROTECTION">A.PHYSICAL_&#8203;PROTECTION</a></td><td><a href="#OE.PHYSICAL">OE.PHYSICAL</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.REGULAR_UPDATES">A.REGULAR_&#8203;UPDATES</a></td><td><a href="#OE.UPDATES">OE.UPDATES</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.RESIDUAL_INFORMATION">A.RESIDUAL_&#8203;INFORMATION</a></td><td><a href="#OE.RESIDUAL_INFORMATION">OE.RESIDUAL_&#8203;INFORMATION</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.TRUSTED_ADMINISTRATOR">A.TRUSTED_&#8203;ADMINISTRATOR</a></td><td><a href="#OE.TRUSTED_ADMIN">OE.TRUSTED_&#8203;ADMIN</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_CORRECT_CONFIGURATION">A.VS_&#8203;CORRECT_&#8203;CONFIGURATION</a></td><td><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>.VM_&#8203;CONFIGURATION </td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_ISOLATION">A.VS_&#8203;ISOLATION</a></td><td><abbr class="dyn-abbr"><a href="#abbr_OE">OE</a></abbr>.VM_&#8203;CONFIGURATION </td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_REGULAR_UPDATES">A.VS_&#8203;REGULAR_&#8203;UPDATES</a></td><td><a href="#OE.UPDATES">OE.UPDATES</a></td><td></td></tr><tr class="major-row"><td rowspan="1"><a href="#A.VS_TRUSTED_ADMINISTRATOR">A.VS_&#8203;TRUSTED_&#8203;ADMINISTRATOR</a></td><td><a href="#OE.TRUSTED_ADMIN">OE.TRUSTED_&#8203;ADMIN</a></td><td></td></tr></table>
   <h1 class="indexable" data-level="1" id="Security_Requirements">5 Security Requirements</h1>
       This chapter describes the security requirements which have to be fulfilled by the product under evaluation<a id="period_145" href="#period_145">. </a>     Those requirements comprise functional components from Part 2 and assurance components from Part 3 of 
        <a href="#bibCC">[CC]</a><a id="period_146" href="#period_146">. </a>       
@@ -1202,7 +1202,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
              <a href="#FAU_STG_EXT.1.6">FAU_STG_EXT.1.6</a></li></ul><div class="dependent-content"><test>
                     
                     
-                    <p style="text-align: left;">[Conditional]: In case manual export or ability to view locally is selected in <a href="#FAU_STG_EXT.1.6">FAU_STG_EXT.1.6</a>, during interruption the evaluator shall perform a <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>-mediated action and verify the event is recorded in the audit trail<a id="period_339" href="#period_339">. </a></p>
+                    <p style="text-align: left;">Test 6 [Conditional]: In case manual export or ability to view locally is selected in <a href="#FAU_STG_EXT.1.6">FAU_STG_EXT.1.6</a>, during interruption the evaluator shall perform a <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>-mediated action and verify the event is recorded in the audit trail<a id="period_339" href="#period_339">. </a></p>
                     <p style="text-align: left;">Note: The intent of the test is to ensure that the local audit <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> (as specified by <a href="#FAU_STG_EXT.1.3">FAU_STG_EXT.1.3</a>) operates independently from the ability to transmit the generated audit data to an external audit server (as specified in <a href="#FAU_STG_EXT.1.1">FAU_STG_EXT.1.1</a>)<a id="period_340" href="#period_340">. </a>There are no specific requirements on the interruption of the connection between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the external audit server (as for <a href="#FTP_ITC.1">FTP_ITC.1</a>)<a id="period_341" href="#period_341">. </a></p>
                     <p style="text-align: left;"></p>
                   </test></div></div></li></ul></span>
@@ -1695,7 +1695,11 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">82<a id="period_477" href="#period_477">. </a>The evaluator shall verify that the AGD guidance instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key agreement method(s)<a id="period_478" href="#period_478">. </a></p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                83<a id="period_479" href="#period_479">. </a>The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_480" href="#period_480">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_481" href="#period_481">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_482" href="#period_482">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_483" href="#period_483">. </a>                <span class="testlist-"><ul><li class="test-"><a id="_t_48" class="defined" href="#_t_48">Test FCS_CKM_EXT.7:1</a>:<br>
+                83<a id="period_479" href="#period_479">. </a>The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_480" href="#period_480">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_481" href="#period_481">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_482" href="#period_482">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_483" href="#period_483">. </a>                <span class="testlist-"><ul><li class="test-"><a id="_t_48" class="defined" href="#_t_48">Test FCS_CKM_EXT.7:1</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ckm-7-1-row-1">DHFinite Field Cryptography Diffie-HellmanStatic domain parameters approved for [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="ckm7-group-1">IKE Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_1">MODP-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_2">MODP-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_3">MODP-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_4">MODP-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_5">MODP-8192</span>]</span></li><li style=""><span class="selectable-content" id="ckm7-group-2">TLS Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_6">ffdhe-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_7">ffdhe-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_8">ffdhe-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_9">ffdhe-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_10">ffdhe-8192</span>]</span></li></ul>]NIST SP 800-56A Revision 3 (Section 5.7.1.1), [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_11">RFC 3526 [IKE groups]</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_12">RFC 7919 [TLS groups]</span>]</a>
+             is selected from 
+             <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b>FFC Diffie-Hellman Key Agreement </b>
                     </p>
@@ -1716,7 +1720,11 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                         </p>
                         <p style="text-align: left;">86<a id="period_488" href="#period_488">. </a>For each supported combination of the above parameters the evaluator shall generate 15 Diffie Hellman initiator/responder key pairs using the key generation function of a known-good implementation<a id="period_489" href="#period_489">. </a>For each set of key pairs, the evaluator shall modify five initiator private key values<a id="period_490" href="#period_490">. </a>The remaining key values are left unchanged (i.e., correct)<a id="period_491" href="#period_491">. </a>To determine correctness, the evaluator shall confirm that the 15 shared secrets correspond as expected for both the modified and unmodified inputs<a id="period_492" href="#period_492">. </a></p>
                       </li></ul></span>
-                  </li><li class="test-"><a id="_t_51" class="defined" href="#_t_51">Test FCS_CKM_EXT.7:2</a>:<br>
+                  </test></div></div></li><li class="test-"><a id="_t_51" class="defined" href="#_t_51">Test FCS_CKM_EXT.7:2</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#nd-ckm-ext-7-1-row-2">ECDHElliptic Curve Diffie-HellmanElliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_13">P-256</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_14">P-384</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_15">P-521</span>]NIST SP 800-56A Revision 3 (Section 5.7.1.2) [ECDH], NIST SP 800-186 (Section 3.2.1) [NIST Curves]</a>
+             is selected from 
+             <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b>Elliptic Curve Diffie-Hellman Key Agreement</b>
                     </p>
@@ -1737,7 +1745,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                         </p>
                         <p style="text-align: left;">89<a id="period_497" href="#period_497">. </a>For each supported Elliptic Curve the evaluator shall generate 15 Diffie Hellman initiator/responder key pairs using the key generation function of a knowngood implementation<a id="period_498" href="#period_498">. </a>For each set of key pairs, the evaluator shall modify five initiator private key values<a id="period_499" href="#period_499">. </a>The remaining key values are left unchanged (i.e., correct)<a id="period_500" href="#period_500">. </a>To determine correctness, the evaluator shall confirm that the 15 shared secrets correspond as expected for the modified and unmodified values<a id="period_501" href="#period_501">. </a></p>
                       </li></ul></span>
-                  </li></ul></span>
+                  </test></div></div></li></ul></span>
               </div></div></div></div></div>
         
         
@@ -1787,7 +1795,19 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">136<a id="period_519" href="#period_519">. </a>The evaluator shall check the AGD documents to determine that any configuration that is required to configure the required hash sizes is present<a id="period_520" href="#period_520">. </a></p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                137<a id="period_521" href="#period_521">. </a>The following tests may require the developer to provide access to a test platform that provides the evaluator with tools that are typically not found on factory products<a id="period_522" href="#period_522">. </a>138<a id="period_523" href="#period_523">. </a>The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_524" href="#period_524">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_525" href="#period_525">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_526" href="#period_526">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_527" href="#period_527">. </a>                <span class="testlist-"><ul><li class="test-"><a id="_t_64" class="defined" href="#_t_64">Test FCS_COP.1/Hash:1</a>:<br>
+                <p style="text-align: left;">137<a id="period_521" href="#period_521">. </a>The following tests may require the developer to provide access to a test platform that provides the evaluator with tools that are typically not found on factory products<a id="period_522" href="#period_522">. </a></p>
+                <p style="text-align: left;">138<a id="period_523" href="#period_523">. </a>The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_524" href="#period_524">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_525" href="#period_525">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_526" href="#period_526">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_527" href="#period_527">. </a></p>
+                <span class="testlist-"><ul><li class="test-"><a id="_t_64" class="defined" href="#_t_64">Test FCS_COP.1/Hash:1</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_cop.1.1_HASH_1">SHA-256</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/Hash">FCS_COP.1.1/Hash</a></li><li><a href="#nd_fcs_cop.1.1_HASH_2">SHA-384</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/Hash">FCS_COP.1.1/Hash</a></li><li><a href="#nd_fcs_cop.1.1_HASH_3">SHA-512</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/Hash">FCS_COP.1.1/Hash</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    
                     <p style="text-align: left;">
                       <b><abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-256, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-384, <abbr class="dyn-abbr"><a href="#abbr_SHA">SHA</a></abbr>-512</b>
                     </p>
@@ -1831,7 +1851,17 @@ For j = 0 to 99
                         <p style="text-align: left;">147<a id="period_545" href="#period_545">. </a>The implementation must be tested against one test case each on large data messages of 1GB, 2GB, 4GB, and 8GB of data as supported<a id="period_546" href="#period_546">. </a>The data need not be random<a id="period_547" href="#period_547">. </a>It may, for example, consist of a repeated pattern of 64 bits<a id="period_548" href="#period_548">. </a></p>
                         <p style="text-align: left;">148<a id="period_549" href="#period_549">. </a>The evaluator shall compare the output against results generated by a known-good implementation with the same input<a id="period_550" href="#period_550">. </a></p>
                       </li></ul></span>
-                  </li><li class="test-"><a id="_t_68" class="defined" href="#_t_68">Test FCS_COP.1/Hash:2</a>:<br>
+                  </test></div></div></li><li class="test-"><a id="_t_68" class="defined" href="#_t_68">Test FCS_COP.1/Hash:2</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#nd_fcs_cop.1.1_HASH_4">SHA3-256</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/Hash">FCS_COP.1.1/Hash</a></li><li><a href="#nd_fcs_cop.1.1_HASH_5">SHA3-384</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/Hash">FCS_COP.1.1/Hash</a></li><li><a href="#nd_fcs_cop.1.1_HASH_6">SHA3-512</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/Hash">FCS_COP.1.1/Hash</a></li></ul><div class="dependent-content"><test>
+                    
+                    
+                    
                     <p style="text-align: left;">
                       <b>SHA3-384, SHA3-512 </b>
                     </p>
@@ -1869,7 +1899,7 @@ For 100 iterations
                         <p style="text-align: left;">156<a id="period_565" href="#period_565">. </a>The implementation must be tested against one test case each on large data messages of 1GB, 2GB, 4GB, and 8GB of data as supported<a id="period_566" href="#period_566">. </a>The data need not be random<a id="period_567" href="#period_567">. </a>It may, for example, consist of a repeated pattern of 64 bits<a id="period_568" href="#period_568">. </a></p>
                         <p style="text-align: left;">157<a id="period_569" href="#period_569">. </a>The evaluator shall compare the output against results generated by a known-good implementation with the same input<a id="period_570" href="#period_570">. </a></p>
                       </li></ul></span>
-                  </li></ul></span>
+                  </test></div></div></li></ul></span>
               </div></div></div></div></div>
         
         <div class="comp" id="FCS_COP.1/KeyedHash"><h4>FCS_COP.1/KeyedHash Cryptographic Operation (Keyed Hash Algorithm)</h4>
@@ -2336,7 +2366,11 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                     <p style="text-align: left;">The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_651" href="#period_651">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_652" href="#period_652">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_653" href="#period_653">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_654" href="#period_654">. </a></p>
                   </li>
                 </ol>
-                <span class="testlist-"><ul><li class="test-"><a id="_t_88" class="defined" href="#_t_88">Test FCS_COP.1/SigVer:1</a>:<br>
+                <span class="testlist-"><ul><li class="test-"><a id="_t_88" class="defined" href="#_t_88">Test FCS_COP.1/SigVer:1</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-rsa-pkcs">RSA-PKCSRSASSA-PKCS1-v1_5Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_1">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_1">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_2">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_3">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_4">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_2">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_5">SHA-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_6">SHA-512</span>]RFC 8017 (Section 8.2) [PKCS #1 v2.2],<p></p>FIPS PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b>RSA-PKCS Signature Verification</b>
                     </p>
@@ -2374,7 +2408,11 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">119<a id="period_657" href="#period_657">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_658" href="#period_658">. </a></p>
-                  </li><li class="test-"><a id="_t_89" class="defined" href="#_t_89">Test FCS_COP.1/SigVer:2</a>:<br>
+                  </test></div></div></li><li class="test-"><a id="_t_89" class="defined" href="#_t_89">Test FCS_COP.1/SigVer:2</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-rsa-pss">RSA-PSSRSASSA-PSSModulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_3">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_7">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_8">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_9">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_10">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_4">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_11">SHA-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_12">SHA-512</span>]RFC 8017 (Section 8.1) [PKCS#1 v2.2],<p></p>FIPS PUB 186-5 (Section 5.4) [RSASSA-PSS]</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b>RSA-PSS Signature Verification </b>
                     </p>
@@ -2418,7 +2456,11 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">122<a id="period_661" href="#period_661">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_662" href="#period_662">. </a></p>
-                  </li><li class="test-"><a id="_t_90" class="defined" href="#_t_90">Test FCS_COP.1/SigVer:3</a>:<br>
+                  </test></div></div></li><li class="test-"><a id="_t_90" class="defined" href="#_t_90">Test FCS_COP.1/SigVer:3</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-ecdsa">ECDSAECDSAElliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_5">P-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_13">P-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_14">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_6">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_15">SHA-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_16">SHA-512</span>][<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_17">ISO/IEC 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_18">FIPS PUB 186-5 (Section 6.4.2)</span>] [ECDSA]<p></p>NIST SP-800 186 (Section 4) [NIST Curves]</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Signature Verification </b>
                     </p>
@@ -2459,7 +2501,11 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">125<a id="period_665" href="#period_665">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_666" href="#period_666">. </a></p>
-                  </li><li class="test-"><a id="_t_91" class="defined" href="#_t_91">Test FCS_COP.1/SigVer:4</a>:<br>
+                  </test></div></div></li><li class="test-"><a id="_t_91" class="defined" href="#_t_91">Test FCS_COP.1/SigVer:4</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-lms">LMSLMSPrivate key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_19">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_20">SHA-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_21">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_22">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_23">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_24">SHAKE256</span>]</span></li></ul>] <p></p>Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_25">1</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_26">2</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_27">4</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_28">8</span>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_29">5</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_30">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_31">15</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_32">20</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_33">25</span>]RFC 8554 [LMS],<p></p>NIST SP 800-208 [parameters]</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b>LMS Signature Verification </b>
                     </p>
@@ -2494,7 +2540,11 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">128<a id="period_673" href="#period_673">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified test case and fail to verify the modified test cases<a id="period_674" href="#period_674">. </a></p>
-                  </li><li class="test-"><a id="_t_92" class="defined" href="#_t_92">Test FCS_COP.1/SigVer:5</a>:<br>
+                  </test></div></div></li><li class="test-"><a id="_t_92" class="defined" href="#_t_92">Test FCS_COP.1/SigVer:5</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-xmss">XMSSXMSSPrivate key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_34">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_35">SHA-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_36">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_37">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_38">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_39">SHAKE256</span>]</span></li></ul>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_40">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_41">16</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_42">20</span>]RFC 8391 [XMSS],<p></p>NIST SP 800-208 [parameters]</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b>XMSS Signature Verification </b>
                     </p>
@@ -2526,7 +2576,11 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">131<a id="period_680" href="#period_680">. </a>The evaluator shall verify the correctness of the implementation by verifying that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> correctly verifies the unmodified test case and fails to verify the modified test cases</p>
-                  </li><li class="test-"><a id="_t_93" class="defined" href="#_t_93">Test FCS_COP.1/SigVer:6</a>:<br>
+                  </test></div></div></li><li class="test-"><a id="_t_93" class="defined" href="#_t_93">Test FCS_COP.1/SigVer:6</a>:
+  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-mldsa">ML-DSAML-DSAParameter set = ML-DSA-87NIST FIPS 204 (Section 5.3)</a>
+             is selected from 
+             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
+                    
                     <p style="text-align: left;">
                       <b>ML-DSA Signature Verification </b>
                     </p>
@@ -2573,7 +2627,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">134<a id="period_684" href="#period_684">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_685" href="#period_685">. </a></p>
-                  </li></ul></span>
+                  </test></div></div></li></ul></span>
               </div></div></div></div></div>
         
         

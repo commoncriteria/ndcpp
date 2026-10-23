@@ -351,7 +351,7 @@ FTP_TRP.1/Admin</rationale>
           <description>
             <h:p style="text-align: left;">For distributed TOEs, it is assumed that the availability of all TOE components is checked as appropriate to reduce the risk of an undetected attack on (or failure of) one or more TOE components. It is also assumed that in addition to the availability of all components it is also checked as appropriate that the audit functionality is running properly on all TOE components.</h:p>
           </description>
-          <objective-refer ref="OE.COMPONENTS_RUNNING (applies to distributed TOEs only)">
+          <objective-refer ref="OE.COMPONENTS_RUNNING">
             <rationale/>
           </objective-refer>
         </assumption>
@@ -410,7 +410,7 @@ FTP_TRP.1/Admin</rationale>
           <description>
             <h:p style="text-align: left;">For vNDs, it is assumed that the VS and VMs are correctly configured to support ND functionality implemented in VMs.</h:p>
           </description>
-          <objective-refer ref="OE.VM_CONFIGURATION (applies to vNDs only)">
+          <objective-refer ref="OE.VM_CONFIGURATION ">
             <rationale/>
           </objective-refer>
         </assumption>
@@ -418,7 +418,7 @@ FTP_TRP.1/Admin</rationale>
           <description>
             <h:p style="text-align: left;">For vNDs, it is assumed that the VS implements and is configured to provide the necessary mechanisms to isolate resources of all VMs running on the same platform. Both virtual and physical resources require access control. It is assumed the VS enforces access control to all physical and virtual resources in support of isolation. In particular, it is assumed the VS implements mechanisms to isolate all resources associated with virtual networks and to limit a VM’s access to only those virtual networks for which it has been configured. Furthermore, it is assumed that the VS adequately protects itself from software running inside VMs on the same platform.</h:p>
           </description>
-          <objective-refer ref="OE.VM_CONFIGURATION (applies to vNDs only)">
+          <objective-refer ref="OE.VM_CONFIGURATION ">
             <rationale/>
           </objective-refer>
         </assumption>
@@ -460,7 +460,7 @@ FTP_TRP.1/Admin</rationale>
             <h:p style="text-align: left;">The Administrator’s credentials (private keys) used to access the TOE must be protected on any other platform on which they reside.</h:p>
           </description>
         </SOE>
-        <SOE name="OE.COMPONENTS_RUNNING (applies to distributed TOEs only)">
+        <SOE name="OE.COMPONENTS_RUNNING">
           <description>
             <h:p style="text-align: left;">For distributed TOEs, the Security Administrator ensures that the availability of every TOE component is checked as appropriate to reduce the risk of an undetected attack on (or failure of) one or more TOE components. The Security Administrator also ensures that it is checked as appropriate for every TOE component that the audit functionality is running properly.</h:p>
           </description>
@@ -496,7 +496,7 @@ FTP_TRP.1/Admin</rationale>
             <h:p style="text-align: left;">The TOE firmware and software are updated by an Administrator on a regular basis in response to the release of product updates due to known vulnerabilities.</h:p>
           </description>
         </SOE>
-        <SOE name="OE.VM_CONFIGURATION (applies to vNDs only)">
+        <SOE name="OE.VM_CONFIGURATION ">
           <description>
             <h:p style="text-align: left;">For vNDs, the Security Administrator ensures that the VS and VMs are configured to </h:p>
             <h:ul>
@@ -850,7 +850,7 @@ FTP_TRP.1/Admin</rationale>
                   <test>
                     <depends on="fau-stg-ext-1-6-2"/>
                     <depends on="fau-stg-ext-1-6-3"/>
-                    <h:p style="text-align: left;">[Conditional]: In case manual export or ability to view locally is selected in FAU_STG_EXT.1.6, during interruption the evaluator shall perform a TSF-mediated action and verify the event is recorded in the audit trail.</h:p>
+                    <h:p style="text-align: left;">Test 6 [Conditional]: In case manual export or ability to view locally is selected in FAU_STG_EXT.1.6, during interruption the evaluator shall perform a TSF-mediated action and verify the event is recorded in the audit trail.</h:p>
                     <h:p style="text-align: left;">Note: The intent of the test is to ensure that the local audit TSF (as specified by FAU_STG_EXT.1.3) operates independently from the ability to transmit the generated audit data to an external audit server (as specified in FAU_STG_EXT.1.1). There are no specific requirements on the interruption of the connection between the TOE and the external audit server (as for FTP_ITC.1).</h:p>
                     <h:p style="text-align: left;"></h:p>
                   </test>
@@ -1804,6 +1804,7 @@ FTP_TRP.1/Admin</rationale>
                 83. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.
                 <testlist>
                   <test>
+                    <depends on="nd-fcs-ckm-7-1-row-1"/>
                     <h:p style="text-align: left;">
                       <h:b>FFC Diffie-Hellman Key Agreement </h:b>
                     </h:p>
@@ -1829,6 +1830,7 @@ FTP_TRP.1/Admin</rationale>
                     </testlist>
                   </test>
                   <test>
+                    <depends on="nd-ckm-ext-7-1-row-2"/>
                     <h:p style="text-align: left;">
                       <h:b>Elliptic Curve Diffie-Hellman Key Agreement</h:b>
                     </h:p>
@@ -2129,9 +2131,13 @@ FTP_TRP.1/Admin</rationale>
                 <h:p style="text-align: left;">136. The evaluator shall check the AGD documents to determine that any configuration that is required to configure the required hash sizes is present.</h:p>
               </Guidance>
               <Tests>
-                137. The following tests may require the developer to provide access to a test platform that provides the evaluator with tools that are typically not found on factory products. 138. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.
+                <h:p style="text-align: left;">137. The following tests may require the developer to provide access to a test platform that provides the evaluator with tools that are typically not found on factory products. </h:p>
+                <h:p style="text-align: left;">138. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.</h:p>
                 <testlist>
                   <test>
+                    <depends on="nd_fcs_cop.1.1_HASH_1"/>
+                    <depends on="nd_fcs_cop.1.1_HASH_2"/>
+                    <depends on="nd_fcs_cop.1.1_HASH_3"/>
                     <h:p style="text-align: left;">
                       <h:b>SHA-256, SHA-384, SHA-512</h:b>
                     </h:p>
@@ -2182,6 +2188,9 @@ For j = 0 to 99
                     </testlist>
                   </test>
                   <test>
+                    <depends on="nd_fcs_cop.1.1_HASH_4"/>
+                    <depends on="nd_fcs_cop.1.1_HASH_5"/>
+                    <depends on="nd_fcs_cop.1.1_HASH_6"/>
                     <h:p style="text-align: left;">
                       <h:b>SHA3-384, SHA3-512 </h:b>
                     </h:p>
@@ -2961,6 +2970,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                 </h:ol>
                 <testlist>
                   <test>
+                    <depends on="sel-fcs-cop-sigver-rsa-pkcs"/>
                     <h:p style="text-align: left;">
                       <h:b>RSA-PKCS Signature Verification</h:b>
                     </h:p>
@@ -3000,6 +3010,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">119. The TOE must correctly verify the unmodified signatures and fail to verify the modified signatures.</h:p>
                   </test>
                   <test>
+                    <depends on="sel-fcs-cop-sigver-rsa-pss"/>
                     <h:p style="text-align: left;">
                       <h:b>RSA-PSS Signature Verification </h:b>
                     </h:p>
@@ -3045,6 +3056,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">122. The TOE must correctly verify the unmodified signatures and fail to verify the modified signatures.</h:p>
                   </test>
                   <test>
+                    <depends on="sel-fcs-cop-sigver-ecdsa"/>
                     <h:p style="text-align: left;">
                       <h:b>ECDSA Signature Verification </h:b>
                     </h:p>
@@ -3087,6 +3099,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">125. The TOE must correctly verify the unmodified signatures and fail to verify the modified signatures.</h:p>
                   </test>
                   <test>
+                    <depends on="sel-fcs-cop-sigver-lms"/>
                     <h:p style="text-align: left;">
                       <h:b>LMS Signature Verification </h:b>
                     </h:p>
@@ -3123,6 +3136,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">128. The TOE must correctly verify the unmodified test case and fail to verify the modified test cases.</h:p>
                   </test>
                   <test>
+                    <depends on="sel-fcs-cop-sigver-xmss"/>
                     <h:p style="text-align: left;">
                       <h:b>XMSS Signature Verification </h:b>
                     </h:p>
@@ -3156,6 +3170,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">131. The evaluator shall verify the correctness of the implementation by verifying that the TOE correctly verifies the unmodified test case and fails to verify the modified test cases</h:p>
                   </test>
                   <test>
+                    <depends on="sel-fcs-cop-sigver-mldsa"/>
                     <h:p style="text-align: left;">
                       <h:b>ML-DSA Signature Verification </h:b>
                     </h:p>

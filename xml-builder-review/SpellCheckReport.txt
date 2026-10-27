@@ -41,7 +41,6 @@ output/ndcpp-release-linkable.html: 9C
 output/ndcpp-release-linkable.html: AESAVS
 output/ndcpp-release-linkable.html: AFTs
 output/ndcpp-release-linkable.html: AKI
-output/ndcpp-release-linkable.html: AdminThe
 output/ndcpp-release-linkable.html: Behaviour
 output/ndcpp-release-linkable.html: CC4
 output/ndcpp-release-linkable.html: CCDB
@@ -103,7 +102,6 @@ output/ndcpp-release-linkable.html: SHAKE256
 output/ndcpp-release-linkable.html: SP800
 output/ndcpp-release-linkable.html: SPD
 output/ndcpp-release-linkable.html: SPDs
-output/ndcpp-release-linkable.html: Servicesoptional
 output/ndcpp-release-linkable.html: Subclause
 output/ndcpp-release-linkable.html: TOEprovided
 output/ndcpp-release-linkable.html: TSL
@@ -229,7 +227,6 @@ output/ndcpp-release.html: 9C
 output/ndcpp-release.html: AESAVS
 output/ndcpp-release.html: AFTs
 output/ndcpp-release.html: AKI
-output/ndcpp-release.html: AdminThe
 output/ndcpp-release.html: Behaviour
 output/ndcpp-release.html: CC4
 output/ndcpp-release.html: CCDB
@@ -294,7 +291,6 @@ output/ndcpp-release.html: SHAKE256
 output/ndcpp-release.html: SP800
 output/ndcpp-release.html: SPD
 output/ndcpp-release.html: SPDs
-output/ndcpp-release.html: Servicesoptional
 output/ndcpp-release.html: Subclause
 output/ndcpp-release.html: TOEprovided
 output/ndcpp-release.html: TSL
@@ -458,7 +454,6 @@ output/ndcpp.html: 9C
 output/ndcpp.html: AESAVS
 output/ndcpp.html: AFTs
 output/ndcpp.html: AKI
-output/ndcpp.html: AdminThe
 output/ndcpp.html: Behaviour
 output/ndcpp.html: CC4
 output/ndcpp.html: CCDB
@@ -523,7 +518,6 @@ output/ndcpp.html: SHAKE256
 output/ndcpp.html: SP800
 output/ndcpp.html: SPD
 output/ndcpp.html: SPDs
-output/ndcpp.html: Servicesoptional
 output/ndcpp.html: Subclause
 output/ndcpp.html: TOEprovided
 output/ndcpp.html: TSL

@@ -607,7 +607,6 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         </f-component>
         <!-- FAU_SAR.1 Audit Review -->
         <f-component cc-id="fau_sar.1" id="fau-sar-1" name="Audit Review" status="sel-based">
-          <depends on-incl="fau-stg-ext-1"/>
           <depends on-sel="fau-stg-ext-1-6-3"/>
           <f-element id="fau-sar-1-1">
             <title>
@@ -3340,7 +3339,8 @@ If ( keylen = 256 )
         </f-component>
         <!-- FCS_COP.1/XOF Cryptographic Operation - Extendable-Output Function -->
         <f-component cc-id="fcs_cop.1" id="fcs-cop-1-xof" name="Cryptographic Operation - Extendable-Output Function" iteration="XOF" status="sel-based">
-          <depends on-incl="fcs-cop-1-sigver"/>
+          <depends on-sel="sel-fcs-cop-sigver-lms"/>
+          <depends on-sel="sel-fcs-cop-sigver-xmss"/>
           <f-element id="fcs-cop-1-1-xof">
             <title>
               <h:p style="text-align: left;">The TSF shall perform <h:i>extendable-output function</h:i> in accordance with a specified cryptographic algorithm </h:p>
@@ -3441,9 +3441,9 @@ If ( keylen = 256 )
         </f-component>
         <!-- FCS_IPSEC_EXT.1 IPsec Protocol -->
         <f-component cc-id="fcs_ipsec_ext.1" id="fcs-ipsec-ext-1" name="IPsec Protocol" status="sel-based">
-          <depends on-incl="ftp-itc-1"/>
-          <depends on-incl="fpt-itt-1"/>
-          <depends on-incl="ftp-trp-1-admin"/>
+          <depends on-sel="nd_fpt_itt.1.1_1"/>
+          <depends on-sel="nd_ftp_itc.1.1_1"/>
+          <depends on-sel="nd_ftp_trp.1.1_ADMIN_1"/>
           <f-element id="fcs-ipsec-ext-1-1">
             <title>The TSF shall implement the IPsec architecture as specified in RFC 4301.</title>
             <note role="application">

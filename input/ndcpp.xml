@@ -1713,7 +1713,6 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
                 83. The following tests are conditional based upon the selections made in the SFR. The evaluator shall perform the following test or witness respective tests executed by the developer. The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode). Where the test is not carried out on the TOE itself, the test platform shall be identified and the differences between test environment and TOE execution environment shall be described.
                 <testlist>
                   <test>
-                    <depends on="nd-fcs-ckm-7-1-row-1"/>
                     <h:p style="text-align: left;">
                       <h:b>FFC Diffie-Hellman Key Agreement </h:b>
                     </h:p>
@@ -1739,7 +1738,6 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
                     </testlist>
                   </test>
                   <test>
-                    <depends on="nd-ckm-ext-7-1-row-2"/>
                     <h:p style="text-align: left;">
                       <h:b>Elliptic Curve Diffie-Hellman Key Agreement</h:b>
                     </h:p>
@@ -2168,11 +2166,7 @@ For 100 iterations
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
                   <reqtext>
-                    <h:p style="text-align: left;">.</h:p>
-                  </reqtext>
-                  <reqtext>
-                    <h:p style="text-align: left;"></h:p>
-                    <h:p style="text-align: left;">The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/KeyedHash.</h:p>
+                    <h:p style="text-align: left;">. The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/KeyedHash.</h:p>
                   </reqtext>
                 </tabularize>
                 <selectable id="HMAC-SHA-256">
@@ -2899,7 +2893,6 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                 </h:ol>
                 <testlist>
                   <test>
-                    <depends on="sel-fcs-cop-sigver-rsa-pkcs"/>
                     <h:p style="text-align: left;">
                       <h:b>RSA-PKCS Signature Verification</h:b>
                     </h:p>
@@ -2939,7 +2932,6 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">119. The TOE must correctly verify the unmodified signatures and fail to verify the modified signatures.</h:p>
                   </test>
                   <test>
-                    <depends on="sel-fcs-cop-sigver-rsa-pss"/>
                     <h:p style="text-align: left;">
                       <h:b>RSA-PSS Signature Verification </h:b>
                     </h:p>
@@ -2985,7 +2977,6 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">122. The TOE must correctly verify the unmodified signatures and fail to verify the modified signatures.</h:p>
                   </test>
                   <test>
-                    <depends on="sel-fcs-cop-sigver-ecdsa"/>
                     <h:p style="text-align: left;">
                       <h:b>ECDSA Signature Verification </h:b>
                     </h:p>
@@ -3028,7 +3019,6 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">125. The TOE must correctly verify the unmodified signatures and fail to verify the modified signatures.</h:p>
                   </test>
                   <test>
-                    <depends on="sel-fcs-cop-sigver-lms"/>
                     <h:p style="text-align: left;">
                       <h:b>LMS Signature Verification </h:b>
                     </h:p>
@@ -3065,7 +3055,6 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">128. The TOE must correctly verify the unmodified test case and fail to verify the modified test cases.</h:p>
                   </test>
                   <test>
-                    <depends on="sel-fcs-cop-sigver-xmss"/>
                     <h:p style="text-align: left;">
                       <h:b>XMSS Signature Verification </h:b>
                     </h:p>
@@ -3099,7 +3088,6 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                     <h:p style="text-align: left;">131. The evaluator shall verify the correctness of the implementation by verifying that the TOE correctly verifies the unmodified test case and fails to verify the modified test cases</h:p>
                   </test>
                   <test>
-                    <depends on="sel-fcs-cop-sigver-mldsa"/>
                     <h:p style="text-align: left;">
                       <h:b>ML-DSA Signature Verification </h:b>
                     </h:p>

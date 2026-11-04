@@ -1702,11 +1702,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
               </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
                 <p style="text-align: left;">82<a id="period_477" href="#period_477">. </a>The evaluator shall verify that the AGD guidance instructs the administrator how to configure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> to use the selected key agreement method(s)<a id="period_478" href="#period_478">. </a></p>
               </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                83<a id="period_479" href="#period_479">. </a>The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_480" href="#period_480">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_481" href="#period_481">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_482" href="#period_482">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_483" href="#period_483">. </a>                <span class="testlist-"><ul><li class="test-"><a id="_t_49" class="defined" href="#_t_49">Test FCS_CKM_EXT.7:1</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#nd-fcs-ckm-7-1-row-1">DHFinite Field Cryptography Diffie-HellmanStatic domain parameters approved for [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="ckm7-group-1">IKE Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_1">MODP-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_2">MODP-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_3">MODP-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_4">MODP-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_5">MODP-8192</span>]</span></li><li style=""><span class="selectable-content" id="ckm7-group-2">TLS Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_6">ffdhe-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_7">ffdhe-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_8">ffdhe-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_9">ffdhe-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_10">ffdhe-8192</span>]</span></li></ul>] NIST SP 800-56A Revision 3 (Section 5.7.1.1), [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_11">RFC 3526 [IKE groups]</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_12">RFC 7919 [TLS groups]</span>] </a>
-             is selected from 
-             <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></li></ul><div class="dependent-content"><test>
-                    
+                83<a id="period_479" href="#period_479">. </a>The following tests are conditional based upon the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_480" href="#period_480">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_481" href="#period_481">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_482" href="#period_482">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_483" href="#period_483">. </a>                <span class="testlist-"><ul><li class="test-"><a id="_t_49" class="defined" href="#_t_49">Test FCS_CKM_EXT.7:1</a>:<br>
                     <p style="text-align: left;">
                       <b>FFC Diffie-Hellman Key Agreement </b>
                     </p>
@@ -1727,11 +1723,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                         </p>
                         <p style="text-align: left;">86<a id="period_488" href="#period_488">. </a>For each supported combination of the above parameters the evaluator shall generate 15 Diffie Hellman initiator/responder key pairs using the key generation function of a known-good implementation<a id="period_489" href="#period_489">. </a>For each set of key pairs, the evaluator shall modify five initiator private key values<a id="period_490" href="#period_490">. </a>The remaining key values are left unchanged (i.e., correct)<a id="period_491" href="#period_491">. </a>To determine correctness, the evaluator shall confirm that the 15 shared secrets correspond as expected for both the modified and unmodified inputs<a id="period_492" href="#period_492">. </a></p>
                       </li></ul></span>
-                  </test></div></div></li><li class="test-"><a id="_t_52" class="defined" href="#_t_52">Test FCS_CKM_EXT.7:2</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#nd-ckm-ext-7-1-row-2">ECDHElliptic Curve Diffie-HellmanElliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_13">P-256</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_14">P-384</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_15">P-521</span>] NIST SP 800-56A Revision 3 (Section 5.7.1.2) [ECDH], NIST SP 800-186 (Section 3.2.1) [NIST Curves]</a>
-             is selected from 
-             <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></li></ul><div class="dependent-content"><test>
-                    
+                  </li><li class="test-"><a id="_t_52" class="defined" href="#_t_52">Test FCS_CKM_EXT.7:2</a>:<br>
                     <p style="text-align: left;">
                       <b>Elliptic Curve Diffie-Hellman Key Agreement</b>
                     </p>
@@ -1752,7 +1744,7 @@ modified, deleted or generated/imported) by the Security Administrator<a id="per
                         </p>
                         <p style="text-align: left;">89<a id="period_497" href="#period_497">. </a>For each supported Elliptic Curve the evaluator shall generate 15 Diffie Hellman initiator/responder key pairs using the key generation function of a knowngood implementation<a id="period_498" href="#period_498">. </a>For each set of key pairs, the evaluator shall modify five initiator private key values<a id="period_499" href="#period_499">. </a>The remaining key values are left unchanged (i.e., correct)<a id="period_500" href="#period_500">. </a>To determine correctness, the evaluator shall confirm that the 15 shared secrets correspond as expected for the modified and unmodified values<a id="period_501" href="#period_501">. </a></p>
                       </li></ul></span>
-                  </test></div></div></li></ul></span>
+                  </li></ul></span>
               </div></div></div></div></div>
         
         
@@ -1925,11 +1917,7 @@ For 100 iterations
     [<b>selection</b>: 
     <span class="selectable-content">List of Standards</span>]
                   
-                    <p style="text-align: left;"><a id="period_571" href="#period_571">. </a></p>
-                  
-                  
-                    <p style="text-align: left;"></p>
-                    <p style="text-align: left;">The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a><a id="period_572" href="#period_572">. </a></p>
+                    <p style="text-align: left;"><a id="period_571" href="#period_571">. </a>The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a><a id="period_572" href="#period_572">. </a></p>
                   
                 
             <table><caption><span class="ctr" data-myid="fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="fcs-cop-keyedhash-sels">Table <span class="counter">5</span></span>: Allowable choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
@@ -1939,7 +1927,6 @@ For 100 iterations
                   <th>Cryptographic Key Sizes</th>
                   
                   <th>List of Standards</th>
-                  
                   
                 </tr>
 
@@ -2381,11 +2368,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                     <p style="text-align: left;">The following tests are conditional based on the selections made in the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr><a id="period_651" href="#period_651">. </a>The evaluator shall perform the following test or witness respective tests executed by the developer<a id="period_652" href="#period_652">. </a>The tests must be executed on a platform that is as close as practically possible to the operational platform (but which may be instrumented in terms of, for example, use of a debug mode)<a id="period_653" href="#period_653">. </a>Where the test is not carried out on the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> itself, the test platform shall be identified and the differences between test environment and <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> execution environment shall be described<a id="period_654" href="#period_654">. </a></p>
                   </li>
                 </ol>
-                <span class="testlist-"><ul><li class="test-"><a id="_t_89" class="defined" href="#_t_89">Test FCS_COP.1/SigVer:1</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-rsa-pkcs">RSA-PKCSRSASSA-PKCS1-v1_5Modulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_1">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_1">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_2">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_3">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_4">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_2">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_5">SHA-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_6">SHA-512</span>]RFC 8017 (Section 8.2) [PKCS #1 v2.2],<p></p>FIPS PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</a>
-             is selected from 
-             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
-                    
+                <span class="testlist-"><ul><li class="test-"><a id="_t_89" class="defined" href="#_t_89">Test FCS_COP.1/SigVer:1</a>:<br>
                     <p style="text-align: left;">
                       <b>RSA-PKCS Signature Verification</b>
                     </p>
@@ -2423,11 +2406,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">119<a id="period_657" href="#period_657">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_658" href="#period_658">. </a></p>
-                  </test></div></div></li><li class="test-"><a id="_t_90" class="defined" href="#_t_90">Test FCS_COP.1/SigVer:2</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-rsa-pss">RSA-PSSRSASSA-PSSModulus of size [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_3">2048</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_7">3072</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_8">4096</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_9">6144</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_10">8192</span>] bits and hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_4">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_11">SHA-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_12">SHA-512</span>]RFC 8017 (Section 8.1) [PKCS#1 v2.2],<p></p>FIPS PUB 186-5 (Section 5.4) [RSASSA-PSS]</a>
-             is selected from 
-             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
-                    
+                  </li><li class="test-"><a id="_t_90" class="defined" href="#_t_90">Test FCS_COP.1/SigVer:2</a>:<br>
                     <p style="text-align: left;">
                       <b>RSA-PSS Signature Verification </b>
                     </p>
@@ -2471,11 +2450,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">122<a id="period_661" href="#period_661">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_662" href="#period_662">. </a></p>
-                  </test></div></div></li><li class="test-"><a id="_t_91" class="defined" href="#_t_91">Test FCS_COP.1/SigVer:3</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-ecdsa">ECDSAECDSAElliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_5">P-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_13">P-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_14">P-521</span>] using hash [<b>selection</b>: <span class="selectable-content" id="nd_fcs_cop.1.1_SIGVER_6">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_15">SHA-384</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_16">SHA-512</span>][<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_17">ISO/IEC 14888-3:2018 (Subclause 6.6)</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_18">FIPS PUB 186-5 (Section 6.4.2)</span>] [ECDSA]<p></p>NIST SP-800 186 (Section 4) [NIST Curves]</a>
-             is selected from 
-             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
-                    
+                  </li><li class="test-"><a id="_t_91" class="defined" href="#_t_91">Test FCS_COP.1/SigVer:3</a>:<br>
                     <p style="text-align: left;">
                       <b><abbr class="dyn-abbr"><a href="#abbr_ECDSA">ECDSA</a></abbr> Signature Verification </b>
                     </p>
@@ -2516,11 +2491,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">125<a id="period_665" href="#period_665">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_666" href="#period_666">. </a></p>
-                  </test></div></div></li><li class="test-"><a id="_t_92" class="defined" href="#_t_92">Test FCS_COP.1/SigVer:4</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-lms">LMSLMSPrivate key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_19">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_20">SHA-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_21">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_22">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_23">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_24">SHAKE256</span>]</span></li></ul>] <p></p>Winternitz parameter = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_25">1</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_26">2</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_27">4</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_28">8</span>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_29">5</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_30">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_31">15</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_32">20</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_33">25</span>]RFC 8554 [LMS],<p></p>NIST SP 800-208 [parameters]</a>
-             is selected from 
-             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
-                    
+                  </li><li class="test-"><a id="_t_92" class="defined" href="#_t_92">Test FCS_COP.1/SigVer:4</a>:<br>
                     <p style="text-align: left;">
                       <b>LMS Signature Verification </b>
                     </p>
@@ -2555,11 +2526,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">128<a id="period_673" href="#period_673">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified test case and fail to verify the modified test cases<a id="period_674" href="#period_674">. </a></p>
-                  </test></div></div></li><li class="test-"><a id="_t_93" class="defined" href="#_t_93">Test FCS_COP.1/SigVer:5</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-xmss">XMSSXMSSPrivate key size = [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_34">192 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_35">SHA-256/192</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_36">SHAKE256/192</span>]</span></li><li style=""><span class="selectable-content" id="fcs_cop.1.1_SigVer_37">256 bits with [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_38">SHA-256</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_39">SHAKE256</span>]</span></li></ul>] <p></p>Tree height = [<b>selection</b>: <span class="selectable-content" id="fcs_cop.1.1_SigVer_40">10</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_41">16</span>, <span class="selectable-content" id="fcs_cop.1.1_SigVer_42">20</span>]RFC 8391 [XMSS],<p></p>NIST SP 800-208 [parameters]</a>
-             is selected from 
-             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
-                    
+                  </li><li class="test-"><a id="_t_93" class="defined" href="#_t_93">Test FCS_COP.1/SigVer:5</a>:<br>
                     <p style="text-align: left;">
                       <b>XMSS Signature Verification </b>
                     </p>
@@ -2591,11 +2558,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">131<a id="period_680" href="#period_680">. </a>The evaluator shall verify the correctness of the implementation by verifying that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> correctly verifies the unmodified test case and fails to verify the modified test cases</p>
-                  </test></div></div></li><li class="test-"><a id="_t_94" class="defined" href="#_t_94">Test FCS_COP.1/SigVer:6</a>:
-  	  <div class="dependent">The following content should be included if:<ul><li><a href="#sel-fcs-cop-sigver-mldsa">ML-DSAML-DSAParameter set = ML-DSA-87NIST FIPS 204 (Section 5.3)</a>
-             is selected from 
-             <a href="#FCS_COP.1.1/SigVer">FCS_COP.1.1/SigVer</a></li></ul><div class="dependent-content"><test>
-                    
+                  </li><li class="test-"><a id="_t_94" class="defined" href="#_t_94">Test FCS_COP.1/SigVer:6</a>:<br>
                     <p style="text-align: left;">
                       <b>ML-DSA Signature Verification </b>
                     </p>
@@ -2642,7 +2605,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                       </li>
                     </ul>
                     <p style="text-align: left;">134<a id="period_684" href="#period_684">. </a>The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> must correctly verify the unmodified signatures and fail to verify the modified signatures<a id="period_685" href="#period_685">. </a></p>
-                  </test></div></div></li></ul></span>
+                  </li></ul></span>
               </div></div></div></div></div>
         
         

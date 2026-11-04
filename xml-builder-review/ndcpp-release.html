@@ -952,14 +952,10 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall record within the audit data at least the following information:
               <ol>
                 <li>
-                  Date and time of the auditable event, type of event, subject identity
-                  <s>(if applicable)</s>, and the outcome (success or failure) of the event; and
+                  Date and time of the auditable event, type of event, subject identity <s>(if applicable)</s>, and the outcome (success or failure) of the event; and
                 </li>
                 <li>
-                  For each auditable event type, based on the auditable event definitions of the functional components included in the
-                  <b>c</b>
-                  <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>, functional package or <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>,
-                  <i>information specified in column three of Table 2.</i>
+                  For each auditable event type, based on the auditable event definitions of the functional components included in the <b>c</b><abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>, functional package or <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>, <i>information specified in column three of Table 2.</i>
                 </li>
               </ol>
             <div class="appnote"><span class="note-header">Application
@@ -1621,7 +1617,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
      <span class="assignable-content"><abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author defined multi-pass</span>]</span>] overwrite consisting of [<b>selection</b>: <span class="selectable-content" id="fcs-ckm-6-2-26">zeros</span>, <span class="selectable-content" id="fcs-ckm-6-2-27">ones</span>, <span class="selectable-content" id="fcs-ckm-6-2-28">pseudo-random pattern</span>, <span class="selectable-content" id="fcs-ckm-6-2-29">a new value of a key of the same size</span>, <span class="selectable-content" id="fcs-ckm-6-2-30">[<b>assignment</b>: 
      <span class="assignable-content">some value that does not contain any <abbr class="dyn-abbr"><a href="#abbr_CSP">CSP</a></abbr></span>]</span>] followed by a read-verify. If the read-verification of the overwritten data fails, the process shall be repeated up to [<b>assignment</b>: 
      <span class="assignable-content">number of times to attempt overwrite</span>] times, whereupon an error is returned.</span></li><li style=""><span class="selectable-content" id="fcs-ckm-6-2-32">block erase</span></li></ul>]</span></li></ul>]</span></li></ul>]
-              <p style="text-align: left;">that meets the following: [<i>no standard]</i>.</p>
+              that meets the following: [<i>no standard]</i>.
             <div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
@@ -1658,7 +1654,7 @@ modified, deleted or generated/imported) by the Security Administrator.</span><b
     [<b>selection</b>: 
     <span class="selectable-content">Cryptographic Algorithm Parameters</span>]that meet the following: 
     [<b>selection</b>: 
-    <span class="selectable-content">List of Standards</span>]<p style="text-align: left;"></p><p style="text-align: left;">The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a>.</p><table><caption><span class="ctr" data-myid="nd-ckm-ext-7-crypto-table" data-counter-type="ct-Table" id="nd-ckm-ext-7-crypto-table">Table <span class="counter">4</span></span>: Allowed choices for <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></caption><tr><th>Identifier</th><th>Cryptographic Key Generation Algorithm</th><th>Cryptographic Algorithm Parameters</th><th>List of Standards</th></tr>
+    <span class="selectable-content">List of Standards</span>] The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a>.<table><caption><span class="ctr" data-myid="nd-ckm-ext-7-crypto-table" data-counter-type="ct-Table" id="nd-ckm-ext-7-crypto-table">Table <span class="counter">4</span></span>: Allowed choices for <a href="#FCS_CKM_EXT.7.1">FCS_CKM_EXT.7.1</a></caption><tr><th>Identifier</th><th>Cryptographic Key Generation Algorithm</th><th>Cryptographic Algorithm Parameters</th><th>List of Standards</th></tr>
 <tr><td>DH</td><td>Finite Field Cryptography Diffie-Hellman</td><td>Static domain parameters approved for [<b>selection</b>: <ul><li style=""><span class="selectable-content" id="ckm7-group-1">IKE Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_1">MODP-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_2">MODP-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_3">MODP-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_4">MODP-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_5">MODP-8192</span>]</span></li><li style=""><span class="selectable-content" id="ckm7-group-2"><abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> Groups [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_6">ffdhe-2048</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_7">ffdhe-3072</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_8">ffdhe-4096</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_9">ffdhe-6144</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_10">ffdhe-8192</span>]</span></li></ul>] </td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56A Revision 3 (Section 5.7.1.1), [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_11"><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 3526 [IKE groups]</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_12"><abbr class="dyn-abbr"><a href="#abbr_RFC">RFC</a></abbr> 7919 [<abbr class="dyn-abbr"><a href="#abbr_TLS">TLS</a></abbr> groups]</span>] </td></tr>
 <tr><td>ECDH</td><td>Elliptic Curve Diffie-Hellman</td><td>Elliptic Curve [<b>selection</b>: <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_13">P-256</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_14">P-384</span>, <span class="selectable-content" id="nd_fcs_ckm_ext.7.1_15">P-521</span>] </td><td><abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-56A Revision 3 (Section 5.7.1.2) [ECDH], <abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> SP 800-186 (Section 3.2.1) [<abbr class="dyn-abbr"><a href="#abbr_NIST">NIST</a></abbr> Curves]</td></tr>
 </table><div class="appnote"><span class="note-header">Application
@@ -1938,9 +1934,7 @@ For 100 iterations
                   
     [<b>selection</b>: 
     <span class="selectable-content">List of Standards</span>]
-                  
-                    <p style="text-align: left;">. The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>.</p>
-                  
+                  . The following table provides the allowable choices for completion of the selection operations of <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a>.
                 
             <table><caption><span class="ctr" data-myid="fcs-cop-keyedhash-sels" data-counter-type="ct-Table" id="fcs-cop-keyedhash-sels">Table <span class="counter">5</span></span>: Allowable choices for <a href="#FCS_COP.1/KeyedHash">FCS_COP.1/KeyedHash</a></caption>
                 <tr>
@@ -2738,7 +2732,9 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
           <div class="element"><div class="reqid" id="FIA_UIA_EXT.1.1"><a href="#FIA_UIA_EXT.1.1" class="abbr">FIA_UIA_EXT.1.1</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall allow the following actions prior to requiring the non-TOE entity to initiate the identification and authentication process:
               <ul>
-                <li>Display the warning banner in accordance with <a href="#FTA_TAB.1">FTA_TAB.1</a>;</li>
+                <li>
+                  Display the warning banner in accordance with <a href="#FTA_TAB.1">FTA_TAB.1</a>;
+                </li>
                 <li> [<b>selection</b>: <span class="selectable-content" id="nd_fia_uia_ext.1.1_1">no other actions</span>, <span class="selectable-content" id="nd_fia_uia_ext.1.1_2">automated generation of cryptographic keys</span>, <span class="selectable-content" id="nd_fia_uia_ext.1.1_3">[<b>assignment</b>: 
      <span class="assignable-content">list of services, actions performed by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> in response to non-TOE requests</span>]</span>].</li>
               </ul>
@@ -3265,10 +3261,10 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
               </div></div></div></div></div>
         
         <div class="comp" id="FPT_TST_EXT.1"><h4>FPT_TST_EXT.1 TSF Testing</h4>
-          <div class="element"><div class="reqid" id="FPT_TST_EXT.1.1"><a href="#FPT_TST_EXT.1.1" class="abbr">FPT_TST_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall run a suite of the following self-tests:<ul><li>During initial start-up (on power on) to verify the integrity of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware and software;</li> <li>Prior to providing any cryptographic service and</li></ul> [<b>selection</b>: <span class="selectable-content" id="nd_fpt_tst_ext.1.1_1">at no other time</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_2">on-demand</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_3">continuously</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_4">[<b>assignment</b>: 
-     <span class="assignable-content">conditions under which self-tests should occur</span>]</span>]                                   to verify correct operation of cryptographic implementation necessary to fulfil the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>;<ul><li> [<b>selection</b>: <span class="selectable-content" id="nd_fpt_tst_ext.1.1_5">no other</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_6">start-up</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_7">on-demand</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_8">continuous</span>, <span class="selectable-content" id="nd-fpt-test-ext-1-1-comp-1">at the conditions [<b>assignment</b>: 
-     <span class="assignable-content">conditions under which self-tests should occur</span>]</span>]</li></ul>               self-tests                                   [<b>assignment</b>: 
-     <span class="assignable-content">'list an identifier for each self-test that is additional to those identified in the first two bullet points'</span>].to demonstrate the correct operation of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>.<div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FPT_TST_EXT.1.1"><a href="#FPT_TST_EXT.1.1" class="abbr">FPT_TST_EXT.1.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall run a suite of the following self-tests: <ul><li>During initial start-up (on power on) to verify the integrity of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> firmware and software;</li><li>Prior to providing any cryptographic service and [<b>selection</b>: <span class="selectable-content" id="nd_fpt_tst_ext.1.1_1">at no other time</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_2">on-demand</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_3">continuously</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_4">[<b>assignment</b>: 
+     <span class="assignable-content">conditions under which self-tests should occur</span>]</span>] to verify correct operation of cryptographic implementation necessary to fulfil the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>;</li><li> [<b>selection</b>: <span class="selectable-content" id="nd_fpt_tst_ext.1.1_5">no other</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_6">start-up</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_7">on-demand</span>, <span class="selectable-content" id="nd_fpt_tst_ext.1.1_8">continuous</span>, <span class="selectable-content" id="nd-fpt-test-ext-1-1-comp-1">at the conditions [<b>assignment</b>: 
+     <span class="assignable-content">conditions under which self-tests should occur</span>]</span>]self-tests [<b>assignment</b>: 
+     <span class="assignable-content">'list an identifier for each self-test that is additional to those identified in the first two bullet points'</span>].</li></ul>to demonstrate the correct operation of the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr>.<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">
@@ -4829,9 +4825,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                   </li></ul></span>
               </div></div></div></div></div><div class="comp" id="FIA_UAU.7"><h4>FIA_UAU.7 Protected Authentication Feedback</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#nd-feature-2">Password-based local authentication</a></i></b></li></ul></div>
           
-          <div class="element"><div class="reqid" id="FIA_UAU.7.1"><a href="#FIA_UAU.7.1" class="abbr">FIA_UAU.7.1</a></div><div class="reqdesc">
-              <p style="text-align: left;">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide only <u>obscured feedback</u> to the <b>administrative</b> user while the authentication is in progress <b>at the local console</b>.</p>
-            <div class="appnote"><span class="note-header">Application
+          <div class="element"><div class="reqid" id="FIA_UAU.7.1"><a href="#FIA_UAU.7.1" class="abbr">FIA_UAU.7.1</a></div><div class="reqdesc">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall provide only <u>obscured feedback</u> to the <b>administrative</b> user while the authentication is in progress <b>at the local console</b>.<div class="appnote"><span class="note-header">Application
       Note:
     </span><span class="note">
               <p style="text-align: left;">
@@ -5030,13 +5024,8 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                   
     [<b>selection</b>: 
     <span class="selectable-content">List of standards</span>]
-                  
-                    <p style="text-align: left;">. </p>
-                  
-                  
-                    <p style="text-align: left;"></p>
-                    <p style="text-align: left;">The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a>.</p>
-                  
+                  . 
+                   The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a>.
                 
             <table><caption><span class="ctr" data-myid="fcs-cop-aead-sels" data-counter-type="ct-Table" id="fcs-cop-aead-sels">Table <span class="counter">13</span></span>: Allowed choices for <a href="#FCS_COP.1/AEAD">FCS_COP.1/AEAD</a></caption>
                 <tr>
@@ -5245,10 +5234,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</c
                   
     [<b>selection</b>: 
     <span class="selectable-content">List of Standards</span>]
-                  
-                    <p style="text-align: left;">. </p>
-                    <p style="text-align: left;">The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.</p>
-                  
+                  .  The following table provides the allowed choices for completion of the selection operations of <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a>.
                 
             <table><caption><span class="ctr" data-myid="nd-fcs-cop-1-1-keyencap-crypto-table" data-counter-type="ct-Table" id="nd-fcs-cop-1-1-keyencap-crypto-table">Table <span class="counter">14</span></span>: Allowed choices for <a href="#FCS_COP.1/KeyEncap">FCS_COP.1/KeyEncap</a></caption>
                 <tr>

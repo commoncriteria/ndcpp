@@ -524,14 +524,10 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
               The TSF shall record within the audit data at least the following information:
               <h:ol>
                 <h:li>
-                  Date and time of the auditable event, type of event, subject identity
-                  <h:s>(if applicable)</h:s>, and the outcome (success or failure) of the event; and
+                  Date and time of the auditable event, type of event, subject identity <h:s>(if applicable)</h:s>, and the outcome (success or failure) of the event; and
                 </h:li>
                 <h:li>
-                  For each auditable event type, based on the auditable event definitions of the functional components included in the
-                  <h:b>c</h:b>
-                  PP, PP-Module, functional package or ST,
-                  <h:i>information specified in column three of Table 2.</h:i>
+                  For each auditable event type, based on the auditable event definitions of the functional components included in the <h:b>c</h:b>PP, PP-Module, functional package or ST, <h:i>information specified in column three of Table 2.</h:i>
                 </h:li>
               </h:ol>
             </title>
@@ -1634,7 +1630,7 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
                 <selectable id="fcs-ckm-6-2-56">For volatile storage, the destruction shall be executed by a <selectables linebreak="yes"><selectable id="fcs_ckm.6.2_1">single overwrite consisting of <selectables><selectable id="fcs_ckm.6.2_2">a pseudo-random pattern using the TSF’s RBG (as specified in FCS_RBG.1)</selectable><selectable id="fcs_ckm.6.2_3">zeros</selectable><selectable id="fcs_ckm.6.2_4">ones</selectable><selectable id="fcs_ckm.6.2_5">a new value of a key</selectable><selectable id="fcs_ckm.6.2_7"><assignable>some value that does not contain any CSP</assignable></selectable></selectables> </selectable><selectable id="fcs_ckm.6.2_8">removal of power to the memory</selectable><selectable id="fcs_ckm.6.2_9">removal of all references to the key directly followed by a request for garbage collection</selectable></selectables>;</selectable>
                 <selectable id="fcs-ckm-6-2-55">For non-volatile storage <selectables><selectable id="fcs-ckm-6-2-45">that consists of an invocation of an interface provided by a part of the TSF, the destruction shall be executed by: <selectables><selectable id="fcs-ckm-6-2-43">logically addressing the storage location of the key and performing a <selectables><selectable id="fcs-ckm-6-2-10">single</selectable><selectable id="fcs-ckm-6-2-41"> <assignable>number of passes</assignable> -pass</selectable></selectables> overwrite consisting of <selectables><selectable id="fcs-ckm-6-2-12">a pseudo-random pattern using the TSF's RBG (as specified in FCS_RBG.1)</selectable><selectable id="fcs-ckm-6-2-13">zeroes</selectable><selectable id="fcs-ckm-6-2-14">ones</selectable><selectable id="fcs-ckm-6-2-15">a new value of the key</selectable><selectable id="fcs-ckm-6-2-16"><assignable>a static or dynamic value that does not contain any CSP</assignable></selectable></selectables> </selectable><selectable id="fcs-ckm-6-2-17">instructing a part of the TSF to destroy the abstraction that represents the key</selectable></selectables> </selectable><selectable id="fcs-ckm-6-2-48">that employs a wear-leveling algorithm, the destruction shall be executed by a <selectables><selectable id="fcs-ckm-6-2-46-2">single overwrite consisting of <selectables><selectable id="fcs-ckm-6-2-18">zeroes</selectable><selectable id="fcs-ckm-6-2-19">ones</selectable><selectable id="fcs-ckm-6-2-20">pseudo-random pattern</selectable><selectable id="fcs-ckm-6-2-21">a new value of a key of the same size</selectable><selectable id="fcs-ckm-6-2-22"><assignable>some value that does not contain any CSP</assignable></selectable></selectables> </selectable><selectable id="fcs-ckm-6-2-23">block erase</selectable></selectables>;</selectable><selectable id="fcs-ckm-6-2-53">that does not employ a wear-leveling algorithm, the destruction shall be executed by a <selectables><selectable id="fcs-ckm-6-2-51"> <selectables><selectable id="fcs-ckm-6-2-24">single</selectable><selectable id="fcs-ckm-6-2-25"><assignable>ST author defined multi-pass</assignable></selectable></selectables> overwrite consisting of <selectables><selectable id="fcs-ckm-6-2-26">zeros</selectable><selectable id="fcs-ckm-6-2-27">ones</selectable><selectable id="fcs-ckm-6-2-28">pseudo-random pattern</selectable><selectable id="fcs-ckm-6-2-29">a new value of a key of the same size</selectable><selectable id="fcs-ckm-6-2-30"><assignable>some value that does not contain any CSP</assignable></selectable></selectables> followed by a read-verify. If the read-verification of the overwritten data fails, the process shall be repeated up to <assignable>number of times to attempt overwrite</assignable> times, whereupon an error is returned.</selectable><selectable id="fcs-ckm-6-2-32">block erase</selectable></selectables> </selectable></selectables></selectable>
               </selectables>
-              <h:p style="text-align: left;">that meets the following: [<h:i>no standard]</h:i>.</h:p>
+              that meets the following: [<h:i>no standard]</h:i>.
             </title>
             <note role="application">
               <h:p style="text-align: left;">
@@ -1652,7 +1648,7 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
         <!-- FCS_CKM_EXT.7 Cryptographic Key Agreement -->
         <f-component cc-id="fcs_ckm_ext.7" id="fcs-ckm-ext-7" name="Cryptographic Key Agreement">
           <f-element id="fcs-ckm-7-1">
-            <title>The TSF shall derive shared cryptographic keys with input from multiple parties in accordance with specified cryptographic key agreement algorithms<selectables><tabularize id="nd-ckm-ext-7-crypto-table" title="Allowed choices for FCS_CKM_EXT.7.1"><textcol>Identifier</textcol><selectcol>Cryptographic Key Generation Algorithm</selectcol><reqtext>and specified cryptographic parameters</reqtext><selectcol>Cryptographic Algorithm Parameters</selectcol><reqtext>that meet the following: </reqtext><selectcol>List of Standards</selectcol><reqtext><h:p style="text-align: left;"></h:p><h:p style="text-align: left;">The following table provides the allowed choices for completion of the selection operations of FCS_CKM_EXT.7.1.</h:p></reqtext></tabularize><selectable id="nd-fcs-ckm-7-1-row-1"><col>DH</col><col>Finite Field Cryptography Diffie-Hellman</col><col>Static domain parameters approved for <selectables><selectable id="ckm7-group-1">IKE Groups <selectables><selectable id="nd_fcs_ckm_ext.7.1_1">MODP-2048</selectable><selectable id="nd_fcs_ckm_ext.7.1_2">MODP-3072</selectable><selectable id="nd_fcs_ckm_ext.7.1_3">MODP-4096</selectable><selectable id="nd_fcs_ckm_ext.7.1_4">MODP-6144</selectable><selectable id="nd_fcs_ckm_ext.7.1_5">MODP-8192</selectable></selectables> </selectable><selectable id="ckm7-group-2">TLS Groups <selectables><selectable id="nd_fcs_ckm_ext.7.1_6">ffdhe-2048</selectable><selectable id="nd_fcs_ckm_ext.7.1_7">ffdhe-3072</selectable><selectable id="nd_fcs_ckm_ext.7.1_8">ffdhe-4096</selectable><selectable id="nd_fcs_ckm_ext.7.1_9">ffdhe-6144</selectable><selectable id="nd_fcs_ckm_ext.7.1_10">ffdhe-8192</selectable></selectables> </selectable></selectables> </col><col>NIST SP 800-56A Revision 3 (Section 5.7.1.1), <selectables><selectable id="nd_fcs_ckm_ext.7.1_11">RFC 3526 [IKE groups]</selectable><selectable id="nd_fcs_ckm_ext.7.1_12">RFC 7919 [TLS groups]</selectable></selectables> </col></selectable><selectable id="nd-ckm-ext-7-1-row-2"><col>ECDH</col><col>Elliptic Curve Diffie-Hellman</col><col>Elliptic Curve <selectables><selectable id="nd_fcs_ckm_ext.7.1_13">P-256</selectable><selectable id="nd_fcs_ckm_ext.7.1_14">P-384</selectable><selectable id="nd_fcs_ckm_ext.7.1_15">P-521</selectable></selectables> </col><col>NIST SP 800-56A Revision 3 (Section 5.7.1.2) [ECDH], NIST SP 800-186 (Section 3.2.1) [NIST Curves]</col></selectable></selectables></title>
+            <title>The TSF shall derive shared cryptographic keys with input from multiple parties in accordance with specified cryptographic key agreement algorithms<selectables><tabularize id="nd-ckm-ext-7-crypto-table" title="Allowed choices for FCS_CKM_EXT.7.1"><textcol>Identifier</textcol><selectcol>Cryptographic Key Generation Algorithm</selectcol><reqtext>and specified cryptographic parameters</reqtext><selectcol>Cryptographic Algorithm Parameters</selectcol><reqtext>that meet the following: </reqtext><selectcol>List of Standards</selectcol><reqtext> The following table provides the allowed choices for completion of the selection operations of FCS_CKM_EXT.7.1.</reqtext></tabularize><selectable id="nd-fcs-ckm-7-1-row-1"><col>DH</col><col>Finite Field Cryptography Diffie-Hellman</col><col>Static domain parameters approved for <selectables><selectable id="ckm7-group-1">IKE Groups <selectables><selectable id="nd_fcs_ckm_ext.7.1_1">MODP-2048</selectable><selectable id="nd_fcs_ckm_ext.7.1_2">MODP-3072</selectable><selectable id="nd_fcs_ckm_ext.7.1_3">MODP-4096</selectable><selectable id="nd_fcs_ckm_ext.7.1_4">MODP-6144</selectable><selectable id="nd_fcs_ckm_ext.7.1_5">MODP-8192</selectable></selectables> </selectable><selectable id="ckm7-group-2">TLS Groups <selectables><selectable id="nd_fcs_ckm_ext.7.1_6">ffdhe-2048</selectable><selectable id="nd_fcs_ckm_ext.7.1_7">ffdhe-3072</selectable><selectable id="nd_fcs_ckm_ext.7.1_8">ffdhe-4096</selectable><selectable id="nd_fcs_ckm_ext.7.1_9">ffdhe-6144</selectable><selectable id="nd_fcs_ckm_ext.7.1_10">ffdhe-8192</selectable></selectables> </selectable></selectables> </col><col>NIST SP 800-56A Revision 3 (Section 5.7.1.1), <selectables><selectable id="nd_fcs_ckm_ext.7.1_11">RFC 3526 [IKE groups]</selectable><selectable id="nd_fcs_ckm_ext.7.1_12">RFC 7919 [TLS groups]</selectable></selectables> </col></selectable><selectable id="nd-ckm-ext-7-1-row-2"><col>ECDH</col><col>Elliptic Curve Diffie-Hellman</col><col>Elliptic Curve <selectables><selectable id="nd_fcs_ckm_ext.7.1_13">P-256</selectable><selectable id="nd_fcs_ckm_ext.7.1_14">P-384</selectable><selectable id="nd_fcs_ckm_ext.7.1_15">P-521</selectable></selectables> </col><col>NIST SP 800-56A Revision 3 (Section 5.7.1.2) [ECDH], NIST SP 800-186 (Section 3.2.1) [NIST Curves]</col></selectable></selectables></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 14 </h:b>
@@ -1786,13 +1782,8 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
                   <selectcol>Cryptographic key sizes</selectcol>
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of standards</selectcol>
-                  <reqtext>
-                    <h:p style="text-align: left;">. </h:p>
-                  </reqtext>
-                  <reqtext>
-                    <h:p style="text-align: left;"></h:p>
-                    <h:p style="text-align: left;">The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/AEAD.</h:p>
-                  </reqtext>
+                  <reqtext>. </reqtext>
+                  <reqtext> The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/AEAD.</reqtext>
                 </tabularize>
                 <selectable id="sel-fcs-cop-aead-aes-ccm">
                   <col>AES-CCM</col>
@@ -2165,9 +2156,7 @@ For 100 iterations
                   <selectcol>Cryptographic Key Sizes</selectcol>
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
-                  <reqtext>
-                    <h:p style="text-align: left;">. The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/KeyedHash.</h:p>
-                  </reqtext>
+                  <reqtext>. The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/KeyedHash.</reqtext>
                 </tabularize>
                 <selectable id="HMAC-SHA-256">
                   <col>HMAC-SHA-256</col>
@@ -2269,10 +2258,7 @@ For 100 iterations
                   <selectcol>Cryptographic Key Sizes</selectcol>
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
-                  <reqtext>
-                    <h:p style="text-align: left;">. </h:p>
-                    <h:p style="text-align: left;">The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/KeyEncap.</h:p>
-                  </reqtext>
+                  <reqtext>.  The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/KeyEncap.</reqtext>
                 </tabularize>
                 <selectable id="nd-fcs-cop-1-keyencap-crypto-ML-KEM">
                   <col>ML-KEM</col>
@@ -4379,9 +4365,7 @@ If ( keylen = 256 )
         <f-component cc-id="fia_uau.7" id="fia-uau-7" name="Protected Authentication Feedback" status="feat-based">
           <depends on="nd-feature-2"/>
           <f-element id="fia_uau-7-1">
-            <title>
-              <h:p style="text-align: left;">The TSF shall provide only <h:u>obscured feedback</h:u> to the <h:b>administrative</h:b> user while the authentication is in progress <h:b>at the local console</h:b>.</h:p>
-            </title>
+            <title>The TSF shall provide only <h:u>obscured feedback</h:u> to the <h:b>administrative</h:b> user while the authentication is in progress <h:b>at the local console</h:b>.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 75 </h:b>
@@ -4416,7 +4400,9 @@ If ( keylen = 256 )
             <title>
               The TSF shall allow the following actions prior to requiring the non-TOE entity to initiate the identification and authentication process:
               <h:ul>
-                <h:li>Display the warning banner in accordance with FTA_TAB.1;</h:li>
+                <h:li>
+                  Display the warning banner in accordance with FTA_TAB.1;
+                </h:li>
                 <h:li> <selectables><selectable id="nd_fia_uia_ext.1.1_1">no other actions</selectable><selectable id="nd_fia_uia_ext.1.1_2">automated generation of cryptographic keys</selectable><selectable id="nd_fia_uia_ext.1.1_3"><assignable>list of services, actions performed by the TSF in response to non-TOE requests</assignable></selectable></selectables>.</h:li>
               </h:ul>
             </title>
@@ -5294,7 +5280,7 @@ If ( keylen = 256 )
         <!-- FPT_TST_EXT.1 TSF Testing -->
         <f-component cc-id="fpt_tst_ext.1" id="fpt-tst-ext-1" name="TSF Testing">
           <f-element id="fpt-tst-ext-1-1">
-            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li>During initial start-up (on power on) to verify the integrity of the TOE firmware and software;</h:li> <h:li>Prior to providing any cryptographic service and</h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>                                   to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables></h:li></h:ul>               self-tests                                   <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
+            <title>The TSF shall run a suite of the following self-tests: <h:ul><h:li>During initial start-up (on power on) to verify the integrity of the TOE firmware and software;</h:li><h:li>Prior to providing any cryptographic service and <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables> to verify correct operation of cryptographic implementation necessary to fulfil the TSF;</h:li><h:li> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables>self-tests <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.</h:li></h:ul>to demonstrate the correct operation of the TSF.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 31 </h:b>

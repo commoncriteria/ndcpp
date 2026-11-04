@@ -117,6 +117,7 @@ output/ndcpp-release-linkable.html: ffdhe6144
 output/ndcpp-release-linkable.html: ffdhe8192
 output/ndcpp-release-linkable.html: fulfil
 output/ndcpp-release-linkable.html: hLen
+output/ndcpp-release-linkable.html: href
 output/ndcpp-release-linkable.html: iTC
 output/ndcpp-release-linkable.html: interVM
 output/ndcpp-release-linkable.html: intercomponent
@@ -505,7 +506,6 @@ output/ndcpp.html: data’
 output/ndcpp.html: decapsulation
 output/ndcpp.html: ek
 output/ndcpp.html: enablement
-output/ndcpp.html: enquiries
 output/ndcpp.html: entity’
 output/ndcpp.html: evaluator’s
 output/ndcpp.html: failover

@@ -1,0 +1,814 @@
+* Error: Illegal empty Guidance element at:
+        /PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[3]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Guidance[1]||
+* Error: Illegal empty Tests element at:
+        /PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[3]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]||
+* Error: Illegal empty TSS element at:
+        /PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[18]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/TSS[1]||
+* Error: Illegal empty Guidance element at:
+        /PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[18]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Guidance[1]||
+* Error: Illegal empty Tests element at:
+        /PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[18]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/testlist-intro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[3]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/TSS[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[2]|
+        |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/testlist-outro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[6]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[6]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[2]|
+        |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[6]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[4]|
+        |/testlist[1]|
+        |/testlist-outro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[6]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[5]|
+        |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[6]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[6]|
+        |/h:p[3]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[9]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[2]|
+        |/f-component[10]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[1]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[4]|The follo|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[4]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[1]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[2]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[2]|
+        |/testlist[1]|
+        |/testlist-intro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[7]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[8]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[8]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[1]|
+        |/testlist[1]|
+        |/testlist-intro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[8]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[1]|
+        |/testlist[1]|
+        |/test[2]|  |/h:p[4]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[8]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[2]|
+        |/testlist[1]|
+        |/test[2]|  |/h:p[4]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[11]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[4]|.        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[11]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[4]|.        |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[11]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[1]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[11]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[2]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[11]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[3]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[11]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[4]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[12]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[3]|.        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[12]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[3]|.        |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[12]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[1]|
+        |/col[4]|RFC 8017 |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[12]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[2]|
+        |/col[4]|RFC 8017 |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[12]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[3]|
+        |/col[4]| [ECDSA],|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[12]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/testlist-intro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[4]|.        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[4]|.        |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[1]|
+        |/col[4]|RFC 8017 |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[2]|
+        |/col[4]|RFC 8017 |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[3]|
+        |/col[4]| [ECDSA]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[4]|
+        |/col[3]|Private k|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[4]|
+        |/col[3]|Private k|/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[4]|
+        |/col[4]|RFC 8554 |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[5]|
+        |/col[3]|Private k|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[13]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[5]|
+        |/col[4]|RFC 8391 |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[14]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[4]|.        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[14]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/tabularize[1]|
+        |/reqtext[4]|.        |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[14]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[1]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[14]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[2]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[14]|
+        |/f-element[1]|
+        |/title[1]|
+        |/selectables[1]|
+        |/selectable[3]|
+        |/col[4]| [AES]|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[14]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[1]|
+        |/testlist[1]|
+        |/testlist-intro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[14]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/test[1]|
+        |/testlist[1]|
+        |/test[2]|  |/h:p[3]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[18]|
+        |/f-element[1]|
+        |/title[1]|The TSF s|/selectables[1]||/tabularize[1]||/reqtext[3]|         |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[18]|
+        |/f-element[1]|
+        |/title[1]|The TSF s|/selectables[1]||/tabularize[1]||/reqtext[3]|         |/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[4]|
+        |/f-component[18]|
+        |/f-element[1]|
+        |/aactivity[2]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[5]|
+        |/f-component[1]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[5]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/title[1]|The TSF s|/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[5]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/title[1]|The TSF s|/h:p[2]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[5]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[5]|
+        |/f-component[4]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[5]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[6]|
+        |/f-component[1]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[6]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[6]|
+        |/f-component[3]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[6]|
+        |/f-component[4]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[6]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[6]|
+        |/f-component[6]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[6]|
+        |/f-component[8]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[7]|
+        |/f-component[1]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[7]|
+        |/f-component[3]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[7]|
+        |/f-component[4]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[7]|
+        |/f-component[5]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[7]|
+        |/f-component[6]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[7]|
+        |/f-component[7]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[8]|
+        |/f-component[1]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[8]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[8]|
+        |/f-component[3]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[8]|
+        |/f-component[4]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[8]|
+        |/f-component[4]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/Tests[1]|
+        |/testlist[1]|
+        |/testlist-intro[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[9]|
+        |/f-component[1]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[9]|
+        |/f-component[2]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected an empty _p_ element./PP[1]|
+  |/sec:Security_Requirements[1]|
+    |/sec:SFRs[1]|
+      |/section[9]|
+        |/f-component[3]|
+        |/f-element[1]|
+        |/aactivity[1]|
+        |/h:p[1]||
+* Warning: Detected 2 tech-term sections in this PP. There should be exactly 1 "tech-term" section.
+      

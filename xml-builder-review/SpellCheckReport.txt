@@ -124,7 +124,6 @@ output/ndcpp-release-linkable.html: ek
 output/ndcpp-release-linkable.html: enablement
 output/ndcpp-release-linkable.html: enquiries
 output/ndcpp-release-linkable.html: failover
-output/ndcpp-release-linkable.html: feedbac
 output/ndcpp-release-linkable.html: ffdhe
 output/ndcpp-release-linkable.html: ffdhe3072
 output/ndcpp-release-linkable.html: ffdhe4096
@@ -328,7 +327,6 @@ output/ndcpp-release.html: entity’
 output/ndcpp-release.html: evaluator’s
 output/ndcpp-release.html: failover
 output/ndcpp-release.html: failure’
-output/ndcpp-release.html: feedbac
 output/ndcpp-release.html: feedback’
 output/ndcpp-release.html: ffdhe
 output/ndcpp-release.html: ffdhe3072
@@ -554,7 +552,6 @@ output/ndcpp.html: entity’
 output/ndcpp.html: evaluator’s
 output/ndcpp.html: failover
 output/ndcpp.html: failure’
-output/ndcpp.html: feedbac
 output/ndcpp.html: feedback’
 output/ndcpp.html: ffdhe
 output/ndcpp.html: ffdhe3072

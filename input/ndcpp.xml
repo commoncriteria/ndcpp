@@ -524,14 +524,10 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
               The TSF shall record within the audit data at least the following information:
               <h:ol>
                 <h:li>
-                  Date and time of the auditable event, type of event, subject identity
-                  <h:s>(if applicable)</h:s>, and the outcome (success or failure) of the event; and
+                  Date and time of the auditable event, type of event, subject identity <h:s>(if applicable)</h:s>, and the outcome (success or failure) of the event; and
                 </h:li>
                 <h:li>
-                  For each auditable event type, based on the auditable event definitions of the functional components included in the
-                  <h:b>c</h:b>
-                  PP, PP-Module, functional package or ST,
-                  <h:i>information specified in column three of Table 2.</h:i>
+                  For each auditable event type, based on the auditable event definitions of the functional components included in the <h:b>c</h:b>PP, PP-Module, functional package or ST, <h:i>information specified in column three of Table 2.</h:i>
                 </h:li>
               </h:ol>
             </title>
@@ -1201,7 +1197,7 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
                   <reqtext>.</reqtext>
-                  <reqtext>The following table provides the allowed choices for completion of the selection operations of FCS_CKM.1.1/AKG.</reqtext>
+                  <reqtext><h:p/>The following table provides the allowed choices for completion of the selection operations of FCS_CKM.1.1/AKG.</reqtext>
                 </tabularize>
                 <selectable id="fcs-ckm-1-1-akg-row-1">
                   <col>RSA</col>
@@ -1781,13 +1777,13 @@ modified, deleted or generated/imported) by the Security Administrator.</descrip
                   <col>AES-CCM</col>
                   <col>AES in CCM mode with unpredictable, non-repeating nonce, minimum size of 64 bits</col>
                   <col><selectables><selectable id="nd_fcs_cop.1.1_AEAD_1">128</selectable><selectable id="nd_fcs_cop.1.1_AEAD_2">256</selectable></selectables> bits</col>
-                  <col><selectables><selectable id="fcs_cop.1.1_AEAD_1">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_AEAD_2">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_AEAD_3">ISO/IEC 19772:2020 (Clause 7)</selectable><selectable id="fcs_cop.1.1_AEAD_4">NIST SP 800-38C</selectable></selectables> [CCM]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_AEAD_1">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_AEAD_2">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_AEAD_3">ISO/IEC 19772:2020 (Clause 7)</selectable><selectable id="fcs_cop.1.1_AEAD_4">NIST SP 800-38C</selectable></selectables> [CCM]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-aead-aes-gcm">
                   <col>AES-GCM</col>
                   <col>AES in GCM mode with non-repeating IVs using <selectables><selectable id="fcs_cop.1.1_AEAD_5">deterministic</selectable><selectable id="fcs_cop.1.1_AEAD_6">RBG-based</selectable></selectables>,IV construction; the tag must be of length <selectables><selectable id="fcs_cop.1.1_AEAD_7">96</selectable><selectable id="fcs_cop.1.1_AEAD_8">104</selectable><selectable id="fcs_cop.1.1_AEAD_9">112</selectable><selectable id="fcs_cop.1.1_AEAD_10">120</selectable><selectable id="fcs_cop.1.1_AEAD_11">128</selectable></selectables> bits.</col>
                   <col><selectables><selectable id="nd_fcs_cop.1.1_AEAD_3">128</selectable><selectable id="nd_fcs_cop.1.1_AEAD_4">256</selectable></selectables> bits</col>
-                  <col><selectables><selectable id="fcs_cop.1.1_AEAD_12">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_AEAD_13">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_AEAD_14">ISO/IEC 19772:2020 (Clause 10)</selectable><selectable id="fcs_cop.1.1_AEAD_15">NIST SP 800-38D</selectable></selectables> [GCM]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_AEAD_12">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_AEAD_13">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_AEAD_14">ISO/IEC 19772:2020 (Clause 10)</selectable><selectable id="fcs_cop.1.1_AEAD_15">NIST SP 800-38D</selectable></selectables> [GCM]</col>
                 </selectable>
               </selectables>
             </title>
@@ -2383,31 +2379,31 @@ For 100 iterations
                   <selectcol>Cryptographic Key Sizes</selectcol>
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
-                  <reqtext>.                      The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/KeyWrap.                  </reqtext>
+                  <reqtext>.                    <h:p/> <h:p/> The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/KeyWrap.                  </reqtext>
                 </tabularize>
                 <selectable id="sel-fcs-cop-kw-aes-kw">
                   <col>AES-KW</col>
                   <col>AES in KW mode</col>
                   <col>256 bits</col>
-                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_1">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_2">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_KeyWrap_3">ISO/IEC 19772:2020 (clause 6)</selectable><selectable id="fcs_cop.1.1_KeyWrap_4">NIST SP 800-38F (Section 6.2)</selectable></selectables> [KW mode]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_1">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_2">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_KeyWrap_3">ISO/IEC 19772:2020 (clause 6)</selectable><selectable id="fcs_cop.1.1_KeyWrap_4">NIST SP 800-38F (Section 6.2)</selectable></selectables> [KW mode]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-kw-aes-kwp">
                   <col>AES-KWP</col>
                   <col>AES in KWP mode</col>
                   <col>256 bits</col>
-                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_5">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_6">FIPS PUB 197</selectable></selectables> [AES] NIST SP 800-38F (Section 6.3) [KWP mode]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_5">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_6">FIPS PUB 197</selectable></selectables> [AES]<h:p/>NIST SP 800-38F (Section 6.3) [KWP mode]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-kw-aes-ccm">
                   <col>AES-CCM</col>
                   <col>AES in CCM mode with unpredictable, non-repeating nonce, minimum size of 64 bits</col>
                   <col>256 bits</col>
-                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_7">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_8">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_KeyWrap_9">ISO/IEC 19772:2020 (Clause 7)</selectable><selectable id="fcs_cop.1.1_KeyWrap_10">NIST SP 800-38C</selectable></selectables> [CCM]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_7">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_8">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_KeyWrap_9">ISO/IEC 19772:2020 (Clause 7)</selectable><selectable id="fcs_cop.1.1_KeyWrap_10">NIST SP 800-38C</selectable></selectables> [CCM]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-kw-aes-gcm">
                   <col>AES-GCM</col>
                   <col>AES in GCM mode with non-repeating IVs using <selectables><selectable id="fcs_cop.1.1_KeyWrap_11">deterministic</selectable><selectable id="fcs_cop.1.1_KeyWrap_12">RBG-based</selectable></selectables>,IV construction; the tag must be of length <selectables><selectable id="fcs_cop.1.1_KeyWrap_13">96</selectable><selectable id="fcs_cop.1.1_KeyWrap_14">104</selectable><selectable id="fcs_cop.1.1_KeyWrap_15">112</selectable><selectable id="fcs_cop.1.1_KeyWrap_16">120</selectable><selectable id="fcs_cop.1.1_KeyWrap_17">128</selectable></selectables> bits.</col>
                   <col>256 bits</col>
-                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_18">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_19">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_KeyWrap_20">ISO/IEC 19772:2020 (Clause 10)</selectable><selectable id="fcs_cop.1.1_KeyWrap_21">NIST SP 800-38D</selectable></selectables> [GCM]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_KeyWrap_18">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_KeyWrap_19">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_KeyWrap_20">ISO/IEC 19772:2020 (Clause 10)</selectable><selectable id="fcs_cop.1.1_KeyWrap_21">NIST SP 800-38D</selectable></selectables> [GCM]</col>
                 </selectable>
               </selectables>
             </title>
@@ -2495,25 +2491,25 @@ For 100 iterations
                   <selectcol>Cryptographic Key Sizes</selectcol>
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
-                  <reqtext>.                      The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/SigGen.                  </reqtext>
+                  <reqtext>.                    <h:p/> <h:p/> The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/SigGen.                  </reqtext>
                 </tabularize>
                 <selectable id="sel-fcs-cop-siggen-rsa-pkcs">
                   <col>RSA-PKCS</col>
                   <col>RSASSA-PKCS1-v1_5</col>
                   <col>Modulus of size <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_1">2048</selectable><selectable id="fcs_cop.1.1_SigGen_1">3072</selectable><selectable id="fcs_cop.1.1_SigGen_2">4096</selectable><selectable id="fcs_cop.1.1_SigGen_3">6144</selectable><selectable id="fcs_cop.1.1_SigGen_4">8192</selectable></selectables> bits and hash <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_2">SHA-256</selectable><selectable id="fcs_cop.1.1_SigGen_5">SHA-384</selectable><selectable id="fcs_cop.1.1_SigGen_6">SHA-512</selectable></selectables></col>
-                  <col>RFC 8017 (Section 8.2) [PKCS #1 v2.2], FIPS PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</col>
+                  <col>RFC 8017 (Section 8.2) [PKCS #1 v2.2],<h:p/>FIPS PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-siggen-rsa-pss">
                   <col>RSA-PSS</col>
                   <col>RSASSA-PSS</col>
                   <col>Modulus of size <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_3">2048</selectable><selectable id="fcs_cop.1.1_SigGen_7">3072</selectable><selectable id="fcs_cop.1.1_SigGen_8">4096</selectable><selectable id="fcs_cop.1.1_SigGen_9">6144</selectable><selectable id="fcs_cop.1.1_SigGen_10">8192</selectable></selectables> bits and hash <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_4">SHA-256</selectable><selectable id="fcs_cop.1.1_SigGen_11">SHA-384</selectable><selectable id="fcs_cop.1.1_SigGen_12">SHA-512</selectable></selectables>,Salt Length (<h:i>sLen</h:i>) such that <assignable>0 ≤ sLen ≤ hLen (Hash Output Length)</assignable> and Mask Generation Function = MGF1</col>
-                  <col>RFC 8017 (Section 8.1) [PKCS#1 v2.2], FIPS PUB 186-5 (Section 5.4) [RSASSA-PSS]</col>
+                  <col>RFC 8017 (Section 8.1) [PKCS#1 v2.2],<h:p/>FIPS PUB 186-5 (Section 5.4) [RSASSA-PSS]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-siggen-ecdsa">
                   <col>ECDSA</col>
                   <col>ECDSA</col>
                   <col>Elliptic Curve <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_5">P-256</selectable><selectable id="fcs_cop.1.1_SigGen_13">P-384</selectable><selectable id="fcs_cop.1.1_SigGen_14">P-521</selectable></selectables>,per-message secret number generation <selectables><selectable id="fcs_cop.1.1_SigGen_15">extra random bits</selectable><selectable id="fcs_cop.1.1_SigGen_16">rejection sampling</selectable><selectable id="fcs_cop.1.1_SigGen_17">deterministic</selectable></selectables> and hash function using <selectables><selectable id="nd_fcs_cop.1.1_SIGGEN_6">SHA-256</selectable><selectable id="fcs_cop.1.1_SigGen_18">SHA-384</selectable><selectable id="fcs_cop.1.1_SigGen_19">SHA-512</selectable></selectables></col>
-                  <col><selectables><selectable id="fcs_cop.1.1_SigGen_20">ISO/IEC 14888-3:2018 (Subclause 6.6)</selectable><selectable id="fcs_cop.1.1_SigGen_21">FIPS PUB 186-5 (Sections 6.3.1, 6.4.1]</selectable></selectables> [ECDSA], NIST SP-800 186 (Section 4) [NIST Curves]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_SigGen_20">ISO/IEC 14888-3:2018 (Subclause 6.6)</selectable><selectable id="fcs_cop.1.1_SigGen_21">FIPS PUB 186-5 (Sections 6.3.1, 6.4.1]</selectable></selectables> [ECDSA],<h:p/>NIST SP-800 186 (Section 4) [NIST Curves]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-siggen-mldsa">
                   <col>ML-DSA</col>
@@ -2808,37 +2804,37 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                   <selectcol>Cryptographic Key Sizes</selectcol>
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
-                  <reqtext>.                      The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/SigVer.                  </reqtext>
+                  <reqtext>.                    <h:p/> <h:p/> The following table provides the allowable choices for completion of the selection operations of FCS_COP.1/SigVer.                  </reqtext>
                 </tabularize>
                 <selectable id="sel-fcs-cop-sigver-rsa-pkcs">
                   <col>RSA-PKCS</col>
                   <col>RSASSA-PKCS1-v1_5</col>
                   <col>Modulus of size <selectables><selectable id="nd_fcs_cop.1.1_SIGVER_1">2048</selectable><selectable id="fcs_cop.1.1_SigVer_1">3072</selectable><selectable id="fcs_cop.1.1_SigVer_2">4096</selectable><selectable id="fcs_cop.1.1_SigVer_3">6144</selectable><selectable id="fcs_cop.1.1_SigVer_4">8192</selectable></selectables> bits and hash <selectables><selectable id="nd_fcs_cop.1.1_SIGVER_2">SHA-256</selectable><selectable id="fcs_cop.1.1_SigVer_5">SHA-384</selectable><selectable id="fcs_cop.1.1_SigVer_6">SHA-512</selectable></selectables></col>
-                  <col>RFC 8017 (Section 8.2) [PKCS #1 v2.2], FIPS PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</col>
+                  <col>RFC 8017 (Section 8.2) [PKCS #1 v2.2],<h:p/>FIPS PUB 186-5 (Section 5.4) [RSASSA-PKCS1-v1_5]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-sigver-rsa-pss">
                   <col>RSA-PSS</col>
                   <col>RSASSA-PSS</col>
                   <col>Modulus of size <selectables><selectable id="nd_fcs_cop.1.1_SIGVER_3">2048</selectable><selectable id="fcs_cop.1.1_SigVer_7">3072</selectable><selectable id="fcs_cop.1.1_SigVer_8">4096</selectable><selectable id="fcs_cop.1.1_SigVer_9">6144</selectable><selectable id="fcs_cop.1.1_SigVer_10">8192</selectable></selectables> bits and hash <selectables><selectable id="nd_fcs_cop.1.1_SIGVER_4">SHA-256</selectable><selectable id="fcs_cop.1.1_SigVer_11">SHA-384</selectable><selectable id="fcs_cop.1.1_SigVer_12">SHA-512</selectable></selectables></col>
-                  <col>RFC 8017 (Section 8.1) [PKCS#1 v2.2], FIPS PUB 186-5 (Section 5.4) [RSASSA-PSS]</col>
+                  <col>RFC 8017 (Section 8.1) [PKCS#1 v2.2],<h:p/>FIPS PUB 186-5 (Section 5.4) [RSASSA-PSS]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-sigver-ecdsa">
                   <col>ECDSA</col>
                   <col>ECDSA</col>
                   <col>Elliptic Curve <selectables><selectable id="nd_fcs_cop.1.1_SIGVER_5">P-256</selectable><selectable id="fcs_cop.1.1_SigVer_13">P-384</selectable><selectable id="fcs_cop.1.1_SigVer_14">P-521</selectable></selectables> using hash <selectables><selectable id="nd_fcs_cop.1.1_SIGVER_6">SHA-256</selectable><selectable id="fcs_cop.1.1_SigVer_15">SHA-384</selectable><selectable id="fcs_cop.1.1_SigVer_16">SHA-512</selectable></selectables></col>
-                  <col><selectables><selectable id="fcs_cop.1.1_SigVer_17">ISO/IEC 14888-3:2018 (Subclause 6.6)</selectable><selectable id="fcs_cop.1.1_SigVer_18">FIPS PUB 186-5 (Section 6.4.2)</selectable></selectables> [ECDSA] NIST SP-800 186 (Section 4) [NIST Curves]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_SigVer_17">ISO/IEC 14888-3:2018 (Subclause 6.6)</selectable><selectable id="fcs_cop.1.1_SigVer_18">FIPS PUB 186-5 (Section 6.4.2)</selectable></selectables> [ECDSA]<h:p/>NIST SP-800 186 (Section 4) [NIST Curves]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-sigver-lms">
                   <col>LMS</col>
                   <col>LMS</col>
-                  <col>Private key size = <selectables><selectable id="fcs_cop.1.1_SigVer_19">192 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_20">SHA-256/192</selectable><selectable id="fcs_cop.1.1_SigVer_21">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs_cop.1.1_SigVer_22">256 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_23">SHA-256</selectable><selectable id="fcs_cop.1.1_SigVer_24">SHAKE256</selectable></selectables> </selectable></selectables> Winternitz parameter = <selectables><selectable id="fcs_cop.1.1_SigVer_25">1</selectable><selectable id="fcs_cop.1.1_SigVer_26">2</selectable><selectable id="fcs_cop.1.1_SigVer_27">4</selectable><selectable id="fcs_cop.1.1_SigVer_28">8</selectable></selectables> Tree height = <selectables><selectable id="fcs_cop.1.1_SigVer_29">5</selectable><selectable id="fcs_cop.1.1_SigVer_30">10</selectable><selectable id="fcs_cop.1.1_SigVer_31">15</selectable><selectable id="fcs_cop.1.1_SigVer_32">20</selectable><selectable id="fcs_cop.1.1_SigVer_33">25</selectable></selectables></col>
-                  <col>RFC 8554 [LMS], NIST SP 800-208 [parameters]</col>
+                  <col>Private key size = <selectables><selectable id="fcs_cop.1.1_SigVer_19">192 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_20">SHA-256/192</selectable><selectable id="fcs_cop.1.1_SigVer_21">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs_cop.1.1_SigVer_22">256 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_23">SHA-256</selectable><selectable id="fcs_cop.1.1_SigVer_24">SHAKE256</selectable></selectables> </selectable></selectables> <h:p/>Winternitz parameter = <selectables><selectable id="fcs_cop.1.1_SigVer_25">1</selectable><selectable id="fcs_cop.1.1_SigVer_26">2</selectable><selectable id="fcs_cop.1.1_SigVer_27">4</selectable><selectable id="fcs_cop.1.1_SigVer_28">8</selectable></selectables> <h:p/>Tree height = <selectables><selectable id="fcs_cop.1.1_SigVer_29">5</selectable><selectable id="fcs_cop.1.1_SigVer_30">10</selectable><selectable id="fcs_cop.1.1_SigVer_31">15</selectable><selectable id="fcs_cop.1.1_SigVer_32">20</selectable><selectable id="fcs_cop.1.1_SigVer_33">25</selectable></selectables></col>
+                  <col>RFC 8554 [LMS],<h:p/>NIST SP 800-208 [parameters]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-sigver-xmss">
                   <col>XMSS</col>
                   <col>XMSS</col>
-                  <col>Private key size = <selectables><selectable id="fcs_cop.1.1_SigVer_34">192 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_35">SHA-256/192</selectable><selectable id="fcs_cop.1.1_SigVer_36">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs_cop.1.1_SigVer_37">256 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_38">SHA-256</selectable><selectable id="fcs_cop.1.1_SigVer_39">SHAKE256</selectable></selectables> </selectable></selectables> Tree height = <selectables><selectable id="fcs_cop.1.1_SigVer_40">10</selectable><selectable id="fcs_cop.1.1_SigVer_41">16</selectable><selectable id="fcs_cop.1.1_SigVer_42">20</selectable></selectables></col>
-                  <col>RFC 8391 [XMSS], NIST SP 800-208 [parameters]</col>
+                  <col>Private key size = <selectables><selectable id="fcs_cop.1.1_SigVer_34">192 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_35">SHA-256/192</selectable><selectable id="fcs_cop.1.1_SigVer_36">SHAKE256/192</selectable></selectables> </selectable><selectable id="fcs_cop.1.1_SigVer_37">256 bits with <selectables><selectable id="fcs_cop.1.1_SigVer_38">SHA-256</selectable><selectable id="fcs_cop.1.1_SigVer_39">SHAKE256</selectable></selectables> </selectable></selectables> <h:p/>Tree height = <selectables><selectable id="fcs_cop.1.1_SigVer_40">10</selectable><selectable id="fcs_cop.1.1_SigVer_41">16</selectable><selectable id="fcs_cop.1.1_SigVer_42">20</selectable></selectables></col>
+                  <col>RFC 8391 [XMSS],<h:p/>NIST SP 800-208 [parameters]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-sigver-mldsa">
                   <col>ML-DSA</col>
@@ -3147,7 +3143,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                   <selectcol>Cryptographic Key Sizes</selectcol>
                   <reqtext>that meet the following:</reqtext>
                   <selectcol>List of Standards</selectcol>
-                  <reqtext>.                      The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/SKC.                  </reqtext>
+                  <reqtext>.                    <h:p/> <h:p/> The following table provides the allowed choices for completion of the selection operations of FCS_COP.1/SKC.                  </reqtext>
                 </tabularize>
                 <selectable id="sel-fcs-cop-skc-aes-cbc">
                   <col>AES-CBC</col>
@@ -3158,7 +3154,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                       <selectable id="nd_fcs_cop.1.1_SKC_2">256</selectable>
                     </selectables>
                   </col>
-                  <col><selectables><selectable id="fcs_cop.1.1_SKC_1">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_SKC_2">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_SKC_3">ISO/IEC 10116:2017 (Clause 7)</selectable><selectable id="fcs_cop.1.1_SKC_4">NIST SP 800-38A</selectable></selectables> [CBC]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_SKC_1">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_SKC_2">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_SKC_3">ISO/IEC 10116:2017 (Clause 7)</selectable><selectable id="fcs_cop.1.1_SKC_4">NIST SP 800-38A</selectable></selectables> [CBC]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-skc-aes-ctr">
                   <col>AES-CTR</col>
@@ -3169,7 +3165,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                       <selectable id="nd_fcs_cop.1.1_SKC_4">256</selectable>
                     </selectables>
                   </col>
-                  <col><selectables><selectable id="fcs_cop.1.1_SKC_9">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_SKC_10">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_SKC_11">: ISO/IEC 10116:2017 (Clause 10)</selectable><selectable id="fcs_cop.1.1_SKC_12">NIST SP 800-38A</selectable></selectables> [CTR]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_SKC_9">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_SKC_10">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_SKC_11">: ISO/IEC 10116:2017 (Clause 10)</selectable><selectable id="fcs_cop.1.1_SKC_12">NIST SP 800-38A</selectable></selectables> [CTR]</col>
                 </selectable>
                 <selectable id="sel-fcs-cop-skc-aes-xts">
                   <col>XTS-AES</col>
@@ -3180,7 +3176,7 @@ Hash of sig: 46C669D2FEB643A38E54FF87B790CC33F44043A1B6B31DB9474D301328CA2A7F</h
                       <selectable id="nd_fcs_cop.1.1_SKC_6">512</selectable>
                     </selectables>
                   </col>
-                  <col><selectables><selectable id="fcs_cop.1.1_SKC_5">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_SKC_6">FIPS PUB 197</selectable></selectables> [AES] <selectables><selectable id="fcs_cop.1.1_SKC_7">IEEE Std. 1619-2018</selectable><selectable id="fcs_cop.1.1_SKC_8">NIST SP 800-38E</selectable></selectables> [XTS]</col>
+                  <col><selectables><selectable id="fcs_cop.1.1_SKC_5">ISO/IEC 18033-3:2010 (Subclause 5.2)</selectable><selectable id="fcs_cop.1.1_SKC_6">FIPS PUB 197</selectable></selectables> [AES]<h:p/> <selectables><selectable id="fcs_cop.1.1_SKC_7">IEEE Std. 1619-2018</selectable><selectable id="fcs_cop.1.1_SKC_8">NIST SP 800-38E</selectable></selectables> [XTS]</col>
                 </selectable>
               </selectables>
             </title>
@@ -4045,7 +4041,7 @@ If ( keylen = 256 )
         <!-- FCS_RBG.1 Random Bit Generation -->
         <f-component cc-id="fcs_rbg.1" id="fcs-rbg-1" name="Random Bit Generation">
           <f-element id="fcs-rbg-1-1">
-            <title>The TSF shall perform deterministic random bit generation services using<selectables><tabularize id="fcs-rbg-1-sels" title="Allowable choices for FCS_RBG.1.1"><textcol>Identifier</textcol><reqtext></reqtext><selectcol>DRBG Algorithm</selectcol><reqtext> in accordance with </reqtext><selectcol>List of Standards</selectcol><reqtext>                    after initialization.                      The following table provides the allowable choices for completion of the selection operations of FCS_RBG.1.1.                 </reqtext></tabularize><selectable id="sel-fcs-rbg-hash-drbg"><col>HASH_DRBG</col><col>Hash_DRBG with <selectables><selectable id="nd_fcs_rbg.1.1_1">SHA-256</selectable><selectable id="fcs_rbg.1.1_1">SHA-384</selectable><selectable id="fcs_rbg.1.1_2">SHA-512</selectable><selectable id="nd_fcs_rbg.1.1_2">SHA3-256</selectable><selectable id="nd_fcs_rbg.1.1_3">SHA3-384</selectable><selectable id="nd_fcs_rbg.1.1_4">SHA3-512</selectable></selectables> </col><col> <selectables><selectable id="fcs_rbg.1.1_3">ISO/IEC 18031: 2025 (Section C.2.2)</selectable><selectable id="fcs_rbg.1.1_4">NIST SP 800-90A Revision 1 Section 10.1.1</selectable></selectables> </col></selectable><selectable id="sel-fcs-rbg-hmac-drbg"><col>HMAC_DRBG</col><col>HMAC_DRBG with <selectables><selectable id="nd_fcs_rbg.1.1_5">SHA-256</selectable><selectable id="fcs_rbg.1.1_5">SHA-384</selectable><selectable id="fcs_rbg.1.1_6">SHA-512</selectable><selectable id="nd_fcs_rbg.1.1_6">SHA3-256</selectable><selectable id="nd_fcs_rbg.1.1_7">SHA3-384</selectable><selectable id="nd_fcs_rbg.1.1_8">SHA3-512</selectable></selectables> </col><col> <selectables><selectable id="fcs_rbg.1.1_7">ISO/IEC 18031: 2025 (Section C.2.3)</selectable><selectable id="fcs_rbg.1.1_8">NIST SP 800-90A Revision 1 Section 10.1.2</selectable></selectables> </col></selectable><selectable id="sel-fcs-rbg-ctr-drbg"><col>CTR_DRBG</col><col>CTR_DRBG with <selectables><selectable id="nd_fcs_rbg.1.1_9">AES-128</selectable><selectable id="nd_fcs_rbg.1.1_10">AES-192</selectable><selectable id="nd_fcs_rbg.1.1_11">AES-256</selectable></selectables> </col><col> <selectables><selectable id="fcs_rbg.1.1_9">ISO/IEC 18031: 2025 (Section C.3.2)</selectable><selectable id="fcs_rbg.1.1_10">NIST SP800-90A Revision 1 Section 10.2.1</selectable></selectables> </col></selectable></selectables></title>
+            <title>The TSF shall perform deterministic random bit generation services using<selectables><tabularize id="fcs-rbg-1-sels" title="Allowable choices for FCS_RBG.1.1"><textcol>Identifier</textcol><reqtext></reqtext><selectcol>DRBG Algorithm</selectcol><reqtext> in accordance with </reqtext><selectcol>List of Standards</selectcol><reqtext>                    after initialization.                    <h:p/> <h:p/> The following table provides the allowable choices for completion of the selection operations of FCS_RBG.1.1.                 </reqtext></tabularize><selectable id="sel-fcs-rbg-hash-drbg"><col>HASH_DRBG</col><col>Hash_DRBG with <selectables><selectable id="nd_fcs_rbg.1.1_1">SHA-256</selectable><selectable id="fcs_rbg.1.1_1">SHA-384</selectable><selectable id="fcs_rbg.1.1_2">SHA-512</selectable><selectable id="nd_fcs_rbg.1.1_2">SHA3-256</selectable><selectable id="nd_fcs_rbg.1.1_3">SHA3-384</selectable><selectable id="nd_fcs_rbg.1.1_4">SHA3-512</selectable></selectables> </col><col> <selectables><selectable id="fcs_rbg.1.1_3">ISO/IEC 18031: 2025 (Section C.2.2)</selectable><selectable id="fcs_rbg.1.1_4">NIST SP 800-90A Revision 1 Section 10.1.1</selectable></selectables> </col></selectable><selectable id="sel-fcs-rbg-hmac-drbg"><col>HMAC_DRBG</col><col>HMAC_DRBG with <selectables><selectable id="nd_fcs_rbg.1.1_5">SHA-256</selectable><selectable id="fcs_rbg.1.1_5">SHA-384</selectable><selectable id="fcs_rbg.1.1_6">SHA-512</selectable><selectable id="nd_fcs_rbg.1.1_6">SHA3-256</selectable><selectable id="nd_fcs_rbg.1.1_7">SHA3-384</selectable><selectable id="nd_fcs_rbg.1.1_8">SHA3-512</selectable></selectables> </col><col> <selectables><selectable id="fcs_rbg.1.1_7">ISO/IEC 18031: 2025 (Section C.2.3)</selectable><selectable id="fcs_rbg.1.1_8">NIST SP 800-90A Revision 1 Section 10.1.2</selectable></selectables> </col></selectable><selectable id="sel-fcs-rbg-ctr-drbg"><col>CTR_DRBG</col><col>CTR_DRBG with <selectables><selectable id="nd_fcs_rbg.1.1_9">AES-128</selectable><selectable id="nd_fcs_rbg.1.1_10">AES-192</selectable><selectable id="nd_fcs_rbg.1.1_11">AES-256</selectable></selectables> </col><col> <selectables><selectable id="fcs_rbg.1.1_9">ISO/IEC 18031: 2025 (Section C.3.2)</selectable><selectable id="fcs_rbg.1.1_10">NIST SP800-90A Revision 1 Section 10.2.1</selectable></selectables> </col></selectable></selectables></title>
             <aactivity level="component">
               <h:p style="text-align: left;">164. Documentation shall be produced—and the evaluator shall perform the activities—in accordance with Annex D of [NDcPP].</h:p>
               <TSS/>
@@ -4275,7 +4271,7 @@ If ( keylen = 256 )
         <f-component cc-id="fia_pmg_ext.1" id="fia-pmg-ext-1" name="Password Management" status="feat-based">
           <depends on="nd-feature-3"/>
           <f-element id="fia-pmg-ext-1-1">
-            <title>The TSF shall provide the following password management capabilities for administrative passwords: a.  Passwords shall be able to be composed of any combination of upper and lower case letters, numbers and the following special characters: <selectables><selectable id="nd_fia_pmg_ext.1.1_1">"!"</selectable><selectable id="nd_fia_pmg_ext.1.1_2">"@"</selectable><selectable id="nd_fia_pmg_ext.1.1_3">"#"</selectable><selectable id="nd_fia_pmg_ext.1.1_4">"$"</selectable><selectable id="nd_fia_pmg_ext.1.1_5">"%"</selectable><selectable id="nd_fia_pmg_ext.1.1_6">"^"</selectable><selectable id="nd_fia_pmg_ext.1.1_7">"&amp;"</selectable><selectable id="nd_fia_pmg_ext.1.1_8">"*"</selectable><selectable id="nd_fia_pmg_ext.1.1_9">"("</selectable><selectable id="nd_fia_pmg_ext.1.1_10">")"</selectable><selectable id="nd_fia_pmg_ext.1.1_11"><assignable>other characters</assignable></selectable></selectables>  b.  Minimum password length shall be <h:i>configurable to between</h:i> <assignable>minimum number of characters supported by the TOE</assignable> and <assignable>number of characters greater than or equal to 15</assignable> <h:i>characters.</h:i></title>
+            <title>The TSF shall provide the following password management capabilities for administrative passwords:<h:p/>a.  Passwords shall be able to be composed of any combination of upper and lower case letters, numbers and the following special characters:  <selectables><selectable id="nd_fia_pmg_ext.1.1_1">"!"</selectable><selectable id="nd_fia_pmg_ext.1.1_2">"@"</selectable><selectable id="nd_fia_pmg_ext.1.1_3">"#"</selectable><selectable id="nd_fia_pmg_ext.1.1_4">"$"</selectable><selectable id="nd_fia_pmg_ext.1.1_5">"%"</selectable><selectable id="nd_fia_pmg_ext.1.1_6">"^"</selectable><selectable id="nd_fia_pmg_ext.1.1_7">"&amp;"</selectable><selectable id="nd_fia_pmg_ext.1.1_8">"*"</selectable><selectable id="nd_fia_pmg_ext.1.1_9">"("</selectable><selectable id="nd_fia_pmg_ext.1.1_10">")"</selectable><selectable id="nd_fia_pmg_ext.1.1_11"><assignable>other characters</assignable></selectable></selectables> <h:p/>b.  Minimum password length shall be <h:i>configurable to between</h:i> <assignable>minimum number of characters supported by the TOE</assignable> and <assignable>number of characters greater than or equal to 15</assignable> <h:i>characters.</h:i></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 76 </h:b>
@@ -4408,7 +4404,9 @@ If ( keylen = 256 )
             <title>
               The TSF shall allow the following actions prior to requiring the non-TOE entity to initiate the identification and authentication process:
               <h:ul>
-                <h:li>Display the warning banner in accordance with FTA_TAB.1;</h:li>
+                <h:li>
+                  Display the warning banner in accordance with FTA_TAB.1;
+                </h:li>
                 <h:li> <selectables><selectable id="nd_fia_uia_ext.1.1_1">no other actions</selectable><selectable id="nd_fia_uia_ext.1.1_2">automated generation of cryptographic keys</selectable><selectable id="nd_fia_uia_ext.1.1_3"><assignable>list of services, actions performed by the TSF in response to non-TOE requests</assignable></selectable></selectables>.</h:li>
               </h:ul>
             </title>
@@ -4822,7 +4820,7 @@ If ( keylen = 256 )
         <!-- FMT_SMF.1 Specification of Management Functions -->
         <f-component cc-id="fmt_smf.1" id="fmt-smf-1" name="Specification of Management Functions">
           <f-element id="fmt-smf-1-1">
-            <title>The TSF shall be capable of performing the following management functions:<h:ul><h:li>Ability to administer the TOE remotely; </h:li> <h:li>Ability to configure the access banner; </h:li> <h:li>Ability to configure the remote session inactivity time before session termination; </h:li> <h:li>Ability to update the TOE, and to verify the updates using <h:u>digital signature</h:u> capability prior to installing those updates;</h:li></h:ul> <selectables linebreak="yes"><selectable id="nd_fmt_smf.1.1_1">Ability to start and stop services</selectable><selectable id="nd_fmt_smf.1.1_2">Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size)</selectable><selectable id="nd_fmt_smf.1.1_3">Ability to modify the behaviour of the transmission of audit data to an external IT entity</selectable><selectable id="nd_fmt_smf.1.1_4">Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1</selectable><selectable id="nd_fmt_smf.1.1_5">Ability to manage the cryptographic keys</selectable><selectable id="nd_fmt_smf.1.1_6">Ability to configure the cryptographic functionality</selectable><selectable id="nd_fmt_smf.1.1_7">Ability to configure thresholds for SSH rekeying</selectable><selectable id="nd_fmt_smf.1.1_8">Ability to configure the lifetime for IPsec SAs</selectable><selectable id="nd_fmt_smf.1.1_9">Ability to configure the list of supported (D)TLS ciphers</selectable><selectable id="nd_fmt_smf.1.1_10">Ability to configure the interaction between TOE components</selectable><selectable id="nd_fmt_smf.1.1_11">Ability to enable or disable automatic checking for updates or automatic updates</selectable><selectable id="nd_fmt_smf.1.1_12">Ability to re-enable an Administrator account</selectable><selectable id="nd_fmt_smf.1.1_13">Ability to set the time which is used for time-stamps</selectable><selectable id="nd_fmt_smf.1.1_14">Ability to configure NTP</selectable><selectable id="nd_fmt_smf.1.1_15">Ability to configure the reference identifier for the peer</selectable><selectable id="nd_fmt_smf.1.1_16">Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors</selectable><selectable id="nd_fmt_smf.1.1_17">Ability to generate Certificate Signing Request (CSR) and process CA certificate response</selectable><selectable id="nd_fmt_smf.1.1_18">Ability to administer the TOE locally</selectable><selectable id="nd_fmt_smf.1.1_19">Ability to configure the local session inactivity time before session termination or locking</selectable><selectable id="nd_fmt_smf.1.1_20">Ability to configure the authentication failure parameters for FIA_AFL.1</selectable><selectable id="nd_fmt_smf.1.1_21">Ability to manage the trusted public keys database</selectable><selectable id="nd_fmt_smf.1.1_22">Ability to manage the public key or certificate used to validate the digital update</selectable><selectable id="nd_fmt_smf.1.1_23">No other capabilities</selectable></selectables></title>
+            <title>The TSF shall be capable of performing the following management functions:<h:ul><h:li>Ability to administer the TOE remotely;</h:li> <h:li>Ability to configure the access banner;</h:li> <h:li>Ability to configure the remote session inactivity time before session termination;</h:li> <h:li>Ability to update the TOE, and to verify the updates using <h:u>digital signature</h:u> capability prior to installing those updates;</h:li></h:ul> <selectables linebreak="yes"><selectable id="nd_fmt_smf.1.1_1">Ability to start and stop services</selectable><selectable id="nd_fmt_smf.1.1_2">Ability to configure local audit behaviour (e.g. changes to storage locations for audit; changes to behaviour when local audit storage space is full; changes to local audit storage size)</selectable><selectable id="nd_fmt_smf.1.1_3">Ability to modify the behaviour of the transmission of audit data to an external IT entity</selectable><selectable id="nd_fmt_smf.1.1_4">Ability to configure the list of TOE-provided services available before an entity is identified and authenticated, as specified in FIA_UIA_EXT.1</selectable><selectable id="nd_fmt_smf.1.1_5">Ability to manage the cryptographic keys</selectable><selectable id="nd_fmt_smf.1.1_6">Ability to configure the cryptographic functionality</selectable><selectable id="nd_fmt_smf.1.1_7">Ability to configure thresholds for SSH rekeying</selectable><selectable id="nd_fmt_smf.1.1_8">Ability to configure the lifetime for IPsec SAs</selectable><selectable id="nd_fmt_smf.1.1_9">Ability to configure the list of supported (D)TLS ciphers</selectable><selectable id="nd_fmt_smf.1.1_10">Ability to configure the interaction between TOE components</selectable><selectable id="nd_fmt_smf.1.1_11">Ability to enable or disable automatic checking for updates or automatic updates</selectable><selectable id="nd_fmt_smf.1.1_12">Ability to re-enable an Administrator account</selectable><selectable id="nd_fmt_smf.1.1_13">Ability to set the time which is used for time-stamps</selectable><selectable id="nd_fmt_smf.1.1_14">Ability to configure NTP</selectable><selectable id="nd_fmt_smf.1.1_15">Ability to configure the reference identifier for the peer</selectable><selectable id="nd_fmt_smf.1.1_16">Ability to manage the TOE’s trust store and designate X509.v3 certificates as trust anchors</selectable><selectable id="nd_fmt_smf.1.1_17">Ability to generate Certificate Signing Request (CSR) and process CA certificate response</selectable><selectable id="nd_fmt_smf.1.1_18">Ability to administer the TOE locally</selectable><selectable id="nd_fmt_smf.1.1_19">Ability to configure the local session inactivity time before session termination or locking</selectable><selectable id="nd_fmt_smf.1.1_20">Ability to configure the authentication failure parameters for FIA_AFL.1</selectable><selectable id="nd_fmt_smf.1.1_21">Ability to manage the trusted public keys database</selectable><selectable id="nd_fmt_smf.1.1_22">Ability to manage the public key or certificate used to validate the digital update</selectable><selectable id="nd_fmt_smf.1.1_23">No other capabilities</selectable></selectables></title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 27</h:b>
@@ -5286,7 +5284,7 @@ If ( keylen = 256 )
         <!-- FPT_TST_EXT.1 TSF Testing -->
         <f-component cc-id="fpt_tst_ext.1" id="fpt-tst-ext-1" name="TSF Testing">
           <f-element id="fpt-tst-ext-1-1">
-            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li>During initial start-up (on power on) to verify the integrity of the TOE firmware and software; </h:li> <h:li>Prior to providing any cryptographic service and</h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>                                  to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables></h:li></h:ul>               self-tests                                  <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
+            <title>The TSF shall run a suite of the following self-tests:<h:ul><h:li>During initial start-up (on power on) to verify the integrity of the TOE firmware and software;</h:li> <h:li>Prior to providing any cryptographic service and</h:li></h:ul> <selectables><selectable id="nd_fpt_tst_ext.1.1_1">at no other time</selectable><selectable id="nd_fpt_tst_ext.1.1_2">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_3">continuously</selectable><selectable id="nd_fpt_tst_ext.1.1_4"><assignable>conditions under which self-tests should occur</assignable></selectable></selectables>                                  to verify correct operation of cryptographic implementation necessary to fulfil the TSF;<h:ul><h:li> <selectables><selectable id="nd_fpt_tst_ext.1.1_5">no other</selectable><selectable id="nd_fpt_tst_ext.1.1_6">start-up</selectable><selectable id="nd_fpt_tst_ext.1.1_7">on-demand</selectable><selectable id="nd_fpt_tst_ext.1.1_8">continuous</selectable><selectable id="nd-fpt-test-ext-1-1-comp-1">at the conditions <assignable>conditions under which self-tests should occur</assignable></selectable></selectables></h:li></h:ul>               self-tests                                  <assignable>'list an identifier for each self-test that is additional to those identified in the first two bullet points'</assignable>.to demonstrate the correct operation of the TSF.</title>
             <note role="application">
               <h:p style="text-align: left;">
                 <h:b>Application Note 31 </h:b>
